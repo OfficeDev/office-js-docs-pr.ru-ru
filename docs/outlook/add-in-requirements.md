@@ -3,12 +3,12 @@ title: Требования к надстройкам Outlook
 description: Чтобы надстройки Outlook загружались и работали надлежащим образом, существует ряд требований к серверам и клиентам.
 ms.date: 02/09/2021
 localization_priority: Priority
-ms.openlocfilehash: 6062073d44a412d67961f806677cd60701bbdb9b
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 22dcdd335dc521707131583190efc52ecdbf27269dcdf8872c7b71d58b9ab69f
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348596"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57086377"
 ---
 # <a name="outlook-add-in-requirements"></a>Требования к надстройкам Outlook
 

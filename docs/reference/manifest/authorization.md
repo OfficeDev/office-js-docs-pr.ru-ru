@@ -1,27 +1,27 @@
 ---
-title: Элемент authorization в файле манифеста
+title: Элемент авторизации в файле манифеста
 description: Указывает внешний ресурс, на который веб-приложению надстройки требуется авторизация и необходимые разрешения.
 ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: b8d3dd31a212a7de00ff4dbf263e8593a8ec2898
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: af40a47c4ae30b6d18d3457704487027ff18ac92da2a3ae23cf1afe5c1e9b46a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294264"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087715"
 ---
-# <a name="authorization-element"></a>Элемент authorization
+# <a name="authorization-element"></a>Элемент авторизации
 
-Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.
+Указывает внешние ресурсы, на которые веб-приложению надстройки требуется авторизация, и необходимые разрешения.
 
-**Авторизация** является дочерним элементом элемента [authorizations](authorizations.md) в манифесте.
+**Авторизация** — это детский элемент элемента [Авторизация](authorizations.md) в манифесте.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Resource**  |  Да   |  Задает URL-адрес внешнего ресурса.|
-|  [Scopes](scopes.md)                |  Да  |  Задает разрешения, необходимые надстройке для ресурса.  |
+|  **Resource**  |  Да   |  Указывает URL-адрес внешнего ресурса.|
+|  [Scopes](scopes.md)                |  Да  |  Указывает разрешения, необходимые надстройки для ресурса.  |
 
 ## <a name="example"></a>Пример
 

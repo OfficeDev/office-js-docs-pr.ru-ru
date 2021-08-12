@@ -3,12 +3,12 @@ title: Настройка среды разработки
 description: Настройка среды разработчика для создания Office надстройки.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: efc89b728117e2888cdebd2c5a132047fe662915
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: b396ad9774959e36ef34c8ca158eda26162c3b13794aa65a4eab0859c317c167
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774350"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087438"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 

@@ -3,12 +3,12 @@ title: Развертывание и установка надстроек Outlo
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
 ms.date: 07/08/2021
 localization_priority: Priority
-ms.openlocfilehash: 7a8c6a22d053f58b38e6dbb432c2ad151c0fee94f3a512eea0611e28ab3595f6
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 0fe7aa8d24b4da14a14480aaf07ef588cd8a243a
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57086247"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773092"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 

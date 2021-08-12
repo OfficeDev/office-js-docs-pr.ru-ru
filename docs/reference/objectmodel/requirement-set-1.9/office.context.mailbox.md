@@ -3,12 +3,12 @@ title: Office.context.mailbox — набор требований 1.9
 description: Outlook Требования К API почтовых ящиков устанавливают версию 1.9 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 06913e9206aa187b0a4a627e01aad183efaee0f0
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 22852a787c2094beebc27278d893039f9adbfb3959c1879bbf9a0203a460c7be
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671697"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087703"
 ---
 # <a name="mailbox-requirement-set-19"></a>почтовый ящик (набор требований 1.9)
 

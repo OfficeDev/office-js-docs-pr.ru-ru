@@ -3,12 +3,12 @@ title: Обзор проверки подлинности и авторизац�
 description: Требовать от пользователей аутентификации при входе в веб-приложения и надстройки Office.
 ms.date: 07/08/2021
 localization_priority: Priority
-ms.openlocfilehash: 8c1330b4739929f0c7d4a2b3fda16ea38ad76fd7
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 76c0b42221b988be09feeb94d9d8ee70f85ef7852470505fb67587bdb90113d1
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774198"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57080352"
 ---
 # <a name="overview-of-authentication-and-authorization-in-office-add-ins"></a>Обзор проверки подлинности и авторизации в надстройках Office
 

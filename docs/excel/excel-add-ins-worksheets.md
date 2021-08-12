@@ -3,12 +3,12 @@ title: Работа с листами с использованием API JavaSc
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
 ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: a8a7da6ce01f8c0cc82c8ab9c764b032027f585c
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 27129feb603af52d53aa87e16227a946480c7bdf47954fc9db7398b42a795416
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349415"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087032"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 

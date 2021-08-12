@@ -1,18 +1,18 @@
 ---
 title: Элемент RequestedWidth в файле манифеста
-description: Элемент RequestedWidth указывает исходную ширину (в пикселях) контентной надстройки.
+description: Элемент RequestedWidth указывает начальную ширину (в пикселях) надстройки контента.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 517b09492aede111d6359dc8e127c6029df89341
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 82223b027f9f00fefb5b297624320790762ab3344a831367950fb3b07d152801
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611724"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57086006"
 ---
 # <a name="requestedwidth-element"></a>Элемент RequestedWidth
 
-Задает начальную ширину (в пикселях) контентной надстройки.
+Указывает начальную ширину (в пикселях) надстройки контента.
 
 **Тип надстройки:** контентная
 

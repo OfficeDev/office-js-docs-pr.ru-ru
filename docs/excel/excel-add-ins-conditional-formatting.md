@@ -1,14 +1,14 @@
 ---
 title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
-description: Узнайте об условном форматирование в контексте надстройок Excel JavaScript.
+description: Узнайте об условном форматирование в контексте Excel Надстройки JavaScript.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 5736923ac3c4623342d9a77bd58d5682a551a2a6
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: f2470431e54a45b847461179c94a9621387f5a427aaf4fe48e4fe7125074d273
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650914"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084783"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 

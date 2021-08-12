@@ -4,12 +4,12 @@ description: Разработайте надстройку Excel, которая
 ms.date: 07/08/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 2441d5fa266ba0e10e64e2af55d6679a6c77af9f
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 2fd962f3729805805601af4379e83086059314151e880143443d65fbd8e80416
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774149"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57085646"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -303,7 +303,7 @@ ms.locfileid: "53774149"
 
    - Код создает массив объектов `SortField`, состоящий из одного элемента, так как надстройка сортирует таблицу только по столбцу Merchant.
 
-   - Свойство `key` объекта `SortField` — это нулевой индекс столбца, который используется для сортировки таблицы. Строки в таблице сортируются на основе значений в столбце.
+   - Свойство `key` объекта `SortField` — это нулевой индекс столбца, который используется для сортировки таблицы. Строки в таблице сортируются на основе значений в столбце в соотетствующем столбце.
 
    - Элемент `sort` объекта `Table` — это объект `TableSort`, а не метод. Объекты `SortField` передаются методу `apply` объекта `TableSort`.
 

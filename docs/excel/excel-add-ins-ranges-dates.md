@@ -1,19 +1,19 @@
 ---
-title: Работа с датами с помощью API JavaScript Excel
-description: Используйте подключаемый Moment-MSDate с API JavaScript Excel для работы с датами.
+title: Работа с датами с Excel API JavaScript
+description: Используйте подключаемый Moment-MSDate с API Excel JavaScript для работы с датами.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d3f59e5daad042541bd933fb4e644d40f27a6e5e
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: fdfc39f12b3374d9903156b1ba71a9bbd4f296735f0ed41dac56d62243058c1d
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652933"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084735"
 ---
-# <a name="work-with-dates-using-the-excel-javascript-api-and-the-moment-msdate-plug-in"></a>Работа с датами с помощью API JavaScript Excel и Moment-MSDate плагина
+# <a name="work-with-dates-using-the-excel-javascript-api-and-the-moment-msdate-plug-in"></a>Работа с датами с Excel API JavaScript и Moment-MSDate плагина
 
-В этой статье приводится пример кода, который показывает, как работать с датами с помощью API JavaScript Excel и [плагина Moment-MSDate.](https://www.npmjs.com/package/moment-msdate) Полный список свойств и методов, поддерживаемых объектом, см. `Range` в класс [Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье приводится пример кода, который показывает, как работать с датами с Excel API JavaScript и [плагином Moment-MSDate.](https://www.npmjs.com/package/moment-msdate) Полный список свойств и методов, поддерживаемых объектом, см. `Range` [в Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -68,6 +68,6 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

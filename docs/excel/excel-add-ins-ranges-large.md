@@ -1,25 +1,25 @@
 ---
-title: Чтение или написание в больших диапазонах с помощью API JavaScript Excel
-description: Узнайте, как читать или писать в больших диапазонах с помощью API JavaScript Excel.
+title: Чтение или написание в больших диапазонах с Excel API JavaScript
+description: Узнайте, как читать или писать в больших диапазонах с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b7a1e54d6b516889884f777bd256df8fb663c794
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: f9ef9a36aab3b21bbcc3e44c02edbbead209682a75d72393eb77a4aa98925a1a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652918"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084047"
 ---
-# <a name="read-or-write-to-a-large-range-using-the-excel-javascript-api"></a>Чтение или написание в большом диапазоне с помощью API JavaScript Excel
+# <a name="read-or-write-to-a-large-range-using-the-excel-javascript-api"></a>Чтение или написание в большом диапазоне с Excel API JavaScript
 
-В этой статье описывается, как обрабатывать чтение и запись в больших диапазонах с помощью API JavaScript Excel.
+В этой статье описывается обработка чтения и записи в больших диапазонах с помощью Excel API JavaScript.
 
 ## <a name="run-separate-read-or-write-operations-for-large-ranges"></a>Запуск отдельных операций чтения или записи для больших диапазонов
 
 Если диапазон содержит большое количество ячеек, значений, форматов номеров или формул, возможно, невозможно выполнить операции API на этом диапазоне. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.
 
-Дополнительные сведения об ограничениях системы см. в разделе "Надстройки Excel" ограничения ресурсов и оптимизация производительности для [надстройок Office.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)
+Дополнительные сведения об ограничениях системы см. в разделе "Excel надстройки" ограничений ресурсов и оптимизации производительности для [Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)
 
 ### <a name="conditional-formatting-of-ranges"></a>Условное форматирование диапазонов
 
@@ -28,6 +28,6 @@ ms.locfileid: "51652918"
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Чтение или написание в неограниченый диапазон с помощью API JavaScript Excel](excel-add-ins-ranges-unbounded.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Чтение или написание в неограниченый диапазон с Excel API JavaScript](excel-add-ins-ranges-unbounded.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

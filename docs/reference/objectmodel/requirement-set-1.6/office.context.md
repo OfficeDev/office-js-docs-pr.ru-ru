@@ -3,12 +3,12 @@ title: Office.context — набор требований 1.6
 description: Office. Участники объектов Context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.6.
 ms.date: 12/03/2020
 localization_priority: Normal
-ms.openlocfilehash: d4c65cea9b581665e0dc7b38a8e0bf10d6b544f9
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: 0ed08d398e453afa9223af4f3dcad727de62534b9fc89e9c999d2ed8d45b5d03
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591004"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084429"
 ---
 # <a name="context-mailbox-requirement-set-16"></a>контекст (набор требований к почтовым ящикам 1.6)
 
@@ -27,9 +27,9 @@ Office.context предоставляет общие интерфейсы, ис�
 
 | Свойство | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [диагностика](#diagnostics-contextinformation) | Создание<br>Чтение | [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.6&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [хост](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.6&preserve-view=true) | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.6&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [платформа](#platform-platformtype) | Создание<br>Чтение | [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.6&preserve-view=true) | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |

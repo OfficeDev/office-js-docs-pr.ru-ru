@@ -1,19 +1,19 @@
 ---
-title: Поиск строки с помощью API JavaScript Excel
-description: Узнайте, как найти строку в диапазоне с помощью API JavaScript Excel.
+title: Поиск строки с Excel API JavaScript
+description: Узнайте, как найти строку в диапазоне с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9b649bb249cd24d7578bc4f8285e5d0a23d0e4cd
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: efd2671781a8ce8d3e8aeda88f87abb3ad5058a35878f28f47f50305cff1b038
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652888"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087402"
 ---
-# <a name="find-a-string-within-a-range-using-the-excel-javascript-api"></a>Поиск строки в диапазоне с помощью API JavaScript Excel
+# <a name="find-a-string-within-a-range-using-the-excel-javascript-api"></a>Поиск строки в диапазоне с Excel API JavaScript
 
-В этой статье приводится пример кода, который находит строку в диапазоне с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье приводится пример кода, который находит строку в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -47,5 +47,5 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Поиск специальных ячеек в диапазоне с помощью API JavaScript Excel](excel-add-ins-ranges-special-cells.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Поиск специальных ячеек в диапазоне с Excel API JavaScript](excel-add-ins-ranges-special-cells.md)

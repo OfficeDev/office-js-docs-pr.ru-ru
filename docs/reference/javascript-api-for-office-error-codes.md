@@ -3,12 +3,12 @@ title: Коды ошибок общего API для Office
 description: В этой статье документироваться сообщения об ошибках, с которыми можно столкнуться при использовании Office API.
 ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: e6371476c3e40f1619f4fb703c8b684b38667682
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 58ebd7a2c447ee288ec3ed709db043a9df22249def8056cc6792ac90fe351e5c
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348715"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57085081"
 ---
 # <a name="office-common-api-error-codes"></a>Коды ошибок общего API для Office
 

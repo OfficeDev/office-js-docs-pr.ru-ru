@@ -3,12 +3,12 @@ title: Office.context.mailbox — набор требований 1.8
 description: Outlook Требования К API почтовых ящиков устанавливают версию 1.8 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: dbd3a46ba5435694d80f362ba71b3e2912e41513
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: d29882d258d9534c17995dc289cf46c04bf8b32e0086682bc31783ab5358aae6
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671732"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57085670"
 ---
 # <a name="mailbox-requirement-set-18"></a>почтовый ящик (набор требований 1.8)
 

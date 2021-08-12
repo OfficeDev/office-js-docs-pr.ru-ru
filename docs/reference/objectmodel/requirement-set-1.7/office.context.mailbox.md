@@ -3,12 +3,12 @@ title: Office.context.mailbox — набор требований 1.7
 description: Outlook Требования К API почтовых ящиков устанавливают версию 1.7 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: fe8dea1efdeb22f2fa1b14d88d4f33bdc9fdc4de
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 64f6bbb0445a4f9dab6d1df38b7f3f32c51e9a3fa1882c66b6a1b21b5a83ecd0
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671291"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57083796"
 ---
 # <a name="mailbox-requirement-set-17"></a>почтовый ящик (набор требований 1.7)
 

@@ -3,12 +3,12 @@ title: Версии Office и наборы обязательных элемен
 description: Поддерживаемые платформы Office.js с использованием JavaScript API
 ms.date: 07/08/2021
 localization_priority: Priority
-ms.openlocfilehash: e598026d7a34bfa71e943a760bfd2a051b320af90182e2b6204be7e74c77d8be
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ec3d99fc89b8b6ced25dfc00bd02e0238f75e0af
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080340"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773470"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 

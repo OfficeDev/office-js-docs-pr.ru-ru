@@ -3,12 +3,12 @@ title: Элемент FormSettings в файле манифеста
 description: Указывает исходное расположение и параметры элемента управления для почтовой надстройки.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 64a2caa67ceea02eda60bebaec5a9df450f68dc7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 8553ddcfa28f000667e776234f0249d3e29cdda5e884dc46d2a377ab17d6d770
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611850"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57086691"
 ---
 # <a name="formsettings-element"></a>Элемент FormSettings
 

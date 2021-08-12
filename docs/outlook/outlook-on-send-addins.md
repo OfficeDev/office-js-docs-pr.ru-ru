@@ -3,12 +3,12 @@ title: Функция проверки при отправке для надст
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
 ms.date: 08/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 561498f11114b560975155fa3561043a5c392aed
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: dad3309239237ac48f3c7cccf13f67d78504da91cb5f43c24543da0851a58420
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774366"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57085836"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 

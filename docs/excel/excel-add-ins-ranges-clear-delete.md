@@ -4,12 +4,12 @@ description: Узнайте, как очистить или удалить ди�
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: a1bd99db3aa9af3903552d9cefc6ec6d21701136
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 0e3e2fee4172f37a2d591d881136ac0da9439b732c5327dc7191613e595d67ab
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075833"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084747"
 ---
 # <a name="clear-or-delete-ranges-using-the-excel-javascript-api"></a>Очистить или удалить диапазоны с Excel API JavaScript
 

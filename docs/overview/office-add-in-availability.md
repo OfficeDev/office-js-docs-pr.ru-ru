@@ -3,12 +3,12 @@ title: Доступность клиентских приложений и пл�
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
 ms.date: 07/13/2021
 localization_priority: Priority
-ms.openlocfilehash: 7b3bd770d74f29d1a0b27da5080284aa62146101
-ms.sourcegitcommit: 30a861ece18255e342725e31c47f01960b854532
+ms.openlocfilehash: 983d843cee4c0df29fc16445b306a47fabf240c6c76a091b8e319e5a705ee9c2
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455497"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57083916"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 

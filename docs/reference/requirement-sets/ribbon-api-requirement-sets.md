@@ -4,12 +4,12 @@ description: Указывает, какие Office платформы и сбо�
 ms.date: 05/12/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: a608eff12fb21d7a4a6beb195749141bd473aa1c
-ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
+ms.openlocfilehash: 18b081da28991eb15875c6999ddfe06ccea13eade8dd8a4e1f2a4cc09ac5e922
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52330187"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57084927"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 

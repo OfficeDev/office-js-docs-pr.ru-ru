@@ -3,12 +3,12 @@ title: Избегайте использования метода context.sync �
 description: Узнайте, как использовать раздельный цикл и сопоставленные шаблоны объектов, чтобы не вызывать context.sync в цикле.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 85230378f40be06c7f3385f5dde88ecaba503cb5
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 549713e4ea32b791acc10befe3f4ab86455434784f6ffc449258899cba2d9e21
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773253"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57083255"
 ---
 # <a name="avoid-using-the-contextsync-method-in-loops"></a>Избегайте использования метода context.sync в циклах
 

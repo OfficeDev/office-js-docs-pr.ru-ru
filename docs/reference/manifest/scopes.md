@@ -1,26 +1,26 @@
 ---
 title: Элемент Scopes в файле манифеста
-description: Элемент scopes содержит разрешения, необходимые надстройке для подключения к внешнему ресурсу.
+description: Элемент Scopes содержит разрешения, необходимые для подключения надстройки к внешнему ресурсу.
 ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: be68033e86de736703d9d1593ad361918d5a147d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 05582ae05c13fae8e2272de3fe6111c5ff639f938a817fd0b50ad22e4234d033
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612243"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087260"
 ---
 # <a name="scopes-element"></a>Элемент Scopes
 
-Содержит разрешения, необходимые надстройке для внешнего ресурса, например Microsoft Graph. Когда Microsoft Graph является ресурсом, AppSource использует элемент scopes для создания диалогового окна согласия. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
+Содержит разрешения, необходимые надстройки для внешнего ресурса, например Microsoft Graph. Если microsoft Graph является ресурсом, AppSource использует элемент Scopes для создания диалоговое окно согласия. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
 
-**Области** — это дочерний элемент элементов [WebApplicationInfo](webapplicationinfo.md) и [authorization](authorization.md) в манифесте.
+**Области —** это детский элемент элементов [WebApplicationInfo](webapplicationinfo.md) и [Authorization](authorization.md) в манифесте.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Scope**                |  Да     |   Имя разрешения; Например, Files. Read. ALL или Profile. |
+|  **Scope**                |  Да     |   Имя разрешения; например, Files.Read.All или профиль. |
 
 ## <a name="example"></a>Пример
 
