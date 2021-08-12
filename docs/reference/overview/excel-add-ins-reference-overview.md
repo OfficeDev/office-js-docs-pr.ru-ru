@@ -4,22 +4,22 @@ description: Узнайте больше об Excel JavaScript API
 ms.date: 04/05/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 80340b4990b56b2ba4d51f2a028480af3e267828
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 1177cd4837e5cbebfc6cef533932486612d273c2a489fcd8f26b37b90726ce56
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650814"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57085038"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
 Надстройка Excel взаимодействует с объектами в Excel с помощью API JavaScript для Office, включающего две объектных модели JavaScript:
 
-* **API JavaScript для Excel**. Это [API-интерфейсы для определенных приложений](../../develop/application-specific-api-model.md) в Excel. Появившийся в Office 2016 [API JavaScript для Excel](/javascript/api/excel) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам.
+* **API JavaScript для Excel**. Это [отдельные API](../../develop/application-specific-api-model.md) для Excel. Появившийся в Office 2016 [API JavaScript для Excel](/javascript/api/excel) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам.
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для Excel, используемый для разработки большинства функций в надстройках и предназначенный для Excel в Интернете, Excel 2016 или более поздних версий. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md).
+В этом разделе документации основное внимание уделяется API JavaScript для Excel, который используется для разработки большинства функций надстроек, ориентированных на Excel в Интернете или Excel 2016 и более поздние версии. Сведения об общем API см. в статье об [общей объектной модели API JavaScript](../../develop/office-javascript-api-object-model.md).
 
 ## <a name="learn-object-model-concepts"></a>Сведения о концепциях объектной модели
 
