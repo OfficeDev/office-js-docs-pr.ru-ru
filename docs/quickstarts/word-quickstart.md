@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 08/04/2021
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 5d3cd3b68249ba7545645725926615214651f6c04defd43120629fdcb9fe8b27
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 60a18c8939e07c1de7aa21e1f3f904529a444fa6d00e3a9a626144d0c0242cf8
+ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57096835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57845650"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -55,12 +55,6 @@ _Область применения: Word 2016 и более поздних в�
 
     ```command&nbsp;line
     cd "My Office Add-in"
-    ```
-
-1. Установите для проекта зависимости.
-
-     ```command&nbsp;line
-    npm install
     ```
 
 1. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.

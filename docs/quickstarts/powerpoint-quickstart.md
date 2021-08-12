@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 08/04/2021
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: f68dcf96231f18c43d5f1a28fcc536f0f39521a5
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: e7d4f77cf8e680d8846f8847c74df85e64f8ac85d1b3c4e92b4888361429f013
+ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57845672"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "53773708"
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
-### <a name="prerequisites"></a>Необходимые условия
+### <a name="prerequisites"></a>Необходимые компоненты
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
@@ -66,12 +66,6 @@ ms.locfileid: "53773708"
     > ```command&nbsp;line
     > npm run dev-server
     > ```
-
-    - Установите зависимости для надстройки в корневом каталоге проекта.
-
-        ```command&nbsp;line
-        npm install
-        ```
 
     - Чтобы проверить надстройку в PowerPoint, выполните следующую команду в корневом каталоге своего проекта. При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение PowerPoint с загруженной надстройкой.
 

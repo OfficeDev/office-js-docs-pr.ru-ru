@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 08/04/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: de074b9673db6a1637733b42d8984dc5d2aacb60f8b38de535fe5e9f323e2c0f
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8cdcbc0ca30a3d68fff3ac102845fd747d160102e5cb1ceff40dea8cf819a60b
+ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57845615"
 ---
 # <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
@@ -198,12 +198,6 @@ vue create my-add-in
    ```
 
 ## <a name="start-the-dev-server"></a>Запуск сервера разработки
-
-1. Установите зависимости.
-
-     ```command&nbsp;line
-    npm install
-    ```
 
 1. Запустите сервер разработки
 

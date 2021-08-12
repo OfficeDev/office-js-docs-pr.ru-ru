@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 07/27/2021
+ms.date: 08/09/2021
 localization_priority: Normal
-ms.openlocfilehash: c04502ab490d6b555ae4c581f120aeef260825a5dce00c437de086ccf20e03bc
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 2eb4fa20674b2b07ec73217a5542612d1cb94b9d40f9855b93ecfd60f67bbe8e
+ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57083310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57845594"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -25,7 +25,7 @@ Office Надстройки — это веб-приложения, которы
 > Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновкулярной покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поводится в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
 >
 > - AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
-> - Средство [Script Lab прекратит](../overview/explore-with-script-lab.md) работу в Internet Explorer в 2021 году.
+> - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
