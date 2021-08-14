@@ -5,12 +5,12 @@ ms.date: 08/05/2021
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: fc0d2e82c759635fbd846ea31fc86a7af79a8499
-ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
+ms.openlocfilehash: c475870166415dc6142169dc1029b682477001e7f4bbbe35721ddcd1b82d5f07
+ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58232221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57845622"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
