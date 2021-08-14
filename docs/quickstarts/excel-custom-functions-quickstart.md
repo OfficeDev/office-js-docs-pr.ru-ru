@@ -4,12 +4,12 @@ description: Краткое руководство по разработке п�
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 6c463c494bf3175309226d72d0ca95417a3889b392a4f43035cd5d50263d8fbf
-ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
+ms.openlocfilehash: 9a600d0e60be163399b25dcb4b5f606cce1fc8b2
+ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57845608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58232252"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 

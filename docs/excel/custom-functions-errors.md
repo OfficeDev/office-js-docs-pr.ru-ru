@@ -1,18 +1,18 @@
 ---
-ms.date: 09/23/2020
-description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из настраиваемой функции.'
 title: Обработка и возвращение ошибок из настраиваемой функции
+description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из настраиваемой функции.'
+ms.date: 08/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 2822b3e93f7e5f16410e49d4414110e37172f3569b8f3c5d7d4dd98d5c5ecf6a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: b72ed2baea49b4b6d5f00e63e323d12a7e57d021
+ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57079677"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58232331"
 ---
 # <a name="handle-and-return-errors-from-your-custom-function"></a>Обработка и возвращение ошибок из настраиваемой функции
 
-Если что-то пойдет не так во время работы настраиваемой функции, возвращайте ошибку для информирования пользователя. Если у вас есть определенные требования к параметрам, например только положительные номера, проверьте параметры и в случае их неправильной ошибки. Можно также использовать блок `try`-`catch`, чтобы отслеживать любые ошибки, возникающие при выполнении пользовательской функции.
+Если что-то пойдет не так во время работы настраиваемой функции, возвращайте ошибку для информирования пользователя. Если у вас есть определенные требования к параметрам, например только положительные номера, проверьте параметры и в случае их неправильной ошибки. Вы также можете использовать блок, чтобы поймать все ошибки, которые происходят [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) во время работы настраиваемой функции.
 
 ## <a name="detect-and-throw-an-error"></a>Обнаружение и возвращение ошибки
 
@@ -37,11 +37,10 @@ function getCity(zipCode: string): string {
 
 Объект [CustomFunctions.Error](/javascript/api/custom-functions-runtime/customfunctions.error) используется для возврата ошибки обратно в ячейку. При создании объекта укажите, какую ошибку следует использовать, выбрав одно из следующих `ErrorCode` значений.
 
-
 |Значение перечисления ErrorCode  |Значение ячейки Excel  |Описание  |
 |---------------|---------|---------|
 |`divisionByZero` | `#DIV/0`  | Функция пытается разделить на ноль. |
-|`invalidName`    | `#NAME?`  | В имени функции имеется опечатка. Обратите внимание, что эта ошибка поддерживается как настраиваемая ошибка ввода функции, но не как настраиваемая ошибка вывода функции. | 
+|`invalidName`    | `#NAME?`  | В имени функции имеется опечатка. Обратите внимание, что эта ошибка поддерживается как настраиваемая ошибка ввода функции, но не как настраиваемая ошибка вывода функции. |
 |`invalidNumber`  | `#NUM!`   | Существует проблема с номером в формуле. |
 |`invalidReference` | `#REF!` | Функция относится к недействительной ячейке. Обратите внимание, что эта ошибка поддерживается как настраиваемая ошибка ввода функции, но не как настраиваемая ошибка вывода функции.|
 |`invalidValue`   | `#VALUE!` | Значение в формуле имеет неправильный тип. |
@@ -63,12 +62,50 @@ let error = new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidValue, "T
 throw error;
 ```
 
-## <a name="use-try-catch-blocks"></a>Использование блоков try-catch
+### <a name="handle-errors-when-working-with-dynamic-arrays"></a>Обработка ошибок при работе с динамическими массивами
 
-В общем случае используйте `try` - `catch` блоки в настраиваемой функции, чтобы поймать возможные ошибки. Если в коде не обрабатываются исключения, они будут возвращаться в Excel. По умолчанию Excel `#VALUE!` возвращается за невыполнение ошибок или исключений.
+В дополнение к возвращению одной ошибки настраиваемая функция может выводить динамический массив, включающий ошибку. Например, настраиваемая функция может выводить массив `[1],[#NUM!],[3]` . В следующем примере кода показано, как ввести три параметра в настраиваемую функцию, заменить один из параметров ввода ошибкой, а затем вернуть двухмерный массив с результатами обработки каждого параметра `#NUM!` ввода.
+
+```js
+/**
+* Returns the #NUM! error as part of a 2-dimensional array.
+* @customfunction
+* @param {number} first First parameter.
+* @param {number} second Second parameter.
+* @param {number} third Third parameter.
+* @returns {number[][]} Three results, as a 2-dimensional array.
+*/
+function returnInvalidNumberError(first, second, third) {
+  // Use the `CustomFunctions.Error` object to retrieve an invalid number error.
+  var error = new CustomFunctions.Error(
+    CustomFunctions.ErrorCode.invalidNumber, // Corresponds to the #NUM! error in the Excel UI.
+  );
+
+  // Enter logic that processes the first, second, and third input parameters.
+  // Imagine that the second calculation results in an invalid number error. 
+  var firstResult = first;
+  var secondResult =  error;
+  var thirdResult = third;
+
+  // Return the results of the first and third parameter calculations and a #NUM! error in place of the second result. 
+  return [[firstResult], [secondResult], [thirdResult]];
+}
+```
+
+### <a name="errors-as-custom-function-inputs"></a>Ошибки в качестве пользовательских входных данных функций
+
+Настраиваемая функция может оценить, даже если диапазон ввода содержит ошибку. Например, настраиваемая функция может принимать диапазон **A2:A7** в качестве ввода, даже если **A6:A7** содержит ошибку.
+
+Для обработки входных данных, содержащих ошибки, настраиваемая функция должна иметь свойство метаданных `allowErrorForDataTypeAny` `true` JSON. Дополнительные сведения см. в руководстве по созданию [метаданных JSON для пользовательских](custom-functions-json.md#metadata-reference) функций.
+
+> [!IMPORTANT]
+> Свойство `allowErrorForDataTypeAny` можно использовать только с созданными [вручную метаданными JSON.](custom-functions-json.md) Это свойство не работает с процессом автогенерации метаданных JSON.
+
+## <a name="use-trycatch-blocks"></a>Использование `try...catch` блоков
+
+В общем случае используйте [`try...catch`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) блоки в настраиваемой функции, чтобы поймать возможные ошибки. Если вы не обрабатываете исключения в коде, они будут возвращены в Excel. По умолчанию Excel `#VALUE!` возвращается за невыполнение ошибок или исключений.
 
 В следующем примере кода пользовательская функция создает запрос fetch в службу REST. Возможно, что вызов завершится сбоем (например, если служба REST возвращает ошибку или не работает сеть). Если это произойдет, настраиваемая функция вернется, `#N/A` чтобы указать, что веб-вызов не удалось.
-
 
 ```typescript
 /**

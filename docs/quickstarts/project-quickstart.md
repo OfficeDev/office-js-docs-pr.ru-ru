@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 08/04/2021
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: e135a4df75d1da02fd542d004b939c750099528cd9f5a32f932f1295958cc8f0
-ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
+ms.openlocfilehash: 79a5dc33593eebbe8a0276638248bb78b9745524
+ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57845636"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58232339"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 

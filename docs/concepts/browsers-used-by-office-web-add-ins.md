@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 2eb4fa20674b2b07ec73217a5542612d1cb94b9d40f9855b93ecfd60f67bbe8e
-ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
+ms.openlocfilehash: 2ffd408e497cdb845497479f5f4cbed2cedcc39e
+ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57845594"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58232194"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -31,8 +31,8 @@ Office Надстройки — это веб-приложения, которы
 
 |OS|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.|
-|Mac|любой|Неприменимо|Safari|
+|любой|Office в Интернете|Не применимо|Браузер, в котором открыт Office.|
+|Mac|любой|Не применимо|Safari|
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
 |Windows 7, 8.1, 10 | подписка Office 2013 или более поздней|Всё равно|Internet Explorer 11|

@@ -1,14 +1,14 @@
 ---
-ms.date: 12/22/2020
-description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
 title: Вручную создайте метаданные JSON для пользовательских функций в Excel
+description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
+ms.date: 08/06/2021
 localization_priority: Normal
-ms.openlocfilehash: c03238d46e8d861307ba0db3d03dafea81aeca51
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 78a14d591276ad7fcc2cca47df0f5e540d7bad91
+ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349632"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58232215"
 ---
 # <a name="manually-create-json-metadata-for-custom-functions"></a>Вручную создайте метаданные JSON для пользовательских функций
 
@@ -56,6 +56,7 @@ ms.locfileid: "53349632"
 
 ```json
 {
+  "allowErrorForDataTypeAny": true,
   "functions": [
     {
       "id": "ADD",
@@ -137,6 +138,13 @@ ms.locfileid: "53349632"
 > Полный пример JSON-файла доступен в истории фиксации [OfficeDev/Excel-Custom-Functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/77760adb1dcc53469183049bea08196734dbc114/config/customfunctions.json) GitHub репозитория. Поскольку проект был скорректирован для автоматического создания JSON, полный пример рукописного JSON доступен только в предыдущих версиях проекта.
 
 ## <a name="metadata-reference"></a>Ссылка на метаданные
+
+### <a name="allowerrorfordatatypeany"></a>allowErrorForDataTypeAny
+
+Свойство `allowErrorForDataTypeAny` — это тип данных boolean. Настройка значения позволяет `true` настраиваемой функции обрабатывать ошибки в качестве значений ввода. Все параметры с типом или могут принимать ошибки в качестве значений `any` `any[][]` ввода, `allowErrorForDataTypeAny` когда установлено `true` значение . Значение по `allowErrorForDataTypeAny` умолчанию `false` .
+
+> [!NOTE]
+> В отличие от других свойств метаданных JSON, это свойство верхнего уровня и не содержит `allowErrorForDataTypeAny` под-свойств. Пример кода кода [метаданных JSON](#json-metadata-example) см. в примере формата этого свойства.
 
 ### <a name="functions"></a>functions
 
