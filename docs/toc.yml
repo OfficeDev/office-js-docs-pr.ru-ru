@@ -269,6 +269,9 @@ items:
                 href: testing/attach-debugger-from-task-pane.md
               - name: Отладка с помощью средств разработчика
                 href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
+              - name: Отладка с помощью Edge Chromium WebView2
+                href: testing/debug-desktop-using-edge-chromium.md
+                displayName: 'debug, windows'
               - name: Тестирование с помощью Internet Explorer 11
                 href: testing/ie-11-testing.md
           - name: Веб-браузер
