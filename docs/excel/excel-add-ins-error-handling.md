@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
-ms.date: 01/15/2021
+ms.date: 08/26/2021
 localization_priority: Normal
-ms.openlocfilehash: 020828a022605454b2b070bedb560ce7d53ff39f6902b042e5e9ac793f14b277
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8dde0a57ea79e87eed0f506ca7995b3ce1a1f964
+ms.sourcegitcommit: 7245eeedc6246c7aad2fc7df8d47e11971b42ee7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084275"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "58614617"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
@@ -60,25 +60,32 @@ Excel.run(function (context) {
 |`BadPassword`|Предоставленный пароль является неправильным.|
 |`Conflict`|Запрос не удалось обработать из-за конфликта.|
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.|
+|`FilteredRangeConflict`|- Таблица не может быть вставлена в фильтрованный диапазон. <br>Удаление фильтрованного диапазона не поддерживается.|
 |`GeneralException`|При обработке запроса возникла внутренняя ошибка.|
 |`InactiveWorkbook`|Операция не удалась, так как несколько книг открыты, а вызванная этим API книга потеряла фокус.|
 |`InsertDeleteConflict`|Операция вставки или удаления привела к конфликту.|
 |`InvalidArgument` |Аргумент недопустим, отсутствует или имеет неправильный формат.|
-|`InvalidBinding`  |Эта привязка объектов недопустима из-за предыдущих обновлений.|
+|`InvalidBinding` |Эта привязка объектов недопустима из-за предыдущих обновлений.|
 |`InvalidOperation`|Выполняемая операция недопустима для этого объекта.|
+|`InvalidOperationInCellEditMode`|Операция недоступна, пока Excel находится в режиме Изменить ячейку. Выход Из режима редактирования с помощью клавиш **Enter** или **Tab** или путем выбора другой ячейки, а затем попробуйте еще раз.|
 |`InvalidReference`|Эта ссылка недопустима для текущей операции.|
 |`InvalidRequest`  |Не удается обработать запрос.|
 |`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.|
 |`ItemAlreadyExists`|Создаваемый ресурс уже существует.|
 |`ItemNotFound` |Запрашиваемый ресурс не существует.|
+|`MemoryLimitReached`|Предел памяти достигнут. Ваше действие не удалось завершить.|
+|`MergedRangeConflict`|Не удается выполнить операцию. Таблица не может пересекаться с другой таблицей, отчетом PivotTable, результатами запроса, объединенными ячейками или XML-картой.|
 |`NonBlankCellOffSheet`|Microsoft Excel не может вставить новые ячейки, так как это отодвигает непустые ячейки с конца таблицы. Эти непустые ячейки могут казаться пустыми, но имеют пустые значения, некоторое форматирование или формулу. Удалите достаточно строк или столбцов, чтобы сделать место для того, что вы хотите вставить, а затем попробуйте еще раз.|
 |`NotImplemented`|Запрашиваемая функция не реализована.|
+|`PivotTableRangeConflict`|- Таблица не может быть вставлена рядом с pivotTable. <br>- Не удается вставить или удалить ячейку в pivotTable. <br>- Не удается изменить ячейку в pivotTable.|
 |`RangeExceedsLimit`|Количество ячейки в диапазоне превысило максимально поддерживаемый номер. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)|
+|`RefreshWorkbookLinksBlocked`|Вызов API не поддерживается, так как пользователь не предоставил разрешение на обновление внешних ссылок на книги.|
 |`RequestAborted`|Запрос прерван во время выполнения.|
 |`RequestPayloadSizeLimitExceeded`|Размер полезной нагрузки запроса превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки отклика превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)  <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ServiceNotAvailable`|Служба недоступна.|
 |`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
+|`UnsupportedFeature`|Вызов API не разрешен, так как он имеет неподтверченные функции.|
 |`UnsupportedOperation`|Выполняемая операция не поддерживается.|
 |`UnsupportedSheet`|Этот тип листа не поддерживает эту операцию, так как это лист Макроса или Диаграммы.|
 
