@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Узнайте основы создания диалоговых окне в Office надстройке.
-ms.date: 07/22/2021
+ms.date: 08/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 6108051b9fd229804bb8c6a3ac25bb036ab072f03bc649139338361d0cc2ba89
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 6e87ddfc6c29e74a578d399116df5df9b364028f
+ms.sourcegitcommit: 3287eb4588d0af47f1ab8a59882bcc3f585169d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080881"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58863536"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -218,7 +218,7 @@ function processMessage(arg) {
 Диалоговое окно или родительское время запуска JavaScript (либо в области задач, либо в пользовательском интерфейсе, в котором размещен файл функций) может перемещаться в стороне от домена надстройки после открытия диалоговое окно. Если что-либо из этих вещей произошло, вызов сбой, если в коде не указан домен `messageParent` родительского времени запуска. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageParent` . Этот объект имеет `targetOrigin` свойство, которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и диалоговое окно.
 
 > [!NOTE]
-> Для отправки меж доменного сообщения требуется набор требований `messageParent` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md)
+> Для отправки меж доменного сообщения требуется набор требований `messageParent` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md) Параметр игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его `DialogMessageOptions` пропуск.
 
 Ниже приводится пример использования для отправки меж `messageParent` доменного сообщения.
 
@@ -341,7 +341,7 @@ function onRegisterMessageComplete(asyncResult) {
 Диалоговое окно или родительское время запуска JavaScript (либо в области задач, либо в пользовательском интерфейсе, в котором размещен файл функций) может перемещаться в стороне от домена надстройки после открытия диалоговое окно. Если что-либо из этих вещей произошло, вызов сбой, если в коде не указан домен времени `messageChild` запуска диалогов. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageChild` . Этот объект имеет `targetOrigin` свойство, которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и родительское время запуска. 
 
 > [!NOTE]
-> Для отправки меж доменного сообщения требуется набор требований `messageChild` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md)
+> Для отправки меж доменного сообщения требуется набор требований `messageChild` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md) Параметр игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его `DialogMessageOptions` пропуск.
 
 Ниже приводится пример использования для отправки меж `messageChild` доменного сообщения.
 
@@ -428,7 +428,7 @@ function processMessage(arg) {
 
 Узнайте о том, как использовать Office dialog API, в [Рекомендации по использованию Office dialog API](dialog-best-practices.md).
 
-## <a name="samples"></a>Примеры
+## <a name="samples"></a>Образцы
 
 Все следующие примеры использования `displayDialogAsync` . Некоторые из них имеют серверы на основе NodeJS, а другие — серверы на ASP.NET/IIS, но логика использования метода та же, независимо от того, как реализуется серверная сторона надстройки.
 

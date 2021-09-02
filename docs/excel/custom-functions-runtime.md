@@ -3,12 +3,12 @@ ms.date: 07/08/2021
 description: Понимание Excel пользовательских функций, которые не используют области задач и их определенное время запуска JavaScript.
 title: Время запуска для пользовательских Excel пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 8e08f4accd33e405beb5fab618e92dd28abf2246
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 973bbf8179c6536d5964453ff63b7a04d425dae3c1d17527bf0247ff03eef4a5
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774184"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57079463"
 ---
 # <a name="runtime-for-ui-less-excel-custom-functions"></a>Время запуска для пользовательских Excel пользовательских функций
 
@@ -64,7 +64,7 @@ function StoreValue(key, value) {
 }
 ```
 
-## <a name="additional-considerations"></a>Дополнительные сведения
+## <a name="additional-considerations"></a>Дополнительные рекомендации
 
 Если надстройка использует только настраиваемые функции без пользовательского интерфейса, обратите внимание, что вы не можете получить доступ к объектной модели документа (DOM) с пользовательскими функциями без пользовательского интерфейса или использовать библиотеки, такие как jQuery, которые полагаются на DOM.
 
