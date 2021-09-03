@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
-ms.date: 08/26/2021
+ms.date: 08/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 8dde0a57ea79e87eed0f506ca7995b3ce1a1f964
-ms.sourcegitcommit: 7245eeedc6246c7aad2fc7df8d47e11971b42ee7
+ms.openlocfilehash: 37457e6cd8b35c9e68fa4ce9a1cb9317dcf9b1af
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "58614617"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868633"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
@@ -60,7 +60,7 @@ Excel.run(function (context) {
 |`BadPassword`|Предоставленный пароль является неправильным.|
 |`Conflict`|Запрос не удалось обработать из-за конфликта.|
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.|
-|`FilteredRangeConflict`|- Таблица не может быть вставлена в фильтрованный диапазон. <br>Удаление фильтрованного диапазона не поддерживается.|
+|`FilteredRangeConflict`|Попытка операции вызывает конфликт с фильтрованным диапазоном.|
 |`GeneralException`|При обработке запроса возникла внутренняя ошибка.|
 |`InactiveWorkbook`|Операция не удалась, так как несколько книг открыты, а вызванная этим API книга потеряла фокус.|
 |`InsertDeleteConflict`|Операция вставки или удаления привела к конфликту.|
@@ -77,15 +77,15 @@ Excel.run(function (context) {
 |`MergedRangeConflict`|Не удается выполнить операцию. Таблица не может пересекаться с другой таблицей, отчетом PivotTable, результатами запроса, объединенными ячейками или XML-картой.|
 |`NonBlankCellOffSheet`|Microsoft Excel не может вставить новые ячейки, так как это отодвигает непустые ячейки с конца таблицы. Эти непустые ячейки могут казаться пустыми, но имеют пустые значения, некоторое форматирование или формулу. Удалите достаточно строк или столбцов, чтобы сделать место для того, что вы хотите вставить, а затем попробуйте еще раз.|
 |`NotImplemented`|Запрашиваемая функция не реализована.|
-|`PivotTableRangeConflict`|- Таблица не может быть вставлена рядом с pivotTable. <br>- Не удается вставить или удалить ячейку в pivotTable. <br>- Не удается изменить ячейку в pivotTable.|
+|`PivotTableRangeConflict`|Попытка операции вызывает конфликт с диапазоном PivotTable.|
 |`RangeExceedsLimit`|Количество ячейки в диапазоне превысило максимально поддерживаемый номер. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)|
-|`RefreshWorkbookLinksBlocked`|Вызов API не поддерживается, так как пользователь не предоставил разрешение на обновление внешних ссылок на книги.|
+|`RefreshWorkbookLinksBlocked`|Операция не удалась из-за того, что пользователь не предоставил разрешение на обновление внешних ссылок на книги.|
 |`RequestAborted`|Запрос прерван во время выполнения.|
 |`RequestPayloadSizeLimitExceeded`|Размер полезной нагрузки запроса превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки отклика превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)  <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ServiceNotAvailable`|Служба недоступна.|
 |`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
-|`UnsupportedFeature`|Вызов API не разрешен, так как он имеет неподтверченные функции.|
+|`UnsupportedFeature`|Операция не удалась, так как исходный таблица содержит одну или несколько неподтверченных функций.|
 |`UnsupportedOperation`|Выполняемая операция не поддерживается.|
 |`UnsupportedSheet`|Этот тип листа не поддерживает эту операцию, так как это лист Макроса или Диаграммы.|
 

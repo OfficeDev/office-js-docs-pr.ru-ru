@@ -3,12 +3,12 @@ title: Развертывание и публикация надстроек Off
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 07/30/2021
 localization_priority: Priority
-ms.openlocfilehash: e702e5d16c986324b6f54a1927ca844852826aeb257d4958de37b8d1ed3c3174
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 28589d71d7b7e59640ce11fe231671ca2b3c65fb
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093343"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868717"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -50,7 +50,7 @@ ms.locfileid: "57093343"
 
 Указанные ниже разделы содержат дополнительные сведения о методах развертывания, которые чаще всего используются для распространения типовых надстроек Office среди пользователей в организации.
 
-Сведения о том, как пользователи получают, устанавливают и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.office.com/article/start-using-your-office-add-in-82e665c4-6700-4b56-a3f3-ef5441996862).
+Сведения о том, как пользователи получают, устанавливают и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862).
 
 ### <a name="integrated-apps-via-the-microsoft-365-admin-center"></a>Интегрированные приложения в Центре администрирования Microsoft 365
 

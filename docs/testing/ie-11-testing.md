@@ -3,12 +3,12 @@ title: Тестирование Internet Explorer 11
 description: Проверьте Office надстройки в Internet Explorer 11.
 ms.date: 08/13/2021
 localization_priority: Normal
-ms.openlocfilehash: 098479942f2e2b5ed7b7cc219e5bbd591b88112a
-ms.sourcegitcommit: bc6203dd8f21d1c375039c5ee8f1388ede9be93b
+ms.openlocfilehash: 2d33853d37ddcf595583f24f232c36ae68e3a05c
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "58382958"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868626"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Проверьте Office надстройки в Internet Explorer 11
 
@@ -55,7 +55,7 @@ ms.locfileid: "58382958"
     ```
 
 > [!TIP]
-> Эта команда не требуется, но она должна помочь отламеть большинство проблем, связанных с запуском Internet Explorer 11. Для полной надежности необходимо проверить использование компьютеров с различными комбинациями Windows 7, 8.1 и 10 и различных Office. Дополнительные сведения [](../concepts/browsers-used-by-office-web-add-ins.md) см. в Office надстройки и сведения о том, как вернуться к более ранней версии [Office.](https://support.microsoft.com/topic/how-to-revert-to-an-earlier-version-of-office-2bd5c457-a917-d57e-35a1-f709e3dda841)
+> Эта команда не требуется, но она должна помочь отламеть большинство проблем, связанных с запуском Internet Explorer 11. Для полной надежности необходимо проверить использование компьютеров с различными комбинациями Windows 7, 8.1 и 10 и различных Office. Дополнительные сведения [](../concepts/browsers-used-by-office-web-add-ins.md) см. в Office надстройки и сведения о том, как вернуться к более ранней версии [Office.](https://support.microsoft.com/topic/2bd5c457-a917-d57e-35a1-f709e3dda841)
 
 ### <a name="command-options"></a>Параметры команды
 

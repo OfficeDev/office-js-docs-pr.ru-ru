@@ -3,12 +3,12 @@ title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 0e622820dbf1c582188d038fc532236154b7ec7389a8e14b0ce0e982a6f67a8a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 2ac9a83511fc29eb055ebdc4d2c77f7675c68994
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57081761"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868409"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -215,7 +215,7 @@ ms.locfileid: "57081761"
 Для наилучшего пользовательского интерфейса рекомендуется свести к минимуму конфликты с Excel с этими рекомендациями.
 
 - Используйте только клавиши со следующим шаблоном: **Ctrl+Shift+Alt+* x****, где *x* — это другой ключ.
-- Если вам нужно больше клавиш, ознакомьтесь со списком Excel клавиш [и](https://support.microsoft.com/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f)не применяйте их в надстройки.
+- Если вам нужно больше клавиш, ознакомьтесь со списком Excel клавиш [и](https://support.microsoft.com/office/1798d9d5-842a-42b8-9c99-9b7213f0040f)не применяйте их в надстройки.
 - Когда фокус клавиатуры находится внутри пользовательского интерфейса надстройки, **Ctrl+Spacebar** и **Ctrl+Shift+F10** не будут работать, так как это основные ярлыки доступности.
 - На компьютере Windows или Mac, если в меню поиска недоступна команда "Reset Office надстройки", пользователь может вручную добавить команду в ленту, настроив ленту через контекстное меню.
 

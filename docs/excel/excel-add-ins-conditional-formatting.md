@@ -3,12 +3,12 @@ title: Применение условного форматирования к �
 description: Узнайте об условном форматирование в контексте Excel Надстройки JavaScript.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: f2470431e54a45b847461179c94a9621387f5a427aaf4fe48e4fe7125074d273
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 7c8d40145e7e66407df4f39e8f96be394b24bb2e
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084783"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868472"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
@@ -16,8 +16,8 @@ ms.locfileid: "57084783"
 
 > [!NOTE]
 > В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel. В указанных ниже статьях представлены подробные сведения о всех возможностях условного форматирования в Excel.
-> -  [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
-> -  [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)
+> -  [Добавление, изменение или удаление условного форматирования](https://support.microsoft.com/office/fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f)
+> -  [Использование формул с условным форматированием](https://support.microsoft.com/office/fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f)
 
 ## <a name="programmatic-control-of-conditional-formatting"></a>Программное управление условным форматированием
 
@@ -338,5 +338,5 @@ await context.sync();
 
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Объект ConditionalFormat (API JavaScript для Excel)](/javascript/api/excel/excel.conditionalformat)
-- [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
-- [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)
+- [Добавление, изменение или удаление условного форматирования](https://support.microsoft.com/office/fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f)
+- [Использование формул с условным форматированием](https://support.microsoft.com/office/fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f)

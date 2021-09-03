@@ -1,14 +1,14 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
-ms.date: 06/15/2021
+ms.date: 08/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 58f27010372bef495ece16e3c9fb5cf4a8a7e78b1c3e7880485367ec6f954f63
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ed37bdc872c045a071ee6217efa98eff5b5eea97
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57091396"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868675"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -71,6 +71,26 @@ ms.locfileid: "57091396"
 #### <a name="officemailboxenumsappointmentsensitivitytype"></a>[Office. MailboxEnums.AppointmentSensitivityType](/javascript/api/outlook/office.mailboxenums.appointmentsensitivitytype?view=outlook-js-preview&preserve-view=true)
 
 Добавлен новый `AppointmentSensitivityType` переумыв, который представляет параметры чувствительности, доступные при встрече.
+
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
+
+<br>
+
+---
+
+---
+
+### <a name="delay-delivery-time"></a>Время задержки доставки
+
+#### <a name="officecontextmailboxitemdelaydeliverytime"></a>[Office.context.mailbox.item.delayDeliveryTime](office.context.mailbox.item.md#properties)
+
+Добавлено новое свойство, которое возвращает объект, который позволяет управлять датой и временем доставки сообщения в режиме Compose.
+
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
+
+#### <a name="officedelaydeliverytime"></a>[Office. DelayDeliveryTime](/javascript/api/outlook/office.delaydeliverytime)
+
+Добавлен новый объект, который позволяет управлять датой и временем доставки сообщения в режиме Compose.
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 

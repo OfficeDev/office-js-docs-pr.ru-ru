@@ -4,12 +4,12 @@ description: Указывает, какие Office платформы и сбо�
 ms.date: 05/12/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 18b081da28991eb15875c6999ddfe06ccea13eade8dd8a4e1f2a4cc09ac5e922
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: aa198009a3d1d16a1c34966516a4ddeee9f7f940
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084927"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868738"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 
@@ -41,9 +41,9 @@ ms.locfileid: "57084927"
 
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
-- [Версия и сборка номеров выпусков каналов обновления для Microsoft 365 клиентов](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7)
-- [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
-- [Где можно найти версию и номер сборки для Microsoft 365 клиентского приложения](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7)
+- [Версия и сборка номеров выпусков каналов обновления для Microsoft 365 клиентов](/officeupdates/update-history-microsoft365-apps-by-date)
+- [Какая у меня версия Office](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19);
+- [Где можно найти версию и номер сборки для Microsoft 365 клиентского приложения](/officeupdates/update-history-microsoft365-apps-by-date)
 - [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)
 
 ## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office

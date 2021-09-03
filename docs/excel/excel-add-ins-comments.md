@@ -3,16 +3,16 @@ title: Работа с комментариями с помощью Excel API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования потоков комментариев и комментариев.
 ms.date: 10/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 5e292dab77b080906d77b1517a8de715bc0d2122f29e3de73b04f5b9d9276c85
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 16569bc1d72391dff0ac35a48e45470ff90852f8
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084325"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868654"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работа с комментариями с помощью Excel API JavaScript
 
-В этой статье описывается, как добавлять, читать, изменять и удалять комментарии в книге с Excel API JavaScript. Дополнительные новости о функции комментариев можно узнать из комментариев и заметок [в](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) Excel статье.
+В этой статье описывается, как добавлять, читать, изменять и удалять комментарии в книге с Excel API JavaScript. Дополнительные новости о функции комментариев можно узнать из комментариев и заметок [в](https://support.microsoft.com/office/bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) Excel статье.
 
 В API Excel JavaScript комментарий включает как один первоначальный комментарий, так и связанное обсуждение. Он привязан к отдельной ячейке. Любой, кто просматривает книгу с достаточными разрешениями, может ответить на комментарий. Объект [Comment](/javascript/api/excel/excel.comment) сохраняет эти ответы как [объекты CommentReply.](/javascript/api/excel/excel.commentreply) Комментарий следует рассматривать как поток, и в качестве отправной точки в потоке должна быть специальная запись.
 
@@ -171,7 +171,7 @@ Excel.run(function (context) {
 
 ## <a name="mentions"></a>Упоминания
 
-[Упоминания используются](https://support.office.com/article/use-mention-in-comments-to-tag-someone-for-feedback-644bf689-31a0-4977-a4fb-afe01820c1fd) для тегов коллег в комментарии. Это отправляет им уведомления содержимым вашего комментария. Ваша надстройка может создавать эти упоминания от вашего имени.
+[Упоминания используются](https://support.microsoft.com/office/644bf689-31a0-4977-a4fb-afe01820c1fd) для тегов коллег в комментарии. Это отправляет им уведомления содержимым вашего комментария. Ваша надстройка может создавать эти упоминания от вашего имени.
 
 Комментарии с упоминаниями необходимо создавать с [помощью объектов CommentRichContent.](/javascript/api/excel/excel.commentrichcontent) Вызов `CommentCollection.add` с одним или несколькими упоминаниями и `CommentRichContent` `ContentType.mention` указанием в качестве `contentType` параметра. Строка `content` также должна быть отформатирована, чтобы вставить упоминание в текст. Формат для упоминания: `<at id="{replyIndex}">{mentionName}</at>` .
 
@@ -321,4 +321,4 @@ function commentDeleted() {
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с книгами с использованием API JavaScript для Excel](excel-add-ins-workbooks.md)
 - [Работа с событиями при помощи API JavaScript для Excel](excel-add-ins-events.md)
-- [Вставьте комментарии и заметки в Excel](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8)
+- [Вставьте комментарии и заметки в Excel](https://support.microsoft.com/office/bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8)

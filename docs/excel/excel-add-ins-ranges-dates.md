@@ -4,12 +4,12 @@ description: Используйте подключаемый Moment-MSDate с AP
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: fdfc39f12b3374d9903156b1ba71a9bbd4f296735f0ed41dac56d62243058c1d
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 82dd7bb957834efc17c0174e3b89fd526610a08a
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084735"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868668"
 ---
 # <a name="work-with-dates-using-the-excel-javascript-api-and-the-moment-msdate-plug-in"></a>Работа с датами с Excel API JavaScript и Moment-MSDate плагина
 
@@ -19,7 +19,7 @@ ms.locfileid: "57084735"
 
 ## <a name="use-the-moment-msdate-plug-in-to-work-with-dates"></a>Используйте подключаемый Moment-MSDate для работы с датами
 
-[Библиотека JavaScript Moment](https://momentjs.com/) предоставляет удобный способ использования дат и меток времени. [Подключаемый модуль Moment-MSDate](https://www.npmjs.com/package/moment-msdate) преобразует формат моментов времени в предпочитаемый для Excel. Это тот же формат, который возвращает [функция ТДАТА](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46).
+[Библиотека JavaScript Moment](https://momentjs.com/) предоставляет удобный способ использования дат и меток времени. [Подключаемый модуль Moment-MSDate](https://www.npmjs.com/package/moment-msdate) преобразует формат моментов времени в предпочитаемый для Excel. Это тот же формат, который возвращает [функция ТДАТА](https://support.microsoft.com/office/3337fd29-145a-4347-b2e6-20c904739c46).
 
 В следующем коде показано, как установить диапазон **на уровне B4** до момента.
 

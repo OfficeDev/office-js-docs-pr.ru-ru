@@ -4,12 +4,12 @@ description: Узнайте, как обрабатывать динамичес�
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b44f00e58eb9688b8526d56064bb6d6902729635075fe80d64e47ebedb13a8f6
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d95546b4cff3f0ba7410d9ceaa73e19b7e684985
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084083"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868689"
 ---
 # <a name="handle-dynamic-arrays-and-spilling-using-the-excel-javascript-api"></a>Обработка динамических массивов и разлив с помощью Excel API JavaScript
 
@@ -17,7 +17,7 @@ ms.locfileid: "57084083"
 
 ## <a name="dynamic-arrays"></a>Динамические массивы
 
-Некоторые Excel возвращают [динамические массивы.](https://support.microsoft.com/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531) Они заполняют значения нескольких ячеек за пределами исходной ячейки формулы. Это переполнение значения называется "разлив". Надстройка может найти диапазон, используемый для разлива с помощью метода [Range.getSpillingToRange.](/javascript/api/excel/excel.range#getSpillingToRange__) Существует также [версия *OrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), `Range.getSpillingToRangeOrNullObject` .
+Некоторые Excel возвращают [динамические массивы.](https://support.microsoft.com/office/205c6b06-03ba-4151-89a1-87a7eb36e531) Они заполняют значения нескольких ячеек за пределами исходной ячейки формулы. Это переполнение значения называется "разлив". Надстройка может найти диапазон, используемый для разлива с помощью метода [Range.getSpillingToRange.](/javascript/api/excel/excel.range#getSpillingToRange__) Существует также [версия *OrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), `Range.getSpillingToRangeOrNullObject` .
 
 В следующем примере показана базовая формула, которая копирует содержимое диапазона в ячейку, которая разливается в соседние ячейки. Затем надстройка регистрит диапазон, содержащий разлив.
 

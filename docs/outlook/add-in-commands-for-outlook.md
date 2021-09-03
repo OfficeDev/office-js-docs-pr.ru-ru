@@ -3,12 +3,12 @@ title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
 ms.date: 07/07/2020
 localization_priority: Priority
-ms.openlocfilehash: b99f793565163042821cc5c5bf3c7364858cd6fac37637359d90aec28ae3e1fc
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8fc8f5c30f5a56ffe9c792f2347b915cf2f04051
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097550"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868745"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 
@@ -19,10 +19,10 @@ ms.locfileid: "57097550"
 >
 > Для поддержки команд надстроек в Outlook 2013 необходимы три обновления:
 > - [Обновление для системы безопасности для Outlook от 8 марта 2016 г.](https://support.microsoft.com/kb/3114829)
-> - [Обновление для системы безопасности для Office (KB3114816) от 8 марта 2016 г.](https://support.microsoft.com/help/3114816/march-8,-2016,-update-for-office-2013-kb3114816)
-> - [Обновление для системы безопасности для Office (KB3114828) от 8 марта 2016 г.](https://support.microsoft.com/help/3114828/march-8,-2016,-update-for-office-2013-kb3114828)
+> - [Обновление для системы безопасности для Office (KB3114816) от 8 марта 2016 г.](https://support.microsoft.com/topic/3d3eb171-78c2-0e61-62a2-85723bc4bcc0)
+> - [Обновление для системы безопасности для Office (KB3114828) от 8 марта 2016 г.](https://support.microsoft.com/topic/54437016-d1e0-7aac-dbb7-4ecfbd57f5f0)
 >
-> Для поддержки команд надстроек в Exchange 2016 требуется [накопительный пакет обновления 5](https://support.microsoft.com/help/4012106/cumulative-update-5-for-exchange-server-2016).
+> Для поддержки команд надстроек в Exchange 2016 требуется [накопительный пакет обновления 5](https://support.microsoft.com/topic/d67d7693-96a4-fb6e-b60b-e64984e267bd).
 
 Команды надстроек доступны в тех надстройках, где не используются [правила ItemHasAttachment, ItemHasKnownEntity и ItemHasRegularExpressionMatch](activation-rules.md), для ограничения типов элементов, активирующих надстройки. В [контекстных надстройках](contextual-outlook-add-ins.md) могут отображаться разные команды в зависимости от того, какой элемент выбран (сообщение или встреча), и они могут работать в режимах просмотра и создания. [Рекомендуем](../concepts/add-in-development-best-practices.md) использовать команды надстроек по мере возможности.
 

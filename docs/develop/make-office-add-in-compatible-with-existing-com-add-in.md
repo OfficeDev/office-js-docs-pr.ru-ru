@@ -3,12 +3,12 @@ title: Убедитесь, что надстройка Office совместим
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
 ms.date: 08/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 498f1715462edb7f9c79be7738337dc7433fe403a2e0aa76eae81b4516af9caa
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: bb842c60beb329571ce3dc7f055cc1d9d606209b
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080475"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868444"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -21,9 +21,9 @@ ms.locfileid: "57080475"
 >
 > - Excel, Word и PowerPoint на Windows (версия 1904 или более поздней версии)
 > - Outlook версии Windows версии 2102 или более поздней версии Exchange сервера
->   - Exchange Online
->   - Exchange 2019 Накопительное обновление 10 или более поздней версии[(KB5003612)](https://support.microsoft.com/topic/cumulative-update-10-for-exchange-server-2019-kb5003612-b1434cad-3fbc-4dc3-844d-82568e8d4344)
->   - Exchange 2016 накопительного обновления 21 или более поздней версии[(KB5003611)](https://support.microsoft.com/topic/cumulative-update-21-for-exchange-server-2016-kb5003611-b7ba1656-abba-4a0b-9be9-dac45095d969)
+>   - Exchange Online.
+>   - Exchange 2019 Накопительное обновление 10 или более поздней версии[(KB5003612)](https://support.microsoft.com/topic/b1434cad-3fbc-4dc3-844d-82568e8d4344)
+>   - Exchange 2016 накопительного обновления 21 или более поздней версии[(KB5003611)](https://support.microsoft.com/topic/b7ba1656-abba-4a0b-9be9-dac45095d969)
 
 ## <a name="specify-an-equivalent-com-add-in"></a>Укажите эквивалентную надстройка COM
 

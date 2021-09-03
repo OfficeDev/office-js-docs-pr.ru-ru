@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 2ffd408e497cdb845497479f5f4cbed2cedcc39e
-ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
+ms.openlocfilehash: bda86e8bb7aacf72fbe26e86b7f062f362adbdd3
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58232194"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868395"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -30,9 +30,9 @@ Office Надстройки — это веб-приложения, которы
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
 |OS|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
-|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-|любой|Office в Интернете|Не применимо|Браузер, в котором открыт Office.|
-|Mac|любой|Не применимо|Safari|
+|:-----|:-----|:-----|:-----|
+|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.|
+|Mac|любой|Неприменимо|Safari|
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
 |Windows 7, 8.1, 10 | подписка Office 2013 или более поздней|Всё равно|Internet Explorer 11|
@@ -43,7 +43,7 @@ Office Надстройки — это веб-приложения, которы
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
 |Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>2</sup> с WebView2 (Chromium основе) |
 
-<sup>1.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история обновления и Office клиентской версии и канала обновления. [](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19)
+<sup>1.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история обновления и Office клиентской версии и канала обновления. [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19)
 
 <sup>2</sup> Когда Microsoft Edge используется, Windows 10(иногда называемый "считыватель экрана") читает тег на странице, открываемой в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 

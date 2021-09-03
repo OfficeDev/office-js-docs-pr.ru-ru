@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: Узнайте об аспектах конфиденциальности и безопасности платформы Office надстройки.
 ms.date: 03/19/2021
 localization_priority: Normal
-ms.openlocfilehash: c3cde56ce1bedc76afb967a449b3d29ce61e1fecd8fe7b2774a7c69278a61688
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 1972fa8de2c6a6f42a003efe99be7694290ee06c
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57083243"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868423"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -38,7 +38,7 @@ ms.locfileid: "57083243"
 
 В поддерживаемых клиентах для настольных компьютеров и планшетов, например в Excel для Windows и Outlook для Windows и Mac, надстройки Office поддерживаются путем интеграции внутрипроцессного компонента — среды выполнения надстроек Office, которая управляет жизненным циклом надстройки и позволяет ей взаимодействовать с клиентским приложением. Сама веб-страница надстройки размещена вне процесса. Как показано на рис. 1, на настольном компьютере или планшете с ОС Windows [веб-страница надстройки размещена внутри элемента управления Internet Explorer](browsers-used-by-office-web-add-ins.md), который, в свою очередь, размещен внутри процесса среды выполнения надстройки, обеспечивающего безопасность и изоляцию работы.
 
-На компьютерах с Windows в Internet Explorer для зоны "Опасные сайты" должен быть включен защищенный режим. Обычно этот режим включен по умолчанию. Если он отключен, при запуске надстройки [возникнет ошибка](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer).
+На компьютерах с Windows в Internet Explorer для зоны "Опасные сайты" должен быть включен защищенный режим. Обычно этот режим включен по умолчанию. Если он отключен, при запуске надстройки [возникнет ошибка](/office/troubleshoot/office-suite-issues/apps-for-office-not-start).
 
 *Рис. 1. Среда выполнения надстроек для Office в клиентах для настольных компьютеров и планшетов под управлением ОС Windows*
 
@@ -273,5 +273,5 @@ Exchange и SharePoint предоставляют прокси-серверы н
 - [Принцип одинакового источника](https://www.w3.org/Security/wiki/Same_Origin_Policy)
 - [Принцип одинакового источника. Часть 1. Без просмотра](/archive/blogs/ieinternals/same-origin-policy-part-1-no-peeking)
 - [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)
-- [Защищенный режим Internet Explorer](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer)
+- [Защищенный режим Internet Explorer](/office/troubleshoot/office-suite-issues/apps-for-office-not-start)
 - [Элементы управления конфиденциальностью для приложений Microsoft 365](/deployoffice/privacy/overview-privacy-controls)

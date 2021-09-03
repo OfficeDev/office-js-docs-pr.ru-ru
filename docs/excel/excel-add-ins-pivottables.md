@@ -3,19 +3,19 @@ title: Работа с pivotTables с помощью Excel API JavaScript
 description: Используйте API Excel JavaScript для создания pivotTables и взаимодействия с их компонентами.
 ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 7be7fe8a4f7dcb2509943f7fd03fbb8739312e87874583bbe97b8139ab83c6b5
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d9ccaf72be4fa23b73f1f91d38d240ea02569eca
+ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084251"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "58868640"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работа с pivotTables с помощью Excel API JavaScript
 
 PivotTables упрощают большие наборы данных. Они позволяют быстро манипулировать сгруппными данными. API Excel JavaScript позволяет надстройки создавать pivotTables и взаимодействовать с их компонентами. В этой статье описывается, как pivotTables представлены API javaScript Office JavaScript и представлены примеры кода для ключевых сценариев.
 
 Если вы не знакомы с функциями PivotTables, рассмотрите их в качестве конечного пользователя.
-См. [в этой ссылке Создание pivotTable](https://support.office.com/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) для анализа данных таблицы для хорошей грунтовки на этих средствах.
+См. [в этой ссылке Создание pivotTable](https://support.microsoft.com/office/ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EBBD=PivotTables) для анализа данных таблицы для хорошей грунтовки на этих средствах.
 
 > [!IMPORTANT]
 > В настоящее время не поддерживаются pivotTables, созданные с помощью OLAP. Также не поддерживается power Pivot.
@@ -242,7 +242,7 @@ Excel.run(function (context) {
 
 По умолчанию pivotTables корректирует размер строки и столбца по мере необходимости. Это делается при обновлении PivotTable. `PivotLayout.autoFormat` указывает такое поведение. Любые изменения размера строки или столбца, внесенные вашей надстройки, сохраняются, `autoFormat` когда `false` это . Кроме того, параметры pivotTable по умолчанию сохраняют настраиваемый форматирование в PivotTable (например, изменения заливок и шрифтов). Установите `PivotLayout.preserveFormatting` для `false` применения формата по умолчанию при обновлении.
 
-Кроме того, элемент управления загонами и параметров общей строки, отображение пустых ячеек данных `PivotLayout` и [параметры текста alt.](https://support.microsoft.com/topic/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object-44989b2a-903c-4d9a-b742-6a75b451c669) Ссылка [PivotLayout](/javascript/api/excel/excel.pivotlayout) содержит полный список этих функций.
+Кроме того, элемент управления загонами и параметров общей строки, отображение пустых ячеек данных `PivotLayout` и [параметры текста alt.](https://support.microsoft.com/topic/44989b2a-903c-4d9a-b742-6a75b451c669) Ссылка [PivotLayout](/javascript/api/excel/excel.pivotlayout) содержит полный список этих функций.
 
 В следующем примере кода пустые ячейки данных отображают строку, форматировать диапазон тела до согласованного горизонтального выравнивания и гарантировать, что изменения форматирования остаются даже после обновления `"--"` PivotTable.
 
@@ -283,7 +283,7 @@ Excel.run(function (context) {
 
 [PivotFilters](/javascript/api/excel/excel.pivotfilters) фильтрует данные на основе четырех категорий [](#hierarchies) иерархии PivotTable (фильтры, столбцы, строки и значения). Существует четыре типа pivotFilters, которые позволяют фильтрацию на основе дат календаря, размыв строк, сравнение номеров и фильтрацию на основе настраиваемого ввода.
 
-[Срезы](/javascript/api/excel/excel.slicer) можно применять как к таблицам PivotTables, так и к Excel таблицам. При применении к pivotTable срезы функционируют как [PivotManualFilter](#pivotmanualfilter) и позволяют фильтрацию на основе настраиваемого ввода. В отличие от PivotFilters, срезеры имеют [компонент Excel пользовательского интерфейса.](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) С помощью `Slicer` класса вы создаете этот компонент пользовательского интерфейса, управляете фильтрацией и контролируете его внешний вид.
+[Срезы](/javascript/api/excel/excel.slicer) можно применять как к таблицам PivotTables, так и к Excel таблицам. При применении к pivotTable срезы функционируют как [PivotManualFilter](#pivotmanualfilter) и позволяют фильтрацию на основе настраиваемого ввода. В отличие от PivotFilters, срезеры имеют [компонент Excel пользовательского интерфейса.](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) С помощью `Slicer` класса вы создаете этот компонент пользовательского интерфейса, управляете фильтрацией и контролируете его внешний вид.
 
 ### <a name="filter-with-pivotfilters"></a>Фильтр с помощью pivotFilters
 
@@ -412,7 +412,7 @@ Excel.run(function (context) {
 
 ### <a name="filter-with-slicers"></a>Фильтр с помощью срезов
 
-[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из Excel pivotTable или таблицы. Срезер использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в [качестве объектов SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` . Ваша надстройка может регулировать эти фильтры, как и пользователи (Excel[пользовательского интерфейса).](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) Срез находится на вершине таблицы в слое рисования, как показано на следующем скриншоте.
+[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из Excel pivotTable или таблицы. Срезер использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в [качестве объектов SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` . Ваша надстройка может регулировать эти фильтры, как и пользователи (Excel[пользовательского интерфейса).](https://support.microsoft.com/office/249f966b-a9d5-4b0f-b31a-12651785d29d) Срез находится на вершине таблицы в слое рисования, как показано на следующем скриншоте.
 
 ![Фильтрующий срез данных на pivotTable.](../images/excel-slicer.png)
 
