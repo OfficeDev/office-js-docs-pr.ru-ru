@@ -3,12 +3,12 @@ title: Поддержка API JavaScript для Office для контентны
 description: Используйте API Office JavaScript для создания области задач в Office 2013 г.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 644bc1f0759d381de412cb276a1535d2251abb0a6a0be78b45d9cc0a245758c7
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 356880c0f4bb4377f2d5997217f26f51dd95f845
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57079999"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936826"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 

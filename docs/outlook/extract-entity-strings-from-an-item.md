@@ -3,12 +3,12 @@ title: Извлечение строк сущностей из элемента 
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: b206f76ff1b817ff64970f59cfc79752aad943b3b71a40d86a3ee3d6f6493a3f
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d266795e3794cfa293d073dafc1ca714644faa5b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092826"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937205"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 

@@ -4,12 +4,12 @@ description: Поддержка наборов требований к прин�
 ms.date: 02/19/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: d605a8ac5d36825ffdfa9648578f7d252340325e1021c7663667778f4427ef6a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 35fed16003fe217e6f1f53d8c790cf78547308cf
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090651"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937219"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 

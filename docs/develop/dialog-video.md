@@ -3,12 +3,12 @@ title: Используйте диалоговое окно "Office" для во
 description: Узнайте, как открыть и сыграть видео в диалоговом Office диалоговом окне
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 4865b15f21238431f9cf48cebb9a35253cdba0695873b429ab249c33d329d7e4
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 4704b31cb698e2986360e5aff692ed6469fd0eb5
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080761"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937029"
 ---
 # <a name="use-the-office-dialog-box-to-show-a-video"></a>Чтобы показать видео, Office диалоговое окно
 

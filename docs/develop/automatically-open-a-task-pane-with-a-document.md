@@ -3,12 +3,12 @@ title: Автоматическое открытие области задач �
 description: Узнайте, как настроить Office автоматическое открытие надстройки при открываемом документе.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: a9683f63b82232f8f5697007692b359ae06b7650e96866a2425e2d900ded4d8a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 53776d41aff2446267b637dcf0b33ffe379b803c
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57081215"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938165"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 

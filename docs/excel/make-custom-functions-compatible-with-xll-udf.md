@@ -4,11 +4,11 @@ description: Включить совместимость с Excel функция
 ms.date: 08/24/2021
 localization_priority: Normal
 ms.openlocfilehash: 5611a8d7c22867146c0f0904d62bd113fe8d29d2
-ms.sourcegitcommit: 7245eeedc6246c7aad2fc7df8d47e11971b42ee7
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "58614590"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937305"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью функций, определенных пользователем XLL
 

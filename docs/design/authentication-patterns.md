@@ -3,12 +3,12 @@ title: Рекомендации по разработке аутентифика
 ms.date: 02/09/2021
 description: Узнайте, как визуально спроектировать страницу регистрации или регистрации в Office надстройки.
 localization_priority: Normal
-ms.openlocfilehash: 6550628555dcc2c7a11cccc17b00824169137d34df72ec51f8e0962f56c9a54e
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: bc047e6b001b7a491aa8117ba1b5901716ca1555
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57082294"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937532"
 ---
 # <a name="authentication-patterns"></a>Шаблоны аутентификации
 

@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Набор требований 1.8 для Outlook API надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: f55789618e2737ce6e14c23be72924a4527a468c786e6fc5ac58116aa2477027
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: b852d8948044cc853cc78e81dbce25a587736f77
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097165"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936224"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 

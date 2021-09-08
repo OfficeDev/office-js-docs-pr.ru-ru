@@ -3,12 +3,12 @@ title: Sideload Office надстройки для тестирования из
 description: Узнайте, как поботь надстройку Office для тестирования из сетевой доли
 ms.date: 06/02/2020
 localization_priority: Normal
-ms.openlocfilehash: 93d791b544a1debe62512f12cc3a5e8b3022d89f8003b77dc1e3afc9c73bc627
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 9a44c14669bf0a8fa842e931fc1b12601f73043b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093885"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936314"
 ---
 # <a name="sideload-office-add-ins-for-testing-from-a-network-share"></a>Sideload Office надстройки для тестирования из сетевой доли
 

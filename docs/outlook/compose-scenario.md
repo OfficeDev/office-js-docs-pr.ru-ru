@@ -3,12 +3,12 @@ title: Разработка надстроек Outlook для форм созд�
 description: Узнайте о сценариях и возможностях надстроек Outlook для форм создания.
 ms.date: 02/09/2021
 localization_priority: Priority
-ms.openlocfilehash: ea85194eb74e0eb57addecddab32fe157cf2a88ef05604dfe1b1992678973996
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 59ccebafbb3991ff3edb241596f44b5939d73693
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090876"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937751"
 ---
 # <a name="create-outlook-add-ins-for-compose-forms"></a>Разработка надстроек Outlook для форм создания
 

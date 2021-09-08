@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 description: Пошаговая руководство по созданию (или преобразованию) надстройки Office с ASP.NET для использования единого входного знака (SSO).
-ms.date: 07/08/2021
+ms.date: 09/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 5052856d5f29241c5e25669c8b6451b73aef5ec5
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 685e482c3c714f6831ea827e4a65b2ac057bddec
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773890"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937946"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 
@@ -32,7 +32,7 @@ ms.locfileid: "53773890"
 
 ## <a name="set-up-the-starter-project"></a>Настройка начального проекта
 
-Клонируйте или скачайте репозиторий [Office Add-in ASPNET SSO](https://github.com/officedev/office-add-in-aspnet-sso).
+Клонируйте или скачайте репозиторий [Office Add-in ASPNET SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO).
 
 > [!NOTE]
 > Существует две версии примера.
@@ -185,7 +185,7 @@ ms.locfileid: "53773890"
 1. Добавьте указанную ниже функцию под функцией `getGraphData`. Обратите внимание, что функция `handleClientSideErrors` будет создана позже.
 
     ```javascript
-    async function getDataWithToken() {
+    async function getDataWithToken(options) {
         try {
 
             // TODO 1: Get the bootstrap token and send it to the server to exchange
@@ -204,20 +204,19 @@ ms.locfileid: "53773890"
     }
     ```
 
-1. Замените `TODO 1` приведенным ниже кодом. Вот что нужно знать об этом коде:
+1. Замените следующим кодом, чтобы получить маркер доступа из `TODO 1` Office хоста. Параметр **параметра** параметра содержит следующие параметры, переданные из предыдущей функции **getGraphData()** .
 
-    * `getAccessToken` предписывает Office получить маркер начальной загрузки из Azure AD и вернуть в надстройку.
-    * `allowSignInPrompt` предписывает Office предложить пользователю выполнить вход, если он еще не вошел в Office.
-    * `allowConsentPrompt`сообщает Office, чтобы дать пользователю согласие на доступ к AAD-профиле пользователя, если согласие еще не получено. (Результатовая подсказка *не* позволяет пользователю соглашаться на какие-либо Graph microsoft.)
-    * `forMSGraphAccess` сообщает Office, что надстройка планирует заменить маркер начальной загрузки на маркер доступа к Microsoft Graph (вместо того, чтобы использовать его в качестве маркера ИД пользователя). Установка этого параметра дает Office возможность отменить процесс получения маркера начальной загрузки (и вернуть код ошибки 13012), если администратор клиента пользователя не предоставил согласие надстройке. Код на стороне клиента может реагировать на ошибку 13012, переходя на резервную систему авторизации. Если не используется и администратор не предоставил согласие, маркер bootstrap возвращается, но попытка его обмена с потоком от имени приведет к `forMSGraphAccess` ошибке. Таким образом, параметр `forMSGraphAccess` позволяет надстройке быстро перейти на резервную систему.
+    * `allowSignInPrompt` настроено на верное. Это Office, чтобы побудить пользователя войти, если пользователь еще не подписан в Office.
+    * `allowConsentPrompt` настроено на верное. Это Office, чтобы побудить пользователя дать согласие на доступ к профилю Microsoft Azure Active Directory надстройки, если согласие еще не получено. (Результатовая подсказка *не* позволяет пользователю соглашаться на какие-либо Graph microsoft.)
+    * `forMSGraphAccess` настроено на верное. В этом Office возвращается ошибка (код 13012), если пользователь или администратор не предоставили Graph области для надстройки. Чтобы получить доступ Graph microsoft, надстройка должна обменять маркер доступа на новый маркер доступа через поток от имени. Настройка true помогает избежать сценария, при котором `forMSGraphAccess` **getAccessToken ()** успешно, но затем поток от имени не удается позже для Microsoft Graph. Код на стороне клиента может реагировать на ошибку 13012, переходя на резервную систему авторизации.
+
+    Кроме того, обратите внимание на следующий код:
+
     * Вы создадите функцию `getData` позже.
-    * Параметр `/api/values` является URL-адресом контроллера на стороне сервера, который будет осуществлять обмен маркерами и использовать маркер доступа, полученный обратно, для вызова Microsoft Graph.
+    * Параметр — URL-адрес контроллера на стороне сервера, который будет использовать поток от имени для обмена маркера на новый маркер доступа для вызова `/api/values` Microsoft Graph.
 
     ```javascript
-    let bootstrapToken = await OfficeRuntime.auth.getAccessToken({
-        allowSignInPrompt: true,
-        allowConsentPrompt: true,
-        forMSGraphAccess: true });
+    let bootstrapToken = await Office.auth.getAccessToken(options);
 
     getData("/api/values", bootstrapToken);
     ```

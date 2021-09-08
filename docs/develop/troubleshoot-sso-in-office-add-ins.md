@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок единого входа
 description: Рекомендации по устранению неполадок с одним входом (SSO) в Office надстройки и обработке специальных условий или ошибок.
-ms.date: 07/08/2021
+ms.date: 09/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 1587f747ab3128904d4b287581f6f909f3fdb216ec03a711b30d994ca696eb03
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: f2a4b4b7ae44596bef101aeeba51ee6dffa8ba5e
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57079963"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937086"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
@@ -28,9 +28,8 @@ ms.locfileid: "57079963"
 ## <a name="causes-and-handling-of-errors-from-getaccesstoken"></a>Причины и обработка ошибок в методе getAccessToken
 
 Примеры обработки ошибок, рассматриваемых в этом разделе:
-
-- [HomeES6.js in Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
-- [ssoAuthES6.js in Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js)
+- [HomeES6.js in Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
+- [ssoAuthES6.js in Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js)
 
 ### <a name="13000"></a>13000
 
@@ -108,7 +107,7 @@ ms.locfileid: "57079963"
 
 ### <a name="13013"></a>13013
 
-Вызов был вызван слишком много раз за короткое время, поэтому Office последний `getAccessToken` вызов. Обычно это вызвано бесконечным циклом звонков к методу. При отзыве метода рекомендуется использовать сценарии. Однако в коде следует использовать переменную счетчика или флага, чтобы убедиться, что метод не отзывается повторно. Если один и тот же путь кода "повторная" снова запущен, код должен вернуться к альтернативной системе проверки подлинности пользователей. Пример кода см. в примере использования переменной вHomeES6.js`retryGetAccessToken` [илиssoAuthES6.js. ](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js) [](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
+Вызов был вызван слишком много раз за короткое время, поэтому Office последний `getAccessToken` вызов. Обычно это вызвано бесконечным циклом звонков к методу. При отзыве метода рекомендуется использовать сценарии. Однако в коде следует использовать переменную счетчика или флага, чтобы убедиться, что метод не отзывается повторно. Если один и тот же путь кода "повторная" снова запущен, код должен вернуться к альтернативной системе проверки подлинности пользователей. Пример кода см. в примере использования переменной вHomeES6.js`retryGetAccessToken` [илиssoAuthES6.js. ](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js) [](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
 
 ### <a name="50001"></a>50001
 
@@ -119,9 +118,8 @@ ms.locfileid: "57079963"
 ## <a name="errors-on-the-server-side-from-azure-active-directory"></a>Ошибки на стороне сервера из Azure Active Directory
 
 Примеры обработки ошибок, рассматриваемых в этом разделе:
-
-- [Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
-- [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
+- [Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
+- [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
 
 ### <a name="conditional-access--multifactor-authentication-errors"></a>Ошибки условного доступа и многофакторной проверки подлинности
 

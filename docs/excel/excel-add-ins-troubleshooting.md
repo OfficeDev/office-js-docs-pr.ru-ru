@@ -3,12 +3,12 @@ title: Устранение Excel надстройки
 description: Узнайте, как устранить ошибки разработки в Excel надстройки.
 ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: da3f22597cace678aeff8a471d478b0b091036301d6ddd1776fae03b97673fda
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: b90d8cfdb4696445655122a2fa7eb74d1c87fa2f
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57088815"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936284"
 ---
 # <a name="troubleshooting-excel-add-ins"></a>Устранение Excel надстройки
 

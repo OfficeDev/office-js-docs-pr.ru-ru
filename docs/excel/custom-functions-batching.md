@@ -4,11 +4,11 @@ description: Объедините пользовательские функци�
 title: Пакетирование обращений пользовательских функций к удаленной службе
 localization_priority: Normal
 ms.openlocfilehash: fa02a88646ca373a463aefaa51076c35c3df08cf
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774177"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936957"
 ---
 # <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные пользовательские вызовы функции для удаленной службы
 

@@ -3,12 +3,12 @@ title: Используйте настраиваемые теги на през�
 description: Узнайте, как использовать теги для настраиваемой метаданных о презентациях, слайдах и фигурах.
 ms.date: 04/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 9ae86906a2ac69cb79adac34fa4e923a9bc218a7dc8a7e5bdefd63300b589da5
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: fbb13e67da1f7962fc2c0b8d45689f259b015014
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093660"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938093"
 ---
 # <a name="use-custom-tags-for-presentations-slides-and-shapes-in-powerpoint"></a>Используйте настраиваемые теги для презентаций, слайдов и фигур в PowerPoint
 

@@ -3,12 +3,12 @@ title: Время запуска в файле манифеста
 description: Элемент Runtimes указывает время работы надстройки.
 ms.date: 05/14/2021
 localization_priority: Normal
-ms.openlocfilehash: e5ec70449d3984671d507131ac8d4fc0f7617cdcda1ad8f99b4f4bf52773aded
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 80336674c6d954bb9e0c6892feb41cb2f03c5859
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57091632"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936751"
 ---
 # <a name="runtimes-element"></a>Элемент Runtimes
 
@@ -37,7 +37,7 @@ ms.locfileid: "57091632"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [Время выполнения](runtime.md) | Да |  Время запуска надстройки. **Важно.** В настоящее время можно определить только один `<Runtime>` элемент. |
+| [Runtime](runtime.md) | Да |  Время запуска надстройки. **Важно.** В настоящее время можно определить только один `<Runtime>` элемент. |
 
 ## <a name="see-also"></a>См. также
 

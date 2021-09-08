@@ -4,12 +4,12 @@ description: Узнайте Excel API JavaScript для ячейки и узна
 ms.date: 04/16/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 444feecd4aafb0e884de05b2ff198a3ca1423a16644c537865bcfb6905684a40
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ad8ca985b6bbdcf19920c36c371e690f61639f16
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57079350"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937963"
 ---
 # <a name="work-with-cells-using-the-excel-javascript-api"></a>Работа с ячейками с Excel API JavaScript
 

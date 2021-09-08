@@ -1,14 +1,14 @@
 ---
 title: Включение единого входа для надстроек Office
 description: Узнайте, как включить единый вход для надстроек Office с помощью обычной личной, рабочей или учебной учетной записи Майкрософт.
-ms.date: 07/08/2021
+ms.date: 09/03/2021
 localization_priority: Priority
-ms.openlocfilehash: f24cfb2bb9fa90f566a2730d7a289371084a2abc
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: b424d30148f216c1c9bb4290e5bb9f9b12bb073a
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773750"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936310"
 ---
 # <a name="enable-single-sign-on-for-office-add-ins"></a>Включение единого входа для надстроек Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "53773750"
 
 Если вы работаете с надстройкой **Outlook**, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
-Вам *не* следует опираться на функцию единого в качестве единого способа проверки подлинности вашей надстройки. Вам следует внедрить альтернативную систему проверки подлинности, на которую ваша надстройка может опираться при определенных ошибках. Вы можете использовать систему таблиц пользователя и проверки подлинности, либо вы можете выделить одну из систем входа с использованием социальных сервисов. Дополнительные сведения о том, как это сделать с помощью надстройки Office см. в статье [Авторизация внешних служб в надстройке Office](auth-external-add-ins.md). Для *Outlook* существует рекомендуемая система возврата. Дополнительные сведения см. в статье [Сценарий: реализация единого входа для службы в надстройке Outlook](../outlook/implement-sso-in-outlook-add-in.md). Примеры использования Azure Active Directory в качестве системы возврата см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
+Вам *не* следует опираться на функцию единого в качестве единого способа проверки подлинности вашей надстройки. Вам следует внедрить альтернативную систему проверки подлинности, на которую ваша надстройка может опираться при определенных ошибках. Вы можете использовать систему таблиц пользователя и проверки подлинности, либо вы можете выделить одну из систем входа с использованием социальных сервисов. Дополнительные сведения о том, как это сделать с помощью надстройки Office см. в статье [Авторизация внешних служб в надстройке Office](auth-external-add-ins.md). Для *Outlook* существует рекомендуемая система возврата. Дополнительные сведения см. в статье [Сценарий: реализация единого входа для службы в надстройке Outlook](../outlook/implement-sso-in-outlook-add-in.md). Примеры использования Azure Active Directory в качестве системы возврата см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO).
 
 ## <a name="how-sso-works-at-runtime"></a>Принцип работы единого входа во время выполнения
 
@@ -99,7 +99,7 @@ ms.locfileid: "53773750"
 Вот простой пример вызова для `getAccessToken`.
 
 > [!NOTE]
-> В этом примере обрабатывается только один тип ошибки явным образом. Примеры более сложной обработки ошибок см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
+> В этом примере обрабатывается только один тип ошибки явным образом. Примеры более сложной обработки ошибок см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO).
 
 ```js
 async function getGraphData() {

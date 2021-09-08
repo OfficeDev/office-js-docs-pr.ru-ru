@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
-ms.date: 07/08/2021
+ms.date: 09/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 4d92b5b7249540ada274bb0aa310cf894a7be6bc
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: ba3c0ab64ce82d68aab677baa48cdb34cce6f7e6
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773869"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937265"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office на платформе Node.js с использованием единого входа
 
@@ -37,7 +37,7 @@ ms.locfileid: "53773869"
 
 ## <a name="set-up-the-starter-project"></a>Настройка начального проекта
 
-1. Клонируйте или скачайте репозиторий [Office-Add-in-NodeJS-SSO](https://github.com/officedev/office-add-in-nodejs-sso).
+1. Клонируйте или скачайте репозиторий [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO).
 
     > [!NOTE]
     > Существует три версии примера.
@@ -188,7 +188,7 @@ ms.locfileid: "53773869"
         catch(exception) {
 
             // TODO 5: Respond to exceptions thrown by the
-            //         OfficeRuntime.auth.getAccessToken call.
+            //         Office.auth.getAccessToken call.
 
         }
     }
@@ -196,13 +196,13 @@ ms.locfileid: "53773869"
 
 1. Замените `TODO 1` приведенным ниже кодом. В этом коде обратите внимание на следующее:
 
-    - `OfficeRuntime.auth.getAccessToken` предписывает Office получить маркер начальной загрузки из Azure AD. Маркер начальной загрузки аналогичен маркеру идентификатора, но имеет свойство `scp` (scope) со значением `access-as-user`. Такой тип маркера веб-приложение может заменить на маркер доступа к Microsoft Graph.
+    - `Office.auth.getAccessToken` предписывает Office получить маркер начальной загрузки из Azure AD. Маркер начальной загрузки аналогичен маркеру идентификатора, но имеет свойство `scp` (scope) со значением `access-as-user`. Такой тип маркера веб-приложение может заменить на маркер доступа к Microsoft Graph.
     - Настройка параметра true означает, что если пользователь в настоящее время не Office, Office откроет всплывающее подсказок `allowSignInPrompt` для регистрации.
     - Настройка параметра true означает, что если пользователь не дал согласие на доступ к aAD-профиле пользователя, Office откроет запрос `allowConsentPrompt` на согласие. (Подсказка позволяет только пользователю соглашаться на AAD-профиль пользователя, а не на области Microsoft Graph.)
-    - Настройка параметра true signals Office, что надстройка намерена использовать маркер bootstrap для получения маркера доступа к Microsoft Graph, а не просто использовать его в качестве маркера `forMSGraphAccess` ID. Если администратор клиента не предоставил согласие на доступ надстройки к Microsoft Graph, `OfficeRuntime.auth.getAccessToken` возвращает ошибку **13012**. Надстройка может отреагировать переходом на альтернативную систему проверки подлинности. Это необходимо, так как Office может запрашивать согласие только на доступ к профилю пользователя Azure AD, а не к областям Microsoft Graph. Система авторизации отката требует, чтобы пользователь  снова входил, и пользователю может быть предложено дать согласие на Graph microsoft. Таким образом, параметр `forMSGraphAccess` обеспечивает, что надстройка не будет выполнять замену маркера, которая завершится ошибкой из-за отсутствия согласия. (Так как вы предоставили согласие администратора на предыдущем шаге, этот сценарий не возникнет для этой надстройки. Но этот параметр добавлен в любом случае, чтобы продемонстрировать рекомендацию.)
+    - Настройка параметра true signals Office, что надстройка намерена использовать маркер bootstrap для получения маркера доступа к Microsoft Graph, а не просто использовать его в качестве маркера `forMSGraphAccess` ID. Если администратор клиента не предоставил согласие на доступ надстройки к Microsoft Graph, `Office.auth.getAccessToken` возвращает ошибку **13012**. Надстройка может отреагировать переходом на альтернативную систему проверки подлинности. Это необходимо, так как Office может запрашивать согласие только на доступ к профилю пользователя Azure AD, а не к областям Microsoft Graph. Система авторизации отката требует, чтобы пользователь  снова входил, и пользователю может быть предложено дать согласие на Graph microsoft. Таким образом, параметр `forMSGraphAccess` обеспечивает, что надстройка не будет выполнять замену маркера, которая завершится ошибкой из-за отсутствия согласия. (Так как вы предоставили согласие администратора на предыдущем шаге, этот сценарий не возникнет для этой надстройки. Но этот параметр добавлен в любом случае, чтобы продемонстрировать рекомендацию.)
 
     ```javascript
-    let bootstrapToken = await OfficeRuntime.auth.getAccessToken({ allowSignInPrompt: true, allowConsentPrompt: true, forMSGraphAccess: true }); 
+    let bootstrapToken = await Office.auth.getAccessToken({ allowSignInPrompt: true, allowConsentPrompt: true, forMSGraphAccess: true }); 
     ```
 
 1. Замените `TODO 2` приведенным ниже кодом. Вы создадите метод `getGraphToken` на одном из следующих шагов.
@@ -213,11 +213,11 @@ ms.locfileid: "53773869"
 
 1. Замените `TODO 3` приведенным ниже кодом. Вот что нужно знать об этом коде: 
 
-    - Если клиент Microsoft 365 настроен на многофакторную проверку подлинности, в него будет включено свойство с информацией о дополнительных `exchangeResponse` `claims` необходимых факторах. В этом случае следует снова вызвать `OfficeRuntime.auth.getAccessToken` с присвоением параметру `authChallenge` значения свойства утверждений. В результате AAD предложит пользователю пройти все необходимые проверки подлинности.
+    - Если клиент Microsoft 365 настроен на многофакторную проверку подлинности, в него будет включено свойство с информацией о дополнительных `exchangeResponse` `claims` необходимых факторах. В этом случае следует снова вызвать `Office.auth.getAccessToken` с присвоением параметру `authChallenge` значения свойства утверждений. В результате AAD предложит пользователю пройти все необходимые проверки подлинности.
 
     ```javascript
     if (exchangeResponse.claims) {
-        let mfaBootstrapToken = await OfficeRuntime.auth.getAccessToken({ authChallenge: exchangeResponse.claims });
+        let mfaBootstrapToken = await Office.auth.getAccessToken({ authChallenge: exchangeResponse.claims });
         exchangeResponse = await getGraphToken(mfaBootstrapToken);
     }
     ```
@@ -290,7 +290,7 @@ ms.locfileid: "53773869"
         showMessage("No one is signed into Office. But you can use many of the add-ins functions anyway. If you want to sign in, press the Get OneDrive File Names button again.");  
         break;
     case 13002:
-        // OfficeRuntime.auth.getAccessToken was called with the allowConsentPrompt 
+        // Office.auth.getAccessToken was called with the allowConsentPrompt 
         // option set to true. But, the user aborted the consent prompt. 
         showMessage("You can use many of the add-ins functions even though you have not granted consent. If you want to grant consent, press the Get OneDrive File Names button again."); 
         break;
@@ -299,7 +299,7 @@ ms.locfileid: "53773869"
         showMessage("Office on the web is experiencing a problem. Please sign out of Office, close the browser, and then start again."); 
         break;
     case 13008:
-        // The OfficeRuntime.auth.getAccessToken method has already been called and 
+        // The Office.auth.getAccessToken method has already been called and 
         // that call has not completed yet. Only seen in Office on the web.
         showMessage("Office is still working on the last operation. When it completes, try this operation again."); 
         break;
@@ -496,7 +496,7 @@ ms.locfileid: "53773869"
         try {
             const tokenResponse = await fetch(`${stsDomain}/${tenant}/${tokenURLSegment}`, {
                 method: 'POST',
-                body: form(formParams),
+                body: formurlencoded(formParams),
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/x-www-form-urlencoded'

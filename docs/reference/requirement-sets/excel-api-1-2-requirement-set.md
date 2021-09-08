@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.2.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 3a58c6b612306b315165e9f70808359aa7d73505667cc598110e7349d1934e96
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 6d4a7b6aef56fb8d572e685df40c99c0c655e6db
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084953"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937155"
 ---
 # <a name="whats-new-in-excel-javascript-api-12"></a>Новые возможности API JavaScript для Excel 1.2
 

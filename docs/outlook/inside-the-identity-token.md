@@ -3,12 +3,12 @@ title: Подробные сведения о маркере удостовер�
 description: Узнайте, из чего состоит маркер удостоверения пользователя Exchange, созданный в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: c46765f7e7c27309c33428132f022b35d36acf0ce30089775ecd4ae23960ca17
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: dee8416660386c25a55caa42b6e5ee8685ee8852
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090675"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936234"
 ---
 # <a name="inside-the-exchange-identity-token"></a>Подробные сведения о маркере удостоверения Exchange
 

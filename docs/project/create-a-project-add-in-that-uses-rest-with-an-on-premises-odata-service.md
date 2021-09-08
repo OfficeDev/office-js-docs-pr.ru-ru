@@ -3,12 +3,12 @@ title: Создание надстройки Project, использующей R
 description: Узнайте, как создать надстройку области задач для Project профессиональный 2013 г., которая сравнивает данные о затратах и работе в активном проекте со средними значениями для всех проектов в текущем экземпляре Project Web App.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: a9a6d8699720f63107c3f4ad0114fbb75cd7771c1e730dda71ee5c1df1b8730d
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 2ffcd8eacef56f881ae61a5c0f2a656e5b3edfee
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57088057"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938020"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -16,7 +16,7 @@ ms.locfileid: "57088057"
 
 Код в данной статье основан на примере, разработанном Саурабхом Сангхви (Saurabh Sanghvi) и Эрвиндом Лаиром (Arvind Iyer), сотрудниками корпорации Майкрософт.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные условия
 
 Ниже приводится условие создания надстройки Project области задач, которая читает службу **ProjectData** экземпляра Project Web App в локальной установке Project Server 2013.
 
@@ -105,11 +105,11 @@ ms.locfileid: "57088057"
 
 Дополнительные сведения о манифесте см. в статьях [XML-манифест надстроек для Office](../develop/add-in-manifests.md) и [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md#see-also).
 
-### <a name="procedure-3-modify-the-add-in-manifest&quot;></a>Процедура 3. Изменение манифеста надстройки
+### <a name="procedure-3-modify-the-add-in-manifest"></a>Процедура 3. Изменение манифеста надстройки
 
 1. Откройте файл HelloProjectOData.xml в Visual Studio.
 
-2. Отображаемое имя по умолчанию — это имя проекта Visual Studio (&quot;HelloProjectOData"). Например, измените значение элемента **DisplayName** по умолчанию на "Hello ProjectData".
+2. Отображаемое имя по умолчанию — это имя проекта Visual Studio ("HelloProjectOData"). Например, измените значение элемента **DisplayName** по умолчанию на "Hello ProjectData".
 
 3. Описание по умолчанию — "HelloProjectOData". Например, измените значение по умолчанию элемента Description на "Test REST queries of the ProjectData service" (тестирование запросов REST службы ProjectData).
 

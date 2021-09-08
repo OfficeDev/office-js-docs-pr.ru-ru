@@ -3,12 +3,12 @@ title: 'Надстройки Office: дополнительные ресурсы
 description: Полезные ресурсы по теме Office надстройки
 ms.date: 04/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 2f3d893840e07c528b5e6fa97f657919962f662943ea090c52efb701abaa1a52
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: de774386acca2825734ac50096b83d562df0263b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57085951"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937396"
 ---
 # <a name="office-add-ins-additional-resources"></a>Надстройки Office: дополнительные ресурсы
 

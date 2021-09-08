@@ -4,11 +4,11 @@ description: Включить совместимость между Office на�
 ms.date: 08/03/2021
 localization_priority: Normal
 ms.openlocfilehash: bb842c60beb329571ce3dc7f055cc1d9d606209b
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868444"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937092"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -21,7 +21,7 @@ ms.locfileid: "58868444"
 >
 > - Excel, Word и PowerPoint на Windows (версия 1904 или более поздней версии)
 > - Outlook версии Windows версии 2102 или более поздней версии Exchange сервера
->   - Exchange Online.
+>   - Exchange Online
 >   - Exchange 2019 Накопительное обновление 10 или более поздней версии[(KB5003612)](https://support.microsoft.com/topic/b1434cad-3fbc-4dc3-844d-82568e8d4344)
 >   - Exchange 2016 накопительного обновления 21 или более поздней версии[(KB5003611)](https://support.microsoft.com/topic/b7ba1656-abba-4a0b-9be9-dac45095d969)
 

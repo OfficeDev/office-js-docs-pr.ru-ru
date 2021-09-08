@@ -3,12 +3,12 @@ title: Просмотр и изменение данных элемента в �
 description: В зависимости от активации надстройки в форме чтения или создания элемента, свойства, доступные надстройке для элемента, отличаются.
 ms.date: 12/10/2019
 localization_priority: Normal
-ms.openlocfilehash: d274d850c06178e1fdb31f95d921c5a8ae4ea0a399a5dbebd61de548c084ce5d
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 0f7e2335420ee74765ec28bf7d33b339dc3fb6a5
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093921"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937550"
 ---
 # <a name="get-and-set-outlook-item-data-in-read-or-compose-forms"></a>Просмотр и изменение данных элемента Outlook в формах чтения и создания
 
@@ -33,7 +33,7 @@ ms.locfileid: "57093921"
 |Встречи и сообщения|[dateTimeModified](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Объект JavaScript **Date**|Свойство недоступно|
 |Встречи и сообщения|[itemClass](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Строка|Свойство недоступно|
 |Встречи и сообщения|[itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Строка|Свойство недоступно|
-|Встречи и сообщения|[itemType](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Строка в перечислении [ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)|Строка в перечислении [ItemType](/javascript/api/outlook/office.mailboxenums.itemtype) (только для чтения)|
+|Встречи и сообщения|[itemType](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Строка в перечислении [ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)|Строка в переумериях [ItemType](/javascript/api/outlook/office.mailboxenums.itemtype) (только для чтения)|
 |Встречи и сообщения|[attachments](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)|Свойство недоступно|
 |Встречи и сообщения|[body](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|[Body](/javascript/api/outlook/office.body)|[Body](/javascript/api/outlook/office.body)|
 |Встречи и сообщения|[normalizedSubject](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Строка|Свойство недоступно|

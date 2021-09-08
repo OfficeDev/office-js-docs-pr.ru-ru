@@ -3,12 +3,12 @@ title: Групповой элемент в файле манифеста
 description: Определяет группу элементов управления пользовательским интерфейсом на вкладке.
 ms.date: 06/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 236746d6f6ae5e04612aade7e7d29564b064f384d65b6c0be582117faf6cecf6
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 89ed16f7996ab06bd21e1ebaa71c959b11af2029
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57098752"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937016"
 ---
 # <a name="group-element"></a>Элемент Group
 

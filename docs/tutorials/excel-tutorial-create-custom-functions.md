@@ -5,11 +5,11 @@ ms.date: 07/07/2021
 ms.prod: excel
 localization_priority: Priority
 ms.openlocfilehash: fbc03603cd3b3d546fbb83526d4654b35a124393
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773659"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936330"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -164,7 +164,7 @@ npm run start:web
 
 1. Выберите файл **manifest.xml** и нажмите **Открыть**, затем нажмите кнопку **Отправить**.
 
-5. Теперь давайте оценим, как работает новая функция. В ячейке **B1** введите текст **=CONTOSO.GETSTARCOUNT("OfficeDev&quot;, &quot;Excel-Custom-Functions")** и нажмите клавишу ВВОД. Результат в ячейке **B1** — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).
+5. Теперь давайте оценим, как работает новая функция. В ячейке **B1** введите текст **=CONTOSO.GETSTARCOUNT("OfficeDev", "Excel-Custom-Functions")** и нажмите клавишу ВВОД. Результат в ячейке **B1** — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).
 
 ---
 

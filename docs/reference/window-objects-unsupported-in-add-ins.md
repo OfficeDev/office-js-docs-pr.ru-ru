@@ -3,12 +3,12 @@ title: Объекты window, которые неподтверчены в Offic
 description: В этой статье указаны некоторые объекты времени запуска окне, которые не работают в Office надстройки.
 ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 654e8e311069a616e2d8859a4f63b19d299609982fa68449b5529df489816cbf
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d2560748841bd1e2a7708b25a8e51133563d1534
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097387"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936298"
 ---
 # <a name="window-objects-that-are-unsupported-in-office-add-ins"></a>Объекты window, которые неподтверчены в Office надстройки
 

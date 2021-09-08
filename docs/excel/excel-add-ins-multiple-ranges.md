@@ -3,12 +3,12 @@ title: Работа с несколькими диапазонами однов�
 description: Узнайте, как Excel JavaScript позволяет вашей надстройки выполнять операции и устанавливать свойства одновременно на нескольких диапазонах.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 89c8b8bbc92e656230544caac0d7f584524ca58951d0041d548bebbea0ae4bf4
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 4f1661d07432d6072649cb6db7315fd39fee5b4f
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084263"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937978"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 

@@ -3,12 +3,12 @@ title: Office.context.mailbox — набор требований 1.7
 description: Outlook Требования К API почтовых ящиков устанавливают версию 1.7 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 64f6bbb0445a4f9dab6d1df38b7f3f32c51e9a3fa1882c66b6a1b21b5a83ecd0
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: fe8dea1efdeb22f2fa1b14d88d4f33bdc9fdc4de
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57083796"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936199"
 ---
 # <a name="mailbox-requirement-set-17"></a>почтовый ящик (набор требований 1.7)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57083796"
 
 | Свойство | Minimum<br>уровень разрешения | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|---|:---:|
-| [диагностика](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#diagnostics) | ReadItem | Создание<br>Чтение | [Диагностика](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.7&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [диагностика](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#diagnostics) | ReadItem | Создание<br>Чтение | [Diagnostics](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.7&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [ewsUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#ewsUrl) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [элемента](office.context.mailbox.item.md) | Restricted | Создание<br>Чтение | [Элемент](/javascript/api/outlook/office.item?view=outlook-js-1.7&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [restUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#restUrl) | ReadItem | Создание<br>Чтение | String | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
@@ -53,7 +53,7 @@ ms.locfileid: "57083796"
 | [makeEwsRequestAsync(data, callback, [userContext])](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#makeEwsRequestAsync_data__callback__userContext_) | ReadWriteMailbox | Создание<br>Чтение | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [removeHandlerAsync(eventType, [options], [callback])](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#removeHandlerAsync_eventType__options__callback_) | ReadItem | Создание<br>Чтение | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 
-## <a name="events"></a>События
+## <a name="events"></a>Events
 
 Вы можете подписаться и отписаться от следующих событий с помощью [addHandlerAsync](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#addHandlerAsync_eventType__handler__options__callback_) и [removeHandlerAsync](/javascript/api/outlook/office.mailbox?view=outlook-js-1.7&preserve-view=true#removeHandlerAsync_eventType__options__callback_) соответственно.
 

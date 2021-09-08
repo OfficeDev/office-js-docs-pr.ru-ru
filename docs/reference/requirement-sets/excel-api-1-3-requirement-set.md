@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.3.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d237455baa73aef8e70a6e4901cba6ee8b2b8f3475f6e915b93c437747478408
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d3606b74e8a1099cd58631cc047a783f27a09a19
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57095374"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937372"
 ---
 # <a name="whats-new-in-excel-javascript-api-13"></a>Новые возможности API JavaScript для Excel 1.3
 

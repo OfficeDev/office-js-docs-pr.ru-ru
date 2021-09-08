@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.7.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 1012efa0143710a6646c5288ef8c4adfd49a6006e62eb850f25d6d12e9028c51
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ed18997224f052c2e36943fcdbb93865ec8ac73d
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57088966"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936574"
 ---
 # <a name="whats-new-in-excel-javascript-api-17"></a>Новые возможности API JavaScript для Excel 1.7
 

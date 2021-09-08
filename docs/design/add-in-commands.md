@@ -4,11 +4,11 @@ description: Как добавить настраиваемые кнопки л�
 ms.date: 07/27/2021
 localization_priority: Priority
 ms.openlocfilehash: 4ee2e53a1d2a74a2663a372aeb080c5f32da1bde
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773211"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937918"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 

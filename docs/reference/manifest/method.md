@@ -3,12 +3,12 @@ title: Элемент Method в файле манифеста
 description: Элемент Method указывает отдельный метод из Office API JavaScript, который требуется Office надстройки для активации.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 811cd84e1ad2aade8b7042eefa822eee6b2ab200a8fa1b71c9fe5fc34874ec66
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 0e3e74a73a3422a7789e82d6f0e7a516bd795ca8
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089732"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936546"
 ---
 # <a name="method-element"></a>Элемент Method
 
@@ -32,7 +32,7 @@ ms.locfileid: "57089732"
 |:-----|:-----|:-----|:-----|
 |Имя|string|Обязательный|Указывает имя необходимого метода, соответствующее его родительскому объекту. Например, чтобы указать `getSelectedDataAsync` метод, необходимо указать `"Document.getSelectedDataAsync"` .|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Эти `Methods` элементы и элементы не `Method` поддерживаются почтовыми надстройки. Дополнительные сведения о наборах требований [см. в Office версиях и наборах требований.](../../develop/office-versions-and-requirement-sets.md)
 

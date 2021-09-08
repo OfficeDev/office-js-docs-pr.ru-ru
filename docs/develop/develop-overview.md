@@ -4,11 +4,11 @@ description: Общие сведения о разработке надстро�
 ms.date: 07/08/2021
 localization_priority: Priority
 ms.openlocfilehash: b2fa3e630fbcfb013f4458f7b8f9f564d0fed3f1
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773799"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937699"
 ---
 # <a name="develop-office-add-ins"></a>Разработка надстроек Office
 

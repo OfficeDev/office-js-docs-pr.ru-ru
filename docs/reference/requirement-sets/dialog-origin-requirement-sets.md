@@ -4,12 +4,12 @@ description: Дополнительные информацию о наборах
 ms.date: 07/22/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 20cd797cfcc0c8b673f8531fbe71769196d0d274ea58a9b76171c1427c125aba
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 24513823eb60435359d5d7307a11a192fece2015
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57086634"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937583"
 ---
 # <a name="dialog-origin-requirement-sets"></a>Наборы обязательных элементов источников диалоговых окон
 

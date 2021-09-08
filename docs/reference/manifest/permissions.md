@@ -3,12 +3,12 @@ title: Элемент Permissions в файле манифеста
 description: Элемент Permissions указывает уровень доступа к API для Office надстройки.
 ms.date: 06/26/2020
 localization_priority: Normal
-ms.openlocfilehash: 2f2ccb4f6ec691b19cadea76a06520a9bad7a0b6c0e51699f2c8db67a3030de0
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: bc4cc2713d5a781c3407385470acd762910d17fd
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089016"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936966"
 ---
 # <a name="permissions-element"></a>Элемент Permissions
 

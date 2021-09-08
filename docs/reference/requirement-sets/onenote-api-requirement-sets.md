@@ -4,12 +4,12 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 08/24/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: b519388c131b4543c87e1c65038787c7ac99028f2d6612b5fab8c416883035d5
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ecdb26edca54758540688ba03b1d9c1eec14e739
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57087242"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936420"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 

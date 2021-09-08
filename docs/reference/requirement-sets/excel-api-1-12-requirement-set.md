@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.12
 ms.date: 04/01/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9daee6dd70263af2654833f582e7ed6560ccbbd3c5e41e2c5e42bf94b568aa5a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 10587b84ba476b91cdd56d8472e551348b3a718b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090144"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936946"
 ---
 # <a name="whats-new-in-excel-javascript-api-112"></a>Новые возможности в Excel API JavaScript 1.12
 
@@ -77,7 +77,7 @@ ExcelApi 1.12 увеличил поддержку формул в диапазо
 ||[условие](/javascript/api/excel/excel.pivotlabelfilter#condition)|Указывает условие фильтра, которое определяет необходимые критерии фильтрации.|
 ||[эксклюзив](/javascript/api/excel/excel.pivotlabelfilter#exclusive)|Если `true` фильтр исключает *элементы,* которые соответствуют критериям.|
 ||[lowerBound](/javascript/api/excel/excel.pivotlabelfilter#lowerBound)|Нижний предел диапазона для состояния `between` фильтра.|
-||[substring](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстройка, используемая для `beginsWith` `endsWith` и `contains` фильтрации условий.|
+||[подстройка](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстройка, используемая для `beginsWith` `endsWith` и `contains` фильтрации условий.|
 ||[upperBound](/javascript/api/excel/excel.pivotlabelfilter#upperBound)|Верхний предел диапазона для состояния `between` фильтра.|
 |[PivotManualFilter](/javascript/api/excel/excel.pivotmanualfilter)|[selectedItems](/javascript/api/excel/excel.pivotmanualfilter#selectedItems)|Список выбранных элементов, которые необходимо фильтровать вручную.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[allowMultipleFiltersPerField](/javascript/api/excel/excel.pivottable#allowMultipleFiltersPerField)|Указывает, разрешает ли pivotTable применение нескольких pivotFilters в заданной pivotField в таблице.|

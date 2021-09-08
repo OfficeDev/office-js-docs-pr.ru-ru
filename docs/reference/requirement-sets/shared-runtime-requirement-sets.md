@@ -4,12 +4,12 @@ description: Указывает платформы и Office приложени�
 ms.date: 04/08/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: d5b931c5bda65f5907684c2f957e15c6fdacd1668d410dc3db96ca614f426892
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8d0db6e129aaf7a4aa2967e7a1341d6db1188359
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084903"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937832"
 ---
 # <a name="shared-runtime-requirement-sets"></a>Общие наборы требований к времени запуска
 

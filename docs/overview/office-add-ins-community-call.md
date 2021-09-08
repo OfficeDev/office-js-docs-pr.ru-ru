@@ -4,11 +4,11 @@ description: Ежемесячное расписание Microsoft Office и р�
 ms.date: 08/02/2021
 localization_priority: Normal
 ms.openlocfilehash: 44f97748bc24e2a95b3b89976b7d33d038fbb67e
-ms.sourcegitcommit: 758450a621f45ff615ab2f70c13c75a79bd8b756
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58232375"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937036"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 

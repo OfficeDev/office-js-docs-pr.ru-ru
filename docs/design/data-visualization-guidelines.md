@@ -3,12 +3,12 @@ title: Рекомендации по выбору стиля визуализа�
 description: Сведения о том, как визуализировать данные в Office надстройки.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 2d4fef7d5bcc6bf4220842d7010b6203d26ebd8e74b971acf5d73381220f2721
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 353406742bf247b7b9d2700f731de8a70f7b4928
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57082093"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937035"
 ---
 # <a name="data-visualization-style-guidelines-for-office-add-ins"></a>Рекомендации по выбору стиля визуализации данных для надстроек Office
 

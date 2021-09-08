@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Узнайте основы создания диалоговых окне в Office надстройке.
-ms.date: 08/27/2021
+ms.date: 09/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 6e87ddfc6c29e74a578d399116df5df9b364028f
-ms.sourcegitcommit: 3287eb4588d0af47f1ab8a59882bcc3f585169d8
+ms.openlocfilehash: 8b45aa0da3a92dd8387c316213698a5e040f05f5
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58863536"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936510"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -428,7 +428,7 @@ function processMessage(arg) {
 
 Узнайте о том, как использовать Office dialog API, в [Рекомендации по использованию Office dialog API](dialog-best-practices.md).
 
-## <a name="samples"></a>Образцы
+## <a name="samples"></a>Примеры
 
 Все следующие примеры использования `displayDialogAsync` . Некоторые из них имеют серверы на основе NodeJS, а другие — серверы на ASP.NET/IIS, но логика использования метода та же, независимо от того, как реализуется серверная сторона надстройки.
 
@@ -441,11 +441,11 @@ function processMessage(arg) {
 
 - [Office Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
 - [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React)
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
-- [Office SSO надстройки ASPNET](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
+- [Office SSO надстройки ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
 - [Office Пример монетизации надстройки SAAS](https://github.com/OfficeDev/office-add-in-saas-monetization-sample)
 - [Outlook Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
-- [Outlook SSO надстройки](https://github.com/OfficeDev/Outlook-Add-in-SSO)
+- [Outlook SSO надстройки](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Outlook-Add-in-SSO)
 - [Outlook Просмотр маркеров надстройки](https://github.com/OfficeDev/Outlook-Add-In-Token-Viewer)
 - [Outlook Надстройка Actionable Message](https://github.com/OfficeDev/Outlook-Add-In-Actionable-Message)
 - [Outlook Совместное использование надстройки для OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)

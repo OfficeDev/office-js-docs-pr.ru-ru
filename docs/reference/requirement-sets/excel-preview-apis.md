@@ -4,12 +4,12 @@ description: Сведения о предстоящих Excel API JavaScript.
 ms.date: 07/23/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d90c5e8bb2c344cb3bb297a3cd793613f017e910ab99df6dfffc456c3f715d20
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 5de8ee52aea357c8dce4d2027556e5e8a5b1a4ac
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092648"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936359"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -58,7 +58,7 @@ ms.locfileid: "57092648"
 |[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[getItemOrNullObject(commentReplyId: string)](/javascript/api/excel/excel.commentreplycollection#getItemOrNullObject_commentReplyId_)|Возвращает ответ на примечание, определенное по идентификатору.|
 |[ConditionalFormatCollection](/javascript/api/excel/excel.conditionalformatcollection)|[getItemOrNullObject(id: строка)](/javascript/api/excel/excel.conditionalformatcollection#getItemOrNullObject_id_)|Возвращает условный формат, идентифицированный его ID.|
 |[DocumentTask](/javascript/api/excel/excel.documenttask)|[percentComplete](/javascript/api/excel/excel.documenttask#percentComplete)|Указывает процент выполнения задачи.|
-||[priority](/javascript/api/excel/excel.documenttask#priority)|Указывает приоритет задачи.|
+||[приоритет](/javascript/api/excel/excel.documenttask#priority)|Указывает приоритет задачи.|
 ||[назначение](/javascript/api/excel/excel.documenttask#assignees)|Возвращает коллекцию назначений задачи.|
 ||[изменения](/javascript/api/excel/excel.documenttask#changes)|Получает записи изменений задачи.|
 ||[comment](/javascript/api/excel/excel.documenttask#comment)|Получает комментарий, связанный с задачей.|
@@ -77,7 +77,7 @@ ms.locfileid: "57092648"
 ||[dueDateTime](/javascript/api/excel/excel.documenttaskchange#dueDateTime)|Представляет дату и время задачи в часовом поясе UTC.|
 ||[id](/javascript/api/excel/excel.documenttaskchange#id)|ID для записи изменения задачи.|
 ||[percentComplete](/javascript/api/excel/excel.documenttaskchange#percentComplete)|Представляет процент выполнения задачи.|
-||[priority](/javascript/api/excel/excel.documenttaskchange#priority)|Представляет приоритет задачи.|
+||[приоритет](/javascript/api/excel/excel.documenttaskchange#priority)|Представляет приоритет задачи.|
 ||[startDateTime](/javascript/api/excel/excel.documenttaskchange#startDateTime)|Представляет дату и время начала задачи в часовом поясе UTC.|
 ||[заголовок](/javascript/api/excel/excel.documenttaskchange#title)|Представляет название задачи.|
 ||[type](/javascript/api/excel/excel.documenttaskchange#type)|Представляет тип действия записи изменения задачи.|
@@ -93,7 +93,7 @@ ms.locfileid: "57092648"
 |[DocumentTaskSchedule](/javascript/api/excel/excel.documenttaskschedule)|[dueDateTime](/javascript/api/excel/excel.documenttaskschedule#dueDateTime)|Получает дату и время, когда должна быть поставлена задача.|
 ||[startDateTime](/javascript/api/excel/excel.documenttaskschedule#startDateTime)|Получает дату и время, которые должна начаться задача.|
 |[GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.groupshapecollection#getItemOrNullObject_key_)|Получает фигуру с ее именем или ИД.|
-|[Удостоверение](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayName)|Представляет отображаемое имя пользователя.|
+|[Identity](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayName)|Представляет отображаемое имя пользователя.|
 ||[email](/javascript/api/excel/excel.identity#email)|Представляет электронный адрес пользователя.|
 ||[id](/javascript/api/excel/excel.identity#id)|Представляет уникальный ID пользователя.|
 |[IdentityCollection](/javascript/api/excel/excel.identitycollection)|[add(assignee: Identity)](/javascript/api/excel/excel.identitycollection#add_assignee_)|Добавляет идентификатор пользователя в коллекцию.|

@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.8.
 ms.date: 03/19/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b6cc766277d6f6a7c9ecca505e2f527f7654fd6e93fc85a2f2694c2a3df6db05
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 87d59bb78a00035d4dc0ff8514d3214bc93397b3
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57088954"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936952"
 ---
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности в Excel API JavaScript 1.8
 

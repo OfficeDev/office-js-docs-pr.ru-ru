@@ -4,11 +4,11 @@ description: Поддерживаемые платформы Office.js с исп
 ms.date: 07/08/2021
 localization_priority: Priority
 ms.openlocfilehash: ec3d99fc89b8b6ced25dfc00bd02e0238f75e0af
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773470"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937069"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 

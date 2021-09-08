@@ -4,11 +4,11 @@ description: Узнайте, как использовать диалоговы�
 ms.date: 07/22/2021
 localization_priority: Priority
 ms.openlocfilehash: ae96e9dc14302fc245744d644f8b68e54ca066f6
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773512"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937721"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 

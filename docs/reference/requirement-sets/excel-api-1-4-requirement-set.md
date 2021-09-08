@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.4.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: f1201b15c1f4e09e064afa7301d68d1f6ce54e05f2b202e3bec2dbb7179e2db1
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: be71d1e0c063bd3902bf57ba8f2024ae5a78ff1d
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089004"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936674"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 

@@ -4,12 +4,12 @@ description: Узнайте, как отлагировать Outlook надст�
 ms.topic: article
 ms.date: 05/14/2021
 localization_priority: Normal
-ms.openlocfilehash: d96ab13ada1135d17feef7597c6427cf56d75872cefdf43f0e24fb8da2274ce1
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8cabbb669d9b46e047efa7e79ae4225c1fc22689
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090819"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937796"
 ---
 # <a name="debug-your-event-based-outlook-add-in-preview"></a>Отламывка надстройки Outlook событий (предварительный просмотр)
 
@@ -78,7 +78,7 @@ ms.locfileid: "57090819"
     }
     ```
 
-### <a name="other"></a>Другие
+### <a name="other"></a>Прочее
 
 1. Создайте новую папку под названием **Отладка** (возможно, в **папке Desktop).**
 1. Откройте Visual Studio Code.

@@ -4,11 +4,11 @@ description: Узнайте, какие Excel API JavaScript можно вызв
 ms.date: 08/30/2021
 localization_priority: Normal
 ms.openlocfilehash: 93b0c1a792c752102359b31b8baa808182c29c46
-ms.sourcegitcommit: 3287eb4588d0af47f1ab8a59882bcc3f585169d8
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58863529"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936802"
 ---
 # <a name="call-excel-javascript-apis-from-a-custom-function"></a>Вызов Excel API JavaScript из настраиваемой функции
 

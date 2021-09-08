@@ -5,11 +5,11 @@ ms.date: 07/08/2021
 ms.prod: word
 localization_priority: Priority
 ms.openlocfilehash: 65eb220eedfe74b905bee4312c366166836a075a
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868766"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936626"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 

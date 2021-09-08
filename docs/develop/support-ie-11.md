@@ -4,11 +4,11 @@ description: Узнайте, как поддерживать Internet Explorer 1
 ms.date: 08/13/2021
 localization_priority: Normal
 ms.openlocfilehash: dea458cbabb71e23432db8cb6eb3dfcddc6e1bac
-ms.sourcegitcommit: bc6203dd8f21d1c375039c5ee8f1388ede9be93b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "58382944"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936266"
 ---
 # <a name="support-internet-explorer-11"></a>Поддержка Internet Explorer 11
 

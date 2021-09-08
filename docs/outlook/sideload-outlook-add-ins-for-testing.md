@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Outl
 description: Используйте загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
 ms.date: 05/13/2021
 localization_priority: Normal
-ms.openlocfilehash: 6c50a6966915d0aa87d27b1768b0e67e5e8c6d8867c3e0148166f6abfdcd92e0
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 47eb5da19f858b6e30339acc59da24a818fc0959
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093383"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937264"
 ---
 # <a name="sideload-outlook-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Outlook для тестирования
 
@@ -99,7 +99,7 @@ ms.locfileid: "57093383"
     >
     > - **Сохранить** кнопку на ленте, если это доступно.
     >
-    >   ИЛИ
+    >   OR
     >
     > - **Меню** файла, а затем выберите кнопку **Управление** надстройками на вкладке **Info,** чтобы открыть диалоговое окно надстройки в Outlook в Интернете. <br>Дополнительные статьи о веб-опыте см. в предыдущем разделе [Sideload](#outlook-on-the-web)надстройки в Outlook в Интернете .
 

@@ -3,12 +3,12 @@ title: Обзор Patterns and Practices (PnP) для надстроек Office
 description: Обзор контента Patterns and Practices (PnP) для разработчиков надстроек Office.
 ms.date: 01/22/2021
 localization_priority: Priority
-ms.openlocfilehash: 5dd2d8b60b9a41b29800c7b77f1cb79f3949e6d6763f63079cf94a2ab60849f7
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 92539c917926658378bdfc074eeaa5bbc3f49213
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57098740"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937596"
 ---
 # <a name="overview-of-patterns-and-practices-pnp-for-office-add-ins"></a>Обзор Patterns and Practices (PnP) для надстроек Office
 

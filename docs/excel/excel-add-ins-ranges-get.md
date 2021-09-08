@@ -4,12 +4,12 @@ description: Узнайте, как получить диапазон с пом�
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d48d69a45e964db2d5797e2f0927f776795bcca0365f0ccef245fcd3682a3a72
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 6aa9bb00bc9d24aeee5f1fef9e8d1531525e9d1f
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084723"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58937770"
 ---
 # <a name="get-a-range-using-the-excel-javascript-api"></a>Получите диапазон с помощью Excel API JavaScript
 

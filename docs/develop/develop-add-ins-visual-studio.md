@@ -4,11 +4,11 @@ description: Как разрабатывать надстройки Office с п
 ms.date: 07/08/2021
 localization_priority: Priority
 ms.openlocfilehash: bc837c0fe399cc6669cb0efcf2531e438f922dfe
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773792"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936192"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 

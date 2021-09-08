@@ -1,14 +1,14 @@
 ---
 title: Обзор проверки подлинности и авторизации в надстройках Office
 description: Требовать от пользователей аутентификации при входе в веб-приложения и надстройки Office.
-ms.date: 07/08/2021
+ms.date: 09/03/2021
 localization_priority: Priority
-ms.openlocfilehash: 76c0b42221b988be09feeb94d9d8ee70f85ef7852470505fb67587bdb90113d1
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 9802e4cccfcd6121d654dccb8606441c597b76f9
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080352"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58936584"
 ---
 # <a name="overview-of-authentication-and-authorization-in-office-add-ins"></a>Обзор проверки подлинности и авторизации в надстройках Office
 
@@ -43,8 +43,8 @@ ms.locfileid: "57080352"
 
 Перед началом внедрения проверки подлинности пользователей с помощью единого входа внимательно ознакомьтесь со статьей [Включение единого входа для надстроек Office](sso-in-office-add-ins.md). Обратите внимание также на эти примеры:
 
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO), особенно на файл [ssoAuthES6.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js).
-- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO), особенно на файл [ssoAuthES6.js](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js).
+- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO).
 
 Однако в этих примерах маркер не используется в качестве маркера идентификации. Он используется для получения доступа к Microsoft Graph с потоком **от имени**.
 
@@ -66,8 +66,8 @@ ms.locfileid: "57080352"
 
 Обратите внимание также на следующие примеры:
 
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
-- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
+- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
 
 ## <a name="access-to-non-microsoft-data-sources"></a>Доступ к сторонним источникам данных (отличным от Майкрософт)
 
