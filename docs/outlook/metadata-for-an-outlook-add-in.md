@@ -3,12 +3,12 @@ title: Просмотр и изменение метаданных элемен�
 description: Управление пользовательскими данными в надстройке Outlook с помощью параметров перемещения или настраиваемых свойств.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 0ed30c48a07f76b6bc3a969ad064f1b66d96b90b569bb62e9a34eb16fc836648
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: ceed27cc5c0d479ac67a0497e78e971498365e6f
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57091656"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938882"
 ---
 # <a name="get-and-set-add-in-metadata-for-an-outlook-add-in"></a>Просмотр и изменение метаданных для надстройки Outlook
 

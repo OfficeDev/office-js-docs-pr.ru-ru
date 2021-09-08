@@ -3,12 +3,12 @@ title: Office.context.mailbox — набор требований 1.3
 description: Outlook Требования К API почтовых ящиков устанавливают версию 1.3 объектной модели почтовых ящиков.
 ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 603d2a28b2f38bc2ecb86eb4ae6f91baf1550b2a219c473206d69eadc0dc5c9c
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 258e629e556bf7e2bdc6e8f076f9def3c053052c
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097189"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939209"
 ---
 # <a name="mailbox-requirement-set-13"></a>почтовый ящик (набор требований 1.3)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57097189"
 
 | Свойство | Minimum<br>уровень разрешения | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|---|:---:|
-| [диагностика](/javascript/api/outlook/office.mailbox?view=outlook-js-1.3&preserve-view=true#diagnostics) | ReadItem | Создание<br>Чтение | [Диагностика](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [диагностика](/javascript/api/outlook/office.mailbox?view=outlook-js-1.3&preserve-view=true#diagnostics) | ReadItem | Создание<br>Чтение | [Diagnostics](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [ewsUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.3&preserve-view=true#ewsUrl) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [элемента](office.context.mailbox.item.md) | Restricted | Создание<br>Чтение | [Элемент](/javascript/api/outlook/office.item?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [userProfile](/javascript/api/outlook/office.mailbox?view=outlook-js-1.3&preserve-view=true#userProfile) | ReadItem | Создание<br>Чтение | [UserProfile](/javascript/api/outlook/office.userprofile?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |

@@ -3,12 +3,12 @@ title: Добавление и удаление слайдов в PowerPoint
 description: Узнайте, как добавлять и удалять слайды и указать мастер и макет новых слайдов.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: c49496a6c2cfc2b591fc5ff9e003df455e33f4c9b1f18ee8b7049b16f12fd81d
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 7fbfd24da7bf552adfe96437187ae0128c513574
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57090216"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939373"
 ---
 # <a name="add-and-delete-slides-in-powerpoint"></a>Добавление и удаление слайдов в PowerPoint
 

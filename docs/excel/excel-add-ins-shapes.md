@@ -3,12 +3,12 @@ title: Работа с фигурами с Excel API JavaScript
 description: Узнайте, Excel определяет фигуры как любой объект, который находится на уровне рисования Excel.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 01dd8949105be8a511aefc90c69eec13b18e3243e0fb201dc2f2eeb36e62b3bf
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 533a9cf9689bcaa5cd43635da836730a2af6ab61
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57087865"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938547"
 ---
 # <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с Excel API JavaScript
 
@@ -52,7 +52,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="images"></a>изображения;
+### <a name="images"></a>Изображения
 
 Изображения JPEG, PNG и SVG можно вставить в таблицу в форме фигур. В качестве аргумента метод принимает строку с кодом `ShapeCollection.addImage` base64. Это либо образ JPEG или PNG в строковом виде. `ShapeCollection.addSvg` также принимает строку, хотя этот аргумент XML, который определяет графику.
 

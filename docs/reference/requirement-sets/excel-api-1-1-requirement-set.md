@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.1.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: db8754e793d86fbc1c85bae85a1ce1f925504c649b1694659896ba567dc4e478
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 7bc378c200d8aa7c200158d7fe50fdbd71b8251a
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093825"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938532"
 ---
 # <a name="excel-javascript-api-requirement-set-11"></a>Excel Набор API JavaScript 1.1
 
@@ -36,10 +36,10 @@ Excel API JavaScript 1.1 — это первая версия API. Это еди
 ||[height](/javascript/api/excel/excel.chart#height)|Указывает высоту в точках объекта диаграммы.|
 ||[left](/javascript/api/excel/excel.chart#left)|Расстояние в пунктах от левого края диаграммы до начала листа.|
 ||[name](/javascript/api/excel/excel.chart#name)|Указывает имя объекта диаграммы.|
-||[axes](/javascript/api/excel/excel.chart#axes)|Представляет оси диаграммы.|
+||[оси](/javascript/api/excel/excel.chart#axes)|Представляет оси диаграммы.|
 ||[dataLabels](/javascript/api/excel/excel.chart#dataLabels)|Представляет метки данных на диаграмме.|
 ||[format](/javascript/api/excel/excel.chart#format)|Инкапсулирует свойства формата для области диаграммы.|
-||[legend](/javascript/api/excel/excel.chart#legend)|Представляет условные обозначения для диаграммы.|
+||[легенда](/javascript/api/excel/excel.chart#legend)|Представляет условные обозначения для диаграммы.|
 ||[series](/javascript/api/excel/excel.chart#series)|Представляет один ряд данных или коллекцию рядов данных в диаграмме.|
 ||[заголовок](/javascript/api/excel/excel.chart#title)|Представляет заголовок указанной диаграммы, включая его текст, видимость, положение и форматирование.|
 ||[setData(sourceData: Range, seriesBy?: Excel. ChartSeriesBy)](/javascript/api/excel/excel.chart#setData_sourceData__seriesBy_)|Сбрасывает исходные данные для диаграммы.|
@@ -233,7 +233,7 @@ Excel API JavaScript 1.1 — это первая версия API. Это еди
 ||[диаграммы](/javascript/api/excel/excel.worksheet#charts)|Возвращает коллекцию диаграмм, которые являются частью таблицы.|
 ||[id](/javascript/api/excel/excel.worksheet#id)|Возвращает значение, однозначно идентифицирующее лист в данной книге.|
 ||[таблицы](/javascript/api/excel/excel.worksheet#tables)|Коллекция таблиц, имеющихся на листе.|
-||[видимость](/javascript/api/excel/excel.worksheet#visibility)|Видимость листа.|
+||[visibility](/javascript/api/excel/excel.worksheet#visibility)|Видимость листа.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[add(name?: string)](/javascript/api/excel/excel.worksheetcollection#add_name_)|Добавляет новый лист в книгу.|
 ||[getActiveWorksheet()](/javascript/api/excel/excel.worksheetcollection#getActiveWorksheet__)|Получает текущий активный лист в книге.|
 ||[getItem(key: string)](/javascript/api/excel/excel.worksheetcollection#getItem_key_)|Получает объект листа по его имени или ИД.|

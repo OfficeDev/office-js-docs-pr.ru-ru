@@ -3,12 +3,12 @@ title: LaunchEvents в файле манифеста
 description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
 ms.date: 05/11/2021
 localization_priority: Normal
-ms.openlocfilehash: c6714c4f52bdc1ed9d7a75a42100df8d3fe046c504575295880ff614fe4a447f
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 16d721ca6d9402d2bd5d19787707e146358044f0
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089751"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939219"
 ---
 # <a name="launchevents-element"></a>Элемент LaunchEvents
 

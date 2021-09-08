@@ -1,14 +1,14 @@
 ---
 title: Элемент CustomTab в файле манифеста
 description: На ленте можно указать вкладку и группу для команд надстройки.
-ms.date: 08/13/2021
+ms.date: 09/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 3656f68a722e5e0c224f18f80a0e0214fce47cfb
-ms.sourcegitcommit: bc6203dd8f21d1c375039c5ee8f1388ede9be93b
+ms.openlocfilehash: 642b6eabaa9885041dd122b179ee2baa3e772977
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "58382965"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938877"
 ---
 # <a name="customtab-element"></a>Элемент CustomTab
 
@@ -30,9 +30,8 @@ ms.locfileid: "58382965"
 |  [Label](#label-tab)      | Да |  Метка элемента CustomTab или Group.  |
 |  [InsertAfter](#insertafter)      | Нет |  Указывает, что настраиваемая вкладка должна быть сразу после указанной встроенной вкладки Office. **Важно:** доступно только в PowerPoint. |
 |  [InsertBefore](#insertbefore)      | Нет |  Указывает, что настраиваемая вкладка должна быть непосредственно перед указанной встроенной вкладке Office. **Важно:** доступна только в PowerPoint. |
-|  [OverriddenByRibbonApi](overriddenbyribbonapi.md)      | Нет |  Указывает, должна ли настраиваемая вкладка отображаться в сочетаниях приложений и платформ, поддерживаюх настраиваемые контекстные вкладки. **Важно:** недоступна в Outlook. |
 
-### <a name="group"></a>Group
+### <a name="group"></a>Группа
 
 Необязательный, но если его нет, должен быть по крайней мере один **элемент OfficeGroup.** См. [элемент Group.](group.md) Порядок **Групповой и** **OfficeGroup** в манифесте должен быть тем, который вы хотите, чтобы они появились на настраиваемой вкладке. Они могут быть перемеяны, если существует несколько элементов, но все они должны быть выше элемента **Label.**
 
@@ -45,7 +44,7 @@ ms.locfileid: "58382965"
 
 ### <a name="label-tab"></a>Label (Tab)
 
-Обязательно. Метка настраиваемой вкладки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
+Обязательный. Метка настраиваемой вкладки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
 
 ### <a name="insertafter"></a>InsertAfter
 
@@ -60,25 +59,3 @@ ms.locfileid: "58382965"
 
 > [!IMPORTANT]
 > Элемент `InsertBefore` доступен только в PowerPoint.
-
-### <a name="overriddenbyribbonapi"></a>OverriddenByRibbonApi
-
-Необязательный (boolean). Указывает, будет ли **CustomTab** скрыт в сочетаниях приложений и платформ, поддерживаюх API, устанавливаемую настраиваемую контекстную вкладку на ленту во время работы. Значение по умолчанию, если не присутствует, `false` является . Если используется, **OverriddenByRibbonApi** должен быть *первым* ребенком **CustomTab**. Дополнительные сведения см. в [веб-сведениях OverriddenByRibbonApi](overriddenbyribbonapi.md).
-
-> [!IMPORTANT]
-> Элемент `OverriddenByRibbonApi` не доступен в Outlook.
-
-## <a name="customtab-example"></a>Пример элемента CustomTab
-
-```xml
-<ExtensionPoint xsi:type="PrimaryCommandSurface">
-  <CustomTab id="TabCustom1">
-    <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
-    <Group id="ContosoCustomTab.grp1">
-    </Group>
-    <OfficeGroup id="Paragraph" />
-    <Label resid="customTabLabel1"/>
-    <InsertAfter>TabReview</InsertAfter>
-  </CustomTab>
-</ExtensionPoint>
-```

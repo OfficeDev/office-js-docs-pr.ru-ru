@@ -3,12 +3,12 @@ title: Надстройки Outlook с расширением модуля
 description: Создают приложения, которые запускаются внутри Outlook и с помощью которых пользователи могут легко получать доступ к бизнес-информации и средствам повышения производительности, не выходя из Outlook.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 1b84c6122b4ff4e912c18b818cdfb053fd876e9504e4229f362a64ebc9c57f7e
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 3a02e93375f1c0872790d050382a14bc2c324cef
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57096859"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938968"
 ---
 # <a name="module-extension-outlook-add-ins"></a>Надстройки Outlook с расширением модуля
 

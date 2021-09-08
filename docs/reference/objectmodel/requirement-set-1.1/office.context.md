@@ -3,12 +3,12 @@ title: Office.context — набор требований 1.1
 description: Office. Участники объектов context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.1.
 ms.date: 12/02/2020
 localization_priority: Normal
-ms.openlocfilehash: e4a9bb19f76e255ab1906fee7709a1126751df340afe6848c0e3377fbf950a14
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 41273bfc5362a9d5572e38b8e80b81041f5aa312
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092202"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939019"
 ---
 # <a name="context-mailbox-requirement-set-11"></a>контекст (набор требований к почтовым ящикам 1.1)
 

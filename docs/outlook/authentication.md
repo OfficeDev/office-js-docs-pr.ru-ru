@@ -1,14 +1,14 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 06/22/2021
+ms.date: 09/03/2021
 localization_priority: Priority
-ms.openlocfilehash: f088c91026aa27117073539e0104378514dd93490effc65fac6ecaf0746b42c9
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 1f579d5f0a71cf4c078b3db5412adfe39d7e1287
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57084489"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938936"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -40,7 +40,7 @@ ms.locfileid: "57084489"
 
 Дополнительные сведения об использовании маркера единого входа в надстройке Outlook см. в статье [Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook](authenticate-a-user-with-an-sso-token.md).
 
-Пример надстройки, использующей маркер единого входа, см. в статье [Единый вход надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO).
+Пример надстройки, использующей маркер единого входа, см. в статье [Единый вход надстройки Outlook](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Outlook-Add-in-SSO).
 
 ## <a name="exchange-user-identity-token"></a>Получение маркера удостоверения Exchange
 

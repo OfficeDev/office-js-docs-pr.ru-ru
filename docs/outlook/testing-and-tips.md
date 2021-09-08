@@ -4,11 +4,11 @@ description: Создайте файл манифеста, разверните 
 ms.date: 07/08/2021
 localization_priority: Priority
 ms.openlocfilehash: 0fe7aa8d24b4da14a14480aaf07ef588cd8a243a
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773092"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938472"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 

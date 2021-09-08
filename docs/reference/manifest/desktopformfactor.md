@@ -3,12 +3,12 @@ title: Элемент DesktopFormFactor в файле манифеста
 description: Указывает параметры для надстройки классического форм-фактора.
 ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: 1d7a811f54f5fc1eb8f789f889610cc2a53237634731646038ead699f7b8719e
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 66673d83fd8608a1ec10492d7a944b0515de61c0
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089879"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938261"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 

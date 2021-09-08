@@ -4,12 +4,12 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 01/08/2021
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 2d56ce833f62432847b4d6d47d31b11b940d1dfe1af646838a9cd3480fa25a15
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 8ab5ad7067ed29b161935cfd2716a02ca261c55b
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57086187"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939108"
 ---
 # <a name="powerpoint-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для PowerPoint
 

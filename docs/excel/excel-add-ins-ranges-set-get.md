@@ -4,12 +4,12 @@ description: Узнайте, как использовать API Excel JavaScrip
 ms.date: 07/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 575436a1d69ec0125dd58e5b8b542405b9b64c9c6493462f3cf7512dcf0f0f02
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 623ba5c1b9e76151d4a2c4b169e655236b37e8c8
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57087056"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938183"
 ---
 # <a name="set-and-get-the-selected-range-using-the-excel-javascript-api"></a>Установите и получите выбранный диапазон с Excel API JavaScript
 

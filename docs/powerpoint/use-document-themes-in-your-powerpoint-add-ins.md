@@ -4,11 +4,11 @@ description: Узнайте, как визуально координирова�
 ms.date: 07/08/2021
 localization_priority: Normal
 ms.openlocfilehash: b3dfce5e36f1247e84cdd13372fd822a27a59fe0
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868703"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938383"
 ---
 # <a name="use-document-themes-in-your-powerpoint-add-ins"></a>Использование тем документов в надстройках PowerPoint
 

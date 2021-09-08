@@ -3,12 +3,12 @@ title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
 ms.date: 02/21/2021
 localization_priority: Normal
-ms.openlocfilehash: d063045acfad3dee16c676733ddb5494761b66270345d701d36e7e8a6db16c6a
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 0e38747f484eabac26e2e9e846e562ec54510326
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57095398"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938471"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 

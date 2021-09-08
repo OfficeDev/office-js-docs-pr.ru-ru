@@ -3,12 +3,12 @@ title: Outlook API надстройки 1.9
 description: Набор требований 1.9 для Outlook API надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 6ac4e119fea41a6f4bd1b3ab0bfe79f289278f3badeb5842fd895c8635d7f7b4
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 4448a7391e2d829fa95fa72392bf22867fafe7a7
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57087667"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939242"
 ---
 # <a name="outlook-add-in-api-requirement-set-19"></a>Outlook API надстройки 1.9
 

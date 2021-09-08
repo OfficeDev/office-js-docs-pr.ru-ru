@@ -4,11 +4,11 @@ description: Примеры кода, которые показывают, ка�
 ms.date: 07/02/2021
 localization_priority: Normal
 ms.openlocfilehash: 2c0c046d060e9ed32d872307f27784ff8337b100
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868752"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938324"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 

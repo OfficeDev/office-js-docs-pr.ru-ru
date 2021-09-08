@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.11
 ms.date: 04/01/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 67fb212813608ecb4e72ba5d63952f0228875211d0bf66978b7201fff58c5076
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 1e347e0bb7b394676eccf422665c545b110b589d
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092660"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938325"
 ---
 # <a name="whats-new-in-excel-javascript-api-111"></a>Новые возможности в Excel API JavaScript 1.11
 
@@ -36,14 +36,14 @@ ms.locfileid: "57092660"
 ||[useSystemSeparators](/javascript/api/excel/excel.application#useSystemSeparators)|Указывает, включены ли системные Excel системы.|
 |[Comment](/javascript/api/excel/excel.comment)|[mentions](/javascript/api/excel/excel.comment#mentions)|Получает объекты (например, люди), указанные в комментариях.|
 ||[richContent](/javascript/api/excel/excel.comment#richContent)|Получает богатое содержимое комментариев (например, упоминания в комментариях).|
-||[resolved](/javascript/api/excel/excel.comment#resolved)|Состояние потока комментариев.|
+||[разрешено](/javascript/api/excel/excel.comment#resolved)|Состояние потока комментариев.|
 ||[updateMentions(contentWithMentions: Excel. CommentRichContent)](/javascript/api/excel/excel.comment#updateMentions_contentWithMentions_)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
 |[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(cellAddress: Range \| string, content: CommentRichContent \| string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentcollection#add_cellAddress__content__contentType_)|Создает новое примечание с указанным содержимым в определенной ячейке.|
 |[CommentMention](/javascript/api/excel/excel.commentmention)|[email](/javascript/api/excel/excel.commentmention#email)|Адрес электронной почты объекта, упоминаемого в комментарии.|
 ||[id](/javascript/api/excel/excel.commentmention#id)|ID объекта.|
 ||[name](/javascript/api/excel/excel.commentmention#name)|Имя объекта, упомянутого в комментарии.|
 |[CommentReply](/javascript/api/excel/excel.commentreply)|[mentions](/javascript/api/excel/excel.commentreply#mentions)|Сущностям (например, людям), упомянутым в комментариях.|
-||[resolved](/javascript/api/excel/excel.commentreply#resolved)|Состояние ответа на комментарий.|
+||[разрешено](/javascript/api/excel/excel.commentreply#resolved)|Состояние ответа на комментарий.|
 ||[richContent](/javascript/api/excel/excel.commentreply#richContent)|Богатое содержимое комментариев (например, упоминания в комментариях).|
 ||[updateMentions(contentWithMentions: Excel. CommentRichContent)](/javascript/api/excel/excel.commentreply#updateMentions_contentWithMentions_)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
 |[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: CommentRichContent \| string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentreplycollection#add_content__contentType_)|Создает ответ на комментарий для комментария.|

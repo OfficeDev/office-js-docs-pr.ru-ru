@@ -5,16 +5,16 @@ ms.date: 08/05/2021
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c475870166415dc6142169dc1029b682477001e7f4bbbe35721ddcd1b82d5f07
-ms.sourcegitcommit: f5d4321763e366a10f2d868fb329dbef5239c830
+ms.openlocfilehash: fc0d2e82c759635fbd846ea31fc86a7af79a8499
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57845622"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938770"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
-Надстройки [Script Lab](https://appsource.microsoft.com/product/office/WA104380862) и [Script Lab для Outlook](https://appsource.microsoft.com/product/office/wa200001603), которые можно бесплатно получить в AppSource, дают возможность изучать API JavaScript для Office при работе в приложениях Office, таких как Excel или Outlook. Script Lab — удобный инструмент, который пополнит ваш инструментарий разработки для прототипирования и проверки нужной функциональности собственных надстроек.
+Надстройки [Script Lab](https://appsource.microsoft.com/product/office/WA104380862) и [Script Lab для Outlook](https://appsource.microsoft.com/product/office/WA200001603), которые можно бесплатно получить в AppSource, дают возможность изучать API JavaScript для Office при работе в приложениях Office, таких как Excel или Outlook. Script Lab — удобный инструмент, который пополнит ваш инструментарий разработки для прототипирования и проверки нужной функциональности собственных надстроек.
 
 ## <a name="what-is-script-lab"></a>Что такое Script Lab?
 

@@ -3,12 +3,12 @@ title: Ограничения на активацию и использован�
 description: Обратите внимание на определенные правила активации и использования API и учитывайте эти ограничения при реализации своих надстроек.
 ms.date: 06/11/2021
 localization_priority: Normal
-ms.openlocfilehash: fcc28a5183195cade1314aaa6ed4d0890a892e8f8a3bf71935bdd8c01b968ab6
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: b1d948add382f19083f099ed7a01b4f954555b6f
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097531"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938869"
 ---
 # <a name="limits-for-activation-and-javascript-api-for-outlook-add-ins"></a>Ограничения на активацию и API JavaScript для надстроек Outlook
 

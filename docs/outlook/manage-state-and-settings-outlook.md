@@ -3,12 +3,12 @@ title: Управление состоянием и настройками Outlo
 description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: e045c2410c30ae7142aaf9de06d3d4606dc8a0c8fd2cb776620b4aa69cafac99
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 5893850e100399c742954ed130347ff1944b4f37
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57093536"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938374"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
@@ -139,7 +139,7 @@ function saveCallback(asyncResult) {
 
 В следующей таблице обобщается сохраненное поведение пользовательских свойств в сообщениях электронной почты для Outlook клиентов.
 
-|Сценарий|Windows|Веб|Mac|
+|Сценарий|Windows|Web|Mac|
 |---|---|---|---|
 |Новое сочинение|null|null|null|
 |Ответ, ответ все|null|null|null|

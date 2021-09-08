@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.9.
 ms.date: 04/01/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: eb917ed75049f965178075f57e8d0e9e7630bc9081019763e7812b221a00f67c
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 41f6eb2dd329a2ab82981cb3ee8e11a784e23591
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57098293"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938545"
 ---
 # <a name="whats-new-in-excel-javascript-api-19"></a>Новые возможности в Excel API JavaScript 1.9
 

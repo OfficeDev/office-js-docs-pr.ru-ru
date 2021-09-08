@@ -3,12 +3,12 @@ title: Откройте Excel веб-страницы и встроите Office
 description: Откройте Excel веб-страницы и встроите Office надстройки.
 ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 3d9f9d0ce811fefe31792f2ab924a6d3d0bb684faec01bb03043707c87dc70be
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: a7998d1f15f40a549f8ff9ddd9745d6bf9b8ab6d
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57089211"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938976"
 ---
 # <a name="open-excel-from-your-web-page-and-embed-your-office-add-in"></a>Откройте Excel веб-страницы и встроите Office надстройки
 

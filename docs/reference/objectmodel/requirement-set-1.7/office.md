@@ -3,12 +3,12 @@ title: Office пространства имен — набор требован�
 description: Office пространства имен, доступных для Outlook надстройки с помощью API почтовых ящиков, установленного 1.7.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 2e94351b2265aa6cd0e05a3c54c30a3ede0511e8464c659fd53bb9a0b2692122
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 19c80c0c8c4aaf31c42aad16b3f474e92b7cdaec
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57092190"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938856"
 ---
 # <a name="office-mailbox-requirement-set-17"></a>Office (набор требований к почтовым ящикам 1.7)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57092190"
 |---|---|---|:---:|
 | [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | Строка | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
@@ -108,10 +108,10 @@ ms.locfileid: "57092190"
 
 | Имя | Тип | Описание | Минимальный набор требований |
 |---|---|---|:---:|
-|`AppointmentTimeChanged`| String | Изменилась дата или время выбранной встречи или серии. | 1.7 |
-|`ItemChanged`| String | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
-|`RecipientsChanged`| String | Список получателей выбранного элемента или расположения встречи изменен. | 1.7 |
-|`RecurrenceChanged`| String | Изменился шаблон повторяемости выбранной серии. | 1.7 |
+|`AppointmentTimeChanged`| Строка | Изменилась дата или время выбранной встречи или серии. | 1.7 |
+|`ItemChanged`| Строка | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
+|`RecipientsChanged`| Строка | Список получателей выбранного элемента или расположения встречи изменен. | 1.7 |
+|`RecurrenceChanged`| Строка | Изменился шаблон повторяемости выбранной серии. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 

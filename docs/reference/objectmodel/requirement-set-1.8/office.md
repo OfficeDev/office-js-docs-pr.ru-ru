@@ -3,12 +3,12 @@ title: Office пространства имен — набор требован�
 description: Office членов пространства имен, доступных для Outlook надстройки с помощью API почтовых ящиков, установленного 1.8.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 91f70815356f8b98ae7c3b8ddabc0bfee117d972aa0f9937f6307c8d987cbaac
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 00e236bed7e00159be8c94f727ca64ccaecd07b0
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57085526"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938852"
 ---
 # <a name="office-mailbox-requirement-set-18"></a>Office (набор требований к почтовым ящикам 1.8)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57085526"
 |---|---|---|:---:|
 | [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | Строка | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
@@ -108,9 +108,9 @@ ms.locfileid: "57085526"
 
 | Имя | Тип | Описание | Минимальный набор требований |
 |---|---|---|:---:|
-|`AppointmentTimeChanged`| String | Изменилась дата или время выбранной встречи или серии. | 1.7 |
-|`AttachmentsChanged`| String | Вложение было добавлено или удалено из элемента. | 1.8 |
-|`EnhancedLocationsChanged`| String | Расположение выбранного назначения изменилось. | 1.8 |
+|`AppointmentTimeChanged`| Строка | Изменилась дата или время выбранной встречи или серии. | 1.7 |
+|`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | 1.8 |
+|`EnhancedLocationsChanged`| Строка | Расположение выбранного назначения изменилось. | 1.8 |
 |`ItemChanged`| String | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
 |`RecipientsChanged`| String | Список получателей выбранного элемента или расположения встречи изменен. | 1.7 |
 |`RecurrenceChanged`| String | Изменился шаблон повторяемости выбранной серии. | 1.7 |

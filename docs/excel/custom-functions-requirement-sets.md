@@ -4,12 +4,12 @@ description: Сведения о наборах пользовательских
 ms.date: 09/14/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 5fbb280176b6c222bedb7cefe14c3caa92148032b59cc1d6c0942dde1f52a3aa
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 0860dd2d1b55376a85eadf04898d288d83b0205d
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57079475"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938309"
 ---
 # <a name="custom-functions-requirement-sets"></a>Наборы настраиваемой функции
 
@@ -17,8 +17,8 @@ ms.locfileid: "57079475"
 
 |  Набор обязательных элементов  |  Office для Windows<br>(подключено к подписке на Microsoft 365)  |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
-| CustomFunctionsRuntime 1.3 | 16.0.13127.20296 или более поздней | Не поддерживается | 16.40.20081000 или более поздней | Июль 2020 |
-| CustomFunctionsRuntime 1.2 | 16.0.12527.20194 или более поздней | Не поддерживается | 16.34.20020900 или более поздней | Январь, 2020 |
+| CustomFunctionsRuntime 1.3 | 16.0.13127.20296 или более поздней | Не поддерживается | 16.40.20081000 или более поздней | Июль 2020 г. |
+| CustomFunctionsRuntime 1.2 | 16.0.12527.20194 или более поздней | Не поддерживается | 16.34.20020900 или более поздней | Январь 2020 г. |
 | CustomFunctionsRuntime 1.1 | 16.0.12527.20092 или более поздней | Не поддерживается | 16.34 или более поздней | Май 2019 г. |
 
 > [!NOTE]

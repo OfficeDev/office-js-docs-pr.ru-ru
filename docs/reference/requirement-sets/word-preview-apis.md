@@ -4,12 +4,12 @@ description: Сведения о предстоящих API JavaScript Word
 ms.date: 11/09/2020
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 1a3871ca4445e595620112bb5176fe2b7ab39015228a1602c119c06730cc90ab
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: 09e8c978160cbe59fea1a80ac7f3dce653115440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57097851"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939311"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра Word JavaScript
 
@@ -65,7 +65,7 @@ ms.locfileid: "57097851"
 ||[customXmlParts](/javascript/api/word/word.documentcreated#customxmlparts)|Получает настраиваемые XML-части в документе.|
 ||[settings](/javascript/api/word/word.documentcreated#settings)|Получает параметры надстройки в документе.|
 |[InlinePicture](/javascript/api/word/word.inlinepicture)|[imageFormat](/javascript/api/word/word.inlinepicture#imageformat)|Получает формат inline image.|
-|[Список](/javascript/api/word/word.list)|[getLevelFont (уровень: номер)](/javascript/api/word/word.list#getlevelfont-level-)|Получает шрифт пули, номера или изображения на указанном уровне в списке.|
+|[Перечисление](/javascript/api/word/word.list)|[getLevelFont (уровень: номер)](/javascript/api/word/word.list#getlevelfont-level-)|Получает шрифт пули, номера или изображения на указанном уровне в списке.|
 ||[getLevelPicture(level: number)](/javascript/api/word/word.list#getlevelpicture-level-)|Получает кодированное представление строки base64 на указанном уровне в списке.|
 ||[resetLevelFont (уровень: номер, resetFontName?: boolean)](/javascript/api/word/word.list#resetlevelfont-level--resetfontname-)|Сброс шрифта пули, номера или изображения на указанном уровне в списке.|
 ||[setLevelPicture(level: number, base64EncodedImage?: string)](/javascript/api/word/word.list#setlevelpicture-level--base64encodedimage-)|Задает изображение на указанном уровне в списке.|

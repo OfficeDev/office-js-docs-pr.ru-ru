@@ -3,12 +3,12 @@ title: Альтернативные способы передачи сообще
 description: Узнайте обходные пути, которые можно использовать, если метод messageChild не поддерживается.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 1dd603a144aa14a1456b15a67ffd2563028dfc333561e853f518dde1af06f899
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d664178a804b206e02634326cc27699fc6ceb0f7
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080297"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939326"
 ---
 # <a name="alternative-ways-of-passing-messages-to-a-dialog-box-from-its-host-page"></a>Альтернативные способы передачи сообщений в диалоговое окно со своей хост-страницы
 

@@ -4,11 +4,11 @@ description: Узнайте, как добавить в надстройку н�
 ms.date: 07/08/2021
 localization_priority: Normal
 ms.openlocfilehash: 2ac9a83511fc29eb055ebdc4d2c77f7675c68994
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868409"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938440"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 

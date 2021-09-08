@@ -4,11 +4,11 @@ description: Узнайте, как совместно Excel книги, хра�
 ms.date: 07/08/2021
 localization_priority: Normal
 ms.openlocfilehash: f57fccea8b4f7315661d3b7ba596c74dc7427bf8
-ms.sourcegitcommit: 69f6492de8a4c91e734250c76681c44b3f349440
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "58868430"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938323"
 ---
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 

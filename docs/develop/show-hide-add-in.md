@@ -4,11 +4,11 @@ description: Узнайте, как программным образом скр
 ms.date: 07/08/2021
 localization_priority: Normal
 ms.openlocfilehash: b2f0efa95f4ce71fc73d9834cfc165cfdd85dc8f
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773757"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58939288"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 

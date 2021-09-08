@@ -3,12 +3,12 @@ title: Элемент TargetDialect в файле манифеста
 description: Элемент TargetDialect определяет региональный язык, поддерживаемый этим словарем, представленный в качестве строки имени культуры.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 04f78be33f215fc79abbcd52be716036f4369fc8cb6de59e2a725cc5228334c0
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: d0f60989ee5375f356343a8b3495f9c84120d467
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57095563"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938998"
 ---
 # <a name="targetdialect-element"></a>Элемент TargetDialect
 

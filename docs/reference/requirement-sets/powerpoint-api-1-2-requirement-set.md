@@ -4,12 +4,12 @@ description: Сведения о наборе требований PowerPointApi
 ms.date: 01/27/2021
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: 971617bc2bd70525fc3d5adf34fc0ad092ae66f9892ed52f0d83053b142caa10
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: fac472e9b88b78f52fe939f883d88cded8b1702c
+ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57098692"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "58938914"
 ---
 # <a name="whats-new-in-powerpoint-javascript-api-12"></a>Новые возможности в PowerPoint API JavaScript 1.2
 
