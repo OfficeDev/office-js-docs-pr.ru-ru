@@ -1,20 +1,20 @@
 ---
 title: Надстройки Outlook для Outlook Mobile
-description: Outlook мобильные надстройки поддерживаются во всех Microsoft 365 учетных записях, Outlook.com, и поддержка скоро появится на учетных записях gmail.
-ms.date: 05/27/2020
+description: Outlook мобильные надстройки поддерживаются во всех учетных записях Microsoft 365 и Outlook.com.
+ms.date: 09/08/2021
 localization_priority: Normal
-ms.openlocfilehash: e4f44d36f6dab5841d249e3754e78c5dd7a3813e
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.openlocfilehash: acde42dd9ada88d60a811edf53ca0247f98e5519
+ms.sourcegitcommit: 02ffcff39bf1726893651dcd9ef609b0492851d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937553"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "58971112"
 ---
 # <a name="add-ins-for-outlook-mobile"></a>Надстройки для Outlook Mobile
 
 В Outlook Mobile теперь работают надстройки, использующие те же API, что и в других конечных точках Outlook. Если вы уже создали надстройку для Outlook, вам будет легко запустить ее в Outlook Mobile.
 
-Outlook мобильные надстройки поддерживаются во всех учетных записях Microsoft 365, Outlook.com, а поддержка скоро появится на учетных записях Gmail.
+Outlook мобильные надстройки поддерживаются во всех учетных записях Microsoft 365 и Outlook.com. Однако поддержка в настоящее время недоступна для учетных записей Gmail.
 
 **Пример области задач в Outlook для iOS**
 
