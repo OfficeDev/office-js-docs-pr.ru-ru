@@ -3,13 +3,13 @@ title: Получите диапазон с помощью Excel API JavaScript
 description: Узнайте, как получить диапазон с помощью Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 6aa9bb00bc9d24aeee5f1fef9e8d1531525e9d1f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e4e51305a822fc528e81a178c20545b11fb80bf2
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937770"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153869"
 ---
 # <a name="get-a-range-using-the-excel-javascript-api"></a>Получите диапазон с помощью Excel API JavaScript
 
@@ -85,7 +85,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

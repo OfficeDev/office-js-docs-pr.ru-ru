@@ -2,13 +2,13 @@
 title: Правила активации для надстроек Outlook
 description: Outlook активирует некоторые типы надстроек, если сообщение или сведения о встрече, которые читает или создает пользователь, соответствуют правилам активации надстройки.
 ms.date: 09/22/2020
-localization_priority: Normal
-ms.openlocfilehash: 24f17b7bb3da4665f3f05b23d34ba15bcc4ae729
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e0cac8a2f0153d85e5b6d2600f1dbc7f4c03c398
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936727"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154266"
 ---
 # <a name="activation-rules-for-contextual-outlook-add-ins"></a>Правила активации контекстных надстроек Outlook
 

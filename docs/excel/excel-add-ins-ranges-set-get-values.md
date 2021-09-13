@@ -3,13 +3,13 @@ title: Установите и получите значения диапазо�
 description: Узнайте, как использовать API Excel JavaScript для набора и получения значений диапазона, текста или формул.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 5d9d1bf3b248585bf27ac591754cfa4eb4dd0fbc
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8db6e66c5f8eff106225d59fc4b82c9d092c8ee1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936174"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153854"
 ---
 # <a name="set-and-get-range-values-text-or-formulas-using-the-excel-javascript-api"></a>Установите и получите значения диапазона, текст или формулы с Excel API JavaScript
 
@@ -306,7 +306,7 @@ Excel.run(function (context) {
 ]
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

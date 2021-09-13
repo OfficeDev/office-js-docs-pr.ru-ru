@@ -2,13 +2,13 @@
 title: Добавление проверки данных в диапазоны Excel
 description: Узнайте, как Excel API JavaScript позволяют надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге.
 ms.date: 03/19/2019
-localization_priority: Normal
-ms.openlocfilehash: 188abed325a432023ee78c42a04f875f1b7f1ec8
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 83f7f21621b6ddffa3cb7e51134a3b4cd1cc2aaa
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938757"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151504"
 ---
 # <a name="add-data-validation-to-excel-ranges"></a>Добавление проверки данных в диапазоны Excel
 

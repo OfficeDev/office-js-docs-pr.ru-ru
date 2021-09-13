@@ -3,13 +3,13 @@ title: Настройка надстройки Node.js с поддержкой �
 description: Узнайте о настройке надстройки с поддержкой SSO, созданной с помощью генератора Yeoman.
 ms.date: 08/04/2021
 ms.prod: non-product-specific
-localization_priority: Normal
-ms.openlocfilehash: 71d2cb81aa5b10ef69cbbeacc5c1e071f115fa91
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8b66da764902fba1a0296c349f898a94ef9f9b33
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938575"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154554"
 ---
 # <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
@@ -18,7 +18,7 @@ ms.locfileid: "58938575"
 
 Быстрое начало [SSO](sso-quickstart.md) создает надстройки с поддержкой SSO, которая получает сведения о профиле пользователя и записывает их в документ или сообщение. В этой статье вы пройдите процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске SSO, чтобы добавить новые функциональные возможности, которые требуют различных разрешений.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 - Надстройка Office, которую вы создали, следуя инструкциям в [быстром запуске SSO.](sso-quickstart.md)
 
@@ -71,7 +71,7 @@ ms.locfileid: "58938575"
 
 11. На панели **разрешений API запроса:**
 
-    a. В **статье Файлы** выберите **Files.Read.All**.
+    а. В **статье Файлы** выберите **Files.Read.All**.
 
     б. Выберите **кнопку Добавить разрешения** в нижней части панели, чтобы сохранить эти изменения разрешений.
 
@@ -97,7 +97,7 @@ ms.locfileid: "58938575"
 
 1. В **./. Файл ENV:**
 
-    a. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
+    а. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
 
     б. Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
@@ -119,7 +119,7 @@ ms.locfileid: "58938575"
     };
     ```
 
-4. В **./src/taskpane/taskpane.html** найдите элемент и обновите текст в этом элементе, чтобы описать новые функции `<section class="ms-firstrun-instructionstep__header">` надстройки.
+4. В **./src/taskpane/taskpane.html** найти элемент и обновить текст в этом элементе, чтобы описать новые функциональные `<section class="ms-firstrun-instructionstep__header">` возможности надстройки.
 
     ```html
     <section class="ms-firstrun-instructionstep__header">
@@ -129,7 +129,7 @@ ms.locfileid: "58938575"
     </section>
     ```
 
-5. В **./src/taskpane/taskpane.html** найти и заменить оба появления `Get My User Profile Information` строки строкой `Read my OneDrive for Business` .
+5. В **./src/taskpane/taskpane.html** найти и заменить оба появления `Get My User Profile Information` строки `Read my OneDrive for Business` строкой.
 
     ```html
     <li class="ms-ListItem">
@@ -146,7 +146,7 @@ ms.locfileid: "58938575"
     </p>
     ```
 
-6. В **./src/taskpane/taskpane.html** найти и заменить `Your user profile information will be displayed in the document.` строку строкой `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.` .
+6. В **./src/taskpane/taskpane.html** найти и заменить `Your user profile information will be displayed in the document.` строку `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.` строкой.
 
     ```html
     <li class="ms-ListItem">
@@ -635,7 +635,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 
     ![Снимок экрана, OneDrive для бизнеса сведения в Outlook окне составить сообщение.](../images/sso-onedrive-info-outlook.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Поздравляем, вы успешно настраивали функции надстройки с поддержкой SSO, созданной с генератором Yeoman в быстром запуске [SSO.](sso-quickstart.md) Дополнительные сведения об этапах настройки единого входа, которые генератор Yeoman выполняет автоматически, и коде, который упрощает процесс единого входа, см. в статье [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md).
 

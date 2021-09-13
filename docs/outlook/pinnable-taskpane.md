@@ -2,13 +2,13 @@
 title: Реализация закрепляемой области задач в надстройке Outlook.
 description: Фигура пользовательского интерфейса области задач для команд надстройки открывает вертикальную область задач справа от открытого сообщения или приглашения на собрание, предоставляя интерфейс для дополнительных действий.
 ms.date: 07/07/2020
-localization_priority: Normal
-ms.openlocfilehash: 57a17a90fe565adb3ffb9d23e3b169bc83be2735
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e418ba10fa5c0b35406b5b105fd1e97599323bc1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937748"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151395"
 ---
 # <a name="implement-a-pinnable-task-pane-in-outlook"></a>Реализация закрепляемой области задач в Outlook
 

@@ -2,13 +2,13 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: Список событий для Excel JavaScript. Это включает сведения об использовании обработчиков событий и связанных шаблонов.
 ms.date: 07/02/2021
-localization_priority: Normal
-ms.openlocfilehash: 596d8738b4c4953a937825e6c7294b2478ae59f7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: b4413264e98039a71f7ad4d6ea82f06a3b3bef12
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938722"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151497"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 

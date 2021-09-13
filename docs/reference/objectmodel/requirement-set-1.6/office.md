@@ -2,13 +2,13 @@
 title: Office пространства имен — набор требований 1.6
 description: Office, доступные для Outlook надстройки с помощью API почтовых ящиков, набор 1.6.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 40cdb7de0678007b93b9251e7f1e2921ed857338
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: b3641129159cd56b2589cf141fd5850d39a9b544
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939235"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151612"
 ---
 # <a name="office-mailbox-requirement-set-16"></a>Office (набор требований к почтовым ящикам 1.6)
 
@@ -33,7 +33,7 @@ ms.locfileid: "58939235"
 |---|---|---|:---:|
 | [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [EventType](#eventtype-string) | Создание<br>Чтение | Строка | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
@@ -108,7 +108,7 @@ ms.locfileid: "58939235"
 
 | Имя | Тип | Описание | Минимальный набор требований |
 |---|---|---|:---:|
-|`ItemChanged`| Строка | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
+|`ItemChanged`| String | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
 
 ##### <a name="requirements"></a>Требования
 

@@ -2,13 +2,13 @@
 title: Элемент Scopes в файле манифеста
 description: Элемент Scopes содержит разрешения, необходимые для подключения надстройки к внешнему ресурсу.
 ms.date: 08/12/2019
-localization_priority: Normal
-ms.openlocfilehash: be68033e86de736703d9d1593ad361918d5a147d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 346a143fdba35a153229b00052a463f726fd9056
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937781"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154841"
 ---
 # <a name="scopes-element"></a>Элемент Scopes
 

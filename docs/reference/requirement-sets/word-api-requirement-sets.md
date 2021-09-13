@@ -3,13 +3,13 @@ title: Наборы обязательных элементов API JavaScript �
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word.
 ms.date: 05/05/2021
 ms.prod: word
-localization_priority: Priority
-ms.openlocfilehash: 816bb49c165d41e5a29b71bb8df422c353087bab
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: dba512af0228b8ee7bb9e7ff54654c779e4b3ca5
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939122"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154895"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 

@@ -2,13 +2,13 @@
 title: Просмотр и изменение данных элемента в надстройке Outlook
 description: В зависимости от активации надстройки в форме чтения или создания элемента, свойства, доступные надстройке для элемента, отличаются.
 ms.date: 12/10/2019
-localization_priority: Normal
-ms.openlocfilehash: 0f7e2335420ee74765ec28bf7d33b339dc3fb6a5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e1cdfc528212bf6cde2a828819feda5bd4655ba9
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937550"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151450"
 ---
 # <a name="get-and-set-outlook-item-data-in-read-or-compose-forms"></a>Просмотр и изменение данных элемента Outlook в формах чтения и создания
 

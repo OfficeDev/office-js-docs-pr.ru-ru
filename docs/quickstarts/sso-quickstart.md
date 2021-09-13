@@ -3,13 +3,13 @@ title: Создание надстройки Office, в которой испо�
 description: Создание надстройки Office на платформе Node.js с использованием единого входа с помощью генератора Yeoman.
 ms.date: 11/03/2020
 ms.prod: non-product-specific
-localization_priority: Priority
-ms.openlocfilehash: eb75c0b4f2a27612a2e361caaaefefa047a68a44
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 5153c1ed3987f619b180dd22ba90f2eb4c760d09
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937392"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154727"
 ---
 # <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, с помощью генератора Yeoman
 

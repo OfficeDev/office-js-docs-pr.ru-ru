@@ -2,13 +2,13 @@
 title: Элемент DisableEntityHighlighting в файле манифеста
 description: Указывает, следует ли выключить выделение объекта для почтовой надстройки.
 ms.date: 10/09/2018
-localization_priority: Normal
-ms.openlocfilehash: a2364bb0ec1d369be7a2f07f1a115bab92dacc48
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 2fdc8d3d32c284fcb750c78443dc8a39bdc27361
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937030"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153789"
 ---
 # <a name="disableentityhighlighting-element"></a>Элемент DisableEntityHighlighting
 

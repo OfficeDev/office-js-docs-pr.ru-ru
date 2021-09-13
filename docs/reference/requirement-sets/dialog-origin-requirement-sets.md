@@ -3,13 +3,13 @@ title: Наборы обязательных элементов источник
 description: Дополнительные информацию о наборах требований к диалоговом происхождению.
 ms.date: 07/22/2021
 ms.prod: non-product-specific
-localization_priority: Normal
-ms.openlocfilehash: 24513823eb60435359d5d7307a11a192fece2015
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: db97b19c0a23fa7dbd1b93e03ccd7a7b76317d7a
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937583"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154344"
 ---
 # <a name="dialog-origin-requirement-sets"></a>Наборы обязательных элементов источников диалоговых окон
 
@@ -36,7 +36,7 @@ ms.locfileid: "58937583"
 
 Диалоговое начало 1.1 — это первая версия API. Он обеспечивает поддержку меж доменного обмена сообщениями между диалогом и родительской страницей. Сведения об этих API см. в справочной [Office.ui.](/javascript/api/office/office.ui)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Использование Office Dialog API в надстройках Office](../../develop/dialog-api-in-office-add-ins.md)
 - [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)

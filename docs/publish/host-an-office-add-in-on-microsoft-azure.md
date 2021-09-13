@@ -2,13 +2,13 @@
 title: Размещение надстройки Office в Microsoft Azure | Документация Майкрософт
 description: Сведения о развертывании веб-приложения надстройки в Azure и загрузке неопубликованной надстройки для тестирования в клиентском приложении Office.
 ms.date: 07/07/2020
-localization_priority: Normal
-ms.openlocfilehash: abe0012861a4c401f003704644fb9f530220521d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 598cfa2691ef1a532e1f94e0f4566c2b41d1a2d7
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939142"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154595"
 ---
 # <a name="host-an-office-add-in-on-microsoft-azure"></a>Размещение надстройки Office в Microsoft Azure
 

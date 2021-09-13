@@ -2,13 +2,13 @@
 title: Элемент AppDomains в файле манифеста
 description: Перечислены все домены в дополнение к домену, указанному в элементе, Office надстройка будет использовать и должна доверяться `SourceLocation` Office.
 ms.date: 06/12/2020
-localization_priority: Normal
-ms.openlocfilehash: 751e4ad2ffa5fd50739a855fad48964473b154f1
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 6bf1785cf11e31648d9bc69e101cd5a5cf3ecb9f
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936409"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153722"
 ---
 # <a name="appdomains-element"></a>Элемент AppDomains
 

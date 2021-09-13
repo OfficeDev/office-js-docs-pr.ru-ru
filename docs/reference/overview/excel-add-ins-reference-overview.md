@@ -3,13 +3,13 @@ title: Обзор API JavaScript для Excel
 description: Узнайте больше об Excel JavaScript API
 ms.date: 04/05/2021
 ms.prod: excel
-localization_priority: Priority
-ms.openlocfilehash: 80340b4990b56b2ba4d51f2a028480af3e267828
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 4b512db9028d56e9de6dcb31d03ffb0cd0d83ea6
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937712"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154775"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 

@@ -3,13 +3,13 @@ title: PowerPoint Требования к API JavaScript 1.2
 description: Сведения о наборе требований PowerPointApi 1.2.
 ms.date: 01/27/2021
 ms.prod: powerpoint
-localization_priority: Normal
-ms.openlocfilehash: fac472e9b88b78f52fe939f883d88cded8b1702c
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: b62bed8d28eb2bacff0450e749da8cf69c868e38
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938914"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154314"
 ---
 # <a name="whats-new-in-powerpoint-javascript-api-12"></a>Новые возможности в PowerPoint API JavaScript 1.2
 
@@ -40,7 +40,7 @@ PowerPointApi 1.2 добавила поддержку для вставки сл
 ||[getItemOrNullObject(id: строка)](/javascript/api/powerpoint/powerpoint.slidecollection#getItemOrNullObject_id_)|Получает слайд с помощью уникального ID.|
 ||[items](/javascript/api/powerpoint/powerpoint.slidecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [PowerPoint Справочная документация по API JavaScript](/javascript/api/powerpoint?view=powerpoint-js-1.2&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для PowerPoint](powerpoint-api-requirement-sets.md)

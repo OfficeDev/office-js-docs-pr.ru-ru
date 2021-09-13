@@ -3,13 +3,13 @@ title: Excel Набор API JavaScript 1.7
 description: Сведения о наборе требований ExcelApi 1.7.
 ms.date: 11/09/2020
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: ed18997224f052c2e36943fcdbb93865ec8ac73d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 81ae4b7ec9180ebb14bdf3b0e19d6dc2a9e997cf
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936574"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153969"
 ---
 # <a name="whats-new-in-excel-javascript-api-17"></a>Новые возможности API JavaScript для Excel 1.7
 

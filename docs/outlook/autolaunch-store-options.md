@@ -3,13 +3,13 @@ title: Параметры списка AppSource для надстройки н�
 description: Узнайте о параметрах списка AppSource, доступных для Outlook надстройки, которая реализует активацию на основе событий.
 ms.topic: article
 ms.date: 08/05/2021
-localization_priority: Normal
-ms.openlocfilehash: 5d48e441d41b9d1fcd5508cb1beb3a90acd1550f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8b8ff55f852d7817903411ea21034df51f49accd
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938002"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154211"
 ---
 # <a name="appsource-listing-options-for-your-event-based-outlook-add-in"></a>Параметры списка AppSource для надстройки на Outlook событий
 
@@ -77,6 +77,6 @@ ms.locfileid: "58938002"
 
 ![Снимок экрана потока "Обновления" при развертывании обновленного приложения.](../images/outlook-deploy-update-flow.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Настройка надстройки Outlook для активации на основе событий](autolaunch.md)

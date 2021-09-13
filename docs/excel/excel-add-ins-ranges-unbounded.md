@@ -3,19 +3,19 @@ title: Чтение или написание в неограниченый ди
 description: Узнайте, как использовать API Excel JavaScript для чтения или записи в неограниченый диапазон.
 ms.date: 04/05/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: f7be2efc3e069ea3451088608ca5255a632ef863
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: a7b2a564377d0dab73d4f3ad6d3aacf2219ddeae
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937762"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153845"
 ---
 # <a name="read-or-write-to-an-unbounded-range-using-the-excel-javascript-api"></a>Чтение или написание в неограниченый диапазон с Excel API JavaScript
 
 В этой статье описывается, как читать и писать в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
-Адрес неограниченого диапазона — это адрес диапазона, который указывает целые столбцы или целые строки. Например.
+Адрес неограниченого диапазона — это адрес диапазона, который указывает целые столбцы или целые строки. Например,
 
 - Адреса диапазона, состоящие из целых столбцов:<ul><li>`C:C`</li><li>`A:F`</li></ul>
 - Адреса диапазона, состоящие из целых строк:<ul><li>`2:2`</li><li>`1:4`</li></ul>
@@ -34,7 +34,7 @@ var range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
 range.values = 'Due Date';
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

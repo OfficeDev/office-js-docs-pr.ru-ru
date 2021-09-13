@@ -2,13 +2,13 @@
 title: Элемент SourceLocation в файле манифеста
 description: Элемент SourceLocation указывает расположение исходных файлов для Office надстройки.
 ms.date: 05/12/2021
-localization_priority: Normal
-ms.openlocfilehash: 4dcd093db2f23220eaa34c0c81300c4994c1a697
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1b30227beee7deceb019b5970f2bb7b6f233dd56
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938692"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154440"
 ---
 # <a name="sourcelocation-element"></a>Элемент SourceLocation
 

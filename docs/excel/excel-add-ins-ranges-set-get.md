@@ -3,13 +3,13 @@ title: Установите и получите выбранный диапаз�
 description: Узнайте, как использовать API Excel JavaScript для набора и получения выбранного диапазона с Excel API JavaScript.
 ms.date: 07/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 623ba5c1b9e76151d4a2c4b169e655236b37e8c8
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e6a61e200482d48691c38845598987a1719b457f
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938183"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153850"
 ---
 # <a name="set-and-get-the-selected-range-using-the-excel-javascript-api"></a>Установите и получите выбранный диапазон с Excel API JavaScript
 
@@ -138,7 +138,7 @@ Excel.run(function (context) {
 
 ![Таблица с данными C5:F12 в Excel. Выбран диапазон D8:E12.](../images/excel-ranges-used-range-d8-e12.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

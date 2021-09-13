@@ -1,2 +1,2 @@
-- [Номера версий и сборок выпусков из канала обновления для клиентов Microsoft 365](/officeupdates/update-history-office365-proplus-by-date);
-- [Какая у меня версия Office?](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19);
+- [Версия и сборка номеров выпусков каналов обновления для Microsoft 365 клиентов](/officeupdates/update-history-office365-proplus-by-date)
+- [Какая у меня версия Office](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19);

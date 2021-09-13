@@ -2,13 +2,13 @@
 title: Элемент Override в файле манифеста
 description: Элемент Переопределения позволяет указать значение параметра в зависимости от заданного условия.
 ms.date: 05/19/2021
-localization_priority: Normal
-ms.openlocfilehash: cd270fa19750810238b42c26c2abc35a61c1bac8
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: bf0f4d8877ba2228d5bfc2053f53b2a8e1ab7b29
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936903"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154866"
 ---
 # <a name="override-element"></a>Элемент Override
 
@@ -218,7 +218,7 @@ ms.locfileid: "58936903"
 
 ### <a name="contained-in"></a>Содержится в
 
-- [Время выполнения](runtime.md)
+- [Runtime](runtime.md)
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -241,7 +241,7 @@ ms.locfileid: "58936903"
 </Runtimes>
 ```
 
-### <a name="see-also"></a>См. также
+### <a name="see-also"></a>Дополнительные материалы
 
-- [Время выполнения](runtime.md)
+- [Runtime](runtime.md)
 - [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md)

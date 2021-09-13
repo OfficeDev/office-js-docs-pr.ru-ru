@@ -3,13 +3,13 @@ title: 'Учебное руководство: обмен данными и со
 description: Узнайте, как обмениваться данными и событиями между пользовательскими функциями и областью задач в Excel.
 ms.date: 08/04/2021
 ms.prod: excel
-localization_priority: Priority
-ms.openlocfilehash: fe304ff0eef4b707cb0b90a2c38c60aff921279d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 0d42329d08de9db35d15d122321d771f6017b937
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939101"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154524"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane"></a>Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач
 

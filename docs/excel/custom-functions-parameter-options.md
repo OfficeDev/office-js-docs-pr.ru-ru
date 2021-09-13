@@ -2,13 +2,13 @@
 ms.date: 03/08/2021
 description: Узнайте, как использовать различные параметры в настраиваемой функции, такие как диапазоны Excel, необязательные параметры, контекст вызовов и другие.
 title: Параметры Excel пользовательских функций
-localization_priority: Normal
-ms.openlocfilehash: a168853eeb6a81cf3d0054cb3628b609ec283af7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 760e680441472d3089e9f6a986af60aac26a02f1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937442"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151515"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры настраиваемой функции
 
@@ -289,11 +289,11 @@ function getParameterAddresses(firstParameter, secondParameter, thirdParameter, 
 
 При запуске настраиваемой функции, вызываемой свойством, возвращается адрес параметра после формата в `parameterAddresses` `SheetName!RelativeCellAddress` ячейке, вызываемой функцией. Например, если параметр ввода расположен на листе "Затраты в ячейке D8", возвращаемое значение адреса параметра будет  `Costs!D8` . Если настраиваемая функция имеет несколько параметров и возвращается несколько адресов параметров, возвращаемые адреса будут перетекать через несколько ячеек, убывая вертикально из ячейки, вызываемой функцией. 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Узнайте, как использовать [летучие значения в настраиваемой функции.](custom-functions-volatile.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Получение и обработка данных с помощью пользовательских функций](custom-functions-web-reqs.md)
 * [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)

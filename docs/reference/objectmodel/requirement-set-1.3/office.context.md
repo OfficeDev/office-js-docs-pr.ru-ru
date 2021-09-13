@@ -2,13 +2,13 @@
 title: Office.context — набор требований 1.3
 description: Office. Участники объектов context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.3.
 ms.date: 12/02/2020
-localization_priority: Normal
-ms.openlocfilehash: c5c7f6eaa46bfa5067572878b03e47511310f894
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: cc90cb9d718df9325448f4e9cab0dfbef1f66fe9
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937811"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154391"
 ---
 # <a name="context-mailbox-requirement-set-13"></a>контекст (требования к почтовым ящикам 1.3)
 

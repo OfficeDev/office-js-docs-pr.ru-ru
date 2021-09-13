@@ -3,13 +3,13 @@ title: Наборы обязательных элементов API JavaScript �
 description: Узнайте больше о наборах обязательных элементов API JavaScript для OneNote.
 ms.date: 08/24/2020
 ms.prod: onenote
-localization_priority: Priority
-ms.openlocfilehash: ecdb26edca54758540688ba03b1d9c1eec14e739
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 579046ea007104d777d4cb02d4305aca79f72aae
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936420"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154901"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 

@@ -2,13 +2,13 @@
 title: Используйте настраиваемые теги на презентациях, слайдах и фигурах в PowerPoint
 description: Узнайте, как использовать теги для настраиваемой метаданных о презентациях, слайдах и фигурах.
 ms.date: 04/08/2021
-localization_priority: Normal
-ms.openlocfilehash: fbb13e67da1f7962fc2c0b8d45689f259b015014
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: db9d31424ac4e08e6eaccca824ca5881d2ef617e
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938093"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154619"
 ---
 # <a name="use-custom-tags-for-presentations-slides-and-shapes-in-powerpoint"></a>Используйте настраиваемые теги для презентаций, слайдов и фигур в PowerPoint
 
@@ -85,7 +85,7 @@ async function updateTag() {
 
 2. Следующий код создает метод получения индекса выбранного слайда. Вот что нужно знать об этом коде:
 
-    - Он использует метод [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript.
+    - Он использует [метод Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript.
     - Вызов встроен в функцию возврата `getSelectedDataAsync` обещаний. Дополнительные сведения о том, почему и как это сделать, см. в этой ссылке [Wrap Common API в функциях возврата обещаний.](../develop/asynchronous-programming-in-office-add-ins.md#wrap-common-apis-in-promise-returning-functions)
     - `getSelectedDataAsync` возвращает массив, так как можно выбрать несколько слайдов. В этом сценарии пользователь выбрал только один, поэтому код получает первый (0-й) слайд, который является единственным выбранным.
     - Значение слайда — это 1-базирующееся значение, что пользователь видит рядом со слайдом в области PowerPoint `index` интерфейса пользовательского интерфейса.

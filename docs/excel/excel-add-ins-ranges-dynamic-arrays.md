@@ -3,13 +3,13 @@ title: Обработка динамических массивов и разл�
 description: Узнайте, как обрабатывать динамические массивы и разливать диапазоны с помощью Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: d95546b4cff3f0ba7410d9ceaa73e19b7e684985
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 4601cd6a901243cadab0e7c5ead6061e28806377
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937489"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151485"
 ---
 # <a name="handle-dynamic-arrays-and-spilling-using-the-excel-javascript-api"></a>Обработка динамических массивов и разлив с помощью Excel API JavaScript
 
@@ -45,7 +45,7 @@ Excel.run(function (context) {
 
 Найдите ячейку, ответственную за разлив в заданную ячейку с помощью метода [Range.getSpillParent.](/javascript/api/excel/excel.range#getSpillParent__) Обратите `getSpillParent` внимание, что работает только в том случае, если объект диапазона является одной ячейкой. Вызов диапазона с несколькими ячейками приведет к ошибке, которая будет выброшена (или возвращается диапазон `getSpillParent` `Range.getSpillParentOrNullObject` null).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

@@ -2,13 +2,13 @@
 title: Вызов встроенных функций листов Excel с помощью API JavaScript для Excel
 description: Узнайте, как вызывать встроенные функции Excel таблицы, такие как `VLOOKUP` `SUM` Excel API JavaScript.
 ms.date: 12/19/2019
-localization_priority: Normal
-ms.openlocfilehash: 5cf1478e7f76c0602b9c8f0d19031abfa8369888
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 179ede5fe26c0b34e13bcab8b37cae7177d35c22
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937896"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153842"
 ---
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 
@@ -443,7 +443,7 @@ Excel.run(function (context) {
 | <a href="https://support.microsoft.com/office/ba7d1809-0d33-4bcb-96c7-6c56ec62ef6f" target="_blank">Функция ДОХОДПОГАШ</a> | Возвращает годовую доходность ценной бумаги с выплатой процентов в срок погашения |
 | <a href="https://support.microsoft.com/office/d633d5a3-2031-4614-a016-92180ad82bee" target="_blank">Функция Z.ТЕСТ</a> | Возвращает одностороннее вероятностное значение z-теста |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Класс functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)

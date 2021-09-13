@@ -2,13 +2,13 @@
 title: Office пространства имен — набор требований 1.4
 description: Office, доступные для Outlook надстройки с использованием набора API API почтовых ящиков 1.4.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 0221ab09048719317c131f0204e2fc60c4f8f7d4
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1a3d370318e4cc9631cafb807b4db4fe692df02b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936834"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154379"
 ---
 # <a name="office-mailbox-requirement-set-14"></a>Office (набор требований к почтовым ящикам 1.4)
 
@@ -33,7 +33,7 @@ ms.locfileid: "58936834"
 |---|---|---|:---:|
 | [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
 

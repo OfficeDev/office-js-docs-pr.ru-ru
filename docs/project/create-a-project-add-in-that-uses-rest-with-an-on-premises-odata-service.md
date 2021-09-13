@@ -2,13 +2,13 @@
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: Узнайте, как создать надстройку области задач для Project профессиональный 2013 г., которая сравнивает данные о затратах и работе в активном проекте со средними значениями для всех проектов в текущем экземпляре Project Web App.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 2ffcd8eacef56f881ae61a5c0f2a656e5b3edfee
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ad9eb10f057b0fcb0328dc0b4e87919681a20b09
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938020"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154608"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -16,7 +16,7 @@ ms.locfileid: "58938020"
 
 Код в данной статье основан на примере, разработанном Саурабхом Сангхви (Saurabh Sanghvi) и Эрвиндом Лаиром (Arvind Iyer), сотрудниками корпорации Майкрософт.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 Ниже приводится условие создания надстройки Project области задач, которая читает службу **ProjectData** экземпляра Project Web App в локальной установке Project Server 2013.
 
@@ -284,7 +284,7 @@ ms.locfileid: "58938020"
 
 ### <a name="procedure-5-create-the-javascript-code"></a>Процедура 5. Создание кода JavaScript
 
-1. Удалите весь код в файле HelloProjectOData.js по умолчанию, а затем добавьте глобальные переменные `**` иOffice.iniфункцию tialize. Имена переменных, написанные полностью заглавными буквами подразумевают, что они являются константами; они позже будут использоваться с переменной **_pwa** для создания запроса REST в этом примере.
+1. Удалите весь код в файле HelloProjectOData.js по умолчанию, а затем добавьте глобальные переменные `**` и функцию Office.initialize. Имена переменных, написанные полностью заглавными буквами подразумевают, что они являются константами; они позже будут использоваться с переменной **_pwa** для создания запроса REST в этом примере.
 
     ```js
     var PROJDATA = "/_api/ProjectData";

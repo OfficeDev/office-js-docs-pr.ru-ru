@@ -2,13 +2,13 @@
 title: Get and set internet headers
 description: Как получить и установить интернет-заготки в сообщении в Outlook надстройки.
 ms.date: 04/28/2020
-localization_priority: Normal
-ms.openlocfilehash: 9e88af7c8fa996fe3b6164ce1fc04b6d77b048f2
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 9784ef16c70e273e6bd1c242ffe91d97aa5d40ed
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939369"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151455"
 ---
 # <a name="get-and-set-internet-headers-on-a-message-in-an-outlook-add-in"></a>Получите и установите в надстройки сообщение в Outlook в интернете
 
@@ -143,6 +143,6 @@ Sender's preferred vegetable: broccoli
 - Создайте минимальное количество необходимых загодеров.
 - Заглавные имена, чтобы можно было повторно использовать и обновлять их значения позже. Таким образом, избегайте именования заглавных имен в переменной (например, на основе ввода пользователя, timestamp и т.д.).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Просмотр и изменение метаданных для надстройки Outlook](metadata-for-an-outlook-add-in.md)

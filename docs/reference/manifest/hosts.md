@@ -2,13 +2,13 @@
 title: Элемент Hosts в файле манифеста
 description: Указывает клиентское приложение Office, в котором будет активирована надстройка Office.
 ms.date: 10/09/2018
-localization_priority: Normal
-ms.openlocfilehash: 037ac2b5fedbfb1b59b7523382574942fe59a00a
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 2684753fc32a295d7e177ef3bf668c194458128e
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938053"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151444"
 ---
 # <a name="hosts-element"></a>Элемент Hosts
 

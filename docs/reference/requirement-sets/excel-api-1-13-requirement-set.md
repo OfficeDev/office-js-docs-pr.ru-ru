@@ -3,13 +3,13 @@ title: Excel Набор API JavaScript 1.13
 description: Сведения о наборе требований ExcelApi 1.13.
 ms.date: 07/09/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 8238f6c32aad74d59ed1d178b3f7b162a64026f1
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 677cb9eceba3d25a7f2d0f8677ab63942852a784
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939127"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153870"
 ---
 # <a name="whats-new-in-excel-javascript-api-113"></a>Новые возможности в Excel API JavaScript 1.13
 

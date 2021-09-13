@@ -2,13 +2,13 @@
 title: Элемент Methods в файле манифеста
 description: Элемент Methods указывает список Office API JavaScript, которые Office надстройки для активации.
 ms.date: 03/19/2019
-localization_priority: Normal
-ms.openlocfilehash: b270122240314b792ee492336417a4d133bdcc84
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 6a36e1e05634b0ebc4ca4fce6fb22c042cd8f6fb
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937116"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154884"
 ---
 # <a name="methods-element"></a>Элемент Methods
 

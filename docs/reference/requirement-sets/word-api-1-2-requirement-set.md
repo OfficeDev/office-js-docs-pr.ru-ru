@@ -3,13 +3,13 @@ title: Набор API API Word JavaScript 1.2
 description: Сведения о наборе требований WordApi 1.2
 ms.date: 11/09/2020
 ms.prod: word
-localization_priority: Normal
-ms.openlocfilehash: fd33b043a9205e793a248c35118ed86efcdf0036
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: de293cf67bbb452fe3c2b8c5de4896adf5cf7a43
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939308"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154823"
 ---
 # <a name="whats-new-in-word-javascript-api-12"></a>Новые возможности API JavaScript для Word 1.2
 

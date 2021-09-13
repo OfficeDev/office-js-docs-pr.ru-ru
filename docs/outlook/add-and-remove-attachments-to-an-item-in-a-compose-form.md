@@ -2,13 +2,13 @@
 title: Добавление и удаление вложений в надстройке Outlook
 description: Вы можете использовать различные API вложений для управления файлами Outlook элементов, присоединенных к элементу, который создает пользователь.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 87076965d600cbbcfe88d6711ea3acfb2b3c1fdd
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1df37568d52ae76caaec3e65286fac5544b577c3
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937279"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154253"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме композиции в Outlook
 

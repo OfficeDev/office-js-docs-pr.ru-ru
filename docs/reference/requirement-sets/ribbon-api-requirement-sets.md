@@ -3,13 +3,13 @@ title: Наборы обязательных элементов API ленты
 description: Указывает, какие Office платформы и сборки поддерживают динамические API ленты.
 ms.date: 05/12/2021
 ms.prod: non-product-specific
-localization_priority: Normal
-ms.openlocfilehash: aa198009a3d1d16a1c34966516a4ddeee9f7f940
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1d68a7a3cf1c7e4f187250a87babcf5525bb867b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937842"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154655"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 
@@ -32,7 +32,7 @@ ms.locfileid: "58937842"
 
 |Канал | Версия | Сборка|
 |:-----|:-----|:-----|
-|Актуальный канал | 2006 или больше | 20266.20266 или более|
+|Current Channel | 2006 или больше | 20266.20266 или более|
 |Ежемесячный канал (корпоративный) | 2005 или больше | 12827.20538 или более|
 |Ежемесячный канал (корпоративный) | 2004 | 12730.20602 или больше|
 |Полугодовой канал (корпоративный) | 2002 или больше | 12527.20880 или больше|

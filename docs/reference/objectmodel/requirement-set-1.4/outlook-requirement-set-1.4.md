@@ -2,13 +2,13 @@
 title: Набор обязательных элементов API для надстройки Outlook 1.4
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.4.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: b00413ef4c7f862a125c4a5a1d2190d4d60e87bf
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 18608e5c105e544783a54eee6fc86df0e0619185
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937803"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153930"
 ---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 

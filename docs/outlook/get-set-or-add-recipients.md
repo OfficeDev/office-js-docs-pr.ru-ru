@@ -2,13 +2,13 @@
 title: Просмотр и изменение получателей в надстройке Outlook
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
 ms.date: 12/10/2019
-localization_priority: Normal
-ms.openlocfilehash: 9a98fbc78e98cbaaf99c60625dd7f6a725c57c0f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ce4ad1af913362965fd4e3bfe95918a6a9b10989
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939098"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154115"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 

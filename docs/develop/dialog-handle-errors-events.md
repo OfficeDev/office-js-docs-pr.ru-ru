@@ -2,13 +2,13 @@
 title: Обработка ошибок и событий в диалоговом окне "Office"
 description: Узнайте, как улавливать и обрабатывать ошибки при открытии Office диалоговом окне.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 86b8e6f3ff6dba72245d70551846884901ec597a
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 09f4d69d86591cc9f8053dddba7e8886fed9ed43
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937024"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151528"
 ---
 # <a name="handle-errors-and-events-in-the-office-dialog-box"></a>Обработка ошибок и событий в диалоговом Office диалоговом окне
 
@@ -92,6 +92,6 @@ function processDialogEvent(arg) {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 Надстройку с такой обработкой ошибок см. в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).

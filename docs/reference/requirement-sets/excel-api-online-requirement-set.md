@@ -3,13 +3,13 @@ title: Excel Набор требований для API javaScript только 
 description: Сведения о наборе требований ExcelApiOnline.
 ms.date: 07/23/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 8e49d2a9d655e7bc1bf21233bdaf23321d1e48d1
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 067bd3f033c415b0a6ac271aa1f132cfeb92730c
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938753"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153810"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 

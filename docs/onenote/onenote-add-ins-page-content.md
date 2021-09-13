@@ -2,13 +2,13 @@
 title: Работа с содержимым страницы в OneNote
 description: Узнайте, как работать с OneNote контентом страницы с помощью API JavaScript.
 ms.date: 03/19/2019
-localization_priority: Normal
-ms.openlocfilehash: 01aa4a65f6f1d7ae8fccf490986c10035d30b0c3
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 72a5402d16f8d8a39903b3285c62ade48a409578
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938584"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154289"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 

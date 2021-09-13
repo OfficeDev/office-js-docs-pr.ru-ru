@@ -2,13 +2,13 @@
 title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
 ms.date: 07/07/2020
-localization_priority: Priority
-ms.openlocfilehash: 8fc8f5c30f5a56ffe9c792f2347b915cf2f04051
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 6676dd624163b8ce409a5049e5249cb9299bf9cb
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938159"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154254"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 

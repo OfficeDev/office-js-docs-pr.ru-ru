@@ -2,13 +2,13 @@
 title: Вставка данных в текст в надстройке Outlook
 description: Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.
 ms.date: 04/15/2019
-localization_priority: Normal
-ms.openlocfilehash: 575718baa6a54f4e2e8c6ddd4e582254e1607fa8
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 377c278464038a2b04d8b0ca49de92530e3724d9
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937584"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154103"
 ---
 # <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>Вставка данных в текст при создании встречи или сообщения в Outlook
 
@@ -27,7 +27,7 @@ ms.locfileid: "58937584"
 
 1.  На планшетах и смартфонах **getTypeAsync** **возвращает Office. MailboxEnums.BodyType.Text,** если операционная система или приложение не поддерживают редактирование элемента, изначально созданного в HTML- формате HTML.
 
-2.  Если вставить данные htmL и **getTypeAsync** возвращает тип текста для этого элемента, реорганизуйте данные в виде текста и **вставьте их Office. MailboxEnums.BodyType.Text** как _coercionType_. Если просто вставить HTML-данные с типом текстового принуждения, приложение будет отображать HTML-теги в виде текста. Если вы попытайтесь вставить **HTML-данные сOffice.MailboxEnums.BodyType.Html** как _coercionType,_ вы получите ошибку.
+2.  Если вставить данные htmL и **getTypeAsync** возвращает тип текста для этого элемента, реорганизуйте данные в виде текста и **вставьте их Office. MailboxEnums.BodyType.Text** как _coercionType_. Если просто вставить HTML-данные с типом текстового принуждения, приложение будет отображать HTML-теги в виде текста. Если вы попытайтесь вставить **HTML-данные** сOffice.MailboxEnums.BodyType.Htmlкак _coercionType,_ вы получите ошибку.
 
 В дополнение к _coercionType,_ как и большинство асинхронных методов в API Office JavaScript, **getTypeAsync,** **prependAsync** и **setSelectedDataAsync** принимают другие необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 

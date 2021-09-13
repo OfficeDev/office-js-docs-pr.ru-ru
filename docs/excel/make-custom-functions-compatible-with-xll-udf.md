@@ -2,13 +2,13 @@
 title: Расширение пользовательских функций с помощью функций, определенных пользователем XLL
 description: Включить совместимость с Excel функциями, определенными пользователем XLL, которые имеют эквивалентные функциональные возможности для настраиваемой функции
 ms.date: 08/24/2021
-localization_priority: Normal
-ms.openlocfilehash: 5611a8d7c22867146c0f0904d62bd113fe8d29d2
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 806f920fb6c9a25907fc475cfd29b844ef00f9a8
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937305"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153962"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью функций, определенных пользователем XLL
 
@@ -66,7 +66,7 @@ ms.locfileid: "58937305"
 | **Режим вычислений** | Нет пользовательского интерфейса. Excel может быть безответным при вычислении. | Пользователи увидят #BUSY! пока результат не будет возвращен. | Пользователи увидят #BUSY! пока результат не будет возвращен. |
 | **Наборы требований** | Н/Д | CustomFunctions 1.1 и более поздней | CustomFunctions 1.1 и более поздней |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Убедитесь, что надстройка Office совместима с существующей надстройкой COM](../develop/make-office-add-in-compatible-with-existing-com-add-in.md)
 - [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

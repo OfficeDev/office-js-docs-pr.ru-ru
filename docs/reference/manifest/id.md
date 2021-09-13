@@ -2,13 +2,13 @@
 title: Элемент Id в файле манифеста
 description: Элемент Id указывает уникальный ID Office надстройки в качестве GUID.
 ms.date: 10/09/2018
-localization_priority: Normal
-ms.openlocfilehash: 3df4277b19878a5fe358d1458ec69a694e5d87d0
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: a8d2fe88c8e5690622e5cf970087315d564ea0dc
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938581"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153889"
 ---
 # <a name="id-element"></a>Элемент Id
 

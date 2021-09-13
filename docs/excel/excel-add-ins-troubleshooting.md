@@ -2,13 +2,13 @@
 title: Устранение Excel надстройки
 description: Узнайте, как устранить ошибки разработки в Excel надстройки.
 ms.date: 02/12/2021
-localization_priority: Normal
-ms.openlocfilehash: b90d8cfdb4696445655122a2fa7eb74d1c87fa2f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 06ed12eb1daf8876e14806fd88f541b5b58eea16
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936284"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153918"
 ---
 # <a name="troubleshooting-excel-add-ins"></a>Устранение Excel надстройки
 
@@ -96,7 +96,7 @@ function getBindingId(eventArgs) {
 
 Методы [Worksheet.getRange(address)](/javascript/api/excel/excel.worksheet#getRange_address_) и [Worksheet.getRanges(address)](/javascript/api/excel/excel.worksheet#getRanges_address_) имеют ограничение строки адресов в 8192 символа. При превышении этого ограничения строка адресов будет усечена до 8192 символов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
-- [Устранение ошибок разработки с Office надстройки](../testing/troubleshoot-development-errors.md)
+- [Устранение ошибок разработки в надстройках Office](../testing/troubleshoot-development-errors.md)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)

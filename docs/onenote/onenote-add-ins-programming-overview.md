@@ -4,13 +4,13 @@ description: Узнайте об API OneNote JavaScript для надстрое�
 ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
-localization_priority: Priority
-ms.openlocfilehash: 8c0765fe2c56d23bcf7073f3e72e2138717e9e37
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 20f413db4025b0fe4225cd8f8e7e2f52497f6d2c
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938004"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154277"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 

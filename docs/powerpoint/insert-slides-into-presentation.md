@@ -2,13 +2,13 @@
 title: Вставка слайдов в PowerPoint презентации
 description: Узнайте, как вставить слайды из одной презентации в другую.
 ms.date: 03/07/2021
-localization_priority: Normal
-ms.openlocfilehash: d9c50b87e7ba702a2cffcef5ca94dfb0d39b1af0
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: c7dde2d2d6b1b886816bbf12122319984f4c7138
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936807"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153758"
 ---
 # <a name="insert-slides-in-a-powerpoint-presentation"></a>Вставка слайдов в PowerPoint презентации
 
@@ -108,7 +108,7 @@ async function insertSlidesDestinationFormatting() {
 
 Конечно, во время кодирования обычно не будет знать ID или код создания целевого слайда. Чаще всего надстройка будет просить пользователей выбрать целевой слайд. В следующих действиях покажите, как получить ***nnn*#** ID выбранного в настоящее время слайда и использовать его в качестве целевого слайда.
 
-1. Создайте функцию, которая получает ID выбранного в настоящее время слайда с помощью метода [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript. Ниже приведен пример. Обратите внимание, что вызов `getSelectedDataAsync` встроен в функцию возврата обещаний. Дополнительные сведения о том, почему и как это сделать, см. в Common-APIs wrap Common-APIs в функциях возврата [обещаний.](../develop/asynchronous-programming-in-office-add-ins.md#wrap-common-apis-in-promise-returning-functions)
+1. Создайте функцию, которая получает ID выбранного в настоящее время слайда с помощью [метода Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript. Ниже приведен пример. Обратите внимание, что вызов `getSelectedDataAsync` встроен в функцию возврата обещаний. Дополнительные сведения о том, почему и как это сделать, см. в Common-APIs wrap Common-APIs в функциях возврата [обещаний.](../develop/asynchronous-programming-in-office-add-ins.md#wrap-common-apis-in-promise-returning-functions)
 
  
     ```javascript

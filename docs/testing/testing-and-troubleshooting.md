@@ -2,13 +2,13 @@
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: Узнайте, как устранить ошибки пользователей в Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 1593dd5aa5ae690d4a44f1a7527dce2c6dfcbd87
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 58983f9733e5a05c3aae317f9cc707de9aee8430
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938234"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154890"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -87,6 +87,6 @@ ms.locfileid: "58938234"
 Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callback);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
-- [Устранение ошибок разработки с Office надстройки](troubleshoot-development-errors.md)
+- [Устранение ошибок разработки в надстройках Office](troubleshoot-development-errors.md)

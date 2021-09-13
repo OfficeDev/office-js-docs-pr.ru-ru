@@ -2,13 +2,13 @@
 title: Элемент авторизации в файле манифеста
 description: Указывает внешний ресурс, на который веб-приложению надстройки требуется авторизация и необходимые разрешения.
 ms.date: 08/12/2019
-localization_priority: Normal
-ms.openlocfilehash: b8d3dd31a212a7de00ff4dbf263e8593a8ec2898
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ec8b0498371793985f70877d8a79954e2d6589bc
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936733"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153725"
 ---
 # <a name="authorization-element"></a>Элемент авторизации
 

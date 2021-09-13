@@ -2,13 +2,13 @@
 title: Get and set categories
 description: Управление категориями в почтовом ящике и элементе
 ms.date: 01/14/2020
-localization_priority: Normal
-ms.openlocfilehash: f9f46d689166983083b33fb92da78469470e4d7d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 22065293ab992e74a270c45499f31646bb9ea5aa
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938966"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154193"
 ---
 # <a name="get-and-set-categories"></a>Get and set categories
 
@@ -138,7 +138,7 @@ Office.context.mailbox.item.categories.removeAsync(categoriesToRemove, function 
 });
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Outlook разрешений](understanding-outlook-add-in-permissions.md)
 - [Элемент Permissions в манифесте](../reference/manifest/permissions.md)

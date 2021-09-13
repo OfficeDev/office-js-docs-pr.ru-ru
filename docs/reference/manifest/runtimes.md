@@ -2,13 +2,13 @@
 title: Время запуска в файле манифеста
 description: Элемент Runtimes указывает время работы надстройки.
 ms.date: 05/14/2021
-localization_priority: Normal
-ms.openlocfilehash: 80336674c6d954bb9e0c6892feb41cb2f03c5859
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 955d09a4a5232aab929262f103bef69463a9de03
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936751"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154476"
 ---
 # <a name="runtimes-element"></a>Элемент Runtimes
 
@@ -39,8 +39,8 @@ ms.locfileid: "58936751"
 |:-----|:-----|:-----|
 | [Runtime](runtime.md) | Да |  Время запуска надстройки. **Важно.** В настоящее время можно определить только один `<Runtime>` элемент. |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
-- [Время выполнения](runtime.md)
+- [Runtime](runtime.md)
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](../../develop/configure-your-add-in-to-use-a-shared-runtime.md)
 - [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md)

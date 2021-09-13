@@ -2,13 +2,13 @@
 title: Просмотр или изменение места встречи в надстройке
 description: Узнайте, как просмотреть и изменить место проведения встречи в надстройке Outlook.
 ms.date: 10/31/2019
-localization_priority: Normal
-ms.openlocfilehash: 5669f656348465baabb3e684b359261024a509ca
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 02a6360d43b91cde773d767d9a9838c015d9ecd7
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937847"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154127"
 ---
 # <a name="get-or-set-the-location-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение расположения при создании встречи в Outlook
 
@@ -199,7 +199,7 @@ function write(message){
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Создание первой Outlook надстройки](../quickstarts/outlook-quickstart.md)
 - [Асинхронное программирование в случае надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)

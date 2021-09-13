@@ -2,13 +2,13 @@
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизация Excel надстройки с помощью API JavaScript.
 ms.date: 08/24/2021
-localization_priority: Normal
-ms.openlocfilehash: f65db836d6e7e640672fa5b9e6642ef8122ed5a5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 07244b67d6721c74072a95a0f35db45245cb064b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937984"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153961"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -243,7 +243,7 @@ async function run() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 * [Обработка ошибок с Excel API JavaScript](excel-add-ins-error-handling.md)

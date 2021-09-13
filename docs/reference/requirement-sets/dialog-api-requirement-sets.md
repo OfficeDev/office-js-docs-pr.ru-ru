@@ -3,13 +3,13 @@ title: Наборы обязательных элементов API диалог
 description: Дополнительные информацию о наборах требований к API диалогов.
 ms.date: 07/19/2021
 ms.prod: non-product-specific
-localization_priority: Normal
-ms.openlocfilehash: a5e0855cf6e7b7c9c3157fe24bed3610a26992ed
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 7fdef827cf47903b0b7e2872110a5a6801735bf4
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936726"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154355"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 
@@ -30,7 +30,7 @@ ms.locfileid: "58936726"
 
 |Канал | Версия | Сборка|
 |:-----|:-----|:-----|
-|Актуальный канал | 2005 или больше | 12827.20160 или больше|
+|Current Channel | 2005 или больше | 12827.20160 или больше|
 |Ежемесячный канал (корпоративный) | 2004 или более | 12730.20430 или более|
 |Полугодовой канал (корпоративный) | 2002 или больше | 12527.20720 или более|
 
@@ -49,7 +49,7 @@ ms.locfileid: "58936726"
 
 Dialog API 1.1 — это первая версия этого API. Набор требований 1.2 добавляет поддержку для отправки данных с родительской страницы в диалоговое окно [методом Office.dialog.messageChild.](/javascript/api/office/office.dialog#messageChild_message_) Подробные сведения об этих API см. в справочной теме [API](/javascript/api/office/office.ui) диалогов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Использование Office Dialog API в надстройках Office](../../develop/dialog-api-in-office-add-ins.md)
 - [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)

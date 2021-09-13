@@ -2,13 +2,13 @@
 title: Office.context — набор требований 1.8
 description: Office. Участники объектов context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.8.
 ms.date: 12/03/2020
-localization_priority: Normal
-ms.openlocfilehash: 99573d9984c571c99461e90e8bdccdca35fe30b7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 93d2c0ef2380f7744ec37c4b3a09735cda170cea
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939048"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151575"
 ---
 # <a name="context-mailbox-requirement-set-18"></a>контекст (набор требований к почтовым ящикам 1.8)
 

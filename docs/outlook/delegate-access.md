@@ -2,13 +2,13 @@
 title: Включить общие папки и сценарии общих почтовых ящиков в Outlook надстройке
 description: Обсуждается настройка поддержки надстройки для общих папок (ака). делегирования доступа) и общих почтовых ящиков.
 ms.date: 07/02/2021
-localization_priority: Normal
-ms.openlocfilehash: 55c084ba8b0c2d7d83a4e7df0acb6aa7e7abc7c1
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 65850699612e9dc48dfe7cc1aed5b00ce5b79012
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936453"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59154175"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включить общие папки и сценарии общих почтовых ящиков в Outlook надстройке
 
@@ -199,7 +199,7 @@ if (item.getSharedPropertiesAsync) {
 
 В режиме композитации сообщений [getSharedPropertiesAsync](/javascript/api/outlook/office.messagecompose#getSharedPropertiesAsync_options__callback_) не поддерживается в Outlook в Интернете или Windows, если не выполнены следующие условия.
 
-a. **Делегирование доступа и общих папок**
+а. **Делегирование доступа и общих папок**
 
 1. Владелец почтового ящика запускает сообщение. Это может быть новое сообщение, ответ или форвард.
 1. Затем сообщение сохраняется, а затем перемещается из собственной папки **Drafts** в папку, доступную делегату.
@@ -221,7 +221,7 @@ a. **Делегирование доступа и общих папок**
 
 Если администратор спрятал пользовательский или общий адрес почтового ящика из списка адресов, таких как глобальный список адресов (GAL), затронутые почтовые элементы, открытые в отчете почтовых ящиков, как `Office.context.mailbox.item` null. Например, если пользователь открывает почтовый элемент в общем почтовом ящике, скрытом от GAL, то этот элемент почты является `Office.context.mailbox.item` null.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Разрешить другим пользователям управлять почтой и календарем](https://support.microsoft.com/office/41c40c04-3bd1-4d22-963a-28eafec25926)
 - [Общий доступ к календарю в Microsoft 365](https://support.microsoft.com/office/b576ecc3-0945-4d75-85f1-5efafb8a37b4)

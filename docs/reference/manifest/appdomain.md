@@ -2,13 +2,13 @@
 title: Элемент AppDomain в файле манифеста
 description: Указывает дополнительные домены, которые используются вашей надстройки и должны доверяться Office.
 ms.date: 06/12/2020
-localization_priority: Normal
-ms.openlocfilehash: ae49944afceada559b39353cd119e26a21fd3d15
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: c17195e6d9d3f4f22465c8aa1fc626afd3eb06c4
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936306"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59153729"
 ---
 # <a name="appdomain-element"></a>Элемент AppDomain
 
