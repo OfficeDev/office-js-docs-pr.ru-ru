@@ -2,13 +2,13 @@
 title: Создание надстроек Outlook для форм чтения
 description: Надстройки чтения — это надстройки Outlook, которые активируются в области чтения или с помощью инспектора чтения в Outlook.
 ms.date: 03/19/2021
-localization_priority: Priority
-ms.openlocfilehash: f84c0d5252f2cf728397965d9414df2ee5070444
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 1bc65c64d0076a9a3b60aac3a18c950acff048d2
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938045"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151389"
 ---
 # <a name="create-outlook-add-ins-for-read-forms"></a>Создание надстроек Outlook для форм чтения
 

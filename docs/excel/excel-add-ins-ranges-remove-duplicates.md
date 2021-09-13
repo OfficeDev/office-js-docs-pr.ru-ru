@@ -3,13 +3,13 @@ title: Удаление дубликатов с Excel API JavaScript
 description: Узнайте, как использовать API Excel JavaScript для удаления дубликатов.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 03ef1c15f214fcbd6a81d0b4f557e9816175d3b7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: abb1a1b819349996d56d5e820b283713fe7f7c33
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936356"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151146"
 ---
 # <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с Excel API JavaScript
 
@@ -51,7 +51,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после запуска метода удаления дубликатов диапазона.](../images/excel-ranges-remove-duplicates-after.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

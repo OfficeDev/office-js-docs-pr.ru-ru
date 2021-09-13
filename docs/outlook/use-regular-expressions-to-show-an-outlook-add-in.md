@@ -2,13 +2,13 @@
 title: Использование правил активации на основе регулярных выражений для отображения надстройки
 description: Узнайте, как использовать правила активации на основе регулярных выражений для контекстных надстроек Outlook.
 ms.date: 07/28/2020
-localization_priority: Normal
-ms.openlocfilehash: d334ba6b2e0f044fc8d876cd6edd218743ccb390
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: f56d973ed3470b70bdfe834f9adc8a15a7623f0b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936228"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150614"
 ---
 # <a name="use-regular-expression-activation-rules-to-show-an-outlook-add-in"></a>Использование правил активации на основе регулярных выражений для отображения надстройки Outlook
 

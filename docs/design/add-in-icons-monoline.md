@@ -2,13 +2,13 @@
 title: Руководство по значкам стиля monoline для Office надстройки
 description: Рекомендации по использованию значков стилей Monoline в Office надстройки.
 ms.date: 03/30/2021
-localization_priority: Normal
-ms.openlocfilehash: 0e8bf4f39ddbad457df7d033a08836825d9e1d3f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 43048b2e32810fb1f702e58ffb8eb5d9d85bbd4b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937700"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151106"
 ---
 # <a name="monoline-style-icon-guidelines-for-office-add-ins"></a>Руководство по значкам стиля monoline для Office надстройки
 
@@ -208,7 +208,7 @@ Monoline — это стиль, в котором преобладают лин�
 
 Конечные значки должны быть сохранены .png файлами изображений. Используйте формат PNG с прозрачным фоном и 32-битной глубиной.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Элемент манифеста Icon](../reference/manifest/icon.md)
 - [Элемент манифеста IconUrl](../reference/manifest/iconurl.md)

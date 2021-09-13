@@ -2,13 +2,13 @@
 ms.date: 07/08/2021
 description: Понимание Excel пользовательских функций, которые не используют области задач и их определенное время запуска JavaScript.
 title: Время запуска для пользовательских Excel пользовательских функций
-localization_priority: Normal
-ms.openlocfilehash: 8e08f4accd33e405beb5fab618e92dd28abf2246
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 491e47674d87d99d0adeda952ee65ffc24dff2bd
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938503"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150693"
 ---
 # <a name="runtime-for-ui-less-excel-custom-functions"></a>Время запуска для пользовательских Excel пользовательских функций
 
@@ -68,11 +68,11 @@ function StoreValue(key, value) {
 
 Если надстройка использует только настраиваемые функции без пользовательского интерфейса, обратите внимание, что вы не можете получить доступ к объектной модели документа (DOM) с пользовательскими функциями без пользовательского интерфейса или использовать библиотеки, такие как jQuery, которые полагаются на DOM.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Узнайте, как [отламыть пользовательские функции без пользовательского интерфейса.](custom-functions-debugging.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Проверка подлинности пользовательских функций без пользовательского интерфейса](custom-functions-authentication.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

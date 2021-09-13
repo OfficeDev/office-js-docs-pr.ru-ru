@@ -2,13 +2,13 @@
 ms.date: 05/11/2020
 description: Возвращайте несколько результатов из настраиваемой функции в Office Excel надстройки.
 title: Возвращение нескольких результатов из настраиваемой функции
-localization_priority: Normal
-ms.openlocfilehash: b7df6b2c5ca3dca24615a61e11277ac36b42c0df
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 63a9e74d311f26a618312a3ab7f81238cad69c21
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939155"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150893"
 ---
 # <a name="return-multiple-results-from-your-custom-function"></a>Возвращение нескольких результатов из настраиваемой функции
 
@@ -63,7 +63,7 @@ function spillRectangle() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Динамические массивы и поведение разлитого массива](https://support.microsoft.com/office/205c6b06-03ba-4151-89a1-87a7eb36e531)
 - [Параметры Excel пользовательских функций](custom-functions-parameter-options.md)

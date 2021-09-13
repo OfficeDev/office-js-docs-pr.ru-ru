@@ -2,13 +2,13 @@
 title: Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)
 description: Узнайте, как осуществлять отладку надстроек Office, в которых используется Microsoft Edge WebView2 (на основе Chromium) с помощью отладчика для расширения Microsoft Edge в коде VS.
 ms.date: 08/18/2021
-localization_priority: Priority
-ms.openlocfilehash: bbb475071660415f19b9a9fe5aaee0a6d735e20c
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: high
+ms.openlocfilehash: 90c58352ef49a365cd80dd7699d23f40c800bbd6
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936400"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150610"
 ---
 # <a name="debug-add-ins-on-windows-using-edge-chromium-webview2"></a>Отладка надстроек в Windows с помощью Edge Chromium WebView2
 

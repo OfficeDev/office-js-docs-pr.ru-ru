@@ -2,13 +2,13 @@
 title: Элемент Form в файле манифеста
 description: Параметры взаимодействия с пользователем для форм, которые почтовая надстройка будет использовать при работе на определенном устройства (настольном компьютере, планшете или телефоне).
 ms.date: 04/09/2020
-localization_priority: Normal
-ms.openlocfilehash: c9cd1d9104fc51edc84149ef677c4308dfb1a9f5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ecea978cd87a9feed08ba621c9377525acaf4e3a
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938283"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151133"
 ---
 # <a name="form-element"></a>Элемент Form
 

@@ -2,13 +2,13 @@
 title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 2ac9a83511fc29eb055ebdc4d2c77f7675c68994
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 0f4ef373ee5352f012561d76fa5bc01cb391af48
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938440"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151050"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -80,7 +80,7 @@ ms.locfileid: "58938440"
     }
     ```
 
-    Дополнительные сведения об объектах JSON см. в дополнительных сведениях [о конструкторе](#construct-the-action-objects) объектов действий [и создания объектов ярлыка.](#construct-the-shortcut-objects) Полная схема для ярлыков JSON находится [вextended-manifest.schema.js.](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json)
+    Дополнительные сведения об объектах JSON см. в дополнительных сведениях [о конструкторе](#construct-the-action-objects) объектов действий [и создания объектов ярлыка.](#construct-the-shortcut-objects) Полная схема для ярлыков JSON находится в [расширенном манифесте.schema.json](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json).
 
     > [!NOTE]
     > В этой статье можно использовать "CONTROL" на месте "Ctrl".
@@ -136,7 +136,7 @@ ms.locfileid: "58938440"
 
 ### <a name="construct-the-action-objects"></a>Построение объектов действия
 
-Используйте следующие рекомендации при указании объектов в массиве `actions` shortcuts.js.
+При указании объектов в массиве `actions` ярлыков.json используйте следующие рекомендации.
 
 - Имена свойств `id` и `name` обязательны.
 - Свойство `id` используется для уникальной идентификации действия, вызываемого с помощью ярлыка клавиатуры.
@@ -160,11 +160,11 @@ ms.locfileid: "58938440"
     ]
 ```
 
-Полная схема для ярлыков JSON находится [вextended-manifest.schema.js.](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json)
+Полная схема для ярлыков JSON находится в [расширенном манифесте.schema.json](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json).
 
 ### <a name="construct-the-shortcut-objects"></a>Построение объектов ярлыка
 
-Используйте следующие рекомендации при указании объектов в массиве `shortcuts` shortcuts.js.
+При указании объектов в массиве `shortcuts` ярлыков.json используйте следующие рекомендации.
 
 - Имена свойств `action` `key` и `default` обязательно.
 - Значение свойства является строкой и должно соответствовать одному из свойств `action` `id` объекта действия.
@@ -195,7 +195,7 @@ ms.locfileid: "58938440"
     ]
 ```
 
-Полная схема для ярлыков JSON находится [вextended-manifest.schema.js.](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json)
+Полная схема для ярлыков JSON находится в [расширенном манифесте.schema.json](https://developer.microsoft.com/json-schemas/office-js/extended-manifest.schema.json).
 
 > [!NOTE]
 > Клавиши KeyTips, также известные как последовательное клавиши, такие как ярлык Excel для выбора цвета заполнения **Alt+H, H,** не поддерживаются в Office надстроек.

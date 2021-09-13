@@ -2,13 +2,13 @@
 title: Разработка надстроек Office с помощью Angular
 description: Используйте Angular для создания надстройки Office в качестве приложения для одной страницы.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: e0d30b7cb2f3d5489f5dae9e257c0cfc115a955e
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 87d63fb8cc6c78d791ca9f5f9231abf375a7b2a1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936294"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150774"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -154,7 +154,7 @@ ng serve --aot
 
 ## <a name="support-internet-explorer-if-youre-dynamically-loading-officejs"></a>Поддержка Internet Explorer при динамической загрузке Office.js
 
-На основе Windows версии и Office настольного клиента, в котором работает надстройка, надстройка может использовать Internet Explorer 11. (Дополнительные сведения см. в [браузерах, используемых Office надстройки.)](../concepts/browsers-used-by-office-web-add-ins.md) Angular зависит от нескольких API, но эти API не работают в времени запуска IE, встроенном в Windows `window.history` настольных клиентов. Если эти API не работают, надстройка может не работать должным образом, например, она может загрузить пустую области задач. Чтобы смягчить это, Office.js обнуляет эти API. Однако при динамической загрузке Office.js AngularJS может загрузиться до Office.js. В этом случае необходимо отключить API, добавив следующий код на страницу `window.history` **index.html.**
+На основе Windows версии и Office настольного клиента, в котором работает надстройка, надстройка может использовать Internet Explorer 11. (Дополнительные сведения см. в [браузерах, используемых Office надстройки.)](../concepts/browsers-used-by-office-web-add-ins.md) Angular зависит от нескольких API, но эти API не работают в времени запуска IE, встроенном в Windows `window.history` настольных клиентов. Если эти API не работают, надстройка может не работать должным образом, например, она может загрузить пустую области задач. Чтобы смягчить это, Office.js обнуляет эти API. Однако при динамической загрузке Office.js AngularJS может загрузиться до Office.js. В этом случае необходимо отключить API, добавив следующий код на страницуindex.html`window.history` надстройки. 
 
 ```js
 <script type="text/javascript">window.history.replaceState=null;window.history.pushState=null;</script>

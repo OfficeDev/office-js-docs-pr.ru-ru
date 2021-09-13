@@ -2,13 +2,13 @@
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
 ms.date: 09/03/2021
-localization_priority: Normal
-ms.openlocfilehash: ba3c0ab64ce82d68aab677baa48cdb34cce6f7e6
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: d9abb65351a0c3d4a26f06462f2a425c6a104a4a
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937265"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150706"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office на платформе Node.js с использованием единого входа
 

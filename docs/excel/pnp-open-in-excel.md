@@ -2,13 +2,13 @@
 title: Откройте Excel веб-страницы и встроите Office надстройки
 description: Откройте Excel веб-страницы и встроите Office надстройки.
 ms.date: 02/09/2021
-localization_priority: Normal
-ms.openlocfilehash: a7998d1f15f40a549f8ff9ddd9745d6bf9b8ab6d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 0ac644de03c1f3a4c382dbe151c3224afffdbc81
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938976"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150666"
 ---
 # <a name="open-excel-from-your-web-page-and-embed-your-office-add-in"></a>Откройте Excel веб-страницы и встроите Office надстройки
 
@@ -203,7 +203,7 @@ SDK OOXML основан на .NET. Если в вашем веб-приложе
 
 Чтобы упростить проверку подлинности, рекомендуется, чтобы надстройка реализовала один вход. Дополнительные сведения см. в [документе Enable single sign-on for Office надстройки](../develop/sso-in-office-add-ins.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Добро пожаловать на страницу пакета SDK 2.5 Open XML для Office](/office/open-xml/open-xml-sdk)
 - [Автоматическое открытие области задач с документом](../develop/automatically-open-a-task-pane-with-a-document.md)

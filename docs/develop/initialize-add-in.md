@@ -2,13 +2,13 @@
 title: Инициализация надстройки Office
 description: Узнайте, как инициализировать Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 0cddc4eaa99c9f1536be91d6fe2971c43344a149
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 7879edce59aa3915b2e5a0d8c1b5e1c2c5a9fd30
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936250"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151014"
 ---
 # <a name="initialize-your-office-add-in"></a>Инициализация надстройки Office
 
@@ -148,7 +148,7 @@ Office.initialize = function (reason) {
 >Office.initialize = function () {};
 >```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md)

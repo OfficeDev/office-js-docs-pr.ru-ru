@@ -2,13 +2,13 @@
 title: Работа с листами с использованием API JavaScript для Excel
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
 ms.date: 07/02/2021
-localization_priority: Normal
-ms.openlocfilehash: 2c0c046d060e9ed32d872307f27784ff8337b100
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 56bd443c6ec6921247aa8adb98932599594aa55f
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938324"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151257"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 

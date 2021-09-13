@@ -2,13 +2,13 @@
 title: Работа с фигурами с Excel API JavaScript
 description: Узнайте, Excel определяет фигуры как любой объект, который находится на уровне рисования Excel.
 ms.date: 01/14/2020
-localization_priority: Normal
-ms.openlocfilehash: 533a9cf9689bcaa5cd43635da836730a2af6ab61
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ff465f59acb272bae3b0161a96c6fb34c66927ab
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938547"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151138"
 ---
 # <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с Excel API JavaScript
 

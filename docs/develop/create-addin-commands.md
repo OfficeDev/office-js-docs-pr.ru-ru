@@ -2,13 +2,13 @@
 title: Создание команд надстроек в манифесте для Excel, PowerPoint и Word
 description: Используйте VersionOverrides в манифесте для определения команд надстройки для Excel, PowerPoint и Word. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 461e58e63be73619d46cd0552467187b7eab5071
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e71a73c6f253587968affb5e04d28cc95649b8c5
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937920"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150730"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-powerpoint-and-word"></a>Создание команд надстроек в манифесте для Excel, PowerPoint и Word
 
@@ -86,7 +86,7 @@ ms.locfileid: "58937920"
 |Элемент|Описание|
 |:-----|:-----|
 |**Описание** <br/> |Необязательный параметр. Описывает надстройку. Дочерний элемент **Description** переопределяет предыдущий элемент **Description** в родительской части манифеста. Атрибут **resid** для элемента **Description** задан как **id** элемента **String**. Элемент **String** содержит текст для элемента **Description**. <br/> |
-|**Requirements** <br/> |Необязательно. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот элемент **требования к ребенку** переопределяет элемент **Requirements** в родительской части манифеста. Дополнительные сведения см. в [Office приложениях и требованиях API.](../develop/specify-office-hosts-and-api-requirements.md)  <br/> |
+|**Requirements** <br/> |Необязательный параметр. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот элемент **требования к ребенку** переопределяет элемент **Requirements** в родительской части манифеста. Дополнительные сведения см. в [Office приложениях и требованиях API.](../develop/specify-office-hosts-and-api-requirements.md)  <br/> |
 |**Hosts** <br/> |Обязательный. Указывает коллекцию Office приложений. Дочерний элемент **Hosts** переопределяет элемент **Hosts** в родительской части манифеста. Необходимо включить атрибут **xsi:type**, для которого задано значение "Книга" или "Документ". <br/> |
 |**Resources** <br/> |Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста. Например, значение элемента **Description** ссылается на дочерний элемент в элементе **Resources**. Элемент **Resources** описан в разделе [Этап 7. Добавление элемента Resources](#step-7-add-the-resources-element) далее в этой статье. <br/> |
 

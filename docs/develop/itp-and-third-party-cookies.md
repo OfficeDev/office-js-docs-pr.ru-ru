@@ -2,13 +2,13 @@
 title: Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 description: Работа с ITP и Office надстройки при использовании сторонних файлов cookie
 ms.date: 07/8/2021
-localization_priority: Normal
-ms.openlocfilehash: 6a9452f24cb1cbd76c4f6cc3f39fab1f9310ec97
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: d8216e2945acf1b87306bb00b7fb868728a986bc
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938085"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151010"
 ---
 # <a name="develop-your-office-add-in-to-work-with-itp-when-using-third-party-cookies"></a>Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 
@@ -58,7 +58,7 @@ if (document.hasStorageAccess) {
 
 В браузере Safari конечные пользователи могут переключать контрольный ящик **Prevent cross-site tracking** under **Preference**  >  **Privacy,** чтобы отключить ITP. Однако itP нельзя отключить для встроенного управления WKWebView.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Обработка ITP в Safari и других браузерах, где сторонние файлы cookie заблокированы](/azure/active-directory/develop/reference-third-party-cookies-spas)
 - [Отслеживание предотвращения в WebKit](https://webkit.org/tracking-prevention/)

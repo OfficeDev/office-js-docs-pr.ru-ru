@@ -2,13 +2,13 @@
 title: Элемент FileName в файле манифеста
 description: Указывает имя файла эквивалентного XLL для настраиваемой функции в веб-надстройки.
 ms.date: 03/09/2021
-localization_priority: Normal
-ms.openlocfilehash: b4909767a51355f21cd180d35f693ffce86224ec
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 921d143f62a8e0289782a594d95b5f01786e9017
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937018"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151134"
 ---
 # <a name="filename-element"></a>Элемент FileName
 

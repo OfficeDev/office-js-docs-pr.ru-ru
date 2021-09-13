@@ -2,13 +2,13 @@
 title: Время запуска в файле манифеста
 description: Элемент Runtime настраивает надстройку для использования общего времени запуска JavaScript для различных компонентов, например ленты, области задач, пользовательских функций.
 ms.date: 05/19/2021
-localization_priority: Normal
-ms.openlocfilehash: cd09abe31ff57eac629c6c61c873c5c886f73f9c
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8d58cdce1520439685d868ae264d3b6fb3fe9e69
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937334"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150625"
 ---
 # <a name="runtime-element"></a>Элемент runtime
 
@@ -43,7 +43,7 @@ ms.locfileid: "58937334"
 |  **resid**  |  Да  | Указывает расположение URL-адреса страницы HTML для надстройки. Символ может быть не более 32 символов и должен соответствовать `resid` `id` атрибуту `Url` элемента `Resources` элемента. |
 |  **срок службы**  |  Нет  | Значение по умолчанию является и не нужно `lifetime` `short` задано. Outlook надстройки используют только `short` значение. Если вы хотите использовать совместное время работы в Excel надстройки, явно установите значение `long` . |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Runtimes](runtimes.md)
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](../../develop/configure-your-add-in-to-use-a-shared-runtime.md)

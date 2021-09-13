@@ -2,13 +2,13 @@
 title: Рекомендации и правила Office dialog API
 description: Предоставляет правила и лучшие практики для API Office диалогов, такие как лучшие практики для одно-страничного приложения (SPA)
 ms.date: 07/22/2021
-localization_priority: Normal
-ms.openlocfilehash: eef26157381303c67939f4ad33d2054f482bd07a
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 46d990488f635aa0918380833a4221daafcae5ce
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937031"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150694"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -29,7 +29,7 @@ ms.locfileid: "58937031"
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в [Office приложениях и требованиях API.)](specify-office-hosts-and-api-requirements.md)
 - Функция [messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_) обычно должна быть вызвана со страницы в том же домене, что и сама надстройка, но это не является обязательным. Дополнительные сведения см. в разделе [Междоменные сообщения в основной среде выполнения](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime).
 
-## <a name="best-practices"></a>Рекомендации
+## <a name="best-practices"></a>Рекомендованные методики
 
 ### <a name="avoid-overusing-dialog-boxes"></a>Избегайте чрезмерного окантовки диалогов
 

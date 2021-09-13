@@ -3,13 +3,13 @@ title: Создание надстройки Outlook для поставщика
 description: Обсуждается настройка мобильной надстройки Outlook для поставщика услуг онлайн-собраний.
 ms.topic: article
 ms.date: 07/09/2021
-localization_priority: Normal
-ms.openlocfilehash: 34574809e2b874217113e42043b3bde7ef0dd8ba
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 339763294e2e3609a1a503cd59d74eb4af4fefb3
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936459"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150657"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
@@ -263,7 +263,7 @@ ms.locfileid: "58936459"
 - Только одна команда без пользовательского интерфейса поддерживается в режиме Организатор встречи (составить).
 - Надстройка должна обновить сведения о собрании в форме встречи в течение одного минутного периода рас растор между встречами. Однако любое время, проведенное в диалоговом окне, надстройка, открытая для проверки подлинности и т. д., исключается из периода ожидания.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Надстройки для Outlook Mobile](outlook-mobile-addins.md)
 - [Добавление поддержки команд надстройки для Outlook Mobile](add-mobile-support.md)

@@ -2,13 +2,13 @@
 title: 'Ссылки на библиотеку API JavaScript для Office '
 description: Узнайте, как ссылаться на Office API JavaScript и определения типов в надстройки.
 ms.date: 02/18/2021
-localization_priority: Normal
-ms.openlocfilehash: 04f97412c07cb39f5b2f753c3ce14e56e87c3de5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 134b3de88218101761c3f25c897ea67c2eb3d68c
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938636"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150954"
 ---
 # <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 
@@ -49,7 +49,7 @@ npm install --save-dev @types/office-js
 
 [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis-host.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [API JavaScript для Office](../reference/javascript-api-for-office.md)

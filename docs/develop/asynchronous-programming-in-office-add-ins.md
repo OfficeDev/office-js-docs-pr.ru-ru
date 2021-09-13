@@ -2,13 +2,13 @@
 title: Асинхронное программирование в случае надстроек Office
 description: Узнайте, как Office JavaScript использует асинхронное программирование в Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 6408d1efc99f38468b371247156d84f1a4ac4b99
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ec5e714a617bdc637c34e5168e65aa11e950700a
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937431"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150749"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в надстройках для Office
 
@@ -395,7 +395,7 @@ readDocumentFileAsync(): Promise<any> {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [API JavaScript для Office](../reference/javascript-api-for-office.md)

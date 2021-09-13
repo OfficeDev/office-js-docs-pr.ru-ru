@@ -2,13 +2,13 @@
 title: Сохранение состояния и параметров надстройки
 description: Узнайте, как сохранять данные Office веб-приложениях надстройки, работающих в среде без состояния управления браузером.
 ms.date: 03/23/2021
-localization_priority: Normal
-ms.openlocfilehash: a1730826fafb840bc6ae69c5c1e95c54ccc0f2f7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 86ad6240df76c1f314072b381f51fe0bd54889b2
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938375"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150973"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -180,7 +180,7 @@ function getReviewers() {
 
 Сведения о том, как сохранить параметры в Outlook надстройки, см. в статью Управление состоянием и [Outlook надстройки.](../outlook/manage-state-and-settings-outlook.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Надстройки Outlook](../outlook/outlook-add-ins-overview.md)

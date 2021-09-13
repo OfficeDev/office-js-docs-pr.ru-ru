@@ -3,13 +3,13 @@ title: Диапазоны групп с Excel API JavaScript
 description: Узнайте, как сгруппить строки или столбцы диапазона вместе, чтобы создать контур с Excel API JavaScript.
 ms.date: 04/05/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 41a5bad5013378257287602d5131f1ac07130cf7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 9ec3f9e23f5099c703fbbf53fdc6fbb800acba6d
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938517"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150866"
 ---
 # <a name="group-ranges-for-an-outline-using-the-excel-javascript-api"></a>Диапазоны групп для контура с Excel API JavaScript
 
@@ -55,7 +55,7 @@ Excel.run(function (context) {
 
 Чтобы разгруппировать строку или группу столбцов, используйте [метод Range.ungroup.](/javascript/api/excel/excel.range#ungroup_groupOption_) Это удаляет внешний уровень из контура. Если несколько групп одного и того же типа строки или столбца находятся на одном уровне в указанном диапазоне, все эти группы негруппировываются.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

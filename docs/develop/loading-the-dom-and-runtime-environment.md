@@ -2,13 +2,13 @@
 title: Загрузка модели DOM и среды выполнения
 description: Загрузите среду времени Office dom и Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 26ff15eb009fbec2554fa74db3109c4fa4abd712
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: db6b8667678e6a38c0932faf66fc2b0b63cc7a9b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936253"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150993"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -58,7 +58,7 @@ ms.locfileid: "58936253"
 
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Инициализация надстройки Office](initialize-add-in.md)

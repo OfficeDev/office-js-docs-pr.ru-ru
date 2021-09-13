@@ -2,13 +2,13 @@
 title: Отображение и скрытие области задач надстройки Office
 description: Узнайте, как программным образом скрыть или показать пользовательский интерфейс надстройки во время ее непрерывного работы.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: b2f0efa95f4ce71fc73d9834cfc165cfdd85dc8f
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: eb540b9b39870a02343e5a42fdbe3cc9cbd78f01
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939288"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150941"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
@@ -113,7 +113,7 @@ await removeVisibilityModeHandler();
 // subsequent code here
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md)
 - [Запуск кода в надстройке Office при открытии документа](run-code-on-document-open.md)

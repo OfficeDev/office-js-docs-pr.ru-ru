@@ -2,13 +2,13 @@
 title: Добавление и удаление слайдов в PowerPoint
 description: Узнайте, как добавлять и удалять слайды и указать мастер и макет новых слайдов.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 7fbfd24da7bf552adfe96437187ae0128c513574
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 26999ed770fa8fde8766a2accb7ec9eb791fb3d4
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939373"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151365"
 ---
 # <a name="add-and-delete-slides-in-powerpoint"></a>Добавление и удаление слайдов в PowerPoint
 
@@ -69,7 +69,7 @@ async function addSlide() {
 
 1. Создайте метод, чтобы получить индекс выбранного слайда. Ниже приведен пример. Вот что нужно знать об этом коде:
 
-    - Он использует метод [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript.
+    - Он использует [метод Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript.
     - Вызов встроен `getSelectedDataAsync` в функцию возврата обещаний. Дополнительные сведения о том, почему и как это сделать, см. в этой ссылке [Wrap Common API в функциях возврата обещаний.](../develop/asynchronous-programming-in-office-add-ins.md#wrap-common-apis-in-promise-returning-functions)
     - `getSelectedDataAsync` возвращает массив, так как можно выбрать несколько слайдов. В этом сценарии пользователь выбрал только один, поэтому код получает первый (0-й) слайд, который является единственным выбранным.
     - Значение `index` слайда — это 1-основанное значение, что пользователь видит рядом со слайдом в области эскизов.

@@ -2,13 +2,13 @@
 title: Авторизация в Microsoft Graph с помощью единого входа
 description: Узнайте, как пользователи Office надстройки могут использовать один вход (SSO) для получения данных из Microsoft Graph.
 ms.date: 07/27/2021
-localization_priority: Normal
-ms.openlocfilehash: e8e2946b6e6bc1cd49d18453065b52758d099a25
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1416a30088197b83e7b1095b325615c3ac6a5dc2
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936312"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150741"
 ---
 # <a name="authorize-to-microsoft-graph-with-sso"></a>Авторизация в Microsoft Graph с помощью единого входа
 

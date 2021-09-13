@@ -2,13 +2,13 @@
 title: Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
 ms.date: 08/03/2021
-localization_priority: Normal
-ms.openlocfilehash: bb842c60beb329571ce3dc7f055cc1d9d606209b
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e84bce51e0233f7186b22e6571ec3968ea8d8ed5
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937092"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150986"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -119,6 +119,6 @@ ms.locfileid: "58937092"
 
 Если надстройка com/VSTO отключена во время последующего сеанса Outlook, веб-надстройка, скорее всего, будет отключена до Outlook перезапуска.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Совместите пользовательские функции с определенными функциями пользователя XLL](../excel/make-custom-functions-compatible-with-xll-udf.md)

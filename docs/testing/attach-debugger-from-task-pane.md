@@ -2,13 +2,13 @@
 title: Подключение отладчика из области задач
 description: Узнайте, как прикрепить отладку из области задач
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 930c5db7a9e1a0499a759d70e0bc94e64c5b7ae5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ea4aab7422edac4903da593c414c3086233d14bb
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936965"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150825"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 

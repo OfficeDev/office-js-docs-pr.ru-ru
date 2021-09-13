@@ -2,13 +2,13 @@
 title: Локализация надстроек для Office
 description: Используйте API Office JavaScript для определения локального кода и отображения строк на основе Office приложения, а также для интерпретации или отображения данных на основе локального кода данных.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 8f23e124cd930f6a3c7c1cd6e0f7a3f24156ccd1
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 74d2338293a392fd0397b65008daf12159ef61ca
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937320"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150990"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек для Office
 

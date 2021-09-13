@@ -2,13 +2,13 @@
 title: Использование движения в надстройках Office
 description: Получите лучшие практики для использования переходов, движения или анимации в Office надстройки.
 ms.date: 05/12/2021
-localization_priority: Normal
-ms.openlocfilehash: 94b421a04d4dc91aa7ab97abd8569e0b590786ae
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 3c0b9af5c11c6b2363b6198fc0ebeaf4cb524820
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937034"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151029"
 ---
 # <a name="using-motion-in-office-add-ins"></a>Использование движения в надстройках Office
 
@@ -60,7 +60,7 @@ ms.locfileid: "58937034"
 
 ![GIF, отображающий загрузку плитки с помощью мягкого увядания рядом с GIF, отображающий загрузку плиток с отскоком.](../images/add-in-motion-character.gif)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Fluent Рекомендации по анимации пользовательского интерфейса](https://developer.microsoft.com/fluentui#/styles/web/motion)
 * [Движение для приложений универсальной платформы Windows](/windows/uwp/design/motion)

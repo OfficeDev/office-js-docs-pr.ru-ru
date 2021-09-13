@@ -2,13 +2,13 @@
 title: Настройка среды разработки
 description: Настройка среды разработчика для создания Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: efc89b728117e2888cdebd2c5a132047fe662915
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 71982a51e4941cb90a488f317cf6f771ccf5b005
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937381"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150853"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -57,7 +57,7 @@ npm -v
 - [Atom](https://atom.io);
 - [Webstorm](https://www.jetbrains.com/webstorm).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Попробуйте создать собственную надстройку или использовать Script Lab, чтобы попробовать встроенные образцы.
 

@@ -2,13 +2,13 @@
 title: Fluent UI React в надстройках Office
 description: Узнайте, как использовать Fluent интерфейс React в Office надстройки.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 8018c27a50aa4aca96aae5fd8fb2b62261a694a0
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 3989430c2c73881c9374c078b39d314d9f9705bb
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937430"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150782"
 ---
 # <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование Fluent интерфейса React в Office надстройки
 
@@ -174,7 +174,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 Поздравляем, вы успешно создали надстройку области задач с помощью React и Fluent пользовательского интерфейса React!
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Word Add-in GettingStartedFabricReact](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
 - [Fabric Core в надстройках Office](fabric-core.md)

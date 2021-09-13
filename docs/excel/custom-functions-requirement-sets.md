@@ -3,13 +3,13 @@ title: Наборы настраиваемой функции
 description: Сведения о наборах пользовательских функций для Excel API JavaScript.
 ms.date: 09/14/2020
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 0860dd2d1b55376a85eadf04898d288d83b0205d
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 0d29d56bb41d44ed8553e97c583e41510e83c132
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938309"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151149"
 ---
 # <a name="custom-functions-requirement-sets"></a>Наборы настраиваемой функции
 
@@ -28,7 +28,7 @@ ms.locfileid: "58938309"
 
 CustomFunctionsRuntime 1.1 — это первая версия API. Набор требований 1.2 добавляет объект `CustomFunctions.Error` для поддержки обработки ошибок. Набор требований 1.3 добавляет [поддержку потоковой передачи XLL](make-custom-functions-compatible-with-xll-udf.md#custom-function-behavior-for-xll-compatible-functions) и новые параметры в `ErrorCode` объект [CustomFunctions.Error.](/javascript/api/custom-functions-runtime/customfunctions.error) 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Справочная документация по настраиваемой функции](/javascript/api/custom-functions-runtime)
 - [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md)

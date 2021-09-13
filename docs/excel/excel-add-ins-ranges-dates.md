@@ -3,13 +3,13 @@ title: Работа с датами с Excel API JavaScript
 description: Используйте подключаемый Moment-MSDate с API Excel JavaScript для работы с датами.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 82dd7bb957834efc17c0174e3b89fd526610a08a
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 4e09badf3bf6f848f96fc9e5864f383f781ef63f
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939355"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150869"
 ---
 # <a name="work-with-dates-using-the-excel-javascript-api-and-the-moment-msdate-plug-in"></a>Работа с датами с Excel API JavaScript и Moment-MSDate плагина
 
@@ -66,7 +66,7 @@ Excel.run(function (context) {
 Надстройка должна отформатирование диапазонов для отображения дат в более понятной для человека форме. Например, `"[$-409]m/d/yy h:mm AM/PM;@"` отображает "12/3/18 3:57 PM". Дополнительные сведения о форматах дат и номеров времени см. в статье "Рекомендации по датам и форматам времени" в руководстве По обзору для настройки статьи [формата](https://support.microsoft.com/office/c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5) номеров.
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)

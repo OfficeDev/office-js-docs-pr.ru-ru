@@ -2,13 +2,13 @@
 title: Конфиденциальность и безопасность надстроек Office
 description: Узнайте об аспектах конфиденциальности и безопасности платформы Office надстройки.
 ms.date: 03/19/2021
-localization_priority: Normal
-ms.openlocfilehash: 1972fa8de2c6a6f42a003efe99be7694290ee06c
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 610fe2d430a88b99a0bc7251ddeb29b1d805ac2b
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937062"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150817"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 

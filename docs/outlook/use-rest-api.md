@@ -2,13 +2,13 @@
 title: Использование REST API Outlook из надстройки Outlook
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
 ms.date: 07/06/2021
-localization_priority: Normal
-ms.openlocfilehash: e7ed6c1c21d90ac058e2dce1eb0856aad02845aa
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: fd34e40a35d7a0cc190265587fec6bf8dd60593c
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936758"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150613"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 

@@ -3,13 +3,13 @@ title: Диапазоны вырезать, скопировать и вклеи
 description: Узнайте, как вырезать, скопировать и вклеить диапазоны с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: a48d726e517899249652d857d9e79d2201f3bfc3
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 3f8d7842eb9b35b293f1ae56c4d444834d1cf672
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937147"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150873"
 ---
 # <a name="cut-copy-and-paste-ranges-using-the-excel-javascript-api"></a>Диапазоны вырезать, скопировать и вклеить с Excel API JavaScript
 
@@ -95,7 +95,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

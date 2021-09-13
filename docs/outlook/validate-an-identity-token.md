@@ -2,13 +2,13 @@
 title: Проверка маркера удостоверения надстройки Outlook
 description: Надстройка Outlook может отправить вам маркер удостоверения пользователя Exchange, но прежде чем обращаться с запросом как с доверенным, нужно проверить, поступил ли маркер с ожидаемого сервера Exchange Server.
 ms.date: 07/07/2020
-localization_priority: Normal
-ms.openlocfilehash: ba499fa2ece03a326eabb1a48bb19e33c3feea94
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 2b11cae1d773ea17b5e1dc06dcc57097d474162d
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938934"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150858"
 ---
 # <a name="validate-an-exchange-identity-token"></a>Проверка маркера удостоверения Exchange
 

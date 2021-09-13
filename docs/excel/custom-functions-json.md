@@ -2,13 +2,13 @@
 title: Вручную создайте метаданные JSON для пользовательских функций в Excel
 description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
 ms.date: 08/06/2021
-localization_priority: Normal
-ms.openlocfilehash: 78a14d591276ad7fcc2cca47df0f5e540d7bad91
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8f88506cd26edf130ac5d9e06351d4fb0d711806
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936399"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151269"
 ---
 # <a name="manually-create-json-metadata-for-custom-functions"></a>Вручную создайте метаданные JSON для пользовательских функций
 
@@ -272,11 +272,11 @@ CustomFunctions.associate("ADD", add);
 }
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Узнайте о [лучших методах](custom-functions-naming.md) для именования функции или узнайте, как локализовать функцию с помощью описанного ранее рукописного метода JSON. [](custom-functions-localize.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 - [Параметры настраиваемой функции](custom-functions-parameter-options.md)

@@ -3,13 +3,13 @@ title: Работа с прецедентами формул и зависимы
 description: Узнайте, как использовать API Excel JavaScript для получения прецедентов формул и зависимых.
 ms.date: 07/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: defab38c2096fa00051d5246d734e0bae592f46b
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 4f7339a2d838e93faf6045651e3cb39a244b4aa7
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937229"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151150"
 ---
 # <a name="get-formula-precedents-and-dependents-using-the-excel-javascript-api"></a>Получите прецеденты формул и иждивенцев с Excel API JavaScript
 
@@ -89,7 +89,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

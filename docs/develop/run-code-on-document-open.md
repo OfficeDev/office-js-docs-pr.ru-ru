@@ -2,13 +2,13 @@
 title: Запуск кода в надстройке Office при открытии документа
 description: Узнайте, как запускать код Office надстройки при запуске документа.
 ms.date: 12/28/2020
-localization_priority: Normal
-ms.openlocfilehash: 1655c053a4fa6f92aae95f2155991fa4f7f7a5a7
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: ce550284a10a9410978402f087c2caf231a5917f
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939284"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150942"
 ---
 # <a name="run-code-in-your-office-add-in-when-the-document-opens"></a>Запуск кода в надстройке Office при открытии документа
 
@@ -103,7 +103,7 @@ async function onChange(event) {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md)
 - [Обмениваться данными и событиями между Excel пользовательскими функциями и учебником по области задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)

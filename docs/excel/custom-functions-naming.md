@@ -2,13 +2,13 @@
 title: Рекомендации по найму пользовательских функций в Excel
 description: Узнайте требования к именам Excel настраиваемые функции и избежать распространенных ошибок именования.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: bfc850fb2a40e7736006930c63489ec7e0c9912b
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 09216a2a98f6c37b17a413042804946bff4e6caa
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938343"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151263"
 ---
 # <a name="custom-functions-naming-guidelines"></a>Правила именования пользовательских функций
 
@@ -43,7 +43,7 @@ Excel использует верхние буквы для встроенных
 
 Чтобы устранить конфликт имен, измените надстройку и `name` снова попробуйте функцию. Можно также удалить надстройку с противоречивым именем. Или, если вы тестируете надстройки в разных средах, попробуйте использовать другое пространство имен для дифференцировать функцию `NAMESPACE_NAMEOFFUNCTION` (например).
 
-## <a name="best-practices"></a>Рекомендации
+## <a name="best-practices"></a>Рекомендованные методики
 
 - Следует добавить несколько аргументов в функцию, а не создавать несколько функций с одинаковыми или похожими именами.
 - Избегайте двусмысленных сокращений в именах функций. Ясность важнее краткости. Выберите имя, `=INCREASETIME` как, а не `=INC` .
@@ -59,11 +59,11 @@ Excel использует верхние буквы для встроенных
 
 Полные сведения о локализации см. в тексте [Локализовать настраиваемые функции](custom-functions-localize.md)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Узнайте о [лучших практиках обработки ошибок.](custom-functions-errors.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Вручную создайте метаданные JSON для пользовательских функций](custom-functions-json.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

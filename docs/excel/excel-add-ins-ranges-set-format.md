@@ -3,13 +3,13 @@ title: Установите формат диапазона с помощью AP
 description: Узнайте, как использовать Excel API JavaScript для набора формата диапазона.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: a09d3b4d79584e186c0be37d4a30954c4d4d0086
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 1a380a64c76709e423be2d5c529a6e35cd44a5d1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937775"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151141"
 ---
 # <a name="set-range-format-using-the-excel-javascript-api"></a>Настройка формата диапазона с Excel API JavaScript
 
@@ -70,7 +70,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после набора формата номеров.](../images/excel-ranges-format-numbers.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

@@ -2,13 +2,13 @@
 title: Элемент QueryUri в файле манифеста
 description: Элемент QueryUri указывает URL-адрес конечной точки для службы запросов словаря.
 ms.date: 03/19/2019
-localization_priority: Normal
-ms.openlocfilehash: 60584efa618f715407c793b118509c0549b4dbcc
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e50d839acf7431f0a07dc3dd2362123f38a9c911
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937327"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151330"
 ---
 # <a name="queryuri-element"></a>Элемент QueryUri
 

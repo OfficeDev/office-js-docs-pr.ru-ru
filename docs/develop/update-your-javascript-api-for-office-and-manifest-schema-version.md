@@ -2,13 +2,13 @@
 title: Обновление до последней Office библиотеки API JavaScript и схемы манифеста надстройки версии 1.1
 description: Обновление до версии 1.1 файлов JavaScript (Office.js и JS-файлов приложения) и файла проверки манифеста надстройки в проекте надстройки Office.
 ms.date: 10/11/2019
-localization_priority: Normal
-ms.openlocfilehash: b0536b4b55accd99e002e26c467572330ba72ae2
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 2c5672f1b650c7ae6950f8669d831b5db4ac9fcf
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58939092"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150909"
 ---
 # <a name="update-to-the-latest-office-javascript-api-library-and-version-11-add-in-manifest-schema"></a>Обновление до последней Office библиотеки API JavaScript и схемы манифеста надстройки версии 1.1
 
@@ -120,7 +120,7 @@ ms.locfileid: "58939092"
 > [!NOTE]
 > После обновления версии схемы манифеста надстройки до 1.1 необходимо удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](../reference/manifest/hosts.md) и [Host](../reference/manifest/host.md) или элементами Requirements [and Requirements](specify-office-hosts-and-api-requirements.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Укажите Office приложения и требования к API](specify-office-hosts-and-api-requirements.md) ]
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)

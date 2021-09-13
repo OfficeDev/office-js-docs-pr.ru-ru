@@ -3,13 +3,13 @@ title: Чтение или написание в больших диапазон
 description: Узнайте, как читать или писать в больших диапазонах с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: b7a1e54d6b516889884f777bd256df8fb663c794
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 4b0398c043ba7cfc4933efe600f89281c988bbb1
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937969"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150861"
 ---
 # <a name="read-or-write-to-a-large-range-using-the-excel-javascript-api"></a>Чтение или написание в большом диапазоне с Excel API JavaScript
 
@@ -25,7 +25,7 @@ ms.locfileid: "58937969"
 
 В диапазонах может применяться форматирование к отдельным ячейкам на основе условий. Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

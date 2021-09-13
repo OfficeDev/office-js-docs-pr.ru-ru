@@ -2,13 +2,13 @@
 title: Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 description: Пошаговая руководство по созданию (или преобразованию) надстройки Office с ASP.NET для использования единого входного знака (SSO).
 ms.date: 09/03/2021
-localization_priority: Normal
-ms.openlocfilehash: 685e482c3c714f6831ea827e4a65b2ac057bddec
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 99471b78100c2627186ceb8f1c93afce5a19d396
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937946"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150709"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 

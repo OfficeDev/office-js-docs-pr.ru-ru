@@ -3,13 +3,13 @@ title: Вставьте диапазоны с Excel API JavaScript
 description: Узнайте, как вставить ряд ячеек с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
-localization_priority: Normal
-ms.openlocfilehash: 0571e7d6140f5023008654a1e74d7abf6b3cab0a
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: e14aeb030e01dbf170d3acc1edd4952b4989a557
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937977"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150862"
 ---
 # <a name="insert-a-range-of-cells-using-the-excel-javascript-api"></a>Вставьте диапазон ячеек с Excel API JavaScript
 
@@ -40,7 +40,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после вставки диапазона.](../images/excel-ranges-after-insert.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

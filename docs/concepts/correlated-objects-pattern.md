@@ -2,13 +2,13 @@
 title: Избегайте использования метода context.sync в циклах
 description: Узнайте, как использовать раздельный цикл и сопоставленные шаблоны объектов, чтобы не вызывать context.sync в цикле.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 85230378f40be06c7f3385f5dde88ecaba503cb5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 3a8e726eccb88e7df47d4a881bc9bb724c265bed
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938126"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150818"
 ---
 # <a name="avoid-using-the-contextsync-method-in-loops"></a>Избегайте использования метода context.sync в циклах
 
@@ -220,7 +220,7 @@ Word.run(async (context) => {
 
 - В очень простом примере для Excel, использующих циклы, см. принятый ответ на этот вопрос о переполнении стека: возможно ли стоять в очереди несколько `Array.forEach` [context.load перед context.sync?](https://stackoverflow.com/questions/44459604/is-it-possible-to-queue-more-than-one-context-load-before-context-sync)
 - Простой пример для Word, которое использует циклы и не использует синтаксис, см. в принятом ответе на этот вопрос Переполнение стека: Итерирование всех абзацев с управлением контентом с Office `Array.forEach` `async` / `await` [API JavaScript](https://stackoverflow.com/questions/58422113/iterating-over-all-paragraphs-with-content-controls-with-office-javascript-api).
-- Пример Word, который написан в TypeScript, см. в примере Word [Add-in Angular2 Style Checker](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker), особенно файлword.doc[ ument.service.ts](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/services/word-document/word.document.service.ts). Он имеет смесь `for` и `Array.forEach` циклы.
+- Пример word, который написан в TypeScript, см. в примере Word [Add-in Angular2 Style Checker](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker), особенно файл [word.document.service.ts](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/services/word-document/word.document.service.ts). Он имеет смесь `for` и `Array.forEach` циклы.
 - Для продвинутого примера Word [импортировать этот gist](https://gist.github.com/9c5a803e52480ec7f00bb3224292e0ab) в средство [Script Lab.](../overview/explore-with-script-lab.md) Для контекста с помощью gist см. принятый ответ на вопрос Stack Overflow Document, который не синхронизируется [после замены текста.](https://stackoverflow.com/questions/48227941/document-not-in-sync-after-replace-text) В этом примере создается настраиваемый тип объекта, который имеет три свойства. Для построения массива коррелирующих объектов используется в общей сложности три цикла и еще два цикла для окончательной обработки. Существует сочетание циклов `for` `Array.forEach` и циклов.
 - Хотя не является строго примером шаблонов раздельного цикла или соотносимых объектов, существует расширенный пример Excel, который показывает, как преобразовать набор значений ячейки в другие валюты с помощью одного . `context.sync` Чтобы попробовать его, откройте [Script Lab и](../overview/explore-with-script-lab.md) перейдите к примеру **конвертера** валюты.
 

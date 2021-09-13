@@ -2,13 +2,13 @@
 title: Использование Office Dialog API в вашей надстройках Office
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 09/03/2021
-localization_priority: Normal
-ms.openlocfilehash: 8b45aa0da3a92dd8387c316213698a5e040f05f5
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 02239437c12e44708e870540c95f1333e78351f9
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936510"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151025"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -288,7 +288,7 @@ function sheetPropertiesChanged() {
 
 ### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработать диалоговое окно DialogParentMessageReceived
 
-В диалоговом окне JavaScript зарегистрируйте обработчиватель события методом `DialogParentMessageReceived` [UI.addHandlerAsync.](/javascript/api/office/office.ui#addHandlerAsync_eventType__handler__options__callback_) Обычно это делается в [методах Office.onReady или Office.initialize,](initialize-add-in.md)как показано в следующем. (Более надежный пример ниже.)
+В диалоговом окне JavaScript зарегистрируйте обработчиватель события методом `DialogParentMessageReceived` [UI.addHandlerAsync.](/javascript/api/office/office.ui#addHandlerAsync_eventType__handler__options__callback_) Обычно это делается в [методах Office.onReady или Office.initialize,](initialize-add-in.md)как показано ниже. (Более надежный пример ниже.)
 
 ```javascript
 Office.onReady()
@@ -368,7 +368,7 @@ function onMessageFromParent(arg) {
 }
 ```
 
-Например, код может использовать [методы Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство можно проверить в обработнике с этим списком.
+Например, в коде можно [использовать методы Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство можно проверить в обработнике с этим списком.
 
 > [!TIP]
 > Параметр был добавлен в метод в качестве обязательного параметра `DialogMessageOptions` `messageChild` в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром **реестра:HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте файл с расширением, сохраните его на Windows, а затем дважды щелкните `.reg` его, чтобы запустить его. Ниже приводится пример содержимого такого файла.

@@ -1,9 +1,9 @@
-Доступ к библиотеке API JavaScript для Office можно получить через сеть доставки содержимого (CDN) Office JS по адресу `https://appsforoffice.microsoft.com/lib/1/hosted/Office.js`. Чтобы использовать API JavaScript для Office на любой из веб-страниц надстройки, требуется указать ссылку на CDN в теге `<script>` тега `<head>` страницы.
+Доступ к библиотеке API JavaScript для Office можно получить через сеть доставки содержимого (CDN) Office JS по адресу `https://appsforoffice.microsoft.com/lib/1/hosted/office.js`. Чтобы использовать API JavaScript для Office на любой из веб-страниц надстройки, требуется указать ссылку на CDN в теге `<script>` тега `<head>` страницы.
 
 ```html
 <head>
     ...
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 </head>
 ```
 

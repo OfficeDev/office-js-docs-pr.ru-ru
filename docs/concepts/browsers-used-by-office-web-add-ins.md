@@ -2,13 +2,13 @@
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/09/2021
-localization_priority: Normal
-ms.openlocfilehash: bda86e8bb7aacf72fbe26e86b7f062f362adbdd3
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: fe1cdcf0cfc9edcd182ca0c47e1dd200262da5bf
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936648"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150821"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 

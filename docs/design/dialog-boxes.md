@@ -2,13 +2,13 @@
 title: Диалоговые окна в надстройках Office
 description: Узнайте о лучших практиках визуального оформления диалогов в Office надстройки.
 ms.date: 03/19/2019
-localization_priority: Normal
-ms.openlocfilehash: d674b747effa57b8a75b79f98f5ff78ccc8a92a4
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 6e3dff8249e7d198712c0058f9876aa4806c7e08
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938363"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151062"
 ---
 # <a name="dialog-boxes-in-office-add-ins"></a>Диалоговые окна в надстройках Office
 

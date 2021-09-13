@@ -2,13 +2,13 @@
 title: Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 description: Используйте API Office JavaScript для создания области задач в Office 2013 г.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 356880c0f4bb4377f2d5997217f26f51dd95f845
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 8af93e7cd0ba527c72a4e6e721e30fb9739dda6a
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936826"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150937"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
@@ -20,7 +20,7 @@ ms.locfileid: "58936826"
 
 2. **Объект Document.** Большей частью API, доступной для контентных надстроек и надстроек области задач, можно воспользоваться с помощью методов, свойств и событий объекта [Document](/javascript/api/office/office.document). Контентная надстройка или надстройка области задач может использовать свойство [Office.context.document](/javascript/api/office/office.context#document) для доступа к объекту **Document** и с его помощью получать доступ к ключевым компонентам API для работы с данными в документах, например к объектам [Bindings](/javascript/api/office/office.bindings) и [CustomXmlParts](/javascript/api/office/office.customxmlparts) и методам [getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_), [setSelectedDataAsync](/javascript/api/office/office.document#setSelectedDataAsync_data__options__callback_)и [getFileAsync](/javascript/api/office/office.document#getFileAsync_fileType__options__callback_). Объект также предоставляет свойство mode для определения, является ли документ только для чтения или в режиме редактирования, url-адрес для получения URL-адреса текущего документа и доступа к объекту `Document` Параметры. [](/javascript/api/office/office.document#mode) [](/javascript/api/office/office.document#url) [](/javascript/api/office/office.settings) Объект также поддерживает добавление обработчиков событий для события `Document` [SelectionChanged,](/javascript/api/office/office.documentselectionchangedeventargs) чтобы можно было определить, когда пользователь меняет свой выбор в документе.
 
-   Надстройка содержимого или области задач может получить доступ к объекту только после загрузки среды dom и времени работы, как правило, в обработчике событий для событияOffice.ini`Document` [tialize.](/javascript/api/office) Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
+   Надстройка содержимого или области задач может получить доступ к объекту только после загрузки среды DOM и среды времени работы, как правило, в обработчике событий для `Document` [события Office.initialize.](/javascript/api/office) Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
 
 3. **Объекты для работы с конкретными функциями.** Для работы с определенными функциями API используйте следующие объекты и методы.
 

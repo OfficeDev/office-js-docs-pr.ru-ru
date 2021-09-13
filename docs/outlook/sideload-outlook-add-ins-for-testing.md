@@ -2,13 +2,13 @@
 title: Загрузка неопубликованных надстроек Outlook для тестирования
 description: Используйте загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
 ms.date: 05/13/2021
-localization_priority: Normal
-ms.openlocfilehash: 47eb5da19f858b6e30339acc59da24a818fc0959
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: a9ea360d58849afeaceb0258f97c7cbf4458e889
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937264"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151384"
 ---
 # <a name="sideload-outlook-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Outlook для тестирования
 

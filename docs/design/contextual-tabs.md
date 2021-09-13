@@ -2,13 +2,13 @@
 title: Создание настраиваемой контекстной вкладки Office надстроек
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 09/02/2021
-localization_priority: Normal
-ms.openlocfilehash: 3efcc29ea78d7dd528734e2c67a14cd65e3c0875
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 4e4487594af231558cc72c875da716645ac1ace7
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58937094"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59151077"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки Office надстроек
 
@@ -65,7 +65,7 @@ ms.locfileid: "58937094"
 > [!NOTE]
 > Структура свойств и свойств BLOB JSON (и имен ключей) примерно параллельна структуре элемента [CustomTab](../reference/manifest/customtab.md) и его элементов потомка в манифесте XML.
 
-Мы пошаговую соберем пример контекстных вкладок JSON blob. Полная схема контекстной вкладки JSON находится [dynamic-ribbon.schema.js.](https://developer.microsoft.com/json-schemas/office-js/dynamic-ribbon.schema.json) Если вы работаете в Visual Studio Code, вы можете использовать этот файл для получения IntelliSense и проверки JSON. Дополнительные сведения см. в [статью Редактирование JSON с Visual Studio Code - схемы и параметры JSON](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings).
+Мы пошаговую соберем пример контекстных вкладок JSON blob. Полная схема контекстной вкладки JSON находится на [динамической ленте.schema.json](https://developer.microsoft.com/json-schemas/office-js/dynamic-ribbon.schema.json). Если вы работаете в Visual Studio Code, вы можете использовать этот файл для получения IntelliSense и проверки JSON. Дополнительные сведения см. в [статью Редактирование JSON с Visual Studio Code - схемы и параметры JSON](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings).
 
 1. Начните с создания строки JSON с двумя свойствами массива с `actions` именем и `tabs` . Массив — это спецификация всех функций, которые можно выполнять с помощью `actions` элементов управления на контекстной вкладке. Массив определяет одну или несколько контекстных вкладок, не более `tabs` *20*.
 

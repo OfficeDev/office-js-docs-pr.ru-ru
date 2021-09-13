@@ -2,13 +2,13 @@
 title: Отладка пользовательских функций без пользовательского интерфейса
 description: Узнайте, как отлаготку Excel пользовательских функций, не используюх области задач.
 ms.date: 07/08/2021
-localization_priority: Normal
-ms.openlocfilehash: 1ee0e6e88b3ada88749278740d68f76c4a7368f6
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: 112374758aab8f7fb493cb8bbe1c214765edd5a5
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58936940"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150894"
 ---
 # <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
@@ -174,11 +174,11 @@ ms.locfileid: "58936940"
 - `npm run start:web`: Запускает Excel в Интернете и перегружает надстройку.
 - `npm run stop`: Останавливает Excel и отладку.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Узнайте о [практике проверки подлинности для пользовательских функций без пользовательского интерфейса.](custom-functions-authentication.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 * [Устранение неполадок пользовательских функций](custom-functions-troubleshooting.md)
 * [Обработка ошибок в пользовательских функциях Excel](custom-functions-errors.md)

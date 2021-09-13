@@ -2,13 +2,13 @@
 title: Управление состоянием и настройками Outlook надстройки
 description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 5893850e100399c742954ed130347ff1944b4f37
-ms.sourcegitcommit: 42c55a8d8e0447258393979a09f1ddb44c6be884
+ms.localizationpriority: medium
+ms.openlocfilehash: dee9d49c50df610957cb009c73451c58507adbc5
+ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "58938374"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59150662"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
@@ -154,7 +154,7 @@ function saveCallback(asyncResult) {
 1. При настройке настраиваемого свойства включайте дополнительное свойство, чтобы указать, были ли добавлены настраиваемые свойства во время чтения сообщения или в режиме чтения надстройки. Это поможет вам различать, было ли свойство создано во время создания или унаследовано от родителя.
 1. Чтобы проверить, перенаносит ли пользователь сообщение электронной почты или отвечает, можно использовать [item.getComposeTypeAsync](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview&preserve-view=true#getComposeTypeAsync_options__callback_) (доступно из набора требований 1.10).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные материалы
 
 - [Persisting add-in state and settings](../develop/persisting-add-in-state-and-settings.md)
 - [Инициализация надстройки Office](../develop/initialize-add-in.md)
