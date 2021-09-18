@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office Вызов сообщества надстройки
 description: Ежемесячное расписание Microsoft Office и ресурсы сообщества надстройки.
-ms.date: 09/08/2021
+ms.date: 09/09/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a880b100fba25ded26c0e1bc9f3392177c2fbfc
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 056fc0a260ebdd22ea0b53c73ef2c1ef25e16db0
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154746"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59443540"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
@@ -32,10 +32,11 @@ ms.locfileid: "59154746"
 - [Office Вызов сообщества надстройки - 8 июля 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-july-8-2020/)
 - [Office Вызов сообщества надстройки - 10 июня 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-june-10-2020/)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Периодические ежемесячные приглашения в календарь вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
-- [Все Microsoft 365 вызовы сообщества разработчиков](https://aka.ms/M365DevCalls)
 - [Community темы вызовов и вопросов](https://aka.ms/officeaddinsform)
-- [Microsoft 365 Канал YouTube разработчика](https://aka.ms/OfficeDevYouTube)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/M365PnP)
+- [Microsoft 365 youTube-канал разработчика](https://aka.ms/m365devyoutube)
+- [Microsoft 365 youTube-канал сообщества](https://aka.ms/m365pnp/videos )
+- [Microsoft 365 PnP на технических Community](https://aka.ms/m365pnp/community)
+- [Microsoft 365 Блог сообщества тек PnP](https://aka.ms/m365pnp/community/blog)

@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов для команд надстроек
 description: Обзор Office наборов команд надстройки.
-ms.date: 11/01/2020
+ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: cb1a21c4d233a716e383d97585a61f5ab2cd2c1e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 73bedf79ff9698ed14ed0e17976a3c9e1602cc7e
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154356"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59443533"
 ---
 # <a name="add-in-commands-requirement-sets"></a>Наборы обязательных элементов для команд надстроек
 
@@ -31,7 +31,7 @@ ms.locfileid: "59154356"
 
 |  Набор обязательных элементов  |  Office 2013 для Windows<br>(единовременная покупка) | Office 2016 для Windows<br>(единовременная покупка) | Office 2019 для Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365)   |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |  
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| AddinCommands 1.3  | Н/Д | Н/Д  | Н/Д | скоро | Н/Д | скоро | Ноябрь 2020 г. |
+| AddinCommands 1.3  | Н/Д | Н/Д  | Н/Д | Не поддерживается | Н/д | Не поддерживается | Ноябрь 2020 г. |
 | AddInCommands 1.1  | Н/Д | 16.0.4678.1000 *Поддерживается только в Outlook*  | Версия 1809 (сборка 10827.20150) или более поздняя | Версия 1705 (сборка 8121.1000) или более поздняя | Н/Д | 15.34 или более поздняя версия\*| Май 2017 г. |
 
 >\*Метод [Office.context.requirements.isSetSupported](/javascript/api/office/office.requirementsetsupport#isSetSupported_name__minVersion_) ошибочно возвращает значение `false` для версий 16.9&ndash;16.14 (включительно), но набор обязательных элементов *поддерживается* в этих версиях.
