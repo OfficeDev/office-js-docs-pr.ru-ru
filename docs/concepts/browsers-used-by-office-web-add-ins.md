@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 08/09/2021
+ms.date: 09/10/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fe1cdcf0cfc9edcd182ca0c47e1dd200262da5bf
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 77cf0b6888100eee6fa6d90f221dc680a9991a7e
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150821"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59443526"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -31,21 +31,22 @@ Office Надстройки — это веб-приложения, которы
 
 |OS|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
 |:-----|:-----|:-----|:-----|
-|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.|
+|любой|Office в Интернете|Не применимо|Браузер, в котором открыт Office.|
 |Mac|любой|Неприменимо|Safari|
-|iOS|любой|Неприменимо|Safari|
+|iOS|любой|Не применимо|Safari|
 |Android|любой|Неприменимо|Chrome|
-|Windows 7, 8.1, 10 | подписка Office 2013 или более поздней|Всё равно|Internet Explorer 11|
+|Windows 7, 8.1, 10 | подписка Office 2013 Office 2019 г.|Всё равно|Internet Explorer 11|
+|Windows 10 | подписка Office 2021 или более поздней|Да|Microsoft Edge<sup>1</sup> с WebView2 (Chromium основе)|
 |Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8.1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>2</sup> с WebView2 (Chromium основе) |
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>2</sup>| Всё равно|Internet Explorer 11|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>2</sup>| Всё равно|Microsoft Edge<sup>1, 3 с</sup> оригинальным WebView (EdgeHTML)|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>2</sup>| Нет |Microsoft Edge<sup>1, 3 с</sup> оригинальным WebView (EdgeHTML)|
+|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>2</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>1</sup> с WebView2 (Chromium основе) |
 
-<sup>1.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история обновления и Office клиентской версии и канала обновления. [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19)
+<sup>1</sup> При Microsoft Edge используется Windows 10(иногда называемый "считыватель экрана") считывателя тега на странице, открываемой в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
-<sup>2</sup> Когда Microsoft Edge используется, Windows 10(иногда называемый "считыватель экрана") читает тег на странице, открываемой в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
+<sup>2.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история обновления и как найти Office клиентскую версию и канал обновления. [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19)
 
 <sup>3</sup> Если надстройка включает элемент манифеста, она не будет использовать Microsoft Edge с исходным `<Runtimes>` WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 

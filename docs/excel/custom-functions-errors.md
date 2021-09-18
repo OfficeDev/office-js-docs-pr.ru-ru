@@ -3,12 +3,12 @@ title: Обработка и возвращение ошибок из настр
 description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из настраиваемой функции.'
 ms.date: 08/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 011868f35c656869ae75c7ffab195db18f690f4f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: a2f93059f9082bc5a53c07159c9356a41cf16729
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151275"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59443547"
 ---
 # <a name="handle-and-return-errors-from-your-custom-function"></a>Обработка и возвращение ошибок из настраиваемой функции
 
@@ -135,5 +135,5 @@ function getComment(commentID) {
 ## <a name="see-also"></a>Дополнительные ресурсы
 
 * [Отладка пользовательских функций](custom-functions-debugging.md)
-* [Требования к настраиваемым функциям](custom-functions-requirement-sets.md)
+* [Наборы обязательных элементов пользовательских функций](../reference/requirement-sets/custom-functions-requirement-sets.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

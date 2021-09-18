@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов для приведения изображений
 description: Поддержка наборов требований к принуждению изображений с Office надстройки в Excel, PowerPoint и Word.
-ms.date: 02/19/2021
+ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e55eba4d28b459f4ffe9d402640dd04cff9acb4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 0f0b80c0af8213eaa9e3695373ddc037c2e60cc3
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150626"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59445805"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 
@@ -36,13 +36,13 @@ ImageCoercion 1.1 позволяет преобразования в изобр�
 
 ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) метода. Поддерживаются следующие приложения.
 
-- Excel на Windows (подключен к подписке Microsoft 365)
-- Excel Mac (подключен к подписке Microsoft 365)
-- PowerPoint на Windows (подключен к подписке Microsoft 365)
-- PowerPoint Mac (подключен к подписке Microsoft 365)
+- Excel 2021 г. и более поздней Windows
+- Excel 2021 г. и позднее на Mac
+- PowerPoint 2021 г. и более поздней Windows
+- PowerPoint 2021 г. и позднее на Mac
 - PowerPoint в Интернете
-- Word on Windows (подключен к подписке Microsoft 365)
-- Word на Mac (подключен к подписке Microsoft 365)
+- Word 2021 и более поздний Windows
+- Word 2021 и более поздний на Mac
 
 ## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 

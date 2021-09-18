@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page
   author: o365devx
   ms.author: o365devx
-  ms.date: 05/10/2021
+  ms.date: 09/09/2021
 highlightedContent:
   items:
     - itemType: overview
@@ -25,18 +25,18 @@ highlightedContent:
     - itemType: learn
       title: 'Microsoft Learn: Office клиентов с помощью Office надстройки'
       url: /learn/paths/m365-office-add-in-associate
-    - itemType: whats-new
-      title: Microsoft 365 Блог разработчика
-      url: 'https://developer.microsoft.com/office/blogs/technology/office-add-ins'
+    - itemType: sample
+      title: Примеры для Office надстройки
+      url: overview/office-add-in-code-samples.md
     - itemType: how-to-guide
       title: Office Руководство для начинающих надстройок
       url: overview/learning-path-beginner.md
     - itemType: reference
       title: Справочная документация по API JavaScript для Office
       url: /javascript/api/overview
-    - itemType: sample
-      title: 'GitHub: шаблоны и методы для Office надстройки'
-      url: 'https://github.com/OfficeDev/PnP-OfficeAddins'
+    - itemType: whats-new
+      title: Microsoft 365 Блог разработчика
+      url: 'https://developer.microsoft.com/office/blogs/technology/office-add-ins'
 conceptualContent:
   title: Ваше путешествие разработчика
   summary: ''

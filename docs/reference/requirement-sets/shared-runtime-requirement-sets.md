@@ -1,15 +1,15 @@
 ---
 title: Общие наборы требований к времени запуска
 description: Указывает платформы и Office приложения, поддерживающую API SharedRuntime.
-ms.date: 04/08/2021
+ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 25efc55c44242398bce684a9b56795d734d2a158
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: b4e7d37e66a562799bc841fd7d7e7ad8cd6d89e7
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154650"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59445812"
 ---
 # <a name="shared-runtime-requirement-sets"></a>Общие наборы требований к времени запуска
 
@@ -19,9 +19,9 @@ ms.locfileid: "59154650"
 
 В следующей таблице перечислены набор требований SharedRuntime 1.1, Office клиентские приложения, поддерживают этот набор требований, а также номера сборки или версии для Office приложения.
 
-|  Набор обязательных элементов  |  Office 2013 (или более поздней) Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365)   |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  | Office Online Server |
+| Набор обязательных элементов | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) | Office для iPad<br>(подключено к подписке на Microsoft 365) | Office для Mac<br>(подключено к подписке на Microsoft 365) | Office в Интернете | Office Online Server |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| SharedRuntime 1.1  | Н/Д | Версия 2002 (сборка 12527.20092) или более поздней версии | Н/Д | 16.35 или более поздняя | Февраль 2020 г. | Н/Д |
+| SharedRuntime 1.1  | Версия 2002 (сборка 12527.20092) или более поздней версии | Версия 2002 (сборка 12527.20092) или более поздней версии | Н/д | 16.35 или более поздняя | Февраль 2020 г. | Н/д |
 
 > [!IMPORTANT]
 > Набор общих требований к времени работы JavaScript доступен только на следующих платформах.

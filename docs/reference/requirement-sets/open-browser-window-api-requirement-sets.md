@@ -1,15 +1,15 @@
 ---
 title: Открытие набора обязательных элементов окна браузера
 description: Указывает, какие Office платформы и сборки поддерживают API openBrowserWindow.
-ms.date: 04/09/2021
+ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: cfc1931afb9b20411ab7d37354fd173012389fd0
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 1a3518d9efb3b4bf1aec7a9c7713611a130b1c0a
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154043"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59445826"
 ---
 # <a name="open-browser-window-api-requirement-sets"></a>Наборы требований к API окна открытых браузеров
 
@@ -19,9 +19,9 @@ ms.locfileid: "59154043"
 
 Надстройки Office работают в нескольких версиях Office. В следующей таблице перечислены наборы API API OpenBrowserWindow, Office хост-приложений, поддерживающий этот набор требований, а также номера сборки или версии для Office приложения.
 
-|  Набор обязательных элементов  | Office 2013 г. Windows или более поздней<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |  Office Online Server  |
-|:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| OpenBrowserWindowApi 1.1  | Н/Д | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | 16.0.0.0 или более поздней | 16.0.0.0 или более поздней | Н/Д | Н/Д|
+|  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |  Office Online Server  |
+|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+| OpenBrowserWindowApi 1.1  | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | 16.0.0.0 или более поздней | 16.0.0.0 или более поздней | Н/Д | Н/Д|
 
 > [!NOTE]
 > Набор требований OpenBrowserWindowApi доступен только следующим образом:

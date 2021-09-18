@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: API удостоверений заданная информация для Office надстройки.
-ms.date: 01/26/2021
+ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: d8a18ed8e7f78c5c83aeb2177a45c4fb46ba4a46
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e3af8767666d3015894c0b7bcdecd758b1a1547c
+ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153806"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59445819"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
@@ -17,9 +17,9 @@ ms.locfileid: "59153806"
 
 Надстройки Office работают в нескольких версиях Office. В следующей таблице перечислены наборы API удостоверений, Office клиентских приложений, поддерживаюющих этот набор требований, а также номера сборки или версии для Office приложения.
 
-|  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
-|:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| IdentityAPI 1.3  | Н/Д | 2008 (сборка 13127.20000) или более поздней | Скоро | 16.40 или более поздняя | Microsoft Office SharePoint Online и OneDrive\* |
+|  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
+|:-----|:-----|:-----|:-----|:-----|:-----|
+| IdentityAPI 1.3  | 2008 (сборка 13127.20000) или более поздней | 2008 (сборка 13127.20000) или более поздней | Не поддерживается | 16.40 или более поздняя | Microsoft Office SharePoint Online и OneDrive\* |
 
 \*В настоящее время набор требований поддерживается в Office в Интернете только для документов, которые открываются из Microsoft Office SharePoint Online и OneDrive.
 
