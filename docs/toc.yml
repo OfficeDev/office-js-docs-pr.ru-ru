@@ -737,7 +737,7 @@ items:
             href: excel/custom-functions-overview.md
             displayName: 'Excel, Custom Functions'
           - name: Наборы обязательных элементов API CustomFunctionsRuntime
-            href: excel/custom-functions-requirement-sets.md
+            href: reference/requirement-sets/custom-functions-requirement-sets.md
             displayName: 'Excel, Custom Functions'
           - name: Руководства
             items:
@@ -1273,20 +1273,14 @@ items:
           - name: Поиск текста в надстройке Word
             href: word/search-option-guidance.md
             displayName: Word
-  - name: Шаблоны и рекомендации
+  - name: Примеры
     items:
-      - name: Обзор
-        href: overview/patterns-and-practices-overview.md
+      - name: Список примеров
+        href: overview/office-add-in-code-samples.md
+        displayName: PnP
       - name: Открыть в Excel
         href: excel/pnp-open-in-excel.md
         displayName: Excel
-      - name: Пакетная обработка пользовательских функций в удаленных вызовов
-        href: excel/custom-functions-batching.md
-        displayName: 'Excel, Custom Functions'
-      - name: Проверка подлинности
-        href: develop/authentication-pnp.md
-      - name: Обработка высокого разрешения и масштабирования в решении для Office
-        href: /office/client-developer/ddpi/handle-high-dpi-and-dpi-scaling-in-your-office-solution
       - name: Конференция сообщества разработчиков надстроек Office
         href: overview/office-add-ins-community-call.md
   - name: Ресурсы о переходе между VSTO и COM

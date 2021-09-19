@@ -7,8 +7,8 @@ ms.openlocfilehash: 056fc0a260ebdd22ea0b53c73ef2c1ef25e16db0
 ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59445728"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "59448748"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
