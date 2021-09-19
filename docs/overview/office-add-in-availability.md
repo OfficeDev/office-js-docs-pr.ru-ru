@@ -8,7 +8,7 @@ ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/19/2021
-ms.locfileid: "59448763"
+ms.locfileid: "59450816"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 

@@ -9,7 +9,7 @@ ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/19/2021
-ms.locfileid: "59448721"
+ms.locfileid: "59450788"
 ---
 # <a name="shared-runtime-requirement-sets"></a>Общие наборы требований к времени запуска
 
