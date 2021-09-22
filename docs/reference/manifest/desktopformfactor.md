@@ -1,14 +1,14 @@
 ---
 title: Элемент DesktopFormFactor в файле манифеста
 description: Указывает параметры для надстройки классического форм-фактора.
-ms.date: 06/15/2021
+ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f89dff5626867258c8df93d5f047e3d08103e71b
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3f15840a7b6716cd8acabe9e061effa566d48930
+ms.sourcegitcommit: a854a2fd2ad9f379a3ef712f307e0b1bb9b5b00d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151623"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59474331"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 
@@ -22,7 +22,7 @@ ms.locfileid: "59151623"
 |:--------------------------------------|:--------:|:-------------|
 | [ExtensionPoint](extensionpoint.md)   | Да      | Определяет, где предоставляются функции надстройки. |
 | [FunctionFile](functionfile.md)       | Да      | URL-адрес файла, который содержит функции JavaScript.|
-| [GetStarted](getstarted.md)           | Нет       | Определяет вызов, который появляется при установке надстройки в Word, Excel или PowerPoint. |
+| [GetStarted](getstarted.md)           | Нет       | Определяет вызов, который появляется при установке надстройки в Word, Excel или PowerPoint. При опущении в вызываемом вызове используются значения элементов [DisplayName](displayname.md) и [Description.](description.md) |
 | [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в общих почтовых ящиках (в настоящее время в предварительном просмотре) и общих папках (т. е. в сценариях делегирования доступа). Значение false *по* умолчанию. |
 
 ## <a name="desktopformfactor-example"></a>Пример DesktopFormFactor
