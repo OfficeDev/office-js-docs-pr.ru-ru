@@ -535,9 +535,6 @@ items:
             href: reference/javascript-api-for-office-error-codes.md
           - name: Неподдерживаемые объекты окна
             href: reference/window-objects-unsupported-in-add-ins.md
-      - name: Ресурсы
-        href: resources/resources-links-help.md
-        displayName: 'Excel, Word, OneNote, Project, PowerPoint, Visio, Outlook'
   - name: Excel
     items:
       - name: Документация по надстройкам Excel
@@ -1281,14 +1278,19 @@ items:
       - name: Открыть в Excel
         href: excel/pnp-open-in-excel.md
         displayName: Excel
+  - name: Ресурсы
+    items:
+      - name: Внешние ресурсы
+        href: resources/resources-links-help.md
+        displayName: 'Excel, Word, OneNote, Project, PowerPoint, Visio, Outlook'
       - name: Конференция сообщества разработчиков надстроек Office
         href: overview/office-add-ins-community-call.md
-  - name: Ресурсы о переходе между VSTO и COM
-    items:
-      - name: Руководство для разработчиков надстроек VSTO
-        href: overview/learning-path-transition.md
-      - name: Обмен кодом между надстройками VSTO и Office
-        href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
-      - name: 'Убедитесь, что надстройка Office совместима с существующей надстройкой COM'
-        href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
-        displayName: manifest
+      - name: Ресурсы о переходе между VSTO и COM
+        items:
+          - name: Руководство для разработчиков надстроек VSTO
+            href: overview/learning-path-transition.md
+          - name: Обмен кодом между надстройками VSTO и Office
+            href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
+          - name: 'Убедитесь, что надстройка Office совместима с существующей надстройкой COM'
+            href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
+            displayName: manifest
