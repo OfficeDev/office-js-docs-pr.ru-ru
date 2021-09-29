@@ -1,14 +1,14 @@
 ---
 title: Элемент события в файле манифеста
 description: Определяет обработчик событий в надстройке.
-ms.date: 05/15/2020
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d5ccddc64ffecd9ebc06b28eb37c0aee46dcc2f4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 095023a8f2d8cd5a01835e09cd50ae7289c98c01
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153997"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990665"
 ---
 # <a name="event-element"></a>Элемент Event
 
@@ -17,11 +17,13 @@ ms.locfileid: "59153997"
 > [!NOTE]
 > Сведения о поддержке и использовании см. в сайте [On-send feature for Outlook надстройки.](../../outlook/outlook-on-send-addins.md)
 
+**Тип надстройки:** почтовая
+
 ## <a name="attributes"></a>Атрибуты
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [Тип](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
+|  [Type](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
 |  [FunctionExecution](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
 |  [FunctionName](#functionname-attribute)  |  Да  | Задает имя функции для обработчика событий. |
 

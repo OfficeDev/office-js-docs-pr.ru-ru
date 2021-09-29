@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtendedPermission в файле манифеста
 description: Определяет расширенное разрешение, необходимое надстройки для доступа к связанному API или функции.
-ms.date: 10/15/2020
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3655ff43088e4506c8bf4125a4a9fae1ef721b4e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 127ad4ea1df0d069a12f642e8fafdfcad006d715
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153890"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990784"
 ---
 # <a name="extendedpermission-element"></a>`ExtendedPermission` элемент
 
@@ -16,6 +16,8 @@ ms.locfileid: "59153890"
 
 > [!IMPORTANT]
 > Поддержка этого элемента была представлена в наборе требований 1.9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+
+**Тип надстройки:** почтовая
 
 ## <a name="available-extended-permissions"></a>Доступные расширенные разрешения
 

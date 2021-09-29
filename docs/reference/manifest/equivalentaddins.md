@@ -1,20 +1,22 @@
 ---
 title: Элемент EquivalentAddins в файле манифеста
 description: Указывает обратную совместимость с эквивалентной надстройки COM, XLL или обоих.
-ms.date: 03/09/2021
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 99a1bad6149bdc1b14e658a0bae19742a11a12b2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: d32f67f49d334a75433aec2d079b45a44a04121a
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153998"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990812"
 ---
 # <a name="equivalentaddins-element"></a>Элемент EquivalentAddins
 
 Указывает обратную совместимость с эквивалентной надстройки COM, XLL или обоих.
 
-**Тип надстройки:** Области задач, настраиваемая функция
+[!INCLUDE [Support note for equivalent add-ins feature](../../includes/equivalent-add-in-support-note.md)]
+
+**Тип надстройки:** Области задач, почты, настраиваемой функции
 
 ## <a name="syntax"></a>Синтаксис
 

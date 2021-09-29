@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок разработки в надстройках Office
 description: Узнайте, как устранить ошибки разработки в Office надстройки.
-ms.date: 09/03/2021
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a2b36a0c8a89dd5f4087794e1901e72baca6244
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 2a17a9eafd91cd174209b1974eea61715385c0ad
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153805"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990805"
 ---
 # <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки в надстройках Office
 
@@ -107,7 +107,7 @@ myChart.id = "5";
 
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
-- [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
+- [Отладка надстроек Office на Mac](debug-office-add-ins-on-ipad-and-mac.md)  
 - [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
 - [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)

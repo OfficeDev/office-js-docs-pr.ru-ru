@@ -1,14 +1,14 @@
 ---
 title: Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
-ms.date: 08/03/2021
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e84bce51e0233f7186b22e6571ec3968ea8d8ed5
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 7f401e2ea15fde54401e329262dd783887f025af
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150986"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990582"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -16,14 +16,7 @@ ms.locfileid: "59150986"
 
 Можно настроить надстройку Office так, чтобы при установке эквивалентной надстройки COM на компьютере пользователя Office на Windows надстройка COM вместо надстройки Office. Надстройка COM называется "эквивалентной", так как Office плавно переходит между надстройки COM и надстройки Office, в соответствии с которой устанавливается компьютер пользователя.
 
-> [!NOTE]
-> Эта функция поддерживается следующей платформой и приложениями при под подключении к Microsoft 365 подписке. Надстройки COM не могут быть установлены на любой другой платформе, поэтому на этих платформах игнорируется элемент манифеста, который обсуждается позже в этой `EquivalentAddins` статье.
->
-> - Excel, Word и PowerPoint на Windows (версия 1904 или более поздней версии)
-> - Outlook версии Windows версии 2102 или более поздней версии Exchange сервера
->   - Exchange Online
->   - Exchange 2019 Накопительное обновление 10 или более поздней версии[(KB5003612)](https://support.microsoft.com/topic/b1434cad-3fbc-4dc3-844d-82568e8d4344)
->   - Exchange 2016 накопительного обновления 21 или более поздней версии[(KB5003611)](https://support.microsoft.com/topic/b7ba1656-abba-4a0b-9be9-dac45095d969)
+[!INCLUDE [Support note for equivalent add-ins feature](../includes/equivalent-add-in-support-note.md)]
 
 ## <a name="specify-an-equivalent-com-add-in"></a>Укажите эквивалентную надстройка COM
 
@@ -119,6 +112,6 @@ ms.locfileid: "59150986"
 
 Если надстройка com/VSTO отключена во время последующего сеанса Outlook, веб-надстройка, скорее всего, будет отключена до Outlook перезапуска.
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Совместите пользовательские функции с определенными функциями пользователя XLL](../excel/make-custom-functions-compatible-with-xll-udf.md)

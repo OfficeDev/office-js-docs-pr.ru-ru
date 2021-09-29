@@ -1,14 +1,14 @@
 ---
 title: Запуск кода в надстройке Office при открытии документа
 description: Узнайте, как запускать код Office надстройки при запуске документа.
-ms.date: 12/28/2020
+ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ce550284a10a9410978402f087c2caf231a5917f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 884409fb161970c57b32921192544592ca39bb2c
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150942"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990553"
 ---
 # <a name="run-code-in-your-office-add-in-when-the-document-opens"></a>Запуск кода в надстройке Office при открытии документа
 
@@ -29,23 +29,7 @@ Office.addin.setStartupBehavior(Office.StartupBehavior.load);
 > [!NOTE]
 > Метод `setStartupBehavior` асинхронный.
 
-## <a name="configure-your-add-in-for-no-load-behavior-on-document-open"></a>Настройка надстройки для ненагрузки при открытом документе
-
-Следующий код настраивает надстройки, чтобы не запускаться при открываемом документе. Вместо этого он начнется, когда пользователь вовлекет его каким-либо образом, например, выбирая кнопку ленты или открывая области задач.
-
-```JavaScript
-Office.addin.setStartupBehavior(Office.StartupBehavior.none);
-```
-
-## <a name="get-the-current-load-behavior"></a>Получить текущее поведение нагрузки
-
-Чтобы определить текущее поведение запуска, запустите следующую функцию, которая возвращает `Office.StartupBehavior` объект.
-
-```JavaScript
-let behavior = await Office.addin.getStartupBehavior();
-```
-
-## <a name="how-to-run-code-when-the-document-opens"></a>Запуск кода при открываемом документе
+## <a name="place-startup-code-in-officeinitialize"></a>Поместите код запуска в Office.initialize
 
 Когда надстройка настроена для загрузки открытого документа, она будет немедленно работать. `Office.initialize`Обработник событий будет вызван. Поместите код запуска в `Office.initialize` обработник событий или `Office.onReady` обработник событий.
 
@@ -103,7 +87,23 @@ async function onChange(event) {
 }
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="configure-your-add-in-for-no-load-behavior-on-document-open"></a>Настройка надстройки для ненагрузки при открытом документе
+
+Следующий код настраивает надстройки, чтобы не запускаться при открываемом документе. Вместо этого он начнется, когда пользователь вовлекет его каким-либо образом, например, выбирая кнопку ленты или открывая области задач.
+
+```JavaScript
+Office.addin.setStartupBehavior(Office.StartupBehavior.none);
+```
+
+## <a name="get-the-current-load-behavior"></a>Получить текущее поведение нагрузки
+
+Чтобы определить текущее поведение запуска, запустите следующую функцию, которая возвращает `Office.StartupBehavior` объект.
+
+```JavaScript
+let behavior = await Office.addin.getStartupBehavior();
+```
+
+## <a name="see-also"></a>См. также
 
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md)
 - [Обмениваться данными и событиями между Excel пользовательскими функциями и учебником по области задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)

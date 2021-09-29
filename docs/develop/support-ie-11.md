@@ -1,14 +1,14 @@
 ---
 title: Поддержка Internet Explorer 11
 description: Узнайте, как поддерживать Internet Explorer 11 и Javascript ES5 в надстройки.
-ms.date: 08/13/2021
+ms.date: 09/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 963d5139a37393e9b09b0df40f1d76190b6526c7
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3edab25361b8ababf8a004f25e8012ca23a085ab
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150933"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990525"
 ---
 # <a name="support-internet-explorer-11"></a>Поддержка Internet Explorer 11
 
@@ -17,7 +17,7 @@ ms.locfileid: "59150933"
 >
 > Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновековой покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поясняется в браузерах, используемых [Office надстройки](../concepts/browsers-used-by-office-web-add-ins.md). Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
 >
-> - AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
 > - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
 
 Office Надстройки — это веб-приложения, которые отображаются в IFrames при Office в Интернете. Office Надстройки отображаются с помощью встроенных элементов управления браузером при Office на Windows или Office mac. Встроенные элементы управления браузером поставляются операционной системой или браузером, установленным на компьютере пользователя.

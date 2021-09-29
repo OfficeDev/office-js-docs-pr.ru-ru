@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: Узнайте, как устранить ошибки пользователей в Office надстройки.
-ms.date: 07/08/2021
+ms.date: 09/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 58983f9733e5a05c3aae317f9cc707de9aee8430
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 9d5664ab702b205a0002201a223a72154a3c69be
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154890"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990546"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -67,9 +67,9 @@ ms.locfileid: "59154890"
 
 |**Браузеры**|**Платформы**|
 |:--------------------|:---------------------|
-|Internet Explorer, Microsoft Edge|Office в Интернете|
+|Microsoft Edge|Office в Интернете|
 
-Чтобы решить эту проблему, пользователи или администраторы могут добавить домен надстройки в список надежных сайтов в Internet Explorer или Microsoft Edge.
+Чтобы устранить проблему, конечные пользователи или администраторы могут добавить домен надстройки в список надежных сайтов в Microsoft Edge браузере.
 
 > [!IMPORTANT]
 > Не добавляйте URL-адрес надстройки в список надежных сайтов, если вы не доверяете надстройке.

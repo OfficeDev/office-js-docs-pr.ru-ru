@@ -1,20 +1,22 @@
 ---
 title: Элемент EquivalentAddin в файле манифеста
 description: Указывает обратную совместимость для эквивалентной надстройки COM или XLL.
-ms.date: 03/09/2021
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e0842a0a5663d6221e854881aef28004ad2a8705
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: f77a70681c8a12674d9e22022276e511552861ad
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154001"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990693"
 ---
 # <a name="equivalentaddin-element"></a>Элемент EquivalentAddin
 
 Указывает обратную совместимость для эквивалентной надстройки COM или XLL.
 
-**Тип надстройки:** Области задач, настраиваемая функция
+[!INCLUDE [Support note for equivalent add-ins feature](../../includes/equivalent-add-in-support-note.md)]
+
+**Тип надстройки:** Области задач, почты, настраиваемой функции
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,14 +32,14 @@ ms.locfileid: "59154001"
 
 ## <a name="must-contain"></a>Должен содержать
 
-[Тип](type.md)
+[Type](type.md)
 
 ## <a name="can-contain"></a>Может содержать
 
 [ProgId](progid.md) 
  [FileName](filename.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Чтобы указать надстройки COM в качестве эквивалентной надстройки, укажите как элементы, так `ProgId` `Type` и элементы. Чтобы указать XLL в качестве эквивалентной надстройки, укажите как элементы, так `FileName` `Type` и элементы.
 

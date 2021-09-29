@@ -1,18 +1,21 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: Проверьте Office надстройку на iPad Mac с помощью боковой загрузки.
-ms.date: 09/02/2020
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 04609f8cceee20403c25ec91a8ca75adf82b51c4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 38c2d39cf5dc997492899a41e430413e2ae388b4
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154949"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990721"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
 Чтобы проверить работу надстройки в Office для iOS, вы можете загрузить манифест неопубликованной надстройки на iPad с помощью iTunes или непосредственно в Office для Mac. Вы не сможете устанавливать точки останова и отлаживать код надстройки во время выполнения, но сможете проверить ее работу и убедиться, что интерфейс отображается правильно и его можно использовать.
+
+> [!NOTE]
+> Соответствующие действия касательно надстройки Outlook приведены в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
 
 ## <a name="prerequisites-for-office-on-ios"></a>Предварительные требования (Office для iOS)
 
@@ -79,9 +82,6 @@ ms.locfileid: "59154949"
 
 ## <a name="sideload-an-add-in-in-office-on-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
 
-> [!NOTE]
-> Сведения о загрузке неопубликованной надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
-
 1. Откройте **терминал** и перейдите в одну из следующих папок, где вы сохраните файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
 
     - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/Documents/wef`
@@ -111,4 +111,5 @@ ms.locfileid: "59154949"
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)
+- [Отладка надстроек Office на Mac](debug-office-add-ins-on-ipad-and-mac.md)
+- [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md)

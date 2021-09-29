@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 09/10/2021
+ms.date: 09/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 77cf0b6888100eee6fa6d90f221dc680a9991a7e
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: bb44b2e689b4731f9017ad18e22dcf12b6fc918a
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59443526"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990539"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -24,17 +24,17 @@ Office Надстройки — это веб-приложения, которы
 >
 > Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновкулярной покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поводится в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
 >
-> - AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
 > - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
 |OS|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
 |:-----|:-----|:-----|:-----|
-|любой|Office в Интернете|Не применимо|Браузер, в котором открыт Office.|
+|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.<br>(Но обратите внимание, Office в Интернете не будет открываться в Internet Explorer.<br>Попытка сделать это открывает Office в Интернете edge.) |
 |Mac|любой|Неприменимо|Safari|
-|iOS|любой|Не применимо|Safari|
-|Android|любой|Неприменимо|Chrome|
+|iOS|любой|Неприменимо|Safari|
+|Android|любой|Неприменимо|Chrome.|
 |Windows 7, 8.1, 10 | подписка Office 2013 Office 2019 г.|Всё равно|Internet Explorer 11|
 |Windows 10 | подписка Office 2021 или более поздней|Да|Microsoft Edge<sup>1</sup> с WebView2 (Chromium основе)|
 |Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|

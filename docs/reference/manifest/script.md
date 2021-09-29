@@ -1,18 +1,20 @@
 ---
 title: Элемент Script в файле манифеста
 description: Элемент Script определяет параметры скрипта, которые настраиваемая функция использует в Excel.
-ms.date: 10/09/2018
+ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e6c3c1946bbb45b2fd41e4f39b46f9429b17343e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 259976f752cf3fca72c5012bedd92b9bf021f6aa
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154475"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990672"
 ---
 # <a name="script-element"></a>Элемент Script
 
 Определяет параметры сценариев, используемых пользовательской функцией в Excel.
+
+**Тип надстройки:** Настраиваемая функция
 
 ## <a name="attributes"></a>Атрибуты
 

@@ -1,14 +1,14 @@
 ---
 title: Требования для запуска надстроек Office
 description: Узнайте о требованиях клиента и сервера, которые необходимо выполнить конечному пользователю Office надстройки.
-ms.date: 07/27/2021
+ms.date: 09/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e846da92ac398fa16ed51764a419e9a05b85293e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: b39af2b381bc6dd29df2f1925ca5cbf67740e4a8
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150814"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990560"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -66,7 +66,7 @@ Outlook Mac, который распространяется в Microsoft 365, �
 
 ## <a name="client-requirements-browser-support-for-office-web-clients-and-sharepoint"></a>Требования к клиенту: поддержка браузеров для веб-клиентов Office в Интернете и SharePoint
 
-Любой браузер, поддерживающий ECMAScript 5.1, HTML5 и CSS3, например Internet Explorer 11 либо последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
+Любой браузер, кроме Internet Explorer, который поддерживает ECMAScript 5.1, HTML5 и CSS3, например Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
 
 
 ## <a name="client-requirements-non-windows-smartphone-and-tablet"></a>Требования к клиенту: смартфоны и планшеты под управлением операционных систем, отличных от Windows
