@@ -1,15 +1,15 @@
 ---
-ms.date: 07/27/2021
+ms.date: 09/23/2021
 title: Настройка надстройки Office для использования общей среды выполнения JavaScript
 ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
 ms.localizationpriority: high
-ms.openlocfilehash: 6b0815b734b1fe9ad28f0662fdf84841349b0079
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: b72f38fc51925124b62b14a4316f2117edfa9f7c
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150734"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990567"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 
@@ -200,7 +200,7 @@ ms.locfileid: "59150734"
 ```
 
 > [!NOTE]
-> Если в манифесте надстройки есть элемент `Runtimes` (требуемый для общей среды выполнения), она использует Internet Explorer 11 независимо от того, какая у вас версия Windows или Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
+> Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в статьях "[Элемент Runtimes](../reference/manifest/runtimes.md)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
 
 ## <a name="about-the-shared-javascript-runtime"></a>Сведения об общей среде выполнения JavaScript
 

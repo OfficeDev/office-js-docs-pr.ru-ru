@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: Разработайте надстройку Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 07/08/2021
+ms.date: 09/23/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: f3ecf502f035783aa99dda959d23a3cb2444ec83
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 49145c2c5e6e48fe4f0256d6dbc661e9a826fee5
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151305"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990826"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -843,7 +843,7 @@ ms.locfileid: "59151305"
     ```
 
 > [!NOTE]
-> Файл **popup.html** и загружаемый им файл **popup.js** выполняются в полностью отдельном процессе Microsoft Edge или Internet Explorer 11 из области задач надстройки. Если файл **popup.js** был передан в тот же файл **bundle.js**, что и файл **app.js**, надстройка загрузит два экземпляра файла **bundle.js**, что противоречит цели объединения. Поэтому эта надстройка вообще не передает файл **popup.js**.
+> Файл **popup.html** и загружаемый по ссылке в нем файл **popup.js** выполняются в полностью отдельной среде выполнения браузера из области задач надстройки. Если файл **popup.js** был передан в тот же файл **bundle.js**, что и файл **app.js**, надстройка загрузит два экземпляра файла **bundle.js**, что противоречит цели объединения. Поэтому эта надстройка вообще не передает файл **popup.js**.
 
 ### <a name="update-webpack-config-settings"></a>Обновление настроек конфигурации webpack
 

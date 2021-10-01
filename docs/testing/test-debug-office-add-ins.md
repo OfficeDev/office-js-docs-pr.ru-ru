@@ -1,14 +1,14 @@
 ---
 title: Тестирование и отладка надстроек Office
 description: Узнайте, как тестировать и отлаживать свою надстройку Office
-ms.date: 05/19/2021
+ms.date: 09/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 77e99d47783f7c613ad25f8b557cc81ee12d507a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: fd7bcaf5fdc6ded1a2d6991a4ab5207e515fad16
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154313"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990791"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
@@ -24,7 +24,7 @@ ms.locfileid: "59154313"
 > [!IMPORTANT]
 > Надстройки, предлагаемые через AppSource, проходят проверку, включающую тестирование на всех платформах. Кроме того, надстройки тестируются в Office для Интернета со всеми основными современными браузерами, включая Microsoft Edge (WebView2 на основе Chromium), Chrome и Safari. Соответственно, перед отправкой в AppSource необходимо протестировать эти платформы и браузеры. Дополнительные сведения о проверке см. в статье [Политики сертификации коммерческой платформы Marketplace](/legal/marketplace/certification-policies), особенно в [разделе 1120.3](/legal/marketplace/certification-policies#11203-functionality), а также на странице [Доступность и применение надстроек Office](../overview/office-add-in-availability.md).
 >
-> AppSource не использует Internet Explorer или устаревшую версию Microsoft Edge (WebView1) для тестирования надстроек в Office для Интернета. Но если многие ваши пользователи будут применять эти два браузера для открытия Office в Интернете, вам следует протестировать их. Дополнительные сведения см. в статье [Поддержка Internet Explorer 11](../develop/support-ie-11.md) и [Устранение проблем с Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues). Office по-прежнему поддерживает эти браузеры для надстроек, поэтому если вы считаете, что столкнулись с ошибкой при работе надстройки в них, создайте проблему в репозитории [office-js](https://github.com/OfficeDev/office-js/issues/new/choose).
+> AppSource не использует Internet Explorer или устаревшую версию Microsoft Edge (WebView1) для тестирования надстроек в Office для Интернета. Но если значительное число ваших пользователей будет использовать браузер Edge прежних версий для открытия Office в Интернете, вам следует протестировать надстройку с ним. (Office в Интернете не будет открываться в Internet Explorer, поэтому тестировать надстройку с этим браузером не нужно.) Дополнительные сведения см. в статьях "[Поддержка Internet Explorer 11](../develop/support-ie-11.md)" и "[Устранение неполадок Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues)". Office по-прежнему поддерживает эти браузеры как поставщики сред выполнения надстроек, поэтому если вы считаете, что столкнулись с ошибкой в работе надстроек в них, создайте запись о проблеме для репозитория [office-js.](https://github.com/OfficeDev/office-js/issues/new/choose)
 
 ## <a name="sideload-an-office-add-in-for-testing"></a>Загрузка неопубликованной надстройки Office для тестирования
 
@@ -48,7 +48,7 @@ ms.locfileid: "59154313"
 
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 
-- [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)
+- [Отладка надстроек Office на Mac](debug-office-add-ins-on-ipad-and-mac.md)
 
 - [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
 

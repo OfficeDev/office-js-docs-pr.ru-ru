@@ -1,15 +1,15 @@
 ---
 title: 'Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач'
 description: Узнайте, как обмениваться данными и событиями между пользовательскими функциями и областью задач в Excel.
-ms.date: 08/04/2021
+ms.date: 09/23/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 0d42329d08de9db35d15d122321d771f6017b937
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 714f7dc62c7357a67ac26179dee6abc1d229ea49
+ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154524"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "59990532"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane"></a>Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач
 
@@ -52,7 +52,7 @@ yo office
    ```
 
 > [!NOTE]
-> Если в манифесте надстройки есть элемент `Runtimes`, она использует Internet Explorer 11 независимо от того, какая у вас версия Windows или Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
+> Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если же эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в разделах документации "[Элемент Runtimes](../reference/manifest/runtimes.md)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
 
 4. В элементе `<Page>` замените расположение источника с **Functions.Page.Url** на **ContosoAddin.Url**.
 
