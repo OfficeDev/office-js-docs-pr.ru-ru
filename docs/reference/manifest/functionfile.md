@@ -1,14 +1,14 @@
 ---
 title: Элемент FunctionFile в файле манифеста
 description: Указывает исходный файл кода для операций, которые надстройка предоставляет с помощью команд надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса.
-ms.date: 11/06/2020
+ms.date: 09/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 443fde5cc5456508556962254ecceb6bd717e8a8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e8d65e8d8ba94dd63dc82c0519260157b1d22a62
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154799"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138760"
 ---
 # <a name="functionfile-element"></a>Элемент FunctionFile
 
@@ -17,7 +17,22 @@ ms.locfileid: "59154799"
 * Команды надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса.
 * Клавиши, которые выполняют функцию JavaScript.
 
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Области задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
+
 Элемент `FunctionFile` является детским элементом [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md). Атрибут элемента может быть не более 32 символов и задарен значению атрибута элемента в элементе, который содержит `resid` `FunctionFile` `id` `Url` `Resources` URL-адрес HTML-файла, [](control.md)который содержит или загружает все функции JavaScript, используемые кнопками командной команды без пользовательского интерфейса, как это определено элементом Control.
+
+> [!NOTE]
+> Когда надстройка настроена на использование общего времени [запуска,](../../develop/configure-your-add-in-to-use-a-shared-runtime.md)функции в файле кода выполняются в том же времени запуска JavaScript (и совместном общем глобальном пространстве имен), что и JavaScript в области задач надстройки (если таковое имеется).
+>
+> Элемент и связанный с ним файл кода также играют особую роль с помощью настраиваемой клавиши клавиши, которые требуют общего `FunctionFile` времени работы. [](../../design/keyboard-shortcuts.md)
 
 Ниже приводится пример `FunctionFile` элемента.
 

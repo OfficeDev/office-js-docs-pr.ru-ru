@@ -1,20 +1,30 @@
 ---
 title: Элемент DesktopFormFactor в файле манифеста
 description: Указывает параметры для надстройки классического форм-фактора.
-ms.date: 09/17/2021
+ms.date: 09/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f15840a7b6716cd8acabe9e061effa566d48930
-ms.sourcegitcommit: a854a2fd2ad9f379a3ef712f307e0b1bb9b5b00d
+ms.openlocfilehash: 52c9a029e3f43e9b7d5416455eb99ef3de4dae7a
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59474331"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138732"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 
 Указывает параметры для надстройки классического форм-фактора. Форм-фактор рабочего стола включает Office в Интернете, Windows и Mac. Он содержит все сведения о надстройки для форм-фактора рабочего стола, за исключением **узла Resources.**
 
 Каждое определение DesktopFormFactor содержит элемент **FunctionFile** и один или несколько **элементов ExtensionPoint.** Дополнительные сведения см. в [элементе FunctionFile и](functionfile.md) [элементе ExtensionPoint.](extensionpoint.md)
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Области задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
 
 ## <a name="child-elements"></a>Дочерние элементы
 

@@ -1,14 +1,14 @@
 ---
 title: Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)
 description: Узнайте, как осуществлять отладку надстроек Office, в которых используется Microsoft Edge WebView2 (на основе Chromium) с помощью отладчика для расширения Microsoft Edge в коде VS.
-ms.date: 08/18/2021
+ms.date: 10/05/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 90c58352ef49a365cd80dd7699d23f40c800bbd6
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 8ee266b3197a2b02dd4d072b6666cd68add6fec9
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150610"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138648"
 ---
 # <a name="debug-add-ins-on-windows-using-edge-chromium-webview2"></a>Отладка надстроек в Windows с помощью Edge Chromium WebView2
 
@@ -18,7 +18,7 @@ ms.locfileid: "59150610"
 
 - [Код Visual Studio](https://code.visualstudio.com/) (необходимо запускать от имени администратора)
 - [Node.js (версия 10. или более поздняя)](https://nodejs.org/)
-- Windows 10
+- Windows 10, 11
 - Сочетание платформы и приложения Office, которое поддерживает Microsoft Edge с WebView2 (на основе Chromium), как описано в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md). Если вы используете Microsoft 365 с версией до 2101, установите WebView2. Воспользуйтесь инструкциями по установке на странице [Microsoft Edge WebView2 / Внедрение веб-контента ... с помощью Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
 
 ## <a name="install-and-use-the-debugger"></a>Установка и использование отладчика

@@ -1,18 +1,30 @@
 ---
 title: Элемент GetStarted в файле манифеста
 description: Предоставляет сведения, используемые при установке надстройки в Word, Excel, PowerPoint и OneNote.
-ms.date: 09/17/2021
+ms.date: 09/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c311e1bb5fbc2db265f430c8762216ad3a727107
-ms.sourcegitcommit: a854a2fd2ad9f379a3ef712f307e0b1bb9b5b00d
+ms.openlocfilehash: 1630b50824cda18ca92ef6b34b0105acf9a4ca9c
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59474345"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138752"
 ---
 # <a name="getstarted-element"></a>Элемент GetStarted
 
 Предоставляет сведения, используемые при установке надстройки в Word, Excel, PowerPoint и OneNote. Элемент **GetStarted** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md). Если элемент **GetStarted** опущен, в вызываемом вызове используются значения элементов [DisplayName](displayname.md) и [Description.](description.md)
+
+**Тип надстройки:** надстройки области задач
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Области задач 1.0
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
+
+**Связанные с этими наборами требований:**
+
+- [AppCommands 1.1](../requirement-sets/add-in-commands-requirement-sets.md)
 
 ## <a name="child-elements"></a>Дочерние элементы
 

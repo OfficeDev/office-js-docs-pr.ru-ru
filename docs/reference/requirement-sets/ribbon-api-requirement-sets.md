@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API ленты
 description: Указывает, какие Office платформы и сборки поддерживают динамические API ленты.
-ms.date: 09/08/2021
+ms.date: 10/05/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: f0bc97eb7600c913642471650418e14744536ce3
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: 3d99f3ce3c1f781ca8ebc20ae1d637018386cd1c
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59445714"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138711"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 
@@ -21,8 +21,8 @@ ms.locfileid: "59445714"
 
 |  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows\*<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac\*<br>(подключено к подписке на Microsoft 365)  | Office в Интернете\*  |  Office Online Server  |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| RibbonApi 1.2  | 2102 (сборка 13801.20294) | 2102 (сборка 13801.20294) | Н/д | Не поддерживается | Май 2021 г. | Н/д|
-| RibbonApi 1.1  | 2102 (сборка 13801.20294) | См. поддержку<br>раздел ниже | Н/д | 16.38 | Ноябрь 2020 г. | Н/д|
+| RibbonApi 1.2  | Сборка 16.0.14326.20454 или более поздней | 2102 (сборка 13801.20294) | Недоступно | Не поддерживается | Май 2021 г. | Недоступно|
+| RibbonApi 1.1  | Сборка 16.0.14326.20454 или более поздней | См. поддержку<br>раздел ниже | Недоступно | 16.38 | Ноябрь 2020 г. | Недоступно|
 
 > **&#42;** API ленты поддерживается только в Excel.
 

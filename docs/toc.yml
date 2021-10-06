@@ -268,7 +268,7 @@ items:
               - name: Подключение отладчика из области задач
                 href: testing/attach-debugger-from-task-pane.md
               - name: Отладка с помощью средств разработчика
-                href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
+                href: testing/debug-add-ins-using-f12-developer-tools-on-windows.md
               - name: Отладка с помощью Edge Chromium WebView2
                 href: testing/debug-desktop-using-edge-chromium.md
                 displayName: 'debug, windows'

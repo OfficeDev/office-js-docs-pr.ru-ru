@@ -1,14 +1,14 @@
 ---
 title: Тестирование Internet Explorer 11
 description: Проверьте Office надстройки в Internet Explorer 11.
-ms.date: 09/23/2021
+ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 97c60b12fe735f5ff6b1fd7c8171f90f12dced72
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: 40a380d902de211f2dfcbe2e474553dfa1b02fcb
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990777"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138627"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Проверьте Office надстройки в Internet Explorer 11
 
@@ -55,7 +55,7 @@ ms.locfileid: "59990777"
     ```
 
 > [!TIP]
-> Эта команда не требуется, но она должна помочь отламеть большинство проблем, связанных с запуском Internet Explorer 11. Для полной надежности необходимо проверить использование компьютеров с различными комбинациями Windows 7, 8.1 и 10 и различных Office. Дополнительные сведения [](../concepts/browsers-used-by-office-web-add-ins.md) см. в Office надстройки и сведения о том, как вернуться к более ранней версии [Office.](https://support.microsoft.com/topic/2bd5c457-a917-d57e-35a1-f709e3dda841)
+> Эта команда не требуется, но она должна помочь отламеть большинство проблем, связанных с запуском Internet Explorer 11. Для полной надежности необходимо проверить использование компьютеров с различными комбинациями Windows 7, 8.1, 10 и 11 и различных Office. Дополнительные сведения [](../concepts/browsers-used-by-office-web-add-ins.md) см. в Office надстройки и сведения о том, как вернуться к более ранней версии [Office.](https://support.microsoft.com/topic/2bd5c457-a917-d57e-35a1-f709e3dda841)
 
 ### <a name="command-options"></a>Параметры команды
 
@@ -69,5 +69,5 @@ ms.locfileid: "59990777"
 
 * [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
 * [Загрузка неопубликованных надстроек Office для тестирования](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-* [Отладка надстроек с помощью средств разработчика в Windows 10](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
+* [Отламывка надстроек с помощью средств разработчика на Windows](debug-add-ins-using-f12-developer-tools-on-windows.md)
 * [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)

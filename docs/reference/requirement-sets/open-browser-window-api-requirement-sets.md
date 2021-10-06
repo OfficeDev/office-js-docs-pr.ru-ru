@@ -1,15 +1,15 @@
 ---
 title: Открытие набора обязательных элементов окна браузера
 description: Указывает, какие Office платформы и сборки поддерживают API openBrowserWindow.
-ms.date: 09/08/2021
+ms.date: 10/05/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a3518d9efb3b4bf1aec7a9c7713611a130b1c0a
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: 65088c6a8fa7c7f9bd3e53da0d2b1755b7ec22e6
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2021
-ms.locfileid: "59453119"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138788"
 ---
 # <a name="open-browser-window-api-requirement-sets"></a>Наборы требований к API окна открытых браузеров
 
@@ -21,7 +21,7 @@ ms.locfileid: "59453119"
 
 |  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |  Office Online Server  |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| OpenBrowserWindowApi 1.1  | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | 16.0.0.0 или более поздней | 16.0.0.0 или более поздней | Н/Д | Н/Д|
+| OpenBrowserWindowApi 1.1  | Сборка 16.0.14326.20454 или более поздней | Версия 1810 (сборка 16.0.11001.20074) или более поздней версии | 16.0.0.0 или более поздней | 16.0.0.0 или более поздней | Н/Д | Н/Д|
 
 > [!NOTE]
 > Набор требований OpenBrowserWindowApi доступен только следующим образом:

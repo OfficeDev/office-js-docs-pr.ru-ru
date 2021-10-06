@@ -1,15 +1,15 @@
 ---
 title: Общие наборы требований к времени запуска
 description: Указывает платформы и Office приложения, поддерживающую API SharedRuntime.
-ms.date: 09/08/2021
+ms.date: 10/05/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e7d37e66a562799bc841fd7d7e7ad8cd6d89e7
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: c202ba3047b8dc3998b3bcfd241274bcedf5a93d
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "59450788"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138501"
 ---
 # <a name="shared-runtime-requirement-sets"></a>Общие наборы требований к времени запуска
 
@@ -21,10 +21,10 @@ ms.locfileid: "59450788"
 
 | Набор обязательных элементов | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) | Office для iPad<br>(подключено к подписке на Microsoft 365) | Office для Mac<br>(подключено к подписке на Microsoft 365) | Office в Интернете | Office Online Server |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| SharedRuntime 1.1  | Версия 2002 (сборка 12527.20092) или более поздней версии | Версия 2002 (сборка 12527.20092) или более поздней версии | Н/д | 16.35 или более поздняя | Февраль 2020 г. | Н/д |
+| SharedRuntime 1.1  | Сборка 16.0.14326.20454 или более поздней | Версия 2002 (сборка 12527.20092) или более поздней версии | Недоступно | 16.35 или более поздняя | Февраль 2020 г. | Недоступно |
 
 > [!IMPORTANT]
-> Набор общих требований к времени работы JavaScript доступен только на следующих платформах.
+> Общий набор требований к времени запуска JavaScript доступен только в следующих Office приложениях и платформах.
 >
 > - Excel для Интернета, Windows и Mac.
 > - PowerPoint для Windows (сборка 13218.10000 или более поздняя). Общая среда выполнения JavaScript для PowerPoint в настоящее время доступна в предварительной версии и может изменяться. Ее применение не поддерживается в рабочих средах. Чтобы получить новейшую сборку, вам нужно [присоединиться к программе предварительной оценки Office](https://insider.office.com/join). Хороший способ ознакомиться с такими возможностями — использование подписки на Microsoft 365. Если у вас еще нет подписки на Microsoft 365, вы можете оформить ее, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).

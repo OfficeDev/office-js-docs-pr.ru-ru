@@ -1,18 +1,28 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 05/11/2021
+ms.date: 09/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c68df7bdaf1bf6aa93002e3120321f80d69724ab
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 17e39cf85ef19516d4b2a04ba6b96cf97b32336b
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151137"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138767"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
  Определяет, где доступны функции надстройки в пользовательском интерфейсе Office. Элемент **ExtensionPoint** является дочерним для элемента [AllFormFactors](allformfactors.md), [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md).
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Области задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -34,7 +44,7 @@ ms.locfileid: "59151137"
 В приведенных ниже примерах показано, как применять элемент **ExtensionPoint** со значениями атрибута **PrimaryCommandSurface** и **ContextMenu**, и какие дочерние элементы использовать с каждым из них.
 
 > [!IMPORTANT]
-> Для элементов, которые содержат атрибут ID, обязательно предоставляйте уникальный идентификатор. Мы рекомендуем использовать название вашей компании и личный идентификатор. Пример формата приведен ниже. <CustomTab id="mycompanyname.mygroupname">
+> Для элементов, содержащих атрибут идентификатора, необходимо предоставить уникальный идентификатор. Рекомендуем указать название компании с идентификатором. Используйте, например, формат `<CustomTab id="mycompanyname.mygroupname">`.
 
 ```XML
 <ExtensionPoint xsi:type="PrimaryCommandSurface">

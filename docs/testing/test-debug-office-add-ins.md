@@ -3,12 +3,12 @@ title: Тестирование и отладка надстроек Office
 description: Узнайте, как тестировать и отлаживать свою надстройку Office
 ms.date: 09/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: fd7bcaf5fdc6ded1a2d6991a4ab5207e515fad16
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: 1a47c9e5b4d45dc2a20f7fd5dd04a384eea5cba3
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990791"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138599"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
@@ -44,7 +44,7 @@ ms.locfileid: "59990791"
 
 - [Подключение отладчика из области задач (в Windows)](attach-debugger-from-task-pane.md)
 
-- [Отладка надстроек с помощью средств разработчика F12 в Windows 10](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
+- [Отладка надстроек с помощью средств разработчика F12 в Windows 10](debug-add-ins-using-f12-developer-tools-on-windows.md)
 
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 

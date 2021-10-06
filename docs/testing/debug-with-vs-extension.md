@@ -1,14 +1,14 @@
 ---
 title: Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 description: Чтобы отладить Office надстройки, Visual Studio Code надстройки Microsoft Office надстройки.
-ms.date: 08/18/2021
+ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 256c7855f4757f49c23b4c633323cf2124bb6516
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 1eb71ec1bd52198af32129882cb531451fff422a
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151557"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138641"
 ---
 # <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 
@@ -22,7 +22,7 @@ ms.locfileid: "59151557"
 
 - [Код Visual Studio](https://code.visualstudio.com/) (необходимо запускать от имени администратора)
 - [Node.js (версия 10. или более поздняя)](https://nodejs.org/)
-- Windows 10
+- Windows 10, 11
 - [Microsoft Edge](https://www.microsoft.com/edge)
 
 Эти инструкции предполагают, что вы имеете опыт использования командной строки, понимаете базовый JavaScript и создали проект Office надстройки перед использованием генератора Yo Office. Если вы еще не сделали этого раньше, рассмотрите возможность посещения одного из наших учебников, например Excel Office [надстройки](../tutorials/excel-tutorial.md).
@@ -35,7 +35,7 @@ ms.locfileid: "59151557"
     > Если у вас уже есть проект, пропустить шаг 1 и перейти на шаг 2.
 
 1. Откройте командную подсказку в качестве администратора.
-   ![Параметры командной подсказки, в том числе "запуск в качестве администратора" в Windows 10.](../images/run-as-administrator-vs-code.jpg)
+   ![Параметры командной подсказки, в том числе "запуск в качестве администратора" в Windows 10 и 11.](../images/run-as-administrator-vs-code.jpg)
 
 1. Перейдите к каталогу проектов.
 
@@ -85,6 +85,6 @@ ms.locfileid: "59151557"
 
 - [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
 
-- [Отладка надстроек с помощью средств разработчика в Windows 10](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
+- [Отламывка надстроек с помощью средств разработчика на Windows](debug-add-ins-using-f12-developer-tools-on-windows.md)
 
 - [Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)](debug-desktop-using-edge-chromium.md)

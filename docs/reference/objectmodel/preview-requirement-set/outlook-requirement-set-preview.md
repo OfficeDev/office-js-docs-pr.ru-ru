@@ -1,14 +1,14 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
-ms.date: 08/27/2021
+ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3715741981f3d287adc85f3545d81fe9a7565bb2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: a9d94956bc4adaa0910cdb54e6be406a84f594f3
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151317"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138592"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -170,7 +170,7 @@ ms.locfileid: "59151317"
 
 Поддержка функций для общих папок (т. е. доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](../../../outlook/delegate-access.md).
 
-**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современный), Outlook на Mac
 
 ## <a name="see-also"></a>См. также
 
