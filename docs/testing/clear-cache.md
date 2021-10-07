@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 08/02/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 575ab4006187d6986f6ed79fc20e87e5b22725cb
-ms.sourcegitcommit: a854a2fd2ad9f379a3ef712f307e0b1bb9b5b00d
+ms.openlocfilehash: 0e3d03303bea1b26f9cf982b59e58865fb683f5d
+ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59474359"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "60138515"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -33,7 +33,7 @@ ms.locfileid: "59474359"
 %userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\
 ```
 
-Чтобы удалить неопубликованные надстройки из Outlook, выполните действия, описанные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы найти надстройку в разделе **Настраиваемые надстройки** диалогового окна, в котором перечислены ваши установленные надстройки. Щелкните многоточие (`...`) для надстройки, а затем выберите **Удалить**, чтобы удалить определенную надстройку. Если надстройка не удаляется, удалите содержимое папки `Wef`, как указано выше для Excel, Word и PowerPoint.
+Чтобы удалить неопубликованную надстройку из Outlook, выполните действия, описанные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы найти надстройку в разделе **Настраиваемые надстройки** диалогового окна, в котором перечислены установленные надстройки. Щелкните многоточие (`...`) для надстройки, а затем выберите **Удалить**, чтобы удалить определенную надстройку. Если такой способ удаления надстроек не работает, удалите содержимое папки `Wef`, как указано выше для Excel, Word и PowerPoint.
 
 Чтобы очистить кэш в Office на Windows 10, когда надстройка работает в Microsoft Edge, вы можете использовать Microsoft Edge DevTools.
 
@@ -41,7 +41,7 @@ ms.locfileid: "59474359"
 > Если вы хотите, чтобы в неопубликованной надстройке отражались только последние изменения ее исходных файлов HTML или JavaScript, не нужно очищать кэш. Вместо этого просто переместите фокус в область задач надстройки (щелкнув в любом месте области задач) и нажмите клавиши **CTRL + F5**, чтобы перезагрузить надстройку.
 
 > [!NOTE]
-> Чтобы очистить кэш Outlook с помощью следующих действий, в вашей надстройке должна быть панель задач. Если в вашей надстройке нет пользовательского интерфейса (например, она использует функцию [проверки при отправке](../outlook/outlook-on-send-addins.md)), потребуется добавить в надстройку область задач, использующую такой же домен для [SourceLocation](../reference/manifest/sourcelocation.md), прежде чем вы сможете использовать указанные ниже действия для очистки кэша.
+> Для очистки кэша Office с помощью перечисленных ниже действий в вашей надстройке должна быть область задач. Если в вашей надстройке нет пользовательского интерфейса (например, она использует функцию [проверки при отправке](../outlook/outlook-on-send-addins.md)), потребуется добавить в надстройку область задач, использующую такой же домен для [SourceLocation](../reference/manifest/sourcelocation.md), прежде чем можно будет использовать указанные ниже действия для очистки кэша.
 
 1. Установите [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj).
 
@@ -67,12 +67,12 @@ ms.locfileid: "59474359"
 
 ## <a name="clear-the-office-cache-on-ios"></a>Очистка кэша Office в iOS
 
-Чтобы очистить кэш Office в iOS, вызовите `window.location.reload(true)` в JavaScript в надстройке, чтобы запустить принудительную перезагрузку. Или переустановите Office.
+Чтобы очистить кэш Office в iOS, вызовите `window.location.reload(true)` в JavaScript в надстройке, чтобы запустить принудительную перезагрузку. Также можно переустановить Office.
 
 ## <a name="see-also"></a>Дополнительные материалы
 
 - [Устранение ошибок разработки в надстройках Office](troubleshoot-development-errors.md)
-- [Отладка надстроек Office](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
+- [Отладка надстроек Office](debug-add-ins-using-f12-developer-tools-on-windows.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
 - [XML-манифест надстроек Office](../develop/add-in-manifests.md)
