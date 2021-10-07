@@ -1,2 +1,2 @@
 > [!NOTE]
-> Чтобы увидеть выходные данные`console.log`, нужен отдельный набор средств разработчика для консоли JavaScript. Дополнительные сведения о средствах F12 и Microsoft Edge DevTools см. в статье[Отладка надстроек с помощью средств разработчика в Windows 10](../testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md).
+> Чтобы увидеть выходные данные`console.log`, нужен отдельный набор средств разработчика для консоли JavaScript. Дополнительные сведения о средствах F12 и средствах разработчика Microsoft Edge см. в статье[Отладка надстроек с помощью средств разработчика в Windows](../testing/debug-add-ins-using-f12-developer-tools-on-windows.md).
