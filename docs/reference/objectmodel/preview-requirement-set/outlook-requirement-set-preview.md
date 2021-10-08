@@ -3,12 +3,12 @@ title: Outlook набор требований к предварительном
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
 ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d94956bc4adaa0910cdb54e6be406a84f594f3
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: 7e377725bc61b33d8b67729cf041a12255e3dba5
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138592"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237191"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -88,7 +88,7 @@ ms.locfileid: "60138592"
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 
-#### <a name="officedelaydeliverytime"></a>[Office. DelayDeliveryTime](/javascript/api/outlook/office.delaydeliverytime)
+#### <a name="officedelaydeliverytime"></a>[Office. DelayDeliveryTime](/javascript/api/outlook/office.delaydeliverytime?view=outlook-js-preview&preserve-view=true)
 
 Добавлен новый объект, который позволяет управлять датой и временем доставки сообщения в режиме Compose.
 
@@ -128,13 +128,13 @@ ms.locfileid: "60138592"
 
 ### <a name="office-theme"></a>Тема Office
 
-#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officeTheme)
+#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true#officeTheme)
 
 Добавлена возможность получения темы Office.
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 
-#### <a name="officeeventtypeofficethemechanged"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype)
+#### <a name="officeeventtypeofficethemechanged"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype?view=outlook-js-preview&preserve-view=true)
 
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
 
@@ -148,7 +148,7 @@ ms.locfileid: "60138592"
 
 ### <a name="session-data"></a>Данные сеансов
 
-#### <a name="officesessiondata"></a>[Office. SessionData](/javascript/api/outlook/office.sessiondata)
+#### <a name="officesessiondata"></a>[Office. SessionData](/javascript/api/outlook/office.sessiondata?view=outlook-js-preview&preserve-view=true)
 
 Добавлен новый объект, который представляет данные сеанса элемента.
 

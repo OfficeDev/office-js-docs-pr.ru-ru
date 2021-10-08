@@ -3,12 +3,12 @@ title: Outlook API надстройки 1.10
 description: Набор требований 1.10 для Outlook API надстройки.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b54d327d37acd7b2c7fcff100cc7dbe7a39187c0
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: a94e829b1656d7c3a33ff51918834c7ea6913967
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154776"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237499"
 ---
 # <a name="outlook-add-in-api-requirement-set-110"></a>Outlook API надстройки 1.10
 
@@ -30,11 +30,11 @@ ms.locfileid: "59154776"
 - Добавлена [Office.context.mailbox.item.disableClientSignatureAsync:](office.context.mailbox.item.md#methods)добавляется новая функция, которая отключает подпись клиента для отправки почтового ящика в режиме Compose.
 - Добавлена [Office.context.mailbox.item.getComposeTypeAsync:](/javascript/api/outlook/office.messagecompose?view=outlook-js-1.10&preserve-view=true#getComposeTypeAsync_options__callback_)добавляется новая функция, которая получает тип композитного сообщения в режиме Compose.
 - Добавлена [Office.context.mailbox.item.isClientSignatureEnabledAsync:](office.context.mailbox.item.md#methods)добавляется новая функция, которая проверяет, включена ли подпись клиента на элементе в режиме Compose.
-- Добавлены [Office. MailboxEnums.ActionType:](/javascript/api/outlook/office.mailboxenums.actiontype)Добавляет новый список. Он представляет тип настраиваемого действия в уведомлении.
+- Добавлены [Office. MailboxEnums.ActionType:](/javascript/api/outlook/office.mailboxenums.actiontype?view=outlook-js-1.10&preserve-view=true)Добавляет новый список. Он представляет тип настраиваемого действия в уведомлении.
 - Добавлен [Office.MailboxEnums.ComposeType:](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-1.10&preserve-view=true)Добавляет новый список, доступный в режиме Compose.
-- Добавлены [Office. MailboxEnums.ItemNotificationMessageType.InsightMessage:](/javascript/api/outlook/office.mailboxenums.itemnotificationmessagetype)добавляет новый `ItemNotificationMessageType` тип в список. Оно представляет сообщение уведомления с пользовательским действием.
-- Добавлены [Office. NotificationMessageAction:](/javascript/api/outlook/office.notificationmessageaction)добавляет новый объект, чтобы можно было определить настраиваемые действия для `InsightMessage` уведомления.
-- Добавлены [Office. NotificationMessageDetails.actions:](/javascript/api/outlook/office.notificationmessagedetails#actions)добавляет новое свойство, которое позволяет добавлять уведомление `InsightMessage` с помощью настраиваемой меры.
+- Добавлены [Office. MailboxEnums.ItemNotificationMessageType.InsightMessage:](/javascript/api/outlook/office.mailboxenums.itemnotificationmessagetype?view=outlook-js-1.10&preserve-view=true)добавляет новый `ItemNotificationMessageType` тип в список. Оно представляет сообщение уведомления с пользовательским действием.
+- Добавлены [Office. NotificationMessageAction:](/javascript/api/outlook/office.notificationmessageaction?view=outlook-js-1.10&preserve-view=true)добавляет новый объект, чтобы можно было определить настраиваемые действия для `InsightMessage` уведомления.
+- Добавлены [Office. NotificationMessageDetails.actions:](/javascript/api/outlook/office.notificationmessagedetails?view=outlook-js-1.10&preserve-view=true#actions)добавляет новое свойство, которое позволяет добавлять уведомление `InsightMessage` с помощью настраиваемой меры.
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Обзор API Outlook надстройки (набор требований 1.7)
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f9e20391113cddb78750e5933d2dd4ad11ba2a3
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 51cd018d5e4438daf76b53e00195671b63afd50f
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154368"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237345"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
@@ -43,7 +43,7 @@ ms.locfileid: "59154368"
 - Добавлен объект [Office.MailboxEnums.RecurrenceTimeZone](/javascript/api/outlook/office.mailboxenums.recurrencetimezone?view=outlook-js-1.7&preserve-view=true). Добавляет новое перечисление, указывающее часовой пояс повторения.
 - Добавлен объект [Office.MailboxEnums.RecurrenceType](/javascript/api/outlook/office.mailboxenums.recurrencetype?view=outlook-js-1.7&preserve-view=true). Добавляет новое перечисление, указывающее тип повторения.
 - Добавлен объект [ Office.MailboxEnums.WeekNumber](/javascript/api/outlook/office.mailboxenums.weeknumber?view=outlook-js-1.7&preserve-view=true). Добавляет новое перечисление, указывающее неделю месяца.
-- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype). Добавляет поддержку событий `RecurrenceChanged`, `RecipientsChanged` и `AppointmentTimeChanged`.
+- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype?view=outlook-js-1.7&preserve-view=true). Добавляет поддержку событий `RecurrenceChanged`, `RecipientsChanged` и `AppointmentTimeChanged`.
 
 ## <a name="see-also"></a>См. также
 

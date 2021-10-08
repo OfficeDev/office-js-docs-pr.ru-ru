@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Набор требований 1.8 для Outlook API надстройки.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f5aa192d783fdd08155dfbe80a509de72ccd402f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 956bf1ed7109ce274d47ad6f2fda3999d1db913b
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151570"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237765"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
@@ -48,13 +48,13 @@ ms.locfileid: "59151570"
 - Добавлен объект [Office.context.mailbox.item.getItemIdAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, получающий идентификатор сохраненного элемента встречи или сообщения.
 - Добавлен объект [Office.context.mailbox.item.getSharedPropertiesAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, позволяющий получить объект, представляющий свойства sharedProperties элемента встречи или сообщения.
 - Добавлен объект [Office.context.mailbox.item.internetHeaders](office.context.mailbox.item.md#properties). Добавляет новое свойство, представляющее настраиваемые заголовки Интернета в элементе сообщения. Только в режиме создания.
-- Изменен объект [Event.completed](/javascript/api/office/office.addincommands.event#completed_options_). Добавляет новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением (`allowEvent`). Это значение используется для отмены выполнения события.
+- Изменен объект [Event.completed](/javascript/api/office/office.addincommands.event?view=outlook-js-1.8&preserve-view=true#completed_options_). Добавляет новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением (`allowEvent`). Это значение используется для отмены выполнения события.
 - Добавлен объект [Office.MailboxEnums.AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.8&preserve-view=true). Добавляет новое перечисление, указывающее форматирование, применяемое к содержимому вложения.
 - Добавлен объект [Office.MailboxEnums.AttachmentStatus](/javascript/api/outlook/office.mailboxenums.attachmentstatus?view=outlook-js-1.8&preserve-view=true). Добавляет новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.
 - Добавлен объект [Office.MailboxEnums.CategoryColor](/javascript/api/outlook/office.mailboxenums.categorycolor?view=outlook-js-1.8&preserve-view=true). Добавляет новое перечисление, указывающее цвета, доступные для сопоставления с категориями.
 - Добавлен объект [Office.MailboxEnums.DelegatePermissions](/javascript/api/outlook/office.mailboxenums.delegatepermissions?view=outlook-js-1.8&preserve-view=true). Добавляет перечисление нового битового флага, указывающее разрешения на делегирование.
 - Добавлен объект [Office.MailboxEnums.LocationType](/javascript/api/outlook/office.mailboxenums.locationtype?view=outlook-js-1.8&preserve-view=true). Добавляет новое перечисление, определяющее тип расположения встречи.
-- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype). Добавляет поддержку событий `AttachmentsChanged` и `EnhancedLocationsChanged`.
+- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype?view=outlook-js-1.8&preserve-view=true). Добавляет поддержку событий `AttachmentsChanged` и `EnhancedLocationsChanged`.
 
 ## <a name="see-also"></a>См. также
 

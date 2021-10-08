@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.4.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 18608e5c105e544783a54eee6fc86df0e0619185
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e9e39f3682748498dec38708ee61568d8335b02a
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153930"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237618"
 ---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
@@ -23,9 +23,9 @@ ms.locfileid: "59153930"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен [Office.context.ui.displayDialogAsync:](/javascript/api/office/office.ui#displayDialogAsync_startAddress__options__callback_)отображает диалоговое окно в Office приложении.
-- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_). Доставляет сообщение из диалогового окна родительской странице.
-- Добавлен объект [Dialog](/javascript/api/office/office.dialog). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displayDialogAsync_startAddress__options__callback_).
+- Добавлен [Office.context.ui.displayDialogAsync:](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#displayDialogAsync_startAddress__options__callback_)отображает диалоговое окно в Office приложении.
+- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#messageParent_message__messageOptions_). Доставляет сообщение из диалогового окна родительской странице.
+- Добавлен объект [Dialog](/javascript/api/office/office.dialog?view=outlook-js-1.4&preserve-view=true). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#displayDialogAsync_startAddress__options__callback_).
 
 ## <a name="see-also"></a>См. также
 

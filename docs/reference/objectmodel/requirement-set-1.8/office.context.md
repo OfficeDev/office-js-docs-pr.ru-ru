@@ -3,12 +3,12 @@ title: Office.context — набор требований 1.8
 description: Office. Участники объектов context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.8.
 ms.date: 12/03/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d2c0ef2380f7744ec37c4b3a09735cda170cea
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 94fc4e17064c6e18ec301afcb6b813fb3b0cc0c3
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151575"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237730"
 ---
 # <a name="context-mailbox-requirement-set-18"></a>контекст (набор требований к почтовым ящикам 1.8)
 
@@ -27,9 +27,9 @@ Office.context предоставляет общие интерфейсы, ис�
 
 | Свойство | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [диагностика](#diagnostics-contextinformation) | Создание<br>Чтение | [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.8&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [хост](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.8&preserve-view=true) | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [платформа](#platform-platformtype) | Создание<br>Чтение | [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.8&preserve-view=true) | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
@@ -82,13 +82,13 @@ function write(message){
 ---
 ---
 
-#### <a name="diagnostics-contextinformation"></a>диагностика: [ContextInformation](/javascript/api/office/office.contextinformation)
+#### <a name="diagnostics-contextinformation"></a>диагностика: [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.8&preserve-view=true)
 
 Получает сведения об среде, в которой работает надстройка.
 
 ##### <a name="type"></a>Тип
 
-*   [ContextInformation](/javascript/api/office/office.contextinformation)
+*   [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 
@@ -154,7 +154,7 @@ function write(message){
 ---
 ---
 
-#### <a name="host-hosttype"></a>host: [HostType](/javascript/api/office/office.hosttype)
+#### <a name="host-hosttype"></a>host: [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.8&preserve-view=true)
 
 Получает Office приложение, в которое размещена надстройка.
 
@@ -163,7 +163,7 @@ function write(message){
 
 ##### <a name="type"></a>Тип
 
-*   [HostType](/javascript/api/office/office.hosttype)
+*   [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 
@@ -183,7 +183,7 @@ console.log(JSON.stringify(Office.context.host));
 ---
 ---
 
-#### <a name="platform-platformtype"></a>платформа: [PlatformType](/javascript/api/office/office.platformtype)
+#### <a name="platform-platformtype"></a>платформа: [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.8&preserve-view=true)
 
 Предоставляет платформу, на которой запущена надстройка.
 
@@ -192,7 +192,7 @@ console.log(JSON.stringify(Office.context.host));
 
 ##### <a name="type"></a>Тип
 
-*   [PlatformType](/javascript/api/office/office.platformtype)
+*   [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 
@@ -212,13 +212,13 @@ console.log(JSON.stringify(Office.context.platform));
 ---
 ---
 
-#### <a name="requirements-requirementsetsupport"></a>требования: [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport)
+#### <a name="requirements-requirementsetsupport"></a>требования: [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.8&preserve-view=true)
 
 Предоставляет метод определения, какие наборы требований поддерживаются в текущем приложении и платформе.
 
 ##### <a name="type"></a>Тип
 
-*   [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport)
+*   [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 
@@ -238,7 +238,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 ---
 ---
 
-#### <a name="roamingsettings-roamingsettings"></a>roamingSettings: [RoamingSettings](/javascript/api/outlook/office.roamingsettings)
+#### <a name="roamingsettings-roamingsettings"></a>roamingSettings: [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.8&preserve-view=true)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
@@ -246,7 +246,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 ##### <a name="type"></a>Тип
 
-*   [RoamingSettings](/javascript/api/outlook/office.RoamingSettings)
+*   [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 
@@ -261,13 +261,13 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 ---
 ---
 
-#### <a name="ui-ui"></a>ui: [пользовательский интерфейс](/javascript/api/office/office.ui)
+#### <a name="ui-ui"></a>ui: [пользовательский интерфейс](/javascript/api/office/office.ui?view=outlook-js-1.8&preserve-view=true)
 
 Предоставляет объекты и методы, которые можно использовать для создания и управления компонентами пользовательского интерфейса, такими как диалоговое окно, в Office надстройки.
 
 ##### <a name="type"></a>Тип
 
-*   [UI](/javascript/api/office/office.ui)
+*   [UI](/javascript/api/office/office.ui?view=outlook-js-1.8&preserve-view=true)
 
 ##### <a name="requirements"></a>Требования
 

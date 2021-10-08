@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.3.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 74ffc618f0f3555eef47abb38bb5118ac7177b9a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: a8688d5d63cd658084bd0ba4601ed85a631bf8d8
+ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154830"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60237771"
 ---
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
@@ -31,7 +31,7 @@ ms.locfileid: "59154830"
 
 - Добавлен метод [Body.getAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#getAsync_coercionType__options__callback_). Возвращает текущий текст в указанном формате.
 - Добавлен метод [Body.setAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#setAsync_data__options__callback_). Заменяет весь текст указанным текстом.
-- Добавлен объект [Event](/javascript/api/office/office.addincommands.event). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
+- Добавлен объект [Event](/javascript/api/office/office.addincommands.event?view=outlook-js-1.3&preserve-view=true). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
 - Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#methods). Закрывает текущий создаваемый элемент.
 - Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#methods). Асинхронно сохраняет элемент.
 - Добавлено свойство [Office.context.mailbox.item.notificationMessages](office.context.mailbox.item.md#properties). Получает сообщения уведомления для элемента.
