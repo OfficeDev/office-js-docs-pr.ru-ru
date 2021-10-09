@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 10/05/2021
+ms.date: 10/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1593a86ec188364a0f5d14bbf6ac99081b8b5c81
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: 4998b84da9bdddac258e0531f6ce431ea374627b
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138487"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250429"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -22,7 +22,7 @@ Office Надстройки — это веб-приложения, которы
 > [!IMPORTANT]
 > **Internet Explorer по-прежнему Office надстройки**
 >
-> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновкулярной покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поводится в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
+> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая версии с одновкулярной покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поясняется в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
 >
 > - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
 > - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
@@ -37,7 +37,7 @@ Office Надстройки — это веб-приложения, которы
 |Android|любой|Неприменимо|Chrome.|
 |Windows 7, 8.1, 10, 11 | подписка Office 2013 Office 2019 г.|Всё равно|Internet Explorer 11|
 |Windows 10, 11 | подписка Office 2021 или более поздней|Да|Microsoft Edge<sup>1</sup> с WebView2 (Chromium основе)|
-|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8.1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903,<br>Windows 11 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>2</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903,<br>Windows 11 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>2</sup>| Всё равно|Microsoft Edge<sup>1, 3 с</sup> оригинальным WebView (EdgeHTML)|

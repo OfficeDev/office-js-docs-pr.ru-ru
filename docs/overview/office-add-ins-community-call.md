@@ -1,18 +1,26 @@
 ---
 title: Microsoft Office Вызов сообщества надстройки
-description: Ежемесячное расписание Microsoft Office и ресурсы сообщества надстройки.
-ms.date: 09/29/2021
+description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
+ms.date: 10/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e22840b4a47354c698a20575a000f370ad8c0518
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: 85d0f0d697c5c66145536acb8db88ffe66acf278
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138452"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250401"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
 Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по московскому времени. Вы можете скачать приглашение календаря по [https://aka.ms/officeaddinscommunitycall](https://aka.ms/officeaddinscommunitycall) ссылке .
+
+## <a name="agenda-for-october-13th-call"></a>Повестка дня на 13 октября
+
+- Обновления API word
+- Обновления API для Outlook Mac
+- Демонстрация примера кода: Hello world
+
+## <a name="previous-calls"></a>Предыдущие вызовы
 
 Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
 

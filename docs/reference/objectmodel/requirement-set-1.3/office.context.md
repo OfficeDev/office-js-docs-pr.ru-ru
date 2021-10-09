@@ -1,14 +1,14 @@
 ---
 title: Office.context — набор требований 1.3
 description: Office. Участники объектов context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.3.
-ms.date: 12/02/2020
+ms.date: 10/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2821e0a13b892279ec7e9977ad0e7a32e9e28fc0
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: 96473c8406d82757b43965247af4567b05632dd9
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237212"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250394"
 ---
 # <a name="context-mailbox-requirement-set-13"></a>контекст (требования к почтовым ящикам 1.3)
 
@@ -29,7 +29,7 @@ Office.context предоставляет общие интерфейсы, ис�
 |---|---|---|:---:|
 | [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [диагностика](#diagnostics-contextinformation) | Создание<br>Чтение | [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [требования](#requirements-requirementsetsupport) | Создание<br>Чтение | [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [roamingSettings](#roamingsettings-roamingsettings) | Создание<br>Чтение | [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.3&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
@@ -172,6 +172,9 @@ function write(message){
 ```js
 console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox", "1.1")));
 ```
+
+> [!IMPORTANT]
+> В настоящее время существует ошибка, в которой ошибочно возвращается Outlook в Интернете `isSetSupported('mailbox', '1.3')` `true` по Exchange 2013 г. Чтобы узнать больше о поддерживаемых сочетаниях наборов требований, Exchange серверов и Outlook клиентов, обратитесь к наборам требований, поддерживаемых Exchange серверами и [Outlook клиентами.](../../requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients)
 
 <br>
 

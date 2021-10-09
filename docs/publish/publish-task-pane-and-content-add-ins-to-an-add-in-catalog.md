@@ -1,14 +1,14 @@
 ---
 title: Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
-ms.date: 07/27/2021
+ms.date: 10/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 786fbd24790a1b8205fc3b0e8a15ce591cf66ca4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 80a790ada4425b13880b9eeedfbd002dc818b927
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154560"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250513"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 
@@ -94,4 +94,4 @@ ms.locfileid: "59154560"
 1. В диалоговом окне "Надстройки Office" выберите вкладку **МОЯ ОРГАНИЗАЦИЯ**. Отобразится список надстроек Office.
 1. Выберите надстройку Office и нажмите **Добавить**.
 
-Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Соответствующие параметры политики доступны в файлах административных шаблонов [(ADMX/ADML) для Приложения Microsoft 365, Office 2019 и Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) г. и находятся в каталогах **Конфигурация пользователей\Политики\Административные шаблоны\Microsoft Office 2016\Security Параметры\Trust Center\Trusted Catalogs**.
+Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Соответствующие параметры политики доступны в файлах административных шаблонов [(ADMX/ADML) для Приложения Microsoft 365, Office LTSC 2021, Office 2019 и Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) г. и доступны в статье **Конфигурация пользователей\Политики\Административные шаблоны\Microsoft Office 2016\Security Параметры\Центр доверия\Доверенные каталоги**.

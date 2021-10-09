@@ -1,15 +1,15 @@
 ---
 title: Наборы настраиваемой функции
 description: Сведения о наборах пользовательских функций для Excel API JavaScript.
-ms.date: 10/05/2021
+ms.date: 10/08/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: b9141042173799a96657db1bb7e2c603d6c358cc
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: 6938da8e810dbd91dce9a3cc538bc14ad9974eda
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138461"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250527"
 ---
 # <a name="custom-functions-requirement-sets"></a>Наборы настраиваемой функции
 
@@ -20,9 +20,6 @@ ms.locfileid: "60138461"
 | CustomFunctionsRuntime 1.3 | 16.0.14326.20454 или более поздней | 16.0.13127.20296 или более поздней | Не поддерживается | 16.40.20081000 или более поздней | Июль 2020 г. |
 | CustomFunctionsRuntime 1.2 | 16.0.14326.20454 или более поздней | 16.0.12527.20194 или более поздней | Не поддерживается | 16.34.20020900 или более поздней | Январь 2020 г. |
 | CustomFunctionsRuntime 1.1 | 16.0.14326.20454 или более поздней | 16.0.12527.20092 или более поздней | Не поддерживается | 16.34 или более поздней | Май 2019 г. |
-
-> [!NOTE]
-> Excel пользовательские функции не поддерживаются в Office 2019 г. или ранее (разовая покупка).
 
 ## <a name="customfunctionsruntime-11-12-and-13"></a>CustomFunctionsRuntime 1.1, 1.2 и 1.3
 
