@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 10/05/2021
+ms.date: 10/08/2021
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: e88e7a028136f4c7c6551c2d4ee98fa3539315cf
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: d824889c1a0d3718ca4a36969b620840cb529d94
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237485"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250450"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -48,6 +48,9 @@ else {
   // Provide alternate flow/logic.
 }
 ```
+
+> [!IMPORTANT]
+> В настоящее время существует ошибка, из-за которой `isSetSupported('Mailbox', '1.3')` неверно возвращает `true` в Outlook в Интернете при использовании Exchange 2013. Дополнительные сведения о поддерживаемых сочетаниях наборов обязательных элементов, серверов Exchange и клиентов Outlook см. в разделе [Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook](#requirement-sets-supported-by-exchange-servers-and-outlook-clients).
 
 Кроме того, разработчики могут проверить наличие более новых API с помощью стандартных методов JavaScript.
 

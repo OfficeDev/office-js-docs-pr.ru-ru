@@ -1,103 +1,158 @@
 ---
 title: 'Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач'
 description: Узнайте, как обмениваться данными и событиями между пользовательскими функциями и областью задач в Excel.
-ms.date: 09/23/2021
+ms.date: 10/07/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 714f7dc62c7357a67ac26179dee6abc1d229ea49
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: 9ca494cb458755e2878bbc93a4a4fc36cc69138e
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990532"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250443"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane"></a>Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач
 
-Вы можете настроить свою надстройку Excel для использования общей среды выполнения. Это позволяет предоставлять общий доступ к глобальным данным или отправлять события между областью задач и пользовательскими функциями.
-
-Для большинства пользовательских функций рекомендуется пользоваться общей средой выполнения, если у вас нет особой причины применять пользовательскую функцию без области задач (без пользовательского интерфейса).
-
-В этом учебном руководстве предполагается, что вы знакомы с использованием генератора Yo Office для создания проектов надстроек. Если вы еще этого не сделали, рекомендуется ознакомиться с [руководством по пользовательским функциям в Excel](excel-tutorial-create-custom-functions.md).
+Общий доступ к глобальным данным и отправка событий между областью задач и пользовательскими функциями надстройки Excel с общей средой выполнения. Рекомендуется использовать общую среду выполнения для большинства пользовательских функций, если у вас нет особой причины применять пользовательскую функцию без области задач (без пользовательского интерфейса). В этом учебном руководстве предполагается, что вы знакомы с использованием генератора Yo Office для создания проектов надстроек. Если вы еще этого не сделали, рекомендуется ознакомиться с [руководством по пользовательским функциям в Excel](excel-tutorial-create-custom-functions.md).
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+Используйте [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office), чтобы создать проект надстройки Excel.
 
-```command line
-yo office
-```
+- Чтобы создать надстройку Excel с пользовательскими функциями, выполните указанную ниже команду.
+    
+    ```command&nbsp;line
+    yo office --projectType excel-functions --name 'Excel shared runtime add-in' --host excel --js true
+    ```
 
-- Выберите тип проекта: **проект надстройки пользовательских функций Excel**
-- Выберите тип сценария: **JavaScript**
-- Как вы хотите назвать надстройку? **Моя надстройка Office**
-
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-excel-project.png)
-
-После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+Генератор создаст проект и установит вспомогательные компоненты Node.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-1. Запустите Visual Studio Code и откройте проект **Моя надстройка Office**.
-2. Откройте файл **manifest.xml**.
-3. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно быть **длительным**, чтобы пользовательские функции могли работать даже после закрытия области задач.
+Выполните следующие действия, чтобы настроить проект надстройки для использования общей среды выполнения.
 
-   ```xml
-   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
-     <Hosts>
-       <Host xsi:type="Workbook">
-         <Runtimes>
-           <Runtime resid="ContosoAddin.Url" lifetime="long" />
-         </Runtimes>
-       <AllFormFactors>
-   ```
+1. Запустите Visual Studio Code и откройте созданный вами проект надстройки.
+1. Откройте файл **manifest.xml**.
+1. Замените (или добавьте) следующий раздел XML `<Requirements>`, чтобы требовать [набор обязательных элементов общей среды выполнения](../reference/requirement-sets/shared-runtime-requirement-sets.md).
 
-> [!NOTE]
-> Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если же эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в разделах документации "[Элемент Runtimes](../reference/manifest/runtimes.md)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
+    ```xml
+    <Requirements>
+      <Sets DefaultMinVersion="1.1">
+        <Set Name="SharedRuntime" MinVersion="1.1"/>
+      </Sets>
+    </Requirements>
+    ```
 
-4. В элементе `<Page>` замените расположение источника с **Functions.Page.Url** на **ContosoAddin.Url**.
+    После обновления ваш XML-манифест должен отображаться в следующем порядке.
+
+    ```xml
+    <Hosts>
+      <Host Name="..."/>
+    </Hosts>
+    <Requirements>
+      <Sets DefaultMinVersion="1.1">
+        <Set Name="SharedRuntime" MinVersion="1.1"/>
+      </Sets>
+    </Requirements>
+    <DefaultSettings>
+    ```
+
+1. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно иметь значение **long**, чтобы код надстройки мог выполняться даже после закрытия области задач. Значение `resid` — **Taskpane.Url**, указывающее расположение файла **taskpane.html** в разделе `<bt:Urls>` в нижней части **manifest.xml**.
+    
+    ```xml
+    <Runtimes>
+      <Runtime resid="Taskpane.Url" lifetime="long" />
+    </Runtimes>
+    ```
+    
+    > [!IMPORTANT]
+    > Раздел `<Runtimes>` должен быть введен после элемента `<Host xsi:type="...">` точно в таком же порядке, как показано в следующем XML-коде.
+
+    ```xml
+    <VersionOverrides ...>
+      <Hosts>
+        <Host xsi:type="...">
+          <Runtimes>
+            <Runtime resid="Taskpane.Url" lifetime="long" />
+          </Runtimes>
+        ...
+        </Host>
+    ```
+    
+    > [!NOTE]
+    > Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в статьях "[Элемент Runtimes](../reference/manifest/runtimes.md)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
+
+1. Найдите элемент `<Page>`. Затем измените расположение источника с **Functions.Page.Url** на **Taskpane.Url**.
 
    ```xml
    <AllFormFactors>
    ...
    <Page>
-   <SourceLocation resid="ContosoAddin.Url"/>
+     <SourceLocation resid="Taskpane.Url"/>
    </Page>
    ...
    ```
 
-5. В разделе `<DesktopFormFactor>` измените **FunctionFile** с **Commands.Url** на **ContosoAddin.Url**.
+1. Найдите тег `<FunctionFile ...>` и измените `resid` с **Commands.Url** на **Taskpane.Url**.
 
-   ```xml
-   <DesktopFormFactor>
-   <GetStarted>
-   ...
-   </GetStarted>
-   <FunctionFile resid="ContosoAddin.Url"/>
-   ```
+    ```xml
+    </GetStarted>
+    ...
+    <FunctionFile resid="Taskpane.Url"/>
+    ...
+    ```
 
-6. В разделе `<Action>` измените расположение источника с **Taskpane.Url** на **ContosoAddin.Url**.
+1. Сохраните файл **manifest.xml**.
 
-   ```xml
-   <Action xsi:type="ShowTaskpane">
-   <TaskpaneId>ButtonId1</TaskpaneId>
-   <SourceLocation resid="ContosoAddin.Url"/>
-   </Action>
-   ```
+## <a name="configure-the-webpackconfigjs-file"></a>Настройка файла webpack.config.js.
 
-7. Добавьте новый **Url-идентификатор** для **ContosoAddin.Url**, указывающий на **taskpane.html**.
+Файл **webpack.config.js** создает несколько загрузчиков среды выполнения. Вам требуется изменить его, чтобы загружать только общую среду выполнения JavaScript с помощью файла **taskpane.html**.
 
-   ```xml
-   <bt:Urls>
-   <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/dist/functions.js"/>
-   ...
-   <bt:Url id="ContosoAddin.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
-   ...
-   ```
+1. Откройте файл **webpack.config.js**.
+1. Перейдите в раздел `plugins:`.
+1. Удалите следующий подключаемый модуль `functions.html`, если он существует.
+    
+    ```javascript
+    new HtmlWebpackPlugin({
+        filename: "functions.html",
+        template: "./src/functions/functions.html",
+        chunks: ["polyfill", "functions"]
+      })
+    ```
 
-8. Сохраните изменения и перестройте проект.
+1. Удалите следующий подключаемый модуль `commands.html`, если он существует.
 
-   ```command line
+    ```javascript
+    new HtmlWebpackPlugin({
+        filename: "commands.html",
+        template: "./src/commands/commands.html",
+        chunks: ["polyfill", "commands"]
+      })
+    ```
+
+1. Если вы удалили подключаемый модуль `functions` или `commands`, добавьте их в качестве `chunks`. В коде JavaScript ниже показана обновленная запись, если вы удалили оба подключаемых модуля: `functions` и `commands`.
+    
+    ```javascript
+      new HtmlWebpackPlugin({
+        filename: "taskpane.html",
+        template: "./src/taskpane/taskpane.html",
+        chunks: ["polyfill", "taskpane", "commands", "functions"]
+      })
+    ```
+    
+1. Сохраните изменения и выполните повторную сборку проекта.
+
+   ```command&nbsp;line
    npm run build
+   ```
+    
+    > [!NOTE]
+    > Вы также можете удалить файлы **functions.html** и **commands.html**. **Taskpane.html** загружает код **functions.js** и **commands.js** в общую среду выполнения JavaScript с помощью созданных вами обновлений webpack.
+    
+1. Сохраните изменения и запустите проект. Убедитесь, что он загружается и выполняется без ошибок.
+    
+   ```command&nbsp;line
+   npm run start
    ```
 
 ## <a name="share-state-between-custom-function-and-task-pane-code"></a>Общий доступ к состоянию для пользовательской функции и кода области задач
@@ -217,3 +272,7 @@ yo office
 
 > [!NOTE]
 > Как показано в этой статье, при настройке проекта пользовательские функции и область задач совместно используют контекст. Вызов некоторых API Office из пользовательских функций невозможен. Дополнительные сведения см. в статье [Вызов API Microsoft Excel из пользовательской функции](../excel/call-excel-apis-from-custom-function.md).
+
+## <a name="see-also"></a>См. также
+
+- [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

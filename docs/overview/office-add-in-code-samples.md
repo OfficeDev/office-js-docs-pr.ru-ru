@@ -1,14 +1,14 @@
 ---
 title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
-ms.date: 09/09/2021
+ms.date: 10/07/2021
 localization_priority: high
-ms.openlocfilehash: fb595273fa890c6eb16dbfe03fe102a2a3ee6a9a
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: a7e84fb86fb795afc3f73385e2f577458d85621a
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59443804"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250485"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
@@ -26,6 +26,7 @@ ms.locfileid: "59443804"
 | Имя                | Описание         |
 |:--------------------|:--------------------|
 | [Открытие в Teams](/samples/officedev/pnp-officeaddins/office-excel-add-in-open-in-teams/) | Создайте новую электронную таблицу Excel в Microsoft Teams, содержащую определенные вами данные.|
+| [Вставка внешнего файла Excel и его заполнение данными JSON](/samples/officedev/pnp-officeaddins/excel-add-in-insert-external-file/)  | Вставьте существующий шаблон из внешнего файла Excel в открытую книгу Excel. Затем заполните шаблон данными веб-службы JSON. |
 | [Создание настраиваемых контекстных вкладок на ленте](/samples/officedev/pnp-officeaddins/office-add-in-contextual-tabs/) | Создайте настраиваемую контекстную вкладку на ленте в пользовательском интерфейсе Office. В примере создается таблица: если пользователь перемещает фокус внутри нее, отображается настраиваемая вкладка. Если пользователь перемещается за ее пределы, настраиваемая вкладка будет скрыта. |
 | [Использование сочетаний клавиш для действий надстройки Office](/samples/officedev/pnp-officeaddins/office-add-in-keyboard-shortcuts) | Настройте базовый проект надстройки Excel с использованием сочетаний клавиш. |
 | [Пример пользовательской функции, использующей рабочий веб-процесс](/samples/officedev/pnp-officeaddins/excel-custom-function-web-worker-pattern/) | Используйте рабочие веб-процессы в пользовательских функциях, чтобы предотвратить блокировку пользовательского интерфейса надстройки Office. |
@@ -47,8 +48,8 @@ ms.locfileid: "59443804"
 | [Получение данных OneDrive с помощью Microsoft Graph и msal.js в надстройке Office](/samples/officedev/pnp-officeaddins/office-add-in-auth-graph-react/) | Создайте надстройку Office как одностраничное приложение без серверной части, которое подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу.  |
 | [Проверка подлинности надстройки Office для Microsoft Graph](/samples/officedev/pnp-officeaddins/office-add-in-auth-aspnet-graph/) | Узнайте, как создать надстройку Microsoft Office, которая подключается к Microsoft Graph, и получить доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу. |
 | [Проверка подлинности надстройки Outlook для Microsoft Graph](/samples/officedev/pnp-officeaddins/outlook-add-in-auth-aspnet-graph/) | Создайте надстройку Outlook, которая подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы создать новое сообщение электронной почты. |
-| [Надстройка Office с единым входом на ASP.NET](/samples/officedev/pnp-officeaddins/office-add-in-sso-aspnet/) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример построен на ASP.NET. |
-| [Надстройка Office с единым входом на Node.js](/samples/officedev/pnp-officeaddins/office-add-in-sso-nodejs/) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример построен на Node.js.|
+| [Надстройка Office с единым входом на ASP.NET](/samples/officedev/pnp-officeaddins/office-add-in-sso-aspnet/) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе ASP.NET. |
+| [Надстройка Office с единым входом на Node.js](/samples/officedev/pnp-officeaddins/office-add-in-sso-nodejs/) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе Node.js.|
 
 ## <a name="additional-samples"></a>Дополнительные примеры
 
@@ -60,7 +61,7 @@ ms.locfileid: "59443804"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Присоединитесь к программе для разработчиков Microsoft 365. Получите бесплатные инструменты, песочницу и другие ресурсы, чтобы создать решения для платформы Microsoft 365.
+Присоединитесь к программе для разработчиков Microsoft 365. Получите бесплатные инструменты, песочницу и другие ресурсы, чтобы создавать решения для платформы Microsoft 365.
 
 - [Бесплатная песочница для разработчиков](https://developer.microsoft.com/microsoft-365/dev-program#Subscription) Получите бесплатную 90-дневную подписку Microsoft 365 E5 для разработчиков с возможностью продления.
 - [Примеры пакетов данных](https://developer.microsoft.com/microsoft-365/dev-program#Sample) Автоматически настройте песочницу, установив пользовательские данные и содержимое для использования при создании решений.

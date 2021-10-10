@@ -1,14 +1,14 @@
 ---
 title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
-ms.date: 07/27/2021
+ms.date: 10/08/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 0ad18ca62014ac8b3f4c3710680cd5d97b476215
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 2685a157d6c478afc4343d54f52e4337472d015f
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150790"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250436"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -85,9 +85,9 @@ ms.locfileid: "59150790"
 В настоящее время команды надстроек поддерживаются на следующих платформах (за исключением ограничений, указанных в подразделах [Возможности команд](#command-capabilities) ранее).
 
 - Office для Windows (сборка 16.0.6769+, подключенная к подписке на Microsoft 365)
-- Office 2019 для Windows
+- Office 2019 или более поздней версии для Windows
 - Office для Mac (сборка 15.33+, подключенная к подписке на Microsoft 365)
-- Office 2019 для Mac
+- Office 2019 или более поздней версии для Mac
 - Office в Интернете
 
 > [!NOTE]

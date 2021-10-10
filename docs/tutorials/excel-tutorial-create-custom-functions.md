@@ -1,15 +1,15 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: В этом руководстве вы создадите надстройку Excel, содержащую пользовательскую функцию, которая может выполнять вычисления, запрашивать веб-данные или потоковые веб-данные.
-ms.date: 07/07/2021
+ms.date: 10/08/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: f975adeec36490482c2fb54d2455bc15f8f17c78
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 7f8a0cb7fcccce4861d77f23c0f3099fd1af2ec5
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153801"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250457"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -26,11 +26,11 @@ ms.locfileid: "59153801"
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-* Excel для Windows (версия 1904 или более поздняя, подключенная к подписке на Microsoft 365) или Excel в Интернете
+* Excel для Windows (версии 1904 или более поздней) или Excel в Интернете.
 
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
- Чтобы начать, создайте проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит в вашем проекте некоторые готовые пользовательские функции, которые можно попробовать. Если вы уже с помощью краткого руководства по пользовательским функциям создали проект, то продолжайте работать с ним и [пропустите этот шаг](#create-a-custom-function-that-requests-data-from-the-web).
+ Чтобы начать, создайте проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит в вашем проекте некоторые готовые пользовательские функции, которые можно попробовать. Если вы уже с помощью краткого руководства по пользовательским функциям создали проект, продолжайте работать с ним и пропустите [этот шаг](#create-a-custom-function-that-requests-data-from-the-web).
 
 1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 

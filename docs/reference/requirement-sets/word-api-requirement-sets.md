@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word.
-ms.date: 05/05/2021
+ms.date: 10/08/2021
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: dba512af0228b8ee7bb9e7ff54654c779e4b3ca5
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 88d49b860cb832f59e8e2a631f0c4a3c57698306
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154895"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250534"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -34,7 +34,7 @@ ms.locfileid: "59154895"
 > [!NOTE]
 > Бессрочные версии Office поддерживают следующие наборы обязательных элементов:
 >
-> - Office 2019 поддерживает WordApi 1.3 и более ранние версии.
+> - Office 2019 и Office 2021 поддерживают WordApi 1.3 и более ранние версии.
 > - Office 2016 поддерживает только набор обязательных элементов WordApi 1.1.
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office

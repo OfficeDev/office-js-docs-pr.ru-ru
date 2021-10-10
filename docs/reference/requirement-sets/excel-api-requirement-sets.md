@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 05/05/2021
+ms.date: 10/08/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: c2082ff33de42e58753231008e46d01afff757dd
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: d6e8ea8fecf2f5495eb7d0c7ac5c3db6952e8b9a
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153809"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250541"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -28,6 +28,7 @@ ms.locfileid: "59153809"
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Используйте последнюю версию Office, чтобы воспользоваться предварительными версиями API (может потребоваться присоединиться к [программе предварительной оценки Office](https://insider.office.com)). |
 | [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](excel-api-online-requirement-set.md)) |
+| [ExcelApi 1.13](excel-api-1-13-requirement-set.md) | Версия 2102 (сборка 13801.20738) или более поздняя | 16.50 или более поздняя | 16.50 или более поздняя | Июнь 2021 г. |
 | [ExcelApi 1.12](excel-api-1-12-requirement-set.md) | Версия 2008 (сборка 13127.20408) или более поздняя | 16.40 или более поздняя | 16.40 или более поздняя | Сентябрь 2020 г. |
 | [ExcelApi 1.11](excel-api-1-11-requirement-set.md) | Версия 2002 (сборка 12527.20470) или более поздняя | 16.35 или более поздняя | 16.33 или более поздняя | Май 2020 г. |
 | [ExcelApi 1.10](excel-api-1-10-requirement-set.md) | Версия 1907 (сборка 11929.20306) или более поздняя | 16.0 или более поздняя | 16.30 или более поздняя версия | Октябрь 2019 г. |
@@ -44,6 +45,7 @@ ms.locfileid: "59153809"
 > [!NOTE]
 > Бессрочные версии Office поддерживают следующие наборы обязательных элементов:
 >
+> - Office 2021 поддерживает ExcelApi 1.13 и более ранние версии.
 > - Office 2019 поддерживает ExcelApi 1.8 и более ранние версии.
 > - Office 2016 поддерживает только набор обязательных элементов ExcelApi 1.1.
 

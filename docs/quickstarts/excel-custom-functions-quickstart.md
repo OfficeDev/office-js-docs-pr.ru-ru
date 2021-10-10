@@ -1,15 +1,15 @@
 ---
-ms.date: 08/04/2021
+ms.date: 10/08/2021
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: f503948b8f468234221ee8713ea4654a7cc76c07
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 1bbd519fa49d4518baacf4f8d0b6d88af38f3c94
+ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154511"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60250499"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
@@ -20,11 +20,8 @@ ms.locfileid: "59154511"
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Excel для Windows (версия 1904 или более поздняя, подключенная к подписке на Microsoft 365) или Excel в Интернете
+- Excel для Windows (версии 1904 или более поздней) или Excel в Интернете.
 - Пользовательские функции Excel поддерживаются в Office для Mac (подключенном к подписке на Microsoft 365), и ожидается обновление данного руководства.
-
->[!NOTE]
->Пользовательские функции Excel не поддерживаются в Office 2019 (единовременная покупка).
 
 ## <a name="build-your-first-custom-functions-project"></a>Создание первого проекта пользовательских функций
 
