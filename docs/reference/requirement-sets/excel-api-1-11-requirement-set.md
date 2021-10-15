@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.11
 ms.date: 04/01/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: e396ed369942c22c6e460f3e27702b35d3ef20b6
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3f340a7f69cfbbb0c87e937e7d9d1043929a94c9
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154055"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367448"
 ---
 # <a name="whats-new-in-excel-javascript-api-111"></a>Новые возможности в Excel API JavaScript 1.11
 
@@ -35,8 +35,8 @@ ms.locfileid: "59154055"
 ||[thousandsSeparator](/javascript/api/excel/excel.application#thousandsSeparator)|Получает строку, используемую для отдельных групп цифр слева от десятичной для числимых значений.|
 ||[useSystemSeparators](/javascript/api/excel/excel.application#useSystemSeparators)|Указывает, включены ли системные Excel системы.|
 |[Comment](/javascript/api/excel/excel.comment)|[mentions](/javascript/api/excel/excel.comment#mentions)|Получает объекты (например, люди), указанные в комментариях.|
-||[richContent](/javascript/api/excel/excel.comment#richContent)|Получает богатое содержимое комментариев (например, упоминания в комментариях).|
 ||[разрешено](/javascript/api/excel/excel.comment#resolved)|Состояние потока комментариев.|
+||[richContent](/javascript/api/excel/excel.comment#richContent)|Получает богатое содержимое комментариев (например, упоминания в комментариях).|
 ||[updateMentions(contentWithMentions: Excel. CommentRichContent)](/javascript/api/excel/excel.comment#updateMentions_contentWithMentions_)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
 |[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(cellAddress: Range \| string, content: CommentRichContent \| string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentcollection#add_cellAddress__content__contentType_)|Создает новое примечание с указанным содержимым в определенной ячейке.|
 |[CommentMention](/javascript/api/excel/excel.commentmention)|[email](/javascript/api/excel/excel.commentmention#email)|Адрес электронной почты объекта, упоминаемого в комментарии.|
@@ -62,7 +62,7 @@ ms.locfileid: "59154055"
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[onRowHiddenChanged](/javascript/api/excel/excel.worksheetcollection#onRowHiddenChanged)|Происходит, когда скрытое состояние одной или более строк изменилось на определенной таблице.|
 |[WorksheetRowHiddenChangedEventArgs](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs)|[address](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#address)|Получает адрес диапазона, представляющий измененную область конкретного листа.|
 ||[changeType](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#changeType)|Получает тип изменений, которые представляют, как было вызвано событие.|
-||[source](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#source)|Получает источник события.|
+||[источник](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.worksheetrowhiddenchangedeventargs#worksheetId)|Получает ID таблицы, в которой изменились данные.|
 

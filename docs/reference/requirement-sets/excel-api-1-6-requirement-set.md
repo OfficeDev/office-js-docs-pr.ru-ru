@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.6.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: e5d8cb39c7b4fc41c12625a70d16f47d01d81a5f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 5460a678eb23aeee0be5795856790eb8cccd593e
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154044"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367427"
 ---
 # <a name="whats-new-in-excel-javascript-api-16"></a>Новые возможности API JavaScript для Excel 1.6
 
@@ -59,11 +59,7 @@ ms.locfileid: "59154044"
 ||[gradientFill](/javascript/api/excel/excel.conditionaldatabarpositiveformat#gradientFill)|Указывает, есть ли в панели данных градиент.|
 |[ConditionalDataBarRule](/javascript/api/excel/excel.conditionaldatabarrule)|[formula](/javascript/api/excel/excel.conditionaldatabarrule#formula)|Формула, если требуется, для оценки правила панели данных.|
 ||[type](/javascript/api/excel/excel.conditionaldatabarrule#type)|Тип правила для панели данных.|
-|[ConditionalFormat](/javascript/api/excel/excel.conditionalformat)|[delete()](/javascript/api/excel/excel.conditionalformat#delete__)|Удаляет это условное форматирование.|
-||[getRange()](/javascript/api/excel/excel.conditionalformat#getRange__)|Возврат диапазона, к которому применено условное форматирование.|
-||[getRangeOrNullObject()](/javascript/api/excel/excel.conditionalformat#getRangeOrNullObject__)|Возвращает диапазон, к которому применяется кондитональный формат.|
-||[приоритет](/javascript/api/excel/excel.conditionalformat#priority)|Приоритет (или индекс) в условном наборе форматов, в который в настоящее время существует этот условный формат.|
-||[cellValue](/javascript/api/excel/excel.conditionalformat#cellValue)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является `CellValue` типом.|
+|[ConditionalFormat](/javascript/api/excel/excel.conditionalformat)|[cellValue](/javascript/api/excel/excel.conditionalformat#cellValue)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является `CellValue` типом.|
 ||[cellValueOrNullObject](/javascript/api/excel/excel.conditionalformat#cellValueOrNullObject)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является `CellValue` типом.|
 ||[colorScale](/javascript/api/excel/excel.conditionalformat#colorScale)|Возвращает свойства условного формата цветовой шкалы, если текущий условный формат является `ColorScale` типом.|
 ||[colorScaleOrNullObject](/javascript/api/excel/excel.conditionalformat#colorScaleOrNullObject)|Возвращает свойства условного формата цветовой шкалы, если текущий условный формат является `ColorScale` типом.|
@@ -71,17 +67,21 @@ ms.locfileid: "59154044"
 ||[customOrNullObject](/javascript/api/excel/excel.conditionalformat#customOrNullObject)|Возвращает настраиваемые свойства условного формата, если текущий условный формат является пользовательским типом.|
 ||[dataBar](/javascript/api/excel/excel.conditionalformat#dataBar)|Возвращает свойства панели данных, если текущий условный формат является панели данных.|
 ||[dataBarOrNullObject](/javascript/api/excel/excel.conditionalformat#dataBarOrNullObject)|Возвращает свойства панели данных, если текущий условный формат является панели данных.|
+||[delete()](/javascript/api/excel/excel.conditionalformat#delete__)|Удаляет это условное форматирование.|
+||[getRange()](/javascript/api/excel/excel.conditionalformat#getRange__)|Возврат диапазона, к которому применено условное форматирование.|
+||[getRangeOrNullObject()](/javascript/api/excel/excel.conditionalformat#getRangeOrNullObject__)|Возвращает диапазон, к которому применяется кондитональный формат.|
 ||[iconSet](/javascript/api/excel/excel.conditionalformat#iconSet)|Возвращает свойства условного формата набора значков, если текущий условный формат является `IconSet` типом.|
 ||[iconSetOrNullObject](/javascript/api/excel/excel.conditionalformat#iconSetOrNullObject)|Возвращает свойства условного формата набора значков, если текущий условный формат является `IconSet` типом.|
 ||[id](/javascript/api/excel/excel.conditionalformat#id)|Приоритет условного формата в текущем `ConditionalFormatCollection` .|
 ||[предустановка](/javascript/api/excel/excel.conditionalformat#preset)|Возвращает условный формат предварительных критериев.|
 ||[presetOrNullObject](/javascript/api/excel/excel.conditionalformat#presetOrNullObject)|Возвращает условный формат предварительных критериев.|
+||[приоритет](/javascript/api/excel/excel.conditionalformat#priority)|Приоритет (или индекс) в условном наборе форматов, в который в настоящее время существует этот условный формат.|
+||[stopIfTrue](/javascript/api/excel/excel.conditionalformat#stopIfTrue)|Если выполняются условия этого условного форматирования, форматы с более низким приоритетом не будут применяться в этой ячейке.|
 ||[textComparison](/javascript/api/excel/excel.conditionalformat#textComparison)|Возвращает определенные свойства условного формата текста, если текущий условный формат — это текстовый тип.|
 ||[textComparisonOrNullObject](/javascript/api/excel/excel.conditionalformat#textComparisonOrNullObject)|Возвращает определенные свойства условного формата текста, если текущий условный формат — это текстовый тип.|
 ||[topBottom](/javascript/api/excel/excel.conditionalformat#topBottom)|Возвращает свойства верхнего и нижнего условного формата, если текущий условный формат является `TopBottom` типом.|
 ||[topBottomOrNullObject](/javascript/api/excel/excel.conditionalformat#topBottomOrNullObject)|Возвращает свойства верхнего и нижнего условного формата, если текущий условный формат является `TopBottom` типом.|
 ||[type](/javascript/api/excel/excel.conditionalformat#type)|Тип условного формата.|
-||[stopIfTrue](/javascript/api/excel/excel.conditionalformat#stopIfTrue)|Если выполняются условия этого условного форматирования, форматы с более низким приоритетом не будут применяться в этой ячейке.|
 |[ConditionalFormatCollection](/javascript/api/excel/excel.conditionalformatcollection)|[add(type: Excel. ConditionalFormatType)](/javascript/api/excel/excel.conditionalformatcollection#add_type_)|Добавляет новый условный формат в коллекцию с первого и верхнего приоритета.|
 ||[clearAll()](/javascript/api/excel/excel.conditionalformatcollection#clearAll__)|Полное удаление условного форматирование в указанном диапазоне.|
 ||[getCount()](/javascript/api/excel/excel.conditionalformatcollection#getCount__)|Возвращает количество условных форматов в книге.|
@@ -99,10 +99,10 @@ ms.locfileid: "59154044"
 |[ConditionalRangeBorder](/javascript/api/excel/excel.conditionalrangeborder)|[color](/javascript/api/excel/excel.conditionalrangeborder#color)|ЦВЕТОВой код HTML, представляющий цвет пограничной строки, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[sideIndex](/javascript/api/excel/excel.conditionalrangeborder#sideIndex)|Постоянное значение, указывающее определенную сторону границы.|
 ||[style](/javascript/api/excel/excel.conditionalrangeborder#style)|Одна из констант стиля линии, определяющая стиль линии границы.|
-|[ConditionalRangeBorderCollection](/javascript/api/excel/excel.conditionalrangebordercollection)|[getItem(index: Excel. ConditionalRangeBorderIndex)](/javascript/api/excel/excel.conditionalrangebordercollection#getItem_index_)|Возвращает объект границы по его имени.|
-||[getItemAt(index: number)](/javascript/api/excel/excel.conditionalrangebordercollection#getItemAt_index_)|Возвращает объект границы по его индексу.|
-||[bottom](/javascript/api/excel/excel.conditionalrangebordercollection#bottom)|Получает нижнюю границу.|
+|[ConditionalRangeBorderCollection](/javascript/api/excel/excel.conditionalrangebordercollection)|[bottom](/javascript/api/excel/excel.conditionalrangebordercollection#bottom)|Получает нижнюю границу.|
 ||[count](/javascript/api/excel/excel.conditionalrangebordercollection#count)|Количество объектов границы в коллекции.|
+||[getItem(index: Excel. ConditionalRangeBorderIndex)](/javascript/api/excel/excel.conditionalrangebordercollection#getItem_index_)|Возвращает объект границы по его имени.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.conditionalrangebordercollection#getItemAt_index_)|Возвращает объект границы по его индексу.|
 ||[items](/javascript/api/excel/excel.conditionalrangebordercollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[left](/javascript/api/excel/excel.conditionalrangebordercollection#left)|Получает левую границу.|
 ||[right](/javascript/api/excel/excel.conditionalrangebordercollection#right)|Получает правую границу.|
@@ -115,10 +115,10 @@ ms.locfileid: "59154044"
 ||[italic](/javascript/api/excel/excel.conditionalrangefont#italic)|Указывает, является ли шрифт italic.|
 ||[strikethrough](/javascript/api/excel/excel.conditionalrangefont#strikethrough)|Указывает состояние забастовки шрифта.|
 ||[underline](/javascript/api/excel/excel.conditionalrangefont#underline)|Тип подчеркнутого, примененного к шрифту.|
-|[ConditionalRangeFormat](/javascript/api/excel/excel.conditionalrangeformat)|[numberFormat](/javascript/api/excel/excel.conditionalrangeformat#numberFormat)|Представляет Excel формата номеров для данного диапазона.|
-||[borders](/javascript/api/excel/excel.conditionalrangeformat#borders)|Коллекция пограничных объектов, применимых к общему диапазону условного формата.|
+|[ConditionalRangeFormat](/javascript/api/excel/excel.conditionalrangeformat)|[borders](/javascript/api/excel/excel.conditionalrangeformat#borders)|Коллекция пограничных объектов, применимых к общему диапазону условного формата.|
 ||[fill](/javascript/api/excel/excel.conditionalrangeformat#fill)|Возвращает объект заполнения, определенный в общем диапазоне условного формата.|
 ||[font](/javascript/api/excel/excel.conditionalrangeformat#font)|Возвращает объект шрифта, определенный в общем диапазоне условного формата.|
+||[numberFormat](/javascript/api/excel/excel.conditionalrangeformat#numberFormat)|Представляет Excel формата номеров для данного диапазона.|
 |[ConditionalTextComparisonRule](/javascript/api/excel/excel.conditionaltextcomparisonrule)|[operator](/javascript/api/excel/excel.conditionaltextcomparisonrule#operator)|Оператор текстового условного формата.|
 ||[text](/javascript/api/excel/excel.conditionaltextcomparisonrule#text)|Текстовое значение условного формата.|
 |[ConditionalTopBottomRule](/javascript/api/excel/excel.conditionaltopbottomrule)|[rank](/javascript/api/excel/excel.conditionaltopbottomrule#rank)|От 1 до 1000 для числовых рейтингов или от 1 до 100 для процентных рейтингов.|

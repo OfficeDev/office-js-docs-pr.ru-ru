@@ -1,15 +1,15 @@
 ---
 title: Excel Набор требований для API javaScript только для интернета
 description: Сведения о наборе требований ExcelApiOnline.
-ms.date: 09/16/2021
+ms.date: 10/13/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b8d326e1a756a873fc19b3d78f795ebf04e5f4e
-ms.sourcegitcommit: a854a2fd2ad9f379a3ef712f307e0b1bb9b5b00d
+ms.openlocfilehash: ae014930d3ec11d52b3904ee1205b670f8d3790f
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59474338"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367329"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 
@@ -73,8 +73,30 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 ||[getItem(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getItem_key_)|Получает представление листа с его именем.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.namedsheetviewcollection#getItemAt_index_)|Получает представление листа по индексу в коллекции.|
 ||[items](/javascript/api/excel/excel.namedsheetviewcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[deleteRows(rows: number[] \| TableRow[])](/javascript/api/excel/excel.tablerowcollection#deleteRows_rows_)|Удаление нескольких строк из таблицы.|
+||[deleteRowsAt(index: number, count?: number)](/javascript/api/excel/excel.tablerowcollection#deleteRowsAt_index__count_)|Удаление указанного количества строк из таблицы, начиная с указанного индекса.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[linkedWorkbooks](/javascript/api/excel/excel.workbook#linkedWorkbooks)|Возвращает коллекцию связанных книг.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[namedSheetViews](/javascript/api/excel/excel.worksheet#namedSheetViews)|Возвращает коллекцию представлений листов, присутствующих в листе.|
+||[onNameChanged](/javascript/api/excel/excel.worksheet#onNameChanged)|Возникает при смене имени таблицы.|
+||[onVisibilityChanged](/javascript/api/excel/excel.worksheet#onVisibilityChanged)|Возникает при смене видимости таблицы.|
+|[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[onMoved](/javascript/api/excel/excel.worksheetcollection#onMoved)|Возникает при перемещении таблицы пользователем в книге.|
+||[onNameChanged](/javascript/api/excel/excel.worksheetcollection#onNameChanged)|Возникает при смене имени таблицы в коллекции таблиц.|
+||[onVisibilityChanged](/javascript/api/excel/excel.worksheetcollection#onVisibilityChanged)|Возникает при смене видимости таблицы в коллекции таблиц.|
+|[WorksheetMovedEventArgs](/javascript/api/excel/excel.worksheetmovedeventargs)|[positionAfter](/javascript/api/excel/excel.worksheetmovedeventargs#positionAfter)|Получает новую позицию таблицы после перемещения.|
+||[positionBefore](/javascript/api/excel/excel.worksheetmovedeventargs#positionBefore)|Получает предыдущую позицию таблицы перед перемещением.|
+||[источник](/javascript/api/excel/excel.worksheetmovedeventargs#source)|Источник события.|
+||[type](/javascript/api/excel/excel.worksheetmovedeventargs#type)|Получает тип события.|
+||[worksheetId](/javascript/api/excel/excel.worksheetmovedeventargs#worksheetId)|Получает ID перемещенного таблицы.|
+|[WorksheetNameChangedEventArgs](/javascript/api/excel/excel.worksheetnamechangedeventargs)|[nameAfter](/javascript/api/excel/excel.worksheetnamechangedeventargs#nameAfter)|Получает новое имя таблицы после изменения имени.|
+||[nameBefore](/javascript/api/excel/excel.worksheetnamechangedeventargs#nameBefore)|Получает предыдущее имя таблицы до изменения имени.|
+||[источник](/javascript/api/excel/excel.worksheetnamechangedeventargs#source)|Источник события.|
+||[type](/javascript/api/excel/excel.worksheetnamechangedeventargs#type)|Получает тип события.|
+||[worksheetId](/javascript/api/excel/excel.worksheetnamechangedeventargs#worksheetId)|Получает ID таблицы с новым именем.|
+|[WorksheetVisibilityChangedEventArgs](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs)|[источник](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs#source)|Источник события.|
+||[type](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs#type)|Получает тип события.|
+||[visibilityAfter](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs#visibilityAfter)|Получает новый параметр видимости таблицы после изменения видимости.|
+||[visibilityBefore](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs#visibilityBefore)|Получает предыдущий параметр видимости таблицы перед изменением видимости.|
+||[worksheetId](/javascript/api/excel/excel.worksheetvisibilitychangedeventargs#worksheetId)|Получает ID таблицы, видимость которой изменилась.|
 
 ## <a name="see-also"></a>См. также
 

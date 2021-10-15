@@ -4,12 +4,12 @@ description: Сведения о наборе требований WordApi 1.3.
 ms.date: 03/09/2021
 ms.prod: word
 ms.localizationpriority: medium
-ms.openlocfilehash: d8b8f494886be015abd2922bea1ec280d7c03b76
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3d569390a87b3eb153f8139c9e9608bf747fde07
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154764"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367469"
 ---
 # <a name="whats-new-in-word-javascript-api-13"></a>Новые возможности API JavaScript для Word 1.3
 
@@ -30,9 +30,9 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentContentControlOrNullObject](/javascript/api/word/word.body#parentContentControlOrNullObject)|Получает элемент управления содержимым, содержащий документ или раздел.|
 ||[parentSection](/javascript/api/word/word.body#parentSection)|Возвращает родительский раздел основного текста.|
 ||[parentSectionOrNullObject](/javascript/api/word/word.body#parentSectionOrNullObject)|Возвращает родительский раздел основного текста.|
+||[styleBuiltIn](/javascript/api/word/word.body#styleBuiltIn)|Возвращает или задает имя встроенного стиля основного текста.|
 ||[таблицы](/javascript/api/word/word.body#tables)|Возвращает коллекцию объектов таблиц в основном тексте.|
 ||[type](/javascript/api/word/word.body#type)|Возвращает тип основного текста.|
-||[styleBuiltIn](/javascript/api/word/word.body#styleBuiltIn)|Возвращает или задает имя встроенного стиля основного текста.|
 |[ContentControl](/javascript/api/word/word.contentcontrol)|[getRange (rangeLocation?: Word.RangeLocation)](/javascript/api/word/word.contentcontrol#getRange_rangeLocation_)|Возвращает весь элемент управления содержимым (либо его начальную или конечную точку) в виде диапазона.|
 ||[getTextRanges (endingMarks: string[], trimSpacing?: boolean)](/javascript/api/word/word.contentcontrol#getTextRanges_endingMarks__trimSpacing_)|Получает диапазоны текстов в области управления контентом с помощью знаков препинания и/или других знаков окончания.|
 ||[insertTable (rowCount: number, columnCount: number, insertLocation: Word.InsertLocation, values?: string[][])](/javascript/api/word/word.contentcontrol#insertTable_rowCount__columnCount__insertLocation__values_)|Вставляет таблицу с указанным количеством строк и столбцов в элемент управления содержимым или рядом с ним.|
@@ -43,10 +43,10 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableCell](/javascript/api/word/word.contentcontrol#parentTableCell)|Возвращает ячейку таблицы, содержащую элемент управления содержимым.|
 ||[parentTableCellOrNullObject](/javascript/api/word/word.contentcontrol#parentTableCellOrNullObject)|Возвращает ячейку таблицы, содержащую элемент управления содержимым.|
 ||[parentTableOrNullObject](/javascript/api/word/word.contentcontrol#parentTableOrNullObject)|Возвращает таблицу, содержащую элемент управления содержимым.|
-||[подтип](/javascript/api/word/word.contentcontrol#subtype)|Возвращает подтип элемента управления содержимым.|
-||[таблицы](/javascript/api/word/word.contentcontrol#tables)|Возвращает коллекцию объектов таблиц в элементе управления содержимым.|
 ||[split(delimiters: string[], multiParagraphs?: boolean, trimDelimiters?: boolean, trimSpacing?: boolean)](/javascript/api/word/word.contentcontrol#split_delimiters__multiParagraphs__trimDelimiters__trimSpacing_)|Разделяет элемент управления содержимым на дочерние диапазоны с помощью разделителей.|
 ||[styleBuiltIn](/javascript/api/word/word.contentcontrol#styleBuiltIn)|Возвращает или задает имя встроенного стиля для элемента управления содержимым.|
+||[подтип](/javascript/api/word/word.contentcontrol#subtype)|Возвращает подтип элемента управления содержимым.|
+||[таблицы](/javascript/api/word/word.contentcontrol#tables)|Возвращает коллекцию объектов таблиц в элементе управления содержимым.|
 |[ContentControlCollection](/javascript/api/word/word.contentcontrolcollection)|[getByIdOrNullObject (id: number)](/javascript/api/word/word.contentcontrolcollection#getByIdOrNullObject_id_)|Возвращает элемент управления содержимым по его идентификатору.|
 ||[getByTypes (типы: Word.ContentControlType[])](/javascript/api/word/word.contentcontrolcollection#getByTypes_types_)|Получает элементы управления контентом, которые имеют указанные типы и/или подтипы.|
 ||[getFirst()](/javascript/api/word/word.contentcontrolcollection#getFirst__)|Возвращает первый элемент управления содержимым в коллекции.|
@@ -62,30 +62,30 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[getItemOrNullObject(key: string)](/javascript/api/word/word.custompropertycollection#getItemOrNullObject_key_)|Возвращает объект настраиваемого свойства по ключу, указываемому без учета регистра.|
 ||[items](/javascript/api/word/word.custompropertycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[Document](/javascript/api/word/word.document)|[properties](/javascript/api/word/word.document#properties)|Получает свойства документа.|
-|[DocumentCreated](/javascript/api/word/word.documentcreated)|[open()](/javascript/api/word/word.documentcreated#open__)|Открывает документ.|
-||[body](/javascript/api/word/word.documentcreated#body)|Получает объект тела документа.|
+|[DocumentCreated](/javascript/api/word/word.documentcreated)|[body](/javascript/api/word/word.documentcreated#body)|Получает объект тела документа.|
 ||[contentControls](/javascript/api/word/word.documentcreated#contentControls)|Получает коллекцию объектов управления контентом в документе.|
+||[open()](/javascript/api/word/word.documentcreated#open__)|Открывает документ.|
 ||[properties](/javascript/api/word/word.documentcreated#properties)|Получает свойства документа.|
+||[save()](/javascript/api/word/word.documentcreated#save__)|Сохраняет документ.|
 ||[сохранено](/javascript/api/word/word.documentcreated#saved)|Указывает, сохранены ли изменения, внесенные в документ.|
 ||[sections](/javascript/api/word/word.documentcreated#sections)|Получает коллекцию объектов раздела в документе.|
-||[save()](/javascript/api/word/word.documentcreated#save__)|Сохраняет документ.|
-|[DocumentProperties](/javascript/api/word/word.documentproperties)|[автор](/javascript/api/word/word.documentproperties#author)|Возвращает или задает автора документа.|
+|[DocumentProperties](/javascript/api/word/word.documentproperties)|[applicationName](/javascript/api/word/word.documentproperties#applicationName)|Возвращает имя приложения для документа.|
+||[автор](/javascript/api/word/word.documentproperties#author)|Возвращает или задает автора документа.|
 ||[категория](/javascript/api/word/word.documentproperties#category)|Возвращает или задает категорию документа.|
 ||[comments](/javascript/api/word/word.documentproperties#comments)|Возвращает или задает примечания к документу.|
 ||[company](/javascript/api/word/word.documentproperties#company)|Возвращает или задает компанию документа.|
-||[format](/javascript/api/word/word.documentproperties#format)|Возвращает или задает формат документа.|
-||[ключевые слова](/javascript/api/word/word.documentproperties#keywords)|Возвращает или задает ключевые слова документа.|
-||[manager](/javascript/api/word/word.documentproperties#manager)|Возвращает или задает менеджера документа.|
-||[applicationName](/javascript/api/word/word.documentproperties#applicationName)|Возвращает имя приложения для документа.|
 ||[creationDate](/javascript/api/word/word.documentproperties#creationDate)|Возвращает дату создания документа.|
 ||[customProperties](/javascript/api/word/word.documentproperties#customProperties)|Возвращает коллекцию настраиваемых свойств документа.|
+||[format](/javascript/api/word/word.documentproperties#format)|Возвращает или задает формат документа.|
+||[ключевые слова](/javascript/api/word/word.documentproperties#keywords)|Возвращает или задает ключевые слова документа.|
 ||[lastAuthor](/javascript/api/word/word.documentproperties#lastAuthor)|Получает последнего автора документа.|
 ||[lastPrintDate](/javascript/api/word/word.documentproperties#lastPrintDate)|Возвращает дату последней печати документа.|
 ||[lastSaveTime](/javascript/api/word/word.documentproperties#lastSaveTime)|Возвращает время последнего сохранения документа.|
+||[manager](/javascript/api/word/word.documentproperties#manager)|Возвращает или задает менеджера документа.|
 ||[revisionNumber](/javascript/api/word/word.documentproperties#revisionNumber)|Возвращает номер редакции документа.|
 ||[безопасность](/javascript/api/word/word.documentproperties#security)|Получает параметры безопасности документа.|
-||[template](/javascript/api/word/word.documentproperties#template)|Возвращает шаблон документа.|
 ||[subject](/javascript/api/word/word.documentproperties#subject)|Возвращает или задает тему документа.|
+||[template](/javascript/api/word/word.documentproperties#template)|Возвращает шаблон документа.|
 ||[заголовок](/javascript/api/word/word.documentproperties#title)|Возвращает или задает название документа.|
 |[InlinePicture](/javascript/api/word/word.inlinepicture)|[getNext()](/javascript/api/word/word.inlinepicture#getNext__)|Возвращает следующий встроенный рисунок.|
 ||[getNextOrNullObject()](/javascript/api/word/word.inlinepicture#getNextOrNullObject__)|Возвращает следующий встроенный рисунок.|
@@ -97,10 +97,10 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableOrNullObject](/javascript/api/word/word.inlinepicture#parentTableOrNullObject)|Возвращает таблицу, содержащую встроенный рисунок.|
 |[InlinePictureCollection](/javascript/api/word/word.inlinepicturecollection)|[getFirst()](/javascript/api/word/word.inlinepicturecollection#getFirst__)|Возвращает первый встроенный рисунок в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.inlinepicturecollection#getFirstOrNullObject__)|Возвращает первый встроенный рисунок в коллекции.|
-|[Перечисление](/javascript/api/word/word.list)|[getLevelParagraphs(level: number)](/javascript/api/word/word.list#getLevelParagraphs_level_)|Возвращает абзацы, обнаруженные на указанном уровне списка.|
+|[Список](/javascript/api/word/word.list)|[getLevelParagraphs(level: number)](/javascript/api/word/word.list#getLevelParagraphs_level_)|Возвращает абзацы, обнаруженные на указанном уровне списка.|
 ||[getLevelString (уровень: номер)](/javascript/api/word/word.list#getLevelString_level_)|Получает пулю, номер или изображение на указанном уровне в качестве строки.|
-||[insertParagraph (paragraphText: string, insertLocation: Word.InsertLocation)](/javascript/api/word/word.list#insertParagraph_paragraphText__insertLocation_)|Вставляет абзац в указанном расположении.|
 ||[id](/javascript/api/word/word.list#id)|Получает id списка.|
+||[insertParagraph (paragraphText: string, insertLocation: Word.InsertLocation)](/javascript/api/word/word.list#insertParagraph_paragraphText__insertLocation_)|Вставляет абзац в указанном расположении.|
 ||[levelExistences](/javascript/api/word/word.list#levelExistences)|Проверяет наличие каждого из 9 уровней в списке.|
 ||[levelTypes](/javascript/api/word/word.list#levelTypes)|Возвращает типы всех 9 уровней списка.|
 ||[paragraphs](/javascript/api/word/word.list#paragraphs)|Возвращает абзацы в списке.|
@@ -142,10 +142,10 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableCell](/javascript/api/word/word.paragraph#parentTableCell)|Возвращает ячейку таблицы, содержащую абзац.|
 ||[parentTableCellOrNullObject](/javascript/api/word/word.paragraph#parentTableCellOrNullObject)|Возвращает ячейку таблицы, содержащую абзац.|
 ||[parentTableOrNullObject](/javascript/api/word/word.paragraph#parentTableOrNullObject)|Возвращает таблицу, содержащую абзац.|
-||[tableNestingLevel](/javascript/api/word/word.paragraph#tableNestingLevel)|Возвращает уровень таблицы, содержащей абзац.|
 ||[split(delimiters: string[], trimDelimiters?: boolean, trimSpacing?: boolean)](/javascript/api/word/word.paragraph#split_delimiters__trimDelimiters__trimSpacing_)|Разделяет абзац на дочерние диапазоны с помощью разделителей.|
 ||[startNewList()](/javascript/api/word/word.paragraph#startNewList__)|Создает список, начинающийся с данного абзаца.|
 ||[styleBuiltIn](/javascript/api/word/word.paragraph#styleBuiltIn)|Возвращает или задает имя встроенного стиля абзаца.|
+||[tableNestingLevel](/javascript/api/word/word.paragraph#tableNestingLevel)|Возвращает уровень таблицы, содержащей абзац.|
 |[ParagraphCollection](/javascript/api/word/word.paragraphcollection)|[getFirst()](/javascript/api/word/word.paragraphcollection#getFirst__)|Возвращает первый абзац в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.paragraphcollection#getFirstOrNullObject__)|Возвращает первый абзац в коллекции.|
 ||[getLast()](/javascript/api/word/word.paragraphcollection#getLast__)|Возвращает последний абзац в коллекции.|
@@ -170,9 +170,9 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableCell](/javascript/api/word/word.range#parentTableCell)|Возвращает ячейку таблицы, содержащую диапазон.|
 ||[parentTableCellOrNullObject](/javascript/api/word/word.range#parentTableCellOrNullObject)|Возвращает ячейку таблицы, содержащую диапазон.|
 ||[parentTableOrNullObject](/javascript/api/word/word.range#parentTableOrNullObject)|Возвращает таблицу, содержащую диапазон.|
-||[таблицы](/javascript/api/word/word.range#tables)|Возвращает коллекцию объектов таблиц в диапазоне.|
 ||[split(delimiters: string[], multiParagraphs?: boolean, trimDelimiters?: boolean, trimSpacing?: boolean)](/javascript/api/word/word.range#split_delimiters__multiParagraphs__trimDelimiters__trimSpacing_)|Разделяет диапазон на дочерние диапазоны с помощью разделителей.|
 ||[styleBuiltIn](/javascript/api/word/word.range#styleBuiltIn)|Возвращает или задает имя встроенного стиля диапазона.|
+||[таблицы](/javascript/api/word/word.range#tables)|Возвращает коллекцию объектов таблиц в диапазоне.|
 |[RangeCollection](/javascript/api/word/word.rangecollection)|[getFirst()](/javascript/api/word/word.rangecollection#getFirst__)|Возвращает первый диапазон в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.rangecollection#getFirstOrNullObject__)|Возвращает первый диапазон в коллекции.|
 |[RequestContext](/javascript/api/word/word.requestcontext)|[application](/javascript/api/word/word.requestcontext#application)|[Набор API: WordApi 1.3] *|
@@ -189,6 +189,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[deleteColumns(columnIndex: number, columnCount?: number)](/javascript/api/word/word.table#deleteColumns_columnIndex__columnCount_)|Удаляет определенные столбцы.|
 ||[deleteRows(rowIndex: number, rowCount?: number)](/javascript/api/word/word.table#deleteRows_rowIndex__rowCount_)|Удаляет определенные строки.|
 ||[distributeColumns()](/javascript/api/word/word.table#distributeColumns__)|Равномерно распределяет ширину столбцов.|
+||[font](/javascript/api/word/word.table#font)|Возвращает шрифт.|
 ||[getBorder(borderLocation: Word.BorderLocation)](/javascript/api/word/word.table#getBorder_borderLocation_)|Возвращает стиль указанной границы.|
 ||[getCell(rowIndex: number, cellIndex: number)](/javascript/api/word/word.table#getCell_rowIndex__cellIndex_)|Возвращает ячейку таблицы в указанной строке и указанном столбце.|
 ||[getCellOrNullObject (rowIndex: number, cellIndex: number)](/javascript/api/word/word.table#getCellOrNullObject_rowIndex__cellIndex_)|Возвращает ячейку таблицы в указанной строке и указанном столбце.|
@@ -207,13 +208,12 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[insertContentControl()](/javascript/api/word/word.table#insertContentControl__)|Вставляет в таблицу элемент управления содержимым.|
 ||[insertParagraph (paragraphText: string, insertLocation: Word.InsertLocation)](/javascript/api/word/word.table#insertParagraph_paragraphText__insertLocation_)|Вставляет абзац в указанном расположении.|
 ||[insertTable (rowCount: number, columnCount: number, insertLocation: Word.InsertLocation, values?: string[][])](/javascript/api/word/word.table#insertTable_rowCount__columnCount__insertLocation__values_)|Вставляет таблицу с указанным количеством строк и столбцов.|
+||[isUniform](/javascript/api/word/word.table#isUniform)|Указывает, однородны ли все строки таблицы.|
 ||[matchCase](/javascript/api/word/word.table#matchCase)||
 ||[matchPrefix](/javascript/api/word/word.table#matchPrefix)||
 ||[matchSuffix](/javascript/api/word/word.table#matchSuffix)||
 ||[matchWholeWord](/javascript/api/word/word.table#matchWholeWord)||
 ||[matchWildcards](/javascript/api/word/word.table#matchWildcards)||
-||[font](/javascript/api/word/word.table#font)|Возвращает шрифт.|
-||[isUniform](/javascript/api/word/word.table#isUniform)|Указывает, однородны ли все строки таблицы.|
 ||[nestingLevel](/javascript/api/word/word.table#nestingLevel)|Возвращает уровень вложенности таблицы.|
 ||[parentBody](/javascript/api/word/word.table#parentBody)|Возвращает родительский текст таблицы.|
 ||[parentContentControl](/javascript/api/word/word.table#parentContentControl)|Возвращает элемент управления содержимым, содержащий таблицу.|
@@ -224,7 +224,6 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableOrNullObject](/javascript/api/word/word.table#parentTableOrNullObject)|Возвращает таблицу, которая содержит данную таблицу.|
 ||[rowCount](/javascript/api/word/word.table#rowCount)|Получает количество строк в таблице.|
 ||[строки](/javascript/api/word/word.table#rows)|Возвращает все строки таблицы.|
-||[таблицы](/javascript/api/word/word.table#tables)|Возвращает дочерние таблицы, вложенные на один уровень ниже.|
 ||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.table#search_searchText__searchOptions__ignorePunct__ignoreSpace__matchCase__matchPrefix__matchSuffix__matchWholeWord__matchWildcards_)|Выполняет поиск с указанными SearchOptions в области объекта таблицы.|
 ||[select(selectionMode?: Word.SelectionMode)](/javascript/api/word/word.table#select_selectionMode_)|Выбирает таблицу либо позицию в начале или в конце таблицы, а затем переходит к ней в Word.|
 ||[setCellPadding (cellPaddingLocation: Word.CellPaddingLocation, cellPadding: number)](/javascript/api/word/word.table#setCellPadding_cellPaddingLocation__cellPadding_)|Задает размер поля ячейки в точках.|
@@ -236,13 +235,16 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[styleFirstColumn](/javascript/api/word/word.table#styleFirstColumn)|Возвращает и задает значение, указывающее, применен ли специальный стиль к первому столбцу таблицы.|
 ||[styleLastColumn](/javascript/api/word/word.table#styleLastColumn)|Возвращает и задает значение, указывающее, применен ли специальный стиль к последнему столбцу таблицы.|
 ||[styleTotalRow](/javascript/api/word/word.table#styleTotalRow)|Возвращает и задает значение, указывающее, применен ли специальный стиль к строке итогов (последней строке) таблицы.|
+||[таблицы](/javascript/api/word/word.table#tables)|Возвращает дочерние таблицы, вложенные на один уровень ниже.|
 ||[values](/javascript/api/word/word.table#values)|Возвращает и задает текстовые значения в таблице в виде двумерного массива JavaScript.|
 ||[verticalAlignment](/javascript/api/word/word.table#verticalAlignment)|Возвращает и задает вертикальное выравнивание для каждой ячейки в таблице.|
 ||[width](/javascript/api/word/word.table#width)|Возвращает и задает ширину таблицы в точках.|
 |[TableBorder](/javascript/api/word/word.tableborder)|[color](/javascript/api/word/word.tableborder#color)|Получает или задает цвет границы таблицы.|
 ||[type](/javascript/api/word/word.tableborder#type)|Возвращает или задает тип границы таблицы.|
 ||[width](/javascript/api/word/word.tableborder#width)|Возвращает или задает ширину границы таблицы в точках.|
-|[TableCell](/javascript/api/word/word.tablecell)|[columnWidth](/javascript/api/word/word.tablecell#columnWidth)|Возвращает и задает ширину столбца ячейки в точках.|
+|[TableCell](/javascript/api/word/word.tablecell)|[body](/javascript/api/word/word.tablecell#body)|Возвращает объект тела ячейки.|
+||[cellIndex](/javascript/api/word/word.tablecell#cellIndex)|Получает индекс ячейки в строке.|
+||[columnWidth](/javascript/api/word/word.tablecell#columnWidth)|Возвращает и задает ширину столбца ячейки в точках.|
 ||[deleteColumn()](/javascript/api/word/word.tablecell#deleteColumn__)|Удаляет столбец, содержащий данную ячейку.|
 ||[deleteRow()](/javascript/api/word/word.tablecell#deleteRow__)|Удаляет строку, содержащую данную ячейку.|
 ||[getBorder(borderLocation: Word.BorderLocation)](/javascript/api/word/word.tablecell#getBorder_borderLocation_)|Возвращает стиль указанной границы.|
@@ -252,24 +254,25 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[horizontalAlignment](/javascript/api/word/word.tablecell#horizontalAlignment)|Возвращает и задает горизонтальное выравнивание ячейки.|
 ||[insertColumns(insertLocation: Word.InsertLocation, columnCount: number, values?: string[][])](/javascript/api/word/word.tablecell#insertColumns_insertLocation__columnCount__values_)|Добавляет столбцы слева или справа от ячейки, используя столбец этой ячейки в качестве шаблона.|
 ||[insertRows(insertLocation: Word.InsertLocation, rowCount: number, values?: string[]])](/javascript/api/word/word.tablecell#insertRows_insertLocation__rowCount__values_)|Вставляет строки над ячейкой или под ней, используя строку этой ячейки в качестве шаблона.|
-||[body](/javascript/api/word/word.tablecell#body)|Возвращает объект тела ячейки.|
-||[cellIndex](/javascript/api/word/word.tablecell#cellIndex)|Получает индекс ячейки в строке.|
 ||[parentRow](/javascript/api/word/word.tablecell#parentRow)|Получает родительскую строку ячейки.|
 ||[parentTable](/javascript/api/word/word.tablecell#parentTable)|Возвращает родительскую таблицу ячейки.|
 ||[rowIndex](/javascript/api/word/word.tablecell#rowIndex)|Получает индекс строки ячейки в таблице.|
-||[width](/javascript/api/word/word.tablecell#width)|Возвращает ширину ячейки в точках.|
 ||[setCellPadding (cellPaddingLocation: Word.CellPaddingLocation, cellPadding: number)](/javascript/api/word/word.tablecell#setCellPadding_cellPaddingLocation__cellPadding_)|Задает размер поля ячейки в точках.|
 ||[shadingColor](/javascript/api/word/word.tablecell#shadingColor)|Возвращает или задает цвет заливки ячейки.|
 ||[value](/javascript/api/word/word.tablecell#value)|Возвращает и задает текст ячейки.|
 ||[verticalAlignment](/javascript/api/word/word.tablecell#verticalAlignment)|Возвращает и задает вертикальное выравнивание ячейки.|
+||[width](/javascript/api/word/word.tablecell#width)|Возвращает ширину ячейки в точках.|
 |[TableCellCollection](/javascript/api/word/word.tablecellcollection)|[getFirst()](/javascript/api/word/word.tablecellcollection#getFirst__)|Возвращает первую ячейку таблицы в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.tablecellcollection#getFirstOrNullObject__)|Возвращает первую ячейку таблицы в коллекции.|
 ||[items](/javascript/api/word/word.tablecellcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[TableCollection](/javascript/api/word/word.tablecollection)|[getFirst()](/javascript/api/word/word.tablecollection#getFirst__)|Возвращает первую таблицу в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.tablecollection#getFirstOrNullObject__)|Возвращает первую таблицу в коллекции.|
 ||[items](/javascript/api/word/word.tablecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[TableRow](/javascript/api/word/word.tablerow)|[clear()](/javascript/api/word/word.tablerow#clear__)|Очищает содержимое строки.|
+|[TableRow](/javascript/api/word/word.tablerow)|[cellCount](/javascript/api/word/word.tablerow#cellCount)|Получает количество ячеек в строке.|
+||[ячейки](/javascript/api/word/word.tablerow#cells)|Возвращает ячейки.|
+||[clear()](/javascript/api/word/word.tablerow#clear__)|Очищает содержимое строки.|
 ||[delete()](/javascript/api/word/word.tablerow#delete__)|Удаляет всю строку.|
+||[font](/javascript/api/word/word.tablerow#font)|Возвращает шрифт.|
 ||[getBorder(borderLocation: Word.BorderLocation)](/javascript/api/word/word.tablerow#getBorder_borderLocation_)|Возвращает стиль границ ячеек в строке.|
 ||[getCellPadding (cellPaddingLocation: Word.CellPaddingLocation)](/javascript/api/word/word.tablerow#getCellPadding_cellPaddingLocation_)|Возвращает размер поля ячейки в точках.|
 ||[getNext()](/javascript/api/word/word.tablerow#getNext__)|Возвращает следующую строку.|
@@ -278,17 +281,14 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[ignorePunct](/javascript/api/word/word.tablerow#ignorePunct)||
 ||[ignoreSpace](/javascript/api/word/word.tablerow#ignoreSpace)||
 ||[insertRows(insertLocation: Word.InsertLocation, rowCount: number, values?: string[]])](/javascript/api/word/word.tablerow#insertRows_insertLocation__rowCount__values_)|Вставляет строки, используя данную строку в качестве шаблона.|
+||[isHeader](/javascript/api/word/word.tablerow#isHeader)|Проверяет, является ли элемент строкой заголовков.|
 ||[matchCase](/javascript/api/word/word.tablerow#matchCase)||
 ||[matchPrefix](/javascript/api/word/word.tablerow#matchPrefix)||
 ||[matchSuffix](/javascript/api/word/word.tablerow#matchSuffix)||
 ||[matchWholeWord](/javascript/api/word/word.tablerow#matchWholeWord)||
 ||[matchWildcards](/javascript/api/word/word.tablerow#matchWildcards)||
-||[preferredHeight](/javascript/api/word/word.tablerow#preferredHeight)|Возвращает и задает предпочитаемую высоту строки в точках.|
-||[cellCount](/javascript/api/word/word.tablerow#cellCount)|Получает количество ячеек в строке.|
-||[ячейки](/javascript/api/word/word.tablerow#cells)|Возвращает ячейки.|
-||[font](/javascript/api/word/word.tablerow#font)|Возвращает шрифт.|
-||[isHeader](/javascript/api/word/word.tablerow#isHeader)|Проверяет, является ли элемент строкой заголовков.|
 ||[parentTable](/javascript/api/word/word.tablerow#parentTable)|Возвращает родительскую таблицу.|
+||[preferredHeight](/javascript/api/word/word.tablerow#preferredHeight)|Возвращает и задает предпочитаемую высоту строки в точках.|
 ||[rowIndex](/javascript/api/word/word.tablerow#rowIndex)|Получает индекс строки в родительской таблице.|
 ||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.tablerow#search_searchText__searchOptions__ignorePunct__ignoreSpace__matchCase__matchPrefix__matchSuffix__matchWholeWord__matchWildcards_)|Выполняет поиск с указанными SearchOptions в области строки.|
 ||[select(selectionMode?: Word.SelectionMode)](/javascript/api/word/word.tablerow#select_selectionMode_)|Выбирает строку и переходит к ней в Word.|

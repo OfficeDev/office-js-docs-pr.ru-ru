@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.3.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 45a0a3551662997984a5c999b62c651d81e243f2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: c7c39a341f635e3355014f75e32c1501124f99d9
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150834"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367462"
 ---
 # <a name="whats-new-in-excel-javascript-api-13"></a>Новые возможности API JavaScript для Excel 1.3
 
@@ -26,20 +26,20 @@ ms.locfileid: "59150834"
 ||[addFromNamedItem (имя: строка, bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#addFromNamedItem_name__bindingType__id_)|Добавляет новую привязку с учетом именованного элемента в книге.|
 ||[addFromSelection(bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#addFromSelection_bindingType__id_)|Добавляет новую привязку с учетом выделенного в настоящий момент фрагмента.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[name](/javascript/api/excel/excel.pivottable#name)|Имя сводной таблицы.|
-||[worksheet](/javascript/api/excel/excel.pivottable#worksheet)|Лист, содержащий текущую сводную таблицу.|
 ||[refresh()](/javascript/api/excel/excel.pivottable#refresh__)|Обновляет сводную таблицу.|
+||[worksheet](/javascript/api/excel/excel.pivottable#worksheet)|Лист, содержащий текущую сводную таблицу.|
 |[PivotTableCollection](/javascript/api/excel/excel.pivottablecollection)|[getItem(name: string)](/javascript/api/excel/excel.pivottablecollection#getItem_name_)|Получает сводную таблицу по имени.|
 ||[items](/javascript/api/excel/excel.pivottablecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[refreshAll()](/javascript/api/excel/excel.pivottablecollection#refreshAll__)|Обновляет все сводные таблицы в коллекции.|
 |[Range](/javascript/api/excel/excel.range)|[getVisibleView()](/javascript/api/excel/excel.range#getVisibleView__)|Представляет видимые строки текущего диапазона.|
-|[RangeView](/javascript/api/excel/excel.rangeview)|[formulas](/javascript/api/excel/excel.rangeview#formulas)|Представляет формулу в формате A1.|
+|[RangeView](/javascript/api/excel/excel.rangeview)|[cellAddresses](/javascript/api/excel/excel.rangeview#cellAddresses)|Представляет адреса ячейки `RangeView` .|
+||[columnCount](/javascript/api/excel/excel.rangeview#columnCount)|Количество видимых столбцов.|
+||[formulas](/javascript/api/excel/excel.rangeview#formulas)|Представляет формулу в формате A1.|
 ||[formulasLocal](/javascript/api/excel/excel.rangeview#formulasLocal)|Представляет формулу в нотации стиля A1 на языке пользователя и в соответствии с его языковым стандартом.|
 ||[formulasR1C1](/javascript/api/excel/excel.rangeview#formulasR1C1)|Представляет формулу в формате R1C1.|
 ||[getRange()](/javascript/api/excel/excel.rangeview#getRange__)|Получает родительский диапазон, связанный с текущим `RangeView` .|
+||[индекс](/javascript/api/excel/excel.rangeview#index)|Возвращает значение, которое представляет индекс `RangeView` индекса .|
 ||[numberFormat](/javascript/api/excel/excel.rangeview#numberFormat)|Представляет код в числовом формате Excel для данной ячейки.|
-||[cellAddresses](/javascript/api/excel/excel.rangeview#cellAddresses)|Представляет адреса ячейки `RangeView` .|
-||[columnCount](/javascript/api/excel/excel.rangeview#columnCount)|Количество видимых столбцов.|
-||[index](/javascript/api/excel/excel.rangeview#index)|Возвращает значение, которое представляет индекс `RangeView` индекса .|
 ||[rowCount](/javascript/api/excel/excel.rangeview#rowCount)|Количество видимых строк.|
 ||[строки](/javascript/api/excel/excel.rangeview#rows)|Представляет коллекцию видимых ячеек в диапазоне, сопоставленных с указанным диапазоном.|
 ||[text](/javascript/api/excel/excel.rangeview#text)|Текстовые значения указанного диапазона.|

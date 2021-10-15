@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.8.
 ms.date: 03/19/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: e97dd98d024b27aa58ca6f0c76fdee17b657c7c9
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: bf9ac5adbaf79e0740a0e9a8b913c129b444893f
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154956"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367490"
 ---
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности в Excel API JavaScript 1.8
 
@@ -42,11 +42,11 @@ ms.locfileid: "59154956"
 ||[operator](/javascript/api/excel/excel.basicdatavalidation#operator)|Оператор, используемый для проверки данных.|
 |[Chart](/javascript/api/excel/excel.chart)|[categoryLabelLevel](/javascript/api/excel/excel.chart#categoryLabelLevel)|Указывает константу индексации уровня метки категорий диаграммы, ссылаясь на уровень меток исходных категорий.|
 ||[displayBlanksAs](/javascript/api/excel/excel.chart#displayBlanksAs)|Указывает, как пустые ячейки заданы на диаграмме.|
-||[plotBy](/javascript/api/excel/excel.chart#plotBy)|Определяет способ использования столбцов или строк в качестве рядов данных на диаграмме.|
-||[plotVisibleOnly](/javascript/api/excel/excel.chart#plotVisibleOnly)|True, если отображаются только видимые ячейки.|
 ||[onActivated](/javascript/api/excel/excel.chart#onActivated)|Возникает при активации диаграммы.|
 ||[onDeactivated](/javascript/api/excel/excel.chart#onDeactivated)|Происходит, когда диаграмма отключена.|
 ||[plotArea](/javascript/api/excel/excel.chart#plotArea)|Представляет область сюжета для диаграммы.|
+||[plotBy](/javascript/api/excel/excel.chart#plotBy)|Определяет способ использования столбцов или строк в качестве рядов данных на диаграмме.|
+||[plotVisibleOnly](/javascript/api/excel/excel.chart#plotVisibleOnly)|True, если отображаются только видимые ячейки.|
 ||[seriesNameLevel](/javascript/api/excel/excel.chart#seriesNameLevel)|Указывает константу индексации имен на уровне серии диаграмм, ссылаясь на уровень имен исходных серий.|
 ||[showDataLabelsOverMaximum](/javascript/api/excel/excel.chart#showDataLabelsOverMaximum)|Указывает, следует ли показывать метки данных, если значение превышает максимальное значение оси значения.|
 ||[style](/javascript/api/excel/excel.chart#style)|Указывает стиль диаграммы для диаграммы.|
@@ -54,7 +54,7 @@ ms.locfileid: "59154956"
 ||[type](/javascript/api/excel/excel.chartactivatedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.chartactivatedeventargs#worksheetId)|Получает ID таблицы, в которой активируется диаграмма.|
 |[ChartAddedEventArgs](/javascript/api/excel/excel.chartaddedeventargs)|[chartId](/javascript/api/excel/excel.chartaddedeventargs#chartId)|Получает ID диаграммы, добавляемой в таблицу.|
-||[source](/javascript/api/excel/excel.chartaddedeventargs#source)|Получает источник события.|
+||[источник](/javascript/api/excel/excel.chartaddedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.chartaddedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.chartaddedeventargs#worksheetId)|Получает ID таблицы, в которую добавляется диаграмма.|
 |[ChartAxis](/javascript/api/excel/excel.chartaxis)|[выравнивание](/javascript/api/excel/excel.chartaxis#alignment)|Указывает выравнивание для указанной метки тик оси.|
@@ -76,17 +76,17 @@ ms.locfileid: "59154956"
 ||[onDeactivated](/javascript/api/excel/excel.chartcollection#onDeactivated)|Происходит, когда диаграмма отключена.|
 ||[onDeleted](/javascript/api/excel/excel.chartcollection#onDeleted)|Возникает при удалении диаграммы.|
 |[ChartDataLabel](/javascript/api/excel/excel.chartdatalabel)|[autoText](/javascript/api/excel/excel.chartdatalabel#autoText)|Указывает, автоматически ли метка данных создает соответствующий текст на основе контекста.|
+||[format](/javascript/api/excel/excel.chartdatalabel#format)|Представляет формат метки данных диаграммы.|
 ||[formula](/javascript/api/excel/excel.chartdatalabel#formula)|Строковое значение, представляющее формулу метки данных диаграммы с использованием нотации стиля A1.|
+||[height](/javascript/api/excel/excel.chartdatalabel#height)|Возвращает высоту метки данных диаграммы (в пунктах).|
 ||[horizontalAlignment](/javascript/api/excel/excel.chartdatalabel#horizontalAlignment)|Представляет горизонтальное выравнивание для метки данных диаграммы.|
 ||[left](/javascript/api/excel/excel.chartdatalabel#left)|Представляет расстояние от левого края метки данных диаграммы до левого края области диаграммы (в пунктах). |
 ||[numberFormat](/javascript/api/excel/excel.chartdatalabel#numberFormat)|Строковое значение, представляющее код формата для метки данных.|
-||[format](/javascript/api/excel/excel.chartdatalabel#format)|Представляет формат метки данных диаграммы.|
-||[height](/javascript/api/excel/excel.chartdatalabel#height)|Возвращает высоту метки данных диаграммы (в пунктах).|
-||[width](/javascript/api/excel/excel.chartdatalabel#width)|Возвращает ширину метки данных диаграммы (в пунктах).|
 ||[text](/javascript/api/excel/excel.chartdatalabel#text)|Строка, представляющая текст метки данных на диаграмме.|
 ||[textOrientation](/javascript/api/excel/excel.chartdatalabel#textOrientation)|Представляет угол, на который ориентирован текст для метки данных диаграммы.|
 ||[top](/javascript/api/excel/excel.chartdatalabel#top)|Представляет расстояние от верхнего края метки данных диаграммы до верха области диаграммы (в пунктах).|
 ||[verticalAlignment](/javascript/api/excel/excel.chartdatalabel#verticalAlignment)|Представляет вертикальное выравнивание для метки данных диаграммы.|
+||[width](/javascript/api/excel/excel.chartdatalabel#width)|Возвращает ширину метки данных диаграммы (в пунктах).|
 |[ChartDataLabelFormat](/javascript/api/excel/excel.chartdatalabelformat)|[граница](/javascript/api/excel/excel.chartdatalabelformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
 |[ChartDataLabels](/javascript/api/excel/excel.chartdatalabels)|[autoText](/javascript/api/excel/excel.chartdatalabels#autoText)|Указывает, автоматически ли метки данных создают соответствующий текст на основе контекста.|
 ||[horizontalAlignment](/javascript/api/excel/excel.chartdatalabels#horizontalAlignment)|Указывает горизонтальное выравнивание для метки данных диаграммы.|
@@ -97,33 +97,33 @@ ms.locfileid: "59154956"
 ||[type](/javascript/api/excel/excel.chartdeactivatedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.chartdeactivatedeventargs#worksheetId)|Получает ID таблицы, в которой деактивируется диаграмма.|
 |[ChartDeletedEventArgs](/javascript/api/excel/excel.chartdeletedeventargs)|[chartId](/javascript/api/excel/excel.chartdeletedeventargs#chartId)|Получает ID диаграммы, удаляемой из таблицы.|
-||[source](/javascript/api/excel/excel.chartdeletedeventargs#source)|Получает источник события.|
+||[источник](/javascript/api/excel/excel.chartdeletedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.chartdeletedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.chartdeletedeventargs#worksheetId)|Получает ID таблицы, в которой удаляется диаграмма.|
 |[ChartLegendEntry](/javascript/api/excel/excel.chartlegendentry)|[height](/javascript/api/excel/excel.chartlegendentry#height)|Указывает высоту записи легенды в легенде диаграммы.|
-||[index](/javascript/api/excel/excel.chartlegendentry#index)|Указывает индекс записи легенды в легенде диаграммы.|
+||[индекс](/javascript/api/excel/excel.chartlegendentry#index)|Указывает индекс записи легенды в легенде диаграммы.|
 ||[left](/javascript/api/excel/excel.chartlegendentry#left)|Указывает левое значение записи легенды диаграммы.|
 ||[top](/javascript/api/excel/excel.chartlegendentry#top)|Указывает верхнюю часть записи легенды диаграммы.|
 ||[width](/javascript/api/excel/excel.chartlegendentry#width)|Представляет ширину записи легенды на диаграмме Legend.|
 |[ChartLegendFormat](/javascript/api/excel/excel.chartlegendformat)|[граница](/javascript/api/excel/excel.chartlegendformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
-|[ChartPlotArea](/javascript/api/excel/excel.chartplotarea)|[height](/javascript/api/excel/excel.chartplotarea#height)|Указывает значение высоты области участка.|
+|[ChartPlotArea](/javascript/api/excel/excel.chartplotarea)|[format](/javascript/api/excel/excel.chartplotarea#format)|Указывает форматирование области сюжета диаграммы.|
+||[height](/javascript/api/excel/excel.chartplotarea#height)|Указывает значение высоты области участка.|
 ||[insideHeight](/javascript/api/excel/excel.chartplotarea#insideHeight)|Указывает внутреннее значение высоты области участка.|
 ||[insideLeft](/javascript/api/excel/excel.chartplotarea#insideLeft)|Указывает внутреннее левое значение области сюжета.|
 ||[insideTop](/javascript/api/excel/excel.chartplotarea#insideTop)|Указывает внутреннее верхнее значение области сюжета.|
 ||[insideWidth](/javascript/api/excel/excel.chartplotarea#insideWidth)|Указывает внутреннее значение ширины области участка.|
 ||[left](/javascript/api/excel/excel.chartplotarea#left)|Указывает левое значение области сюжета.|
 ||[position](/javascript/api/excel/excel.chartplotarea#position)|Указывает положение области сюжета.|
-||[format](/javascript/api/excel/excel.chartplotarea#format)|Указывает форматирование области сюжета диаграммы.|
 ||[top](/javascript/api/excel/excel.chartplotarea#top)|Указывает верхнее значение области сюжета.|
 ||[width](/javascript/api/excel/excel.chartplotarea#width)|Указывает значение ширины области участка.|
 |[ChartPlotAreaFormat](/javascript/api/excel/excel.chartplotareaformat)|[граница](/javascript/api/excel/excel.chartplotareaformat#border)|Указывает атрибуты границы области диаграммы.|
 ||[fill](/javascript/api/excel/excel.chartplotareaformat#fill)|Указывает формат заполнения объекта, который включает сведения о формате фона.|
 |[ChartSeries](/javascript/api/excel/excel.chartseries)|[axisGroup](/javascript/api/excel/excel.chartseries#axisGroup)|Указывает группу для указанной серии.|
+||[dataLabels](/javascript/api/excel/excel.chartseries#dataLabels)|Представляет коллекцию всех меток данных в серии.|
 ||[взрыв](/javascript/api/excel/excel.chartseries#explosion)|Указывает значение взрыва для среза круговой диаграммы или пончик-диаграммы.|
 ||[firstSliceAngle](/javascript/api/excel/excel.chartseries#firstSliceAngle)|Указывает угол первого среза круговой диаграммы или пончик-диаграммы в градусах (по часовой стрелке от вертикальной).|
 ||[invertIfNegative](/javascript/api/excel/excel.chartseries#invertIfNegative)|Верно, Excel выверяет шаблон в элементе, если он соответствует отрицательному номеру.|
 ||[перекрытие](/javascript/api/excel/excel.chartseries#overlap)|Указывает на расположение строк и столбцов.|
-||[dataLabels](/javascript/api/excel/excel.chartseries#dataLabels)|Представляет коллекцию всех меток данных в серии.|
 ||[secondPlotSize](/javascript/api/excel/excel.chartseries#secondPlotSize)|Указывает размер вторичного раздела диаграммы пирога или диаграммы с круговым пирогом в процентах от размера первичного пирога.|
 ||[splitType](/javascript/api/excel/excel.chartseries#splitType)|Указывает способ разделения двух разделов диаграммы "пирог-пирог" или диаграммы "планка пирога".|
 ||[varyByCategories](/javascript/api/excel/excel.chartseries#varyByCategories)|True, Excel назначит каждому маркеру данных другой цвет или шаблон.|
@@ -133,26 +133,26 @@ ms.locfileid: "59154956"
 ||[showEquation](/javascript/api/excel/excel.charttrendline#showEquation)|Значение true, если формула для линии тренда отображается на диаграмме.|
 ||[showRSquared](/javascript/api/excel/excel.charttrendline#showRSquared)|Значение True, если значение r-squared для линии тренда отображается на диаграмме.|
 |[ChartTrendlineLabel](/javascript/api/excel/excel.charttrendlinelabel)|[autoText](/javascript/api/excel/excel.charttrendlinelabel#autoText)|Указывает, автоматически ли метка trendline создает соответствующий текст на основе контекста.|
+||[format](/javascript/api/excel/excel.charttrendlinelabel#format)|Формат метки трендовой линии диаграммы.|
 ||[formula](/javascript/api/excel/excel.charttrendlinelabel#formula)|Строковая величина, которая представляет формулу метки трендовой линии диаграммы с помощью нотации в стиле A1.|
+||[height](/javascript/api/excel/excel.charttrendlinelabel#height)|Возвращает высоту подписи линии тренда диаграммы (в пунктах).|
 ||[horizontalAlignment](/javascript/api/excel/excel.charttrendlinelabel#horizontalAlignment)|Представляет горизонтальное выравнивание метки трендовой линии диаграммы.|
 ||[left](/javascript/api/excel/excel.charttrendlinelabel#left)|Представляет расстояние в точках от левого края метки трендовой линии диаграммы до левого края области диаграммы.|
 ||[numberFormat](/javascript/api/excel/excel.charttrendlinelabel#numberFormat)|Строковое значение, которое представляет код формата для метки trendline.|
-||[format](/javascript/api/excel/excel.charttrendlinelabel#format)|Формат метки трендовой линии диаграммы.|
-||[height](/javascript/api/excel/excel.charttrendlinelabel#height)|Возвращает высоту подписи линии тренда диаграммы (в пунктах).|
-||[width](/javascript/api/excel/excel.charttrendlinelabel#width)|Возвращает ширину подписи линии тренда диаграммы (в пунктах).|
 ||[text](/javascript/api/excel/excel.charttrendlinelabel#text)|Строка, представляющая текст подписи линии тренда на диаграмме.|
 ||[textOrientation](/javascript/api/excel/excel.charttrendlinelabel#textOrientation)|Представляет угол, на который ориентирован текст для метки трендовой линии диаграммы.|
 ||[top](/javascript/api/excel/excel.charttrendlinelabel#top)|Представляет расстояние в точках от верхнего края метки трендовой линии диаграммы до верхней части области диаграммы.|
 ||[verticalAlignment](/javascript/api/excel/excel.charttrendlinelabel#verticalAlignment)|Представляет вертикальное выравнивание метки трендовой линии диаграммы.|
+||[width](/javascript/api/excel/excel.charttrendlinelabel#width)|Возвращает ширину подписи линии тренда диаграммы (в пунктах).|
 |[ChartTrendlineLabelFormat](/javascript/api/excel/excel.charttrendlinelabelformat)|[граница](/javascript/api/excel/excel.charttrendlinelabelformat#border)|Указывает пограничный формат, который включает цвет, литейный стил и вес.|
 ||[fill](/javascript/api/excel/excel.charttrendlinelabelformat#fill)|Указывает формат заполнения текущей метки трендовой линии диаграммы.|
 ||[font](/javascript/api/excel/excel.charttrendlinelabelformat#font)|Указывает атрибуты шрифта (например, имя шрифта, размер шрифта и цвет) для метки трендовой линии диаграммы.|
 |[CustomDataValidation](/javascript/api/excel/excel.customdatavalidation)|[formula](/javascript/api/excel/excel.customdatavalidation#formula)|Формула проверки настраиваемых данных.|
-|[DataPivotHierarchy](/javascript/api/excel/excel.datapivothierarchy)|[name](/javascript/api/excel/excel.datapivothierarchy#name)|Имя DataPivotHierarchy.|
+|[DataPivotHierarchy](/javascript/api/excel/excel.datapivothierarchy)|[поле](/javascript/api/excel/excel.datapivothierarchy#field)|Возвращает сводные поля, связанные с DataPivotHierarchy.|
+||[id](/javascript/api/excel/excel.datapivothierarchy#id)|ID of the DataPivotHierarchy.|
+||[name](/javascript/api/excel/excel.datapivothierarchy#name)|Имя DataPivotHierarchy.|
 ||[numberFormat](/javascript/api/excel/excel.datapivothierarchy#numberFormat)|Числовой формат DataPivotHierarchy.|
 ||[position](/javascript/api/excel/excel.datapivothierarchy#position)|Положение DataPivotHierarchy.|
-||[поле](/javascript/api/excel/excel.datapivothierarchy#field)|Возвращает сводные поля, связанные с DataPivotHierarchy.|
-||[id](/javascript/api/excel/excel.datapivothierarchy#id)|ID of the DataPivotHierarchy.|
 ||[setToDefault()](/javascript/api/excel/excel.datapivothierarchy#setToDefault__)|Сбрасывает DataPivotHierarchy до значений по умолчанию.|
 ||[showAs](/javascript/api/excel/excel.datapivothierarchy#showAs)|Указывает, следует ли показывать данные в качестве определенного суммарного вычисления.|
 ||[summarizeBy](/javascript/api/excel/excel.datapivothierarchy#summarizeBy)|Указывает, показаны ли все элементы DataPivotHierarchy.|
@@ -166,9 +166,9 @@ ms.locfileid: "59154956"
 ||[errorAlert](/javascript/api/excel/excel.datavalidation#errorAlert)|Сообщение об ошибке, когда пользователь вводит недопустимые данные.|
 ||[ignoreBlanks](/javascript/api/excel/excel.datavalidation#ignoreBlanks)|Указывает, будет ли проверка данных выполняться на пустых ячейках.|
 ||[сообщение](/javascript/api/excel/excel.datavalidation#prompt)|Подсказка, когда пользователи выбирают ячейку.|
+||[правило](/javascript/api/excel/excel.datavalidation#rule)|Правило проверки данных, которое содержит различные типы критериев проверки данных.|
 ||[type](/javascript/api/excel/excel.datavalidation#type)|Тип проверки данных см. `Excel.DataValidationType` в подробностях.|
 ||[допустимо](/javascript/api/excel/excel.datavalidation#valid)|Указывает, являются ли все значения ячеек допустимыми в соответствии с правилами проверки данных.|
-||[правило](/javascript/api/excel/excel.datavalidation#rule)|Правило проверки данных, которое содержит различные типы критериев проверки данных.|
 |[DataValidationErrorAlert](/javascript/api/excel/excel.datavalidationerroralert)|[message](/javascript/api/excel/excel.datavalidationerroralert#message)|Представляет сообщение оповещений об ошибке.|
 ||[showAlert](/javascript/api/excel/excel.datavalidationerroralert#showAlert)|Указывает, следует ли показывать диалоговое окно оповещения об ошибке при вводе пользователем недействительных данных.|
 ||[style](/javascript/api/excel/excel.datavalidationerroralert#style)|Тип оповещений о проверке данных см. `Excel.DataValidationAlertStyle` в подробной информации.|
@@ -187,10 +187,10 @@ ms.locfileid: "59154956"
 ||[formula2](/javascript/api/excel/excel.datetimedatavalidation#formula2)|С помощью ternary operators Between and NotBetween указывается верхний операнд.|
 ||[operator](/javascript/api/excel/excel.datetimedatavalidation#operator)|Оператор, используемый для проверки данных.|
 |[FilterPivotHierarchy](/javascript/api/excel/excel.filterpivothierarchy)|[enableMultipleFilterItems](/javascript/api/excel/excel.filterpivothierarchy#enableMultipleFilterItems)|Определяет, следует ли разрешить несколько элементов фильтра.|
-||[name](/javascript/api/excel/excel.filterpivothierarchy#name)|Имя FilterPivotHierarchy.|
-||[position](/javascript/api/excel/excel.filterpivothierarchy#position)|Положение FilterPivotHierarchy.|
 ||[fields](/javascript/api/excel/excel.filterpivothierarchy#fields)|Возвращает сводные поля, связанные с FilterPivotHierarchy.|
 ||[id](/javascript/api/excel/excel.filterpivothierarchy#id)|ID of the FilterPivotHierarchy.|
+||[name](/javascript/api/excel/excel.filterpivothierarchy#name)|Имя FilterPivotHierarchy.|
+||[position](/javascript/api/excel/excel.filterpivothierarchy#position)|Положение FilterPivotHierarchy.|
 ||[setToDefault()](/javascript/api/excel/excel.filterpivothierarchy#setToDefault__)|Сбрасывает FilterPivotHierarchy до значений по умолчанию.|
 |[FilterPivotHierarchyCollection](/javascript/api/excel/excel.filterpivothierarchycollection)|[add(pivotHierarchy: Excel. PivotHierarchy)](/javascript/api/excel/excel.filterpivothierarchycollection#add_pivotHierarchy_)|Добавляет PivotHierarchy к текущей оси.|
 ||[getCount()](/javascript/api/excel/excel.filterpivothierarchycollection#getCount__)|Получает количество иерархий сводного объекта в коллекции.|
@@ -200,9 +200,9 @@ ms.locfileid: "59154956"
 ||[remove(filterPivotHierarchy: Excel. FilterPivotHierarchy)](/javascript/api/excel/excel.filterpivothierarchycollection#remove_filterPivotHierarchy_)|Удаляет PivotHierarchy из текущей оси.|
 |[ListDataValidation](/javascript/api/excel/excel.listdatavalidation)|[inCellDropDown](/javascript/api/excel/excel.listdatavalidation#inCellDropDown)|Указывает, следует ли отображать список в выпадаемой ячейке.|
 ||[source](/javascript/api/excel/excel.listdatavalidation#source)|Источник списка для проверки данных|
-|[PivotField](/javascript/api/excel/excel.pivotfield)|[name](/javascript/api/excel/excel.pivotfield#name)|Имя сводного поля.|
-||[id](/javascript/api/excel/excel.pivotfield#id)|ID of the PivotField.|
-||[items](/javascript/api/excel/excel.pivotfield#items)|Возвращает сводные поля, связанные со сводным полем.|
+|[PivotField](/javascript/api/excel/excel.pivotfield)|[id](/javascript/api/excel/excel.pivotfield#id)|ID of the PivotField.|
+||[items](/javascript/api/excel/excel.pivotfield#items)|Возвращает pivotItems, связанные с PivotField.|
+||[name](/javascript/api/excel/excel.pivotfield#name)|Имя сводного поля.|
 ||[showAllItems](/javascript/api/excel/excel.pivotfield#showAllItems)|Определяет, следует ли отображать все элементы сводного поля.|
 ||[sortByLabels(sortBy: SortBy)](/javascript/api/excel/excel.pivotfield#sortByLabels_sortBy_)|Сортирует сводное поле.|
 ||[subtotals](/javascript/api/excel/excel.pivotfield#subtotals)|Промежуточные итоги сводного поля.|
@@ -210,16 +210,16 @@ ms.locfileid: "59154956"
 ||[getItem(name: string)](/javascript/api/excel/excel.pivotfieldcollection#getItem_name_)|Получает PivotField по имени или ID.|
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.pivotfieldcollection#getItemOrNullObject_name_)|Получает PivotField по имени.|
 ||[items](/javascript/api/excel/excel.pivotfieldcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[PivotHierarchy](/javascript/api/excel/excel.pivothierarchy)|[name](/javascript/api/excel/excel.pivothierarchy#name)|Имя PivotHierarchy.|
-||[fields](/javascript/api/excel/excel.pivothierarchy#fields)|Возвращает сводные поля, связанные с PivotHierarchy.|
+|[PivotHierarchy](/javascript/api/excel/excel.pivothierarchy)|[fields](/javascript/api/excel/excel.pivothierarchy#fields)|Возвращает сводные поля, связанные с PivotHierarchy.|
 ||[id](/javascript/api/excel/excel.pivothierarchy#id)|ID of the PivotHierarchy.|
+||[name](/javascript/api/excel/excel.pivothierarchy#name)|Имя PivotHierarchy.|
 |[PivotHierarchyCollection](/javascript/api/excel/excel.pivothierarchycollection)|[getCount()](/javascript/api/excel/excel.pivothierarchycollection#getCount__)|Получает количество иерархий сводного объекта в коллекции.|
 ||[getItem(name: string)](/javascript/api/excel/excel.pivothierarchycollection#getItem_name_)|Получает PivotHierarchy по имени или ID.|
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.pivothierarchycollection#getItemOrNullObject_name_)|Получает PivotHierarchy по имени.|
 ||[items](/javascript/api/excel/excel.pivothierarchycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[PivotItem](/javascript/api/excel/excel.pivotitem)|[isExpanded](/javascript/api/excel/excel.pivotitem#isExpanded)|Определяет, развернут ли элемент для отображения дочерних элементов или же свернут, а дочерние элементы являются скрытыми.|
+|[PivotItem](/javascript/api/excel/excel.pivotitem)|[id](/javascript/api/excel/excel.pivotitem#id)|ID of the PivotItem.|
+||[isExpanded](/javascript/api/excel/excel.pivotitem#isExpanded)|Определяет, развернут ли элемент для отображения дочерних элементов или же свернут, а дочерние элементы являются скрытыми.|
 ||[name](/javascript/api/excel/excel.pivotitem#name)|Имя элемента сводной таблицы.|
-||[id](/javascript/api/excel/excel.pivotitem#id)|ID of the PivotItem.|
 ||[visible](/javascript/api/excel/excel.pivotitem#visible)|Указывает, отображается ли pivotItem.|
 |[PivotItemCollection](/javascript/api/excel/excel.pivotitemcollection)|[getCount()](/javascript/api/excel/excel.pivotitemcollection#getCount__)|Получает число pivotItems в коллекции.|
 ||[getItem(name: string)](/javascript/api/excel/excel.pivotitemcollection#getItem_name_)|Получает PivotItem по имени или ID.|
@@ -234,19 +234,19 @@ ms.locfileid: "59154956"
 ||[showColumnGrandTotals](/javascript/api/excel/excel.pivotlayout#showColumnGrandTotals)|Указывает, показывает ли отчет PivotTable общие итоги для столбцов.|
 ||[showRowGrandTotals](/javascript/api/excel/excel.pivotlayout#showRowGrandTotals)|Указывает, показывает ли отчет PivotTable общие итоги для строк.|
 ||[subtotalLocation](/javascript/api/excel/excel.pivotlayout#subtotalLocation)|Это свойство указывает все `SubtotalLocationType` поля на PivotTable.|
-|[PivotTable](/javascript/api/excel/excel.pivottable)|[delete()](/javascript/api/excel/excel.pivottable#delete__)|Удаляет сводную таблицу.|
-||[columnHierarchies](/javascript/api/excel/excel.pivottable#columnHierarchies)|Иерархии сводных столбцов сводной таблицы.|
+|[PivotTable](/javascript/api/excel/excel.pivottable)|[columnHierarchies](/javascript/api/excel/excel.pivottable#columnHierarchies)|Иерархии сводных столбцов сводной таблицы.|
 ||[dataHierarchies](/javascript/api/excel/excel.pivottable#dataHierarchies)|Иерархии сводных данных сводной таблицы.|
+||[delete()](/javascript/api/excel/excel.pivottable#delete__)|Удаляет сводную таблицу.|
 ||[filterHierarchies](/javascript/api/excel/excel.pivottable#filterHierarchies)|Иерархии сводных фильтров сводной таблицы.|
 ||[иерархии](/javascript/api/excel/excel.pivottable#hierarchies)|Иерархии сводного документа сводной таблицы.|
 ||[макет](/javascript/api/excel/excel.pivottable#layout)|PivotLayout, описывающий макет и визуальную структуру сводной таблицы.|
 ||[rowHierarchies](/javascript/api/excel/excel.pivottable#rowHierarchies)|Иерархии сводных строк сводной таблицы.|
 |[PivotTableCollection](/javascript/api/excel/excel.pivottablecollection)|[add(name: string, source: Range \| string \| Table, destination: Range \| string)](/javascript/api/excel/excel.pivottablecollection#add_name__source__destination_)|Добавьте pivotTable на основе указанных исходных данных и вставьте его в верхней левой ячейке диапазона назначения.|
 |[Range](/javascript/api/excel/excel.range)|[dataValidation](/javascript/api/excel/excel.range#dataValidation)|Возвращает объект проверки данных.|
-|[RowColumnPivotHierarchy](/javascript/api/excel/excel.rowcolumnpivothierarchy)|[name](/javascript/api/excel/excel.rowcolumnpivothierarchy#name)|Имя RowColumnPivotHierarchy.|
-||[position](/javascript/api/excel/excel.rowcolumnpivothierarchy#position)|Положение RowColumnPivotHierarchy.|
-||[fields](/javascript/api/excel/excel.rowcolumnpivothierarchy#fields)|Возвращает сводные поля, связанные с RowColumnPivotHierarchy.|
+|[RowColumnPivotHierarchy](/javascript/api/excel/excel.rowcolumnpivothierarchy)|[fields](/javascript/api/excel/excel.rowcolumnpivothierarchy#fields)|Возвращает сводные поля, связанные с RowColumnPivotHierarchy.|
 ||[id](/javascript/api/excel/excel.rowcolumnpivothierarchy#id)|ID of the RowColumnPivotHierarchy.|
+||[name](/javascript/api/excel/excel.rowcolumnpivothierarchy#name)|Имя RowColumnPivotHierarchy.|
+||[position](/javascript/api/excel/excel.rowcolumnpivothierarchy#position)|Положение RowColumnPivotHierarchy.|
 ||[setToDefault()](/javascript/api/excel/excel.rowcolumnpivothierarchy#setToDefault__)|Сбрасывает RowColumnPivotHierarchy до значений по умолчанию.|
 |[RowColumnPivotHierarchyCollection](/javascript/api/excel/excel.rowcolumnpivothierarchycollection)|[add(pivotHierarchy: Excel. PivotHierarchy)](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#add_pivotHierarchy_)|Добавляет PivotHierarchy к текущей оси.|
 ||[getCount()](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#getCount__)|Получает количество иерархий сводного объекта в коллекции.|

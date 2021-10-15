@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.12
 ms.date: 04/01/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: f2780e188eeebc70d754d7c2ea26cde1b1974702
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 99447cb7a92f0431a04c10a767af91df3a56ee80
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153877"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367315"
 ---
 # <a name="whats-new-in-excel-javascript-api-112"></a>Новые возможности в Excel API JavaScript 1.12
 
@@ -77,7 +77,7 @@ ExcelApi 1.12 увеличил поддержку формул в диапазо
 ||[условие](/javascript/api/excel/excel.pivotlabelfilter#condition)|Указывает условие фильтра, которое определяет необходимые критерии фильтрации.|
 ||[эксклюзив](/javascript/api/excel/excel.pivotlabelfilter#exclusive)|Если `true` фильтр исключает *элементы,* которые соответствуют критериям.|
 ||[lowerBound](/javascript/api/excel/excel.pivotlabelfilter#lowerBound)|Нижний предел диапазона для состояния `between` фильтра.|
-||[подстройка](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстройка, используемая для `beginsWith` `endsWith` и `contains` фильтрации условий.|
+||[substring](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстройка, используемая для `beginsWith` `endsWith` и `contains` фильтрации условий.|
 ||[upperBound](/javascript/api/excel/excel.pivotlabelfilter#upperBound)|Верхний предел диапазона для состояния `between` фильтра.|
 |[PivotManualFilter](/javascript/api/excel/excel.pivotmanualfilter)|[selectedItems](/javascript/api/excel/excel.pivotmanualfilter#selectedItems)|Список выбранных элементов, которые необходимо фильтровать вручную.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[allowMultipleFiltersPerField](/javascript/api/excel/excel.pivottable#allowMultipleFiltersPerField)|Указывает, разрешает ли pivotTable применение нескольких pivotFilters в заданной pivotField в таблице.|
@@ -106,10 +106,10 @@ ExcelApi 1.12 увеличил поддержку формул в диапазо
 |[RangeAreasCollection](/javascript/api/excel/excel.rangeareascollection)|[getCount()](/javascript/api/excel/excel.rangeareascollection#getCount__)|Получает количество объектов `RangeAreas` в этой коллекции.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.rangeareascollection#getItemAt_index_)|Возвращает объект `RangeAreas` в зависимости от позиции в коллекции.|
 ||[items](/javascript/api/excel/excel.rangeareascollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[WorkbookRangeAreas](/javascript/api/excel/excel.workbookrangeareas)|[getRangeAreasBySheet (клавиша: строка)](/javascript/api/excel/excel.workbookrangeareas#getRangeAreasBySheet_key_)|Возвращает объект на основе ИД или имени таблицы `RangeAreas` в коллекции.|
-||[getRangeAreasOrNullObjectBySheet (key: string)](/javascript/api/excel/excel.workbookrangeareas#getRangeAreasOrNullObjectBySheet_key_)|Возвращает объект на основе имени или ИД таблицы `RangeAreas` в коллекции.|
-||[addresses](/javascript/api/excel/excel.workbookrangeareas#addresses)|Возвращает массив адресов в стиле A1.|
+|[WorkbookRangeAreas](/javascript/api/excel/excel.workbookrangeareas)|[addresses](/javascript/api/excel/excel.workbookrangeareas#addresses)|Возвращает массив адресов в стиле A1.|
 ||[areas](/javascript/api/excel/excel.workbookrangeareas#areas)|Возвращает `RangeAreasCollection` объект.|
+||[getRangeAreasBySheet (клавиша: строка)](/javascript/api/excel/excel.workbookrangeareas#getRangeAreasBySheet_key_)|Возвращает объект на основе ИД или имени таблицы `RangeAreas` в коллекции.|
+||[getRangeAreasOrNullObjectBySheet (key: string)](/javascript/api/excel/excel.workbookrangeareas#getRangeAreasOrNullObjectBySheet_key_)|Возвращает объект на основе имени или ИД таблицы `RangeAreas` в коллекции.|
 ||[диапазоны](/javascript/api/excel/excel.workbookrangeareas#ranges)|Возвращает диапазоны, составляющие этот объект в `RangeCollection` объекте.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[customProperties](/javascript/api/excel/excel.worksheet#customProperties)|Получает коллекцию пользовательских свойств на уровне таблицы.|
 |[WorksheetCustomProperty](/javascript/api/excel/excel.worksheetcustomproperty)|[delete()](/javascript/api/excel/excel.worksheetcustomproperty#delete__)|Удаляет настраиваемое свойство.|

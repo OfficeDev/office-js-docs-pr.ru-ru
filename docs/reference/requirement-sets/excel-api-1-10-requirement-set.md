@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.10
 ms.date: 04/02/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 768902eaac53c67d3aabc35ddb8d96f297d798de
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 85535a0ac3291e9e227aa45e72e80333e4a666e9
+ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151113"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60367301"
 ---
 # <a name="whats-new-in-excel-javascript-api-110"></a>Новые возможности в Excel API JavaScript 1.10
 
@@ -28,12 +28,12 @@ ms.locfileid: "59151113"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Comment](/javascript/api/excel/excel.comment)|[content](/javascript/api/excel/excel.comment#content)|Содержимое комментария.|
+|[Comment](/javascript/api/excel/excel.comment)|[authorEmail](/javascript/api/excel/excel.comment#authorEmail)|Получает электронную почту автора примечания.|
+||[authorName](/javascript/api/excel/excel.comment#authorName)|Получает имя автора примечания.|
+||[content](/javascript/api/excel/excel.comment#content)|Содержимое комментария.|
+||[creationDate](/javascript/api/excel/excel.comment#creationDate)|Получает время создания примечания.|
 ||[delete()](/javascript/api/excel/excel.comment#delete__)|Удаляет комментарий и все подключенные ответы.|
 ||[getLocation()](/javascript/api/excel/excel.comment#getLocation__)|Получает ячейку, в которой расположен этот комментарий.|
-||[authorEmail](/javascript/api/excel/excel.comment#authorEmail)|Получает электронную почту автора примечания.|
-||[authorName](/javascript/api/excel/excel.comment#authorName)|Получает имя автора примечания.|
-||[creationDate](/javascript/api/excel/excel.comment#creationDate)|Получает время создания примечания.|
 ||[id](/javascript/api/excel/excel.comment#id)|Указывает идентификатор комментария.|
 ||[replies](/javascript/api/excel/excel.comment#replies)|Представляет коллекцию объектов ответов, связанных с примечанием.|
 |[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(cellAddress: Range \| string, content: string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentcollection#add_cellAddress__content__contentType_)|Создает новое примечание с указанным содержимым в определенной ячейке.|
@@ -43,13 +43,13 @@ ms.locfileid: "59151113"
 ||[getItemByCell(cellAddress: Range \| string)](/javascript/api/excel/excel.commentcollection#getItemByCell_cellAddress_)|Получает примечание из указанной ячейки.|
 ||[getItemByReplyId(replyId: string)](/javascript/api/excel/excel.commentcollection#getItemByReplyId_replyId_)|Получает комментарий, к которому подключен данный ответ.|
 ||[items](/javascript/api/excel/excel.commentcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[CommentReply](/javascript/api/excel/excel.commentreply)|[content](/javascript/api/excel/excel.commentreply#content)|Содержимое ответа на комментарий.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[authorEmail](/javascript/api/excel/excel.commentreply#authorEmail)|Получает электронную почту автора ответа на примечание.|
+||[authorName](/javascript/api/excel/excel.commentreply#authorName)|Получает имя автора ответа на примечание.|
+||[content](/javascript/api/excel/excel.commentreply#content)|Содержимое ответа на комментарий.|
+||[creationDate](/javascript/api/excel/excel.commentreply#creationDate)|Получает время создания ответа на примечание.|
 ||[delete()](/javascript/api/excel/excel.commentreply#delete__)|Удаляет ответ на примечание.|
 ||[getLocation()](/javascript/api/excel/excel.commentreply#getLocation__)|Получает ячейку, в которой находится ответ на этот комментарий.|
 ||[getParentComment()](/javascript/api/excel/excel.commentreply#getParentComment__)|Получает родительский комментарий этого ответа.|
-||[authorEmail](/javascript/api/excel/excel.commentreply#authorEmail)|Получает электронную почту автора ответа на примечание.|
-||[authorName](/javascript/api/excel/excel.commentreply#authorName)|Получает имя автора ответа на примечание.|
-||[creationDate](/javascript/api/excel/excel.commentreply#creationDate)|Получает время создания ответа на примечание.|
 ||[id](/javascript/api/excel/excel.commentreply#id)|Указывает идентификатор ответа на комментарии.|
 |[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentreplycollection#add_content__contentType_)|Создает ответ на комментарий для комментария.|
 ||[getCount()](/javascript/api/excel/excel.commentreplycollection#getCount__)|Получает количество ответов на примечания в коллекции.|
@@ -69,13 +69,13 @@ ms.locfileid: "59151113"
 ||[items](/javascript/api/excel/excel.pivottablestylecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[setDefault(newDefaultStyle: PivotTableStyle \| string)](/javascript/api/excel/excel.pivottablestylecollection#setDefault_newDefaultStyle_)|Задает стиль PivotTable по умолчанию для использования в области родительского объекта.|
 |[Range](/javascript/api/excel/excel.range)|[group(groupOption: Excel. GroupOption)](/javascript/api/excel/excel.range#group_groupOption_)|Группы столбцов и строк для контура.|
-||[hideGroupDetails(groupOption: Excel. GroupOption)](/javascript/api/excel/excel.range#hideGroupDetails_groupOption_)|Скрывает сведения о группе строки или столбца.|
 ||[height](/javascript/api/excel/excel.range#height)|Возвращает расстояние в точках для 100% масштабирования от верхнего края диапазона до нижнего края диапазона.|
+||[hideGroupDetails(groupOption: Excel. GroupOption)](/javascript/api/excel/excel.range#hideGroupDetails_groupOption_)|Скрывает сведения о группе строки или столбца.|
 ||[left](/javascript/api/excel/excel.range#left)|Возвращает расстояние в точках для 100% масштабирования от левого края таблицы до левого края диапазона.|
-||[top](/javascript/api/excel/excel.range#top)|Возвращает расстояние в точках для 100% масштабирования от верхнего края таблицы до верхнего края диапазона.|
-||[width](/javascript/api/excel/excel.range#width)|Возвращает расстояние в точках для 100% масштабирования от левого края диапазона до правого края диапазона.|
 ||[showGroupDetails(groupOption: Excel. GroupOption)](/javascript/api/excel/excel.range#showGroupDetails_groupOption_)|Отображает сведения о группе строки или столбца.|
+||[top](/javascript/api/excel/excel.range#top)|Возвращает расстояние в точках для 100% масштабирования от верхнего края таблицы до верхнего края диапазона.|
 ||[ungroup(groupOption: Excel. GroupOption)](/javascript/api/excel/excel.range#ungroup_groupOption_)|Разгруппировка столбцов и строк для контура.|
+||[width](/javascript/api/excel/excel.range#width)|Возвращает расстояние в точках для 100% масштабирования от левого края диапазона до правого края диапазона.|
 |[Shape](/javascript/api/excel/excel.shape)|[copyTo(destinationSheet?: Worksheet \| string)](/javascript/api/excel/excel.shape#copyTo_destinationSheet_)|Копирует и вклеит `Shape` объект.|
 ||[placement](/javascript/api/excel/excel.shape#placement)|Представляет способ прикрепления объекта к ячейкам под ним.|
 |[Slicer](/javascript/api/excel/excel.slicer)|[caption](/javascript/api/excel/excel.slicer#caption)|Представляет подпись среза.|
@@ -83,25 +83,25 @@ ms.locfileid: "59151113"
 ||[delete()](/javascript/api/excel/excel.slicer#delete__)|Удаляет срез.|
 ||[getSelectedItems()](/javascript/api/excel/excel.slicer#getSelectedItems__)|Возвращает массив имен выбранных ключей элементов.|
 ||[height](/javascript/api/excel/excel.slicer#height)|Представляет высоту среза (в пунктах).|
-||[left](/javascript/api/excel/excel.slicer#left)|Представляет расстояние в пунктах от левого края среза до левого края листа.|
-||[name](/javascript/api/excel/excel.slicer#name)|Представляет имя среза.|
 ||[id](/javascript/api/excel/excel.slicer#id)|Представляет уникальный ID среза.|
 ||[isFilterCleared](/javascript/api/excel/excel.slicer#isFilterCleared)|Значение, `true` если все фильтры, применяемые в настоящее время на срезе, будут очищены.|
-||[slicerItems](/javascript/api/excel/excel.slicer#slicerItems)|Представляет коллекцию элементов slicer, которые являются частью среза.|
-||[worksheet](/javascript/api/excel/excel.slicer#worksheet)|Представляет лист, содержащий срез.|
+||[left](/javascript/api/excel/excel.slicer#left)|Представляет расстояние в пунктах от левого края среза до левого края листа.|
+||[name](/javascript/api/excel/excel.slicer#name)|Представляет имя среза.|
 ||[selectItems(items?: string[])](/javascript/api/excel/excel.slicer#selectItems_items_)|Выбирает элементы среза на основе ключей.|
+||[slicerItems](/javascript/api/excel/excel.slicer#slicerItems)|Представляет коллекцию элементов slicer, которые являются частью среза.|
 ||[sortBy](/javascript/api/excel/excel.slicer#sortBy)|Представляет порядок сортировки элементов в срезе.|
 ||[style](/javascript/api/excel/excel.slicer#style)|Постоянное значение, представляю которое представляет стиль среза.|
 ||[top](/javascript/api/excel/excel.slicer#top)|Представляет расстояние в пунктах от верхнего края среза до верхнего края листа.|
 ||[width](/javascript/api/excel/excel.slicer#width)|Представляет ширину среза (в пунктах).|
+||[worksheet](/javascript/api/excel/excel.slicer#worksheet)|Представляет лист, содержащий срез.|
 |[SlicerCollection](/javascript/api/excel/excel.slicercollection)|[add(slicerSource: string \| PivotTable \| Table, sourceField: string \| PivotField \| number \| TableColumn, slicerDestination?: string \| Worksheet)](/javascript/api/excel/excel.slicercollection#add_slicerSource__sourceField__slicerDestination_)|Добавляет новый срез в книгу.|
 ||[getCount()](/javascript/api/excel/excel.slicercollection#getCount__)|Возвращает количество срезов в коллекции.|
 ||[getItem(key: string)](/javascript/api/excel/excel.slicercollection#getItem_key_)|Получает объект slicer с его именем или ИД.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.slicercollection#getItemAt_index_)|Получает срез на основе его позиции в коллекции.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.slicercollection#getItemOrNullObject_key_)|Получает срез с его именем или ИД.|
 ||[items](/javascript/api/excel/excel.slicercollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[SlicerItem](/javascript/api/excel/excel.sliceritem)|[isSelected](/javascript/api/excel/excel.sliceritem#isSelected)|Значение, `true` если выбран элемент slicer.|
-||[hasData](/javascript/api/excel/excel.sliceritem#hasData)|Значение, `true` если элемент slicer имеет данные.|
+|[SlicerItem](/javascript/api/excel/excel.sliceritem)|[hasData](/javascript/api/excel/excel.sliceritem#hasData)|Значение, `true` если элемент slicer имеет данные.|
+||[isSelected](/javascript/api/excel/excel.sliceritem#isSelected)|Значение, `true` если выбран элемент slicer.|
 ||[key](/javascript/api/excel/excel.sliceritem#key)|Представляет уникальное значение, соответствующее элементу среза.|
 ||[name](/javascript/api/excel/excel.sliceritem#name)|Представляет название, отображаемую в пользовательском Excel интерфейсе.|
 |[SlicerItemCollection](/javascript/api/excel/excel.sliceritemcollection)|[getCount()](/javascript/api/excel/excel.sliceritemcollection#getCount__)|Возвращает количество элементов в срезе.|
@@ -142,9 +142,9 @@ ms.locfileid: "59151113"
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.timelinestylecollection#getItemOrNullObject_name_)|Получает `TimelineStyle` имя.|
 ||[items](/javascript/api/excel/excel.timelinestylecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[setDefault(newDefaultStyle: TimelineStyle \| string)](/javascript/api/excel/excel.timelinestylecollection#setDefault_newDefaultStyle_)|Задает стиль временной шкалы по умолчанию для использования в области родительского объекта.|
-|[Workbook](/javascript/api/excel/excel.workbook)|[getActiveSlicer()](/javascript/api/excel/excel.workbook#getActiveSlicer__)|Получает текущий активный срез в книге.|
+|[Workbook](/javascript/api/excel/excel.workbook)|[comments](/javascript/api/excel/excel.workbook#comments)|Представляет коллекцию комментариев, связанных с книгой.|
+||[getActiveSlicer()](/javascript/api/excel/excel.workbook#getActiveSlicer__)|Получает текущий активный срез в книге.|
 ||[getActiveSlicerOrNullObject()](/javascript/api/excel/excel.workbook#getActiveSlicerOrNullObject__)|Получает текущий активный срез в книге.|
-||[comments](/javascript/api/excel/excel.workbook#comments)|Представляет коллекцию комментариев, связанных с книгой.|
 ||[pivotTableStyles](/javascript/api/excel/excel.workbook#pivotTableStyles)|Представляет коллекцию объектов PivotTableStyles, связанных с книгой.|
 ||[slicerStyles](/javascript/api/excel/excel.workbook#slicerStyles)|Представляет коллекцию объектов SlicerStyles, связанных с книгой.|
 ||[slicers](/javascript/api/excel/excel.workbook#slicers)|Представляет коллекцию срезов, связанных с книгой.|
@@ -154,8 +154,8 @@ ms.locfileid: "59151113"
 ||[onColumnSorted](/javascript/api/excel/excel.worksheet#onColumnSorted)|Возникает при сортировке одного или нескольких столбцов.|
 ||[onRowSorted](/javascript/api/excel/excel.worksheet#onRowSorted)|Возникает при сортировке одной или нескольких строк.|
 ||[onSingleClicked](/javascript/api/excel/excel.worksheet#onSingleClicked)|Происходит, когда в таблице происходит действие левого щелчка или прослушиваемого действия.|
-||[slicers](/javascript/api/excel/excel.worksheet#slicers)|Возвращает коллекцию срезов, которые являются частью таблицы.|
 ||[showOutlineLevels (rowLevels: number, columnLevels: number)](/javascript/api/excel/excel.worksheet#showOutlineLevels_rowLevels__columnLevels_)|Показывает группы строк или столбцов по уровням контура.|
+||[slicers](/javascript/api/excel/excel.worksheet#slicers)|Возвращает коллекцию срезов, которые являются частью таблицы.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[onColumnSorted](/javascript/api/excel/excel.worksheetcollection#onColumnSorted)|Возникает при сортировке одного или нескольких столбцов.|
 ||[onRowSorted](/javascript/api/excel/excel.worksheetcollection#onRowSorted)|Возникает при сортировке одной или нескольких строк.|
 ||[onSingleClicked](/javascript/api/excel/excel.worksheetcollection#onSingleClicked)|Происходит, когда в коллекции таблицы происходит операция нажатием левой кнопкой мыши или нажатием на нее.|
