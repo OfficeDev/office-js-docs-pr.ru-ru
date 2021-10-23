@@ -267,8 +267,10 @@ items:
                 href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
               - name: Подключение отладчика из области задач
                 href: testing/attach-debugger-from-task-pane.md
-              - name: Отладка с помощью средств разработчика
-                href: testing/debug-add-ins-using-f12-developer-tools-on-windows.md
+              - name: Отладка с помощью средств разработчика для Internet Explorer
+                href: testing/debug-add-ins-using-f12-tools-ie.md
+              - name: Отладка с помощью средств разработчика для устаревшей версии Microsoft Edge
+                href: testing/debug-add-ins-using-devtools-edge-legacy.md
               - name: Отладка с помощью Edge Chromium WebView2
                 href: testing/debug-desktop-using-edge-chromium.md
                 displayName: 'debug, windows'
@@ -576,6 +578,8 @@ items:
               - name: Набор обязательных элементов ExcelApi (только в сети)
                 href: reference/requirement-sets/excel-api-online-requirement-set.md
                 displayName: Excel
+              - name: Набор обязательных элементов ExcelApi 1.14
+                href: reference/requirement-sets/excel-api-1-14-requirement-set.md
               - name: Набор обязательных элементов ExcelApi 1.13
                 href: reference/requirement-sets/excel-api-1-13-requirement-set.md
                 displayName: Excel

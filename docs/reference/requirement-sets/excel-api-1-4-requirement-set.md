@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.4.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 297f0d2a9c892800a5f26ecd29be0c7587bc52fc
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e8a38d45a73560cade580cf5f2f9a0892790b38d
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153970"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537480"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 
@@ -76,7 +76,7 @@ worksheet.getItemOrNullObject("itemName")
 |[Параметр](/javascript/api/excel/excel.setting)|[delete()](/javascript/api/excel/excel.setting#delete__)|Удаляет параметр.|
 ||[key](/javascript/api/excel/excel.setting#key)|Ключ, который представляет ID параметра.|
 ||[value](/javascript/api/excel/excel.setting#value)|Представляет значение, сохраненное для этого параметра.|
-|[SettingCollection](/javascript/api/excel/excel.settingcollection)|[add(key: string, value: string \| number \| boolean \| Date Array \| <any> \| any)](/javascript/api/excel/excel.settingcollection#add_key__value_)|Задает или добавляет указанный параметр в книгу.|
+|[SettingCollection](/javascript/api/excel/excel.settingcollection)|[add(key: string, value: string \| number \| boolean \| Date Array \| \| any)](/javascript/api/excel/excel.settingcollection#add_key__value_)|Задает или добавляет указанный параметр в книгу.|
 ||[getCount()](/javascript/api/excel/excel.settingcollection#getCount__)|Получает количество параметров в коллекции.|
 ||[getItem(key: string)](/javascript/api/excel/excel.settingcollection#getItem_key_)|Получает запись параметра с помощью ключа.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.settingcollection#getItemOrNullObject_key_)|Получает запись параметра с помощью ключа.|

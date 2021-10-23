@@ -3,12 +3,12 @@ title: Надстройка Microsoft Office "Расширение отладч�
 description: Чтобы отладить Office надстройки, Visual Studio Code надстройки Microsoft Office надстройки.
 ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1eb71ec1bd52198af32129882cb531451fff422a
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: 56dee52f71bfb460abbadafb0cdfd82f8f7cb548
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138641"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537641"
 ---
 # <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 
@@ -84,7 +84,6 @@ ms.locfileid: "60138641"
 ## <a name="see-also"></a>См. также
 
 - [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
-
-- [Отламывка надстроек с помощью средств разработчика на Windows](debug-add-ins-using-f12-developer-tools-on-windows.md)
-
+- [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+- [Отламывка надстроек с помощью средств разработчика для Edge Legacy](debug-add-ins-using-devtools-edge-legacy.md)
 - [Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)](debug-desktop-using-edge-chromium.md)

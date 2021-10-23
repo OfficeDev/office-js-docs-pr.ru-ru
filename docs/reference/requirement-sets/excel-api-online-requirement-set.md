@@ -1,15 +1,15 @@
 ---
 title: Excel Набор требований для API javaScript только для интернета
 description: Сведения о наборе требований ExcelApiOnline.
-ms.date: 10/13/2021
+ms.date: 10/14/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: ae014930d3ec11d52b3904ee1205b670f8d3790f
-ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
+ms.openlocfilehash: bd1f62b92b9a08d23daf77f8f4b86c60333faab3
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60367329"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537592"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 
@@ -29,6 +29,7 @@ ms.locfileid: "60367329"
 |:--- |:--- |:--- |
 | Связанные книги | Управление связями между книгами, включая поддержку обновления и разрыва ссылок на книги. | [LinkedWorkbook](/javascript/api/excel/excel.linkedworkbook), [LinkedWorkbookCollection](/javascript/api/excel/excel.linkedworkbookcollection) |
 | Именуемые представления листа | Предоставляет программный контроль представлений таблицы для каждого пользователя. | [NamedSheetView](/javascript/api/excel/excel.namedsheetview), [NamedSheetViewCollection](/javascript/api/excel/excel.namedsheetviewcollection) |
+| События перемещения таблиц | Обнаружение перемещений таблиц в пределах коллекции, положения таблицы и источника изменения. | [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection), [WorksheetMovedEventArgs](/javascript/api/excel/excel.worksheetmovedeventargs) |
 
 ## <a name="recommended-usage"></a>Рекомендуемое использование
 

@@ -3,12 +3,12 @@ title: Тестирование Internet Explorer 11
 description: Проверьте Office надстройки в Internet Explorer 11.
 ms.date: 10/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: cfa6a35565fdca28eab9734ccde9fc8fbb2e8270
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: e64ce43b4b105b54ed5fcf3fa260ef7f81a04520
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250520"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537634"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Проверьте Office надстройки в Internet Explorer 11
 
@@ -69,5 +69,5 @@ ms.locfileid: "60250520"
 
 * [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
 * [Загрузка неопубликованных надстроек Office для тестирования](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-* [Отламывка надстроек с помощью средств разработчика на Windows](debug-add-ins-using-f12-developer-tools-on-windows.md)
+* [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 * [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)

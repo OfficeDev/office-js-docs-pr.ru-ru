@@ -1,14 +1,14 @@
 ---
 title: Просмотр и изменение получателей в надстройке Outlook
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
-ms.date: 12/10/2019
+ms.date: 10/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ce4ad1af913362965fd4e3bfe95918a6a9b10989
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: c85a49ea3c409b64e0bd62f3eae3aa79dd614568
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154115"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537459"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
@@ -54,8 +54,9 @@ item.cc.getAsync
 
 Обратите внимание, что поскольку метод асинхронный, если существуют последующие действия, зависят от успешного получения получателей, необходимо организовать код для запуска таких действий только в соответствующем методе вызова после успешного завершения асинхронного `getAsync` вызова.
 
-
-
+> [!IMPORTANT]
+> В Outlook в Интернете случае, если пользователь создал новое сообщение, активировав ссылку на электронный адрес контакта или карточку профиля, вызов надстройки в настоящее время не возвращает значение в свойстве `Recipients.getAsync` `displayName` связанного `EmailAddressDetails` объекта.
+> Дополнительные сведения можно найти в [связанной GitHub.](https://github.com/OfficeDev/office-js-docs-pr/issues/2962)
 
 ```js
 var item;

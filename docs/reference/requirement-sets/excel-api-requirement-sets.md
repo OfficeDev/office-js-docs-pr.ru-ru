@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 10/08/2021
+ms.date: 10/18/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: d6e8ea8fecf2f5495eb7d0c7ac5c3db6952e8b9a
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: b2e09d508b4f937ce18029e55c7754719d85527f
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250541"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537585"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -45,7 +45,7 @@ ms.locfileid: "60250541"
 > [!NOTE]
 > Бессрочные версии Office поддерживают следующие наборы обязательных элементов:
 >
-> - Office 2021 поддерживает ExcelApi 1.13 и более ранние версии.
+> - Office 2021 поддерживает ExcelApi 1.14 и более ранние версии.
 > - Office 2019 поддерживает ExcelApi 1.8 и более ранние версии.
 > - Office 2016 поддерживает только набор обязательных элементов ExcelApi 1.1.
 

@@ -3,12 +3,12 @@ title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью схемы XML и других средств.
 ms.date: 09/18/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b84461a8062ac0ca0300f869fcf4dba0019a6a9b
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: e9af96db7fbbeaf21274d4c5980afe0f4e9be3c5
+ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138613"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "60537613"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -75,4 +75,5 @@ npm run validate
 - [Очистка кэша Office](clear-cache.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
-- [Отладка надстроек Office](debug-add-ins-using-f12-developer-tools-on-windows.md)
+- [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+- [Отламывка надстроек с помощью средств разработчика для Edge Legacy](debug-add-ins-using-devtools-edge-legacy.md)
