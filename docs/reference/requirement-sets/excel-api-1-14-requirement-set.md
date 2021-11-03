@@ -1,15 +1,15 @@
 ---
 title: Excel Набор API JavaScript 1.14
 description: Сведения о наборе требований ExcelApi 1.14.
-ms.date: 10/13/2021
+ms.date: 10/29/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b968cf40fa35921df1be0aca508041e72cddf23
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: 9cdf22d35125607237b724c88da2083ae78a9940
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537718"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681509"
 ---
 # <a name="whats-new-in-excel-javascript-api-114"></a>Новые возможности в Excel API JavaScript 1.14
 
@@ -28,6 +28,7 @@ ms.locfileid: "60537718"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
+|[AutoFilter](/javascript/api/excel/excel.autofilter)|[clearColumnCriteria(columnIndex: number)](/javascript/api/excel/excel.autofilter#clearColumnCriteria_columnIndex_)|Очищает критерии фильтрации столбцов автофайлов.|
 |[ChangeDirectionState](/javascript/api/excel/excel.changedirectionstate)|[deleteShiftDirection](/javascript/api/excel/excel.changedirectionstate#deleteShiftDirection)|Представляет направление (например, вверх или влево), которое остальные ячейки будут смещаться при удалении ячейки или ячейки.|
 ||[insertShiftDirection](/javascript/api/excel/excel.changedirectionstate#insertShiftDirection)|Представляет направление (например, вниз или вправо), в которое будут перенесены существующие ячейки при вставке новой ячейки или ячеек.|
 |[Chart](/javascript/api/excel/excel.chart)|[getDataTable()](/javascript/api/excel/excel.chart#getDataTable__)|Получает таблицу данных на диаграмме.|

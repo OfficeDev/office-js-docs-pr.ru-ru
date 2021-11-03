@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих Excel API JavaScript.
-ms.date: 10/14/2021
+ms.date: 11/02/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: a7f1c81f75243619f562d901cb78e16bcba676d2
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: f62b71532f323ad17f541979d3956f217ab5d07d
+ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537564"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60683786"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -21,8 +21,8 @@ ms.locfileid: "60537564"
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |
-| Настраиваемые типы данных | Расширение существующих типов Excel, включая поддержку отформатированные номера и веб-изображения. | [BooleanCellValue](/javascript/api/excel/excel.booleancellvalue), [CellValueAttributionAttributes](/javascript/api/excel/excel.cellvalueattributionattributes), [CellValueProviderAttributes](/javascript/api/excel/excel.cellvalueproviderattributes), [DoubleCellValue](/javascript/api/excel/excel.doublecellvalue), [EmptyCellValue](/javascript/api/excel/excel.emptycellvalue), [FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue), [StringCellValue](/javascript/api/excel/excel.stringcellvalue), [ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue), [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) |
-| Ошибки типов пользовательских данных | Объекты ошибки, поддерживают настраиваемые типы данных. | [BlockedErrorCellValue](/javascript/api/excel/excel.blockederrorcellvalue), [BusyErrorCellValue](/javascript/api/excel/excel.busyerrorcellvalue), [CalcErrorCellValue](/javascript/api/excel/excel.calcerrorcellvalue), [ConnectErrorCellValue](/javascript/api/excel/excel.connecterrorcellvalue), [Div0ErrorCellValue](/javascript/api/excel/excel.div0errorcellvalue), [FieldErrorCellValue](/javascript/api/excel/excel.fielderrorcellvalue), [GettingDataErrorCellValue](/javascript/api/excel/excel.gettingdataerrorcellvalue), [NaErrorCellValue](/javascript/api/excel/excel.naerrorcellvalue), [NameErrorCellValue](/javascript/api/excel/excel.nameerrorcellvalue), [NullErrorCellValue](/javascript/api/excel/excel.nullerrorcellvalue), [NumErrorCellValue](/javascript/api/excel/excel.numerrorcellvalue), [RefErrorCellValue](/javascript/api/excel/excel.referrorcellvalue), [SpillErrorCellValue](/javascript/api/excel/excel.spillerrorcellvalue), [ValueErrorCellValue](/javascript/api/excel/excel.valueerrorcellvalue)|
+| [Типы данных](../../excel/excel-data-types-overview.md) | Расширение существующих типов Excel, включая поддержку отформатированные номера и веб-изображения. | [ArrayCellValue](/javascript/api/excel/excel.arraycellvalue), [BooleanCellValue](/javascript/api/excel/excel.booleancellvalue), [CellValueAttributionAttributes](/javascript/api/excel/excel.cellvalueattributionattributes), [CellValueProviderAttributes](/javascript/api/excel/excel.cellvalueproviderattributes), [DoubleCellValue](/javascript/api/excel/excel.doublecellvalue), [EmptyCellValue](/javascript/api/excel/excel.emptycellvalue), [EntityCellValue](/javascript/api/excel/excel.entitycellvalue), [FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue), [StringCellValue](/javascript/api/excel/excel.stringcellvalue), [ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue), [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) |
+| [Ошибки типов данных](../../excel/excel-data-types-concepts.md#improved-error-support) | Объекты ошибки, поддерживают расширенные типы данных. | [BlockedErrorCellValue](/javascript/api/excel/excel.blockederrorcellvalue), [BusyErrorCellValue](/javascript/api/excel/excel.busyerrorcellvalue), [CalcErrorCellValue](/javascript/api/excel/excel.calcerrorcellvalue), [ConnectErrorCellValue](/javascript/api/excel/excel.connecterrorcellvalue), [Div0ErrorCellValue](/javascript/api/excel/excel.div0errorcellvalue), [FieldErrorCellValue](/javascript/api/excel/excel.fielderrorcellvalue), [GettingDataErrorCellValue](/javascript/api/excel/excel.gettingdataerrorcellvalue), [NotAvailableErrorCellValue](/javascript/api/excel/excel.notavailableerrorcellvalue), [NameErrorCellValue](/javascript/api/excel/excel.nameerrorcellvalue), [NullErrorCellValue](/javascript/api/excel/excel.nullerrorcellvalue), [NumErrorCellValue](/javascript/api/excel/excel.numerrorcellvalue), [RefErrorCellValue](/javascript/api/excel/excel.referrorcellvalue), [SpillErrorCellValue](/javascript/api/excel/excel.spillerrorcellvalue), [ValueErrorCellValue](/javascript/api/excel/excel.valueerrorcellvalue)|
 | Задачи документа | Превратите комментарии в задачи, назначенные пользователям. | [DocumentTask](/javascript/api/excel/excel.documenttask) |
 | Удостоверения | Управление удостоверениями пользователей, включая имя отображения и адрес электронной почты. | [Identity](/javascript/api/excel/excel.identity), [IdentityCollection](/javascript/api/excel/excel.identitycollection), [IdentityEntity](/javascript/api/excel/excel.identityentity) |
 | Связанные типы данных | Добавляет поддержку типов данных, подключенных к Excel из внешних источников. | [LinkedDataType](/javascript/api/excel/excel.linkeddatatype), [LinkedDataTypeAddedEventArgs](/javascript/api/excel/excel.linkeddatatypeaddedeventargs), [LinkedDataTypeCollection](/javascript/api/excel/excel.linkeddatatypecollection) |
@@ -49,28 +49,39 @@ ms.locfileid: "60537564"
 ||[items](/javascript/api/excel/excel.alloweditrangecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[pauseProtection (пароль: строка)](/javascript/api/excel/excel.alloweditrangecollection#pauseProtection_password_)|Приостановка защиты от таблиц для всех объектов в коллекции с заданным паролем `AllowEditRange` для пользователя в заданном сеансе.|
 |[AllowEditRangeOptions](/javascript/api/excel/excel.alloweditrangeoptions)|[password](/javascript/api/excel/excel.alloweditrangeoptions#password)|Пароль, связанный с `AllowEditRange` .|
-|[BlockedErrorCellValue](/javascript/api/excel/excel.blockederrorcellvalue)|[errorSubType](/javascript/api/excel/excel.blockederrorcellvalue#errorSubType)|Представляет тип `BlockedErrorCellValue` .|
+|[ArrayCellValue](/javascript/api/excel/excel.arraycellvalue)|[basicType](/javascript/api/excel/excel.arraycellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.arraycellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[элементы](/javascript/api/excel/excel.arraycellvalue#elements)|Представляет элементы массива.|
+||[type](/javascript/api/excel/excel.arraycellvalue#type)|Представляет тип этого значения ячейки.|
+|[BlockedErrorCellValue](/javascript/api/excel/excel.blockederrorcellvalue)|[basicType](/javascript/api/excel/excel.blockederrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.blockederrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.blockederrorcellvalue#errorSubType)|Представляет тип `BlockedErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.blockederrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.blockederrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.blockederrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.blockederrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[BooleanCellValue](/javascript/api/excel/excel.booleancellvalue)|[примитивный](/javascript/api/excel/excel.booleancellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.booleancellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[BooleanCellValue](/javascript/api/excel/excel.booleancellvalue)|[basicType](/javascript/api/excel/excel.booleancellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.booleancellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.booleancellvalue#type)|Представляет тип этого значения ячейки.|
-|[BusyErrorCellValue](/javascript/api/excel/excel.busyerrorcellvalue)|[errorSubType](/javascript/api/excel/excel.busyerrorcellvalue#errorSubType)|Представляет тип `BusyErrorCellValue` .|
+|[BusyErrorCellValue](/javascript/api/excel/excel.busyerrorcellvalue)|[basicType](/javascript/api/excel/excel.busyerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.busyerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.busyerrorcellvalue#errorSubType)|Представляет тип `BusyErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.busyerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.busyerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.busyerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.busyerrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[CalcErrorCellValue](/javascript/api/excel/excel.calcerrorcellvalue)|[errorSubType](/javascript/api/excel/excel.calcerrorcellvalue#errorSubType)|Представляет тип `CalcErrorCellValue` .|
+|[CalcErrorCellValue](/javascript/api/excel/excel.calcerrorcellvalue)|[basicType](/javascript/api/excel/excel.calcerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.calcerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.calcerrorcellvalue#errorSubType)|Представляет тип `CalcErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.calcerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.calcerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.calcerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.calcerrorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[CellValueAttributionAttributes](/javascript/api/excel/excel.cellvalueattributionattributes)|[licenseAddress](/javascript/api/excel/excel.cellvalueattributionattributes#licenseAddress)|Представляет URL-адрес лицензии или источника, описывая, как можно использовать это свойство.|
 ||[licenseText](/javascript/api/excel/excel.cellvalueattributionattributes#licenseText)|Представляет имя лицензии, управляющей этим свойством.|
 ||[sourceAddress](/javascript/api/excel/excel.cellvalueattributionattributes#sourceAddress)|Представляет URL-адрес источника `CellValue` .|
 ||[sourceText](/javascript/api/excel/excel.cellvalueattributionattributes#sourceText)|Представляет имя источника `CellValue` .|
+|[CellValuePropertyMetadata](/javascript/api/excel/excel.cellvaluepropertymetadata)|[атрибуция](/javascript/api/excel/excel.cellvaluepropertymetadata#attribution)|Представляет сведения о присвоении для описания исходных и лицензионных требований для использования этого свойства.|
+||[excludeFrom](/javascript/api/excel/excel.cellvaluepropertymetadata#excludeFrom)|Представляет, какие функции этого свойства исключены из.|
+||[sublabel](/javascript/api/excel/excel.cellvaluepropertymetadata#sublabel)|Представляет подлабель для этого свойства, показанного в представлении карты.|
+|[CellValuePropertyMetadataExclusions](/javascript/api/excel/excel.cellvaluepropertymetadataexclusions)|[autoComplete](/javascript/api/excel/excel.cellvaluepropertymetadataexclusions#autoComplete)|True означает, что свойство исключено из свойств, показанных автоматически завершенным.|
+||[calcCompare](/javascript/api/excel/excel.cellvaluepropertymetadataexclusions#calcCompare)|True представляет, что свойство исключено из свойств, используемых для сравнения значений ячейки во время пересчета.|
+||[cardView](/javascript/api/excel/excel.cellvaluepropertymetadataexclusions#cardView)|True означает, что свойство исключено из свойств, показанных в представлении карты.|
+||[dotNotation](/javascript/api/excel/excel.cellvaluepropertymetadataexclusions#dotNotation)|True означает, что свойство исключено из свойств, к которым можно получить доступ с помощью функции FIELDVALUE.|
 |[CellValueProviderAttributes](/javascript/api/excel/excel.cellvalueproviderattributes)|[description](/javascript/api/excel/excel.cellvalueproviderattributes#description)|Представляет свойство описания поставщика, используемое в представлении карты, если не указан логотип.|
 ||[logoSourceAddress](/javascript/api/excel/excel.cellvalueproviderattributes#logoSourceAddress)|Представляет URL-адрес, используемый для загрузки изображения, которое будет использоваться в качестве логотипа в представлении карты.|
 ||[logoTargetAddress](/javascript/api/excel/excel.cellvalueproviderattributes#logoTargetAddress)|Представляет URL-адрес, который является объектом навигации, если пользователь щелкает элементом логотипа в представлении карты.|
@@ -80,14 +91,14 @@ ms.locfileid: "60537564"
 |[CommentReply](/javascript/api/excel/excel.commentreply)|[assignTask(assignee: Identity)](/javascript/api/excel/excel.commentreply#assignTask_assignee_)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного назначаемой.|
 ||[getTask()](/javascript/api/excel/excel.commentreply#getTask__)|Получает задачу, связанную с потоком ответа на этот комментарий.|
 ||[getTaskOrNullObject()](/javascript/api/excel/excel.commentreply#getTaskOrNullObject__)|Получает задачу, связанную с потоком ответа на этот комментарий.|
-|[ConnectErrorCellValue](/javascript/api/excel/excel.connecterrorcellvalue)|[errorSubType](/javascript/api/excel/excel.connecterrorcellvalue#errorSubType)|Представляет тип `ConnectErrorCellValue` .|
+|[ConnectErrorCellValue](/javascript/api/excel/excel.connecterrorcellvalue)|[basicType](/javascript/api/excel/excel.connecterrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.connecterrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.connecterrorcellvalue#errorSubType)|Представляет тип `ConnectErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.connecterrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.connecterrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.connecterrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.connecterrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[Div0ErrorCellValue](/javascript/api/excel/excel.div0errorcellvalue)|[errorType](/javascript/api/excel/excel.div0errorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.div0errorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.div0errorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[Div0ErrorCellValue](/javascript/api/excel/excel.div0errorcellvalue)|[basicType](/javascript/api/excel/excel.div0errorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.div0errorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.div0errorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.div0errorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[DocumentTask](/javascript/api/excel/excel.documenttask)|[назначение](/javascript/api/excel/excel.documenttask#assignees)|Возвращает коллекцию назначений задачи.|
 ||[изменения](/javascript/api/excel/excel.documenttask#changes)|Получает записи изменений задачи.|
@@ -124,24 +135,30 @@ ms.locfileid: "60537564"
 ||[items](/javascript/api/excel/excel.documenttaskcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[DocumentTaskSchedule](/javascript/api/excel/excel.documenttaskschedule)|[dueDateTime](/javascript/api/excel/excel.documenttaskschedule#dueDateTime)|Получает дату и время, когда должна быть поставлена задача.|
 ||[startDateTime](/javascript/api/excel/excel.documenttaskschedule#startDateTime)|Получает дату и время, которые должна начаться задача.|
-|[DoubleCellValue](/javascript/api/excel/excel.doublecellvalue)|[примитивный](/javascript/api/excel/excel.doublecellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.doublecellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[DoubleCellValue](/javascript/api/excel/excel.doublecellvalue)|[basicType](/javascript/api/excel/excel.doublecellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.doublecellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.doublecellvalue#type)|Представляет тип этого значения ячейки.|
-|[EmptyCellValue](/javascript/api/excel/excel.emptycellvalue)|[примитивный](/javascript/api/excel/excel.emptycellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.emptycellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[EmptyCellValue](/javascript/api/excel/excel.emptycellvalue)|[basicType](/javascript/api/excel/excel.emptycellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.emptycellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.emptycellvalue#type)|Представляет тип этого значения ячейки.|
-|[FieldErrorCellValue](/javascript/api/excel/excel.fielderrorcellvalue)|[errorSubType](/javascript/api/excel/excel.fielderrorcellvalue#errorSubType)|Представляет тип `FieldErrorCellValue` .|
+|[EntityCellValue](/javascript/api/excel/excel.entitycellvalue)|[basicType](/javascript/api/excel/excel.entitycellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.entitycellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[свойства: { [key: string]: CellValue & { propertyMetadata](/javascript/api/excel/excel.entitycellvalue#properties)|Представляет свойства этого объекта и их метаданные.|
+||[propertyMetadata](/javascript/api/excel/excel.entitycellvalue#propertyMetadata)||
+||[text](/javascript/api/excel/excel.entitycellvalue#text)|Представляет текст, показанный при отрисовывии ячейки с этим значением.|
+||[type](/javascript/api/excel/excel.entitycellvalue#type)|Представляет тип этого значения ячейки.|
+|[FieldErrorCellValue](/javascript/api/excel/excel.fielderrorcellvalue)|[basicType](/javascript/api/excel/excel.fielderrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.fielderrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.fielderrorcellvalue#errorSubType)|Представляет тип `FieldErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.fielderrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.fielderrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.fielderrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.fielderrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue)|[numberFormat](/javascript/api/excel/excel.formattednumbercellvalue#numberFormat)|Возвращает строку формата номеров, которая используется для отображения этого значения.|
-||[примитивный](/javascript/api/excel/excel.formattednumbercellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.formattednumbercellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue)|[basicType](/javascript/api/excel/excel.formattednumbercellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.formattednumbercellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[numberFormat](/javascript/api/excel/excel.formattednumbercellvalue#numberFormat)|Возвращает строку формата номеров, которая используется для отображения этого значения.|
 ||[type](/javascript/api/excel/excel.formattednumbercellvalue#type)|Представляет тип этого значения ячейки.|
-|[GettingDataErrorCellValue](/javascript/api/excel/excel.gettingdataerrorcellvalue)|[errorType](/javascript/api/excel/excel.gettingdataerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.gettingdataerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.gettingdataerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[GettingDataErrorCellValue](/javascript/api/excel/excel.gettingdataerrorcellvalue)|[basicType](/javascript/api/excel/excel.gettingdataerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.gettingdataerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.gettingdataerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.gettingdataerrorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[Identity](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayName)|Представляет отображаемое имя пользователя.|
 ||[email](/javascript/api/excel/excel.identity#email)|Представляет электронный адрес пользователя.|
@@ -173,22 +190,22 @@ ms.locfileid: "60537564"
 ||[getItemOrNullObject(key: number)](/javascript/api/excel/excel.linkeddatatypecollection#getItemOrNullObject_key_)|Получает связанный тип данных по ID.|
 ||[items](/javascript/api/excel/excel.linkeddatatypecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[requestRefreshAll()](/javascript/api/excel/excel.linkeddatatypecollection#requestRefreshAll__)|Делает запрос на обновление всех связанных типов данных в коллекции.|
-|[NaErrorCellValue](/javascript/api/excel/excel.naerrorcellvalue)|[errorType](/javascript/api/excel/excel.naerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.naerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.naerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
-||[type](/javascript/api/excel/excel.naerrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[NameErrorCellValue](/javascript/api/excel/excel.nameerrorcellvalue)|[errorType](/javascript/api/excel/excel.nameerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.nameerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.nameerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[NameErrorCellValue](/javascript/api/excel/excel.nameerrorcellvalue)|[basicType](/javascript/api/excel/excel.nameerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.nameerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.nameerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.nameerrorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[NamedSheetViewCollection](/javascript/api/excel/excel.namedsheetviewcollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getItemOrNullObject_key_)|Получает представление листа с его именем.|
-|[NullErrorCellValue](/javascript/api/excel/excel.nullerrorcellvalue)|[errorType](/javascript/api/excel/excel.nullerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.nullerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.nullerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[NotAvailableErrorCellValue](/javascript/api/excel/excel.notavailableerrorcellvalue)|[basicType](/javascript/api/excel/excel.notavailableerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.notavailableerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.notavailableerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
+||[type](/javascript/api/excel/excel.notavailableerrorcellvalue#type)|Представляет тип этого значения ячейки.|
+|[NullErrorCellValue](/javascript/api/excel/excel.nullerrorcellvalue)|[basicType](/javascript/api/excel/excel.nullerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.nullerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.nullerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.nullerrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[NumErrorCellValue](/javascript/api/excel/excel.numerrorcellvalue)|[errorType](/javascript/api/excel/excel.numerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.numerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.numerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[NumErrorCellValue](/javascript/api/excel/excel.numerrorcellvalue)|[basicType](/javascript/api/excel/excel.numerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.numerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorType](/javascript/api/excel/excel.numerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.numerrorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[getCell(dataHierarchy: DataPivotHierarchy \| string, rowItems: Array<PivotItem \| string>, columnItems: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotlayout#getCell_dataHierarchy__rowItems__columnItems_)|Получает уникальную ячейку в сводной таблице на основе иерархии данных и элементов строк и столбцов соответствующих иерархий.|
 ||[pivotStyle](/javascript/api/excel/excel.pivotlayout#pivotStyle)|Стиль, примененный к PivotTable.|
@@ -197,10 +214,10 @@ ms.locfileid: "60537564"
 ||[getDataSourceType()](/javascript/api/excel/excel.pivottable#getDataSourceType__)|Получает тип источника данных для PivotTable.|
 |[PivotTableScopedCollection](/javascript/api/excel/excel.pivottablescopedcollection)|[getFirstOrNullObject()](/javascript/api/excel/excel.pivottablescopedcollection#getFirstOrNullObject__)|Получает первый pivotTable в коллекции.|
 |[Range](/javascript/api/excel/excel.range)|[getDependents()](/javascript/api/excel/excel.range#getDependents__)|Возвращает объект, представляющего диапазон, содержащий все иждивенцы ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
-|[RefErrorCellValue](/javascript/api/excel/excel.referrorcellvalue)|[errorSubType](/javascript/api/excel/excel.referrorcellvalue#errorSubType)|Представляет тип `RefErrorCellValue` .|
+|[RefErrorCellValue](/javascript/api/excel/excel.referrorcellvalue)|[basicType](/javascript/api/excel/excel.referrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.referrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.referrorcellvalue#errorSubType)|Представляет тип `RefErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.referrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.referrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.referrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.referrorcellvalue#type)|Представляет тип этого значения ячейки.|
 |[RefreshModeChangedEventArgs](/javascript/api/excel/excel.refreshmodechangedeventargs)|[refreshMode](/javascript/api/excel/excel.refreshmodechangedeventargs#refreshMode)|Режим обновления связанного типа данных.|
 ||[serviceId](/javascript/api/excel/excel.refreshmodechangedeventargs#serviceId)|Уникальный ID объекта, режим обновления которого был изменен.|
@@ -216,15 +233,15 @@ ms.locfileid: "60537564"
 |[Slicer](/javascript/api/excel/excel.slicer)|[nameInFormula](/javascript/api/excel/excel.slicer#nameInFormula)|Представляет имя среза, используемое в формуле.|
 ||[setStyle(style: string \| SlicerStyle \| BuiltInSlicerStyle)](/javascript/api/excel/excel.slicer#setStyle_style_)|Задает стиль, примененный к срезу.|
 ||[slicerStyle](/javascript/api/excel/excel.slicer#slicerStyle)|Стиль, применяемый к срезу.|
-|[SpillErrorCellValue](/javascript/api/excel/excel.spillerrorcellvalue)|[errorSubType](/javascript/api/excel/excel.spillerrorcellvalue#errorSubType)|Представляет тип `SpillErrorCellValue` .|
+|[SpillErrorCellValue](/javascript/api/excel/excel.spillerrorcellvalue)|[basicType](/javascript/api/excel/excel.spillerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.spillerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.spillerrorcellvalue#errorSubType)|Представляет тип `SpillErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.spillerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.spillerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.spillerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[spilledColumns](/javascript/api/excel/excel.spillerrorcellvalue#spilledColumns)|Представляет количество столбцов, которые будут разливаться, если бы не было #SPILL! ошибка.|
 ||[spilledRows](/javascript/api/excel/excel.spillerrorcellvalue#spilledRows)|Представляет количество строк, которые разлились бы, если бы не было #SPILL! ошибка.|
 ||[type](/javascript/api/excel/excel.spillerrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[StringCellValue](/javascript/api/excel/excel.stringcellvalue)|[примитивный](/javascript/api/excel/excel.stringcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.stringcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[StringCellValue](/javascript/api/excel/excel.stringcellvalue)|[basicType](/javascript/api/excel/excel.stringcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.stringcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.stringcellvalue#type)|Представляет тип этого значения ячейки.|
 |[Table](/javascript/api/excel/excel.table)|[clearStyle()](/javascript/api/excel/excel.table#clearStyle__)|Изменяет таблицу для использования стиля таблицы по умолчанию.|
 ||[onFiltered](/javascript/api/excel/excel.table#onFiltered)|Возникает, когда фильтр применяется на определенной таблице.|
@@ -234,19 +251,19 @@ ms.locfileid: "60537564"
 |[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableId)|Получает ID таблицы, в которой применяется фильтр.|
 ||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetId)|Получает ID таблицы, которая содержит таблицу.|
-|[ValueErrorCellValue](/javascript/api/excel/excel.valueerrorcellvalue)|[errorSubType](/javascript/api/excel/excel.valueerrorcellvalue#errorSubType)|Представляет тип `ValueErrorCellValue` .|
+|[ValueErrorCellValue](/javascript/api/excel/excel.valueerrorcellvalue)|[basicType](/javascript/api/excel/excel.valueerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.valueerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
+||[errorSubType](/javascript/api/excel/excel.valueerrorcellvalue#errorSubType)|Представляет тип `ValueErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.valueerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
-||[примитивный](/javascript/api/excel/excel.valueerrorcellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.valueerrorcellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[type](/javascript/api/excel/excel.valueerrorcellvalue#type)|Представляет тип этого значения ячейки.|
-|[ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue)|[примитивный](/javascript/api/excel/excel.valuetypenotavailablecellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.valuetypenotavailablecellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+|[ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue)|[basicType](/javascript/api/excel/excel.valuetypenotavailablecellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.valuetypenotavailablecellvalue#type)|Представляет тип этого значения ячейки.|
 |[WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue)|[address](/javascript/api/excel/excel.webimagecellvalue#address)|Представляет URL-адрес, с которого будет загружено изображение.|
 ||[altText](/javascript/api/excel/excel.webimagecellvalue#altText)|Представляет альтернативный текст, который можно использовать в сценариях доступности для описания изображения.|
 ||[атрибуция](/javascript/api/excel/excel.webimagecellvalue#attribution)|Представляет сведения о присвоении для описания исходных и лицензионных требований для использования этого изображения.|
-||[примитивный](/javascript/api/excel/excel.webimagecellvalue#primitive)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[primitiveType](/javascript/api/excel/excel.webimagecellvalue#primitiveType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicType](/javascript/api/excel/excel.webimagecellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
+||[basicValue](/javascript/api/excel/excel.webimagecellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[поставщик](/javascript/api/excel/excel.webimagecellvalue#provider)|Представляет сведения, описывавшие сущность или физическое лицо, которое предоставило изображение.|
 ||[relatedImagesAddress](/javascript/api/excel/excel.webimagecellvalue#relatedImagesAddress)|Представляет URL-адрес веб-страницы с изображениями, которые считаются связанными с этим `WebImageCellValue` .|
 ||[type](/javascript/api/excel/excel.webimagecellvalue#type)|Представляет тип этого значения ячейки.|

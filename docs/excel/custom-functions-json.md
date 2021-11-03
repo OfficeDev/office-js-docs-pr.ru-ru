@@ -1,14 +1,14 @@
 ---
 title: Вручную создайте метаданные JSON для пользовательских функций в Excel
 description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
-ms.date: 08/06/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f88506cd26edf130ac5d9e06351d4fb0d711806
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 517fd8f8eb0338f32b58f0b61f1810b3c7ac26a4
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151269"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681233"
 ---
 # <a name="manually-create-json-metadata-for-custom-functions"></a>Вручную создайте метаданные JSON для пользовательских функций
 
@@ -56,6 +56,7 @@ ms.locfileid: "59151269"
 
 ```json
 {
+  "allowCustomDataForDataTypeAny": true, // This property is currently only available in public preview.
   "allowErrorForDataTypeAny": true,
   "functions": [
     {
@@ -138,6 +139,17 @@ ms.locfileid: "59151269"
 > Полный пример JSON-файла доступен в истории фиксации [OfficeDev/Excel-Custom-Functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/77760adb1dcc53469183049bea08196734dbc114/config/customfunctions.json) GitHub репозитория. Поскольку проект был скорректирован для автоматического создания JSON, полный пример рукописного JSON доступен только в предыдущих версиях проекта.
 
 ## <a name="metadata-reference"></a>Ссылка на метаданные
+
+### <a name="allowcustomdatafordatatypeany-preview"></a>allowCustomDataForDataTypeAny (предварительная версия)
+
+> [!NOTE]
+> Свойство `allowCustomDataForDataTypeAny` в настоящее время доступно в общедоступных предварительных просмотрах и совместимо только с Office на Windows. Функции предварительного просмотра могут изменяться и не предназначены для использования в производственной среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте функции предварительного просмотра в производственной среде или в критически важных для бизнеса документах.
+>
+> Чтобы проверить это свойство в Office Windows, необходимо иметь номер сборки Excel больше или равен 16.0.14623.20002. Чтобы использовать эту функцию, необходимо присоединиться к программе [Office инсайдерской,](https://insider.office.com/) а затем выбрать уровень инсайдерской бета-версии  канала. Подробнее см. в [статью Join the Office Insider Program.](https://insider.office.com/join/windows)
+
+Свойство `allowCustomDataForDataTypeAny` — это тип данных boolean. Настройка этого значения позволяет настраиваемой функции принимать типы данных в качестве `true` параметров и значений возврата. Дополнительные сведения см. в основных понятиях [пользовательских функций и типов данных.](/custom-functions-data-types-concepts.md)
+
+В отличие от большинства других свойств метаданных JSON, это свойство верхнего уровня и не содержит `allowCustomDataForDataTypeAny` под-свойств. Пример кода кода [метаданных JSON](#json-metadata-example) см. в примере формата этого свойства.
 
 ### <a name="allowerrorfordatatypeany"></a>allowErrorForDataTypeAny
 
@@ -272,11 +284,11 @@ CustomFunctions.associate("ADD", add);
 }
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Узнайте о [лучших методах](custom-functions-naming.md) для именования функции или узнайте, как локализовать функцию с помощью описанного ранее рукописного метода JSON. [](custom-functions-localize.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 - [Параметры настраиваемой функции](custom-functions-parameter-options.md)

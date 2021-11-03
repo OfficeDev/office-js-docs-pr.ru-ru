@@ -1,14 +1,14 @@
 ---
 title: Элемент Icon в файле манифеста
 description: Определяет элементы Image для элементов управления Button или Menu.
-ms.date: 03/30/2021
+ms.date: 10/30/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f47f35f18995b3d9e0af1115668b43a506e830d8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 54ae88e5dceeffa244780764711b263ceabd828d
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153837"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681728"
 ---
 # <a name="icon-element"></a>Элемент Icon
 
@@ -43,7 +43,7 @@ ms.locfileid: "59153837"
 
 ## <a name="additional-requirements-for-mobile-form-factors"></a>Дополнительные требования для форм-факторов мобильных устройств
 
-Когда родительский элемент **Icon** является потомком элемента [MobileFormFactor](mobileformfactor.md), минимальные требуемые размеры несколько отличаются. В манифесте должны быть указаны размеры, составляющие по крайней мере 48 x 48, 32 x 32 и 25 x 25 пикселей. Каждый указанный размер должен встречаться три раза, при этом атрибуту `scale` должно быть присвоено значение `1`, `2` или `3`.
+Когда родительский элемент **Icon** является потомком элемента [MobileFormFactor](mobileformfactor.md), минимальные требуемые размеры несколько отличаются. В манифесте должны быть указаны размеры, составляющие по крайней мере 48 x 48, 32 x 32 и 25 x 25 пикселей. Каждый указанный размер должен встречаться три раза, при этом атрибуту `scale` должно быть присвоено значение `1`, `2` или `3`. Этот атрибут указывает свойство `UIScreen.scale` для устройств iOS. Дополнительные сведения см. в [ок. масштаб.](https://developer.apple.com/documentation/uikit/uiscreen/1617836-scale)
 
 ```xml
 <Icon xsi:type="bt:MobileIconList">

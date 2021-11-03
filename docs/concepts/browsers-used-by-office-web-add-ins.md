@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 10/08/2021
+ms.date: 10/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 4998b84da9bdddac258e0531f6ce431ea374627b
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: e2660b51b0c25b15df5d957733631391401121ca
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250429"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681141"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -50,7 +50,7 @@ Office Надстройки — это веб-приложения, которы
 
 <sup>3</sup> Если надстройка включает элемент манифеста, она не будет использовать Microsoft Edge с исходным `<Runtimes>` WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
-<sup>4</sup> В Windows до Windows 11 необходимо установить управление WebView2, чтобы Office его встраить. Он устанавливается с Microsoft 365 версии 2101 или более поздней версии, но не устанавливается автоматически с edge. Если у вас есть более раная версия Microsoft 365, используйте инструкции по установке управления в [Microsoft Edge WebView2 / Embed веб-контента ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
+<sup>4</sup> В Windows до Windows 11 необходимо установить управление WebView2, чтобы Office его встраить. Он установлен с Microsoft 365 версии 2101 или более поздней версии, а также с Office 2021 или более поздней версии; но он не устанавливается автоматически с помощью Microsoft Edge. Если у вас есть более раная версия Microsoft 365 или разовая покупка Office, используйте инструкции по установке управления в [Microsoft Edge WebView2 / Embed веб-контента ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/). На Microsoft 365 сборки до 16.0.14326.xxxxx необходимо также создать ключ  реестраHKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\Win32WebView2и установить его значение `dword:00000001` .
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей надстройки есть платформы, которые используют Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней модели есть два варианта.
@@ -60,7 +60,7 @@ Office Надстройки — это веб-приложения, которы
 >
 > Дополнительные сведения об этих параметрах см. в [меню Support Internet Explorer 11.](../develop/support-ie-11.md)
 >
-> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
+> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение. Дополнительные дополнительные информации см. в добавлении Определить во время запуска, запущена ли надстройка [в Internet Explorer.](../develop/support-ie-11.md#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer)
 
 ## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение Microsoft Edge проблем
 

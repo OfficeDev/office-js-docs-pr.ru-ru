@@ -1,14 +1,14 @@
 ---
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
-ms.date: 09/02/2021
+ms.date: 10/25/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e62da1c7236aa21fe2fd4fe451d6eec25118c9b
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: f3cd43cbdc58a7b43cf4712e198198a808dcf93a
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150982"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681120"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -283,15 +283,9 @@ XML-элементы в манифесте надстройки Office долж�
                     <Override>
         <WebApplicationInfo>
             <Id>
-            <MsaId>
             <Resource>
             <Scopes>
                 <Scope>
-            <Authorizations>
-                <Authorization>
-                    <Resource>
-                    <Scopes>
-                        <Scope>
         <EquivalentAddins>
             <EquivalentAddin>
                 <ProgId>
@@ -509,7 +503,7 @@ XML-элементы в манифесте надстройки Office долж�
             <Scope>
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Ссылка на манифесты Office надстройки (v1.1)](../develop/add-in-manifests.md)
 - [Определения официальной схемы](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)

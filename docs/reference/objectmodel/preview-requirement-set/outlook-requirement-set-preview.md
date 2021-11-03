@@ -1,14 +1,14 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
-ms.date: 10/05/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e377725bc61b33d8b67729cf041a12255e3dba5
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: 2d1efa2b2dca5a88a56fb5f54a84b790e08745ec
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237191"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681650"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -24,7 +24,7 @@ ms.locfileid: "60237191"
 >
 > Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью Microsoft 365 учетной записи, заполнив и подав [эту форму.](https://aka.ms/OWAPreview) В этих функциях отмечен "Запрос доступа к предварительному просмотру".
 
-Набор требований предварительного просмотра включает все функции [набора требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md).
+Набор требований предварительного просмотра включает все функции [набора требований 1.11](../requirement-set-1.11/outlook-requirement-set-1.11.md).
 
 ## <a name="features-in-preview"></a>Возможности предварительной версии
 
@@ -104,7 +104,7 @@ ms.locfileid: "60237191"
 
 Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные ссылки на [поддерживаемые события.](../../../outlook/autolaunch.md#supported-events)
 
-**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 
 <br>
 
@@ -139,26 +139,6 @@ ms.locfileid: "60237191"
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
-
-<br>
-
----
-
----
-
-### <a name="session-data"></a>Данные сеансов
-
-#### <a name="officesessiondata"></a>[Office. SessionData](/javascript/api/outlook/office.sessiondata?view=outlook-js-preview&preserve-view=true)
-
-Добавлен новый объект, который представляет данные сеанса элемента.
-
-**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
-
-#### <a name="officecontextmailboxitemsessiondata"></a>[Office.context.mailbox.item.sessionData](office.context.mailbox.item.md#properties)
-
-Добавлено новое свойство для управления данными сеанса элемента в режиме Compose.
-
-**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
 
 <br>
 

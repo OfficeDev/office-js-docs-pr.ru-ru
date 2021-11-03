@@ -1,14 +1,14 @@
 ---
 title: Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)
 description: Узнайте, как осуществлять отладку надстроек Office, в которых используется Microsoft Edge WebView2 (на основе Chromium) с помощью отладчика для расширения Microsoft Edge в коде VS.
-ms.date: 10/05/2021
+ms.date: 11/01/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 8ee266b3197a2b02dd4d072b6666cd68add6fec9
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: bc7aea8cd48e74edd554a760b80c065c3d287f11
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138648"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681268"
 ---
 # <a name="debug-add-ins-on-windows-using-edge-chromium-webview2"></a>Отладка надстроек в Windows с помощью Edge Chromium WebView2
 
@@ -25,8 +25,12 @@ ms.locfileid: "60138648"
 
 1. Создайте проект с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Для этого можно использовать любые краткие руководства по началу работы, например [Краткое руководство по надстройкам Outlook](../quickstarts/outlook-quickstart.md).
 
-    > [!TIP]
-    > Если вы не используете надстройку, основанную на генераторе Yeoman, вам может быть предложено настроить ключ реестра. В корневой папке проекта выполните следующие действия в командной строке: `office-add-in-debugging start <your manifest path>`
+   > [!TIP]
+   > Если вы не используете надстройку, основанную на генераторе Yeoman, вам может быть предложено настроить ключ реестра. В корневой папке проекта выполните указанные ниже действия в командной строке.
+   >
+   > ``` command&nbsp;line
+   > npx office-addin-debugging start <your manifest path>
+   > ```
 
 1. Откройте проект в VS Code. Находясь в коде VS, нажмите клавиши **CTRL+SHIFT+X**, чтобы открыть меню расширений. Выполните поиск расширения "Debugger для Microsoft Edge" и установите его.
 

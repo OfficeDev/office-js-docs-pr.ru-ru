@@ -1,14 +1,14 @@
 ---
 title: Настройка среды разработки
 description: Настройка среды разработчика для создания Office надстройки.
-ms.date: 07/08/2021
+ms.date: 10/26/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 71982a51e4941cb90a488f317cf6f771ccf5b005
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 9dbe2a994dd8da028ecd1ae4a31b2c7847a062b1
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150853"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681176"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -18,6 +18,7 @@ ms.locfileid: "59150853"
 - npm
 - Учетная Microsoft 365, которая включает версию подписки Office
 - Редактор кода по вашему выбору
+- Подкладка Office JavaScript
 
 В этом руководстве предполагается, что вы знаете, как использовать средство командной строки.
 
@@ -55,9 +56,51 @@ npm -v
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Atom](https://atom.io);
-- [Webstorm](https://www.jetbrains.com/webstorm).
+- [Webstorm](https://www.jetbrains.com/webstorm)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="install-and-use-the-office-javascript-linter"></a>Установка и использование Office JavaScript
+
+Корпорация Майкрософт предоставляет подкладку JavaScript, которая поможет вам ловить распространенные ошибки при использовании Office JavaScript. Чтобы установить подкладку, запустите следующие две команды [](#install-nodejs) (после установки Node.js[npm).](#install-npm)
+
+```command&nbsp;line
+npm install office-addin-lint --save-dev
+npm install eslint-plugin-office-addins --save-dev
+```
+
+Если вы создаете Office надстройки с помощью средства Yo Office, то остальная часть установки будет сделана для вас. Запустите подкладку со следующей командой либо в терминале редактора, например в Visual Studio Code, либо в командной подсказке. Проблемы, найденные линтером, отображаются в терминале или в запросе, а также отображаются непосредственно в коде при использовании редактора, который поддерживает сообщения линтера, такие как Visual Studio Code. (Сведения об установке средства Yo Office, перейдите через один из наших быстрых Office надстройки, например этот для Excel [надстройки](../quickstarts/excel-quickstart-jquery.md).)
+
+```command&nbsp;line
+npm run lint
+```
+
+Если проект надстройки создан другим способом, примите следующие действия.
+
+1. В корне проекта создайте текстовый файл с именем **.eslintrc.json,** если его уже нет. Убедитесь, что он имеет свойства с именем `plugins` и , оба типа `extends` массива. Массив `plugins` должен `"office-addins"` включать, а `extends` массив должен включать `"plugin:office-addins/recommended"` . Ниже приведен простой пример. Файл **.eslintrc.json** может иметь дополнительные свойства и дополнительные члены двух массивов.
+
+   ```json
+   {
+     "plugins": [
+       "office-addins"
+     ],
+     "extends": [
+       "plugin:office-addins/recommended"
+     ]
+   }
+   ```
+
+1. В корне проекта откройте **файл package.json** и убедитесь, что массив `scripts` имеет следующий член.
+
+   ```json
+   "lint": "office-addin-lint check",
+   ```
+
+1. Запустите подкладку со следующей командой либо в терминале редактора, например в Visual Studio Code, либо в командной подсказке. Проблемы, найденные линтером, отображаются в терминале или в запросе, а также отображаются непосредственно в коде при использовании редактора, который поддерживает сообщения линтера, такие как Visual Studio Code.
+
+   ```command&nbsp;line
+   npm run lint
+   ```
+
+## <a name="next-steps"></a>Дальнейшие действия
 
 Попробуйте создать собственную надстройку или использовать Script Lab, чтобы попробовать встроенные образцы.
 

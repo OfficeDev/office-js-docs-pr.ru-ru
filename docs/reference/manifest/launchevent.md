@@ -1,14 +1,14 @@
 ---
 title: LaunchEvent в файле манифеста
 description: Элемент LaunchEvent настраивает надстройку для активации на основе поддерживаемых событий.
-ms.date: 05/12/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 23615424e194917a15b20ea4afbf7d9c5b8017e9
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: a8ab75633d87284e02e9db9b1a71f7a8436f7daf
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153886"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681711"
 ---
 # <a name="launchevent-element"></a>Элемент LaunchEvent
 
@@ -39,7 +39,19 @@ ms.locfileid: "59153886"
 |:-----|:-----|:-----|
 |  **Тип**  |  Да  | Указывает поддерживаемый тип события. Для набора поддерживаемых типов см. в Outlook надстройку для [активации на](../../outlook/autolaunch.md#supported-events)основе событий. |
 |  **FunctionName**  |  Да  | Указывает имя функции JavaScript для обработки события, указанного в `Type` атрибуте. |
+|  **SendMode** (предварительный просмотр) |  Нет  | Необходимые для `OnMessageSend` и `OnAppointmentSend` события. Указывает параметры, доступные пользователю, если надстройка останавливает отправление элемента. Для доступных параметров обратитесь к [доступным вариантам SendMode.](#available-sendmode-options-preview) |
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="available-sendmode-options-preview"></a>Доступные параметры SendMode (предварительный просмотр)
+
+При включив событие или событие в манифест, необходимо также задать `OnMessageSend` `OnAppointmentSend` свойство **SendMode.** Ниже параметров. В зависимости от условий, которые ищет ваша надстройка, пользователь получает предупреждение, если ваша надстройка находит проблему в отправленных элементах.
+
+| Параметр SendMode | Описание |
+|---|---|
+|`PromptUser`|В оповещении пользователь может выбрать отправку в любом случае **или** решить проблему, а затем попытаться отправить элемент снова.|
+|`SoftBlock`|Пользователь должен устранить проблему, прежде чем снова отправить элемент.|
+
+## <a name="see-also"></a>См. также
 
 - [LaunchEvents](launchevents.md)
+- [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md#supported-events)
+- [Использование смарт-оповещений и события OnMessageSend в Outlook надстройки](../../outlook/smart-alerts-onmessagesend-walkthrough.md)

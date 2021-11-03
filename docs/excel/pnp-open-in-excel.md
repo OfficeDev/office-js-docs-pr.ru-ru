@@ -1,14 +1,14 @@
 ---
 title: Откройте Excel веб-страницы и встроите Office надстройки
 description: Откройте Excel веб-страницы и встроите Office надстройки.
-ms.date: 02/09/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ac644de03c1f3a4c382dbe151c3224afffdbc81
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 8d22291c5e4e781535105c22e137097b255cd1d2
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150666"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681544"
 ---
 # <a name="open-excel-from-your-web-page-and-embed-your-office-add-in"></a>Откройте Excel веб-страницы и встроите Office надстройки
 
@@ -195,15 +195,13 @@ We.WebExtensionStoreReference webExtensionStoreReference1 = new We.WebExtensionS
 
 SDK OOXML основан на .NET. Если в вашем веб-приложении нет .NET, необходимо искать альтернативный способ работы с OOXML.
 
-Существует версия JavaScript SDK OOXML, доступная в [Open XML SDK для JavaScript.](https://archive.codeplex.com/?p=openxmlsdkjs)
-
 Код OOXML можно разместить в функции Azure, чтобы отделить код .NET от остальной части веб-приложения. Затем вызывайте функцию Azure (для создания Excel документа) из веб-приложения. Дополнительные сведения о функциях Azure см. [в предисловии к Azure Functions.](/azure/azure-functions/functions-overview)
 
 ### <a name="use-single-sign-on"></a>Использование единого входного
 
 Чтобы упростить проверку подлинности, рекомендуется, чтобы надстройка реализовала один вход. Дополнительные сведения см. в [документе Enable single sign-on for Office надстройки](../develop/sso-in-office-add-ins.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Добро пожаловать на страницу пакета SDK 2.5 Open XML для Office](/office/open-xml/open-xml-sdk)
 - [Автоматическое открытие области задач с документом](../develop/automatically-open-a-task-pane-with-a-document.md)

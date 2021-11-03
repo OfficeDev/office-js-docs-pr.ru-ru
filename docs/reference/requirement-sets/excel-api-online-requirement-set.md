@@ -1,15 +1,15 @@
 ---
 title: Excel Набор требований для API javaScript только для интернета
 description: Сведения о наборе требований ExcelApiOnline.
-ms.date: 10/14/2021
+ms.date: 10/29/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: bd1f62b92b9a08d23daf77f8f4b86c60333faab3
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: ae338b6bd361113ee04ae3dd9076df6c66125345
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537592"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681495"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 
@@ -52,7 +52,6 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[AutoFilter](/javascript/api/excel/excel.autofilter)|[clearColumnCriteria(columnIndex: number)](/javascript/api/excel/excel.autofilter#clearColumnCriteria_columnIndex_)|Очищает критерии фильтрации столбцов автофайлов.|
 |[LinkedWorkbook](/javascript/api/excel/excel.linkedworkbook)|[breakLinks()](/javascript/api/excel/excel.linkedworkbook#breakLinks__)|Делает запрос на разрыв ссылок, указывающих на связанную книгу.|
 ||[id](/javascript/api/excel/excel.linkedworkbook#id)|Исходный URL-адрес, указывающий на связанную книгу.|
 ||[refresh()](/javascript/api/excel/excel.linkedworkbook#refresh__)|Делает запрос на обновление данных, извлеченных из связанной книги.|

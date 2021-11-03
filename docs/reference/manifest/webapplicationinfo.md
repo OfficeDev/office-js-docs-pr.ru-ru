@@ -1,14 +1,14 @@
 ---
 title: Элемент WebApplicationInfo в файле манифеста
 description: Справочная документация элемента WebApplicationInfo для Office файлов манифеста надстройок (XML).
-ms.date: 07/30/2020
+ms.date: 10/25/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 7de9271fc3e7ed76c0423c8a0b8ab70360b105c3
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: bb21c584f516fc9e50bdd881a383fb03f01c753c
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154548"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681551"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
@@ -27,10 +27,8 @@ ms.locfileid: "59154548"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  **Id**    |  Да   |  **Идентификатор** связанной с надстройкой службы, зарегистрированный в конечной точке Azure Active Directory 2.0.|
-|  **MsaId**    |  Нет   |  ID клиента веб-приложения надстройки для MSA, зарегистрированного в msm.live.com.|
 |  **Resource**  |  Да   |  Указывает **URI идентификатора** надстройки, зарегистрированный в конечной точке Azure Active Directory 2.0.|
 |  [Scopes](scopes.md)                |  Да  |  Указывает разрешения, необходимые надстройки для ресурса, например Microsoft Graph.  |
-|  [Authorizations](authorizations.md)  |  Нет   | Указывает внешние ресурсы, на которые веб-приложению надстройки требуется авторизация, и необходимые разрешения.|
 
 ## <a name="webapplicationinfo-example"></a>Пример WebApplicationInfo
 
@@ -41,21 +39,13 @@ ms.locfileid: "59154548"
     ...
     <WebApplicationInfo>
       <Id>12345678-abcd-1234-efab-123456789abc</Id>
-      <Resource>api://myDomain.com/12345678-abcd-1234-efab-123456789abc</Resource>
+      <Resource>api://contoso.com/12345678-abcd-1234-efab-123456789abc</Resource>
       <Scopes>
         <Scope>Files.Read.All</Scope>
         <Scope>offline_access</Scope>
         <Scope>openid</Scope>
         <Scope>profile</Scope>
       </Scopes>
-      <Authorizations>
-        <Authorization>
-          <Resource>https://api.contoso.com</Resource>
-            <Scopes>
-              <Scope>profile</Scope>
-          </Scopes>
-        </Authorization>
-      </Authorizations>
     </WebApplicationInfo>
   </VersionOverrides>
 ...

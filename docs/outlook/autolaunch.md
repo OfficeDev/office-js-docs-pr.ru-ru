@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 08/17/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b94bcdace82153c8a5d2e9fa79ba49fff1e52bb8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 1311359dcf164e77aa259a324827e176ccc1fab2
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154194"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681598"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -22,22 +22,24 @@ ms.locfileid: "59154194"
 
 ## <a name="supported-events"></a>Поддерживаемые события
 
-В настоящее время следующие события поддерживаются в Интернете и Windows. Кроме того, при поднятии события обработник получает объект, который может включать сведения, определенные `event` типу события. В следующей таблице столбец **JSON,** связанный с событиями, содержит ссылку на соответствующий объект, где это применимо.
+В следующей таблице перечислены события, поддерживаемые в настоящее время. При поднятии события обработник получает объект, который может включать сведения, определенные `event` типу события. Столбец **JSON для событий** включает ссылку на соответствующий объект, где это применимо. В таблице также отмечаются поддерживаемые клиенты для каждого события.
 
 > [!IMPORTANT]
-> События, которые по-прежнему находятся в предварительном просмотре, доступны только с Microsoft 365 подпиской в Outlook в Интернете и Windows. Дополнительные сведения см. [в статье How to preview](#how-to-preview) in this article. События предварительного просмотра не следует использовать в производственных надстройках.
+> События, которые еще находятся в предварительной версии, могут быть доступны только с подпиской Microsoft 365 в Outlook в Интернете и Windows. Дополнительные сведения см. [в статье How to preview](#how-to-preview) in this article. События предварительного просмотра не следует использовать в производственных надстройках.
 
-|Событие|Описание|JSON, специфично для событий|Минимальный набор требований|
-|---|---|---|---|
-|`OnNewMessageCompose`|При составлении нового сообщения (включает ответ, ответ все и вперед), но не при редактировании, например, черновика.|Неприменимо|[1.10](../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md)|
-|`OnNewAppointmentOrganizer`|О создании новой встречи, но не о редактировании существующего.|Неприменимо|[1.10](../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md)|
-|`OnMessageAttachmentsChanged`|При добавлении или удалении вложений при сочинении сообщения.|[AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnAppointmentAttachmentsChanged`|При добавлении или удалении вложений при записи на прием.|[AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnMessageRecipientsChanged`|При добавлении или удалении получателей при сочинении сообщения.|[RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnAppointmentAttendeesChanged`|При добавлении или удалении участников при записи на прием.|[RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnAppointmentTimeChanged`|При изменении даты и времени при записи на прием.|[AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|[RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
-|`OnInfoBarDismissClicked`|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|[InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-preview&preserve-view=true)|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|
+|Событие|Описание|JSON, специфично для событий|Минимальный набор требований|Поддерживаемые клиенты|
+|---|---|---|---|---|
+|`OnNewMessageCompose`|При составлении нового сообщения (включает ответ, ответ все и вперед), но не при редактировании, например, черновика.|Неприменимо|[1.10](../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md)|Windows веб-браузер|
+|`OnNewAppointmentOrganizer`|О создании новой встречи, но не о редактировании существующего.|Неприменимо|[1.10](../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md)|Windows веб-браузер|
+|`OnMessageAttachmentsChanged`|При добавлении или удалении вложений при сочинении сообщения.|[AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnAppointmentAttachmentsChanged`|При добавлении или удалении вложений при записи на прием.|[AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnMessageRecipientsChanged`|При добавлении или удалении получателей при сочинении сообщения.|[RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnAppointmentAttendeesChanged`|При добавлении или удалении участников при записи на прием.|[RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnAppointmentTimeChanged`|При изменении даты и времени при записи на прием.|[AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|[RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnInfoBarDismissClicked`|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|[InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](../reference/objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)|Windows веб-браузер|
+|`OnMessageSend`|При отправке элемента сообщения. Чтобы узнать больше, обратитесь к [погонам Smart Alerts](smart-alerts-onmessagesend-walkthrough.md).|Неприменимо|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|Windows|
+|`OnAppointmentSend`|При отправке элемента встречи. Чтобы узнать больше, обратитесь к [погонам Smart Alerts](smart-alerts-onmessagesend-walkthrough.md).|Неприменимо|[Предварительная версия](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)|Windows|
 
 ### <a name="how-to-preview"></a>Предварительный просмотр
 
@@ -49,7 +51,7 @@ ms.locfileid: "59154194"
   - [Настройка целевого выпуска для](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)Microsoft 365 клиента.
   - Ссылка  на бета-библиотеку на CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . Файл [определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции и IntelliSense typeScript CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с `npm install --save-dev @types/office-js-preview` помощью .
 - Для Outlook на Windows:
-  - Минимальная требуемая сборка — 16.0.14026.20000. Присоединяйтесь [к Office программы insider](https://insider.office.com) для доступа к Office бета-сборки.
+  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединяйтесь [к Office программы insider](https://insider.office.com) для доступа к Office бета-сборки.
   - Настройка реестра. Outlook включает локализованную копию выпуска и бета-версии Office.js вместо загрузки из CDN. По умолчанию ссылается локализованная производственная копия API. Чтобы перейти на локализованную бета-версию API Outlook JavaScript, необходимо добавить эту запись реестра, в противном случае бета-API не могут быть найдены.
     1. Создание ключа `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\WebExt\Developer` реестра.
     1. Добавьте запись с `EnableBetaAPIsInJavaScript` именем и установите значение `1` . На приведенном ниже изображении показано, как должен выглядеть реестр.
@@ -143,6 +145,8 @@ ms.locfileid: "59154194"
               <LaunchEvent Type="OnAppointmentTimeChanged" FunctionName="onAppointmentTimeChangedHandler" />
               <LaunchEvent Type="OnAppointmentRecurrenceChanged" FunctionName="onAppointmentRecurrenceChangedHandler" />
               <LaunchEvent Type="OnInfoBarDismissClicked" FunctionName="onInfobarDismissClickedHandler" />
+              <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSendHandler" SendMode="PromptUser" />
+              <LaunchEvent Type="OnAppointmentSend" FunctionName="onAppointmentSendHandler" SendMode="PromptUser" />
             </LaunchEvents>
             <!-- Identifies the runtime to be used (also referenced by the Runtime element). -->
             <SourceLocation resid="WebViewRuntime.Url"/>
@@ -327,6 +331,7 @@ AppSource и in-app Office Store: возможность развертыван�
 - [Манифесты надстроек Outlook](manifests.md)
 - [Отламывка надстроек на основе событий](debug-autolaunch.md)
 - [Параметры списка AppSource для надстройки на Outlook событий](autolaunch-store-options.md)
+- [Smart Alerts and OnMessageSend walkthrough](smart-alerts-onmessagesend-walkthrough.md)
 - Примеры PnP:
-  - [Для Outlook для набора подписи используйте активацию на основе событий](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
+  - [Использование активации Outlook на основе событий для задания подписи](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
   - [Использование Outlook активации на основе событий для тегов внешних получателей](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-tag-external)

@@ -1,14 +1,14 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.
-ms.date: 07/02/2021
+ms.date: 10/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c0903718eab98866e88c18c715bf121979d87d82
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: f5ea4e12b4662c890259e29c52b98f1b16b9e5f6
+ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153762"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "60681162"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -60,9 +60,6 @@ Excel.run(function (context) {
 
 > [!NOTE]
 > Свойство объекта TableRow указывает номер индекса строки в коллекции строк `index` таблицы. [](/javascript/api/excel/excel.tablerow) Объект `TableRow` не содержит `id` свойства, которые можно использовать в качестве уникального ключа для идентификации строки.
-
-> [!WARNING]
-> Добавление строк в таблицу из надстройки контента приведет к утечке памяти. См. [GitHub выпуск #1415](https://github.com/OfficeDev/office-js/issues/1415) текущего состояния и дополнительные сведения. 
 
 ```js
 Excel.run(function (context) {
@@ -523,6 +520,6 @@ Excel.run(function (context) {
 
 ![Новая таблица из импортируемых данных JSON в Excel.](../images/excel-tables-create-from-json.png)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
