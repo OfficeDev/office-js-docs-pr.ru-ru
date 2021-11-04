@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 10/18/2021
+ms.date: 11/02/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: b2e09d508b4f937ce18029e55c7754719d85527f
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: 8770f91531b74442561d93d76daf57492d4c13f5
+ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537585"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60683793"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -28,6 +28,7 @@ ms.locfileid: "60537585"
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Используйте последнюю версию Office, чтобы воспользоваться предварительными версиями API (может потребоваться присоединиться к [программе предварительной оценки Office](https://insider.office.com)). |
 | [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](excel-api-online-requirement-set.md)) |
+| [ExcelApi 1.14](excel-api-1-14-requirement-set.md) | Версия 2108 (сборка 14326.20508) или более поздней версии | 16.53 или более поздней версии | 16.52 или более поздней версии | Октябрь 2021 г. |
 | [ExcelApi 1.13](excel-api-1-13-requirement-set.md) | Версия 2102 (сборка 13801.20738) или более поздняя | 16.50 или более поздняя | 16.50 или более поздняя | Июнь 2021 г. |
 | [ExcelApi 1.12](excel-api-1-12-requirement-set.md) | Версия 2008 (сборка 13127.20408) или более поздняя | 16.40 или более поздняя | 16.40 или более поздняя | Сентябрь 2020 г. |
 | [ExcelApi 1.11](excel-api-1-11-requirement-set.md) | Версия 2002 (сборка 12527.20470) или более поздняя | 16.35 или более поздняя | 16.33 или более поздняя | Май 2020 г. |
