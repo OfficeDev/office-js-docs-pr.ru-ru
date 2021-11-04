@@ -1,14 +1,14 @@
 ---
 title: Вручную создайте метаданные JSON для пользовательских функций в Excel
 description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
-ms.date: 11/01/2021
+ms.date: 11/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 517fd8f8eb0338f32b58f0b61f1810b3c7ac26a4
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: 28be374a88890d20294311599b06b16942edd9b7
+ms.sourcegitcommit: ad5d7ab21f64012543fb2bd9226d90330d25468b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681233"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "60749401"
 ---
 # <a name="manually-create-json-metadata-for-custom-functions"></a>Вручную создайте метаданные JSON для пользовательских функций
 
@@ -147,7 +147,7 @@ ms.locfileid: "60681233"
 >
 > Чтобы проверить это свойство в Office Windows, необходимо иметь номер сборки Excel больше или равен 16.0.14623.20002. Чтобы использовать эту функцию, необходимо присоединиться к программе [Office инсайдерской,](https://insider.office.com/) а затем выбрать уровень инсайдерской бета-версии  канала. Подробнее см. в [статью Join the Office Insider Program.](https://insider.office.com/join/windows)
 
-Свойство `allowCustomDataForDataTypeAny` — это тип данных boolean. Настройка этого значения позволяет настраиваемой функции принимать типы данных в качестве `true` параметров и значений возврата. Дополнительные сведения см. в основных понятиях [пользовательских функций и типов данных.](/custom-functions-data-types-concepts.md)
+Свойство `allowCustomDataForDataTypeAny` — это тип данных boolean. Настройка этого значения позволяет настраиваемой функции принимать типы данных в качестве `true` параметров и значений возврата. Дополнительные сведения см. в основных понятиях [пользовательских функций и типов данных.](custom-functions-data-types-concepts.md)
 
 В отличие от большинства других свойств метаданных JSON, это свойство верхнего уровня и не содержит `allowCustomDataForDataTypeAny` под-свойств. Пример кода кода [метаданных JSON](#json-metadata-example) см. в примере формата этого свойства.
 
