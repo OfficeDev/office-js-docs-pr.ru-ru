@@ -1,14 +1,14 @@
 ---
 title: Отладка надстройки с помощью журнала среды выполнения
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
-ms.date: 07/08/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b5fdd28f95d4513c9364ce0bacbfe6f27cc9779c
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: e97c9b8bea3ebd656452f096a33d6b386bb82df7
+ms.sourcegitcommit: 210251da940964b9eb28f1071977ea1fe80271b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537620"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "60793590"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
@@ -23,6 +23,8 @@ ms.locfileid: "60537620"
 ## <a name="use-runtime-logging-from-the-command-line"></a>Использование журнала в среде выполнения с помощью командной строки
 
 Самый быстрый способ приступить к использованию этого средства ведения журнала — включить ведение журнала в среде выполнения с помощью командной строки. При этом используется npx (обычно поставляется как часть npm версии 5.2.0 и новее). Если у вас более ранняя версия [npm](https://www.npmjs.com/), попробуйте воспользоваться инструкциями [Ведение журнала в среде выполнения Windows](#runtime-logging-on-windows) или [Ведение журнала в среде выполнения на компьютере Mac](#runtime-logging-on-mac) либо [установите npx](https://www.npmjs.com/package/npx).
+
+[!INCLUDE[Office settings tool not supported on Mac](../includes/tool-nonsupport-mac-note.md)]
 
 - Включение ведения журнала в среде выполнения:
 
@@ -141,5 +143,5 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 - [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
 - [Очистка кэша Office](clear-cache.md)
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
-- [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
-- [Отламывка надстроек с помощью средств разработчика для Edge Legacy](debug-add-ins-using-devtools-edge-legacy.md)
+- [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+- [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)

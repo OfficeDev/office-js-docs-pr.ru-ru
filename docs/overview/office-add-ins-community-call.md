@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office Вызов сообщества надстройки
 description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
-ms.date: 10/18/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ce768bd6b03f3103efae0e9b679a6221e3e7927
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: eae3c8d78f411af31011d6af7b76a3282b53192b
+ms.sourcegitcommit: 210251da940964b9eb28f1071977ea1fe80271b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537600"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "60793598"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
@@ -16,19 +16,22 @@ ms.locfileid: "60537600"
 
 ## <a name="agenda-for-november-10th-call"></a>Повестка дня на 10 ноября
 
-- Мы планируем опубликовать повестку дня здесь в пятницу, 5 ноября.
+- Community codeTwo. Интеграция активации на основе событий с Outlook подписями.
+- Демонстрация новой библиотеки Office-Addin-Mock для тестирования кода при Office API JS.
+- Microsoft 365 песочницу.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
 Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
 
-- [Office Вызов сообщества надстройки — 8 сентября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-september-8-2021/ba-p/2747100)
-- [Office Вызов сообщества надстройки — 11 августа 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-august-2021/ba-p/2661372)
-- [Office Вызов сообщества надстройки — 14 июля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-july-2021/ba-p/2573384)
-- [Office Вызов сообщества надстройки — 9 июня 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-june-2021/ba-p/2446156)
-- [Office Вызов сообщества надстройки — 12 мая 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-may-2021/ba-p/2369804)
-- [Office Вызов сообщества надстройки — 14 апреля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-14-2021/ba-p/2318886)
-- [Office Вызов сообщества надстройки — 10 марта 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-10-2021/ba-p/2205369)
+- [13 октября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-october-13-2021/ba-p/2867151)
+- [8 сентября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-september-8-2021/ba-p/2747100)
+- [11 августа 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-august-2021/ba-p/2661372)
+- [14 июля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-july-2021/ba-p/2573384)
+- [9 июня 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-june-2021/ba-p/2446156)
+- [12 мая 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-may-2021/ba-p/2369804)
+- [14 апреля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-14-2021/ba-p/2318886)
+- [10 марта 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-10-2021/ba-p/2205369)
 - [Архивные вызовы Office надстройки — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
 
 ## <a name="see-also"></a>См. также
