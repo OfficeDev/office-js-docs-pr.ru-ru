@@ -3,12 +3,12 @@ title: Оптимизация производительности API JavaScrip
 description: Оптимизация Excel надстройки с помощью API JavaScript.
 ms.date: 08/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 07244b67d6721c74072a95a0f35db45245cb064b
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: ade2ac02f22c93d920174f54e6fc2efed349e3d5
+ms.sourcegitcommit: e4b83d43c117225898a60391ea06465ba490f895
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153961"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "60809065"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -181,7 +181,7 @@ async function run() {
     
     // This sample attempts to process too many ranges at once. 
     for (let row = 1; row < 10000; row++) {
-      var range = sheet.getRangeByIndexes(i, 1, 1, 1);
+      var range = sheet.getRangeByIndexes(row, 1, 1, 1);
       range.values = [["1"]];
     }
     await context.sync(); 
@@ -201,14 +201,14 @@ async function run() {
 
     // Split the ranges into two loops, rows 1-5000 and then 5001-10000.
     for (let row = 1; row < 5000; row++) {
-      var range = worksheet.getRangeByIndexes(i, 1, 1, 1);
+      var range = worksheet.getRangeByIndexes(row, 1, 1, 1);
       range.values = [["1"]];
     }
     // Sync after each loop. 
     await context.sync(); 
     
     for (let row = 5001; row < 10000; row++) {
-      var range = worksheet.getRangeByIndexes(i, 1, 1, 1);
+      var range = worksheet.getRangeByIndexes(row, 1, 1, 1);
       range.values = [["1"]];
     }
     await context.sync(); 
@@ -243,7 +243,7 @@ async function run() {
 }
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 * [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 * [Обработка ошибок с Excel API JavaScript](excel-add-ins-error-handling.md)

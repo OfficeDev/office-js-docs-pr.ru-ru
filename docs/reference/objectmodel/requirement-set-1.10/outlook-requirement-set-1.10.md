@@ -1,14 +1,14 @@
 ---
 title: Outlook API надстройки 1.10
 description: Набор требований 1.10 для Outlook API надстройки.
-ms.date: 11/01/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 57814ab7da8faec3cc60f943ef13db12de01dc17
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: 76cdf267a707a7f7d3481fcf6e50265fca061ff0
+ms.sourcegitcommit: e4b83d43c117225898a60391ea06465ba490f895
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681099"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "60809058"
 ---
 # <a name="outlook-add-in-api-requirement-set-110"></a>Outlook API надстройки 1.10
 
@@ -22,6 +22,7 @@ ms.locfileid: "60681099"
 Набор требований 1.10 включает все функции набора [требований 1.9.](../requirement-set-1.9/outlook-requirement-set-1.9.md) В нем добавлены перечисленные ниже возможности.
 
 - Добавлены новые API для [активации на](../../../outlook/autolaunch.md) основе событий и функций подписи почты.
+- Добавлена поддержка [объекта OfficeRuntime.служба хранилища](/javascript/api/office-runtime/officeruntime.storage?view=outlook-js-1.10&preserve-view=true) с функцией активации на основе событий.
 - Добавлена возможность включить настраиваемые действия в сообщение уведомления.
 
 ### <a name="change-log"></a>Журнал изменений
@@ -38,6 +39,7 @@ ms.locfileid: "60681099"
 - Добавлены [Office. MailboxEnums.ItemNotificationMessageType.InsightMessage:](/javascript/api/outlook/office.mailboxenums.itemnotificationmessagetype?view=outlook-js-1.10&preserve-view=true)добавляет новый `ItemNotificationMessageType` тип в список. Оно представляет сообщение уведомления с пользовательским действием.
 - Добавлены [Office. NotificationMessageAction:](/javascript/api/outlook/office.notificationmessageaction?view=outlook-js-1.10&preserve-view=true)добавляет новый объект, чтобы можно было определить настраиваемые действия для `InsightMessage` уведомления.
 - Добавлены [Office. NotificationMessageDetails.actions:](/javascript/api/outlook/office.notificationmessagedetails?view=outlook-js-1.10&preserve-view=true#actions)добавляет новое свойство, которое позволяет добавлять уведомление `InsightMessage` с помощью настраиваемой меры.
+- Изменение [OfficeRuntime.служба хранилища:](/javascript/api/office-runtime/officeruntime.storage?view=outlook-js-1.10&preserve-view=true)добавляет Outlook поддержку, но только с функцией активации на основе событий.
 
 ## <a name="see-also"></a>См. также
 

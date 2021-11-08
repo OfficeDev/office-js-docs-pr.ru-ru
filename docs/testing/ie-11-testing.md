@@ -1,14 +1,14 @@
 ---
 title: Тестирование Internet Explorer 11
 description: Проверьте Office надстройки в Internet Explorer 11.
-ms.date: 10/08/2021
+ms.date: 11/02/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e64ce43b4b105b54ed5fcf3fa260ef7f81a04520
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: 8932545aa692073babeddb6ab22a213466a7c2ba
+ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537634"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60809042"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Проверьте Office надстройки в Internet Explorer 11
 
@@ -30,44 +30,33 @@ ms.locfileid: "60537634"
 >
 > Дополнительные сведения об этих параметрах см. в [меню Support Internet Explorer 11.](../develop/support-ie-11.md)
 >
-> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
+> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение. Дополнительные дополнительные информации см. в добавлении Определить во время запуска, запущена ли надстройка [в Internet Explorer.](../develop/support-ie-11.md#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer)
 
 > [!NOTE]
 > Office в Интернете не может быть открыт в Internet Explorer 11, поэтому нельзя (и не нужно) тестировать надстройки на Office в Интернете с Internet Explorer.
 
-## <a name="prerequisites"></a>Необходимые компоненты
-
-- [Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))
-
-Эти инструкции предполагают, что вы создали проект генератора Yo Office ранее. Если вы еще не сделали этого раньше, рассмотрите возможность быстрого начала чтения, например для Excel [надстройки.](../quickstarts/excel-quickstart-jquery.md)
-
-## <a name="switching-to-the-internet-explorer-11-webview"></a>Переход на веб-просмотр Internet Explorer 11
-
-1. Создайте проект Office Yo. Неважно, какой проект вы выберете, этот инструментарий будет работать со всеми типами проектов.
-
-    > [!NOTE]
-    > Если у вас есть существующий проект и вы хотите добавить этот инструмент без создания нового проекта, пропустите этот шаг и перейдйте к следующему шагу. 
-
-1. В корневой папке проекта запустите следующую строку в командной строке. В этом примере предполагается, что файл манифеста проекта находится в корне. Если это не так, укажите относительный путь к файлу манифеста. В командной строке должно быть видно сообщение о том, что тип веб-представления теперь настроен на IE.
-
-    ```command&nbsp;line
-    npx office-addin-dev-settings webview manifest.xml ie
-    ```
+## <a name="switch-to-the-internet-explorer-11-webview"></a>Переключиться на веб-просмотр Internet Explorer 11
 
 > [!TIP]
-> Эта команда не требуется, но она должна помочь отламеть большинство проблем, связанных с запуском Internet Explorer 11. Для полной надежности необходимо проверить использование компьютеров с различными комбинациями Windows 7, 8.1, 10 и 11 и различных Office. Дополнительные сведения [](../concepts/browsers-used-by-office-web-add-ins.md) см. в Office надстройки и сведения о том, как вернуться к более ранней версии [Office.](https://support.microsoft.com/topic/2bd5c457-a917-d57e-35a1-f709e3dda841)
+> [!INCLUDE[Identify the webview through the add-in UI](../includes/identify-webview-in-ui.md)]
 
-### <a name="command-options"></a>Параметры команды
+Существует два способа переключения веб-браузера Internet Explorer. Вы можете запустить простую команду в командной подсказке или установить версию Office, использующую Internet Explorer по умолчанию. Рекомендуем первый метод. Но второй вариант следует использовать в следующих сценариях.
 
-В качестве аргументов команда может также использовать несколько времен `office-addin-dev-settings webview` работы:
+- Ваш проект был разработан с Visual Studio и IIS. Это не node.js основе.
+- Вы хотите быть абсолютно надежным в тестировании.
+- Если по какой-либо причине средство командной строки не работает.
 
-- ie
-- edge
-- default
+### <a name="switch-via-the-command-line"></a>Переключение через командную строку
+
+[!INCLUDE [Steps to switch browsers with the command line tool](../includes/use-legacy-edge-or-ie.md)]
+
+### <a name="install-a-version-of-office-that-uses-internet-explorer"></a>Установите версию Office, использующую Internet Explorer
+
+[!INCLUDE [Steps to install Office that uses Edge Legacy or Internet Explorer](../includes/install-office-that-uses-legacy-edge-or-ie.md)]
 
 ## <a name="see-also"></a>См. также
 
 * [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
 * [Загрузка неопубликованных надстроек Office для тестирования](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-* [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+* [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 * [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)
