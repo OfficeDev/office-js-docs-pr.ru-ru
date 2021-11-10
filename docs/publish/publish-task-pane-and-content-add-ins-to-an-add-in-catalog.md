@@ -1,14 +1,14 @@
 ---
 title: Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
-ms.date: 10/08/2021
+ms.date: 11/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 80a790ada4425b13880b9eeedfbd002dc818b927
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: b545d81c8e728a5d6c9129bfa166e23a76ce2b04
+ms.sourcegitcommit: 3d37c42f5e465dac52d231d31717bdbb3bfa0e30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250513"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889995"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 
@@ -43,7 +43,7 @@ ms.locfileid: "60250513"
 1. Перейдите на страницу ["Активные сайты" в новом Центре администрирования SharePoint](https://admin.microsoft.com/sharepoint?page=siteManagement&modern=true) и войдите, используя учетную запись с [правами администратора](/sharepoint/sharepoint-admin-role) в вашей организации.
 
     > [!NOTE]
-    > Если у вас Microsoft 365, войдите в [Центр администрирования Microsoft 365,](https://go.microsoft.com/fwlink/p/?linkid=848041)а затем просмотрите центр администрирования SharePoint и откройте страницу Дополнительные возможности. <br>Если вы Microsoft 365 21Vianet (Китай), [](https://go.microsoft.com/fwlink/p/?linkid=850627)войдите в Центр администрирования Microsoft 365, а затем просмотрите центр администрирования SharePoint и откройте страницу Дополнительные функции.
+    > Если вы Microsoft 365 21Vianet (Китай), [](https://go.microsoft.com/fwlink/p/?linkid=850627)войдите в Центр администрирования Microsoft 365, а затем просмотрите центр администрирования SharePoint и откройте страницу Дополнительные функции.
 
 1. Откройте сайт каталога приложений, выбрав URL-адрес в столбце URL-адрес.
 
