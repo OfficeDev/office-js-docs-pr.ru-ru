@@ -271,7 +271,9 @@ items:
                 href: testing/debug-add-ins-using-f12-tools-ie.md
               - name: Отладка с помощью средств разработчика для устаревшей версии Microsoft Edge
                 href: testing/debug-add-ins-using-devtools-edge-legacy.md
-              - name: Отладка с помощью Edge Chromium WebView2
+              - name: Отладка с помощью средств разработчика для Edge Chromium WebView2
+                href: testing/debug-add-ins-using-devtools-edge-chromium.md
+              - name: Отладка с помощью Visual Studio Code и Edge Chromium WebView2
                 href: testing/debug-desktop-using-edge-chromium.md
                 displayName: 'debug, windows'
               - name: Тестирование с помощью Internet Explorer 11
