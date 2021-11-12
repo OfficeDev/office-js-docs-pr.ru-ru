@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: Получите обзор манифеста надстройки Office и его использования.
 ms.date: 09/28/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 9e0e630d9a64390f1f8d5e4ca78262ec8cc998e4
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
+ms.openlocfilehash: f5587fc96789769b17a15e242211a7cbb97e5ea3
+ms.sourcegitcommit: e36c25023b4268e8a50af984d753379082d44295
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138494"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60923568"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -546,7 +546,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 ## <a name="see-also"></a>См. также
 
 * [Определение правильного порядка элементов манифеста](manifest-element-ordering.md)
-* [Создание команд надстройки в манифесте][create-addin-commands.md]
+* [Создание команд надстройки в манифесте](create-addin-commands.md)
 * [Указание приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md)
 * [Локализация надстроек для Office](localization.md)
 * [Справочная схема по манифестам надстроек для Office](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
