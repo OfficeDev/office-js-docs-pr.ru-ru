@@ -1,24 +1,22 @@
 ---
-title: Microsoft Office Вызов сообщества надстройки
+title: Microsoft Office вызов сообщества надстройки
 description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
-ms.date: 11/07/2021
+ms.date: 11/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b2479c4942ca2b4df6cc39da3ac0a06755e760b1
-ms.sourcegitcommit: e4b83d43c117225898a60391ea06465ba490f895
+ms.openlocfilehash: dd96efb632b065e15d80a73f6bc54a4424e24d49
+ms.sourcegitcommit: 4cd94f6b365ea7813f19d4a06e6de2a1308b5aee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "60809072"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60963439"
 ---
-# <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
+# <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
 
 Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по московскому времени. Вы можете скачать приглашение календаря по [https://aka.ms/officeaddinscommunitycall](https://aka.ms/officeaddinscommunitycall) ссылке .
 
-## <a name="agenda-for-november-10th-call"></a>Повестка дня на 10 ноября
+## <a name="agenda-for-december-8th-call"></a>Повестка дня на 8 декабря
 
-- [CodeTwo](https://www.codetwo.com/email-signatures/): автоматическая Outlook подписей на основе получателей электронной почты и т. д.
-- Демонстрация новой библиотеки Office-Addin-Mock для тестирования кода при Office API JS.
-- Microsoft 365 песочницу.
+Повестка дня на декабрь будет опубликована примерно за неделю до звонка.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
@@ -40,5 +38,5 @@ ms.locfileid: "60809072"
 - [Community темы вызовов и вопросов](https://aka.ms/officeaddinsform)
 - [Microsoft 365 youTube-канал разработчика](https://aka.ms/m365devyoutube)
 - [Microsoft 365 youTube-канал сообщества](https://aka.ms/m365pnp/videos )
-- [Microsoft 365 PnP на технических Community](https://aka.ms/m365pnp/community)
-- [Microsoft 365 Блог сообщества тек PnP](https://aka.ms/m365pnp/community/blog)
+- [Microsoft 365 PnP по техническим Community](https://aka.ms/m365pnp/community)
+- [Microsoft 365 блог сообщества тек PnP](https://aka.ms/m365pnp/community/blog)
