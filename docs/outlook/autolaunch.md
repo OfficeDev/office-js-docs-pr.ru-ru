@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 11/01/2021
+ms.date: 11/16/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1311359dcf164e77aa259a324827e176ccc1fab2
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: 4875018d2c457fe26eaed0d86f549d44f7932d52
+ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681598"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064668"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -300,11 +300,11 @@ AppSource и in-app Office Store: возможность развертыван�
 
 Некоторые Office.js API, которые изменяют или изменяют пользовательский интерфейс, не допускаются из надстройок на основе событий. Ниже заблокировали API.
 
-- В `OfficeRuntime.auth` статье:
-  - `getAccessToken`(Windows только)
 - В `Office.context.auth` статье:
   - `getAccessToken`
   - `getAccessTokenAsync`
+    > [!NOTE]
+    > `OfficeRuntime.auth` поддерживается. Дополнительные сведения см. в документе [Enable single sign-on (SSO)](use-sso-in-event-based-activation.md)в Outlook надстройки, которые используют активацию на основе событий.
 - В `Office.context.mailbox` статье:
   - `displayAppointmentForm`
   - `displayMessageForm`

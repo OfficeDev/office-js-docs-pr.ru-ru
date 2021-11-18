@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности пользователя с помощью маркера единого входа
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
-ms.date: 09/03/2021
+ms.date: 11/11/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 41eddbcc1db05ca618506ce4810bf2bb795e59f7
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 7e2667e7f465749f708bf35cf00b0806306a618a
+ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154224"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064696"
 ---
 # <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in"></a>Проверка подлинности пользователя с помощью маркера с одним входом в Outlook надстройки
 
@@ -48,8 +48,13 @@ ms.locfileid: "59154224"
 > [!IMPORTANT]
 > При использовании маркера единого входа в качестве удостоверения в *Outlook* рекомендуем также [использовать маркер удостоверения Exchange](authenticate-a-user-with-an-identity-token.md) в качестве альтернативного удостоверения. Пользователи надстройки могут использовать различные клиенты, не все и которых поддерживают предоставление маркера единого входа. Если в качестве альтернативы используется маркер удостоверения Exchange, вы можете избежать повторного запрашивания учетных данных этих пользователей. Дополнительные сведения см. в статье [Сценарий: реализация единого входа для службы в надстройке Outlook](implement-sso-in-outlook-add-in.md).
 
+## <a name="sso-for-event-based-activation"></a>SSO для активации на основе событий
+
+Если надстройка использует активацию на основе событий, необходимо предпринять дополнительные действия. Дополнительные сведения см. в документе [Enable single sign-on (SSO)](use-sso-in-event-based-activation.md)в Outlook надстройки, которые используют активацию на основе событий.
+
 ## <a name="see-also"></a>См. также
 
 - Пример надстройки Outlook которая использует маркер SSO для доступа к API Microsoft Graph, см. в Outlook [SSO надстройки.](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Outlook-Add-in-SSO)
 - [Справочные материалы по API единого входа](../develop/sso-in-office-add-ins.md#sso-api-reference)
 - [Настройка требования IdentityAPI](../reference/requirement-sets/identity-api-requirement-sets.md)
+- [Включение единого входного пользования (SSO) в Outlook надстройки, которые используют активацию на основе событий](use-sso-in-event-based-activation.md)

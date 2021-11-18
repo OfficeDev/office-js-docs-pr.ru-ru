@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
-ms.date: 09/20/2021
+ms.date: 11/16/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 24daaa8dcd5256be997c8742016a9ec80b3294df
-ms.sourcegitcommit: 43f20d0933d0159dd390da052187b315222b185f
+ms.openlocfilehash: 5dcc6991e762f8d3defca50df406952ee7f1385b
+ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "59502733"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064682"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
@@ -51,7 +51,7 @@ Excel.run(function (context) {
 
 В таблице ниже перечислены ошибки, которые может возвращать API.
 
-|Код ошибки | Сообщение об ошибке | Примечания. |
+|Код ошибки | Сообщение об ошибке | Примечания |
 |:----------|:--------------|:------|
 |`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.| |
 |`ActivityLimitReached`|Достигнут предел действий.| |
@@ -60,6 +60,7 @@ Excel.run(function (context) {
 |`BadPassword`|Предоставленный пароль является неправильным.| |
 |`Conflict`|Запрос не удалось обработать из-за конфликта.| |
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.| |
+|`EmptyChartSeries`|Попытка операции не удалась, так как серия диаграмм пуста.| |
 |`FilteredRangeConflict`|Попытка операции вызывает конфликт с фильтрованным диапазоном.| |
 |`FormulaLengthExceedsLimit`|Bytecode примененной формулы превышает максимальное ограничение длины. Для Office 32-битных машин ограничение длины bytecode составляет 16384 символа. На 64-битных машинах ограничение длины bytecode составляет 32768 знаков.| Эта ошибка возникает как в Excel в Интернете, так и на рабочем столе.|
 |`GeneralException`|При обработке запроса возникла внутренняя ошибка.| |
