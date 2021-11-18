@@ -1,14 +1,14 @@
 ---
 title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
-ms.date: 08/02/2021
+ms.date: 11/15/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 4d5351e9f8758109bfd0ef4a901c5ef916c98fa4
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: 79b5f4e483eadec5d9f3095ab1c37e8eb697658b
+ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537648"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064675"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -21,7 +21,25 @@ ms.locfileid: "60537648"
 
 ## <a name="clear-the-office-cache-on-windows"></a>Очистка кэша Office в Windows
 
-Чтобы удалить все неопубликованные надстройки из Excel, Word и PowerPoint, удалите содержимое папки.
+Существует три метода очистки кэша Office на компьютере с Windows: автоматически, вручную и с помощью средств разработчика Microsoft Edge. Эти методы описаны в следующих подразделах.
+
+### <a name="automatically"></a>Автоматически
+
+Этот метод рекомендуется использовать для компьютеров разработки надстройки. Если Office используется в Windows версии 2108 или более поздней, следующие действия настраивают автоматическую очистку кэша Office при каждом повторном открытии Office.
+
+> [!NOTE]
+> Автоматический метод не поддерживается для Outlook.
+
+1. На ленте любого ведущего приложения Office (кроме Outlook) выберите **Файл** > **Параметры** > **Центр управления безопасностью** > **Параметры центра управления безопасностью** > **Доверенные каталоги надстроек**.
+1. Установите флажок **При следующем запуске Office очистите кэш всех ранее запущенных веб-надстроек**.
+
+### <a name="manually"></a>Вручную
+
+Ручной метод для Excel, Word и PowerPoint отличается от Outlook.
+
+#### <a name="manually-clear-the-cache-in-excel-word-and-powerpoint"></a>Очистка кэша вручную в Excel, Word и PowerPoint
+
+Чтобы удалить все неопубликованные надстройки из Excel, Word и PowerPoint, удалите содержимое следующей папки.
 
 ```
 %LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
@@ -33,9 +51,13 @@ ms.locfileid: "60537648"
 %userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\
 ```
 
+#### <a name="manually-clear-the-cache-in-outlook"></a>Очистка кэша вручную в Outlook
+
 Чтобы удалить неопубликованную надстройку из Outlook, выполните действия, описанные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы найти надстройку в разделе **Настраиваемые надстройки** диалогового окна, в котором перечислены установленные надстройки. Щелкните многоточие (`...`) для надстройки, а затем выберите **Удалить**, чтобы удалить определенную надстройку. Если такой способ удаления надстроек не работает, удалите содержимое папки `Wef`, как указано выше для Excel, Word и PowerPoint.
 
-Чтобы очистить кэш в Office на Windows 10, когда надстройка работает в Microsoft Edge, вы можете использовать Microsoft Edge DevTools.
+### <a name="using-the-microsoft-edge-developer-tools"></a>С помощью средств разработчика Microsoft Edge
+
+Чтобы очистить кэш Office в Windows 10, когда надстройка работает в Microsoft Edge, можно использовать средства разработчика Microsoft Edge.
 
 > [!TIP]
 > Если вы хотите, чтобы в неопубликованной надстройке отражались только последние изменения ее исходных файлов HTML или JavaScript, не нужно очищать кэш. Вместо этого просто переместите фокус в область задач надстройки (щелкнув в любом месте области задач) и нажмите клавиши **CTRL + F5**, чтобы перезагрузить надстройку.

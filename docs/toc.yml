@@ -1136,6 +1136,8 @@ items:
                 href: outlook/authentication.md
               - name: Проверка подлинности с помощью маркера единого входа
                 href: outlook/authenticate-a-user-with-an-sso-token.md
+              - name: Единый вход при активации на основе событий
+                href: outlook/use-sso-in-event-based-activation.md
               - name: Проверка подлинности с помощью маркера удостоверения
                 href: outlook/authenticate-a-user-with-an-identity-token.md
               - name: Проверка маркера удостоверения
