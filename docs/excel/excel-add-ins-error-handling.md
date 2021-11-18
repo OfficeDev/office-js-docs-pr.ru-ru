@@ -7,8 +7,8 @@ ms.openlocfilehash: 5dcc6991e762f8d3defca50df406952ee7f1385b
 ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61064682"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61066662"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
