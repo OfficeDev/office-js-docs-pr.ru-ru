@@ -3,12 +3,12 @@ title: Надстройка Microsoft Office "Расширение отладч�
 description: Чтобы отладить Office надстройки, Visual Studio Code надстройки Microsoft Office надстройки.
 ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 56dee52f71bfb460abbadafb0cdfd82f8f7cb548
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: edc780108cb304b6bfa15ba3d7850f394b863875
+ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537641"
+ms.lasthandoff: 11/19/2021
+ms.locfileid: "61081402"
 ---
 # <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 
@@ -16,7 +16,7 @@ ms.locfileid: "60537641"
 
 Этот режим отладки динамический, что позволяет устанавливать точки разрыва во время работы кода. Вы можете видеть изменения в коде сразу же, когда отладка присоединена, все без потери сеанса отладки. Изменения кода также сохраняются, поэтому вы можете видеть результаты нескольких изменений в коде. На следующем изображении показано это расширение в действии.
 
-![Office Расширение надстройки Debugger Extension, отладка раздела Excel надстроек.](../images/vs-debugger-extension-for-office-addins.jpg)
+![Office надстройки отладки расширения отладки надстроек Excel надстроек.](../images/vs-debugger-extension-for-office-addins.jpg)
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
@@ -84,6 +84,6 @@ ms.locfileid: "60537641"
 ## <a name="see-also"></a>См. также
 
 - [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
-- [Отламывка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
-- [Отламывка надстроек с помощью средств разработчика для Edge Legacy](debug-add-ins-using-devtools-edge-legacy.md)
-- [Отладка настроек в Windows с использованием Microsoft Edge WebView2 (на основе Chromium)](debug-desktop-using-edge-chromium.md)
+- [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+- [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
+- [Отламывка надстроек с помощью средств разработчика в Microsoft Edge (Chromium основе)](debug-add-ins-using-devtools-edge-chromium.md)

@@ -3,12 +3,12 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e97c9b8bea3ebd656452f096a33d6b386bb82df7
-ms.sourcegitcommit: 210251da940964b9eb28f1071977ea1fe80271b4
+ms.openlocfilehash: f3e135ef051b79fcfba7aac1252d10ec1109f25d
+ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "60793590"
+ms.lasthandoff: 11/19/2021
+ms.locfileid: "61081444"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
@@ -145,3 +145,4 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
+- [Отламывка надстроек с помощью средств разработчика в Microsoft Edge (Chromium основе)](debug-add-ins-using-devtools-edge-chromium.md) 
