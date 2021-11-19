@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 11/15/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 79b5f4e483eadec5d9f3095ab1c37e8eb697658b
-ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
+ms.openlocfilehash: 36f3de58eb5089f6c638510cb33879cb36c7330c
+ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61064675"
+ms.lasthandoff: 11/19/2021
+ms.locfileid: "61081409"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -96,6 +96,7 @@ ms.locfileid: "61064675"
 - [Устранение ошибок разработки в надстройках Office](troubleshoot-development-errors.md)
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
+- [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
 - [XML-манифест надстроек Office](../develop/add-in-manifests.md)

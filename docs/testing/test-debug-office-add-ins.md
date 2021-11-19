@@ -3,12 +3,12 @@ title: Тестирование и отладка надстроек Office
 description: Узнайте, как тестировать и отлаживать свою надстройку Office
 ms.date: 09/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 77f1fcf47689d9a31611e48d6235f5c8893dcfe7
-ms.sourcegitcommit: e4d98eb90e516b9c90e3832f3212caf48691acf6
+ms.openlocfilehash: db0edec5c7b7c741425a9d27d7580a52d2839546
+ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "60537550"
+ms.lasthandoff: 11/19/2021
+ms.locfileid: "61081416"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
@@ -45,6 +45,7 @@ ms.locfileid: "60537550"
 - [Подключение отладчика из области задач (в Windows)](attach-debugger-from-task-pane.md)
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
+- [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 - [Отладка надстроек Office на Mac](debug-office-add-ins-on-ipad-and-mac.md)
 - [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
