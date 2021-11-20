@@ -1,14 +1,14 @@
 ---
 title: Тестирование и отладка надстроек Office
 description: Узнайте, как тестировать и отлаживать свою надстройку Office
-ms.date: 09/24/2021
+ms.date: 11/14/2021
 ms.localizationpriority: high
-ms.openlocfilehash: db0edec5c7b7c741425a9d27d7580a52d2839546
-ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
+ms.openlocfilehash: 3eaf86d7cc2702e0501522debad2e64ac24c323c
+ms.sourcegitcommit: 67b70f5328e4b9c9e9df098ec98f29a02f363464
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2021
-ms.locfileid: "61081416"
+ms.locfileid: "61124396"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
@@ -37,6 +37,10 @@ ms.locfileid: "61081416"
 - [Загрузка неопубликованных надстроек Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)
 
 - [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md)
+
+## <a name="unit-testing"></a>Модульное тестирование
+
+Сведения о том, как добавить модульные тесты в проект надстройки, см. в статье [Модульное тестирование в надстройках Office](unit-testing.md).
 
 ## <a name="debug-an-office-add-in"></a>Отладка надстройки Office
 
