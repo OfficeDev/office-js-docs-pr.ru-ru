@@ -307,6 +307,8 @@ items:
             href: testing/testing-and-troubleshooting.md
           - name: Устранение ошибок разработки
             href: testing/troubleshoot-development-errors.md
+          - name: Модульное тестирование
+            href: testing/unit-testing.md
           - name: Тестирование удобства использования
             href: develop/usability-testing.md
           - name: Проверка манифеста надстройки
