@@ -9,3 +9,4 @@
 > Ярлыки клавиатуры работают только на платформах, поддерживаюх следующие наборы требований. Дополнительные подробности о наборах требований и работе с ними см. в Office [приложений и API.](../develop/specify-office-hosts-and-api-requirements.md)
 >
 > - [SharedRuntime 1.1](../reference/requirement-sets/shared-runtime-requirement-sets.md)
+> - Также необходимо, если надстройка позволяет пользователю настраивать ярлыки клавиатуры: [KeyboardShortcuts 1.1](../reference/requirement-sets/keyboard-shortcuts-requirement-sets.md)

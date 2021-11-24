@@ -1,14 +1,14 @@
 ---
 title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
-ms.date: 07/08/2021
-ms.localizationpriority: medium
-ms.openlocfilehash: 0f4ef373ee5352f012561d76fa5bc01cb391af48
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.date: 11/22/2021
+localization_priority: Normal
+ms.openlocfilehash: c29f6b09d77ab946c9e97483688cd265e8495aef
+ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151050"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61153499"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -102,7 +102,7 @@ ms.locfileid: "59151050"
     ```
 
 1. Чтобы продолжить пример, используйте `'SHOWTASKPANE'` в качестве первого параметра.
-1. Для тела функции используйте [метод Office.addin.showTaskpane](/javascript/api/office/office.addin#showAsTaskpane__) для открытия области задач надстройки. После этого код должен выглядеть следующим образом:
+1. Для тела функции используйте [метод Office.addin.showAsTaskpane](/javascript/api/office/office.addin#showAsTaskpane__) для открытия области задач надстройки. После этого код должен выглядеть следующим образом:
 
     ```javascript
     Office.actions.associate('SHOWTASKPANE', function () {
@@ -204,7 +204,7 @@ ms.locfileid: "59151050"
 
 Существует множество клавиш, которые уже используются Office. Избегайте регистрации клавишных ярлыков для надстройки, которые уже используются, однако могут существовать некоторые случаи, когда необходимо переопределять существующие ярлыки клавиатуры или обрабатывать конфликты между несколькими надстройки, которые зарегистрировали один и тот же ярлык клавиатуры.
 
-В случае конфликта пользователь увидит диалоговое окно при первой попытке использовать конфликтующий ярлык клавиатуры, обратите внимание, что имя действия, отображаемого в этом диалоговом диалоговом окне, является свойством в объекте действия в `name` `shortcuts.json` файле.
+В случае конфликта пользователь увидит диалоговое окно при первой попытке использовать конфликтующий ярлык клавиатуры. Обратите внимание, что текст для параметра надстройки, отображаемого в этом диалоговом окте, поступает из свойства в `name` объекте действия в `shortcuts.json` файле.
 
 ![Иллюстрация, показывающая конфликтный модал с двумя разными действиями для одного ярлыка.](../images/add-in-shortcut-conflict-modal.png)
 
@@ -248,7 +248,7 @@ ms.locfileid: "59151050"
 
 ## <a name="localize-the-keyboard-shortcuts-json"></a>Локализовать ярлыки клавиатуры JSON
 
-Если надстройка поддерживает несколько локалов, необходимо локализовать свойство `name` объектов действия. Кроме того, если в любом из локаутах, поддерживаюх надстройку, есть алфавиты или различные системы записи, а значит, и другие клавиатуры, возможно, потребуется также локализовать ярлыки. Сведения о том, как локализовать клавиши ярлыков JSON, см. в рубрезе [Localize extended overrides.](../develop/localization.md#localize-extended-overrides)
+Если надстройка поддерживает несколько локалов, необходимо локализовать свойство `name` объектов действия. Кроме того, если какие-либо из локалов, поддерживаемые надстройками, имеют различные алфавиты или системы записи, а значит, и другие клавиатуры, возможно, потребуется также локализовать ярлыки. Сведения о том, как локализовать клавиши ярлыков JSON, см. в рубрезе [Localize extended overrides.](../develop/localization.md#localize-extended-overrides)
 
 ## <a name="browser-shortcuts-that-cannot-be-overridden"></a>Ярлыки браузера, которые нельзя переопределять
 
@@ -260,6 +260,67 @@ ms.locfileid: "59151050"
 - Ctrl+Shift+T
 - Ctrl+W
 - Ctrl+PgUp/PgDn
+
+## <a name="enable-custom-keyboard-shortcuts-for-specific-users-preview"></a>Включить настраиваемые ярлыки клавиатуры для определенных пользователей (предварительный просмотр)
+
+Ваша надстройка позволяет пользователям перенастроять действия надстройки на альтернативные сочетания клавиатуры.
+
+> [!IMPORTANT]
+> Функции, описанные в этом разделе, в настоящее время находятся в предварительном просмотре и подлежат изменениям. Сейчас они не поддерживаются для использования в рабочих средах. Чтобы попробовать функции предварительного просмотра, необходимо присоединиться к программе [Office insider.](https://insider.office.com/join)
+> Хороший способ ознакомиться с такими возможностями — использование подписки на Microsoft 365. Если у вас еще нет подписки на Microsoft 365, вы можете оформить ее, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
+
+> [!NOTE]
+> API, описанные в этом разделе, требуют набора требований [KeyboardShortcuts 1.1.](../reference/requirement-sets/keyboard-shortcuts-requirement-sets.md)
+
+Используйте [метод Office.actions.replaceShortcuts](/javascript/api/office/office.actions#replaceShortcuts) для назначения пользовательских комбинаций клавиатуры пользователя для действий надстройки. Метод принимает параметр типа, где s являются подмножество ID действий, которые определяются в расширенном манифесте надстройки `{[actionId:string]: string}` `actionId` JSON. Значения — это предпочтительные сочетания ключей пользователя. Если пользователь вошел Office, пользовательские комбинации сохраняются в параметрах роуминга пользователя. Если пользователь не вошел в систему, настройки длятся только для текущего сеанса надстройки.
+
+```javascript
+const userCustomShortcuts = {
+    SHOWTASKPANE:"CTRL+SHIFT+1", 
+    HIDETASKPANE:"CTRL+SHIFT+2"
+};
+Office.actions.replaceShortcuts(userCustomShortcuts)
+    .then(function () {
+        console.log("Successfully registered.");
+    })
+    .catch(function (ex) {
+        if (ex.code == "InvalidOperation") {
+            console.log("ActionId does not exist or shortcut combination is invalid.");
+        }
+    });
+```
+
+Чтобы узнать, какие ярлыки уже используются для пользователя, позвоните по [Office.actions.getShortcuts.](/javascript/api/office/office.actions#getShortcuts) Этот метод возвращает объект `[actionId:string]:string|null}` типа, где `actionId` s являются:
+
+- Все ИД действий, определенные в расширенном манифесте надстройки JSON.
+- Все настраиваемые ярлыки, зарегистрированные для пользователя в параметрах роуминга пользователя. Эти значения являются ключевыми комбинациями, которые в настоящее время назначены для действий. 
+
+Ниже приведен пример.
+
+```javascript
+Office.actions.getShortcuts()
+    .then(function (userShortcuts) {
+       for (const action in userShortcuts) {
+           let shortcut = userShortcuts[action];
+           console.log(action + ": " + shortcut);
+       }
+    });
+
+```
+
+Как описано в [описании Избегайте ключевых](#avoid-key-combinations-in-use-by-other-add-ins)комбинаций, которые используются другими надстройки, это хорошая практика, чтобы избежать конфликтов в ярлыках. Чтобы узнать, используется ли одна или несколько комбинаций ключей, передайте их в качестве массива строк методу [Office.actions.areShortcutsInUse.](/javascript/api/office/office.actions#areShortcutsInUse) Метод возвращает отчет, содержащий ключевые сочетания, которые уже используются в виде массива объектов типа `{shortcut: string, inUse: boolean}` . Свойство `shortcut` — это ключевое сочетание, например "CTRL+SHIFT+1". Если комбинация уже зарегистрирована на другое действие, `inUse` свойство настроено на `true` . Например, `[{shortcut: "CTRL+SHIFT+1", inUse: true}, {shortcut: "CTRL+SHIFT+2", inUse: false}]`. Пример следующего фрагмента кода:
+
+```javascript
+const shortcuts = ["CTRL+SHIFT+1", "CTRL+SHIFT+2"];
+Office.actions.areShortcutsInUse(shortcuts)
+    .then(function (inUseArray) {
+        const availableShortcuts = inUseArray.filter(function (shortcut) { return !shortcut.inUse; });
+        console.log(availableShortcuts);
+        const usedShortcuts = inUseArray.filter(function (shortcut) { return shortcut.inUse; });
+        console.log(usedShortcuts);
+    });
+
+```
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

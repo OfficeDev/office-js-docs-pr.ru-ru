@@ -1,14 +1,14 @@
 ---
 title: Тестирование единиц в Office надстройки
 description: Узнайте, как унифизировать тестовый код, который вызывает Office API JavaScript
-ms.date: 11/14/2021
+ms.date: 11/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3daf47a6221d5c9dbc0ad9fe1c357264d0a2f622
-ms.sourcegitcommit: 67b70f5328e4b9c9e9df098ec98f29a02f363464
+ms.openlocfilehash: 32f0cefeeeaa2ab78a45069711d537303af26a24
+ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "61124838"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61153479"
 ---
 # <a name="unit-testing-in-office-add-ins"></a>Тестирование единиц в Office надстройки
 
@@ -31,7 +31,7 @@ Unit tests check your add-in's functionality without requiring network or servic
 В этой статье предполагается, что вы знакомы с основными понятиями тестирования и макетов единиц, включая создание и запуск тестовых файлов, и что у вас есть некоторый опыт работы с инфраструктурой тестирования единицы.
 
 > [!TIP]
-> Если вы работаете с Visual Studio, рекомендуем прочитать статью Unit testing JavaScript и TypeScript в Visual Studio для некоторых базовых сведений о тестировании подразделений [JavaScript](/visualstudio/javascript/unit-testing-javascript-with-visual-studio.md) в Visual Studio, а затем вернуться к этой статье.
+> Если вы работаете с Visual Studio, рекомендуем прочитать статью Unit testing JavaScript и TypeScript в Visual Studio для некоторых базовых сведений о тестировании подразделений [JavaScript](/visualstudio/javascript/unit-testing-javascript-with-visual-studio) в Visual Studio, а затем вернуться к этой статье.
 
 ## <a name="install-the-tool"></a>Установка средства
 
@@ -179,7 +179,7 @@ test("Text of selection in document should be set to 'Hello World'", async funct
 
 ### <a name="mocking-the-outlook-apis"></a>Макет Outlook API
 
-Хотя строго говоря, Outlook API являются частью общей модели API, они имеют специальную архитектуру, которая построена вокруг объекта [почтовых](/javascript/api/office/office.mailbox) ящиков, поэтому мы предоставили отдельный пример для Outlook. В этом примере предполагается Outlook, который имеет одну из своих функций в файле с именем `my-outlook-add-in-feature.js` . Ниже показано содержимое файла. Функция `addHelloWorldText` задает текст "Hello World!" на все, что в настоящее время выбрано в окне составить сообщение.
+Хотя строго говоря, Outlook API являются частью общей модели API, они имеют специальную архитектуру, которая построена вокруг объекта [почтовых](/javascript/api/outlook/office.mailbox) ящиков, поэтому мы предоставили отдельный пример для Outlook. В этом примере предполагается Outlook, который имеет одну из своих функций в файле с именем `my-outlook-add-in-feature.js` . Ниже показано содержимое файла. Функция `addHelloWorldText` задает текст "Hello World!" на все, что в настоящее время выбрано в окне составить сообщение.
 
 ```javascript
 const myOutlookAddinFeature = {

@@ -1,18 +1,18 @@
 ---
 title: Fluent UI React в надстройках Office
 description: Узнайте, как использовать Fluent интерфейс React в Office надстройки.
-ms.date: 07/08/2021
+ms.date: 11/19/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3989430c2c73881c9374c078b39d314d9f9705bb
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: bb53dfcfca644159a10d3b3c1d7bb6911561e58e
+ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150782"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61153465"
 ---
 # <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование Fluent интерфейса React в Office надстройки
 
-Fluent Интерфейс React является официальной интерфейсной платформой JavaScript с открытым исходным кодом, предназначенной для создания интерфейсных интерфейсов, которые легко вписываются в широкий спектр продуктов Майкрософт, включая Office. Он обеспечивает надежные, современные, доступные компоненты на основе React, которые легко настраиваются с помощью CSS-in-JS.
+Fluent интерфейс React является официальной интерфейсной платформой JavaScript с открытым исходным кодом, предназначенной для создания интерфейсных интерфейсов, которые легко вписываются в широкий спектр продуктов Майкрософт, включая Office. Он обеспечивает надежные, современные, доступные компоненты на основе React, которые легко настраиваются с помощью CSS-in-JS.
 
 > [!NOTE]
 > В этой статье описывается использование Fluent пользовательского React в контексте Office надстройки. Но он также используется в широком диапазоне Microsoft 365 приложений и расширений. Дополнительные сведения см. [в Fluent веб React](https://developer.microsoft.com/fluentui#/get-started/web#fluent-ui-react) пользовательского интерфейса и репо с открытым исходным кодом [Fluent пользовательского интерфейса.](https://github.com/microsoft/fluentui)
@@ -90,8 +90,8 @@ Fluent Интерфейс React является официальной инте
 
 ```typescript
 import * as React from 'react';
-import { PrimaryButton, IButtonProps } from 'office-ui-fabric-react/lib/Button';
-import { Label } from 'office-ui-fabric-react/lib/Label';
+import { PrimaryButton, IButtonProps } from '@fluentui/react/lib/components/Button';
+import { Label } from '@fluentui/react/lib/components/Label';
 
 export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
   public constructor(props) {
@@ -141,11 +141,9 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
     import {ButtonPrimaryExample} from './Button';
     ```
 
-2. Удалите два приведенные ниже оператора импорта.
+2. Удалите следующее утверждение импорта.
 
     ```typescript
-    import { Button, ButtonType } from 'office-ui-fabric-react';
-    ...
     import Progress from './Progress';
     ```
 
@@ -174,7 +172,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 Поздравляем, вы успешно создали надстройку области задач с помощью React и Fluent пользовательского интерфейса React!
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Word Add-in GettingStartedFabricReact](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
 - [Fabric Core в надстройках Office](fabric-core.md)

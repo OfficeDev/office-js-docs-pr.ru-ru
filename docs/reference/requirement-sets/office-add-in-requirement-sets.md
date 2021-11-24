@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: Дополнительные дополнительные Office общих наборов API.
-ms.date: 11/08/2021
+ms.date: 11/22/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: c6b2f7f41ff002f3ce66c5dd8afbb36f2e3e6f1e
-ms.sourcegitcommit: 3d37c42f5e465dac52d231d31717bdbb3bfa0e30
+ms.openlocfilehash: 65ab09d62a3ca551cb1295744f88ff2fd095861a
+ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60890009"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61153472"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -128,6 +128,14 @@ ms.locfileid: "60890009"
 
 ---
 
+### <a name="keyboardshortcuts"></a>KeyboardShortcuts
+
+|**Приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| См. [наборы требований к ярлыкам клавиатуры.](keyboard-shortcuts-requirement-sets.md) | Office.actions.areShortcutsInUse<br>Office.actions.getShortcuts<br>Office.actions.replaceShortcuts |
+
+---
+
 ### <a name="mailbox"></a>Mailbox
 
 |**Приложения Office**|**Методы в наборе**|
@@ -200,7 +208,7 @@ ms.locfileid: "60890009"
 
 ---
 
-### <a name="settings"></a>Параметры
+### <a name="settings"></a>Settings
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
