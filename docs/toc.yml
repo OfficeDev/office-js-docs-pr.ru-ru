@@ -348,6 +348,8 @@ items:
                 href: reference/requirement-sets/identity-api-requirement-sets.md
               - name: Наборы обязательных элементов для приведения изображений
                 href: reference/requirement-sets/image-coercion-requirement-sets.md
+              - name: Наборы обязательных элементов cочетаний клавиш
+                href: reference/requirement-sets/keyboard-shortcuts-requirement-sets.md
               - name: Наборы обязательных элементов общего API для Office
                 href: reference/requirement-sets/office-add-in-requirement-sets.md
               - name: Открытие набора обязательных элементов окна браузера
