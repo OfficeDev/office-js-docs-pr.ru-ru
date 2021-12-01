@@ -1,14 +1,14 @@
 ---
 title: Тестирование единиц в Office надстройки
 description: Узнайте, как унифизировать тестовый код, который вызывает Office API JavaScript
-ms.date: 11/23/2021
+ms.date: 11/30/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 32f0cefeeeaa2ab78a45069711d537303af26a24
-ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
+ms.openlocfilehash: 8824b8e759e3c1acecf30683f2b89bb41bd558f3
+ms.sourcegitcommit: 5daf91eb3be99c88b250348186189f4dc1270956
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61153479"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61242042"
 ---
 # <a name="unit-testing-in-office-add-ins"></a>Тестирование единиц в Office надстройки
 
@@ -21,7 +21,6 @@ Unit tests check your add-in's functionality without requiring network or servic
 
 - [Jest](https://jestjs.io)
 - [Mocha](https://mochajs.org/)
-- [Storybook](https://storybook.js.org/docs/react/workflows/unit-testing)
 - [Жасмин](https://jasmine.github.io/)
 
 В примерах этой статьи используется фреймворк Jest. Примеры использования фреймворка Mocha на домашней [странице Office-Addin-Mock](https://github.com/OfficeDev/Office-Addin-Scripts/tree/master/packages/office-addin-mock#examples).
@@ -109,9 +108,6 @@ npm install office-addin-mock --save-dev
 ## <a name="examples"></a>Примеры
 
 В примерах этого раздела используется Jest с его настройками по умолчанию. Эти параметры поддерживают модули CommonJS. См. [документацию Jest](https://jestjs.io/docs/getting-started) о настройке Jest и node.js для поддержки модулей ECMAScript и поддержки TypeScript. Чтобы выполнить любой из этих примеров, необходимо выполнить следующие действия.
-
-> [!NOTE]
-> 
 
 1. Создайте Office надстройки для соответствующего Office хост-приложения (например, Excel или Word). Один из способов быстро сделать это — использовать [средство Yo Office.](https://github.com/OfficeDev/generator-office)
 1. В корне проекта установите [Jest](https://jestjs.io/docs/getting-started).
@@ -420,6 +416,4 @@ describe("Insert blue paragraph at end tests", () => {
 - Репо с открытым исходным кодом [Office-Addin-Mock](https://github.com/OfficeDev/Office-Addin-Scripts/tree/master/packages/office-addin-mock).
 - [Jest](https://jestjs.io)
 - [Mocha](https://mochajs.org/)
-- [Storybook](https://storybook.js.org/docs/react/workflows/unit-testing)
 - [Жасмин](https://jasmine.github.io/)
- 

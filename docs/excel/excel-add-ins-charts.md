@@ -1,14 +1,14 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
 description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
-ms.date: 07/17/2019
+ms.date: 11/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b3cb04ff3bd8b1b0c050741a7238b1e9d6bd498f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 173e20977270e84c7cef39d9ea0e326cb7b5d298
+ms.sourcegitcommit: 5daf91eb3be99c88b250348186189f4dc1270956
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151438"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61242077"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
@@ -187,6 +187,46 @@ Excel.run(function (context) {
 **Диаграмма с линейной линией тренда**
 
 ![Диаграмма с линейным трендом в Excel.](../images/excel-charts-trendline-linear.png)
+
+## <a name="add-and-format-a-chart-data-table"></a>Добавление и формат таблицы данных диаграммы
+
+С помощью метода можно получить доступ к элементу таблицы [`Chart.getDataTableOrNullObject`](/javascript/api/excel/excel.chart#getDataTableOrNullObject__) данных диаграммы. Этот метод возвращает [`ChartDataTable`](/javascript/api/excel/excel.chartdatatable) объект. Объект `ChartDataTable` имеет свойства форматирования boolean, такие как `visible` , и `showLegendKey` `showHorizontalBorder` .
+
+Свойство возвращает объект, что позволяет далее форматирование и `ChartDataTable.format` [`ChartDataTableFormat`](/javascript/api/excel/excel.chartdatatableformat) стиль таблицы данных. Объект `ChartDataTableFormat` предлагает `border` и `fill` `font` свойства.
+
+В следующем примере кода показано, как добавить таблицу данных в диаграмму, а затем форматировать эту таблицу данных с помощью `ChartDataTable` объектов и `ChartDataTableFormat` объектов.
+
+```js
+// This code sample adds a data table to a chart that already exists on the worksheet, 
+// and then adjusts the display and format of that data table.
+Excel.run(function (context) {
+    // Retrieve the chart on the "Sample" worksheet.
+    var chart = context.workbook.worksheets.getItem("Sample").charts.getItemAt(0);
+
+    // Get the chart data table object and load its properties.
+    var chartDataTable = chart.getDataTableOrNullObject();
+    chartDataTable.load();
+
+    // Set the display properties of the chart data table.
+    chartDataTable.visible = true;
+    chartDataTable.showLegendKey = true;
+    chartDataTable.showHorizontalBorder = false;
+    chartDataTable.showVerticalBorder = true;
+    chartDataTable.showOutlineBorder = true;
+
+    // Retrieve the chart data table format object and set font and border properties. 
+    var chartDataTableFormat = chartDataTable.format;
+    chartDataTableFormat.font.color = "#B76E79";
+    chartDataTableFormat.font.name = "Comic Sans";
+    chartDataTableFormat.border.color = "blue";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+На следующем скриншоте показана таблица данных, которую создает предыдущий пример кода.
+
+![Диаграмма со таблицей данных, демонстрация настраиваемого форматирования таблицы данных.](../images/excel-charts-data-table.png)
 
 ## <a name="export-a-chart-as-an-image"></a>Экспорт диаграммы как изображения
 
