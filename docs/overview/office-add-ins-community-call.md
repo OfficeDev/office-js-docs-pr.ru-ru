@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office вызов сообщества надстройки
 description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
-ms.date: 11/15/2021
+ms.date: 12/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: dd96efb632b065e15d80a73f6bc54a4424e24d49
-ms.sourcegitcommit: 4cd94f6b365ea7813f19d4a06e6de2a1308b5aee
+ms.openlocfilehash: da85ba3cafec7c7eb86a4c6a617273747802b8e8
+ms.sourcegitcommit: e4d7791cefb29498a8bffce626a6218cee06abd9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60963439"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "61284994"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
 
@@ -16,12 +16,14 @@ ms.locfileid: "60963439"
 
 ## <a name="agenda-for-december-8th-call"></a>Повестка дня на 8 декабря
 
-Повестка дня на декабрь будет опубликована примерно за неделю до звонка.
+- Outlook: Повторная повторная часть объявлений Ignite
+- Outlook: Используйте активацию на основе событий для шифрования вложений
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
 Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
 
+- [10 ноября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-november-10-2021/ba-p/2983146)
 - [13 октября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-october-13-2021/ba-p/2867151)
 - [8 сентября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-september-8-2021/ba-p/2747100)
 - [11 августа 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-august-2021/ba-p/2661372)

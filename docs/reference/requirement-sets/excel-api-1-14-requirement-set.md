@@ -1,15 +1,15 @@
 ---
-title: Excel Набор API JavaScript 1.14
+title: Excel API JavaScript установлено 1.14
 description: Сведения о наборе требований ExcelApi 1.14.
-ms.date: 10/29/2021
+ms.date: 12/02/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cdf22d35125607237b724c88da2083ae78a9940
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: 97c221bb8530d32fbfe42ae82519c942c6499928
+ms.sourcegitcommit: e4d7791cefb29498a8bffce626a6218cee06abd9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681509"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "61285001"
 ---
 # <a name="whats-new-in-excel-javascript-api-114"></a>Новые возможности в Excel API JavaScript 1.14
 
@@ -17,8 +17,8 @@ ms.locfileid: "60681509"
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |
-| Таблицы данных диаграммы | Управление внешним видом, форматированием и видимостью таблиц данных на диаграммах. | [Диаграмма](/javascript/api/excel/excel.chart), [ChartDataTable](/javascript/api/excel/excel.chartdatatable), [ChartDataTableFormat](/javascript/api/excel/excel.chartdatatableformat) |
-| Прецеденты формул | Возвращаем все ячейки-прецеденты формулы. | [Range](/javascript/api/excel/excel.range) |
+| [Таблицы данных диаграммы](../../excel/excel-add-ins-charts.md#add-and-format-a-chart-data-table) | Управление внешним видом, форматированием и видимостью таблиц данных на диаграммах. | [Диаграмма](/javascript/api/excel/excel.chart), [ChartDataTable](/javascript/api/excel/excel.chartdatatable), [ChartDataTableFormat](/javascript/api/excel/excel.chartdatatableformat) |
+| [Прецеденты формул](../../excel/excel-add-ins-ranges-precedents-dependents.md#get-the-precedents-of-a-formula) | Возвращаем все ячейки-прецеденты формулы. | [Range](/javascript/api/excel/excel.range) |
 | Запросы | Извлечение атрибутов Power Query, таких как имя, дата обновления и количество запросов. | [Запрос](/javascript/api/excel/excel.query), [QueryCollection](/javascript/api/excel/excel.querycollection)|
 | События защиты таблиц | Отслеживание изменений состояния защиты таблицы и источника этих изменений. | [WorksheetProtectionChangedEventArgs](/javascript/api/excel/excel.worksheetprotectionchangedeventargs), [Таблица](/javascript/api/excel/excel.worksheet), [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) |
 
