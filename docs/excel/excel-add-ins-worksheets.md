@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
-ms.date: 07/02/2021
+ms.date: 12/06/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bd443c6ec6921247aa8adb98932599594aa55f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3ab27032c8d80d8cd01c3a0239ba23e6bbd7e14f
+ms.sourcegitcommit: e392e7f78c9914d15c4c2538c00f115ee3d38a26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151257"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61331066"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -374,11 +374,11 @@ function formulaChangeHandler(event) {
 
 ![Таблица данных в Excel перед сортировкой.](../images/excel-sort-event-before.png)
 
-Если в **"Q1&quot;** выполняется сортировка сверху вниз (значения в **&quot;B"),** возвращаются следующие выделенные строки `WorksheetRowSortedEventArgs.address` .
+Если в **"Q1"** выполняется сортировка сверху вниз (значения в **"B"),** возвращаются следующие выделенные строки `WorksheetRowSortedEventArgs.address` .
 
 ![Данные из таблицы в Excel после сортировки сверху вниз. Выделены перемещенные строки.](../images/excel-sort-event-after-row.png)
 
-Если выполняется сортировка слева направо на **"Quinces&quot;**(значения в **&quot;4")** на исходных данных, следующие столбцы с выделением возвращаются путем `WorksheetColumnsSortedEventArgs.address` .
+Если выполняется сортировка слева направо на **"Quinces"**(значения в **"4")** на исходных данных, следующие столбцы с выделением возвращаются путем `WorksheetColumnsSortedEventArgs.address` .
 
 ![Данные из таблицы в Excel после сортировки слева направо. Выделены перемещенные столбцы.](../images/excel-sort-event-after-column.png)
 
@@ -499,6 +499,41 @@ Excel.run(function (context) {
 - `password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.
 
 В статье [Защита листа](https://support.microsoft.com/office/3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.
+
+### <a name="detect-changes-to-the-worksheet-protection-state"></a>Обнаружение изменений состояния защиты таблицы
+
+Состояние защиты таблицы можно изменить с помощью надстройки или Excel пользовательского интерфейса. Чтобы обнаружить изменения в состоянии защиты, [зарегистрируйте обработник](excel-add-ins-events.md#register-an-event-handler) событий [`onProtectionChanged`](/javascript/api/excel/excel.worksheet#onProtectionChanged) для события таблицы. Обработчики событий `onProtectionChanged` для события получают объект при [`WorksheetProtectionChangedEventArgs`](/javascript/api/excel/excel.worksheetprotectionchangedeventargs) пожаре события.
+
+В следующем примере кода показано, как зарегистрировать обработник событий и использовать объект для получения свойств и свойств `onProtectionChanged` `WorksheetProtectionChangedEventArgs` `isProtected` `worksheetId` `source` события.
+
+```js
+// This method registers an event handler for the onProtectionChanged event of a worksheet.
+Excel.run(function (context) {
+    // Retrieve the worksheet named "Sample".
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    // Register the onProtectionChanged event handler.
+    sheet.onProtectionChanged.add(checkProtection);
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+
+// This method is an event handler that returns the protection state of a worksheet 
+// and information about the changed worksheet.
+function checkProtection(event) {
+    Excel.run(function (context) {
+        // Retrieve the protection, worksheet ID, and source properties of the event.
+        var protectionStatus = event.isProtected;
+        var worksheetId = event.worksheetId;
+        var source = event.source;
+
+        // Print the event properties to the console.
+        console.log("Protection status changed. Protection status is now: " + protectionStatus);
+        console.log("    ID of changed worksheet: " + worksheetId);
+        console.log("    Source of change event: " + source);    
+    });
+}
+```
 
 ## <a name="page-layout-and-print-settings"></a>Параметры разметки страницы и печати
 

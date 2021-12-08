@@ -1,14 +1,14 @@
 ---
 title: Развертывание и публикация надстроек Office
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
-ms.date: 07/30/2021
+ms.date: 12/07/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 52612a9f3ab1844098dd7ae5b7a674c8db9e33b4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 81c02a36becb9ef3244f7754dda44d064cdd9925
+ms.sourcegitcommit: e392e7f78c9914d15c4c2538c00f115ee3d38a26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154559"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61331080"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -81,7 +81,7 @@ ms.locfileid: "59154559"
 - Microsoft 365, Exchange Online или Exchange Server 2013 или более поздней версии
 - Outlook 2013 или более поздней версии
 
-Чтобы назначить надстройки клиентам, загрузите манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из AppSource. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Установка или удаление надстроек Outlook для организации](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/install-or-remove-outlook-add-ins) на сайте TechNet.
+Чтобы назначить надстройки клиентам, отправьте манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из AppSource. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Надстройки для Outlook в Exchange Server](/exchange/add-ins-for-outlook-2013-help).
 
 ## <a name="see-also"></a>См. также
 
