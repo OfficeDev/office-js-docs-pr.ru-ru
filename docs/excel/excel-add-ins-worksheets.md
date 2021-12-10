@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
-ms.date: 12/06/2021
+ms.date: 12/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ab27032c8d80d8cd01c3a0239ba23e6bbd7e14f
-ms.sourcegitcommit: e392e7f78c9914d15c4c2538c00f115ee3d38a26
+ms.openlocfilehash: 55234d7c7c4d13fcfc3663e6d5454bf04b75b830
+ms.sourcegitcommit: ddb1d85186fd6e77d732159430d20eb7395b9a33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61331066"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "61406636"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -444,6 +444,8 @@ Excel.run(function (context) {
 В первом примере кода показано, как добавить фильтр в используемый диапазон на листе. Этот фильтр скрывает записи, не входящие в верхние 25 %, на основе значений в столбце **3**.
 
 ```js
+// This method adds a custom AutoFilter to the active worksheet
+// and applies the filter to a column of the used range.
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getActiveWorksheet();
     var farmData = sheet.getUsedRange();
@@ -457,6 +459,7 @@ Excel.run(function (context) {
 В следующем примере кода показано, как обновить автофильтр, используя метод `reapply`. Это следует выполнять при изменении данных в диапазоне.
 
 ```js
+// This method refreshes the AutoFilter to ensure that changes are captured.
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getActiveWorksheet();
     sheet.autoFilter.reapply();
@@ -464,9 +467,24 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
+В следующем примере кода показано, как использовать метод для очистки автофильтра только из одного столбца, оставив фильтр активным `clearColumnCriteria` в других столбцах.
+
+```js
+// This method clears the AutoFilter setting from one column.
+Excel.run(function (context) {
+    // Retrieve the active worksheet.
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+
+    // Clear the filter from only column 3.
+    sheet.autoFilter.clearColumnCriteria(3);
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
 В последнем примере кода автофильтра показано, как удалить автофильтр с листа с помощью метода `remove`.
 
 ```js
+// This method removes all AutoFilters from the active worksheet.
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getActiveWorksheet();
     sheet.autoFilter.remove();

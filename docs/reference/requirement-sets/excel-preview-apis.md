@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих Excel API JavaScript.
-ms.date: 11/02/2021
+ms.date: 12/08/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: f62b71532f323ad17f541979d3956f217ab5d07d
-ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
+ms.openlocfilehash: 32a2f5d355086c51cbf165dd7ed335e96c96647a
+ms.sourcegitcommit: ddb1d85186fd6e77d732159430d20eb7395b9a33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60683786"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "61406643"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -71,6 +71,17 @@ ms.locfileid: "60683786"
 ||[errorSubType](/javascript/api/excel/excel.calcerrorcellvalue#errorSubType)|Представляет тип `CalcErrorCellValue` .|
 ||[errorType](/javascript/api/excel/excel.calcerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.calcerrorcellvalue#type)|Представляет тип этого значения ячейки.|
+|[CardLayoutListSection](/javascript/api/excel/excel.cardlayoutlistsection)|[макет](/javascript/api/excel/excel.cardlayoutlistsection#layout)|Представляет тип макета для этого раздела.|
+|[CardLayoutPropertyReference](/javascript/api/excel/excel.cardlayoutpropertyreference)|[property](/javascript/api/excel/excel.cardlayoutpropertyreference#property)|Имя свойства, на которое ссылается макет карты.|
+|[CardLayoutSectionStandardProperties](/javascript/api/excel/excel.cardlayoutsectionstandardproperties)|[обвалился](/javascript/api/excel/excel.cardlayoutsectionstandardproperties#collapsed)|Представляет, был ли этот раздел карты первоначально свернут.|
+||[collapsible](/javascript/api/excel/excel.cardlayoutsectionstandardproperties#collapsible)|Представляет, является ли этот раздел карты коллапсируемым.|
+||[properties](/javascript/api/excel/excel.cardlayoutsectionstandardproperties#properties)|Представляет имена свойств в этом разделе.|
+||[заголовок](/javascript/api/excel/excel.cardlayoutsectionstandardproperties#title)|Представляет название этого раздела карты.|
+|[CardLayoutStandardProperties](/javascript/api/excel/excel.cardlayoutstandardproperties)|[mainImage](/javascript/api/excel/excel.cardlayoutstandardproperties#mainImage)|Указывает свойство, которое будет использоваться в качестве основного изображения карты.|
+||[sections](/javascript/api/excel/excel.cardlayoutstandardproperties#sections)|Представляет разделы карты.|
+||[subTitle](/javascript/api/excel/excel.cardlayoutstandardproperties#subTitle)|Представляет спецификацию, в которой свойство содержит подзаголовок карты.|
+||[заголовок](/javascript/api/excel/excel.cardlayoutstandardproperties#title)|Представляет название карты или спецификацию, в которой свойство содержит название карты.|
+|[CardLayoutTableSection](/javascript/api/excel/excel.cardlayouttablesection)|[макет](/javascript/api/excel/excel.cardlayouttablesection#layout)|Представляет тип макета для этого раздела.|
 |[CellValueAttributionAttributes](/javascript/api/excel/excel.cellvalueattributionattributes)|[licenseAddress](/javascript/api/excel/excel.cellvalueattributionattributes#licenseAddress)|Представляет URL-адрес лицензии или источника, описывая, как можно использовать это свойство.|
 ||[licenseText](/javascript/api/excel/excel.cellvalueattributionattributes#licenseText)|Представляет имя лицензии, управляющей этим свойством.|
 ||[sourceAddress](/javascript/api/excel/excel.cellvalueattributionattributes#sourceAddress)|Представляет URL-адрес источника `CellValue` .|
@@ -141,10 +152,11 @@ ms.locfileid: "60683786"
 |[EmptyCellValue](/javascript/api/excel/excel.emptycellvalue)|[basicType](/javascript/api/excel/excel.emptycellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[basicValue](/javascript/api/excel/excel.emptycellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[type](/javascript/api/excel/excel.emptycellvalue#type)|Представляет тип этого значения ячейки.|
+|[EntityCardLayout](/javascript/api/excel/excel.entitycardlayout)|[макет](/javascript/api/excel/excel.entitycardlayout#layout)|Представляете тип этого макета.|
 |[EntityCellValue](/javascript/api/excel/excel.entitycellvalue)|[basicType](/javascript/api/excel/excel.entitycellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[basicValue](/javascript/api/excel/excel.entitycellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
-||[свойства: { [key: string]: CellValue & { propertyMetadata](/javascript/api/excel/excel.entitycellvalue#properties)|Представляет свойства этого объекта и их метаданные.|
-||[propertyMetadata](/javascript/api/excel/excel.entitycellvalue#propertyMetadata)||
+||[cardLayout](/javascript/api/excel/excel.entitycellvalue#cardLayout)|Представляет макет этого объекта в представлении карты.|
+||[свойства: { [клавиша: строка]](/javascript/api/excel/excel.entitycellvalue#properties)|Представляет свойства этого объекта и их метаданные.|
 ||[text](/javascript/api/excel/excel.entitycellvalue#text)|Представляет текст, показанный при отрисовывии ячейки с этим значением.|
 ||[type](/javascript/api/excel/excel.entitycellvalue#type)|Представляет тип этого значения ячейки.|
 |[FieldErrorCellValue](/javascript/api/excel/excel.fielderrorcellvalue)|[basicType](/javascript/api/excel/excel.fielderrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
@@ -194,6 +206,8 @@ ms.locfileid: "60683786"
 ||[basicValue](/javascript/api/excel/excel.nameerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[errorType](/javascript/api/excel/excel.nameerrorcellvalue#errorType)|Представляет тип `ErrorCellValue` .|
 ||[type](/javascript/api/excel/excel.nameerrorcellvalue#type)|Представляет тип этого значения ячейки.|
+|[NamedItem](/javascript/api/excel/excel.nameditem)|[valueAsJson](/javascript/api/excel/excel.nameditem#valueAsJson)|Представление JSON значений в этом элементе с именем.|
+|[NamedItemArrayValues](/javascript/api/excel/excel.nameditemarrayvalues)|[valuesAsJson](/javascript/api/excel/excel.nameditemarrayvalues#valuesAsJson)|Представление JSON значений в ячейках этого диапазона.|
 |[NamedSheetViewCollection](/javascript/api/excel/excel.namedsheetviewcollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getItemOrNullObject_key_)|Получает представление листа с его именем.|
 |[NotAvailableErrorCellValue](/javascript/api/excel/excel.notavailableerrorcellvalue)|[basicType](/javascript/api/excel/excel.notavailableerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[basicValue](/javascript/api/excel/excel.notavailableerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
@@ -214,6 +228,8 @@ ms.locfileid: "60683786"
 ||[getDataSourceType()](/javascript/api/excel/excel.pivottable#getDataSourceType__)|Получает тип источника данных для PivotTable.|
 |[PivotTableScopedCollection](/javascript/api/excel/excel.pivottablescopedcollection)|[getFirstOrNullObject()](/javascript/api/excel/excel.pivottablescopedcollection#getFirstOrNullObject__)|Получает первый pivotTable в коллекции.|
 |[Range](/javascript/api/excel/excel.range)|[getDependents()](/javascript/api/excel/excel.range#getDependents__)|Возвращает объект, представляющего диапазон, содержащий все иждивенцы ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
+||[valuesAsJson](/javascript/api/excel/excel.range#valuesAsJson)|Представление JSON значений в ячейках этого диапазона.|
+|[RangeView](/javascript/api/excel/excel.rangeview)|[valuesAsJson](/javascript/api/excel/excel.rangeview#valuesAsJson)|Представление JSON значений в ячейках этого диапазона.|
 |[RefErrorCellValue](/javascript/api/excel/excel.referrorcellvalue)|[basicType](/javascript/api/excel/excel.referrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[basicValue](/javascript/api/excel/excel.referrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[errorSubType](/javascript/api/excel/excel.referrorcellvalue#errorSubType)|Представляет тип `RefErrorCellValue` .|
@@ -248,9 +264,11 @@ ms.locfileid: "60683786"
 ||[setStyle(style: string \| TableStyle \| BuiltInTableStyle)](/javascript/api/excel/excel.table#setStyle_style_)|Задает стиль, примененный к таблице.|
 ||[tableStyle](/javascript/api/excel/excel.table#tableStyle)|Стиль, примененный к таблице.|
 |[TableCollection](/javascript/api/excel/excel.tablecollection)|[onFiltered](/javascript/api/excel/excel.tablecollection#onFiltered)|Возникает, когда фильтр применяется на любой таблице в книге или в таблице.|
+|[TableColumn](/javascript/api/excel/excel.tablecolumn)|[valuesAsJson](/javascript/api/excel/excel.tablecolumn#valuesAsJson)|Представление JSON значений в ячейках в этом столбце таблицы.|
 |[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableId)|Получает ID таблицы, в которой применяется фильтр.|
 ||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetId)|Получает ID таблицы, которая содержит таблицу.|
+|[TableRow](/javascript/api/excel/excel.tablerow)|[valuesAsJson](/javascript/api/excel/excel.tablerow#valuesAsJson)|Представление JSON значений в ячейках в этой строке таблицы.|
 |[ValueErrorCellValue](/javascript/api/excel/excel.valueerrorcellvalue)|[basicType](/javascript/api/excel/excel.valueerrorcellvalue#basicType)|Представляет значение, которое будет возвращено ячейкой `Range.valueTypes` с этим значением.|
 ||[basicValue](/javascript/api/excel/excel.valueerrorcellvalue#basicValue)|Представляет значение, которое будет возвращено ячейкой `Range.values` с этим значением.|
 ||[errorSubType](/javascript/api/excel/excel.valueerrorcellvalue#errorSubType)|Представляет тип `ValueErrorCellValue` .|
