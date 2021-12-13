@@ -4,12 +4,12 @@ description: Сведения о предстоящих API JavaScript Word.
 ms.date: 10/13/2021
 ms.prod: word
 ms.localizationpriority: medium
-ms.openlocfilehash: ba33c6c53dd62aa0adc37b90963d35988165fa96
-ms.sourcegitcommit: 3b187769e86530334ca83cfdb03c1ecfac2ad9a8
+ms.openlocfilehash: 84e32a224a3d3a9f72a4f5aade1a8c98bbcab839
+ms.sourcegitcommit: e4d915edde57ad5d4e20f1e2c288d572bd9fe5e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60367439"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "61420245"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра Word JavaScript
 
@@ -65,7 +65,7 @@ ms.locfileid: "60367439"
 ||[matchWholeWord](/javascript/api/word/word.document#matchWholeWord)||
 ||[matchWildcards](/javascript/api/word/word.document#matchWildcards)||
 ||[onContentControlAdded](/javascript/api/word/word.document#onContentControlAdded)|Возникает при добавлении управления контентом.|
-||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.document#search_searchText__searchOptions__ignorePunct__ignoreSpace__matchCase__matchPrefix__matchSuffix__matchWholeWord__matchWildcards_)|Выполняет поиск с указанными SearchOptions в области всего документа.|
+||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.document#search_searchText__searchOptions_)|Выполняет поиск с указанными SearchOptions в области всего документа.|
 ||[settings](/javascript/api/word/word.document#settings)|Получает параметры надстройки в документе.|
 |[DocumentCreated](/javascript/api/word/word.documentcreated)|[customXmlParts](/javascript/api/word/word.documentcreated#customXmlParts)|Получает настраиваемые XML-части в документе.|
 ||[deleteBookmark (имя: строка)](/javascript/api/word/word.documentcreated#deleteBookmark_name_)|Удаляет закладки, если она существует, из документа.|
