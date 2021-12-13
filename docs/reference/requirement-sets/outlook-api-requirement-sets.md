@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 11/01/2021
+ms.date: 11/18/2021
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 07e3f8da6c9d5af1d06f1bb388588dcd109b137e
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: f94f76edfd7ba9fcb5d45fc426f5d8579aefe863
+ms.sourcegitcommit: ddb1d85186fd6e77d732159430d20eb7395b9a33
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681502"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "61406657"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -72,7 +72,7 @@ if (item.somePropertyOrFunction !== undefined) {
 В этом разделе указан диапазон наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook. Сведения о требованиях к серверу и клиенту для запуска надстроек Outlook см. в статье [Требования надстроек Outlook](../../outlook/add-in-requirements.md).
 
 > [!IMPORTANT]
-> Если целевой сервер Exchange и клиент Outlook поддерживают разные наборы обязательных элементов, вы ограничены применением более низкой версии набора обязательных элементов. Например, если надстройка работает в Outlook 2016 для Mac (максимальная версия набора обязательных элементов: 1.6) с использованием Exchange 2013 (максимальная версия набора обязательных элементов: 1.1), ваша надстройка ограничивается применением набора обязательных элементов 1.1.
+> Если целевой сервер Exchange и клиент Outlook поддерживают разные наборы обязательных элементов, возможно, вы ограничены применением более ранней версии набора обязательных элементов. Например, если надстройка работает в Outlook 2016 для Mac (максимальная версия набора обязательных элементов: 1.6) с использованием Exchange 2013 (максимальная версия набора обязательных элементов: 1.1), ваша надстройка может быть ограничена применением набора обязательных элементов 1.1.
 
 ### <a name="exchange-server-support"></a>Поддержка сервера Exchange
 
@@ -86,7 +86,7 @@ if (item.somePropertyOrFunction !== undefined) {
 || 2013 | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 > [!NOTE]
-> \* Чтобы потребовать набор API удостоверений 1.3 в коде надстройки, проверьте, поддерживается ли он вызовом `isSetSupported('IdentityAPI', '1.3')`. Объявление в манифесте надстройки не поддерживается. Также можно определить, поддерживается ли API, проверив, не `undefined` ли он. Подробнее см. в статье [Использование API из наборов требования более поздних версий](#using-apis-from-later-requirement-sets).
+> \* [!INCLUDE [How to use the Identity 1.3 requirement set in Outlook add-ins](../../includes/outlook-identity-13-note.md)]
 
 ### <a name="outlook-client-support"></a>Поддержка клиентов Outlook
 
@@ -113,7 +113,7 @@ if (item.somePropertyOrFunction !== undefined) {
 > [!NOTE]
 > <sup>1</sup> Поддержка версии **1.8** в Outlook для Windows с подпиской на Microsoft 365 или розничной версии для единовременной покупки доступна начиная с версии 1910 (сборка 12130.20272). Поддержка версии **1.9** в Outlook для Windows с подпиской на Microsoft 365 доступна начиная с версии 2008 (сборка 13127.20296). Поддержка версии **1.10** в Outlook для Windows с подпиской на Microsoft 365 доступна начиная с версии 2104 (сборка 13929.20296). Поддержка версии **1.11** в Outlook для Windows с подпиской на Microsoft 365 доступна начиная с версии 2110 (сборка 14527.20226). Дополнительные сведения относительно вашей версии см.в журнале обновлений на стр [Office 2019](/officeupdates/update-history-office-2019) или [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и в статье [Поиск версии клиента Office и канала обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
 >
-> <sup>2</sup>Чтобы потребовать набор API удостоверений 1.3 в коде надстройки, проверьте, поддерживается ли он вызовом `isSetSupported('IdentityAPI', '1.3')`. Объявление в манифесте надстройки не поддерживается. Также можно определить, поддерживается ли API, проверив, не `undefined` ли он. Подробнее см. в статье [Использование API из наборов требования более поздних версий](#using-apis-from-later-requirement-sets).
+> <sup>2</sup> [!INCLUDE [How to use the Identity 1.3 requirement set in Outlook add-ins](../../includes/outlook-identity-13-note.md)]
 >
 > <sup>3</sup>Поддержка версии 1.3 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3114349) от 8 декабря 2015 г.](https://support.microsoft.com/kb/3114349) Поддержка версии 1.4 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3118280) от 13 сентября 2016 г.](https://support.microsoft.com/help/3118280) Поддержка версии 1.4 в Outlook 2016 (единовременная покупка) добавлена в рамках [обновления для Office 2016 (KB4022223) от 3 июля 2018 г.](https://support.microsoft.com/help/4022223).
 >
