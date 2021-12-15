@@ -2,15 +2,15 @@
 title: Надстройки области задач для Project
 description: Узнайте о надстройках панели задач для Project.
 ms.date: 10/14/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 44c7704ebbc7e53b0ca713f0834e3c9b75334add
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 94a3108c9c6ddb9612652bb27034bbd2f5b0b4ca
+ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154601"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61514225"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 

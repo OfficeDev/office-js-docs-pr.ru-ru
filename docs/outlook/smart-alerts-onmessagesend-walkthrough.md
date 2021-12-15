@@ -2,14 +2,14 @@
 title: Используйте смарт-оповещения и событие OnMessageSend в Outlook надстройки (предварительный просмотр)
 description: Узнайте, как обрабатывать событие отправки сообщений в Outlook надстройки с помощью активации на основе событий.
 ms.topic: article
-ms.date: 11/01/2021
+ms.date: 12/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 78e10f8609264d69ba32b78badc14c626c210d76
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
+ms.openlocfilehash: 2412e1a713c2f15a6b04c77eaba6f368d3607dfb
+ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681847"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61514077"
 ---
 # <a name="use-smart-alerts-and-the-onmessagesend-event-in-your-outlook-add-in-preview"></a>Используйте смарт-оповещения и событие OnMessageSend в Outlook надстройки (предварительный просмотр)
 
@@ -49,7 +49,7 @@ ms.locfileid: "60681847"
         <!-- Event-based activation happens in a lightweight runtime.-->
         <Runtimes>
           <!-- HTML file including reference to or inline JavaScript event handlers.
-               This is used by Outlook on the web. -->
+               This is used by Outlook on the web and Outlook on the new Mac UI preview. -->
           <Runtime resid="WebViewRuntime.Url">
             <!-- JavaScript file containing event handlers. This is used by Outlook Desktop. -->
             <Override type="javascript" resid="JSRuntime.Url"/>

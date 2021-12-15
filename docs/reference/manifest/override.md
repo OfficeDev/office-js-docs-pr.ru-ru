@@ -1,14 +1,14 @@
 ---
 title: Элемент Override в файле манифеста
 description: Элемент Переопределения позволяет указать значение параметра в зависимости от заданного условия.
-ms.date: 05/19/2021
+ms.date: 12/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bf0f4d8877ba2228d5bfc2053f53b2a8e1ab7b29
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: dda8f6ca5aee1492c51960fc637d96e4d82796cb
+ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154866"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61514000"
 ---
 # <a name="override-element"></a>Элемент Override
 
@@ -200,7 +200,7 @@ ms.locfileid: "59154866"
 > [!IMPORTANT]
 > Поддержка этого элемента была представлена в наборе требований к почтовым ящикам [1.10](../../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md) с функцией активации на основе [событий.](../../outlook/autolaunch.md) См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
-Элемент `<Override>` выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент `<Override>` имеет тип **RuntimeOverride,** то атрибут является условием, а атрибут `type` — `resid` последующим. Например, ниже приводится следующее: "Если тип является "javascript", то это `resid` "JSRuntime.Url". Outlook Этот элемент требуется для обработчиков [точеки расширения LaunchEvent.](../../reference/manifest/extensionpoint.md#launchevent)
+Элемент `<Override>` выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент `<Override>` имеет тип **RuntimeOverride,** то атрибут является условием, а атрибут `type` — `resid` последующим. Например, ниже приводится следующее: "Если тип является "javascript", то это `resid` "JSRuntime.Url". Outlook Desktop требует этот элемент для [обработчиков точек расширения LaunchEvent.](../../reference/manifest/extensionpoint.md#launchevent)
 
 ```xml
 <Runtime resid="WebViewRuntime.Url">
@@ -233,7 +233,7 @@ ms.locfileid: "59154866"
 <!-- Event-based activation happens in a lightweight runtime.-->
 <Runtimes>
   <!-- HTML file including reference to or inline JavaScript event handlers.
-  This is used by Outlook on the web. -->
+  This is used by Outlook on the web and Outlook on the new Mac UI preview. -->
   <Runtime resid="WebViewRuntime.Url">
     <!-- JavaScript file containing event handlers. This is used by Outlook Desktop. -->
     <Override type="javascript" resid="JSRuntime.Url"/>
@@ -241,7 +241,7 @@ ms.locfileid: "59154866"
 </Runtimes>
 ```
 
-### <a name="see-also"></a>Дополнительные материалы
+### <a name="see-also"></a>См. также
 
 - [Runtime](runtime.md)
 - [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md)

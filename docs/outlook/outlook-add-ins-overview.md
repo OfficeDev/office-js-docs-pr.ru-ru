@@ -2,14 +2,15 @@
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
 ms.date: 07/16/2021
+ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 9785effec3ba71128aacdbfc4f521fef9a433dba
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: cfda46d5006b8ff351fcd339c601ef3e22613519
+ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150653"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61514140"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
