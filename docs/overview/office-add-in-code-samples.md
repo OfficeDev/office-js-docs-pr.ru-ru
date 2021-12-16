@@ -1,18 +1,27 @@
 ---
 title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
-ms.date: 10/07/2021
+ms.date: 11/18/2021
 localization_priority: high
-ms.openlocfilehash: a7e84fb86fb795afc3f73385e2f577458d85621a
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: 62bce4c5c6a01895db5d183e0526e0af820156ea
+ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250485"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61514016"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
 Эти примеры кода помогают узнать, как использовать различные возможности при разработке надстроек Office.
+
+## <a name="getting-started"></a>Начало работы
+
+В следующих примерах показано, как создать простейшую надстройку Office, содержащую только манифест, веб-страницу HTML и логотип. Эти компоненты являются основными частями надстройки Office. Дополнительные сведения о том, как начать работу, см. в наших [кратких руководствах](../quickstarts/excel-quickstart-jquery.md) и [учебниках](/search/?terms=tutorial&scope=Office%20Add-ins).
+
+* [Надстройка Excel "Hello world"](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/hello-world/excel-hello-world)
+* [Надстройка Outlook "Hello world"](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/hello-world/outlook-hello-world)
+* [Надстройка PowerPoint "Hello world"](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/hello-world/powerpoint-hello-world)
+* [Надстройка Word "Hello world"](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/hello-world/word-hello-world)
 
 ## <a name="outlook"></a>Outlook
 

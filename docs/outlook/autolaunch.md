@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 12/14/2021
+ms.date: 12/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dc0d75d9bf0f32d4df2de1a88bc4d175c291c2a
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: b97faa9b294b597aea7085209e9ab2dae7be4d8e
+ms.sourcegitcommit: 9ca8259b17566b8d73169de7f98bd4e16764bcdc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514232"
+ms.lasthandoff: 12/16/2021
+ms.locfileid: "61537885"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -51,7 +51,7 @@ ms.locfileid: "61514232"
   - [Настройка целевого выпуска для](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)Microsoft 365 клиента.
   - Ссылка  на бета-библиотеку на CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`.
 - Для Outlook на Windows:
-  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединяйтесь [к Office программы insider](https://insider.office.com) для доступа к Office бета-сборки.
+  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединитесь [к Office и](https://insider.office.com/join/windows) выберите бета-канал для доступа к Office бета-сборки. 
   - Настройка реестра. Outlook включает локализованную копию выпуска и бета-версии Office.js вместо загрузки из CDN. По умолчанию ссылается локализованная производственная копия API. Чтобы перейти на локализованную бета-версию API Outlook JavaScript, необходимо добавить эту запись реестра, в противном случае бета-API не могут быть найдены.
     1. Создание ключа `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\WebExt\Developer` реестра.
     1. Добавьте запись с `EnableBetaAPIsInJavaScript` именем и установите значение `1` . На приведенном ниже изображении показано, как должен выглядеть реестр.
