@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 12/15/2021
+ms.date: 12/16/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b97faa9b294b597aea7085209e9ab2dae7be4d8e
-ms.sourcegitcommit: 9ca8259b17566b8d73169de7f98bd4e16764bcdc
+ms.openlocfilehash: ecb758db993052614bd479cc6c8e62525a0bf02d
+ms.sourcegitcommit: 9b6556563451f9907cb5da50cba757eb9960aa39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2021
-ms.locfileid: "61537885"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "61565373"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -47,9 +47,11 @@ ms.locfileid: "61537885"
 
 Чтобы просмотреть эти события, где это доступно:
 
-- Для Outlook в Интернете и Outlook предварительного просмотра пользовательского интерфейса Mac:
+- Для Outlook в Интернете:
   - [Настройка целевого выпуска для](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)Microsoft 365 клиента.
   - Ссылка  на бета-библиотеку на CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`.
+- Для Outlook предварительного просмотра пользовательского интерфейса Mac:
+  - Минимальная требуемая сборка — 16,54 (21101001). Присоединитесь [к Office и](https://insider.office.com/join/Mac) выберите бета-канал для доступа к Office бета-сборки. 
 - Для Outlook на Windows:
   - Минимальная требуемая сборка — 16.0.14511.10000. Присоединитесь [к Office и](https://insider.office.com/join/windows) выберите бета-канал для доступа к Office бета-сборки. 
   - Настройка реестра. Outlook включает локализованную копию выпуска и бета-версии Office.js вместо загрузки из CDN. По умолчанию ссылается локализованная производственная копия API. Чтобы перейти на локализованную бета-версию API Outlook JavaScript, необходимо добавить эту запись реестра, в противном случае бета-API не могут быть найдены.

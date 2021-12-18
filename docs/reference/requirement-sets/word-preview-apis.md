@@ -1,15 +1,15 @@
 ---
 title: API предварительного просмотра Word JavaScript
 description: Сведения о предстоящих API JavaScript Word.
-ms.date: 10/13/2021
+ms.date: 12/14/2021
 ms.prod: word
 ms.localizationpriority: medium
-ms.openlocfilehash: 84e32a224a3d3a9f72a4f5aade1a8c98bbcab839
-ms.sourcegitcommit: e4d915edde57ad5d4e20f1e2c288d572bd9fe5e9
+ms.openlocfilehash: c68a63dc57fbcaa8282343c3f3271778c43bc28d
+ms.sourcegitcommit: 9b6556563451f9907cb5da50cba757eb9960aa39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "61420245"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "61565366"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра Word JavaScript
 
@@ -65,7 +65,7 @@ ms.locfileid: "61420245"
 ||[matchWholeWord](/javascript/api/word/word.document#matchWholeWord)||
 ||[matchWildcards](/javascript/api/word/word.document#matchWildcards)||
 ||[onContentControlAdded](/javascript/api/word/word.document#onContentControlAdded)|Возникает при добавлении управления контентом.|
-||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.document#search_searchText__searchOptions_)|Выполняет поиск с указанными SearchOptions в области всего документа.|
+||[search(searchText: string, searchOptions?: Word.SearchOptions \| {ignorePunct?: boolean ignoreSpace?: boolean matchCase?: boolean matchPrefix?: boolean matchSuffix?: boolean matchWholeWord?: boolean matchWildcards?: boolean })](/javascript/api/word/word.document#search_searchText__searchOptions_)|Выполняет поиск с указанными вариантами поиска в области всего документа.|
 ||[settings](/javascript/api/word/word.document#settings)|Получает параметры надстройки в документе.|
 |[DocumentCreated](/javascript/api/word/word.documentcreated)|[customXmlParts](/javascript/api/word/word.documentcreated#customXmlParts)|Получает настраиваемые XML-части в документе.|
 ||[deleteBookmark (имя: строка)](/javascript/api/word/word.documentcreated#deleteBookmark_name_)|Удаляет закладки, если она существует, из документа.|
@@ -102,6 +102,7 @@ ms.locfileid: "61420245"
 |[Основной текст](/javascript/api/word/word.body)|[endnotes](/javascript/api/word/word.body#endnotes)|Получает коллекцию endnotes в теле.|
 ||[сноски](/javascript/api/word/word.body#footnotes)|Получает коллекцию сносок в теле.|
 ||[getComments()](/javascript/api/word/word.body#getComments__)|Получает комментарии, связанные с телом.|
+||[getReviewedText (changeTrackingVersion?: Word.ChangeTrackingVersion)](/javascript/api/word/word.body#getReviewedText_changeTrackingVersion_)|Получает рассмотренный текст на основе выбора ChangeTrackingVersion.|
 ||[type](/javascript/api/word/word.body#type)|Возвращает тип основного текста.|
 |[Comment](/javascript/api/word/word.comment)|[authorEmail](/javascript/api/word/word.comment#authorEmail)|Получает электронную почту автора примечания.|
 ||[authorName](/javascript/api/word/word.comment#authorName)|Получает имя автора примечания.|
@@ -131,23 +132,27 @@ ms.locfileid: "61420245"
 |[ContentControl](/javascript/api/word/word.contentcontrol)|[endnotes](/javascript/api/word/word.contentcontrol#endnotes)|Получает коллекцию endnotes в contentcontrol.|
 ||[сноски](/javascript/api/word/word.contentcontrol#footnotes)|Получает коллекцию сносок в contentcontrol.|
 ||[getComments()](/javascript/api/word/word.contentcontrol#getComments__)|Получает комментарии, связанные с телом.|
-|[Document](/javascript/api/word/word.document)|[getEndnoteBody()](/javascript/api/word/word.document#getEndnoteBody__)|Получает тело endnotes документа.|
-||[getFootnoteBody()](/javascript/api/word/word.document#getFootnoteBody__)|Получает тело сносок документа.|
+||[getReviewedText (changeTrackingVersion?: Word.ChangeTrackingVersion)](/javascript/api/word/word.contentcontrol#getReviewedText_changeTrackingVersion_)|Получает рассмотренный текст на основе выбора ChangeTrackingVersion.|
+|[Document](/javascript/api/word/word.document)|[changeTrackingMode](/javascript/api/word/word.document#changeTrackingMode)|Получает или задает режим ChangeTracking.|
+||[getEndnoteBody()](/javascript/api/word/word.document#getEndnoteBody__)|Получает конечные нотки документа в одном теле.|
+||[getFootnoteBody()](/javascript/api/word/word.document#getFootnoteBody__)|Получает сноски документа в одном теле.|
 |[NoteItem](/javascript/api/word/word.noteitem)|[body](/javascript/api/word/word.noteitem#body)|Представляет объект тела элемента заметки.|
 ||[delete()](/javascript/api/word/word.noteitem#delete__)|Удаляет элемент заметки.|
 ||[getNext()](/javascript/api/word/word.noteitem#getNext__)|Получает следующий элемент заметки того же типа.|
 ||[getNextOrNullObject()](/javascript/api/word/word.noteitem#getNextOrNullObject__)|Получает следующий элемент заметки того же типа.|
-||[reference](/javascript/api/word/word.noteitem#reference)|Представляет ссылку сноска/endnote в основном документе.|
-||[type](/javascript/api/word/word.noteitem#type)|Представляете тип элемента примечание: сноска или endnote.|
+||[reference](/javascript/api/word/word.noteitem#reference)|Представляет ссылку сноски или endnote в основном документе.|
+||[type](/javascript/api/word/word.noteitem#type)|Представляет тип элемента примечание: сноска или endnote.|
 |[NoteItemCollection](/javascript/api/word/word.noteitemcollection)|[getFirst()](/javascript/api/word/word.noteitemcollection#getFirst__)|Получает первый элемент заметки в этой коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.noteitemcollection#getFirstOrNullObject__)|Получает первый элемент заметки в этой коллекции.|
 ||[items](/javascript/api/word/word.noteitemcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[Paragraph](/javascript/api/word/word.paragraph)|[endnotes](/javascript/api/word/word.paragraph#endnotes)|Получает коллекцию endnotes в абзаце.|
 ||[сноски](/javascript/api/word/word.paragraph#footnotes)|Получает коллекцию сносок в абзаце.|
 ||[getComments()](/javascript/api/word/word.paragraph#getComments__)|Получает комментарии, связанные с абзацем.|
+||[getReviewedText (changeTrackingVersion?: Word.ChangeTrackingVersion)](/javascript/api/word/word.paragraph#getReviewedText_changeTrackingVersion_)|Получает рассмотренный текст на основе выбора ChangeTrackingVersion.|
 |[Range](/javascript/api/word/word.range)|[endnotes](/javascript/api/word/word.range#endnotes)|Получает коллекцию endnotes в диапазоне.|
 ||[сноски](/javascript/api/word/word.range#footnotes)|Получает коллекцию сносок в диапазоне.|
 ||[getComments()](/javascript/api/word/word.range#getComments__)|Получает комментарии, связанные с диапазоном.|
+||[getReviewedText (changeTrackingVersion?: Word.ChangeTrackingVersion)](/javascript/api/word/word.range#getReviewedText_changeTrackingVersion_)|Получает рассмотренный текст на основе выбора ChangeTrackingVersion.|
 ||[insertComment (commentText: string)](/javascript/api/word/word.range#insertComment_commentText_)|Вставьте комментарий к диапазону.|
 ||[insertEndnote (insertText?: string)](/javascript/api/word/word.range#insertEndnote_insertText_)|Вставляет endnote.|
 ||[insertFootnote (insertText?: string)](/javascript/api/word/word.range#insertFootnote_insertText_)|Вставляет сноску.|
