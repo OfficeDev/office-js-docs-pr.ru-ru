@@ -1,14 +1,14 @@
 ---
 title: Сохранение состояния и параметров надстройки
 description: Узнайте, как сохранять данные Office веб-приложениях надстройки, работающих в среде без состояния управления браузером.
-ms.date: 03/23/2021
+ms.date: 12/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 86ad6240df76c1f314072b381f51fe0bd54889b2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: dc99285aaaedfe5aa8385709fc5512f7cedfb2a6
+ms.sourcegitcommit: a8bfb169b9e0b26d34a2839843e480a47ca098cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150973"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61583800"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -22,7 +22,7 @@ ms.locfileid: "59150973"
 
 - Использовать способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) или [sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)).
     > [!NOTE]
-    > Пользователь может блокировать методы хранения на основе браузера в зависимости от параметров, которые они выбирают.
+    > Некоторые браузеры или параметры браузера пользователя могут блокировать методы хранения на основе браузера. Необходимо проверить доступность, как описано в [API служба хранилища веб служба хранилища.](https://developer.mozilla.org/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 
 В этой статье основное внимание уделяется использованию Office API JavaScript для сохраняемого состояния надстройки к текущему документу. Если необходимо сохранять состояние между документами, например отслеживание предпочтений пользователей в любых открытых документах, необходимо использовать другой подход. Например, можно использовать [SSO](sso-in-office-add-ins.md#using-the-sso-token-as-an-identity) для получения удостоверения пользователя, а затем сохранить идентификатор пользователя и его параметры в базе данных в Интернете.
 
@@ -180,7 +180,7 @@ function getReviewers() {
 
 Сведения о том, как сохранить параметры в Outlook надстройки, см. в статью Управление состоянием и [Outlook надстройки.](../outlook/manage-state-and-settings-outlook.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Надстройки Outlook](../outlook/outlook-add-ins-overview.md)
