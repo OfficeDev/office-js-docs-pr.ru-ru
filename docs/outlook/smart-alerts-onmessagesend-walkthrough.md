@@ -2,14 +2,14 @@
 title: Используйте смарт-оповещения и событие OnMessageSend в Outlook надстройки (предварительный просмотр)
 description: Узнайте, как обрабатывать событие отправки сообщений в Outlook надстройки с помощью активации на основе событий.
 ms.topic: article
-ms.date: 12/13/2021
+ms.date: 12/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2412e1a713c2f15a6b04c77eaba6f368d3607dfb
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: d0745ac0f91fbda7866f52cba431369e45e2a1fe
+ms.sourcegitcommit: c23aa91492ae2d4d07cda2a3ebba94db78929f62
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514077"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598381"
 ---
 # <a name="use-smart-alerts-and-the-onmessagesend-event-in-your-outlook-add-in-preview"></a>Используйте смарт-оповещения и событие OnMessageSend в Outlook надстройки (предварительный просмотр)
 
@@ -20,7 +20,7 @@ ms.locfileid: "61514077"
 > [!IMPORTANT]
 > События и события доступны только в предварительной версии с подпиской `OnMessageSend` Microsoft 365 в Outlook на `OnAppointmentSend` Windows. Дополнительные сведения см. [в материале How to preview.](autolaunch.md#how-to-preview) События предварительного просмотра не следует использовать в производственных надстройках.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 Событие `OnMessageSend` доступно с помощью функции активации на основе событий. Чтобы понять, как настроить надстройку для использования этой функции, доступных событий, предварительного просмотра этого события, отладки, ограничений функций и других, обратитесь к настройкам надстройки [Outlook](autolaunch.md)для активации на основе событий.
 
@@ -232,10 +232,16 @@ ms.locfileid: "61514077"
 >
 > 1. Закройте Outlook.
 > 1. Откройте диспетчер **задач** и убедитесь, что **msoadfsb.exe** процесс не запущен.
-> 1. Выполните следующую команду.
+> 1. Если используется (версия по `https://localhost` умолчанию в манифесте), запустите следующую команду.
 >
 >    ```command&nbsp;line
->    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_http___localhost_300004ACA5EC-D79A-43EA-AB47-E50E47DD96FC
+>    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_https___localhost_300004ACA5EC-D79A-43EA-AB47-E5
+>    ```
+>
+> 1. Если вы `http://localhost` используете, запустите следующую команду.
+>
+>    ```command&nbsp;line
+>    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_http___localhost_300004ACA5EC-D79A-43EA-AB47-E5
 >    ```
 >
 > 1. Перезапустите Outlook.

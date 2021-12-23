@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 12/17/2021
+ms.date: 12/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ebf82aa778cb10db596630e2b6912c3518ee0ef1
-ms.sourcegitcommit: a8bfb169b9e0b26d34a2839843e480a47ca098cc
+ms.openlocfilehash: c74969e761494dcc795c1360d08e23d93f09735d
+ms.sourcegitcommit: c23aa91492ae2d4d07cda2a3ebba94db78929f62
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "61583812"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598367"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -264,10 +264,16 @@ Outlook на Windows использует файл JavaScript, а Outlook в И�
     >
     > 1. Закройте Outlook.
     > 1. Откройте диспетчер **задач** и убедитесь, что **msoadfsb.exe** процесс не запущен.
-    > 1. Выполните следующую команду.
+    > 1. Если используется (версия по `https://localhost` умолчанию в манифесте), запустите следующую команду.
     >
     >    ```command&nbsp;line
-    >    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_http___localhost_300004ACA5EC-D79A-43EA-AB47-E50E47DD96FC
+    >    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_https___localhost_300004ACA5EC-D79A-43EA-AB47-E5
+    >    ```
+    >
+    > 1. Если вы `http://localhost` используете, запустите следующую команду.
+    >
+    >    ```command&nbsp;line
+    >    call %SystemRoot%\System32\CheckNetIsolation.exe LoopbackExempt -a -n=1_http___localhost_300004ACA5EC-D79A-43EA-AB47-E5
     >    ```
     >
     > 1. Перезапустите Outlook.
