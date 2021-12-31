@@ -773,10 +773,7 @@ items:
           - name: Автоматическое создание метаданных JSON
             href: excel/custom-functions-json-autogeneration.md
             displayName: 'Excel, Custom Functions'
-          - name: Обзор типов данных и пользовательских функций (предварительная версия)
-            href: excel/custom-functions-data-types-overview.md
-            displayName: 'Excel, Custom Functions'
-          - name: Понятия типов данных и пользовательских функций (предварительная версия)
+          - name: Типы данных (предварительная версия)
             href: excel/custom-functions-data-types-concepts.md
             displayName: 'Excel, Custom Functions'
           - name: Вызов API JavaScript для Excel
