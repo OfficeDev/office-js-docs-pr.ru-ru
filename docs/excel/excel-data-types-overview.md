@@ -1,17 +1,17 @@
 ---
 title: Обзор типов данных в надстройках Excel
 description: Типы данных в API JavaScript для Excel позволяют разработчикам надстроек Office работать с отформатированными значениями чисел, веб-изображениями, значениями сущностей, массивами в значениях сущностей и расширенными ошибками в качестве типов.
-ms.date: 12/08/2021
+ms.date: 12/27/2021
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: f6545eb314ec5aef30a595b755e3f702a3e5df20
-ms.sourcegitcommit: ddb1d85186fd6e77d732159430d20eb7395b9a33
+ms.openlocfilehash: 06a10051b1b243689f9d46d22c38cbdbfb155e4d
+ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "61406671"
+ms.lasthandoff: 12/30/2021
+ms.locfileid: "61647953"
 ---
 # <a name="overview-of-data-types-in-excel-add-ins-preview"></a>Обзор типов данных в надстройках Excel (предварительная версия)
 
@@ -35,10 +35,10 @@ ms.locfileid: "61406671"
 
 [!include[Custom functions and data types availability note](../includes/excel-custom-functions-data-types-note.md)]
 
-Типы данных делают пользовательские функции полезнее. Пользовательские функции принимают различные типы данных на вход и используют их на выходе; кроме того, в них применяется та же схема JSON для типов данных, что и в API JavaScript для Excel. На этой схеме JSON типов данных основаны все расчеты и вычисления пользовательских функций. Дополнительные сведения об интеграции типов данных с пользовательскими функциями см. в статье о [ключевых понятиях пользовательских функций и типов данных.](custom-functions-data-types-concepts.md)
+Типы данных делают пользовательские функции полезнее. Пользовательские функции принимают различные типы данных на вход и используют их на выходе; кроме того, в них применяется та же схема JSON для типов данных, что и в API JavaScript для Excel. На этой схеме JSON типов данных основаны все расчеты и вычисления пользовательских функций. Чтобы узнать больше об интеграции типов данных с пользовательскими функциями, см. [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Ключевые понятия типов данных в Excel](excel-data-types-concepts.md)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Обзор пользовательских функций и типов данных](custom-functions-data-types-overview.md)
+- [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md)

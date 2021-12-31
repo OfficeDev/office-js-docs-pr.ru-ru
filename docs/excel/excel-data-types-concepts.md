@@ -1,17 +1,17 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 12/08/2021
+ms.date: 12/28/2021
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 37fe1b90065dd8a784fc7cfc191ccb9cdc3ce5b9
-ms.sourcegitcommit: ddb1d85186fd6e77d732159430d20eb7395b9a33
+ms.openlocfilehash: 7b14182c188900cd472b623dc2204bd74584e082
+ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "61406622"
+ms.lasthandoff: 12/30/2021
+ms.locfileid: "61647946"
 ---
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
@@ -33,20 +33,23 @@ ms.locfileid: "61406622"
 
 ### <a name="json-schema"></a>Схема JSON
 
-Типы данных используют согласованную схему JSON, которая определяет типы [CellValueType](/javascript/api/excel/excel.cellvaluetype) данных и дополнительные сведения, такие как `basicValue`, `numberFormat` или `address`. Каждый тип `CellValueType` имеет свойства, доступные в соответствии с этим типом. Например, тип `webImage` включает свойства [altText](/javascript/api/excel/excel.webimagecellvalue#altText) и [attribution](/javascript/api/excel/excel.webimagecellvalue#attribution). В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
+Каждый тип данных использует схему метаданных JSON, разработанную для этого типа. Это определяет [CellValueType](/javascript/api/excel/excel.cellvaluetype) данных и дополнительные сведения о ячейке, например `basicValue`, `numberFormat` или `address`. Каждый тип `CellValueType` имеет свойства, доступные в соответствии с этим типом. Например, тип `webImage` включает свойства [altText](/javascript/api/excel/excel.webimagecellvalue#altText) и [attribution](/javascript/api/excel/excel.webimagecellvalue#attribution). В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
+
+Схема метаданных JSON для каждого типа данных также включает одно или несколько свойств только для чтения, которые используются в расчетах при обнаружении несовместимых сценариев, таких как версия Excel, которая не соответствует минимальному требованию к номеру сборки для функции типов данных. Свойство `basicType` является частью метаданных JSON каждого типа данных и всегда является свойством только для чтения. Свойство `basicType` используется в качестве резервного, если тип данных не поддерживается или имеет неправильный формат.
 
 ## <a name="formatted-number-values"></a>Форматированное число
 
 Объект [FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue) позволяет настройкам Excel определять свойство `numberFormat` для некоторого значения. После того как свойство форматированного числа присвоено значению, оно сопровождает это значение в расчетах и может возвращаться функциями.
 
-В следующем примере кода JSON показано значение форматированного числа. Значение форматированного числа `myDate` в примере кода отображается в пользовательском интерфейсе Excel как **1/16/1990**.
+В следующем примере кода JSON показана полная схема значения форматированного числа. Значение форматированного числа `myDate` в примере кода отображается в пользовательском интерфейсе Excel как **1/16/1990**. Если минимальные требования к совместимости для функции типов данных не выполнены, вычисления используют `basicValue` вместо форматированного числа.
 
 ```json
-// This is an example of the JSON of a formatted number value.
+// This is an example of the complete JSON of a formatted number value.
 // In this case, the number is formatted as a date.
 const myDate = {
     type: Excel.CellValueType.formattedNumber,
     basicValue: 32889.0,
+    basicType: Excel.CellValueType.double, // A readonly property. Used as a fallback in incompatible scenarios.
     numberFormat: "m/d/yyyy"
 };
 ```
@@ -55,10 +58,12 @@ const myDate = {
 
 Значение сущности — это контейнер для типов данных, аналогичный объекту в объектно-ориентированном программировании. Сущности также поддерживают массивы в качестве свойств значения сущности. Объект [EntityCellValue](/javascript/api/excel/excel.entitycellvalue) позволяет надстройкам определять такие свойства, как `type`, `text` и `properties`. Свойство `properties` позволяет значению сущности определять и содержать дополнительные типы данных.
 
-В следующем примере кода JSON показано значение сущности, которое содержит текст, изображение, дату и дополнительное текстовое значение.
+Свойства `basicType` и `basicValue` определяют, как вычисления читают этот тип данных сущности, если минимальные требования к совместимости для использования типов данных не выполнены. В этом сценарии этот тип данных сущности отображается как ошибка **#VALUE!** в пользовательском интерфейсе Excel.
+
+В следующем примере кода JSON показана полная схема значения сущности, которое содержит текст, изображение, дату и дополнительное текстовое значение.
 
 ```json
-// This is an example of the JSON for an entity value.
+// This is an example of the complete JSON for an entity value.
 // The entity contains text and properties which contain an image, a date, and another text value.
 const myEntity = {
     type: Excel.CellValueType.entity,
@@ -70,7 +75,9 @@ const myEntity = {
             type: Excel.CellValueType.string,
             basicValue: "I love llamas."
         }
-    }
+    }, 
+    basicType: Excel.CellValueType.error, // A readonly property. Used as a fallback in incompatible scenarios.
+    basicValue: "#VALUE!" // A readonly property. Used as a fallback in incompatible scenarios.
 };
 ```
 
@@ -78,13 +85,17 @@ const myEntity = {
 
 Объект [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) создает возможность хранения изображения как части [сущности](#entity-values) или как независимого значения в диапазоне. Этот объект позволяет использовать множество свойств, включая `address`, `altText` и `relatedImagesAddress`.
 
-В следующем примере кода JSON показано, как представлять веб-изображение.
+Свойства `basicType` и `basicValue` определяют, как вычисления читают этот тип данных веб-изображения, если минимальные требования к совместимости для использования функции типов данных не выполнены. В этом сценарии этот тип данных веб-изображения отображается как ошибка **#VALUE!** в пользовательском интерфейсе Excel.
+
+В следующем примере кода JSON показана полная схема веб-изображения.
 
 ```json
-// This is an example of the JSON for a web image.
+// This is an example of the complete JSON for a web image.
 const myImage = {
     type: Excel.CellValueType.webImage,
-    address: "https://bit.ly/2YGOwtw"
+    address: "https://bit.ly/2YGOwtw", 
+    basicType: Excel.CellValueType.error, // A readonly property. Used as a fallback in incompatible scenarios.
+    basicValue: "#VALUE!" // A readonly property. Used as a fallback in incompatible scenarios.
 };
 ```
 
@@ -115,4 +126,4 @@ API типов данных представляют существующие о
 
 - [Обзор типов данных в надстройках Excel](excel-data-types-overview.md)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Обзор пользовательских функций и типов данных](custom-functions-data-types-overview.md)
+- [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md)

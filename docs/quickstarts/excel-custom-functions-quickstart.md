@@ -1,15 +1,15 @@
 ---
-ms.date: 10/08/2021
+ms.date: 12/28/2021
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 1bbd519fa49d4518baacf4f8d0b6d88af38f3c94
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: 2f4a2ed07c23c3ced19632b9dbfee2957f0f5ba0
+ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250499"
+ms.lasthandoff: 12/30/2021
+ms.locfileid: "61648008"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
@@ -105,6 +105,12 @@ npm run start:web
 
 > [!div class="nextstepaction"]
 > [Руководство по надстройке Excel для пользовательских функций](../tutorials/excel-tutorial-create-custom-functions.md#create-a-custom-function-that-requests-data-from-the-web)
+
+## <a name="troubleshooting"></a>Устранение неполадок
+
+При многократном выполнении быстрого запуска могут возникнуть проблемы. Если в кэше Office уже есть экземпляр функции с таким же именем, в вашей надстройке возникнет ошибка при ее загрузке без публикации. Это можно предотвратить путем [очистки кэша Office](../testing/clear-cache.md) перед запуском `npm run start`.
+
+:::image type="content" source="../images/custom-function-already-exists-error.png" alt-text="Сообщение об ошибке в Excel под названием &quot;Ошибка при установке функций&quot;. Она содержит текст &quot;Эта надстройка не была установлена, так как пользовательская функция с тем же именем уже существует&quot;.":::
 
 ## <a name="see-also"></a>См. также
 

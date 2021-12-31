@@ -1,15 +1,15 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: В этом руководстве вы создадите надстройку Excel, содержащую пользовательскую функцию, которая может выполнять вычисления, запрашивать веб-данные или потоковые веб-данные.
-ms.date: 10/08/2021
+ms.date: 12/28/2021
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 7f8a0cb7fcccce4861d77f23c0f3099fd1af2ec5
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: 8239cb52002dcf679df0ebd336c1afa17fdad693
+ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250457"
+ms.lasthandoff: 12/30/2021
+ms.locfileid: "61647974"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -17,7 +17,7 @@ ms.locfileid: "60250457"
 
 В этом руководстве описан порядок выполнения перечисленных ниже задач.
 > [!div class="checklist"]
-> - Создание надстройки пользовательской функции с помощью [генератора Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office). 
+> - Создание надстройки пользовательской функции с помощью [генератора Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office).
 > - Использование готовой пользовательской функции для выполнения простых вычислений
 > - Создание пользовательской функции, которая получает данные из сети Интернет.
 > - Создание пользовательской функции, которая осуществляет потоковую передачу данных в реальном времени из сети Интернет
@@ -31,6 +31,9 @@ ms.locfileid: "60250457"
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
  Чтобы начать, создайте проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит в вашем проекте некоторые готовые пользовательские функции, которые можно попробовать. Если вы уже с помощью краткого руководства по пользовательским функциям создали проект, продолжайте работать с ним и пропустите [этот шаг](#create-a-custom-function-that-requests-data-from-the-web).
+
+> [!NOTE]
+> Если повторно создать проект Yo Office, может возникнуть ошибка, так как в кэше Office уже есть экземпляр функции с таким же именем. Это можно предотвратить, [очищая кэш Office](../testing/clear-cache.md) перед запуском `npm run start`.
 
 1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
