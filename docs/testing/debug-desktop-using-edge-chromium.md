@@ -1,18 +1,18 @@
 ---
 title: Отладка настроек в Windows с использованием Visual Studio Code и Microsoft Edge WebView2 (на основе Chromium)
 description: Узнайте, как осуществлять отладку надстроек Office, в которых используется Microsoft Edge WebView2 (на основе Chromium) с помощью отладчика для расширения Microsoft Edge в коде VS.
-ms.date: 11/09/2021
+ms.date: 01/07/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 2ffc9226cb5e4fb38c88a98a79f3676ca3b6071e
-ms.sourcegitcommit: 3d37c42f5e465dac52d231d31717bdbb3bfa0e30
+ms.openlocfilehash: 370aee798b40631000310f65b7ace931d0c2ae3e
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889988"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765901"
 ---
 # <a name="debug-add-ins-on-windows-using-visual-studio-code-and-microsoft-edge-webview2-chromium-based"></a>Отладка настроек в Windows с использованием Visual Studio Code и Microsoft Edge WebView2 (на основе Chromium)
 
-Надстройки Office, работающие в Windows, могут использовать отладчик для расширения Microsoft Edge в коде Visual Studio Code для отладки среды Edge Chromium WebView2. 
+Надстройки Office, работающие в Windows, могут использовать отладчик для расширения Microsoft Edge в коде Visual Studio Code для отладки среды Edge Chromium WebView2.
 
 > [!TIP]
 > Если вы не можете или не хотите выполнять отладку с помощью инструментов, встроенных в Visual Studio Code; или вы столкнулись с проблемой, которая возникает только тогда, когда надстройка запускается вне Visual Studio Code, вы можете отлаживать среду выполнения Microsoft Edge Chromium WebView2 с помощью средств разработчика Microsoft Edge (на основе Chromium), как описано в разделе [Отладка надстроек с помощью средств разработчика для Microsoft Edge WebView2](debug-add-ins-using-devtools-edge-chromium.md).
@@ -35,7 +35,7 @@ ms.locfileid: "60889988"
    > npx office-addin-debugging start <your manifest path>
    > ```
 
-1. Откройте проект в VS Code. Находясь в коде VS, нажмите клавиши **CTRL+SHIFT+X**, чтобы открыть меню расширений. Выполните поиск расширения "Debugger для Microsoft Edge" и установите его.
+1. Откройте проект в VS Code. Находясь в коде VS, нажмите клавиши **CTRL+SHIFT+X**, чтобы открыть меню расширений. Выполните поиск расширения"[Microsoft Edge DevTools](/microsoft-edge/visual-studio-code/microsoft-edge-devtools-extension)" и установите его.
 
 1. Чтобы перейти к представлению отладки, выберите **Просмотр > Выполнить** или нажмите клавиши **CTRL+SHIFT+D**.
 

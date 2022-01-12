@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек в Office в Интернете
 description: Сведения о том, как тестировать и отлаживать надстройки в Office в Интернете.
-ms.date: 07/07/2020
+ms.date: 12/02/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 255826f8925ea35d25cf228e80de6774c9917cea
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 8fddafa5b7c2fe7a24ab8befa1ead31a56f9c3ac
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153965"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765908"
 ---
 # <a name="debug-add-ins-in-office-on-the-web"></a>Отладка надстроек в Office в Интернете
 
@@ -47,7 +47,7 @@ ms.locfileid: "59153965"
 
 5. Чтобы добавить вашу надстройку и протестировать ее в приложении, на вкладке "Вставка" выберите **Мои надстройки** или **Надстройки Office**.
 
-6. Выполните отладку надстройки в удобном для вас браузерном отладчике.
+6. Используйте средство отладки браузера для отладки надстройки. Обычно он открывается при нажатии F12.
 
 ## <a name="potential-issues"></a>Возможные проблемы
 

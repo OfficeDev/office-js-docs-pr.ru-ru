@@ -1,16 +1,16 @@
 ---
-title: Тестирование и отладка надстроек Office
-description: Узнайте, как тестировать и отлаживать свою надстройку Office
-ms.date: 11/14/2021
+title: Тестирование надстроек Office
+description: Узнайте, как протестировать надстройку Office
+ms.date: 12/02/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 3eaf86d7cc2702e0501522debad2e64ac24c323c
-ms.sourcegitcommit: 67b70f5328e4b9c9e9df098ec98f29a02f363464
+ms.openlocfilehash: 8d57f396c5387faf22ba8b03fd2e5019be4e14d2
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "61124396"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765915"
 ---
-# <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
+# <a name="test-office-add-ins"></a>Тестирование надстроек Office
 
 Эта статья содержит рекомендации по тестированию, отладке и диагностике надстроек Office.
 
@@ -44,15 +44,7 @@ ms.locfileid: "61124396"
 
 ## <a name="debug-an-office-add-in"></a>Отладка надстройки Office
 
-Процедура отладки также отличается для разных платформ. Следующие статьи посвящены отладке надстроек Office на определенной платформе.
-
-- [Подключение отладчика из области задач (в Windows)](attach-debugger-from-task-pane.md)
-- [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
-- [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
-- [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
-- [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
-- [Отладка надстроек Office на Mac](debug-office-add-ins-on-ipad-and-mac.md)
-- [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
+Процедура отладки надстройки Office зависит от вашей платформы и среды. Дополнительные сведения см. в статье [Отладка надстроек Office](debug-add-ins-overview.md).
 
 ## <a name="validate-an-office-add-in-manifest"></a>Проверка манифеста надстройки Office
 

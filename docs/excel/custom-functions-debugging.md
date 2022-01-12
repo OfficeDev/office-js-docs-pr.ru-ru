@@ -1,14 +1,14 @@
 ---
 title: Отладка пользовательских функций без пользовательского интерфейса
 description: Узнайте, как отлаготку Excel пользовательских функций, не используюх области задач.
-ms.date: 07/08/2021
+ms.date: 01/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 112374758aab8f7fb493cb8bbe1c214765edd5a5
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 28f597d7a4dd6befac7b2df6d1d6c7f8bfc3033f
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150894"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765950"
 ---
 # <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
@@ -20,7 +20,7 @@ ms.locfileid: "59150894"
 
 На Windows:
 
-- [Excel Отладка настольных Visual Studio Code (VS Code)](#use-the-vs-code-debugger-for-excel-desktop)
+- [Excel и Visual Studio Code (VS Code) отладка](#use-the-vs-code-debugger-for-excel-desktop)
 - [Excel в Интернете и VS Code отладка](#use-the-vs-code-debugger-for-excel-in-microsoft-edge)
 - [Excel в Интернете и средства браузера](#use-the-browser-developer-tools-to-debug-custom-functions-in-excel-on-the-web)
 - [Командная строка](#use-the-command-line-tools-to-debug)
@@ -68,7 +68,7 @@ ms.locfileid: "59150894"
 
 ## <a name="use-the-vs-code-debugger-for-excel-in-microsoft-edge"></a>Используйте отлад VS Code для Excel в Microsoft Edge
 
-Вы можете использовать VS Code для отлаговки пользовательских функций в Excel браузере Microsoft Edge пользовательского интерфейса. Чтобы использовать VS Code с Microsoft Edge, необходимо установить [debugger для Microsoft Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) расширения.
+Вы можете использовать VS Code для отлаговки пользовательских функций в Excel браузере Microsoft Edge пользовательского интерфейса. Чтобы использовать VS Code с Microsoft Edge, необходимо установить расширение [Microsoft Edge DevTools для Visual Studio Code](/microsoft-edge/visual-studio-code/microsoft-edge-devtools-extension).
 
 ### <a name="run-your-add-in-from-vs-code"></a>Запустите надстройку из VS Code
 
@@ -174,11 +174,11 @@ ms.locfileid: "59150894"
 - `npm run start:web`: Запускает Excel в Интернете и перегружает надстройку.
 - `npm run stop`: Останавливает Excel и отладку.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Узнайте о [практике проверки подлинности для пользовательских функций без пользовательского интерфейса.](custom-functions-authentication.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 * [Устранение неполадок пользовательских функций](custom-functions-troubleshooting.md)
 * [Обработка ошибок в пользовательских функциях Excel](custom-functions-errors.md)

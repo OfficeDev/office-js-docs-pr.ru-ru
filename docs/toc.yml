@@ -258,9 +258,12 @@ items:
             href: develop/develop-office-add-ins-for-the-ipad.md
       - name: Тестирование и отладка
         items:
-          - name: Тестирование и отладка надстроек Office
+          - name: Тестирование надстроек Office
             href: testing/test-debug-office-add-ins.md
             displayName: 'test, debug'
+          - name: Отладка надстроек Office
+            href: testing/debug-add-ins-overview.md
+            displayName: debug
           - name: Windows
             items:
               - name: Загрузка неопубликованных надстроек Office на Windows из сетевой папки

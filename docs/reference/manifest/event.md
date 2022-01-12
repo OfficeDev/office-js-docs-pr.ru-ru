@@ -1,14 +1,14 @@
 ---
 title: Элемент события в файле манифеста
 description: Определяет обработчик событий в надстройке.
-ms.date: 09/24/2021
+ms.date: 01/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 095023a8f2d8cd5a01835e09cd50ae7289c98c01
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: fac920fc91abd908d3d159877c0c414bd7fae244
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990665"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765894"
 ---
 # <a name="event-element"></a>Элемент Event
 
@@ -19,11 +19,18 @@ ms.locfileid: "59990665"
 
 **Тип надстройки:** почтовая
 
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
+
 ## <a name="attributes"></a>Атрибуты
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [Type](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
+|  [Тип](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
 |  [FunctionExecution](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
 |  [FunctionName](#functionname-attribute)  |  Да  | Задает имя функции для обработчика событий. |
 

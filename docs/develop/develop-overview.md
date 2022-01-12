@@ -3,12 +3,12 @@ title: Разработка надстроек Office
 description: Общие сведения о разработке надстроек Office.
 ms.date: 07/08/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 03e04fa7b1b5df751c161aec01d2d3f29eed6db9
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: da68ea157673a81fba9e04a3c73aacec020c61a4
+ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150697"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61765943"
 ---
 # <a name="develop-office-add-ins"></a>Разработка надстроек Office
 
@@ -87,7 +87,7 @@ Script Lab — это надстройка, позволяющая изучат�
 
 В следующем 1-минутном видео показана надстройка Script Lab в действии.
 
-[![Короткое видео, демонстрирующее работу Script Lab в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Ознакомительное видео о Script Lab.')](https://aka.ms/scriptlabvideo)
+[![Короткое видео, демонстрирующее работу Script Lab в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Ознакомительное видео о Script Lab')](https://aka.ms/scriptlabvideo)
 
 Дополнительные сведения о Script Lab см. в статье [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md).
 
