@@ -1,18 +1,20 @@
 ---
 title: Элемент VersionOverrides в файле манифеста
 description: Справочная документация элемента VersionOverrides для Office файлов манифеста надстройок (XML).
-ms.date: 05/12/2021
+ms.date: 01/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 1951ad9a71723d5ca1e3971ef0cbde0704824c20
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 657bdebbc88993badd9d0e60946239edd55d5533
+ms.sourcegitcommit: 9b0e70bb296a84adfaea0d6fee54916be9e13031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151323"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62042149"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
-Корневой элемент, который содержит сведения о командах надстройки. Элемент манифеста **VersionOverrides** является дочерним для элемента [OfficeApp](officeapp.md). Этот элемент поддерживается в схеме манифестов версий 1.1 и выше, но определяется в схеме VersionOverrides версии 1.0 или 1.1.
+Этот элемент содержит сведения для функций, которые не поддерживаются в базовом манифесте. Его детская разметка может переопределять часть разметки в базовом манифесте (или в родительской **ВерсииOverrides).** **VersionOverrides** — это детский элемент корневого элемента [OfficeApp](officeapp.md) в манифесте или родительского **элемента VersionOverrides.** Этот элемент поддерживается в схеме манифеста v1.1 и более поздней версии, но определяется в отдельных схемах VersionOverrides.
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -23,95 +25,22 @@ ms.locfileid: "59151323"
 
 ### <a name="namespace-values"></a>Значения пространства имен
 
-Ниже перечислены необходимое значение **значения xmlns** в зависимости от **значения xsi:type** родительского `<OfficeApp>` элемента.
+Ниже перечислены необходимое значение атрибута **xmlns** в зависимости от **значения xsi:type** корневого `<OfficeApp>` элемента.
 
-- **TaskPaneApp** поддерживает только версию 1.0 VersionOverrides, и **xmlns должны** быть `http://schemas.microsoft.com/office/taskpaneappversionoverrides` .
-- **ContentApp** поддерживает только версию 1.0 VersionOverrides, и **xmlns должны** быть `http://schemas.microsoft.com/office/contentappversionoverrides` .
+- **TaskPaneApp** поддерживает только версию 1.0 VersionOverrides, и **xmlns** должны быть `http://schemas.microsoft.com/office/taskpaneappversionoverrides` .
+- **ContentApp** поддерживает только версию 1.0 VersionOverrides, и **xmlns** должны быть `http://schemas.microsoft.com/office/contentappversionoverrides` .
 - **MailApp** поддерживает версии 1.0 и 1.1 VersionOverrides, поэтому значение **xmlns** зависит от значения `<VersionOverrides>` **xsi:type** этого элемента:
-    - Когда **xsi:type** `VersionOverridesV1_0` , **xmlns должны** быть `http://schemas.microsoft.com/office/mailappversionoverrides` .
-    - Когда **xsi:type** `VersionOverridesV1_1` , **xmlns должны** быть `http://schemas.microsoft.com/office/mailappversionoverrides/1.1` .
+  - Когда **xsi:type** `VersionOverridesV1_0` , **xmlns должны** быть `http://schemas.microsoft.com/office/mailappversionoverrides` .
+  - Когда **xsi:type** `VersionOverridesV1_1` , **xmlns должны** быть `http://schemas.microsoft.com/office/mailappversionoverrides/1.1` .
 
 > [!NOTE]
 > В настоящее время Outlook 2016 поддерживает схему VersionOverrides v1.1 и `VersionOverridesV1_1` тип.
 
-## <a name="child-elements"></a>Дочерние элементы
+## <a name="variant-schemas"></a>Схемы вариантов
 
-|  Элемент |  Обязательный  |  Описание  |
-|:-----|:-----|:-----|
-|  **Описание**    |  Нет   |  Описывает надстройку. Переопределяет элемент `Description` в любой родительской части манифеста. Текст описания содержится в дочернем элементе **LongString**, включенном в элемент [Resources](resources.md). Атрибут элемента Description может быть не более 32 символов и за набором значения атрибута `resid`  `id` `String` элемента, содержаного текст.|
-|  **Requirements**  |  Нет   |  Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Переопределяет элемент `Requirements` в родительской части манифеста.|
-|  [Hosts](hosts.md)                |  Да  |  Указывает коллекцию Office приложений. Элемент Child Hosts переопределяет элемент Hosts в родительской части манифеста.  |
-|  [Resources](resources.md)    |  Да  | Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста.|
-|  [EquivalentAddins](equivalentaddins.md)    |  Нет  | Указывает родной (COM/XLL) надстройки, эквивалентные веб-надстройки. Веб-надстройка не активируется, если установлена эквивалентная родной надстройка.|
-|  **VersionOverrides**    |  Нет  | Определяет команды надстроек в новой версии схемы. Подробные сведения см. в разделе [Реализация нескольких версий](#implementing-multiple-versions). |
-|  [WebApplicationInfo](webapplicationinfo.md)    |  Нет  | Указывает сведения о регистрации надстройки с защищенными эмитентами маркеров, такими как Azure Active Directory V2.0. |
-|  [ExtendedPermissions](extendedpermissions.md) |  Нет  |  Указывает коллекцию расширенных разрешений. |
+Для каждого из возможных значений **xmlns** существует отдельная схема, поэтому каждая из них имеет отдельную справочную страницу.
 
-### <a name="versionoverrides-example"></a>Пример VersionOverrides
-
-Ниже приводится пример типичного элемента, включая некоторые детские элементы, которые не требуются, но `<VersionOverrides>` обычно используются.
-
-```xml
-<OfficeApp ... xsi:type="MailApp">
-...
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
-    <Description resid="residDescription" />
-    <Requirements>
-      <!-- add information on requirements -->
-    </Requirements>
-    <Hosts>
-      <Host xsi:type="MailHost">
-        <!-- add information on form factors -->
-      </Host>
-    </Hosts>
-    <Resources>
-      <!-- add information on resources -->
-    </Resources>
-  </VersionOverrides>
-...
-</OfficeApp>
-```
-
-## <a name="implementing-multiple-versions"></a>Реализация нескольких версий
-
-В манифесте может быть реализовано несколько версий элемента `VersionOverrides`, которые поддерживают различные версии схемы VersionOverrides. Это можно сделать, чтобы поддерживать новые функции в новой схеме, по-прежнему поддерживая старые клиенты.
-
-Чтобы реализовать несколько версий, элемент `VersionOverrides` для новой версии должен зависеть от элемента `VersionOverrides` для старой версии. Дочерний элемент `VersionOverrides` не наследует значения от родительского объекта.
-
-Чтобы реализовать схему VersionOverrides v1.0 и v1.1, манифест будет выглядеть аналогично следующему примеру.
-
-```xml
-<OfficeApp ... xsi:type="MailApp">
-...
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
-    <Description resid="residDescription" />
-    <Requirements>
-      <!-- add information on requirements -->
-    </Requirements>
-    <Hosts>
-      <Host xsi:type="MailHost">
-        <!-- add information on form factors -->
-      </Host>
-    </Hosts>
-    <Resources>
-      <!-- add information on resources -->
-    </Resources>
-
-    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
-      <Description resid="residDescription" />
-      <Requirements>
-        <!-- add information on requirements -->
-      </Requirements>
-      <Hosts>
-        <Host xsi:type="MailHost">
-          <!-- add information on form factors -->
-        </Host>
-      </Hosts>
-      <Resources>
-        <!-- add information on resources -->
-      </Resources>
-    </VersionOverrides>  
-  </VersionOverrides>
-...
-</OfficeApp>
-```
+- [VersionOverrides 1.0 TaskPane](versionoverrides-1-0-taskpane.md)
+- [VersionOverrides 1.0 Content](versionoverrides-1-0-content.md)
+- [VersionOverrides 1.0 Mail](versionoverrides-1-0-mail.md)
+- [VersionOverrides 1.1 Mail](versionoverrides-1-1-mail.md)

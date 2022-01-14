@@ -465,8 +465,16 @@ items:
                 href: reference/manifest/version.md
               - name: VersionOverrides
                 items:
-                  - name: VersionOverrides
+                  - name: Обзор VersionOverrides
                     href: reference/manifest/versionoverrides.md
+                  - name: Область задач VersionOverrides 1.0
+                    href: reference/manifest/versionoverrides-1-0-taskpane.md
+                  - name: Содержимое VersionOverrides 1.0
+                    href: reference/manifest/versionoverrides-1-0-content.md
+                  - name: Почта VersionOverrides 1.0
+                    href: reference/manifest/versionoverrides-1-0-mail.md
+                  - name: Почта VersionOverrides 1.1
+                    href: reference/manifest/versionoverrides-1-1-mail.md
                   - name: Action
                     href: reference/manifest/action.md
                   - name: AllFormFactors
@@ -1261,7 +1269,7 @@ items:
       - name: Документация по надстройкам Word
         href: word/index.yml
         displayName: Word
-      - name: Обзор
+      - name: Общие сведения
         href: word/word-add-ins-programming-overview.md
         displayName: Word
       - name: Создание первой надстройки Word

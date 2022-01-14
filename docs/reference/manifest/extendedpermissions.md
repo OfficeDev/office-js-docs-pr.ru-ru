@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtendedPermissions в файле манифеста
 description: Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям.
-ms.date: 09/24/2021
+ms.date: 01/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c8316e045323b6b8c9c8ef140944b92c08f543c
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: 46ca6e3e2fb992755d9067b4251200073f07ade1
+ms.sourcegitcommit: 9b0e70bb296a84adfaea0d6fee54916be9e13031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990644"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62042128"
 ---
 # <a name="extendedpermissions-element"></a>Элемент ExtendedPermissions
 
@@ -18,6 +18,16 @@ ms.locfileid: "59990644"
 > Поддержка этого элемента была представлена в наборе требований 1.9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 **Тип надстройки:** почтовая
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
+
+**Связанные с этими наборами требований:**
+
+- [Mailbox 1.9](../../reference/objectmodel/requirement-set-1.9/outlook-requirement-set-1.9.md)
 
 ## <a name="child-elements"></a>Дочерние элементы
 

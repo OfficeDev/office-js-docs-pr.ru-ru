@@ -1,14 +1,14 @@
 ---
 title: Элемент EquivalentAddin в файле манифеста
 description: Указывает обратную совместимость для эквивалентной надстройки COM или XLL.
-ms.date: 09/24/2021
+ms.date: 01/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f77a70681c8a12674d9e22022276e511552861ad
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: e318a9028ebefdeca9aaf5baac465a1ec1af0a73
+ms.sourcegitcommit: 9b0e70bb296a84adfaea0d6fee54916be9e13031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990693"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62042135"
 ---
 # <a name="equivalentaddin-element"></a>Элемент EquivalentAddin
 
@@ -17,6 +17,13 @@ ms.locfileid: "59990693"
 [!INCLUDE [Support note for equivalent add-ins feature](../../includes/equivalent-add-in-support-note.md)]
 
 **Тип надстройки:** Области задач, почты, настраиваемой функции
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- Область задач 1.0
+- Почта 1.1
+
+Дополнительные сведения см. в [манифесте "Версия переопределения".](../../develop/add-in-manifests.md#version-overrides-in-the-manifest)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,14 +39,14 @@ ms.locfileid: "59990693"
 
 ## <a name="must-contain"></a>Должен содержать
 
-[Type](type.md)
+[Тип](type.md)
 
 ## <a name="can-contain"></a>Может содержать
 
 [ProgId](progid.md) 
  [FileName](filename.md)
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 Чтобы указать надстройки COM в качестве эквивалентной надстройки, укажите как элементы, так `ProgId` `Type` и элементы. Чтобы указать XLL в качестве эквивалентной надстройки, укажите как элементы, так `FileName` `Type` и элементы.
 
