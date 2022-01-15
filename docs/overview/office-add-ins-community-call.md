@@ -1,23 +1,22 @@
 ---
 title: Microsoft Office вызов сообщества надстройки
 description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
-ms.date: 01/10/2022
+ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: be9f637db2161f3c3b2da07503a623c0401c1121
-ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
+ms.openlocfilehash: 59b0be6e0fe2196cf0ff80970cd9035ed8e66b5e
+ms.sourcegitcommit: 015e0839c4acca0f4dc5ec5df08489314fb509ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61765922"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "62055060"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
 
 Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по московскому времени. Вы можете скачать приглашение календаря по [https://aka.ms/officeaddinscommunitycall](https://aka.ms/officeaddinscommunitycall) ссылке .
 
-## <a name="agenda-for-january-12th-call"></a>Повестка дня на 12 января
+## <a name="agenda-for-february-9th-call"></a>Повестка дня на 9 февраля
 
-- Excel API настройки ярлыков
-- Обновления для SSO в Office
+Повестка дня на февраль будет опубликована примерно за неделю до звонка.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
