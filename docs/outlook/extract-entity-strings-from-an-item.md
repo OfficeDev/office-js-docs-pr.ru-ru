@@ -3,12 +3,12 @@ title: Извлечение строк сущностей из элемента 
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 712246f22a83d5bcef85d89a46a3027b763e1304
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 7234e601f448de850a4ab9358362c69392589391
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154152"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074282"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
@@ -99,7 +99,7 @@ xsi:type="MailApp">
 
 HTML-файл надстройки для работы с сущностями определяет кнопки, позволяющие пользователю выбрать каждый тип сущности, и одну кнопку для очистки отображаемых экземпляров сущности. В нем есть JavaScript-файл, default_entities.js, который описан в следующем разделе [Реализация JavaScript](#javascript-implementation). JavaScript-файл содержит обработчики событий для каждой кнопки.
 
-Обратите внимание, что все надстройки Outlook должны включать файл office.js. Приведенный ниже HTML-файл включает файл office.js версии 1.1 в CDN. 
+Обратите внимание, что все надстройки Outlook должны включать файл office.js. HtmL-файл, который следует, включает версию 1.1 office.js сети доставки контента (CDN).
 
 ```html
 <!DOCTYPE html>

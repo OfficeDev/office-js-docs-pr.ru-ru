@@ -3,12 +3,12 @@ ms.date: 05/17/2020
 description: Проверка подлинности пользователей с помощью настраиваемой Excel, которые не используют области задач.
 title: Проверка подлинности для пользовательских функций без пользовательского интерфейса
 ms.localizationpriority: medium
-ms.openlocfilehash: 415663d4947caa6476fff21359d20a03eb8d67c3
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 57a003dbcf3c36842c2b5c98aba7844c9e53e012
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150898"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074240"
 ---
 # <a name="authentication-for-ui-less-custom-functions"></a>Проверка подлинности для пользовательских функций без пользовательского интерфейса
 
@@ -45,7 +45,7 @@ ms.locfileid: "59150898"
 
 ## <a name="storing-the-token"></a>Хранение маркера
 
-Следующие примеры взяты из примера кода [Использование OfficeRuntime.storage в пользовательских функциях](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Excel-custom-functions/AsyncStorage). Обратитесь к этому примеру кода для полного примера обмена данными между пользовательскими функциями без пользовательского интерфейса и области задач.
+Следующие примеры взяты из примера кода [Использование OfficeRuntime.storage в пользовательских функциях](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/AsyncStorage). Обратитесь к этому примеру кода для полного примера обмена данными между пользовательскими функциями без пользовательского интерфейса и области задач.
 
 Если настраиваемая функция без пользовательского интерфейса подает проверку подлинности, она получает маркер доступа и должна будет хранить его `storage` в . В следующем примере кода показано, как вызвать метод `storage.setItem` чтобы сохранить значение. Функция — это настраиваемая функция без пользовательского интерфейса, которая, например, `storeValue` сохраняет значение от пользователя. Можно внести изменение, чтобы сохранять любые нужные значения маркеров.
 
@@ -141,10 +141,10 @@ function getTokenViaDialog(url) {
 }
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Узнайте, как [отламыть пользовательские функции без пользовательского интерфейса.](custom-functions-debugging.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 * [Время запуска для пользовательских Excel пользовательских функций](custom-functions-runtime.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

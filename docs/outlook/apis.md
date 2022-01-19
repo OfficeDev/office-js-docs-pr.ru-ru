@@ -1,14 +1,14 @@
 ---
 title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
-ms.date: 02/21/2021
+ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a7346882a11b81321c65730390dc213d76879773
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 5a44d389bb480ec17b73fe445c885c45aff768f7
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154241"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074296"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
@@ -16,13 +16,14 @@ ms.locfileid: "59154241"
 
 ## <a name="officejs-library"></a>Библиотека Office.js
 
-Для взаимодействия с API надстроек Outlook необходимо использовать интерфейсы API JavaScript из библиотеки Office.js. Сеть CDN для библиотеки: `https://appsforoffice.microsoft.com/lib/1/hosted/Office.js`. Надстройки, отправляемые в AppSource, должны ссылаться на библиотеку Office.js в этой сети CDN. Нельзя использовать локальную ссылку.
+Для взаимодействия с API надстроек Outlook необходимо использовать интерфейсы API JavaScript из библиотеки Office.js. Сеть доставки контента (CDN) для библиотеки `https://appsforoffice.microsoft.com/lib/1/hosted/Office.js` . Надстройки, отправляемые в AppSource, должны ссылаться на библиотеку Office.js в этой сети CDN. Нельзя использовать локальную ссылку.
 
 Добавьте ссылку на сеть CDN в теге `<script>`, вложенном в тег `<head>`, на веб-странице (HTML-, ASPX- или PHP-файле), где определяется пользовательский интерфейс надстройки.
 
 ```HTML
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
 ```
+
 При добавлении новых API-интерфейсов не будет меняться URL-адрес Office.js. Мы укажем другую версию в URL-адресе, только если изменится поведение API.
 
 > [!IMPORTANT]

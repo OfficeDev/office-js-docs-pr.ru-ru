@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 ms.localizationpriority: high
-ms.openlocfilehash: 087d35a6de6618a238ec7c2a30331abcdfdd44f2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: ddf1e22141cee516bcd7808fd37b789f6943e093
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151192"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62073141"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -55,12 +55,12 @@ ms.locfileid: "59151192"
 
 ## <a name="the-cell-analyzer-vsto-add-in"></a>Надстройка VSTO для анализа ячеек
 
-В этом руководстве используется решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/VSTO-shared-code-migration). В папке **/start** содержится решение надстройки VSTO, которое нужно перенести. Целью является перенос надстройки VSTO в современную надстройку Office с помощью общего кода, когда это возможно.
+В этом руководстве используется решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/VSTO-shared-code-migration). В папке **/start** содержится решение надстройки VSTO, которое нужно перенести. Целью является перенос надстройки VSTO в современную надстройку Office с помощью общего кода, когда это возможно.
 
 > [!NOTE]
 > В примере используется C#, но вы можете применить представленные в этом руководстве методы для надстройки VSTO, написанной на любом языке .NET.
 
-1. Скачайте решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/VSTO-shared-code-migration) в рабочую папку на своем компьютере.
+1. Скачайте решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/VSTO-shared-code-migration) в рабочую папку на своем компьютере.
 1. Запустите Visual Studio 2019 и откройте решение **/start/Cell-Analyzer.sln**.
 1. В меню **Отладка** выберите команду **Начать отладку**.
 1. В **обозревателе решений** щелкните правой кнопкой мыши проект **Cell-Analyzer** и выберите пункт **Свойства**.

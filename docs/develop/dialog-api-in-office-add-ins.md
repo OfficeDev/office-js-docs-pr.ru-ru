@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 09/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 02239437c12e44708e870540c95f1333e78351f9
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: edf28450ae63a232912ae4344d808a4d0c26ed45
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151025"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62073355"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -439,22 +439,22 @@ function processMessage(arg) {
 
 **Более сложные примеры:**
 
-- [Office Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
-- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React)
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
-- [Office SSO надстройки ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
-- [Office Пример монетизации надстройки SAAS](https://github.com/OfficeDev/office-add-in-saas-monetization-sample)
-- [Outlook Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
-- [Outlook SSO надстройки](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Outlook-Add-in-SSO)
-- [Outlook Просмотр маркеров надстройки](https://github.com/OfficeDev/Outlook-Add-In-Token-Viewer)
-- [Outlook Надстройка Actionable Message](https://github.com/OfficeDev/Outlook-Add-In-Actionable-Message)
-- [Outlook Совместное использование надстройки для OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)
-- [PowerPoint Надстройка Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
-- [Excel Сценарий общего времени работы](https://github.com/OfficeDev/PnP-OfficeAddins/tree/900b5769bca9bbcff79d6cd6106d9fcc55c70d5a/Samples/excel-shared-runtime-scenario)
-- [Excel Надстройка ASPNET QuickBooks](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
+- [Office надстройки Microsoft Graph ASPNET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React)
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
+- [Office ASPNET SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
+- [Office saAS пример монетизации надстройки](https://github.com/OfficeDev/office-add-in-saas-monetization-sample)
+- [Outlook Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
+- [Outlook SSO надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)
+- [Outlook просмотра маркеров надстройки](https://github.com/OfficeDev/Outlook-Add-In-Token-Viewer)
+- [Outlook надстройки Actionable Message](https://github.com/OfficeDev/Outlook-Add-In-Actionable-Message)
+- [Outlook совместное использование надстройки для OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)
+- [PowerPoint надстройки Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
+- [Excel общего времени работы](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-shared-runtime-scenario)
+- [Excel надстройки ASPNET QuickBooks](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
 - [Word Add-in JS Redact](https://github.com/OfficeDev/Word-Add-in-JS-Redact)
 - [Word Add-in JS SpecKit](https://github.com/OfficeDev/Word-Add-in-JS-SpecKit)
 - [Word Add-in AngularJS Client OAuth](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)
 - [Надстройка Office Auth0](https://github.com/OfficeDev/Office-Add-in-Auth0)
-- [Office Надстройка OAuth.io](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
-- [Office Код шаблонов дизайна надстройки UX](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
+- [Office надстройки OAuth.io](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
+- [Office кода шаблонов дизайна надстройки UX](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)

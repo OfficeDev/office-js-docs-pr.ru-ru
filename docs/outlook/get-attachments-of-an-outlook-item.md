@@ -3,12 +3,12 @@ title: Получение вложений в надстройке Outlook
 description: Надстройка может использовать API вложений для отправки информации о вложениях удаленной службе.
 ms.date: 09/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: de31ff257484379af1904ba530f94cb9ab5c3197
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: ae6d635535e9d8882877a6567160fa540c138310
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154133"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074352"
 ---
 # <a name="get-attachments-of-an-outlook-item-from-the-server"></a>Получение вложений элемента Outlook с сервера
 
@@ -420,4 +420,4 @@ private string ProcessXmlResponse(XElement responseEnvelope)
 - [Создание надстроек Outlook для форм чтения](read-scenario.md)
 - [Сведения об управляемом API EWS, EWS и веб-службах в Exchange](/exchange/client-developer/exchange-web-services/explore-the-ews-managed-api-ews-and-web-services-in-exchange)
 - [Начало работы с клиентскими приложениями, использующими управляемый API EWS](/exchange/client-developer/exchange-web-services/get-started-with-ews-managed-api-client-applications)
-- [Outlook SSO надстройки](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Outlook-Add-in-SSO)
+- [Outlook SSO надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)

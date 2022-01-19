@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: f1a517d113488be7320e0f5c81858fa976672c34
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: 44509ab9188d812cf85c9ffa25534444f4d66fe5
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514098"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074219"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -78,7 +78,7 @@ XML-файл манифеста для надстройки, определяю�
 
 Если для создания файлов используется генератор Yo Office, рекомендуется настроить манифест для использования общей среды выполнения, так как это не настроено по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
-Чтобы просмотреть полный рабочий манифест из примера надстройки, см. [этот репозиторий GitHub](https://github.com/OfficeDev/PnP-OfficeAddins/blob/master/Samples/excel-shared-runtime-global-state/manifest.xml).
+Чтобы просмотреть полный рабочий манифест из примера надстройки, см. [этот репозиторий GitHub](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Samples/excel-shared-runtime-global-state/manifest.xml).
 
 [!include[manifest guidance](../includes/manifest-guidance.md)]
 

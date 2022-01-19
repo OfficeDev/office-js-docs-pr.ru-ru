@@ -1,14 +1,14 @@
 ---
 title: Отладка пользовательских функций без пользовательского интерфейса
 description: Узнайте, как отлаготку Excel пользовательских функций, не используюх области задач.
-ms.date: 01/07/2022
+ms.date: 01/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 28f597d7a4dd6befac7b2df6d1d6c7f8bfc3033f
-ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
+ms.openlocfilehash: a4ec54bc731ab37335070c01eae2f9700327e360
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61765950"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074226"
 ---
 # <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
@@ -149,9 +149,9 @@ ms.locfileid: "61765950"
   
     Или если вы предпочитаете запустить надстройку в Excel в Интернете выполнить следующую команду.
   
-    `npm run start:web`
+    `npm run start:web -- --document {url}`(где `{url}` URL-адрес Excel в OneDrive или SharePoint)
   
-    Для Excel в Интернете необходимо также побокзагрузить надстройку. Выполните действия [в Sideload надстройки,](#sideload-your-add-in) чтобы побокзагрузить надстройку. Затем продолжайте отладку в следующем разделе.
+    Если надстройка не загружена в документе, выполните действия в [Sideload](#sideload-your-add-in) надстройки, чтобы выгрузить надстройку. Затем продолжайте отладку в следующем разделе.
   
 4. Откройте средства разработчика в браузере. Для Chrome и большинства браузеров F12 откроет средства разработчика.
 5. В средствах разработчика откройте исходный файл скрипта кода **(functions.js** **или functions.ts).** Пользовательский код функций может быть расположен в конце файла.
@@ -171,7 +171,7 @@ ms.locfileid: "61765950"
 Вы можете использовать следующие задачи для начала отладки на рабочем столе или в Интернете.
 
 - `npm run start:desktop`: Запускает Excel на рабочем столе и заряжает надстройку.
-- `npm run start:web`: Запускает Excel в Интернете и перегружает надстройку.
+- `npm run start:web -- --document {url}`(где URL-адрес файла Excel в OneDrive или SharePoint): запускает Excel в Интернете и добавляет вашу `{url}` надстройку.
 - `npm run stop`: Останавливает Excel и отладку.
 
 ## <a name="next-steps"></a>Дальнейшие действия

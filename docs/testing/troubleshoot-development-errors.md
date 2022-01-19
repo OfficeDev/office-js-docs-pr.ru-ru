@@ -3,12 +3,12 @@ title: Устранение ошибок разработки в надстро�
 description: Узнайте, как устранить ошибки разработки в Office надстройки.
 ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a17a9eafd91cd174209b1974eea61715385c0ad
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: 5c8c17077295313b4f10874a851c4d9d6dbef62b
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990805"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074317"
 ---
 # <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки в надстройках Office
 
@@ -33,7 +33,7 @@ ms.locfileid: "59990805"
 - Pragma: "No-cache"
 - Expires: "-1"
 
-Пример использования на сервере Node.JS Express см. в [этом файле app.js](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/app.js). Пример использования в проекте ASP.NET см. в [этом файле cshtml](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Views/Shared/_Layout.cshtml).
+Пример использования на сервере Node.JS Express см. в [этом файле app.js](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/app.js). Пример использования в проекте ASP.NET см. в [этом файле cshtml](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Views/Shared/_Layout.cshtml).
 
 Если надстройка размещена на сервере Internet Information Server (IIS), можно также добавить указанные сведения в файл web.config.
 

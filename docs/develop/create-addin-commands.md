@@ -3,12 +3,12 @@ title: Создание команд надстроек в манифесте д
 description: Используйте VersionOverrides в манифесте для определения команд надстройки для Excel, PowerPoint и Word. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
 ms.date: 12/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fa9c26dffd9584fd83ce42058a4fef71bf1152e9
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: f12f95f3d45ee0e5b7bce0f0a3b484adcbdcd999
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514084"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62073383"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-powerpoint-and-word"></a>Создание команд надстроек в манифесте для Excel, PowerPoint и Word
 
@@ -86,7 +86,7 @@ ms.locfileid: "61514084"
 |Элемент|Описание|
 |:-----|:-----|
 |**Описание** <br/> |Необязательный параметр. Описывает надстройку. Дочерний элемент **Description** переопределяет предыдущий элемент **Description** в родительской части манифеста. Атрибут **resid** для элемента **Description** задан как **id** элемента **String**. Элемент **String** содержит текст для элемента **Description**. <br/> |
-|**Requirements** <br/> |Необязательное свойство. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот элемент **требования к ребенку** переопределяет элемент **Requirements** в родительской части манифеста. Дополнительные сведения см. в [Office приложениях и требованиях API.](../develop/specify-office-hosts-and-api-requirements.md)  <br/> |
+|**Requirements** <br/> |Необязательный параметр. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот элемент **требования к ребенку** переопределяет элемент **Requirements** в родительской части манифеста. Дополнительные сведения см. в [Office приложениях и требованиях API.](../develop/specify-office-hosts-and-api-requirements.md)  <br/> |
 |**Hosts** <br/> |Обязательный. Указывает коллекцию Office приложений. Дочерний элемент **Hosts** переопределяет элемент **Hosts** в родительской части манифеста. Необходимо включить атрибут **xsi:type**, для которого задано значение "Книга" или "Документ". <br/> |
 |**Resources** <br/> |Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста. Например, значение элемента **Description** ссылается на дочерний элемент в элементе **Resources**. Элемент **Resources** описан в разделе [Этап 7. Добавление элемента Resources](#step-7-add-the-resources-element) далее в этой статье. <br/> |
 
@@ -419,7 +419,7 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 </Resources>
 ```
 
-|Resource|Описание|
+|Ресурс|Описание|
 |:-----|:-----|
 |**Images**/ **Image** <br/> | Предоставляет URL-адрес файла изображения по протоколу HTTPS. Каждое изображение должно быть определено в трех обязательных размерах: <br/>  16×16 <br/>  32×32 <br/>  80×80 <br/>  Кроме того, поддерживаются следующие необязательные размеры: <br/>  20×20 <br/>  24×24 <br/>  40×40 <br/>  48×48 <br/>  64×64 <br/> |
 |**Urls**/ **Url** <br/> |Предоставляет URL-адрес с префиксом HTTPS. URL-адрес может включать до 2048 символов.  <br/> |
@@ -442,6 +442,6 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 ## <a name="see-also"></a>См. также
 
 - [Команды надстроек для Excel, PowerPoint и Word](../design/add-in-commands.md)
-- [Пример: создание надстройки Excel с помощью кнопок команд](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/office-add-in-commands/excel)
-- [Пример: создание надстройки Word с помощью кнопок команд](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/office-add-in-commands/word)
-- [Пример: создание надстройки PowerPoint с помощью кнопок команд](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/office-add-in-commands/powerpoint)
+- [Пример: создание надстройки Excel с помощью кнопок команд](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-add-in-commands/excel)
+- [Пример: создание надстройки Word с помощью кнопок команд](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-add-in-commands/word)
+- [Пример: создание надстройки PowerPoint с помощью кнопок команд](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-add-in-commands/powerpoint)

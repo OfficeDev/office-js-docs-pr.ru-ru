@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 09/09/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d02d0c2201d4963be147c519a58c40cf3d5341c
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
+ms.openlocfilehash: fd89d2e7dd90f00e027187fe662d220cde760aae
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59443554"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074212"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки Office надстроек
 
@@ -598,7 +598,7 @@ function showDataTab() {
 
 ## <a name="resources"></a>Ресурсы
 
-- [Пример кода: создание настраиваемой контекстной вкладки на ленте](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/office-contextual-tabs)
+- [Пример кода: создание настраиваемой контекстной вкладки на ленте](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-contextual-tabs)
 - Community пример контекстных вкладок
 
 > [!VIDEO https://www.youtube.com/embed/9tLfm4boQIo]

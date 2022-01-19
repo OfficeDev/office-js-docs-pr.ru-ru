@@ -3,12 +3,12 @@ title: Авторизация в Microsoft Graph без единого вход�
 description: Узнайте, как осуществлять авторизацию в Microsoft Graph без единого входа
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f96c65fcc3c90a616f43189e1facebdbf8e9a8c
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 4f9555067b6fac9c55f07623daf5872cecf3c2ba
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150742"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074177"
 ---
 # <a name="authorize-to-microsoft-graph-without-sso"></a>Авторизация в Microsoft Graph без единого входа
 
@@ -30,6 +30,6 @@ ms.locfileid: "59150742"
 
 В следующих примерах Graph microsoft Office надстройки.
 
-- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
-- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
-- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React)
+- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
+- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React)

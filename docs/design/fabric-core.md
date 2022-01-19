@@ -1,14 +1,14 @@
 ---
 title: Fabric Core в надстройках Office
 description: Обзор использования компонентов Fabric Core и пользовательского интерфейса Fabric в Office надстройки.
-ms.date: 07/08/2021
+ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: cd534809bb443134e2df06de478e8283a3452aac
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3d10cc5d8f33c8dd66f4f988fdd5a082580b1aca
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151054"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074205"
 ---
 # <a name="fabric-core-in-office-add-ins"></a>Fabric Core в надстройках Office
 
@@ -21,7 +21,7 @@ Fabric Core — это коллекция классов CSS и mixins SASS, п�
 
 ## <a name="use-fabric-core-icons-fonts-colors"></a>Использование Fabric Core: значки, шрифты, цвета
 
-1. Добавьте ссылку CDN в HTML-код на своей странице.  
+1. Добавьте ссылку сети доставки контента (CDN) на HTML на своей странице.
 
     ```html
     <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
@@ -52,13 +52,13 @@ Fabric Core — это коллекция классов CSS и mixins SASS, п�
 В следующем примере надстройки используют компоненты Fabric Core Office UI Fabric JS. Некоторые из этих репозитов архивироваться, что означает, что они больше не обновляются с помощью ошибок или исправлений безопасности, но вы все еще можете использовать их, чтобы узнать, как использовать компоненты пользовательского интерфейса Fabric Core и Fabric.
 
 - [Excel Надстройка JavaScript SalesTracker](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker)
-- [Excel Надстройки SalesLeads](https://github.com/OfficeDev/Excel-Add-in-SalesLeads)
-- [Excel Тенденции расходов надстройки WoodGrove](https://github.com/OfficeDev/Excel-Add-in-WoodGrove-Expense-Trends)
-- [Excel Надстройка контента Humongous Insurance](https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance)
-- [Office Пример пользовательского интерфейса fabric надстройки](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
+- [Excel надстройки SalesLeads](https://github.com/OfficeDev/Excel-Add-in-SalesLeads)
+- [Excel тенденции расходов на надстройку WoodGrove](https://github.com/OfficeDev/Excel-Add-in-WoodGrove-Expense-Trends)
+- [Excel надстройка контента Humongous Insurance](https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance)
+- [Office пример пользовательского интерфейса Надстройки Fabric](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
 - [Office-Add-in-UX-Design-Patterns-Code](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
 - [Outlook Надстройка GifMe](https://github.com/OfficeDev/Outlook-Add-in-GifMe)
-- [PowerPoint Надстройка Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
+- [PowerPoint надстройки Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
 - [Word Add-in Angular2 StyleChecker](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker)
 - [Word Add-in JS Redact](https://github.com/OfficeDev/Word-Add-in-JS-Redact)
 - [Word Add-in MarkdownConversion](https://github.com/OfficeDev/Word-Add-in-MarkdownConversion)

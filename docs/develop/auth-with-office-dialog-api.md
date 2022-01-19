@@ -3,12 +3,12 @@ title: Проверка подлинности и авторизация с по
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
 ms.date: 07/22/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 1ce7f4a366fbf2f7831c4944d9c21d7c0b1b3446
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: aa4ce5b74752623e10b61082d6f9becc1a26b713
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150746"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074191"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
@@ -88,15 +88,15 @@ ms.locfileid: "59150746"
 
 ### <a name="how-you-can-use-libraries-with-the-office-dialog-api"></a>Использование библиотек с помощью Dialog API для Office
 
-Большинство библиотек в дополнение к монолитным объектам в контексте проверки подлинности или вместо них обеспечивает API более низкого уровня абстракции, разрешая коду создавать менее монолитные вспомогательные объекты. Например, [MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#conceptual-documentation) версии 3.x.x имеет API для создания URL-адреса входа и еще один API, который создает объект AuthResult, содержащий маркер доступа в свойстве, доступном для вашего кода. Примеры MSAL.NET в надстройке Office см. в статьях [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) и [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET). Пример использования [msal.js](https://github.com/AzureAD/microsoft-authentication-library-for-js) в надстройке см. в статье [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React).
+Большинство библиотек в дополнение к монолитным объектам в контексте проверки подлинности или вместо них обеспечивает API более низкого уровня абстракции, разрешая коду создавать менее монолитные вспомогательные объекты. Например, [MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#conceptual-documentation) версии 3.x.x имеет API для создания URL-адреса входа и еще один API, который создает объект AuthResult, содержащий маркер доступа в свойстве, доступном для вашего кода. Примеры MSAL.NET в надстройке Office см. в статьях [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) и [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET). Пример использования [msal.js](https://github.com/AzureAD/microsoft-authentication-library-for-js) в надстройке см. в статье [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React).
 
 Дополнительные сведения о библиотеках проверки подлинности и авторизации см. в статье[Microsoft Graph — Рекомендуемые библиотеки](authorize-to-microsoft-graph-without-sso.md#recommended-libraries-and-samples) и [Другие внешние службы: библиотеки](auth-external-add-ins.md#libraries).
 
 ## <a name="samples"></a>Примеры
 
-- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET и поток кода авторизации для входа и получения маркера доступа к данным Microsoft Graph.
-- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) — это такая же надстройка, как описано выше, но относящаяся к приложению Outlook.
-- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React) — это надстройка на основе NodeJS (Excel, Word или PowerPoint), использующая библиотеку msal.js и неявный поток для входа и получения маркера доступа к данным Microsoft Graph.
+- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET и поток кода авторизации для входа и получения маркера доступа к данным Microsoft Graph.
+- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) — это такая же надстройка, как описано выше, но относящаяся к приложению Outlook.
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React) — это надстройка на основе NodeJS (Excel, Word или PowerPoint), использующая библиотеку msal.js и неявный поток для входа и получения маркера доступа к данным Microsoft Graph.
 
 ## <a name="see-also"></a>См. также
 

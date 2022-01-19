@@ -3,12 +3,12 @@ title: Создание надстройки Office на платформе Node
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
 ms.date: 09/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d9abb65351a0c3d4a26f06462f2a425c6a104a4a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 92b0c43137c9bf09bbd374cc80dc193c80ab1030
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150706"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62073362"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office на платформе Node.js с использованием единого входа
 
@@ -37,7 +37,7 @@ ms.locfileid: "59150706"
 
 ## <a name="set-up-the-starter-project"></a>Настройка начального проекта
 
-1. Клонируйте или скачайте репозиторий [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO).
+1. Клонируйте или скачайте репозиторий [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO).
 
     > [!NOTE]
     > Существует три версии примера.
@@ -198,7 +198,7 @@ ms.locfileid: "59150706"
 
     - `Office.auth.getAccessToken` предписывает Office получить маркер начальной загрузки из Azure AD. Маркер начальной загрузки аналогичен маркеру идентификатора, но имеет свойство `scp` (scope) со значением `access-as-user`. Такой тип маркера веб-приложение может заменить на маркер доступа к Microsoft Graph.
     - Настройка параметра true означает, что если пользователь в настоящее время не Office, Office откроет всплывающее подсказок `allowSignInPrompt` для регистрации.
-    - Настройка параметра true означает, что если пользователь не дал согласие на доступ к aAD-профиле пользователя, Office откроет запрос `allowConsentPrompt` на согласие. (Подсказка позволяет только пользователю соглашаться на AAD-профиль пользователя, а не на области Microsoft Graph.)
+    - Настройка параметра true означает, что если пользователь не дал согласия на доступ к профилю AAD надстройки, Office откроет запрос `allowConsentPrompt` на согласие. (Подсказка позволяет только пользователю соглашаться на AAD, а не на области Microsoft Graph.)
     - Настройка параметра true signals Office, что надстройка намерена использовать маркер bootstrap для получения маркера доступа к Microsoft Graph, а не просто использовать его в качестве маркера `forMSGraphAccess` ID. Если администратор клиента не предоставил согласие на доступ надстройки к Microsoft Graph, `Office.auth.getAccessToken` возвращает ошибку **13012**. Надстройка может отреагировать переходом на альтернативную систему проверки подлинности. Это необходимо, так как Office может запрашивать согласие только на доступ к профилю пользователя Azure AD, а не к областям Microsoft Graph. Система авторизации отката требует, чтобы пользователь  снова входил, и пользователю может быть предложено дать согласие на Graph microsoft. Таким образом, параметр `forMSGraphAccess` обеспечивает, что надстройка не будет выполнять замену маркера, которая завершится ошибкой из-за отсутствия согласия. (Так как вы предоставили согласие администратора на предыдущем шаге, этот сценарий не возникнет для этой надстройки. Но этот параметр добавлен в любом случае, чтобы продемонстрировать рекомендацию.)
 
     ```javascript

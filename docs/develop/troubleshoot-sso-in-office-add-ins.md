@@ -3,12 +3,12 @@ title: Устранение ошибок единого входа
 description: Рекомендации по устранению неполадок с одним входом (SSO) в Office надстройки и обработке специальных условий или ошибок.
 ms.date: 09/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f7fc09c7a0b5a55712c61e9a27ac69d6f2351178
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: a4777ebeb9b2ca005f58010e0f8e0b7daf5a8d94
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990658"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074254"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
@@ -28,8 +28,8 @@ ms.locfileid: "59990658"
 ## <a name="causes-and-handling-of-errors-from-getaccesstoken"></a>Причины и обработка ошибок в методе getAccessToken
 
 Примеры обработки ошибок, рассматриваемых в этом разделе:
-- [HomeES6.js in Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
-- [ssoAuthES6.js in Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js)
+- [HomeES6.js in Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
+- [ssoAuthES6.js in Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js)
 
 ### <a name="13000"></a>13000
 
@@ -107,7 +107,7 @@ ms.locfileid: "59990658"
 
 ### <a name="13013"></a>13013
 
-Вызов был вызван слишком много раз за короткое время, поэтому Office последний `getAccessToken` вызов. Обычно это вызвано бесконечным циклом звонков к методу. При отзыве метода рекомендуется использовать сценарии. Однако в коде следует использовать переменную счетчика или флага, чтобы убедиться, что метод не отзывается повторно. Если один и тот же путь кода "повторная" снова запущен, код должен вернуться к альтернативной системе проверки подлинности пользователей. Пример кода см. в примере использования переменной вHomeES6.js`retryGetAccessToken` [илиssoAuthES6.js. ](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js) [](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
+Вызов был вызван слишком много раз за короткое время, поэтому Office последний `getAccessToken` вызов. Обычно это вызвано бесконечным циклом звонков к методу. При отзыве метода рекомендуется использовать сценарии. Однако в коде следует использовать переменную счетчика или флага, чтобы убедиться, что метод не отзывается повторно. Если один и тот же путь кода "повторная" снова запущен, код должен вернуться к альтернативной системе проверки подлинности пользователей. Пример кода см. в примере использования переменной вHomeES6.js`retryGetAccessToken` [илиssoAuthES6.js. ](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO/Complete/public/javascripts/ssoAuthES6.js) [](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js)
 
 ### <a name="50001"></a>50001
 
@@ -118,12 +118,12 @@ ms.locfileid: "59990658"
 ## <a name="errors-on-the-server-side-from-azure-active-directory"></a>Ошибки на стороне сервера из Azure Active Directory
 
 Примеры обработки ошибок, рассматриваемых в этом разделе:
-- [Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
-- [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
+- [Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
+- [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
 
 ### <a name="conditional-access--multifactor-authentication-errors"></a>Ошибки условного доступа и многофакторной проверки подлинности
 
-В определенных конфигурациях удостоверений в AAD и Microsoft 365 для некоторых ресурсов, доступных в Microsoft Graph, может потребоваться многофакторная проверка подлинности (MFA), даже если Microsoft 365 аренда пользователя не существует. Когда служба AAD получает запрос на получение токена для доступа к защищенному с помощью MFA ресурсу, через поток выполнения от имени другого субъекта она возвращает веб-службе надстройки сообщение JSON, содержащее свойство `claims`. Свойство claims содержит сведения о том, какие еще факторы проверки подлинности требуются.
+В определенных конфигурациях удостоверений в AAD и Microsoft 365 для некоторых ресурсов, доступных с Microsoft Graph, может потребоваться многофакторная проверка подлинности (MFA), даже если аренда пользователя Microsoft 365 не является арендой. Когда служба AAD получает запрос на получение токена для доступа к защищенному с помощью MFA ресурсу, через поток выполнения от имени другого субъекта она возвращает веб-службе надстройки сообщение JSON, содержащее свойство `claims`. Свойство claims содержит сведения о том, какие еще факторы проверки подлинности требуются.
 
 Ваш код должен выполнить проверку на это свойство `claims`. В зависимости от архитектуры надстройки вы можете протестировать ее на стороне клиента, а также на стороне сервера и ретранслировать ее клиенту. Эти сведения необходимы клиенту, так как Office обрабатывает проверку подлинности для надстроек с единым входом. Если вы ретранслируете ее со стороны сервера, сообщение для клиента может быть кодом ошибки (например, `500 Server Error` или `401 Unauthorized`) либо находиться в тексте отклика об успешном выполнении (например, `200 OK`). В обоих случаях функция обратного вызова для клиентского AJAX-вызова веб-API надстройки должна проверять этот отклик.
 

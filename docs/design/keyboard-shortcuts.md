@@ -3,12 +3,12 @@ title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 11/22/2021
 localization_priority: Normal
-ms.openlocfilehash: b92d703ac4c10ba554a7aed8aabb73b65fdbdca7
-ms.sourcegitcommit: e4d7791cefb29498a8bffce626a6218cee06abd9
+ms.openlocfilehash: 1ea44b9a6ab38d0d167b04ba806e0f7e40ca8f99
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "61285008"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074198"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -17,7 +17,7 @@ ms.locfileid: "61285008"
 [!include[Keyboard shortcut prerequisites](../includes/keyboard-shortcuts-prerequisites.md)]
 
 > [!NOTE]
-> Чтобы начать с рабочей версии надстройки с уже включенными клавишами, клонировать и запускать Excel [клавиши.](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-keyboard-shortcuts) Если вы готовы добавить ярлыки клавиатуры в собственную надстройку, продолжи эту статью.
+> Чтобы начать с рабочей версии надстройки с уже включенными клавишами, клонировать и запускать Excel [клавиши.](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-keyboard-shortcuts) Если вы готовы добавить ярлыки клавиатуры в собственную надстройку, продолжи эту статью.
 
 Существует три шага, чтобы добавить в надстройку ярлыки клавиатуры.
 
@@ -130,7 +130,7 @@ ms.locfileid: "61285008"
     });
     ```
 
-Следуя предыдущим шагам, надстройка позволяет управлять видимостью области задач, нажимая **на Ctrl+Alt+Up** и **Ctrl+Alt+Down.** Такое же поведение показано в примере Excel клавиш в репо Office PnP надстройки в GitHub. [](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-keyboard-shortcuts)
+Следуя предыдущим шагам, надстройка позволяет управлять видимостью области задач, нажимая **на Ctrl+Alt+Up** и **Ctrl+Alt+Down.** Такое же поведение показано в примере Excel клавиш в репо Office PnP надстройки в GitHub. [](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-keyboard-shortcuts)
 
 ## <a name="details-and-restrictions"></a>Сведения и ограничения
 
@@ -327,5 +327,5 @@ Office.actions.areShortcutsInUse(shortcuts)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- См. [Excel надстройки](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-keyboard-shortcuts) для клавиатуры.
+- См. [Excel надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-keyboard-shortcuts) для клавиатуры.
 - Получите обзор работы с расширенными переопределениями в Работе с расширенными [переопределениями манифеста.](../develop/extended-overrides.md)
