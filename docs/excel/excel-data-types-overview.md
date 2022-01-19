@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 06a10051b1b243689f9d46d22c38cbdbfb155e4d
-ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
+ms.openlocfilehash: b498d445f53441cd5db97aa71f4dee36cac45a06
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "61647953"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074303"
 ---
 # <a name="overview-of-data-types-in-excel-add-ins-preview"></a>Обзор типов данных в надстройках Excel (предварительная версия)
 
@@ -20,7 +20,7 @@ ms.locfileid: "61647953"
 >
 > Чтобы использовать API предварительной версии:
 >
-> - Необходимо ссылаться на **бета-версию** библиотеки в сети CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js)). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`. Дополнительные сведения см. в файле сведений пакета NPM [@microsoft/office-js](https://www.npmjs.com/package/@microsoft/office-js).
+> - Необходимо ссылаться на **бета-версию** библиотеки в сети доставки содержимого (CDN) (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`. Дополнительные сведения см. в файле сведений пакета NPM [@microsoft/office-js](https://www.npmjs.com/package/@microsoft/office-js).
 > - Возможно, вам потребуется присоединиться к [программе предварительной оценки Office](https://insider.office.com), чтобы получить доступ к более поздним сборкам Office.
 >
 > Чтобы попробовать типы данных в Office для Windows, номер вашей сборки Excel должен быть не ниже 16.0.14626.10000. Чтобы попробовать типы данных в Office для Mac, номер вашей сборки Excel должен быть не ниже 16.55.21102600.

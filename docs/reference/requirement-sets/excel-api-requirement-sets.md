@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 11/02/2021
+ms.date: 01/14/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 8770f91531b74442561d93d76daf57492d4c13f5
-ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
+ms.openlocfilehash: 6ddab3218b313fff244cdd83d8464e8953921f4b
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60683793"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074338"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -20,7 +20,7 @@ ms.locfileid: "60683793"
 Надстройки Excel работают в нескольких версиях Office: во всех версиях для Windows начиная с Office 2016, Office для iPad, Office для Mac и Office в Интернете. В приведенной ниже таблице перечислены наборы обязательных элементов для Excel, клиентские приложения Office, поддерживающие каждый набор обязательных элементов, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
-> Чтобы использовать API в любом из нумерованных наборов обязательных элементов или `ExcelApiOnline`, следует ссылаться на **рабочую** библиотеку в сети CDN https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов или `ExcelApiOnline`, следует ссылаться на **рабочую** библиотеку в [сети доставки содержимого (CDN) Office.js](https://appsforoffice.microsoft.com/lib/1/hosted/office.js.).
 >
 > Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](excel-preview-apis.md).
 
