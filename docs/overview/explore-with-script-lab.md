@@ -1,16 +1,16 @@
 ---
 title: Изучение API JavaScript для Office с помощью Script Lab
 description: Используйте Script Lab для изучения API JS Office и использования функциональности работы с прототипами.
-ms.date: 08/05/2021
+ms.date: 01/14/2022
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 2a8d7f94eab26bc1cb831f95a30442e8e08afe70
-ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
+ms.openlocfilehash: 75b4b5f1e30549628ba9327957e6d0b39c308da9
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61765936"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074275"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
@@ -39,7 +39,7 @@ Script Lab — это инструмент для всех, кто хочет н
 В дополнение к коду JavaScript или TypeScript, который вызывает API JS для Office, каждый фрагмент также содержит разметку HTML, определяющую содержимое области задач, и таблицы стилей CSS, определяющие внешний вид области задач. Можно настроить разметку HTML и  CSS, чтобы поэкспериментировать с размещением и стилем элементов при создании прототипа дизайна панели задач для вашей собственной надстройки.
 
 > [!TIP]
-> Чтобы вызвать API предварительной версии во фрагменте кода, потребуется обновить библиотеки фрагмента кода для использования сети доставки содержимого бета-версии (`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`) и определения типов предварительной версии `@types/office-js-preview`. Кроме того, некоторые API предварительной версии доступны только при наличии регистрации в [программе предварительной оценки Office](https://insider.office.com) и используете сборку Office, предназначенную для участников этой программы.
+> Чтобы вызвать API предварительной версии во фрагменте кода, потребуется обновить библиотеки фрагмента кода для использования бета-версии сети доставки содержимого (CDN) (`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`) и определений типов предварительной версии `@types/office-js-preview`. Кроме того, некоторые API предварительной версии доступны только при наличии регистрации в [программе предварительной оценки Office](https://insider.office.com) и используете сборку Office, предназначенную для участников этой программы.
 
 ### <a name="save-and-share-snippets"></a>Сохранение фрагментов кода и общий доступ к ним
 

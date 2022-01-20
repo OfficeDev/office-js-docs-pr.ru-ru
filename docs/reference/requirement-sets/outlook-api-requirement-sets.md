@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 12/13/2021
+ms.date: 01/14/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 05f44eb07c9484447e1380a02e7047ab0d410a32
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: 111cd8a7153b602e726209bfca84ca5c891f2302
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514133"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074331"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -30,7 +30,7 @@ ms.locfileid: "61514133"
 Задайте версию минимального набора обязательных элементов в манифесте, чтобы указать клиент Outlook, в котором появится надстройка. Если клиент не поддерживает минимальный набор обязательных элементов, он не загружает надстройку. Например, если указана версия набора обязательных элементов 1.3, надстройка не отобразится в каком-либо клиенте Outlook, который не поддерживает версии 1.3. и ниже
 
 > [!NOTE]
-> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN (https://appsforoffice.microsoft.com/lib/1/hosted/office.js).
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в [сети доставки содержимого (CDN) Office.js](https://appsforoffice.microsoft.com/lib/1/hosted/office.js).
 >
 > Сведения об использовании API предварительных версий см. в разделе [Использование предварительных версий API](#using-preview-apis) далее в этой статье.
 

@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word.
-ms.date: 10/08/2021
+ms.date: 01/14/2022
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: 88d49b860cb832f59e8e2a631f0c4a3c57698306
-ms.sourcegitcommit: a37be80cf47a37c85b7f5cab216c160f4e905474
+ms.openlocfilehash: 6838ed66b6a91f522e7ae78aeeee3d545b6bbf2c
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60250534"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62074324"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -20,7 +20,7 @@ ms.locfileid: "60250534"
 Надстройки Word работают в нескольких версиях Office, включая Office 2016 для Windows, Office в Интернете, для iPad и Mac. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
-> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN: https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в [сети доставки содержимого (CDN) Office.js](https://appsforoffice.microsoft.com/lib/1/hosted/office.js).
 >
 > Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Word](word-preview-apis.md).
 
