@@ -1,20 +1,38 @@
 ---
 title: Элемент Sets в файле манифеста
-description: Элемент Sets указывает минимальный набор API Office JavaScript, необходимый Office надстройки для активации.
-ms.date: 03/19/2019
+description: Элемент Sets указывает минимальный набор API Office JavaScript, который требуется Office надстройки для активации Office или переопределения параметров базового манифеста.
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 38707ec78a79e9104dd21f9fa5ceab8c6fbd2c79
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: df0cf686fe213a51321595a000438ca2a411f2c7
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154446"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222145"
 ---
 # <a name="sets-element"></a>Элемент Sets
 
-Указывает минимальный подмножество API JavaScript Office, который требуется Office надстройки для активации.
+Значение этого элемента зависит от того, где он используется в манифесте.
+
+## <a name="in-the-base-manifest"></a>В базовом манифесте
+
+Когда используется в базовом манифесте  (то есть элемент родительских требований является прямым ребенком [OfficeApp),](officeapp.md)элемент **Sets** указывает минимальный подмножество требований API javaScript [Office](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets)(наборы требований), которые необходимы вашей Office надстройки для активации Office.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
+
+## <a name="as-a-grandchild-of-a-versionoverrides-element"></a>Как внук элемента VersionOverrides
+
+Указывает минимальный набор Office API JavaScript[(наборы](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets)требований), которые должны поддерживаться версией и платформой Office (например, Windows, Mac, web и iOS или iPad) для того, чтобы [ВерсияOverrides](versionoverrides.md) вступила в силу.
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- То же самое, что и элемент [родительских требований.](requirements.md)
+
+**Связанные с этими наборами требований:**
+
+- То же самое, что и элемент [родительских требований.](requirements.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,5 +60,5 @@ ms.locfileid: "59154446"
 
 Дополнительные сведения о наборах обязательных элементов см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
-Дополнительные сведения о атрибуте **MinVersion** элемента **Set** и **атрибуте DefaultMinVersion** элемента **Sets** см. в элементе [Set the Requirements in the manifest.](../../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest)
+Дополнительные сведения о атрибуте **MinVersion** элемента **Set** и **атрибуте DefaultMinVersion** элемента **Sets** см. в Office версиях и платформах надстройки. [](../../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in)
 

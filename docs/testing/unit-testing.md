@@ -3,12 +3,12 @@ title: Тестирование единиц в Office надстройки
 description: Узнайте, как унифизировать тестовый код, который вызывает Office API JavaScript
 ms.date: 11/30/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 8824b8e759e3c1acecf30683f2b89bb41bd558f3
-ms.sourcegitcommit: 5daf91eb3be99c88b250348186189f4dc1270956
+ms.openlocfilehash: b93bee764b0019f7095eef203cc8916375cf7223
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61242042"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222159"
 ---
 # <a name="unit-testing-in-office-add-ins"></a>Тестирование единиц в Office надстройки
 
@@ -370,42 +370,6 @@ describe("Insert blue paragraph at end tests", () => {
   });
 })
 ```
-
-## <a name="adding-mock-objects-properties-and-methods-dynamically-when-testing"></a>Динамическое добавление макетных объектов, свойств и методов при тестировании
-
-В некоторых сценариях эффективное тестирование требует создания или изменения макетных объектов во время работы; то есть, пока тесты запущены. Ниже представлены примеры.
-
-- Проверяемая функция ведет себя по-разному, когда ее называют второй раз. Сначала необходимо протестировать функцию с помощью одного макетного объекта, а затем изменить этот объект макета и снова протестировать функцию с измененным объектом макета.
-- Необходимо протестировать функцию с несколькими похожими, но не идентичными макетами объектов. Например, необходимо протестировать функцию с макетным объектом с свойством цвета, а затем снова протестировать функцию с макетным объектом с текстовым свойством, но в противном случае идентичным исходному объекту макета.
-
-В `OfficeMockObject` этих сценариях можно использовать три метода.
-
-- `OfficeMockObject.setMock` добавляет свойство и значение в `OfficeMockObject` объект. В следующем примере `address` добавляется свойство.
-
-    ```javascript
-    rangeMock.setMock("address", "G6:K9");
-    ```
-
-- `OfficeMockObject.addMockFunction` добавляет в объект макетную `OfficeMockObject` функцию, как показано в следующем примере.
-
-    ```javascript
-    workbookMock.addMockFunction("getSelectedRange", function () { 
-      const range = {
-        address: "B2:G5",
-      };
-      return range;
-    });
-    ```
-
-    > [!NOTE]
-    > Параметр функции необязателен. Если ее нет, создается пустая функция.
-
-- `OfficeMockObject.addMock` добавляет новый `OfficeMockObject` объект в качестве свойства к существующему и дает ему имя. Он будет иметь минимальные члены, которые все `OfficeMockObject` имеют, такие как `load` и `sync` . Дополнительные члены могут быть добавлены с помощью `setMock` методов и `addMockFunction` методов. Ниже приводится пример, который добавляет объект макета в качестве свойства в `Excel.WorkbookProtection` `protection` макетную книгу. Затем добавляет свойство `protected` к новому объекту макета.
-
-    ```javascript
-    workbookMock.addMock("protection");
-    workbookMock.protection.setMock("protected", true);
-    ```
 
 > [!NOTE]
 > Полная справочная документация по типу `OfficeMockObject` находится [Office-Addin-Mock](https://github.com/OfficeDev/Office-Addin-Scripts/tree/master/packages/office-addin-mock#reference).

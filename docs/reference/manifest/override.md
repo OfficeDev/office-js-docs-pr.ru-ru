@@ -1,14 +1,14 @@
 ---
 title: Элемент Override в файле манифеста
 description: Элемент Переопределения позволяет указать значение параметра в зависимости от заданного условия.
-ms.date: 12/13/2021
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: dda8f6ca5aee1492c51960fc637d96e4d82796cb
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: e4e2ccd9936eec12fd7adb4eca8e46a5f391785f
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514000"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222264"
 ---
 # <a name="override-element"></a>Элемент Override
 
@@ -18,15 +18,15 @@ ms.locfileid: "61514000"
 - Шаблон поддержки набора требований, который отличается от шаблона по `RequirementToken` умолчанию, называемого **RequirementTokenOverride**.
 - Источник отличается от по `Runtime` умолчанию, называется **RuntimeOverride**.
 
-Элемент, который находится внутри элемента, должен `<Override>` иметь тип `<Runtime>` **RuntimeOverride.**
+Элемент **Переопределения,** который находится внутри элемента **Runtime,** должен быть типа **RuntimeOverride.**
 
-Атрибут элемента `overrideType` не `<Override>` существует. Разница определяется родительским элементом и типом родительского элемента. Элемент, `<Override>` который находится внутри `<Token>` элемента, который является , должен быть `xsi:type` `RequirementToken` типа **RequirementTokenOverride**. Элемент внутри любого другого родительского элемента или элемента типа должен быть типа `<Override>` `<Override>` `LocaleToken` **LocaleTokenOverride.** Дополнительные сведения об использовании этого элемента, когда он является ребенком элемента, см. в этой ссылке Работа с расширенными `<Token>` [переопределениями манифеста.](../../develop/extended-overrides.md)
+Нет `overrideType` атрибута элемента **Переопределения.** Разница определяется родительским элементом и типом родительского элемента. Элемент **Переопределения,** который находится внутри элемента **Token,** который является , должен иметь тип `xsi:type` `RequirementToken` **RequirementTokenOverride.** Элемент **Переопределения** в любом другом родительском элементе или **элементе override** типа должен иметь тип `LocaleToken` **LocaleTokenOverride.** Дополнительные сведения об использовании этого элемента, когда он является ребенком элемента **Token,** см. в дополнительных сведениях о работе с расширенными переопределениями [манифеста.](../../develop/extended-overrides.md)
 
 Каждый тип описан в отдельных разделах позднее в этой статье.
 
 ## <a name="override-element-for-localetoken"></a>Элемент Переопределения для `LocaleToken`
 
-Элемент `<Override>` выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент `<Override>` имеет тип **LocaleTokenOverride,** то атрибут является условием, а атрибут `Locale` — `Value` последующим. Например, ниже приводится следующий текст: "Если параметр Office fr-fr, то имя отображения — "Lecteur vidéo".
+Элемент **Переопределения** выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент **Override** имеет тип **LocaleTokenOverride,** атрибут — это условие, а атрибут — `Locale` `Value` следовательно. Например, ниже приводится следующий текст: "Если параметр Office fr-fr, то имя отображения — "Lecteur vidéo".
 
 ```xml
 <DisplayName DefaultValue="Video player">
@@ -99,7 +99,7 @@ ms.locfileid: "61514000"
 
 ## <a name="override-element-for-requirementtoken"></a>Элемент Переопределения для `RequirementToken`
 
-Элемент `<Override>` выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент `<Override>` имеет тип **RequirementTokenOverride,** то детский элемент выражает условие, а атрибут — `<Requirements>` `Value` следовательно. Например, первое из следующих строк гласит: "Если текущая платформа поддерживает `<Override>` версию FeatureOne 1.7, используйте строку "oldAddinVersion" вместо маркера в URL-адресе бабушки и дедушки (вместо строки по умолчанию `${token.requirements}` `<ExtendedOverrides>` "обновление") ".
+Элемент **Переопределения** выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент **Переопределения** имеет тип **RequirementTokenOverride,** то элемент child **Requirements** выражает условие, а атрибут — `Value` следовательно. Например, первое  переопределения в следующем: "Если текущая платформа поддерживает версию FeatureOne 1.7, используйте строку "oldAddinVersion" вместо маркера в URL-адресе бабушки и дедушки (вместо строки по умолчанию `${token.requirements}` "обновление")". `<ExtendedOverrides>`
 
 ```xml
 <ExtendedOverrides Url="http://contoso.com/addinmetadata/${token.requirements}/extended-manifest-overrides.json">
@@ -192,7 +192,7 @@ ms.locfileid: "61514000"
 ### <a name="see-also"></a>См. также
 
 - [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
-- [Указание элемента Requirements в манифесте](../../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest)
+- [Укажите Office какие версии и платформы могут принимать вашу надстройка](../../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in)
 - [Сочетания клавиш](../../design/keyboard-shortcuts.md)
 
 ## <a name="override-element-for-runtime"></a>Элемент Переопределения для `Runtime`
@@ -200,7 +200,7 @@ ms.locfileid: "61514000"
 > [!IMPORTANT]
 > Поддержка этого элемента была представлена в наборе требований к почтовым ящикам [1.10](../../reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md) с функцией активации на основе [событий.](../../outlook/autolaunch.md) См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
-Элемент `<Override>` выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент `<Override>` имеет тип **RuntimeOverride,** то атрибут является условием, а атрибут `type` — `resid` последующим. Например, ниже приводится следующее: "Если тип является "javascript", то это `resid` "JSRuntime.Url". Outlook Desktop требует этот элемент для [обработчиков точек расширения LaunchEvent.](../../reference/manifest/extensionpoint.md#launchevent)
+Элемент **Переопределения** выражает условный и может быть прочитано как "Если ... затем ..." заявление. Если элемент **Переопределения** имеет тип **RuntimeOverride,** то атрибут является условием, а атрибут — `type` `resid` следовательно. Например, ниже приводится следующее: "Если тип является "javascript", то это `resid` "JSRuntime.Url". Outlook Desktop требует этот элемент для [обработчиков точек расширения LaunchEvent.](../../reference/manifest/extensionpoint.md#launchevent)
 
 ```xml
 <Runtime resid="WebViewRuntime.Url">

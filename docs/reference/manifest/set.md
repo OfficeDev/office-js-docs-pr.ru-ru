@@ -1,20 +1,38 @@
 ---
 title: Элемент Set в файле манифеста
-description: Элемент Set указывает Office API JavaScript, заданный Office надстройки для активации.
-ms.date: 03/19/2019
+description: Элемент Set указывает Office API JavaScript, задаваемого Office надстройки для активации Office или переопределения параметров базового манифеста.
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 93524d64fd915d6f42f4e4a0cd0ab6cc3335f4ce
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 55e1b25765bfbe53108bc9201c0c851c6ef9161d
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154464"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222236"
 ---
 # <a name="set-element"></a>Элемент Set
 
-Указывает набор требований из Office API JavaScript, который требуется Office надстройки для активации.
+Значение этого элемента зависит от того, где он используется в манифесте.
+
+## <a name="in-the-base-manifest"></a>В базовом манифесте
+
+Когда используется в базовом манифесте  (то есть элемент требования к дедушке является прямым [](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets) ребенком [OfficeApp),](officeapp.md)элемент Set указывает набор требований из API JavaScript Office, необходимый вашему Office надстройке для активации Office. 
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
+
+## <a name="as-a-great-grandchild-of-a-versionoverrides-element"></a>Как правнук элемента VersionOverrides
+
+Указывает набор [](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets) требований из API Office JavaScript, который должен поддерживаться версией и платформой Office (например, Windows, Mac, web и iOS или iPad) для того, чтобы [версияOverrides](versionoverrides.md) вступила в силу.
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- То же, что и элемент ["Требования к бабушке и дедушке".](requirements.md)
+
+**Связанные с этими наборами требований:**
+
+- То же, что и элемент ["Требования к бабушке и дедушке".](requirements.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +55,5 @@ ms.locfileid: "59154464"
 
 Дополнительные сведения о наборах обязательных элементов см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
-Дополнительные сведения о атрибуте **MinVersion** элемента **Set** и **атрибуте DefaultMinVersion** элемента **Sets** см. в элементе [Set the Requirements in the manifest.](../../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest)
+Дополнительные сведения о атрибуте **MinVersion** элемента **Set** и **атрибуте DefaultMinVersion** элемента **Sets** см. в Office версиях и платформах надстройки. [](../../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in)
 
-> [!IMPORTANT]
-> Для почтовых надстроек доступен только один набор обязательных элементов `"Mailbox"`. Он содержит все подмножество API, поддерживаемое почтовыми надстройками Outlook, а в манифесте почтовой надстройки необходимо указать набор обязательных элементов `"Mailbox"` (это обязательно для почтовых надстроек, в отличие от надстроек области задачи и контентных надстроек). Кроме того, в почтовых надстройках невозможно объявить поддержку определенных методов.

@@ -1,14 +1,14 @@
 ---
 title: Интеграция встроенных Office в настраиваемые группы управления и вкладки
 description: Узнайте, как включить встроенные кнопки Office в настраиваемые группы команд и вкладки на Office ленте.
-ms.date: 02/25/2021
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 078619a616a06610f12a0bebf36d6159eec1e0e2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 81765f470d95a43e597e06f976ad2bfa2a7b66c8
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151093"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222131"
 ---
 # <a name="integrate-built-in-office-buttons-into-custom-control-groups-and-tabs"></a>Интеграция встроенных Office в настраиваемые группы управления и вкладки
 
@@ -24,14 +24,14 @@ ms.locfileid: "59151093"
 
 ## <a name="insert-a-built-in-control-group-into-a-custom-tab"></a>Вставьте встроенную группу управления в настраиваемую вкладку
 
-Чтобы вставить встроенную группу управления Office в вкладку, добавьте элемент [OfficeGroup](../reference/manifest/customtab.md#officegroup) в родительский элемент в качестве детского `<CustomTab>` элемента. Атрибут `id` элемента `<OfficeGroup>` задается iD встроенной группы. См. [в рублях Find the IDs of controls and control groups.](#find-the-ids-of-controls-and-control-groups)
+Чтобы вставить встроенную группу управления Office в вкладку, добавьте элемент [OfficeGroup](../reference/manifest/customtab.md#officegroup) в качестве детского элемента родительского **элемента CustomTab.** Атрибут элемента OfficeGroup установлен в `id` ID встроенной  группы. См. [в рублях Find the IDs of controls and control groups.](#find-the-ids-of-controls-and-control-groups)
 
 В следующем примере разметки группа управления Office абзаца добавляется в настраиваемую вкладку и позиционет ее, чтобы она появляться сразу после настраиваемой группы.
 
 ```xml
 <ExtensionPoint xsi:type="ContosoRibbonTab">
-  <CustomTab id="TabCustom1">
-    <Group id="myCustomTab.group1">
+  <CustomTab id="Contoso.TabCustom1">
+    <Group id="Contoso.myCustomTab.group1">
        <!-- additional markup omitted -->
     </Group>
     <OfficeGroup id="Paragraph" />
@@ -42,21 +42,21 @@ ms.locfileid: "59151093"
 
 ## <a name="insert-a-built-in-control-into-a-custom-group"></a>Вставьте встроенный контроль в настраиваемую группу
 
-Чтобы вставить встроенный элемент Office в настраиваемую группу, добавьте элемент [OfficeControl](../reference/manifest/group.md#officecontrol) в родительский `<Group>` элемент. Атрибут `id` элемента `<OfficeControl>` задается iD встроенного элемента управления. См. [в рублях Find the IDs of controls and control groups.](#find-the-ids-of-controls-and-control-groups)
+Чтобы вставить встроенный элемент Office в настраиваемую группу, добавьте элемент [OfficeControl](../reference/manifest/group.md#officecontrol) в качестве детского элемента в элемент **родительской группы.** Атрибут `id` элемента **OfficeControl** установлен в ID встроенного элемента управления. См. [в рублях Find the IDs of controls and control groups.](#find-the-ids-of-controls-and-control-groups)
 
 В следующем примере разметки Office управления Superscript в настраиваемую группу и он должен отображаться сразу после настраиваемой кнопки.
 
 ```xml
 <ExtensionPoint xsi:type="ContosoRibbonTab">
-  <CustomTab id="TabCustom1">
-    <Group id="myCustomTab.grp1">
+  <CustomTab id="Contoso.TabCustom2">
+    <Group id="Contoso.TabCustom2.group1">
         <Label resid="residCustomTabGroupLabel"/>
         <Icon>
             <bt:Image size="16" resid="blue-icon-16" />
             <bt:Image size="32" resid="blue-icon-32" />
             <bt:Image size="80" resid="blue-icon-80" />
         </Icon>
-        <Control xsi:type="Button" id="Button2">
+        <Control xsi:type="Button" id="Contoso.Button1">
             <!-- information on the control omitted -->
         </Control>
         <OfficeControl id="Superscript" />
@@ -76,4 +76,4 @@ ID для поддерживаемых групп управления и упр
 
 ## <a name="behavior-on-unsupported-platforms"></a>Поведение на неподтверченных платформах
 
-Если надстройка установлена на платформе, которая не поддерживает набор требований [AddinCommands 1.3,](../reference/requirement-sets/add-in-commands-requirement-sets.md)то разметка, описанная в этой статье, игнорируется, а встроенные элементы управления и группы Office не отображаются в настраиваемой группе или вкладке. Чтобы не допустить установки надстройки на платформах, которые не поддерживают разметку, добавьте ссылку на набор требований в разделе `<Requirements>` манифест. Инструкции см. в [элементе Set the Requirements in the manifest.](../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest) Кроме того, вы можете создать надстройку, чтобы иметь альтернативный опыт, когда **AddinCommands 1.3** не поддерживается, как описано в описании Использования проверок времени запуска в коде [JavaScript.](../develop/specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) Например, если надстройка содержит инструкции, предполагаемые, что встроенные кнопки находятся в настраиваемой группе, вы можете иметь альтернативную версию, предполагаемую, что встроенные кнопки находятся только в обычных местах.
+Если надстройка установлена на платформе, которая не поддерживает набор требований [AddinCommands 1.3,](../reference/requirement-sets/add-in-commands-requirement-sets.md)то разметка, описанная в этой статье, игнорируется, а встроенные элементы управления и группы Office не отображаются в настраиваемой группе или вкладке. Чтобы не допустить установки надстройки на платформах, которые не поддерживают разметку, добавьте ссылку на набор требований в разделе **Требования** манифеста. Инструкции см. в Office версии и платформы, на которых может быть организована [надстройка.](../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in) Кроме того, спроектировать надстройку, чтобы иметь опыт, когда **AddinCommands 1.3** не поддерживается, как описано в [design for alternate experiences.](../develop/specify-office-hosts-and-api-requirements.md#design-for-alternate-experiences) Например, если надстройка содержит инструкции, предполагаемые, что встроенные кнопки находятся в настраиваемой группе, можно создать версию, предполагаемую, что встроенные кнопки находятся только в обычных местах.

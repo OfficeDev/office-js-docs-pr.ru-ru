@@ -1,15 +1,15 @@
 ---
-ms.date: 12/28/2021
+ms.date: 01/13/2022
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 2f4a2ed07c23c3ced19632b9dbfee2957f0f5ba0
-ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
+ms.openlocfilehash: 2f15be99499e42c0598d70ae91b937c6637c0149
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "61648008"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62222306"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
@@ -59,19 +59,15 @@ ms.locfileid: "61648008"
 npm run start:desktop
 ```
 
-> [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start`, примите предложение установить сертификат от генератора Yeoman.
+[!INCLUDE [alert use https](../includes/alert-use-https.md)]
     
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
-Чтобы проверить надстройку в Excel в Интернете, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер.
+Чтобы проверить надстройку в Excel в Интернете, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер. Замените "{url}" на URL-адрес документа Excel в OneDrive или библиотеке SharePoint, для которой у вас есть разрешения.
 
-```command&nbsp;line
-npm run start:web
-```
+[!INCLUDE [npm start:web command syntax](../includes/start-web-sideload-instructions.md)]
 
-> [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start`, примите предложение установить сертификат от генератора Yeoman.
+[!INCLUDE [alert use https](../includes/alert-use-https.md)]
 
 Чтобы использовать надстройку пользовательских функций, откройте новую книгу Excel в браузере. В этой книге выполните шаги, описанные ниже, чтобы загрузить неопубликованную надстройку.
 

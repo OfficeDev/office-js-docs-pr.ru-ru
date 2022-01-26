@@ -1,20 +1,38 @@
 ---
 title: Элемент Methods в файле манифеста
-description: Элемент Methods указывает список Office API JavaScript, которые Office надстройки для активации.
-ms.date: 03/19/2019
+description: Элемент Methods указывает список методов API Office JavaScript, которые требуются Office надстройки для активации Office или переопределения параметров базового манифеста.
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a36e1e05634b0ebc4ca4fce6fb22c042cd8f6fb
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 4c39c6363cd33e103cf40c0f7f047fa694db1411
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154884"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222278"
 ---
 # <a name="methods-element"></a>Элемент Methods
 
-Указывает список Office API JavaScript, необходимых Office надстройки для активации.
+Значение этого элемента зависит от того, где он используется в манифесте.
 
-**Тип надстройки:** контентные надстройки и надстройки области задач
+## <a name="in-the-base-manifest"></a>В базовом манифесте
+
+Когда используется в базовом манифесте  (то есть элемент родительских требований является прямым ребенком [OfficeApp),](officeapp.md)элемент **Methods** указывает список методов API javaScript Office, которые необходимы вашей Office надстройки для активации Office.
+
+**Тип надстройки:** контентные надстройки и надстройки области задач.
+
+## <a name="as-a-grandchild-of-a-versionoverrides-element"></a>Как внук элемента VersionOverrides
+
+Указывает минимальный набор методов API Office JavaScript, которые должны поддерживаться версией и платформой Office (например, Windows, Mac, web и iOS или iPad) для того, чтобы [версияOverrides](versionoverrides.md) вступила в силу.
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides:**
+
+- То же самое, что и элемент [родительских требований.](requirements.md)
+
+**Связанные с этими наборами требований:**
+
+- То же самое, что и элемент [родительских требований.](requirements.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,4 +52,4 @@ ms.locfileid: "59154884"
 
 ## <a name="remarks"></a>Замечания
 
-Элементы **Methods** и **Method** не поддерживаются в надстройки почты. Дополнительные сведения о наборах требований [см. в Office версиях и наборах требований.](../../develop/office-versions-and-requirement-sets.md)
+Элементы **Methods** и **Method** не поддерживаются в надстройки почты при их использования в базовом манифесте. Дополнительные сведения о наборах обязательных элементов см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).

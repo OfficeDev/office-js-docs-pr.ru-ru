@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Узнайте основы создания диалоговых окне в Office надстройке.
-ms.date: 09/03/2021
+ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: edf28450ae63a232912ae4344d808a4d0c26ed45
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: a105ff917816d24dd412be200fc84181610a09a6
+ms.sourcegitcommit: ae3a09d905beb4305a6ffcbc7051ad70745f79f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62073355"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62222173"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -334,7 +334,7 @@ function onRegisterMessageComplete(asyncResult) {
 > В некоторых ситуациях API, который входит в набор требований `messageChild` [DialogApi 1.2,](../reference/requirement-sets/dialog-api-requirement-sets.md)может не поддерживаться. Некоторые альтернативные способы обмена сообщениями из родительского в диалоговое окно описаны в альтернативных способах передачи сообщений в диалоговое окно со своей [хост-страницы.](parent-to-dialog.md)
 
 > [!IMPORTANT]
-> Набор [требований DialogApi 1.2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может быть указан в разделе `<Requirements>` манифеста надстройки. Вам придется проверять поддержку DialogApi 1.2 во время запуска с помощью [метода isSetSupported.](specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) Поддержка требований манифеста находится в стадии разработки.
+> Набор [требований DialogApi 1.2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может  быть указан в разделе Требования манифеста надстройки. Вам придется проверять поддержку DialogApi 1.2 в ходе работы с помощью метода, описанного в проверках времени запуска для поддержки набора методов и `isSetSupported` [требований.](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support) Поддержка требований манифеста находится в стадии разработки.
 
 ### <a name="cross-domain-messaging-to-the-dialog-runtime"></a>Меж доменная передача сообщений в диалоговое время работы
 
@@ -355,7 +355,7 @@ dialog.messageChild(messageToDialog, { targetOrigin: "https://resource.contoso.c
 dialog.messageChild(messageToDialog, { targetOrigin: "*" });
 ```
 
-Так как время запуска JavaScript, в котором находится диалоговое окно, не может получить доступ к разделу манифеста и, таким образом, определить, доверяется ли домен, из которого поступает сообщение, необходимо использовать обработчиватель для определения `<AppDomains>`  `DialogParentMessageReceived` этого. Объект, который передается обработителю, содержит домен, который в настоящее время размещен в родительском качестве его `origin` свойства. Ниже приводится пример использования свойства.
+Так как время работы JavaScript, в котором находится диалоговое окно, не может получить доступ к  разделу **AppDomains** манифеста и, таким образом, определить, является ли домен, из которого поступает сообщение, доверенным, для этого необходимо использовать обработчиватель. `DialogParentMessageReceived` Объект, который передается обработителю, содержит домен, который в настоящее время размещен в родительском качестве его `origin` свойства. Ниже приводится пример использования свойства.
 
 ```javascript
 function onMessageFromParent(arg) {
