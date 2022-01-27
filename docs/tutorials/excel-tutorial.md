@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: Разработайте надстройку Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 09/23/2021
+ms.date: 01/13/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 49145c2c5e6e48fe4f0256d6dbc661e9a826fee5
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: b4bbc96f03b19b0212f65f9f6688272545b4cab9
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990826"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62222186"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -175,8 +175,7 @@ ms.locfileid: "59990826"
 
 1. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
 
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
+    [!INCLUDE [alert use https](../includes/alert-use-https.md)]
 
     > [!TIP]
     > Если вы тестируете свою надстройку на Mac, перед продолжением выполните следующую команду в корневом каталоге вашего проекта. После выполнения этой команды запустится локальный веб-сервер.
@@ -191,13 +190,9 @@ ms.locfileid: "59990826"
         npm start
         ```
 
-    - Чтобы проверить надстройку в Excel в Интернете, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+    - Чтобы проверить надстройку в Excel в Интернете, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер. Замените "{url}" на URL-адрес документа Excel в OneDrive или библиотеке SharePoint, для которой у вас есть разрешения.
 
-        ```command&nbsp;line
-        npm run start:web
-        ```
-
-        Чтобы использовать надстройку, откройте новый документ в Excel в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
+        [!INCLUDE [npm start:web command syntax](../includes/start-web-sideload-instructions.md)]
 
 1. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -207,18 +202,18 @@ ms.locfileid: "59990826"
 
     ![Снимок экрана с приложением Excel, демонстрирующий область задач надстройки с кнопкой "Создать таблицу", а также таблицу на листе, заполненную данными даты, продавца, категории и суммы.](../images/excel-tutorial-create-table-2.png)
 
-## <a name="filter-and-sort-a-table&quot;></a>Фильтрация и сортировка таблицы
+## <a name="filter-and-sort-a-table"></a>Фильтрация и сортировка таблицы
 
 Из этого раздела руководства вы узнаете, как отфильтровать и отсортировать созданную ранее таблицу.
 
-### <a name=&quot;filter-the-table&quot;></a>Фильтрация таблицы
+### <a name="filter-the-table"></a>Фильтрация таблицы
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 1. Найдите элемент `<button>` для кнопки `create-table` и после этой строки добавьте следующий текст разметки:
 
     ```html
-    <button class=&quot;ms-Button&quot; id=&quot;filter-table&quot;>Filter Table</button><br/><br/>
+    <button class="ms-Button" id="filter-table">Filter Table</button><br/><br/>
     ```
 
 1. Откройте файл **./src/taskpane/taskpane.js**.
@@ -226,7 +221,7 @@ ms.locfileid: "59990826"
 1. В вызове метода `Office.onReady` найдите строку, назначающую обработчик щелчка для кнопки `create-table`, и добавьте следующий код после этой строки.
 
     ```js
-    document.getElementById(&quot;filter-table").onclick = filterTable;
+    document.getElementById("filter-table").onclick = filterTable;
     ```
 
 1. Добавьте указанную ниже функцию в конец файла.
@@ -334,18 +329,18 @@ ms.locfileid: "59990826"
 
     ![Снимок экрана: приложение Excel с кнопками "Фильтровать таблицу" и "Сортировать таблицу", отображаемыми в области задач надстройки.](../images/excel-tutorial-filter-and-sort-table-2.png)
 
-## <a name="create-a-chart&quot;></a>Создание диаграммы
+## <a name="create-a-chart"></a>Создание диаграммы
 
 На этом этапе руководства мы создадим диаграмму, используя данные из ранее созданной таблицы, а затем отформатируем эту диаграмму.
 
-### <a name=&quot;chart-a-chart-using-table-data&quot;></a>Создание диаграммы с помощью таблицы данных
+### <a name="chart-a-chart-using-table-data"></a>Создание диаграммы с помощью таблицы данных
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 1. Найдите элемент `<button>` для кнопки `sort-table` и после этой строки добавьте следующий текст разметки:
 
     ```html
-    <button class=&quot;ms-Button&quot; id=&quot;create-chart&quot;>Create Chart</button><br/><br/>
+    <button class="ms-Button" id="create-chart">Create Chart</button><br/><br/>
     ```
 
 1. Откройте файл **./src/taskpane/taskpane.js**.
@@ -353,7 +348,7 @@ ms.locfileid: "59990826"
 1. В вызове метода `Office.onReady` найдите строку, назначающую обработчик щелчка для кнопки `sort-table`, и добавьте следующий код после этой строки.
 
     ```js
-    document.getElementById(&quot;create-chart").onclick = createChart;
+    document.getElementById("create-chart").onclick = createChart;
     ```
 
 1. Добавьте указанную ниже функцию в конец файла.
@@ -429,18 +424,18 @@ ms.locfileid: "59990826"
 
     ![Снимок экрана: Excel с кнопкой "Создать диаграмму" в области задач надстройки и диаграммой на листе с данными расходов на продукты и образование.](../images/excel-tutorial-create-chart-2.png)
 
-## <a name="freeze-a-table-header&quot;></a>Закрепление заголовка таблицы
+## <a name="freeze-a-table-header"></a>Закрепление заголовка таблицы
 
 Когда таблица достаточно длинная, при прокрутке строка заголовков может исчезать с экрана. В этом разделе учебника мы расскажем, как закрепить строку заголовков созданной ранее таблицы, чтобы она была видна, даже когда пользователь прокручивает лист.
 
-### <a name=&quot;freeze-the-tables-header-row&quot;></a>Закрепление строки заголовков таблицы
+### <a name="freeze-the-tables-header-row"></a>Закрепление строки заголовков таблицы
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 1. Найдите элемент `<button>` для кнопки `create-chart` и после этой строки добавьте следующий текст разметки:
 
     ```html
-    <button class=&quot;ms-Button&quot; id=&quot;freeze-header&quot;>Freeze Header</button><br/><br/>
+    <button class="ms-Button" id="freeze-header">Freeze Header</button><br/><br/>
     ```
 
 1. Откройте файл **./src/taskpane/taskpane.js**.
@@ -448,7 +443,7 @@ ms.locfileid: "59990826"
 1. В вызове метода `Office.onReady` найдите строку, назначающую обработчик щелчка для кнопки `create-chart`, и добавьте следующий код после этой строки.
 
     ```js
-    document.getElementById(&quot;freeze-header").onclick = freezeHeader;
+    document.getElementById("freeze-header").onclick = freezeHeader;
     ```
 
 1. Добавьте указанную ниже функцию в конец файла.
@@ -754,7 +749,7 @@ ms.locfileid: "59990826"
         npm run start:web
         ```
 
-        Чтобы использовать надстройку, откройте новый документ в Excel в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
+        Чтобы использовать надстройку, откройте документ в Excel в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
 
 1. На вкладке **Главная** в Excel нажмите кнопку **Переключение защиты листа**. Обратите внимание, что большинство элементов управления на ленте отключены (серые), как показано на следующем снимке экрана.
 

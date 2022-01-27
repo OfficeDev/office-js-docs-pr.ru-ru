@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 08/04/2021
+ms.date: 01/13/2022
 ms.prod: onenote
 ms.localizationpriority: high
-ms.openlocfilehash: 7fbe6037d9ea4f500eb8d690e088ba36b084e641
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e377f3f73f6879b374672157ebc127a0cf412830
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154487"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62222088"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -80,8 +80,7 @@ try {
 
 1. Запустите локальный веб-сервер и загрузите неопубликованную надстройку.
 
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman. Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.
+    [!INCLUDE [alert use https](../includes/alert-use-https.md)]
 
     > [!TIP]
     > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
@@ -90,11 +89,9 @@ try {
     > npm run dev-server
     > ```
 
-    Выполните указанную ниже команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+    Выполните указанную ниже команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер. Замените "{url}" на URL-адрес документа OneNote в OneDrive или библиотеке SharePoint, для которой у вас есть разрешения.
 
-    ```command&nbsp;line
-    npm run start:web
-    ```
+    [!INCLUDE [npm start:web command syntax](../includes/start-web-sideload-instructions.md)]`
 
 1. Откройте записную книжку в [OneNote в Интернете](https://www.onenote.com/notebooks) и создайте страницу.
 
