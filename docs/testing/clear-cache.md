@@ -1,14 +1,14 @@
 ---
 title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
-ms.date: 11/15/2021
+ms.date: 01/27/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 36f3de58eb5089f6c638510cb33879cb36c7330c
-ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
+ms.openlocfilehash: 2c2b22ececbf293578c9467269c4ad6779eb9aea
+ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "61081409"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "62263095"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -25,7 +25,7 @@ ms.locfileid: "61081409"
 
 ### <a name="automatically"></a>Автоматически
 
-Этот метод рекомендуется использовать для компьютеров разработки надстройки. Если Office используется в Windows версии 2108 или более поздней, следующие действия настраивают автоматическую очистку кэша Office при каждом повторном открытии Office.
+Этот метод рекомендуется использовать для компьютеров разработки надстройки. Если Office используется в Windows версии 2108 или более поздней, следующие действия настраивают очистку кэша Office при следующем открытии Office.
 
 > [!NOTE]
 > Автоматический метод не поддерживается для Outlook.
