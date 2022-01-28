@@ -1,18 +1,18 @@
 ---
 title: Microsoft Office вызов сообщества надстройки
 description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройки.
-ms.date: 01/14/2022
+ms.date: 01/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 59b0be6e0fe2196cf0ff80970cd9035ed8e66b5e
-ms.sourcegitcommit: 015e0839c4acca0f4dc5ec5df08489314fb509ca
+ms.openlocfilehash: 94f86ef910d032069fe3e537ae5bf5e63bb4ffb0
+ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "62055060"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "62263004"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
 
-Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по московскому времени. Вы можете скачать приглашение календаря по [https://aka.ms/officeaddinscommunitycall](https://aka.ms/officeaddinscommunitycall) ссылке .
+Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по ссылке https://aka.ms/officeaddinscommunitycall.
 
 ## <a name="agenda-for-february-9th-call"></a>Повестка дня на 9 февраля
 
@@ -22,6 +22,7 @@ ms.locfileid: "62055060"
 
 Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
 
+- [12 января 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-january-12-2022/ba-p/3061097)
 - [8 декабря 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-december-8-2021/ba-p/3032949)
 - [10 ноября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-november-10-2021/ba-p/2983146)
 - [13 октября 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-october-13-2021/ba-p/2867151)

@@ -1,21 +1,21 @@
 ---
 title: Разработка надстроек Office с помощью Visual Studio
 description: Как разрабатывать надстройки Office с помощью Visual Studio.
-ms.date: 07/08/2021
+ms.date: 01/26/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 169e0d553ba5fbaee506cd3745b95b4dde5ddbaa
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 26fd9d138dc05f7e0ca2961591b9d45b21a9dbe6
+ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150702"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "62263046"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
 В этой статье описано, как использовать Visual Studio для разработки надстроек Office. Если надстройка уже создана, можно перейти к разделу [Разработка надстройки с помощью Visual Studio](#develop-the-add-in-using-visual-studio).
 
 > [!NOTE]
-> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения о выборе средств создания см. в разделе [Создание надстроек Office](../develop/develop-overview.md)#creating-an-office-add-in).
+> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения о выборе средств создания см. в разделе [Создание надстроек Office](../develop/develop-overview.md#create-an-office-add-in).
 
 ## <a name="create-the-add-in-project-using-visual-studio"></a>Создание проекта надстройки с помощью Visual Studio
 
