@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек Office
 description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки
-ms.date: 12/02/2021
+ms.date: 01/27/2022
 ms.localizationpriority: high
-ms.openlocfilehash: aa98bda4de1786f58b730b2375e5586d2cb8b0ad
-ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
+ms.openlocfilehash: 490d2d786bbd7e3169e7202dbbd70e81f9525e41
+ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61766102"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "62263060"
 ---
 # <a name="overview-of-debugging-office-add-ins"></a>Обзор отладки надстроек Office
 
@@ -78,3 +78,7 @@ ms.locfileid: "61766102"
 
 > [!NOTE]
 > Мы не рекомендуем разрабатывать надстройки Office на компьютере с Linux, за исключением особых случаев, когда вы можете быть уверены, что все пользователи надстройки будут использовать ее через Office в Интернете с компьютера с Linux.
+
+## <a name="debug-add-ins-in-staging-or-production"></a>Отладка надстроек в промежуточной или рабочей среде
+
+Чтобы отладить надстройку, которая уже находится в промежуточной или рабочей среде, подключите отладчик из пользовательского интерфейса надстройки. Инструкции см. в статье [Подключение отладчика из области задач](attach-debugger-from-task-pane.md).
