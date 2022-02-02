@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности пользователя с помощью маркера единого входа
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
-ms.date: 11/11/2021
+ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f920ce4465256004ab0a286feca8f889c38a4f3
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: 5769c6bbd639fab1ce5399b3d7a414ae54d35269
+ms.sourcegitcommit: 57e15f0787c0460482e671d5e9407a801c17a215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074289"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62320286"
 ---
 # <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in"></a>Проверка подлинности пользователя с помощью маркера с одним входом в Outlook надстройки
 
@@ -31,7 +31,7 @@ ms.locfileid: "62074289"
 
 ### <a name="provide-consent-when-sideloading-an-add-in"></a>Предоставление согласия при загрузке неопубликованной надстройки
 
-При разработке надстройки необходимо заранее предоставить согласие. Дополнительные сведения см. в [записи согласия администратора гранта на надстройки.](../develop/grant-admin-consent-to-an-add-in.md)
+При разработке надстройки необходимо заранее предоставить согласие. Дополнительные сведения см. в [дополнительных сведениях о согласии администратора гранта на надстройки](../develop/grant-admin-consent-to-an-add-in.md).
 
 ## <a name="update-the-add-in-manifest"></a>Обновление манифеста надстройки
 
@@ -43,18 +43,19 @@ ms.locfileid: "62074289"
 
 ## <a name="use-the-sso-token-at-the-back-end"></a>Использование маркера единого входа во внутренней службе
 
-В большинстве случаев практически нет смысла получать маркер доступа, если надстройка не передает его на сторону сервера и не использует его там. Дополнительные сведения о том, какие действия должны выполняться на стороне сервера, а какие нет, см. в разделе [Добавление серверного кода](../develop/sso-in-office-add-ins.md#add-server-side-code).
+В большинстве случаев практически нет смысла получать маркер доступа, если надстройка не передает его на сторону сервера и не использует его там. Дополнительные сведения о том, какие действия должны выполняться на стороне сервера, а какие нет, см. в разделе [Добавление серверного кода](../develop/sso-in-office-add-ins.md#pass-the-access-token-to-server-side-code).
 
 > [!IMPORTANT]
 > При использовании маркера единого входа в качестве удостоверения в *Outlook* рекомендуем также [использовать маркер удостоверения Exchange](authenticate-a-user-with-an-identity-token.md) в качестве альтернативного удостоверения. Пользователи надстройки могут использовать различные клиенты, не все и которых поддерживают предоставление маркера единого входа. Если в качестве альтернативы используется маркер удостоверения Exchange, вы можете избежать повторного запрашивания учетных данных этих пользователей. Дополнительные сведения см. в статье [Сценарий: реализация единого входа для службы в надстройке Outlook](implement-sso-in-outlook-add-in.md).
 
 ## <a name="sso-for-event-based-activation"></a>SSO для активации на основе событий
 
-Если надстройка использует активацию на основе событий, необходимо предпринять дополнительные действия. Дополнительные сведения см. в документе [Enable single sign-on (SSO)](use-sso-in-event-based-activation.md)в Outlook надстройки, которые используют активацию на основе событий.
+Если надстройка использует активацию на основе событий, необходимо предпринять дополнительные действия. Дополнительные сведения см. в добавлении [Enable single sign-on (SSO)](use-sso-in-event-based-activation.md) Outlook надстройки, которые используют активацию на основе событий.
 
 ## <a name="see-also"></a>См. также
 
-- Пример надстройки Outlook которая использует маркер SSO для доступа к API Microsoft Graph, см. в Outlook [SSO надстройки.](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)
-- [Справочные материалы по API единого входа](../develop/sso-in-office-add-ins.md#sso-api-reference)
+- [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getAccessToken_options_)
+- Пример надстройки Outlook которая использует маркер SSO для доступа к API Microsoft Graph, см. в Outlook [SSO надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO).
+- [Справочные материалы по API единого входа](/javascript/api/office/office.auth#office-office-auth-getaccesstoken-member(1))
 - [Настройка требования IdentityAPI](../reference/requirement-sets/identity-api-requirement-sets.md)
 - [Включение единого входного пользования (SSO) в Outlook надстройки, которые используют активацию на основе событий](use-sso-in-event-based-activation.md)
