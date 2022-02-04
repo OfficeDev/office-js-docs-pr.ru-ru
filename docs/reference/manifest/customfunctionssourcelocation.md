@@ -1,26 +1,34 @@
 ---
 title: Элемент SourceLocation для настраиваемой функции в файле манифеста
-description: Определяет расположение ресурса, который необходим для элементов Script или Page, используемых пользовательскими функциями в Excel.
-ms.date: 09/24/2021
+description: 'Определяет расположение ресурса, который необходим для элементов Script или Page, используемых пользовательскими функциями в Excel.'
+ms.date: 02/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f2d881f31f4e46e7f5bb8ab30d78abd0e9b7200
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990686"
 ---
+
 # <a name="sourcelocation-element-custom-functions"></a>Элемент SourceLocation (настраиваемые функции)
 
-Определяет расположение ресурса, который необходим для элементов Script или Page, используемых пользовательскими функциями в Excel.
+Определяет расположение ресурса, необходимого элементам **Script** или **Page**, используемым пользовательскими функциями в Excel.
+
+> [!IMPORTANT]
+> Эта статья относится только к **SourceLocation** , которая является ребенком элементов **Page** или **Script** . Сведения о элементе **SourceLocation базового** манифеста см. в [sourceLocation](sourcelocation.md).
 
 **Тип надстройки:** Настраиваемая функция
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Taskpane 1.0
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
+
+**Связанные с этими наборами требований**:
+
+- [CustomFunctionsRuntime 1.1](../requirement-sets/custom-functions-requirement-sets.md)
 
 ## <a name="attributes"></a>Атрибуты
 
 | Атрибут | Обязательный | Описание                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------|
-| resid     | Да      | Имя ресурса URL-адреса, определенного в разделе &lt;Ресурсы&gt; в манифесте. Может быть не более 32 символов. |
+| resid     | Да      | Имя ресурса URL-адреса, определенного в разделе **Ресурсы** в манифесте. Может быть не более 32 символов. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 

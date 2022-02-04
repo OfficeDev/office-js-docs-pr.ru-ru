@@ -1,15 +1,10 @@
 ---
 title: Указание ведущих приложений Office и требований к API
-description: Узнайте, как указать Office приложений и API для вашей надстройки, чтобы работать как ожидалось.
+description: 'Узнайте, как указать Office приложений и API для вашей надстройки, чтобы работать как ожидалось.'
 ms.date: 01/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e0cf0a99706861a5446512542b28f3b27db54d8d
-ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "62263053"
 ---
+
 # <a name="specify-office-applications-and-api-requirements"></a>Указание приложений Office и требований API
 
 Ваша Office надстройка может зависеть от конкретного приложения Office (также называемого хостом Office) или от определенных членов API JavaScript Office (office.js). Например, надстройка может:
@@ -155,7 +150,7 @@ ms.locfileid: "62263053"
 
 ### <a name="runtime-checks-for-method-and-requirement-set-support"></a>Проверка времени работы для поддержки набора методов и требований 
 
-Во время запуска вы проверяете, поддерживает ли Office пользователя набор требований с [помощью метода isSetSupported](/javascript/api/office/office.requirementsetsupport#isSetSupported_name__minVersion_). Передай имя набора требований и минимальную версию в качестве параметров. Если набор требований поддерживается, `isSetSupported` возвращается **true**. Ниже приводится пример кода.
+Во время запуска вы проверяете, поддерживает ли Office пользователя набор требований с [помощью метода isSetSupported](/javascript/api/office/office.requirementsetsupport#office-office-requirementsetsupport-issetsupported-member(1)). Передай имя набора требований и минимальную версию в качестве параметров. Если набор требований поддерживается, `isSetSupported` возвращается **true**. Ниже приводится пример кода.
 
 ```js
 if (Office.context.requirements.isSetSupported('WordApi', '1.1'))

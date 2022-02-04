@@ -1,42 +1,37 @@
 ---
 title: Просмотр или изменение места встречи в надстройке
-description: Узнайте, как просмотреть и изменить место проведения встречи в надстройке Outlook.
+description: 'Узнайте, как просмотреть и изменить место проведения встречи в надстройке Outlook.'
 ms.date: 10/31/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 02a6360d43b91cde773d767d9a9838c015d9ecd7
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154127"
 ---
+
 # <a name="get-or-set-the-location-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение расположения при создании встречи в Outlook
 
 API Office JavaScript предоставляет свойства и методы для управления расположением записи, которую создает пользователь. В настоящее время существует два свойства, которые предоставляют расположение встречи:
 
-- [item.location.](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)Базовый API, который позволяет получать и устанавливать расположение.
-- [item.enhancedLocation:](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)Расширенный API, который позволяет получать и устанавливать расположение, а также указывает [тип расположения.](/javascript/api/outlook/office.mailboxenums.locationtype) Тип, `LocationType.Custom` если вы установите расположение с помощью `item.location` .
+- [item.location](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties). Базовый API, который позволяет получать и устанавливать расположение.
+- [item.enhancedLocation](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties). Расширенный API, который позволяет получать и устанавливать расположение, а также включает указание [типа расположения](/javascript/api/outlook/office.mailboxenums.locationtype). Тип, если `LocationType.Custom` вы установите расположение с помощью `item.location`.
 
 В следующей таблице перечислены API расположения и режимы (например, Compose или Read), где они доступны.
 
 | API | Применимые режимы назначения |
 |---|---|
-| [item.location](/javascript/api/outlook/office.appointmentread#location) | Чел/чтение |
-| [item.location.getAsync](/javascript/api/outlook/office.location#getAsync_options__callback_) | Организатор/композит |
-| [item.location.setAsync](/javascript/api/outlook/office.location#setAsync_location__options__callback_) | Организатор/композит |
-| [item.enhancedLocation.getAsync](/javascript/api/outlook/office.enhancedlocation#getAsync_options__callback_) | Организатор/композит,<br>Чел/чтение |
-| [item.enhancedLocation.addAsync](/javascript/api/outlook/office.enhancedlocation#addAsync_locationIdentifiers__options__callback_) | Организатор/композит |
-| [item.enhancedLocation.removeAsync](/javascript/api/outlook/office.enhancedlocation#removeAsync_locationIdentifiers__options__callback_) | Организатор/композит |
+| [item.location](/javascript/api/outlook/office.appointmentread#outlook-office-appointmentread-location-member) | Чел/чтение |
+| [item.location.getAsync](/javascript/api/outlook/office.location#outlook-office-location-getasync-member(1)) | Организатор/композит |
+| [item.location.setAsync](/javascript/api/outlook/office.location#outlook-office-location-setasync-member(1)) | Организатор/композит |
+| [item.enhancedLocation.getAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-getasync-member(1)) | Организатор/композит,<br>Чел/чтение |
+| [item.enhancedLocation.addAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-addasync-member(1)) | Организатор/композит |
+| [item.enhancedLocation.removeAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-removeasync-member(1)) | Организатор/композит |
 
-Чтобы использовать методы, доступные только для составить надстройки, настройте манифест надстройки, чтобы активировать надстройку в режиме Organis/Compose. Дополнительные [сведения см. в Outlook надстройки для создания форм.](compose-scenario.md)
+Чтобы использовать методы, доступные только для составить надстройки, настройте манифест надстройки, чтобы активировать надстройку в режиме Organis/Compose. [Дополнительные сведения см. Outlook создать надстройки для создания форм](compose-scenario.md).
 
-## <a name="use-the-enhancedlocation-api"></a>Использование `enhancedLocation` API
+## <a name="use-the-enhancedlocation-api"></a>`enhancedLocation` Использование API
 
-API можно использовать для `enhancedLocation` получения и определения расположения встречи. Поле расположения поддерживает несколько расположений, и для каждого расположения можно установить имя отображения, тип и адрес электронной почты конференц-зала (если это применимо). См. [в этой ленте LocationType](/javascript/api/outlook/office.mailboxenums.locationtype) для поддерживаемых типов расположения.
+API можно использовать `enhancedLocation` для получения и определения расположения встречи. Поле расположения поддерживает несколько расположений, и для каждого расположения можно установить имя отображения, тип и адрес электронной почты конференц-зала (если это применимо). См [. в этой ленте LocationType](/javascript/api/outlook/office.mailboxenums.locationtype) для поддерживаемых типов расположения.
 
 ### <a name="add-location"></a>Добавление расположения
 
-В следующем примере показано, как добавить расположение, позвонив [addAsync](/javascript/api/outlook/office.enhancedlocation#addAsync_locationIdentifiers__options__callback_) на [mailbox.item.enhancedLocation.](/javascript/api/outlook/office.appointmentcompose#enhancedLocation)
+В следующем примере показано, как добавить расположение, позвонив [addAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-addasync-member(1)) на [mailbox.item.enhancedLocation](/javascript/api/outlook/office.appointmentcompose#outlook-office-appointmentcompose-enhancedlocation-member).
 
 ```js
 var item;
@@ -60,7 +55,7 @@ Office.initialize = function () {
 
 ### <a name="get-location"></a>Расположение
 
-В следующем примере показано, как получить расположение, позвонив [в getAsync](/javascript/api/outlook/office.enhancedlocation#getAsync_options__callback_) на [mailbox.item.enhancedLocation.](/javascript/api/outlook/office.appointmentread#enhancedLocation)
+В следующем примере показано, как получить расположение, позвонив [в getAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-getasync-member(1)) на [mailbox.item.enhancedLocation](/javascript/api/outlook/office.appointmentread#outlook-office-appointmentread-enhancedlocation-member).
 
 ```js
 var item;
@@ -88,7 +83,7 @@ function callbackFunction(asyncResult) {
 
 ### <a name="remove-location"></a>Удаление расположения
 
-В следующем примере показано, как удалить расположение, позвонив [removeAsync](/javascript/api/outlook/office.enhancedlocation#removeAsync_locationIdentifiers__options__callback_) в [mailbox.item.enhancedLocation.](/javascript/api/outlook/office.appointmentcompose#enhancedLocation)
+В следующем примере показано, как удалить расположение, позвонив [removeAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-removeasync-member(1)) в [mailbox.item.enhancedLocation](/javascript/api/outlook/office.appointmentcompose#outlook-office-appointmentcompose-enhancedlocation-member).
 
 ```js
 var item;
@@ -111,15 +106,15 @@ function callbackFunction(asyncResult) {
 }
 ```
 
-## <a name="use-the-location-api"></a>Использование `location` API
+## <a name="use-the-location-api"></a>`location` Использование API
 
-API можно использовать для `location` получения и определения расположения встречи.
+API можно использовать `location` для получения и определения расположения встречи.
 
 ### <a name="get-the-location"></a>Получение места проведения
 
 В этом разделе представлен пример кода, который получает и отображает место проведения создаваемой пользователем встречи.
 
-Чтобы использовать метод `item.location.getAsync`, создайте метод обратного вызова, который проверяет состояние и результат асинхронного вызова. Вы можете указать все необходимые аргументы метода обратного вызова с помощью необязательного параметра `asyncContext`. Вы можете получить состояние, результаты и любую ошибку с помощью параметра вывода `asyncResult` вызова. Если асинхронный вызов успешно выполнен, вы можете получить место проведения в строковом формате с помощью свойства [AsyncResult.value](/javascript/api/office/office.asyncresult#value).
+Чтобы использовать метод `item.location.getAsync`, создайте метод обратного вызова, который проверяет состояние и результат асинхронного вызова. Вы можете указать все необходимые аргументы метода обратного вызова с помощью необязательного параметра `asyncContext`. Вы можете получить состояние, результаты и любую ошибку с помощью параметра `asyncResult` вывода вызова. Если асинхронный вызов успешно выполнен, вы можете получить место проведения в строковом формате с помощью свойства [AsyncResult.value](/javascript/api/office/office.asyncresult#office-office-asyncresult-value-member).
 
 ```js
 var item;
@@ -158,7 +153,7 @@ function write(message){
 
 В этом разделе показан пример кода, который устанавливает место проведения создаваемой пользователем встречи.
 
-Чтобы использовать метод `item.location.setAsync`, укажите строку длиной до 255 символов в параметре data. При желании вы можете указать метод обратного вызова и его аргументы в параметре `asyncContext`. Необходимо проверить состояние, результат и любое сообщение об ошибке в параметре вывода `asyncResult` вызова. Если асинхронный вызов успешно выполнен, `setAsync` вставляет указанную строку в виде обычного текста, заменяя существующее место проведения.
+Чтобы использовать метод `item.location.setAsync`, укажите строку длиной до 255 символов в параметре data. При желании вы можете указать метод обратного вызова и его аргументы в параметре `asyncContext`. Необходимо проверить состояние, результат и любое сообщение об ошибке в параметре `asyncResult` вывода вызова. Если асинхронный вызов успешно выполнен, `setAsync` вставляет указанную строку в виде обычного текста, заменяя существующее место проведения.
 
 > [!NOTE]
 > Вы можете установить несколько местоположений, используя полу-двоеточие в качестве сепаратора (например, "Конференц-зал A; Конференц-зал B').
@@ -199,7 +194,7 @@ function write(message){
 }
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Создание первой Outlook надстройки](../quickstarts/outlook-quickstart.md)
 - [Асинхронное программирование в случае надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)

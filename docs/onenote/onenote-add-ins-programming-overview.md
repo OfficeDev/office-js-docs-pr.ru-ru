@@ -3,15 +3,10 @@ title: Обзор создания кода с помощью API JavaScript д�
 description: Узнайте об API OneNote JavaScript для надстроек OneNote в Интернете.
 ms.date: 10/14/2020
 ms.topic: overview
-ms.custom: scenarios:getting-started
+ms.custom: 'scenarios:getting-started'
 ms.localizationpriority: high
-ms.openlocfilehash: 7c08a684a3b6b88b060edebc14d5711fc5bcc3de
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514239"
 ---
+
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
 В OneNote представлен API JavaScript для надстроек OneNote в Интернете. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
@@ -96,7 +91,7 @@ function getPagesInSection() {
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к общему API с помощью объекта *Document*
 
-Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) и [setSelectedDataAsync](/javascript/api/office/office.document#setSelectedDataAsync_data__options__callback_), используйте объект `Document`.
+Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) и [setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1)), используйте объект `Document`.
 
 Например:  
 
@@ -119,10 +114,10 @@ function getSelectionFromPage() {
 
 | API | Примечания |
 |:------|:------|
-| [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) | Только `Office.CoercionType.Text` и `Office.CoercionType.Matrix` |
-| [Office.context.document.setSelectedDataAsync](/javascript/api/office/office.document#setSelectedDataAsync_data__options__callback_) | Только `Office.CoercionType.Text`, `Office.CoercionType.Image` и `Office.CoercionType.Html` | 
-| [var mySetting = Office.context.document.settings.get(имя);](/javascript/api/office/office.settings#get_name_) | Параметры поддерживаются только контентными надстройками | 
-| [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#set_name__value_) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) | Только `Office.CoercionType.Text` и `Office.CoercionType.Matrix` |
+| [Office.context.document.setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1)) | Только `Office.CoercionType.Text`, `Office.CoercionType.Image` и `Office.CoercionType.Html` | 
+| [var mySetting = Office.context.document.settings.get(имя);](/javascript/api/office/office.settings#office-office-settings-get-member(1)) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#office-office-settings-set-member(1)) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) ||
 
 Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных клиентских приложений. Дополнительные сведения об использовании общего API см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).

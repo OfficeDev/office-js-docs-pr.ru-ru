@@ -1,15 +1,10 @@
 ---
 title: Работа с содержимым страницы в OneNote
-description: Узнайте, как работать с OneNote контентом страницы с помощью API JavaScript.
+description: 'Узнайте, как работать с OneNote контентом страницы с помощью API JavaScript.'
 ms.date: 03/19/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 72a5402d16f8d8a39903b3285c62ade48a409578
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154289"
 ---
+
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
 В API JavaScript для надстроек OneNote содержимое страницы представлено указанной ниже объектной моделью.
@@ -23,8 +18,8 @@ ms.locfileid: "59154289"
 
 Чтобы создать пустую OneNote страницу, используйте один из следующих методов.
 
-- [Section.addPage](/javascript/api/onenote/onenote.section#addPage_title_)
-- [Page.insertPageAsSibling](/javascript/api/onenote/onenote.section#insertSectionAsSibling_location__title_)
+- [Section.addPage](/javascript/api/onenote/onenote.section#onenote-onenote-section-addpage-member(1))
+- [Page.insertPageAsSibling](/javascript/api/onenote/onenote.section#onenote-onenote-section-insertsectionassibling-member(1))
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например `Page.addOutline` и `Outline.appendHtml`.
 

@@ -1,18 +1,25 @@
 ---
 title: Элемент Page в файле манифеста
-description: Элемент Page определяет параметры HTML-страниц, которые настраиваемая функция использует в Excel.
-ms.date: 10/09/2018
+description: 'Элемент Page определяет параметры HTML-страниц, которые настраиваемая функция использует в Excel.'
+ms.date: 02/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bde3ba86270874b1d9059b2f1c44952241bf00f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154860"
 ---
+
 # <a name="page-element"></a>Элемент Page
 
 Определяет параметры HTML-страницы, используемые пользовательской функцией в Excel.
+
+**Тип надстройки:** Настраиваемая функция
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Taskpane 1.0
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
+
+**Связанные с этими наборами требований**:
+
+- [CustomFunctionsRuntime 1.1](../requirement-sets/custom-functions-requirement-sets.md) 
 
 ## <a name="attributes"></a>Атрибуты
 

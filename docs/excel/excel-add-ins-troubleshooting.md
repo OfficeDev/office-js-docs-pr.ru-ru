@@ -1,15 +1,10 @@
 ---
 title: Устранение Excel надстройки
-description: Узнайте, как устранить ошибки разработки в Excel надстройки.
+description: 'Узнайте, как устранить ошибки разработки в Excel надстройки.'
 ms.date: 02/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 06ed12eb1daf8876e14806fd88f541b5b58eea16
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153918"
 ---
+
 # <a name="troubleshooting-excel-add-ins"></a>Устранение Excel надстройки
 
 В этой статье обсуждаются проблемы устранения неполадок, которые уникальны для Excel. Используйте средство обратной связи в нижней части страницы, чтобы предложить другие проблемы, которые можно добавить в статью.
@@ -44,15 +39,15 @@ ms.locfileid: "59153918"
 
 ## <a name="coauthoring"></a>Совместное редактирование
 
-См. [в](co-authoring-in-excel-add-ins.md) Excel надстройки для шаблонов, которые можно использовать с событиями в среде совместной работы. В статье также обсуждаются потенциальные конфликты слияния при использовании определенных API, например [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#add_index__values_) .
+См. [в](co-authoring-in-excel-add-ins.md) Excel надстройки для шаблонов, которые можно использовать с событиями в среде совместной работы. В статье также обсуждаются потенциальные конфликты слияния при использовании определенных API, например [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#excel-excel-tablerowcollection-add-member(1)).
 
 ## <a name="known-issues"></a>Известные проблемы
 
-### <a name="binding-events-return-temporary-binding-obects"></a>События привязки возвращают `Binding` временные obects
+### <a name="binding-events-return-temporary-binding-obects"></a>События привязки возвращают временные `Binding` obects
 
-Оба [bindingDataChangedEventArgs.binding](/javascript/api/excel/excel.bindingdatachangedeventargs#binding) и [BindingSelectionChangedEventArgs.binding](/javascript/api/excel/excel.bindingselectionchangedeventargs#binding) возвращают временный объект, содержащий ID объекта, который поднял `Binding` `Binding` событие. Используйте этот ID для `BindingCollection.getItem(id)` получения `Binding` объекта, который поднял событие.
+Оба [bindingDataChangedEventArgs.binding](/javascript/api/excel/excel.bindingdatachangedeventargs#excel-excel-bindingdatachangedeventargs-binding-member) и [BindingSelectionChangedEventArgs.binding](/javascript/api/excel/excel.bindingselectionchangedeventargs#excel-excel-bindingselectionchangedeventargs-binding-member) `Binding` возвращают временный объект, содержащий ID `Binding` объекта, который поднял событие. Используйте этот ID для `BindingCollection.getItem(id)` получения объекта `Binding` , который поднял событие.
 
-В следующем примере кода показано, как использовать этот временный код привязки для получения связанного `Binding` объекта. В примере слушателю событий назначена привязка. При запуске события слушатель вызывает `getBindingId` `onDataChanged` метод. Метод использует ID временного объекта для получения объекта, `getBindingId` `Binding` который поднял `Binding` событие.
+В следующем примере кода показано, как использовать этот временный код привязки для получения связанного `Binding` объекта. В примере слушателю событий назначена привязка. При запуске `getBindingId` `onDataChanged` события слушатель вызывает метод. Метод `getBindingId` использует ID временного `Binding` объекта `Binding` для получения объекта, который поднял событие.
 
 ```js
 Excel.run(function (context) {
@@ -82,19 +77,19 @@ function getBindingId(eventArgs) {
 }
 ```
 
-### <a name="cell-format-usestandardheight-and-usestandardwidth-issues"></a>Формат `useStandardHeight` ячейки `useStandardWidth` и проблемы
+### <a name="cell-format-usestandardheight-and-usestandardwidth-issues"></a>Формат ячейки `useStandardHeight` и `useStandardWidth` проблемы
 
-Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) не работает должным образом `CellPropertiesFormat` в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете, задав свойство для нечетких расчетов высоты `useStandardHeight` `true` на этой платформе. Например, стандартная высота **14** изменена до **14,25** в Excel в Интернете.
+Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) не `CellPropertiesFormat` работает должным образом в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете, `useStandardHeight` `true` задав свойство для нечетких расчетов высоты на этой платформе. Например, стандартная высота **14** изменена до **14,25** в Excel в Интернете.
 
-На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) и [UseStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#useStandardWidth) предназначены только для `CellPropertiesFormat` `true` . Настройка этих свойств не `false` влияет. 
+На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) и [UseStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardwidth-member) `CellPropertiesFormat` `true`предназначены только для . Настройка этих свойств не влияет `false` . 
 
-### <a name="range-getimage-method-unsupported-on-excel-for-mac"></a>Метод `getImage` Range, неподтвердимый Excel для Mac
+### <a name="range-getimage-method-unsupported-on-excel-for-mac"></a>Метод Range`getImage`, неподтвердимый Excel для Mac
 
-Метод [Range getImage](/javascript/api/excel/excel.range#getImage__) в настоящее время не поддерживается в Excel для Mac. См. [в #235 OfficeDev/office-js](https://github.com/OfficeDev/office-js/issues/235) Issue для текущего состояния.
+Метод [Range getImage](/javascript/api/excel/excel.range#excel-excel-range-getimage-member(1)) в настоящее время не поддерживается в Excel для Mac. Для [текущего состояния см. в выпуске OfficeDev/office-js Issue #235](https://github.com/OfficeDev/office-js/issues/235) .
 
 ### <a name="range-return-character-limit"></a>Ограничение возвращаемого символа диапазона
 
-Методы [Worksheet.getRange(address)](/javascript/api/excel/excel.worksheet#getRange_address_) и [Worksheet.getRanges(address)](/javascript/api/excel/excel.worksheet#getRanges_address_) имеют ограничение строки адресов в 8192 символа. При превышении этого ограничения строка адресов будет усечена до 8192 символов.
+Методы [Worksheet.getRange(address)](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getrange-member(1)) и [Worksheet.getRanges(address)](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getranges-member(1)) имеют ограничение строки адресов в 8192 символа. При превышении этого ограничения строка адресов будет усечена до 8192 символов.
 
 ## <a name="see-also"></a>Дополнительные материалы
 

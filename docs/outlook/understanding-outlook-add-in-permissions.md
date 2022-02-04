@@ -1,15 +1,10 @@
 ---
 title: Общие сведения о разрешениях для надстроек Outlook
-description: Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.
+description: 'Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.'
 ms.date: 02/19/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f0a9df52bc37652ef7d5b1981dabdc0a8aa30e4
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150617"
 ---
+
 # <a name="understanding-outlook-add-in-permissions"></a>Общие сведения о разрешениях для надстроек Outlook
 
 Необходимый уровень разрешений для надстроек Outlook указывается в манифесте. Доступные уровни: **Restricted**, **ReadItem**, **ReadWriteItem** и **ReadWriteMailbox**. Эти уровни являются накопительными: **Restricted** — самый низкий уровень, каждый более высокий уровень включает разрешения более низких уровней. **ReadWriteMailbox** включает все поддерживаемые разрешения.
@@ -68,15 +63,15 @@ ms.locfileid: "59150617"
 
 ### <a name="can-do"></a>Разрешено
 
-- [Считывать все свойства](item-data.md) текущего элемента в чтении или [Создавать форму](get-and-set-item-data-in-a-compose-form.md), например [item.to](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) в форме чтения и [item.to.getAsync](/javascript/api/outlook/office.Recipients#getAsync_options__callback_) в форме создания.
+- [Считывать все свойства](item-data.md) текущего элемента в чтении или [Создавать форму](get-and-set-item-data-in-a-compose-form.md), например [item.to](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) в форме чтения и [item.to.getAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-getasync-member(1)) в форме создания.
 
 - [Получать маркер обратного вызова для получения вложений](get-attachments-of-an-outlook-item.md) или всего элемента с помощью веб-служб Exchange или [REST API Outlook](use-rest-api.md).
 
-- [Записывать пользовательские свойства](/javascript/api/outlook/office.CustomProperties), установленные надстройкой для соответствующего элемента.
+- [Записывать пользовательские свойства](/javascript/api/outlook/office.customproperties), установленные надстройкой для соответствующего элемента.
 
 - [Получать все существующие известные сущности](match-strings-in-an-item-as-well-known-entities.md) (а не только группу) из темы или текста элемента.
 
-- Используйте все [известные](activation-rules.md#itemhasknownentity-rule) сущности в [правилах ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) или регулярных выражениях в [правилах ItemHasRegularExpressionMatch.](../reference/manifest/rule.md#itemhasregularexpressionmatch-rule) [](activation-rules.md#itemhasregularexpressionmatch-rule) В следующем примере следует схема v1.1. В нем показано правило, которое активирует надстройки, если одна или несколько известных сущностями находятся в субъекте или теле выбранного сообщения.
+- Используйте все [известные](activation-rules.md#itemhasknownentity-rule) сущности в [правилах ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) или регулярных выражениях в [правилах ItemHasRegularExpressionMatch](../reference/manifest/rule.md#itemhasregularexpressionmatch-rule).[](activation-rules.md#itemhasregularexpressionmatch-rule) В следующем примере следует схема v1.1. В нем показано правило, которое активирует надстройки, если одна или несколько известных сущностями находятся в субъекте или теле выбранного сообщения.
 
   ```XML
     <Permissions>ReadItem</Permissions>
@@ -107,24 +102,24 @@ ms.locfileid: "59150617"
   - [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
   - [item.addFileAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
   - [item.addItemAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [item.bcc.addAsync](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)
-  - [item.bcc.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)
-  - [item.body.prependAsync](/javascript/api/outlook/office.body#prependAsync_data__options__callback_)
-  - [item.body.setAsync](/javascript/api/outlook/office.body#setAsync_data__options__callback_)
-  - [item.body.setSelectedDataAsync](/javascript/api/outlook/office.body#setSelectedDataAsync_data__options__callback_)
-  - [item.cc.addAsync](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)
-  - [item.cc.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)
-  - [item.end.setAsync](/javascript/api/outlook/office.time#setAsync_dateTime__options__callback_)
-  - [item.location.setAsync](/javascript/api/outlook/office.location#setAsync_location__options__callback_)
-  - [item.optionalAttendees.addAsync](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)
-  - [item.optionalAttendees.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)
+  - [item.bcc.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))
+  - [item.bcc.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1))
+  - [item.body.prependAsync](/javascript/api/outlook/office.body#outlook-office-body-prependasync-member(1))
+  - [item.body.setAsync](/javascript/api/outlook/office.body#outlook-office-body-setasync-member(1))
+  - [item.body.setSelectedDataAsync](/javascript/api/outlook/office.body#outlook-office-body-setselecteddataasync-member(1))
+  - [item.cc.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))
+  - [item.cc.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1))
+  - [item.end.setAsync](/javascript/api/outlook/office.time#outlook-office-time-setasync-member(1))
+  - [item.location.setAsync](/javascript/api/outlook/office.location#outlook-office-location-setasync-member(1))
+  - [item.optionalAttendees.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))
+  - [item.optionalAttendees.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1))
   - [item.removeAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [item.requiredAttendees.addAsync](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)
-  - [item.requiredAttendees.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)
-  - [item.start.setAsync](/javascript/api/outlook/office.time#setAsync_dateTime__options__callback_)
-  - [item.subject.setAsync](/javascript/api/outlook/office.subject#setAsync_subject__options__callback_)
-  - [item.to.addAsync](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)
-  - [item.to.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)
+  - [item.requiredAttendees.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))
+  - [item.requiredAttendees.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1))
+  - [item.start.setAsync](/javascript/api/outlook/office.time#outlook-office-time-setasync-member(1))
+  - [item.subject.setAsync](/javascript/api/outlook/office.subject#outlook-office-subject-setasync-member(1))
+  - [item.to.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))
+  - [item.to.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1))
 
 ## <a name="readwriteitem-permission"></a>Разрешение ReadWriteItem
 
@@ -156,7 +151,7 @@ ms.locfileid: "59150617"
 - Создание, чтение и запись в любую папку или элемент в таком почтовом ящике.
 - Отправка элемента из такого почтового ящика
 
-С **помощью mailbox.makeEWSRequestAsync** можно получить доступ к следующим операциям EWS.
+Через **mailbox.makeEWSRequestAsync** можно получить доступ к следующим операциям EWS.
 
 - [CopyItem](/exchange/client-developer/web-service-reference/copyitem-operation)
 - [CreateFolder](/exchange/client-developer/web-service-reference/createfolder-operation)

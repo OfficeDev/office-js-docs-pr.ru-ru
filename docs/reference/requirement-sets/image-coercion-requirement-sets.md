@@ -1,23 +1,18 @@
 ---
 title: Наборы обязательных элементов для приведения изображений
-description: Поддержка наборов требований к принуждению изображений с Office надстройки в Excel, PowerPoint и Word.
+description: 'Поддержка наборов требований к принуждению изображений с Office надстройки в Excel, PowerPoint и Word.'
 ms.date: 09/08/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f0b80c0af8213eaa9e3695373ddc037c2e60cc3
-ms.sourcegitcommit: 3fe9e06a52c57532e7968dc007726f448069f48d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "59450795"
 ---
+
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 ## <a name="imagecoercion-11"></a>ImageCoercion 1.1
 
-ImageCoercion 1.1 позволяет преобразования в изображение () при записи `Office.CoercionType.Image` данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) метода. Поддерживаются следующие приложения.
+ImageCoercion 1.1 позволяет преобразования в изображение (`Office.CoercionType.Image`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) метода. Поддерживаются следующие приложения.
 
 - Excel 2013 г. и более поздней Windows
 - Excel 2016 и позднее на Mac
@@ -34,7 +29,7 @@ ImageCoercion 1.1 позволяет преобразования в изобр�
 
 ## <a name="imagecoercion-12"></a>ImageCoercion 1.2
 
-ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) метода. Поддерживаются следующие приложения.
+ImageCoercion 1.2 позволяет преобразования в формат SVG (`Office.CoercionType.XmlSvg`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) метода. Поддерживаются следующие приложения.
 
 - Excel 2021 г. и более поздней Windows
 - Excel 2021 г. и позднее на Mac

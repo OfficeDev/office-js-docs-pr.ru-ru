@@ -1,18 +1,13 @@
 ---
 title: Добавление поддержки мобильных устройств в надстройку Outlook
-description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
+description: 'Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.'
 ms.date: 07/16/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 0237b880610bffef675e011d7c02f70cef4346d5
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154242"
 ---
+
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
-Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к [](#code-considerations)той же функции (с некоторыми ограничениями), что и в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
+Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к той же функции (с некоторыми ограничениями[), что](#code-considerations) и в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 
 ## <a name="updating-the-manifest"></a>Обновление манифеста
 
@@ -20,7 +15,7 @@ ms.locfileid: "59154242"
 
 Этот элемент содержит все данные для загрузки надстройки в мобильных клиентах. Это позволяет определять совершенно другие элементы пользовательского интерфейса и файлы JavaScript для мобильной версии.
 
-В следующем примере показана одна кнопка области задач в `MobileFormFactor` элементе.
+В следующем примере показана одна кнопка области задач в элементе `MobileFormFactor` .
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
@@ -72,7 +67,7 @@ ms.locfileid: "59154242"
 
 Метод [Office.context.mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) не поддерживается в Outlook Mobile. По мере возможности надстройки должны отдавать предпочтение данным из API Office.js. Если надстройкам требуются сведения, которые не предоставляет API Office.js, то для доступа к почтовому ящику пользователя следует использовать [интерфейсы REST API Outlook](/outlook/rest/).
 
-Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.context.mailbox.restUrl,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties) которое можно использовать для поиска конечной точки API REST для пользователя.
+Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.context.mailbox.restUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties), которое можно использовать для поиска конечной точки API REST для пользователя.
 
 ### <a name="pinch-zoom"></a>Масштабирование жестами
 
@@ -80,11 +75,11 @@ ms.locfileid: "59154242"
 
 ### <a name="close-task-panes"></a>Закрытие области задач
 
-В Outlook Mobile области задач занимают весь экран, поэтому для возврата к сообщению их необходимо закрывать. Рекомендуем использовать метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui#closeContainer__), чтобы закрыть область задач по завершении сценария.
+В Outlook Mobile области задач занимают весь экран, поэтому для возврата к сообщению их необходимо закрывать. Рекомендуем использовать метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui#office-office-ui-closecontainer-member(1)), чтобы закрыть область задач по завершении сценария.
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 
-В настоящее время надстройки в Outlook Mobile поддерживают активацию только при чтении сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний в Интернете можно активировать в режиме Организатор встречи. Дополнительные данные об этом исключении (включая доступные API) см. в Outlook мобильной надстройки для поставщика [онлайн-собраний.](online-meeting.md#available-apis)
+В настоящее время надстройки в Outlook Mobile поддерживают активацию только при чтении сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний в Интернете можно активировать в режиме Организатор встречи. Дополнительные данные об этом исключении (включая доступные API) см. в Outlook мобильной надстройки для поставщика [онлайн-собраний](online-meeting.md#available-apis).
 
 ### <a name="unsupported-apis"></a>Неподдерживаемые интерфейсы API
 
@@ -107,6 +102,6 @@ API, введенные в наборе требований 1.6 или боле
 - [Office.context.mailbox.item.getRegexMatches](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
 - [Office.context.mailbox.item.getRegexMatchesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 [Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients)

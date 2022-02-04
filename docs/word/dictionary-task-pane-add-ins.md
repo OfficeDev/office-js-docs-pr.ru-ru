@@ -1,15 +1,11 @@
 ---
 title: Создание надстройки области задач словаря
-description: Узнайте, как создать надстройку области задач словаря
+description: 'Узнайте, как создать надстройку области задач словаря'
 ms.date: 09/26/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f340afbc372d37f3d82c55583906e4212e01da0a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154014"
 ---
+
+
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 
 
@@ -23,8 +19,8 @@ ms.locfileid: "59154014"
 
 ![Приложение Dictionary с определением.](../images/dictionary-agave-01.jpg)
 
-Это зависит от вас, чтобы  определить, если щелкнув ссылку См. больше в HTML-интерфейсе надстройки словаря отображает дополнительные сведения в области задач или открывает отдельное окно браузера на полную веб-страницу для выбранного слова или фразы.
-На рисунке 2 показана команда контекстного меню **Define,** которая позволяет пользователям быстро запускать установленные словари. На рисунках 3–5 перечислены все расположения в пользовательском интерфейсе Office, в которых словарные XML-службы предоставляют определения в Word 2013.
+Это зависит от вас, чтобы определить, если щелкнув ссылку См. больше в HTML-интерфейсе надстройки словаря отображает дополнительные сведения в области задач или открывает отдельное окно браузера на полную веб-страницу для выбранного слова или фразы.
+На рисунке 2 показана команда **контекстного меню Define** , которая позволяет пользователям быстро запускать установленные словари. На рисунках 3–5 перечислены все расположения в пользовательском интерфейсе Office, в которых словарные XML-службы предоставляют определения в Word 2013.
 
 *Рис. 2. Команда определения в контекстном меню*
 
@@ -54,38 +50,38 @@ ms.locfileid: "59154014"
     
 В следующих разделах приведены примеры создания этих компонентов.
 
-## <a name="creating-a-dictionary-xml-web-service&quot;></a>Создание словарной веб-службы XML
+## <a name="creating-a-dictionary-xml-web-service"></a>Создание словарной веб-службы XML
 
 
 Веб-служба XML должна возвращать запросы веб-служб в виде XML-кода, который соответствует XML-схеме OfficeDefinitions. В двух следующих разделах описывается XML-схема OfficeDefinitions и предоставлен пример возможности кодирования веб-службы XML, возвращающей запросы в этом формате XML.
 
 
-### <a name=&quot;officedefinitions-xml-schema&quot;></a>XML-схема OfficeDefinitions
+### <a name="officedefinitions-xml-schema"></a>XML-схема OfficeDefinitions
 
 В следующем коде отображается XSD для XML-схемы OfficeDefinitions.
 
 
 ```XML
-<?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema
-  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-  xmlns:xs=&quot;https://www.w3.org/2001/XMLSchema&quot;
-  targetNamespace=&quot;http://schemas.microsoft.com/NLG/2011/OfficeDefinitions&quot;
-  xmlns=&quot;http://schemas.microsoft.com/NLG/2011/OfficeDefinitions&quot;>
-  <xs:element name=&quot;Result&quot;>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="https://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://schemas.microsoft.com/NLG/2011/OfficeDefinitions"
+  xmlns="http://schemas.microsoft.com/NLG/2011/OfficeDefinitions">
+  <xs:element name="Result">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name=&quot;SeeMoreURL&quot; type=&quot;xs:anyURI&quot;/>
-        <xs:element name=&quot;Definitions&quot; type=&quot;DefinitionListType&quot;/>
+        <xs:element name="SeeMoreURL" type="xs:anyURI"/>
+        <xs:element name="Definitions" type="DefinitionListType"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:complexType name=&quot;DefinitionListType&quot;>
+  <xs:complexType name="DefinitionListType">
     <xs:sequence>
-      <xs:element name=&quot;Definition&quot; maxOccurs=&quot;3&quot;>
+      <xs:element name="Definition" maxOccurs="3">
         <xs:simpleType>
-          <xs:restriction base=&quot;xs:normalizedString&quot;>
-            <xs:maxLength value=&quot;400&quot;/>
+          <xs:restriction base="xs:normalizedString">
+            <xs:maxLength value="400"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -94,13 +90,13 @@ ms.locfileid: "59154014"
 </xs:schema>
 ```
 
-Возвращенный XML, соответствующий схеме OfficeDefinitions, состоит из корневого элемента, который содержит элемент с от нуля до трех детских элементов, каждый из которых содержит определения длиной не более `Result` `Definitions` `Definition` 400 символов. Кроме того, в элементе должен быть указан URL-адрес полной страницы на сайте `SeeMoreURL` словаря. В следующем примере показана структура возвращенного XML-кода, соответствующего схеме OfficeDefinitions.
+Возвращенный XML, соответствующий схеме OfficeDefinitions `Result` `Definitions` `Definition` , состоит из корневого элемента, который содержит элемент с от нуля до трех детских элементов, каждый из которых содержит определения длиной не более 400 символов. Кроме того, в элементе `SeeMoreURL` должен быть указан URL-адрес полной страницы на сайте словаря. В следующем примере показана структура возвращенного XML-кода, соответствующего схеме OfficeDefinitions.
 
 ```XML
-<?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>
-<Result xmlns=&quot;http://schemas.microsoft.com/NLG/2011/OfficeDefinitions&quot;>
-  <SeeMoreURL xmlns=&quot;&quot;>www.bing.com/dictionary/search?q=example</SeeMoreURL>
-  <Definitions xmlns=&quot;&quot;>
+<?xml version="1.0" encoding="utf-8"?>
+<Result xmlns="http://schemas.microsoft.com/NLG/2011/OfficeDefinitions">
+  <SeeMoreURL xmlns="">www.bing.com/dictionary/search?q=example</SeeMoreURL>
+  <Definitions xmlns="">
     <Definition>Definition1</Definition>
     <Definition>Definition2</Definition>
     <Definition>Definition3</Definition>
@@ -110,7 +106,7 @@ ms.locfileid: "59154014"
 ```
 
 
-### <a name=&quot;sample-dictionary-xml-web-service&quot;></a>Пример словарной веб-службы XML
+### <a name="sample-dictionary-xml-web-service"></a>Пример словарной веб-службы XML
 
 Приведенный ниже код C# предоставляет простой пример написания кода для веб-службы XML, которая возвращает результат запроса словаря в XML-формате OfficeDefinitions.
 
@@ -129,7 +125,7 @@ using System.Net;
 /// <summary>
 /// Summary description for _Default
 /// </summary>
-[WebService(Namespace = &quot;http://tempuri.org/")]
+[WebService(Namespace = "http://tempuri.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // To allow this web service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 // [System.Web.Script.Services.ScriptService]
@@ -258,7 +254,7 @@ public class WebService : System.Web.Services.WebService {
 </OfficeApp>
 ```
 
-Элемент и его детские элементы, специфические для создания файла манифеста надстройки словаря, описаны `Dictionary` в следующих разделах. Сведения о других элементах в файле манифеста см. в Office [XML-манифеста надстройки.](../develop/add-in-manifests.md)
+Элемент `Dictionary` и его детские элементы, специфические для создания файла манифеста надстройки словаря, описаны в следующих разделах. Сведения о других элементах в файле манифеста см. в Office [XML-манифеста надстройки](../develop/add-in-manifests.md).
 
 
 ### <a name="dictionary-element"></a>Элемент Dictionary
@@ -276,7 +272,7 @@ public class WebService : System.Web.Services.WebService {
 
  **Замечания**
 
-Элемент и его детские элементы добавляются в манифест надстройки области задач при создании надстройки `Dictionary` словаря.
+Элемент `Dictionary` и его детские элементы добавляются в манифест надстройки области задач при создании надстройки словаря.
 
 
 #### <a name="targetdialects-element"></a>Элемент TargetDialects
@@ -294,7 +290,7 @@ public class WebService : System.Web.Services.WebService {
 
  **Замечания**
 
-Элемент и его детские элементы указывают набор региональных `TargetDialects` языков, которые содержатся в словаре. Например, если словарь применяется к испанскому языку, на котором разговаривают в Мексике и Перу, но не в Испании, это можно указать в данном элементе. Не указывайте в этом манифесте более одного языка (например, испанский и английский). Публикуйте разные языки для отдельных словарей.
+Элемент `TargetDialects` и его детские элементы указывают набор региональных языков, которые содержатся в словаре. Например, если словарь применяется к испанскому языку, на котором разговаривают в Мексике и Перу, но не в Испании, это можно указать в данном элементе. Не указывайте в этом манифесте более одного языка (например, испанский и английский). Публикуйте разные языки для отдельных словарей.
 
  **Пример**
 
@@ -377,7 +373,7 @@ public class WebService : System.Web.Services.WebService {
 
 В этом элементе указывается начальный текст ссылки, который будет отображаться в строке под контентом, возвращенным из веб-службы (например, "Источник:" или "Предоставлено:").
 
-Для этого элемента можно указать значения для дополнительных локализов с помощью `Override` элемента. Например, если пользователь использует версию Office на испанском языке, но задействует английский словарь, то в строке ссылки будет написано "Resultados por: Bing", а не "Results by: Bing" или "Источник: Bing". Дополнительные сведения о том, как указать значения для дополнительных локализов, см. в разделе "Предоставление параметров для различных локализов" в манифесте XML надстройки Office [надстройки.](../develop/add-in-manifests.md)
+Для этого элемента можно указать значения для дополнительных локализов с помощью `Override` элемента. Например, если пользователь использует версию Office на испанском языке, но задействует английский словарь, то в строке ссылки будет написано "Resultados por: Bing", а не "Results by: Bing" или "Источник: Bing". Дополнительные сведения о том, как указать значения для дополнительных локализов, см. в разделе "Предоставление параметров для различных локализов" в манифесте [XML надстройки Office надстройки](../develop/add-in-manifests.md).
 
  **Пример**
 
@@ -529,13 +525,13 @@ a:hover, a:active
 Основные участники API Office JavaScript (Office.js), которые вызваны из этой реализации, являются следующими:
 
 
-- Событие [](/javascript/api/office) инициализации объекта, которое повышается при инициализации контекста надстройки, и предоставляет доступ к экземпляру объекта Document, который представляет документ, с которым взаимодействует надстройка. `Office` [](/javascript/api/office/office.document)
+- [](/javascript/api/office/office.document) Событие [](/javascript/api/office) инициализации `Office` объекта, которое повышается при инициализации контекста надстройки, и предоставляет доступ к экземпляру объекта Document, который представляет документ, с которым взаимодействует надстройка.
     
-- Метод [addHandlerAsync](/javascript/api/office/office.document#addHandlerAsync_eventType__handler__options__callback_) объекта, который вызван в функцию, чтобы добавить обработник событий для события `Document` `initialize` [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа для прослушивания изменений выбора пользователя.
+- Метод [addHandlerAsync](/javascript/api/office/office.document#office-office-document-addhandlerasync-member(1)) `Document` объекта, `initialize` который вызван в функцию, чтобы добавить обработник событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа для прослушивания изменений выбора пользователя.
     
-- Метод [getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) объекта, который вызывается в функции при поднятии обработника событий, чтобы получить выбранное пользователем слово или фразу, принудить его к простому тексту, а затем выполнить функцию асинхронного `Document` `tryUpdatingSelectedWord()` `SelectionChanged` `selectedTextCallback` вызова.
+- Метод [getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) `Document` объекта, `tryUpdatingSelectedWord()` `SelectionChanged` который вызывается в функции при поднятии обработника событий, чтобы получить выбранное пользователем слово или фразу, принудить его к простому тексту, `selectedTextCallback` а затем выполнить функцию асинхронного вызова.
     
-- Когда выполняется асинхронная функция обратного вызова, которая передается в качестве аргумента обратного вызова метода, она получает значение выбранного текста при возвращении обратного `selectTextCallback`  `getSelectedDataAsync` вызова. Оно получает это значение из выбранного аргумента _CallbackText_ (который имеет тип [AsyncResult)](/javascript/api/office/office.asyncresult)с помощью свойства значения возвращаемого [](/javascript/api/office/office.asyncresult#status) `AsyncResult` объекта.
+- Когда выполняется `selectTextCallback`  `getSelectedDataAsync` асинхронная функция обратного вызова, которая передается в качестве аргумента обратного вызова метода, она получает значение выбранного текста при возвращении обратного вызова. Оно получает это значение из аргумента _selectedText_ обратного вызова (который имеет тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства значения возвращаемого [](/javascript/api/office/office.asyncresult#office-office-asyncresult-status-member) `AsyncResult` объекта.
     
 - Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.
     

@@ -1,18 +1,13 @@
 ---
-title: Основные понятия, связанные с типами данных API JavaScript для Excel
+title: 'Основные понятия, связанные с типами данных API JavaScript для Excel'
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
 ms.date: 01/14/2021
 ms.topic: conceptual
 ms.prod: excel
-ms.custom: scenarios:getting-started
+ms.custom: 'scenarios:getting-started'
 ms.localizationpriority: high
-ms.openlocfilehash: a769010ad46af7bba2210d9a6f9d66082cb3f815
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074310"
 ---
+
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
 > [!NOTE]
@@ -29,11 +24,11 @@ ms.locfileid: "62074310"
 
 ## <a name="core-concepts"></a>Основные понятия
 
-Используйте свойство [`Range.valuesAsJson`](/javascript/api/excel/excel.range#valuesAsJson) для работы со значениями типов данных. Это свойство аналогично свойству [Range.values](/javascript/api/excel/excel.range#values), но `Range.values` возвращает только четыре основных типа: значения строки, числа, логического типа или ошибки. Свойство `Range.valuesAsJson` может возвращать расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+Используйте свойство [`Range.valuesAsJson`](/javascript/api/excel/excel.range#excel-excel-range-valuesasjson-member) для работы со значениями типов данных. Это свойство аналогично свойству [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member), но `Range.values` возвращает только четыре основных типа: значения строки, числа, логического типа или ошибки. Свойство `Range.valuesAsJson` может возвращать расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
 
 ### <a name="json-schema"></a>Схема JSON
 
-Каждый тип данных использует схему метаданных JSON, разработанную для этого типа. Это определяет [CellValueType](/javascript/api/excel/excel.cellvaluetype) данных и дополнительные сведения о ячейке, например `basicValue`, `numberFormat` или `address`. Каждый тип `CellValueType` имеет свойства, доступные в соответствии с этим типом. Например, тип `webImage` включает свойства [altText](/javascript/api/excel/excel.webimagecellvalue#altText) и [attribution](/javascript/api/excel/excel.webimagecellvalue#attribution). В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
+Каждый тип данных использует схему метаданных JSON, разработанную для этого типа. Это определяет [CellValueType](/javascript/api/excel/excel.cellvaluetype) данных и дополнительные сведения о ячейке, например `basicValue`, `numberFormat` или `address`. Каждый тип `CellValueType` имеет свойства, доступные в соответствии с этим типом. Например, тип `webImage` включает свойства [altText](/javascript/api/excel/excel.webimagecellvalue#excel-excel-webimagecellvalue-alttext-member) и [attribution](/javascript/api/excel/excel.webimagecellvalue#excel-excel-webimagecellvalue-attribution-member). В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
 
 Схема метаданных JSON для каждого типа данных также включает одно или несколько свойств только для чтения, которые используются в расчетах при обнаружении несовместимых сценариев, таких как версия Excel, которая не соответствует минимальному требованию к номеру сборки для функции типов данных. Свойство `basicType` является частью метаданных JSON каждого типа данных и всегда является свойством только для чтения. Свойство `basicType` используется в качестве резервного, если тип данных не поддерживается или имеет неправильный формат.
 

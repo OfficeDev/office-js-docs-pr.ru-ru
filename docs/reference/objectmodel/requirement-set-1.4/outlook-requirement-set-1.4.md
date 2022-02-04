@@ -1,15 +1,10 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.4
-description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.4.
+description: 'Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.4.'
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e9e39f3682748498dec38708ee61568d8335b02a
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237618"
 ---
+
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
 Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
@@ -23,9 +18,9 @@ ms.locfileid: "60237618"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен [Office.context.ui.displayDialogAsync:](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#displayDialogAsync_startAddress__options__callback_)отображает диалоговое окно в Office приложении.
-- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#messageParent_message__messageOptions_). Доставляет сообщение из диалогового окна родительской странице.
-- Добавлен объект [Dialog](/javascript/api/office/office.dialog?view=outlook-js-1.4&preserve-view=true). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#displayDialogAsync_startAddress__options__callback_).
+- Добавлен [Office.context.ui.displayDialogAsync](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#office-office-ui-displaydialogasync-member(1)): отображает диалоговое окно в Office приложении.
+- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#office-office-ui-messageparent-member(1)). Доставляет сообщение из диалогового окна родительской странице.
+- Добавлен объект [Dialog](/javascript/api/office/office.dialog?view=outlook-js-1.4&preserve-view=true). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true#office-office-ui-displaydialogasync-member(1)).
 
 ## <a name="see-also"></a>См. также
 

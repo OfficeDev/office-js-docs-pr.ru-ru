@@ -1,15 +1,10 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.6
-description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.6.
+description: 'Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.6.'
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fd96fbd8f310b4e194fe2601dd1900eae49c713
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151605"
 ---
+
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
 Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
@@ -30,7 +25,7 @@ ms.locfileid: "59151605"
 - Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.item.getSelectedRegExMatches](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает строковые значения в выделенном совпадении, соответствующие регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.displayNewMessageForm](office.context.mailbox.md#methods). Добавляет новую функцию, которая открывает новую форму сообщения.
-- Добавлен объект [Office.context.mailbox.userProfile.accountType](/javascript/api/outlook/office.userprofile?view=outlook-js-1.6&preserve-view=true#accountType). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
+- Добавлен объект [Office.context.mailbox.userProfile.accountType](/javascript/api/outlook/office.userprofile?view=outlook-js-1.6&preserve-view=true#outlook-office-userprofile-accounttype-member). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
 
 ## <a name="see-also"></a>См. также
 

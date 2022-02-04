@@ -1,15 +1,10 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.5
-description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.5.
+description: 'Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.5.'
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 38c219dc5ecf4789bb4369b31888e16d812ebed2
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237779"
 ---
+
 # <a name="outlook-add-in-api-requirement-set-15"></a>Набор обязательных элементов API для надстройки Outlook 1.5
 
 Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
@@ -19,7 +14,7 @@ ms.locfileid: "60237779"
 
 ## <a name="whats-new-in-15"></a>Новые возможности в версии 1.5
 
-Набор требований 1.5 включает все функции набора [требований 1.4.](../requirement-set-1.4/outlook-requirement-set-1.4.md) В нем добавлены перечисленные ниже возможности.
+Набор требований 1.5 включает все функции набора [требований 1.4](../requirement-set-1.4/outlook-requirement-set-1.4.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлена поддержка [закрепляемых областей задач](../../../outlook/pinnable-taskpane.md).
 - Добавлена поддержка вызовов [REST API](../../../outlook/use-rest-api.md).
@@ -29,11 +24,11 @@ ms.locfileid: "60237779"
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен метод [Office.context.mailbox.addHandlerAsync](office.context.mailbox.md#methods). Добавляет обработчик для поддерживаемого события.
-- Добавлен [Office.context.mailbox.removeHandlerAsync:](office.context.mailbox.md#methods)Удаляет обработчики событий для поддерживаемого типа событий.
+- Добавлен [Office.context.mailbox.removeHandlerAsync](office.context.mailbox.md#methods): удаляет обработчики событий для поддерживаемого типа событий.
 - Добавлено свойство [Office.EventType](office.md#eventtype-string). Указывает событие, связанное с обработчиком, и включает поддержку события ItemChanged.
 - Добавлен метод [Office.context.mailbox.restUrl](office.context.mailbox.md#properties). Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 - Изменен метод [Office.context.mailbox.getCallbackTokenAsync](office.context.mailbox.md#methods). Добавлен новый вариант этого метода с новой подписью (`getCallbackTokenAsync([options], callback)`). Исходная версия по-прежнему доступна и осталась без изменений.
-- Добавлен метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui?view=outlook-js-1.5&preserve-view=true#closeContainer__).
+- Добавлен метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui?view=outlook-js-1.5&preserve-view=true#office-office-ui-closecontainer-member(1)).
 - Изменен метод [Office.context.mailbox.item.addFileAttachmentAsync](office.context.mailbox.item.md#methods). Новое значение в словаре `options` — `isInline`. Оно указывает на то, что изображение встроено в текст сообщения.
 - Изменен метод [Office.context.mailbox.item.displayReplyAllForm](office.context.mailbox.item.md#methods). Новое значение в словаре `formData.attachments` — `isInline`. Оно указывает на то, что изображение встроено в текст сообщения.
 - Изменен метод [Office.context.mailbox.item.displayReplyForm](office.context.mailbox.item.md#methods). Новое значение в словаре `formData.attachments` — `isInline`. Оно указывает на то, что изображение встроено в текст сообщения.

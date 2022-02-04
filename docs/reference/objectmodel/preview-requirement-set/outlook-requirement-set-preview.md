@@ -1,15 +1,10 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
-description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
+description: 'Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.'
 ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d1efa2b2dca5a88a56fb5f54a84b790e08745ec
-ms.sourcegitcommit: 23ce57b2702aca19054e31fcb2d2f015b4183ba1
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "60681650"
 ---
+
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
 Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
@@ -20,9 +15,9 @@ ms.locfileid: "60681650"
 [!INCLUDE [Information about using preview APIs](../../../includes/using-preview-apis-host.md)]
 
 > [!TIP]
-> Можно просмотреть функции в Outlook в Интернете, настроив целевой выпуск на [Microsoft 365 клиента.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center) "Настройка доступа к предварительному просмотру" отмечена на этой странице для применимых функций.
+> Можно просмотреть функции в Outlook в Интернете, настроив целевой выпуск на [Microsoft 365 клиента](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center). "Настройка доступа к предварительному просмотру" отмечена на этой странице для применимых функций.
 >
-> Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью Microsoft 365 учетной записи, заполнив и подав [эту форму.](https://aka.ms/OWAPreview) В этих функциях отмечен "Запрос доступа к предварительному просмотру".
+> Для других функций можно запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью Microsoft 365 учетной записи, заполнив эту [форму](https://aka.ms/OWAPreview). В этих функциях отмечен "Запрос доступа к предварительному просмотру".
 
 Набор требований предварительного просмотра включает все функции [набора требований 1.11](../requirement-set-1.11/outlook-requirement-set-1.11.md).
 
@@ -32,9 +27,9 @@ ms.locfileid: "60681650"
 
 ### <a name="add-in-activation-on-items-protected-by-information-rights-management-irm"></a>Активация надстройки для элементов, защищенных управлением правами на информацию (IRM)
 
-Надстройки теперь могут активироваться в пунктах, защищенных IRM. Чтобы включить эту возможность, администратору клиента необходимо включить право использования, установив в Office параметр Разрешить программный `OBJMODEL` доступ.  Дополнительные [сведения см. в](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) дополнительных сведениях о правах и описаниях использования.
+Надстройки теперь могут активироваться в пунктах, защищенных IRM. Чтобы включить эту возможность, `OBJMODEL` администратору клиента необходимо включить право использования, установив в Office параметр **Разрешить** программный доступ. [Дополнительные сведения см. в дополнительных сведениях о](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) правах и описаниях использования.
 
-**Доступно в**: Outlook на Windows, начиная со сборки 13229.10000 (подключен к подписке Microsoft 365)
+**Доступно в**: Outlook на Windows, начиная с сборки 13229.10000 (подключен к подписке Microsoft 365)
 
 <br>
 
@@ -70,7 +65,7 @@ ms.locfileid: "60681650"
 
 #### <a name="officemailboxenumsappointmentsensitivitytype"></a>[Office. MailboxEnums.AppointmentSensitivityType](/javascript/api/outlook/office.mailboxenums.appointmentsensitivitytype?view=outlook-js-preview&preserve-view=true)
 
-Добавлен новый `AppointmentSensitivityType` переумыв, который представляет параметры чувствительности, доступные при встрече.
+Добавлен новый переумыв `AppointmentSensitivityType` , который представляет параметры чувствительности, доступные при встрече.
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 
@@ -102,7 +97,7 @@ ms.locfileid: "60681650"
 
 ### <a name="event-based-activation"></a>Активация на основе событий
 
-Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные ссылки на [поддерживаемые события.](../../../outlook/autolaunch.md#supported-events)
+Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные ссылки на [поддерживаемые события](../../../outlook/autolaunch.md#supported-events).
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 
@@ -128,7 +123,7 @@ ms.locfileid: "60681650"
 
 ### <a name="office-theme"></a>Тема Office
 
-#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true#officeTheme)
+#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true#office-office-context-officetheme-member)
 
 Добавлена возможность получения темы Office.
 
@@ -148,9 +143,9 @@ ms.locfileid: "60681650"
 
 ### <a name="shared-mailboxes"></a>Общие почтовые ящики
 
-Поддержка функций для общих папок (т. е. доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](../../../outlook/delegate-access.md).
+Поддержка функций для общих папок (то есть доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](../../../outlook/delegate-access.md).
 
-**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современный), Outlook на Mac
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная), Outlook на Mac
 
 ## <a name="see-also"></a>См. также
 

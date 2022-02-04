@@ -1,20 +1,15 @@
 ---
 title: Вставка данных в текст в надстройке Outlook
-description: Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.
+description: 'Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.'
 ms.date: 04/15/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 377c278464038a2b04d8b0ca49de92530e3724d9
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154103"
 ---
+
 # <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>Вставка данных в текст при создании встречи или сообщения в Outlook
 
-Вы можете использовать асинхронные методы ([Body.getAsync](/javascript/api/outlook/office.body#getAsync_coercionType__options__callback_), [Body.getTypeAsync](/javascript/api/outlook/office.body#getTypeAsync_options__callback_), [Body.prependAsync](/javascript/api/outlook/office.body#prependAsync_data__options__callback_), [Body.setAsync](/javascript/api/outlook/office.body#setAsync_data__options__callback_) и [Body.setSelectedDataAsync](/javascript/api/outlook/office.body#setSelectedDataAsync_data__options__callback_)), чтобы получить тип основного текста и вставить данные в основной текст элемента встречи или сообщения, создаваемых пользователем. Эти асинхронные методы доступны только для надстроек создания. Чтобы использовать эти методы, необходимо настроить манифест для активации надстройки в Outlook, как описано в статье [Создание надстроек Outlook для форм создания](compose-scenario.md).
+Вы можете использовать асинхронные методы ([Body.getAsync](/javascript/api/outlook/office.body#outlook-office-body-getasync-member(1)), [Body.getTypeAsync](/javascript/api/outlook/office.body#outlook-office-body-gettypeasync-member(1)), [Body.prependAsync](/javascript/api/outlook/office.body#outlook-office-body-prependasync-member(1)), [Body.setAsync](/javascript/api/outlook/office.body#outlook-office-body-setasync-member(1)) и [Body.setSelectedDataAsync](/javascript/api/outlook/office.body#outlook-office-body-setselecteddataasync-member(1))), чтобы получить тип основного текста и вставить данные в основной текст элемента встречи или сообщения, создаваемых пользователем. Эти асинхронные методы доступны только для надстроек создания. Чтобы использовать эти методы, необходимо настроить манифест для активации надстройки в Outlook, как описано в статье [Создание надстроек Outlook для форм создания](compose-scenario.md).
 
-В Outlook пользователь может создавать сообщения (текстовые, а также в формате HTML и RTF) и встречи (в формате HTML). Перед вставкой всегда следует сначала проверить поддерживаемый формат элемента, позвонив **в getTypeAsync,** так как вам может потребоваться предпринять дополнительные действия. Значение, которое **возвращаетСяTypeAsync,** зависит от исходного формата элемента, а также от поддержки операционной системы устройства и приложения для редактирования в формате HTML (1). Затем соответствующим образом укажите параметр _coercionType_ метода **prependAsync** или **setSelectedDataAsync** (2) для вставки данных, как показано в таблице ниже. Если вы не укажете аргумент, методы **prependAsync** и **setSelectedDataAsync** поведут себя так, как будто данные вставляются в текстовом формате.
+В Outlook пользователь может создавать сообщения (текстовые, а также в формате HTML и RTF) и встречи (в формате HTML). Перед вставкой всегда следует сначала проверить поддерживаемый формат элемента, позвонив **в getTypeAsync**, так как вам может потребоваться предпринять дополнительные действия. Значение, которое **возвращаетСяTypeAsync** , зависит от исходного формата элемента, а также от поддержки операционной системы устройства и приложения для редактирования в формате HTML (1). Затем соответствующим образом укажите параметр _coercionType_ метода **prependAsync** или **setSelectedDataAsync** (2) для вставки данных, как показано в таблице ниже. Если вы не укажете аргумент, методы **prependAsync** и **setSelectedDataAsync** поведут себя так, как будто данные вставляются в текстовом формате.
 
 <br/>
 
@@ -25,11 +20,11 @@ ms.locfileid: "59154103"
 |Текст|HTML|Текст или HTML|
 |HTML|HTML |HTML|
 
-1.  На планшетах и смартфонах **getTypeAsync** **возвращает Office. MailboxEnums.BodyType.Text,** если операционная система или приложение не поддерживают редактирование элемента, изначально созданного в HTML- формате HTML.
+1.  На планшетах и смартфонах **getTypeAsync** **возвращает Office. MailboxEnums.BodyType.Text**, если операционная система или приложение не поддерживают редактирование элемента, изначально созданного в HTML- формате HTML.
 
-2.  Если вставить данные htmL и **getTypeAsync** возвращает тип текста для этого элемента, реорганизуйте данные в виде текста и **вставьте их Office. MailboxEnums.BodyType.Text** как _coercionType_. Если просто вставить HTML-данные с типом текстового принуждения, приложение будет отображать HTML-теги в виде текста. Если вы попытайтесь вставить **HTML-данные** сOffice.MailboxEnums.BodyType.Htmlкак _coercionType,_ вы получите ошибку.
+2.  Если вставить данные htmL и **getTypeAsync** возвращает тип текста для этого элемента, реорганизуйте данные в виде текста и **вставьте их Office. MailboxEnums.BodyType.Text** как _coercionType_. Если просто вставить HTML-данные с типом текстового принуждения, приложение будет отображать HTML-теги в виде текста. Если вы попытайтесь вставить **HTML-данные** сOffice.MailboxEnums.BodyType.Htmlкак _coercionType_, вы получите ошибку.
 
-В дополнение к _coercionType,_ как и большинство асинхронных методов в API Office JavaScript, **getTypeAsync,** **prependAsync** и **setSelectedDataAsync** принимают другие необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+В дополнение к _coercionType_, как и большинство асинхронных методов в API Office JavaScript, **getTypeAsync**, **prependAsync** и **setSelectedDataAsync** принимают другие необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="insert-data-at-the-current-cursor-position"></a>Вставка данных в текущей позиции курсора
@@ -37,7 +32,7 @@ ms.locfileid: "59154103"
 
 В этом разделе представлен пример кода, который использует **getTypeAsync** для проверки типа текста создаваемого элемента, а затем вызывает метод **setSelectedDataAsync** для вставки данных в текущем положении курсора.
 
-Вы можете передать метод обратного вызова и необязательные входные параметры в **getTypeAsync**. Тогда состояние и результаты будут возвращены в параметре вывода _asyncResult_. Если метод выполнен успешно, вы получите тип текста элемента в свойстве [AsyncResult.value](/javascript/api/office/office.asyncresult#value), значение которого — "text" или "html".
+Вы можете передать метод обратного вызова и необязательные входные параметры в **getTypeAsync**. Тогда состояние и результаты будут возвращены в параметре вывода _asyncResult_. Если метод выполнен успешно, вы получите тип текста элемента в свойстве [AsyncResult.value](/javascript/api/office/office.asyncresult#office-office-asyncresult-value-member), значение которого — "text" или "html".
 
 Необходимо передать строку данных как входной параметр метода **setSelectedDataAsync**. В зависимости от типа текста элемента можно указать эту строку в виде текста или HTML соответственно. Как было сказано ранее, при необходимости тип вставляемых данных можно указать в параметре _coercionType_. Кроме того, вы можете предоставить метод обратного вызова и его параметры в качестве дополнительных входных параметров.
 

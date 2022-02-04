@@ -3,32 +3,27 @@ title: Get and set internet headers
 description: Как получить и установить интернет-заготки в сообщении в Outlook надстройки.
 ms.date: 04/28/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 9784ef16c70e273e6bd1c242ffe91d97aa5d40ed
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151455"
 ---
+
 # <a name="get-and-set-internet-headers-on-a-message-in-an-outlook-add-in"></a>Получите и установите в надстройки сообщение в Outlook в интернете
 
 ## <a name="background"></a>Общие сведения
 
 Обычное требование Outlook разработке надстройки — хранить настраиваемые свойства, связанные с надстройки на разных уровнях. В настоящее время настраиваемые свойства хранятся на уровне элемента или почтового ящика.
 
-- Уровень элемента . Для свойств, применимых к определенному элементу, используйте [объект CustomProperties.](/javascript/api/outlook/office.customproperties) Например, храним код клиента, связанный с человеком, отправив сообщение.
-- Уровень почтовых ящиков . Для свойств, применимых ко всем почтовым пунктам в почтовом ящике пользователя, используйте объект [RoamingSettings.](/javascript/api/outlook/office.roamingsettings) Например, храните предпочтения пользователя, чтобы показать температуру в определенной шкале.
+- Уровень элемента . Для свойств, применимых к определенному элементу, используйте [объект CustomProperties](/javascript/api/outlook/office.customproperties) . Например, храним код клиента, связанный с человеком, отправив сообщение.
+- Уровень почтовых ящиков . Для свойств, применимых ко всем почтовым пунктам в почтовом ящике пользователя, используйте объект [RoamingSettings](/javascript/api/outlook/office.roamingsettings) . Например, храните предпочтения пользователя, чтобы показать температуру в определенной шкале.
 
 Оба типа свойств не сохраняются после того, как элемент покидает сервер Exchange, чтобы получатели электронной почты не могли получить какие-либо свойства, установленные на элементе. Поэтому разработчики не могут получить доступ к этим настройкам или другим свойствам MIME, чтобы включить сценарии лучшего чтения.
 
-Хотя существует способ настроить интернет-заготки с помощью запросов EWS, в некоторых случаях запрос EWS не будет работать. Например, в режиме Compose Outlook на рабочем столе id элемента не синхронизируется в  `saveAsync`   кэшизированном режиме.
+Хотя существует способ настроить интернет-заготки с помощью запросов EWS, в некоторых случаях запрос EWS не будет работать. Например, в режиме Compose Outlook рабочем столе id `saveAsync`  элемента не синхронизирован в кэшном режиме onin.
 
 > [!TIP]
-> Дополнительные данные об использовании этих параметров см. в Outlook получить и установить [метаданные](metadata-for-an-outlook-add-in.md) надстройки для надстройки.
+> Дополнительные данные об использовании этих параметров см. в Outlook надстройки get and set [add-in](metadata-for-an-outlook-add-in.md).
 
 ## <a name="purpose-of-the-internet-headers-api"></a>Назначение API для интернет-заголовок
 
-Введенные [в набор требований 1.8,](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md)API-API для интернет-заготчиков позволяют разработчикам:
+Введенные [в набор требований 1.8](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md), API-API для интернет-заготчиков позволяют разработчикам:
 
 - Печать сведений об электронной почте, которая сохраняется после Exchange всех клиентов.
 - Ознакомьтесь с информацией по электронной почте, которая сохранялась после Exchange всех клиентов в сценариях чтения почты.
@@ -38,7 +33,7 @@ ms.locfileid: "59151455"
 
 ## <a name="set-internet-headers-while-composing-a-message"></a>Настройка интернет-заготов при сочинении сообщения
 
-Попробуйте использовать [свойство item.internetHeaders](/javascript/api/outlook/office.messagecompose#internetHeaders) для управления настраиваемые интернет-заголовок, которые вы поместите в текущем сообщении в режиме Compose.
+Попробуйте использовать [свойство item.internetHeaders](/javascript/api/outlook/office.messagecompose#outlook-office-messagecompose-internetheaders-member) для управления настраиваемые интернет-заголовок, которые вы поместите в текущем сообщении в режиме Compose.
 
 ### <a name="set-get-and-remove-custom-headers-example"></a>Установите, получите и удалите пример настраиваемой заготки
 
@@ -107,7 +102,7 @@ Selected headers: {"x-preferred-fruit":"orange","x-preferred-vegetable":"broccol
 
 ## <a name="get-internet-headers-while-reading-a-message"></a>Получить заготки в Интернете при чтении сообщения
 
-Попробуйте [вызывать item.getAllInternetHeadersAsync,](/javascript/api/outlook/office.messageread#getAllInternetHeadersAsync_options__callback_) чтобы получить интернет-заголовок текущего сообщения в режиме Чтения.
+Попробуйте [вызывать item.getAllInternetHeadersAsync](/javascript/api/outlook/office.messageread#outlook-office-messageread-getallinternetheadersasync-member(1)) , чтобы получить интернет-заголовок текущего сообщения в режиме Чтения.
 
 ### <a name="get-sender-preferences-from-current-mime-headers-example"></a>Получите предпочтения отправителей из текущего примера заглавных окей MIME
 
@@ -132,7 +127,7 @@ Sender's preferred vegetable: broccoli
 ```
 
 > [!IMPORTANT]
-> Этот пример работает для простых случаев. Для получения более сложных сведений (например, нескольких экземпляров или сложенных значений, описанных в [RFC 2822),](https://tools.ietf.org/html/rfc2822)попробуйте использовать соответствующую библиотеку для разрисовки MIME.
+> Этот пример работает для простых случаев. Для получения более сложных сведений (например, нескольких экземпляров или сложенных значений, описанных в [RFC 2822](https://tools.ietf.org/html/rfc2822)), попробуйте использовать соответствующую библиотеку для разрисовки MIME.
 
 ## <a name="recommended-practices"></a>Рекомендации
 
@@ -143,6 +138,6 @@ Sender's preferred vegetable: broccoli
 - Создайте минимальное количество необходимых загодеров.
 - Заглавные имена, чтобы можно было повторно использовать и обновлять их значения позже. Таким образом, избегайте именования заглавных имен в переменной (например, на основе ввода пользователя, timestamp и т.д.).
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Просмотр и изменение метаданных для надстройки Outlook](metadata-for-an-outlook-add-in.md)

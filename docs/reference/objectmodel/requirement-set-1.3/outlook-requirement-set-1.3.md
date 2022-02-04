@@ -1,15 +1,10 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.3
-description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.3.
+description: 'Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.3.'
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: a8688d5d63cd658084bd0ba4601ed85a631bf8d8
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237771"
 ---
+
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
 Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
@@ -19,18 +14,18 @@ ms.locfileid: "60237771"
 
 ## <a name="whats-new-in-13"></a>Новые возможности в версии 1.3
 
-Набор требований 1.3 включает все функции набора [требований 1.2.](../requirement-set-1.2/outlook-requirement-set-1.2.md) В нем добавлены перечисленные ниже возможности.
+Набор требований 1.3 включает все функции набора [требований 1.2](../requirement-set-1.2/outlook-requirement-set-1.2.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлена поддержка [команд надстроек](../../../outlook/add-in-commands-for-outlook.md).
 - Добавлена возможность сохранять и закрывать создаваемый элемент.
-- Расширенный [объект Body,](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true) позволяющий надстройки получать или устанавливать все тело.
+- Расширенный [объект Body](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true) , позволяющий надстройки получать или устанавливать все тело.
 - Добавлены методы для преобразования идентификаторов из формата EWS в формат REST и наоборот.
 - Появилась возможность добавлять сообщения уведомления на информационную панель элементов.
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен метод [Body.getAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#getAsync_coercionType__options__callback_). Возвращает текущий текст в указанном формате.
-- Добавлен метод [Body.setAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#setAsync_data__options__callback_). Заменяет весь текст указанным текстом.
+- Добавлен метод [Body.getAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#outlook-office-body-getasync-member(1)). Возвращает текущий текст в указанном формате.
+- Добавлен метод [Body.setAsync](/javascript/api/outlook/office.body?view=outlook-js-1.3&preserve-view=true#outlook-office-body-setasync-member(1)). Заменяет весь текст указанным текстом.
 - Добавлен объект [Event](/javascript/api/office/office.addincommands.event?view=outlook-js-1.3&preserve-view=true). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
 - Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#methods). Закрывает текущий создаваемый элемент.
 - Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#methods). Асинхронно сохраняет элемент.

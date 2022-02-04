@@ -1,18 +1,25 @@
 ---
 title: Элемент OfficeMenu в файле манифеста
-description: Элемент OfficeMenu определяет коллекцию элементов управления, которые будут добавлены в Office контексте.
-ms.date: 10/09/2018
+description: 'Элемент OfficeMenu определяет коллекцию элементов управления, которые будут добавлены в Office контексте.'
+ms.date: 02/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: eba4431fd31ee7df918014cb30d8085a4040880f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154073"
 ---
+
 # <a name="officemenu-element"></a>Элемент OfficeMenu
 
 Определяет коллекцию элементов управления, которые нужно добавить в контекстное меню Office. Применяется в надстройках Word, Excel, PowerPoint и OneNote.
+
+**Тип надстройки:** надстройки области задач
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Taskpane 1.0
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
+
+**Связанные с этими наборами требований**:
+
+- [AddinCommands 1.1](../requirement-sets/add-in-commands-requirement-sets.md)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -41,7 +48,7 @@ ms.locfileid: "59154073"
 
 ```xml
 <OfficeMenu id="ContextMenuCell">
-    <Control xsi:type="Menu" id="myMenuID">
+    <Control xsi:type="Menu" id="Contoso.myMenu">
       <Label resid="residLabel3" />
       <Supertip>
           <Title resid="residLabel" />

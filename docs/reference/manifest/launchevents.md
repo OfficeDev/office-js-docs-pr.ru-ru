@@ -1,20 +1,21 @@
 ---
 title: LaunchEvents в файле манифеста
 description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
-ms.date: 05/11/2021
+ms.date: 02/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 02e0b21d65733492a783ffb099caf9e76225e53f
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151246"
 ---
+
 # <a name="launchevents-element"></a>Элемент LaunchEvents
 
-Настраивает надстройка для активации на основе поддерживаемых событий. Ребенок [`<ExtensionPoint>`](extensionpoint.md) элемента. Дополнительные сведения см. в Outlook [надстройки](../../outlook/autolaunch.md)для активации на основе событий.
+Настраивает надстройка для активации на основе поддерживаемых событий. Ребенок элемента [`<ExtensionPoint>`](extensionpoint.md) . Дополнительные сведения см. в Outlook [надстройки для активации на основе событий](../../outlook/autolaunch.md).
 
 **Тип надстройки:** почтовая
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Почта 1.1
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,7 +32,7 @@ ms.locfileid: "59151246"
 
 ## <a name="contained-in"></a>Содержится в
 
-[ExtensionPoint](extensionpoint.md) **(Надстройка для почты LaunchEvent)**
+[ExtensionPoint](extensionpoint.md) (**надстройка для почты LaunchEvent** )
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -39,6 +40,6 @@ ms.locfileid: "59151246"
 |:-----|:-----|:-----|
 | [LaunchEvent](launchevent.md) | Да |  Карта поддерживаемого события для его функции в файле JavaScript для активации надстройки. |
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [LaunchEvent](launchevent.md)

@@ -1,17 +1,12 @@
 ---
 title: Надстройки PowerPoint
-description: Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.
+description: 'Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.'
 ms.date: 10/14/2020
 ms.topic: overview
-ms.custom: scenarios:getting-started
+ms.custom: 'scenarios:getting-started'
 ms.localizationpriority: high
-ms.openlocfilehash: 2b44b17b14f49e386c44d1581cf2d638005a9a5c
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514218"
 ---
+
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
 С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и в браузере. Можно создать два типа надстроек PowerPoint:
@@ -39,9 +34,9 @@ ms.locfileid: "61514218"
 
 В представленном ниже примере кода:
 
-- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](/javascript/api/office/office.document#getActiveViewAsync_options__callback_), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
+- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](/javascript/api/office/office.document#office-office-document-getactiveviewasync-member(1)), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
 
-- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](/javascript/api/office/office.document#addHandlerAsync_eventType__handler__options__callback_) для регистрации обработчика для события [Document.ActiveViewChanged](/javascript/api/office/office.document).
+- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](/javascript/api/office/office.document#office-office-document-addhandlerasync-member(1)) для регистрации обработчика для события [Document.ActiveViewChanged](/javascript/api/office/office.document).
 
 
 ```js
@@ -90,7 +85,7 @@ function registerActiveViewChanged() {
 
 ## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>Переход к определенному слайду презентации
 
-В представленном ниже примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_), чтобы получить объект JSON, возвращаемый свойством `asyncResult.value`, который включает в себя массив с именем `slides`. Массив `slides` содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
+В представленном ниже примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)), чтобы получить объект JSON, возвращаемый свойством `asyncResult.value`, который включает в себя массив с именем `slides`. Массив `slides` содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
 
 ```js
 function getSelectedRange() {
@@ -109,7 +104,7 @@ function getSelectedRange() {
 }
 ```
 
-В приведенном ниже примере кода функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](/javascript/api/office/office.document#goToByIdAsync_id__goToType__options__callback_) для перехода к первому слайду, который был определен показанной ранее функцией `getSelectedRange`.
+В приведенном ниже примере кода функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](/javascript/api/office/office.document#office-office-document-gotobyidasync-member(1)) для перехода к первому слайду, который был определен показанной ранее функцией `getSelectedRange`.
 
 ```js
 function goToFirstSlide() {
@@ -148,7 +143,7 @@ function goToSlideByIndex() {
 
 ## <a name="get-the-url-of-the-presentation"></a>Получение URL-адреса презентации
 
-В приведенном ниже примере кода функция `getFileUrl` вызывает метод [Document.getFileProperties](/javascript/api/office/office.document#getFilePropertiesAsync_options__callback_), чтобы получить URL-адрес файла презентации.
+В приведенном ниже примере кода функция `getFileUrl` вызывает метод [Document.getFileProperties](/javascript/api/office/office.document#office-office-document-getfilepropertiesasync-member(1)), чтобы получить URL-адрес файла презентации.
 
 ```js
 function getFileUrl() {

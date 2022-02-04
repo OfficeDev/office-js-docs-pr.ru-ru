@@ -1,18 +1,13 @@
 ---
 title: Просмотр или изменение времени встречи в надстройке Outlook
-description: Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.
+description: 'Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.'
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ab4016923a883a259a3c9c478639ae288b1ebdf7
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154121"
 ---
+
 # <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение времени при создании встречи в Outlook
 
-API Office JavaScript предоставляет асинхронные методы[(Time.getAsync](/javascript/api/outlook/office.time#getAsync_options__callback_) и [Time.setAsync),](/javascript/api/outlook/office.time#setAsync_dateTime__options__callback_)чтобы получить и установить время начала или окончания встречи, которую создает пользователь. Эти асинхронные методы доступны только для составить надстройки. Чтобы использовать эти методы, убедитесь, что манифест надстройки был настроен соответствующим образом для Outlook, чтобы активировать надстройки в композитных формах, как описано в create [Outlook](compose-scenario.md)надстройки для создания форм .
+API Office JavaScript предоставляет асинхронные методы ([Time.getAsync](/javascript/api/outlook/office.time#outlook-office-time-getasync-member(1)) и [Time.setAsync](/javascript/api/outlook/office.time#outlook-office-time-setasync-member(1))), чтобы получить и установить время начала или окончания встречи, которую создает пользователь. Эти асинхронные методы доступны только для составить надстройки. Чтобы использовать эти методы, убедитесь, что для Outlook надстройки необходимо настроить манифест надстройки, как описано в create [Outlook](compose-scenario.md) надстройки для создания форм.
 
 Свойства [start](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) и [end](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) доступны для встреч в формах создания и чтения. в форме чтения доступ к свойствам можно получить напрямую из родительского объекта, как в следующем примере:
 
@@ -38,7 +33,7 @@ item.start.getAsync
 item.end.getAsync
 ```
 
-Как и большинство асинхронных методов в API javaScript Office JavaScript, **getAsync** и **setAsync** принимают необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и большинство асинхронных методов в API JavaScript Office JavaScript, **getAsync** и **setAsync** принимают необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-the-start-or-end-time"></a>Получение времени начала или окончания
@@ -51,7 +46,7 @@ item.end.getAsync
 
 ```
 
-Чтобы использовать методы **item.start.getAsync** и **item.end.getAsync**, предоставьте метод обратного вызова, который проверяет состояние и результат асинхронного вызова. Вы можете указать любые необходимые аргументы метода обратного вызова с помощью дополнительного параметра _asyncContext_. Состояние, результаты и сообщения об ошибках можно получить с помощью выходного параметра _asyncResult_ метода обратного вызова. Если асинхронный вызов выполнен успешно, вы можете получить начальное время как объект **Date** в формате UTC, используя свойство [AsyncResult.value](/javascript/api/office/office.asyncresult#value).
+Чтобы использовать методы **item.start.getAsync** и **item.end.getAsync**, предоставьте метод обратного вызова, который проверяет состояние и результат асинхронного вызова. Вы можете указать любые необходимые аргументы метода обратного вызова с помощью дополнительного параметра _asyncContext_. Состояние, результаты и сообщения об ошибках можно получить с помощью выходного параметра _asyncResult_ метода обратного вызова. Если асинхронный вызов выполнен успешно, вы можете получить начальное время как объект **Date** в формате UTC, используя свойство [AsyncResult.value](/javascript/api/office/office.asyncresult#office-office-asyncresult-value-member).
 
 
 ```js

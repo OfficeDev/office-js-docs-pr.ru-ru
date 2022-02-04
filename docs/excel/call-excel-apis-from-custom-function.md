@@ -1,15 +1,10 @@
 ---
 title: Вызов Excel API JavaScript из настраиваемой функции
-description: Узнайте, какие Excel API JavaScript можно вызвать из настраиваемой функции.
+description: 'Узнайте, какие Excel API JavaScript можно вызвать из настраиваемой функции.'
 ms.date: 08/30/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 83d2e488d56fb9ab3e97b87160c71f44da2f8371
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150901"
 ---
+
 # <a name="call-excel-javascript-apis-from-a-custom-function"></a>Вызов Excel API JavaScript из настраиваемой функции
 
 Вызов Excel API JavaScript из пользовательских функций, чтобы получить данные о диапазоне и получить дополнительный контекст для вычислений. Вызов Excel API JavaScript с помощью настраиваемой функции может быть полезен, если:
@@ -24,7 +19,7 @@ ms.locfileid: "59150901"
 
 Чтобы вызвать Excel API JavaScript из настраиваемой функции, сначала требуется контекст. Используйте [Excel. Запрос объектаContext](/javascript/api/excel/excel.requestcontext) для получения контекста. Затем используйте контекст для вызова API, необходимых в книге.
 
-В следующем примере кода показано, как использовать для получения значения из `Excel.RequestContext` ячейки в книге. В этом примере параметр передается в метод `address` Excel API JavaScript [Worksheet.getRange](/javascript/api/excel/excel.worksheet#getRange_address_) и должен быть введен в качестве строки. Например, настраиваемая функция, вступив в пользовательский Excel пользовательского интерфейса, должна следовать шаблону , где находится адрес ячейки, из которой можно получить `=CONTOSO.GETRANGEVALUE("A1")` `"A1"` значение.
+В следующем примере кода показано, `Excel.RequestContext` как использовать для получения значения из ячейки в книге. В этом примере `address` параметр передается в метод Excel JavaScript API [Worksheet.getRange](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getrange-member(1)) и должен быть введен в качестве строки. Например, настраиваемая функция, вступив Excel пользовательского `=CONTOSO.GETRANGEVALUE("A1")`интерфейса, должна следовать шаблону , `"A1"` где находится адрес ячейки, из которой можно получить значение.
 
 ```JavaScript
 /**
@@ -61,11 +56,11 @@ async function getRangeValue(address) {
 
 Вместо этого внести изменения Excel из контекста кнопки ленты или области задач.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Обмениваться данными и событиями между Excel пользовательскими функциями и учебником по области задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

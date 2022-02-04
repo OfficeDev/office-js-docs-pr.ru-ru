@@ -1,15 +1,10 @@
 ---
 title: Авторизация в Microsoft Graph с помощью единого входа
-description: Узнайте, как пользователи Office надстройки могут использовать один вход (SSO) для получения данных из Microsoft Graph.
+description: 'Узнайте, как пользователи Office надстройки могут использовать один вход (SSO) для получения данных из Microsoft Graph.'
 ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 538648e96233bd0c2b497ef588d10c4f708e8522
-ms.sourcegitcommit: 57e15f0787c0460482e671d5e9407a801c17a215
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62320270"
 ---
+
 # <a name="authorize-to-microsoft-graph-with-sso"></a>Авторизация в Microsoft Graph с помощью единого входа
 
 Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт, учетную запись Microsoft 365 для образования или рабочую учетную запись. Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа.
@@ -26,7 +21,7 @@ ms.locfileid: "62320270"
 
 :::image type="content" source="../images/sso-access-to-microsoft-graph.svg" alt-text="Схема, показывающая процесс SSO." border="false":::
 
-1. Клиентский код надстройки вызывает Office.js API [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getAccessToken_options_). В этом случае Office для получения маркера доступа для надстройки.
+1. Клиентский код надстройки вызывает Office.js API [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#office-runtime-officeruntime-auth-getaccesstoken-member(1)). В этом случае Office для получения маркера доступа для надстройки.
 
     Если пользователь не подписан, Office вместе с платформа удостоверений Майкрософт предоставляет пользовательский интерфейс для входов и согласия пользователя.
 
@@ -81,5 +76,5 @@ ms.locfileid: "62320270"
 ## <a name="see-also"></a>См. также
 
 * [Маркер OAuth2 Exchange](https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-02)
-* [платформа удостоверений Майкрософт и поток OAuth 2.0 On-Behalf-Of](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
+* [Платформа удостоверений Майкрософт и поток OBO OAuth 2.0](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 * [Наборы требований IdentityAPI](../reference/requirement-sets/identity-api-requirement-sets.md)

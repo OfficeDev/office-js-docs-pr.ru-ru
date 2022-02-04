@@ -1,15 +1,10 @@
 ---
 title: Использование модели API для определенных приложений
-description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
+description: 'Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.'
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d7eaa51f6ac9255772e7dcd154e82dc28f39e848
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150770"
 ---
+
 # <a name="application-specific-api-model"></a>Модель API для конкретных приложений
 
 В этой статье описано, как использовать модель API для создания надстроек в Excel, Word и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
@@ -225,7 +220,7 @@ Excel.run(function (ctx) {
 
 ### <a name="some-properties-cannot-be-set-directly"></a>Некоторые свойства невозможно задать напрямую
 
-Некоторые свойства невозможно задать, хотя они и поддерживают запись. Эти свойства являются частью родительского свойства, которое должно быть задано как один объект. Это связано с тем, что родительское свойство использует вложенные свойства с определенными логическими связями. Эти родительские свойства должны быть заданы с помощью нотации литерала объекта, чтобы задать весь объект, а не отдельные вложенные свойства этого объекта.  Один из примеров доступен в разделе [PageLayout](/javascript/api/excel/excel.pagelayout). Свойство `zoom` должно быть установлено с помощью одного объекта [PageLayoutZoomOptions,](/javascript/api/excel/excel.pagelayoutzoomoptions) как показано здесь.
+Некоторые свойства невозможно задать, хотя они и поддерживают запись. Эти свойства являются частью родительского свойства, которое должно быть задано как один объект. Это связано с тем, что родительское свойство использует вложенные свойства с определенными логическими связями. Эти родительские свойства должны быть заданы с помощью нотации литерала объекта, чтобы задать весь объект, а не отдельные вложенные свойства этого объекта.  Один из примеров доступен в разделе [PageLayout](/javascript/api/excel/excel.pagelayout). Свойство `zoom` должно быть установлено с помощью одного [объекта PageLayoutZoomOptions](/javascript/api/excel/excel.pagelayoutzoomoptions) , как показано здесь.
 
 ```js
 // PageLayout.zoom.scale must be set by assigning PageLayout.zoom to a PageLayoutZoomOptions object.
@@ -234,7 +229,7 @@ sheet.pageLayout.zoom = { scale: 200 };
 
 В предыдущем примере вы ***не*** сможете напрямую присвоить значение `zoom`: `sheet.pageLayout.zoom.scale = 200;`. Этот оператор выдает ошибку, так как `zoom` не загружен. Даже если `zoom` загружен, масштабный набор не будет работать. Все контекстные операции происходят в `zoom`, обновляя прокси-объект в надстройке и переписывая локально установленные значения.
 
-Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#format). Свойства объектов `format` можно установить с помощью объектной навигации, как показано здесь.
+Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#excel-excel-range-format-member). Свойства объектов можно `format` установить с помощью объектной навигации, как показано здесь.
 
 ```js
 // This will set the font size on the range during the next `content.sync()`.

@@ -1,15 +1,10 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
-description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
+description: 'Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа'
 ms.date: 07/06/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fd34e40a35d7a0cc190265587fec6bf8dd60593c
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150613"
 ---
+
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
 Пространство имен [Office.context.mailbox.item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
@@ -17,7 +12,7 @@ ms.locfileid: "59150613"
 > [!IMPORTANT]
 > **API Outlook REST обесценились**
 >
-> Конечные точки rest Outlook полностью списаются в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г.).](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/) Чтобы использовать Microsoft Graph, следует перенести [существующие надстройки.](/outlook/rest#outlook-rest-api-via-microsoft-graph) Кроме того, [сравните конечные](/outlook/rest/compare-graph)точки Graph и Outlook API REST.
+> Конечные Outlook REST будут полностью списаны в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/).). Чтобы использовать Microsoft Graph, необходимо перенести существующие [надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки Graph и Outlook API](/outlook/rest/compare-graph) REST.
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 
@@ -54,7 +49,7 @@ Office.context.mailbox.getCallbackTokenAsync({isRest: true}, function(result){
 - В других клиентах Outlook свойство `Office.context.mailbox.item.itemId` возвращает идентификатор в формате EWS, который необходимо преобразовать с помощью метода [Office.context.mailbox.convertToRestId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods).
 - Обратите внимание: чтобы использовать идентификатор вложения, его нужно преобразовать в идентификатор в формате REST. Это преобразование необходимо, потому что идентификаторы EWS могут содержать небезопасные в отношении URL-адресов значения, которые вызывают проблемы с REST.
 
-Надстройка может определить, в каком клиенте Outlook она загружена, с помощью свойства [Office.context.mailbox.diagnostics.hostName](/javascript/api/outlook/office.diagnostics#hostName).
+Надстройка может определить, в каком клиенте Outlook она загружена, с помощью свойства [Office.context.mailbox.diagnostics.hostName](/javascript/api/outlook/office.diagnostics#outlook-office-diagnostics-hostname-member).
 
 ### <a name="example"></a>Пример
 

@@ -1,19 +1,14 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
-description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
+description: 'Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.'
 ms.date: 11/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 173e20977270e84c7cef39d9ea0e326cb7b5d298
-ms.sourcegitcommit: 5daf91eb3be99c88b250348186189f4dc1270956
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61242077"
 ---
+
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel.
-Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице `Chart` `ChartCollection` Chart Object [(API JavaScript](/javascript/api/excel/excel.chart) для Excel) и Объект коллекции диаграмм [(API JavaScript](/javascript/api/excel/excel.chartcollection)для Excel).
+Полный список свойств и методов, поддерживаемых объектами, см. в таблице [Chart Object (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и Объект коллекции диаграмм [(API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).`Chart` `ChartCollection`
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 
@@ -128,7 +123,7 @@ Excel.run(function (context) {
 
 ## <a name="set-visibility-of-gridlines-in-a-chart"></a>Настройка видимости линий сетки на диаграмме
 
-В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Основные линии сетки для оси значения диаграммы можно показать, установив `chart.axes.valueAxis.majorGridlines.visible` значение `true` .
+В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Основные линии сетки для оси значения диаграммы можно показать, `chart.axes.valueAxis.majorGridlines.visible` установив значение `true`.
 
 ```js
 Excel.run(function (context) {
@@ -169,7 +164,7 @@ Excel.run(function (context) {
 
 ### <a name="update-a-trendline"></a>Изменение линии тренда
 
-Следующий пример кода задает линию тренда для введите для первой серии в первой диаграмме в таблице `Linear` с именем **Sample**.
+Следующий пример кода задает линию тренда `Linear` для введите для первой серии в первой диаграмме в таблице с именем **Sample**.
 
 ```js
 Excel.run(function (context) {
@@ -190,11 +185,11 @@ Excel.run(function (context) {
 
 ## <a name="add-and-format-a-chart-data-table"></a>Добавление и формат таблицы данных диаграммы
 
-С помощью метода можно получить доступ к элементу таблицы [`Chart.getDataTableOrNullObject`](/javascript/api/excel/excel.chart#getDataTableOrNullObject__) данных диаграммы. Этот метод возвращает [`ChartDataTable`](/javascript/api/excel/excel.chartdatatable) объект. Объект `ChartDataTable` имеет свойства форматирования boolean, такие как `visible` , и `showLegendKey` `showHorizontalBorder` .
+С помощью метода можно получить доступ к элементу таблицы данных диаграммы [`Chart.getDataTableOrNullObject`](/javascript/api/excel/excel.chart#excel-excel-chart-getdatatableornullobject-member(1)) . Этот метод возвращает объект [`ChartDataTable`](/javascript/api/excel/excel.chartdatatable) . Объект `ChartDataTable` имеет свойства форматирования boolean, такие как `visible`, и `showLegendKey``showHorizontalBorder`.
 
-Свойство возвращает объект, что позволяет далее форматирование и `ChartDataTable.format` [`ChartDataTableFormat`](/javascript/api/excel/excel.chartdatatableformat) стиль таблицы данных. Объект `ChartDataTableFormat` предлагает `border` и `fill` `font` свойства.
+Свойство `ChartDataTable.format` возвращает объект [`ChartDataTableFormat`](/javascript/api/excel/excel.chartdatatableformat) , что позволяет далее форматирование и стиль таблицы данных. Объект `ChartDataTableFormat` предлагает `border`и `fill`свойства `font` .
 
-В следующем примере кода показано, как добавить таблицу данных в диаграмму, а затем форматировать эту таблицу данных с помощью `ChartDataTable` объектов и `ChartDataTableFormat` объектов.
+В следующем примере кода показано, как добавить таблицу данных в диаграмму, а затем форматировать эту таблицу данных с помощью объектов `ChartDataTable` и объектов `ChartDataTableFormat` .
 
 ```js
 // This code sample adds a data table to a chart that already exists on the worksheet, 

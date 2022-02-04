@@ -3,13 +3,8 @@ title: Устранение ошибок единого входа
 description: Рекомендации по устранению неполадок с одним входом (SSO) в Office надстройки и обработке специальных условий или ошибок.
 ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 83b6f72ec43a3d9d654206ab895cd5e4eb98bf7e
-ms.sourcegitcommit: 57e15f0787c0460482e671d5e9407a801c17a215
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62320223"
 ---
+
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
@@ -33,7 +28,7 @@ ms.locfileid: "62320223"
 
 ### <a name="13000"></a>13000
 
-Надстройка или версия Office не поддерживает API [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getAccessToken_options_).
+Надстройка или версия Office не поддерживает API [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#office-runtime-officeruntime-auth-getaccesstoken-member(1)).
 
 - Эта версия Office не поддерживает единый вход. Необходимой версией является Microsoft 365 подписка в любом ежемесячном канале.
 - В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](../reference/manifest/webapplicationinfo.md).

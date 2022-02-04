@@ -1,16 +1,11 @@
 ---
 title: Открытие набора обязательных элементов окна браузера
-description: Указывает, какие Office платформы и сборки поддерживают API openBrowserWindow.
+description: 'Указывает, какие Office платформы и сборки поддерживают API openBrowserWindow.'
 ms.date: 10/05/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 65088c6a8fa7c7f9bd3e53da0d2b1755b7ec22e6
-ms.sourcegitcommit: 489befc41e543a4fb3c504fd9b3f61322134c1ef
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60138788"
 ---
+
 # <a name="open-browser-window-api-requirement-sets"></a>Наборы требований к API окна открытых браузеров
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
@@ -42,7 +37,7 @@ ms.locfileid: "60138788"
 
 ## <a name="openbrowserwindowapi-11"></a>OpenBrowserWindowApi 1.1
 
-OpenBrowserWindowApi 1.1 — это первая версия API. Подробные сведения об API см. в [справочной Office.context.ui.](/javascript/api/office/office.context#ui)
+OpenBrowserWindowApi 1.1 — это первая версия API. Сведения об API см. в справочной [Office.context.ui](/javascript/api/office/office.context#office-office-context-ui-member).
 
 ## <a name="see-also"></a>См. также
 

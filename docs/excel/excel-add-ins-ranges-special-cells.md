@@ -1,23 +1,18 @@
 ---
 title: Поиск специальных ячеек в диапазоне с Excel API JavaScript
-description: Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.
+description: 'Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.'
 ms.date: 07/08/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ddd60f3cd87f528616fe376003b9eb7d3374f4a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153849"
 ---
+
 # <a name="find-special-cells-within-a-range-using-the-excel-javascript-api"></a>Поиск специальных ячеек в диапазоне с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="find-ranges-with-special-cells"></a>Поиск диапазонов с помощью специальных ячеек
 
-Методы [Range.getSpecialCells](/javascript/api/excel/excel.range#getSpecialCells_cellType__cellValueType_) и [Range.getSpecialCellsOrNullObject](/javascript/api/excel/excel.range#getSpecialCellsOrNullObject_cellType__cellValueType_) находят диапазоны, основанные на характеристиках их клеток и типах значений их клеток. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
+Методы [Range.getSpecialCells](/javascript/api/excel/excel.range#excel-excel-range-getspecialcells-member(1)) и [Range.getSpecialCellsOrNullObject](/javascript/api/excel/excel.range#excel-excel-range-getspecialcellsornullobject-member(1)) находят диапазоны, основанные на характеристиках их клеток и типах значений их клеток. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
 
 ```typescript
 getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
@@ -27,7 +22,7 @@ getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCe
 getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
 ```
 
-В следующем примере кода используется `getSpecialCells` метод для поиска всех ячеек с формулами. Вот что нужно знать об этом коде:
+В следующем примере кода используется метод `getSpecialCells` для поиска всех ячеек с формулами. Вот что нужно знать об этом коде:
 
 - Он ограничивает часть листа, в которой требуется выполнять поиск, путем вызова сначала метода `Worksheet.getUsedRange`, а затем метода `getSpecialCells` только для этого диапазона.
 - Метод `getSpecialCells` возвращает объект `RangeAreas`, поэтому все ячейки с формулами окрашены розовым цветом даже в том случае, если они не являются смежными.
@@ -43,12 +38,12 @@ Excel.run(function (context) {
 })
 ```
 
-Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если блокировки `catch` нет, ошибка останавливает метод.
+Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если блокировки нет `catch` , ошибка останавливает метод.
 
 Если ожидается, что всегда должны существовать ячейки с целевыми характеристиками, скорее всего вы захотите, чтобы код выдавал ошибку при их отсутствии. Если отсутствие соответствующих ячеек является допустимым сценарием, ваш код должен проверить наличие такой возможности и корректно выполнить действие без выдачи ошибки. Добиться такого поведения можно с помощью метода `getSpecialCellsOrNullObject` и возвращаемого им свойства `isNullObject`. В следующем примере кода используется этот шаблон. Вот что нужно знать об этом коде:
 
-- Метод всегда возвращает прокси-объект, поэтому он никогда не находится в `getSpecialCellsOrNullObject` `null` обычном смысле JavaScript. Но если соответствующие ячейки не обнаружены, свойству `isNullObject` объекта присваивается значение `true`.
-- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако не нужно явно *загружать* `isNullObject` свойство. Он автоматически загружается объектом, даже если он не `context.sync` `load` вызван. Дополнительные сведения см. в дополнительных сведениях о методах [ \* и свойствах OrNullObject.](../develop/application-specific-api-model.md#ornullobject-methods-and-properties)
+- Метод `getSpecialCellsOrNullObject` всегда возвращает прокси-объект, поэтому он никогда `null` не находится в обычном смысле JavaScript. Но если соответствующие ячейки не обнаружены, свойству `isNullObject` объекта присваивается значение `true`.
+- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако не нужно явно *загружать* `isNullObject` свойство. Он автоматически загружается объектом `context.sync` , даже если `load` он не вызван. Дополнительные сведения см. в [дополнительных\* сведениях о методах и свойствах OrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties).
 - Этот код можно проверить, выбрав сначала диапазон без ячеек с формулами и запустив его. Затем следует выбрать диапазон, содержащий по крайней мере одну ячейку с формулой, и снова запустить его.
 
 ```js
@@ -68,7 +63,7 @@ Excel.run(function (context) {
 })
 ```
 
-Для простоты все остальные образцы кода в этой статье используют `getSpecialCells` метод вместо  `getSpecialCellsOrNullObject` .
+Для простоты все остальные образцы кода в этой статье используют `getSpecialCells` метод вместо  `getSpecialCellsOrNullObject`.
 
 ## <a name="narrow-the-target-cells-with-cell-value-types"></a>Ограничение целевых ячеек с помощью типа значений ячеек
 
@@ -121,7 +116,7 @@ Excel.run(function (context) {
 })
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

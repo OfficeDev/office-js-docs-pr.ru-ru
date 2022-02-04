@@ -1,15 +1,10 @@
 ---
 title: Вызов встроенных функций листов Excel с помощью API JavaScript для Excel
-description: Узнайте, как вызывать встроенные функции Excel таблицы, такие как `VLOOKUP` `SUM` Excel API JavaScript.
+description: 'Узнайте, как вызывать встроенные функции Excel `VLOOKUP` `SUM` таблицы, такие как Excel API JavaScript.'
 ms.date: 12/19/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 179ede5fe26c0b34e13bcab8b37cae7177d35c22
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153842"
 ---
+
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 
 В этой статье рассказывается, как вызывать встроенные функции листов Excel, такие как `VLOOKUP` и `SUM`, с помощью API JavaScript для Excel. В ней также представлен полный список встроенных функций листов Excel, которые можно вызывать с помощью API JavaScript для Excel.
@@ -19,7 +14,7 @@ ms.locfileid: "59153842"
 
 ## <a name="calling-a-worksheet-function"></a>Вызов функции листа
 
-В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство объекта, возвращаемого функцией таблицы, содержит `value` `FunctionResult` результат указанной функции. Как показано в этом примере, перед чтением необходимо свойство `load` `value` `FunctionResult` объекта. В этом примере результат выполнения функции просто записывается в консоль.
+В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство `value` объекта `FunctionResult` , возвращаемого функцией таблицы, содержит результат указанной функции. Как показано в этом примере `load` `value` `FunctionResult` , перед чтением необходимо свойство объекта. В этом примере результат выполнения функции просто записывается в консоль.
 
 ```js
 var functionResult = context.workbook.functions.sampleFunction();
@@ -443,8 +438,8 @@ Excel.run(function (context) {
 | <a href="https://support.microsoft.com/office/ba7d1809-0d33-4bcb-96c7-6c56ec62ef6f" target="_blank">Функция ДОХОДПОГАШ</a> | Возвращает годовую доходность ценной бумаги с выплатой процентов в срок погашения |
 | <a href="https://support.microsoft.com/office/d633d5a3-2031-4614-a016-92180ad82bee" target="_blank">Функция Z.ТЕСТ</a> | Возвращает одностороннее вероятностное значение z-теста |
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Класс functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)
-- [Объект Функции книги (API JavaScript для Excel)](/javascript/api/excel/excel.workbook#functions)
+- [Объект Функции книги (API JavaScript для Excel)](/javascript/api/excel/excel.workbook#excel-excel-workbook-functions-member)

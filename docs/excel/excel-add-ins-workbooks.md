@@ -1,19 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: Узнайте, как выполнять общие задачи с помощью книг или функций уровня приложений с помощью Excel API JavaScript.
+description: 'Узнайте, как выполнять общие задачи с помощью книг или функций уровня приложений с помощью Excel API JavaScript.'
 ms.date: 06/07/2021
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 50371c0670e8e66bf7a36c5c52c7a9753154f29d
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153761"
 ---
+
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом, см. в книге `Workbook` [Объект (API JavaScript для Excel).](/javascript/api/excel/excel.workbook) В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств `Workbook` и методов, поддерживаемых объектом, см. в книге [Объект (API JavaScript для Excel)](/javascript/api/excel/excel.workbook). В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
 
 Объект Workbook — это точка входа для вашей надстройки для взаимодействия с Excel. Он поддерживает коллекции листов, таблиц, сводных таблиц и других элементов, через которые выполняется доступ и изменение данных Excel. Объект [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) предоставляет надстройке доступ ко всем данным книги с помощью отдельных листов. В частности, он позволяет надстройке добавлять листы, перемещаться между ними и назначать обработчиков событий листа. В статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md) описывается способ доступа к листам и их изменение.
 
@@ -52,7 +47,7 @@ Excel.createWorkbook();
 
 С помощью метода `createWorkbook` также можно создать копию существующей книги. Метод принимает в качестве необязательного параметра строковое представление XLSX-файла в кодировке base64. Полученная книга будет копией этого файла, предполагая, что строковый аргумент является допустимым XLSX-файлом.
 
-Текущую книгу надстройки можно получить в качестве строки с кодом base64 с помощью [нарезки файлов.](/javascript/api/office/office.document#getFileAsync_fileType__options__callback_) Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
+Текущую книгу надстройки можно получить в качестве строки с кодом base64 с помощью [нарезки файлов](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
 
 ```js
 // Retrieve the external workbook file and set up a `FileReader` object. 
@@ -76,16 +71,16 @@ reader.readAsDataURL(myFile.files[0]);
 
 ### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one"></a>Вставка копии существующей книги в текущую книгу.
 
-В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. В [книге](/javascript/api/excel/excel.workbook) используется метод вставки копий таблиц целевой книги `insertWorksheetsFromBase64` в себя. Файл другой книги передается как строка с кодом base64, как и `Excel.createWorkbook` вызов. 
+В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. В [книге](/javascript/api/excel/excel.workbook) используется метод `insertWorksheetsFromBase64` вставки копий таблиц целевой книги в себя. Файл другой книги передается как строка с кодом base64, как и вызов `Excel.createWorkbook` . 
 
 ```TypeScript
 insertWorksheetsFromBase64(base64File: string, options?: Excel.InsertWorksheetOptions): OfficeExtension.ClientResult<string[]>;
 ```
 
 > [!IMPORTANT]
-> Метод `insertWorksheetsFromBase64` поддерживается для Excel на Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, метод возвращает `insertWorksheetsFromBase64` `UnsupportedFeature` ошибку в Excel в Интернете. 
+> Метод `insertWorksheetsFromBase64` поддерживается для Excel на Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, `insertWorksheetsFromBase64` `UnsupportedFeature` метод возвращает ошибку в Excel в Интернете. 
 
-В следующем примере кода показано, как вставить в текущую книгу таблицы из другой книги. Этот пример кода сначала обрабатывает файл книги с объектом и извлекает строку с кодом base64, а затем вставляет эту строку с кодом base64 в текущую [`FileReader`](https://developer.mozilla.org/docs/Web/API/FileReader) книгу. Новые листы вставляются после листа с именем **Sheet1.** Обратите внимание, что он передается в качестве параметра свойства `[]` [InsertWorksheetOptions.sheetNamesToInsert.](/javascript/api/excel/excel.insertworksheetoptions#sheetNamesToInsert) Это означает, что все таблицы из целевой книги вставляются в текущую книгу.
+В следующем примере кода показано, как вставить в текущую книгу таблицы из другой книги. Этот пример [`FileReader`](https://developer.mozilla.org/docs/Web/API/FileReader) кода сначала обрабатывает файл книги с объектом и извлекает строку с кодом base64, а затем вставляет эту строку с кодом base64 в текущую книгу. Новые листы вставляются после листа с именем **Sheet1**. Обратите внимание `[]` , что он передается в качестве параметра свойства [InsertWorksheetOptions.sheetNamesToInsert](/javascript/api/excel/excel.insertworksheetoptions#excel-excel-insertworksheetoptions-sheetnamestoinsert-member) . Это означает, что все таблицы из целевой книги вставляются в текущую книгу.
 
 ```js
 // Retrieve the external workbook file and set up a `FileReader` object. 
@@ -232,9 +227,9 @@ Excel.run(function (context) {
 
 В книге есть языковые и культурные параметры, влияющие на отображение определенных данных. Эти параметры могут помочь локализовать данные, когда пользователи надстройки делятся книгами на разных языках и культурах. Ваша надстройка может использовать анализ строк для локализации формата чисел, дат и времени в зависимости от параметров культуры системы, чтобы каждый пользователь видел данные в формате своей культуры.
 
-`Application.cultureInfo`определяет параметры культуры системы как объект [CultureInfo.](/javascript/api/excel/excel.cultureinfo) Это содержит параметры, такие как числовой десятичной сепаратор или формат даты.
+`Application.cultureInfo` определяет параметры культуры системы как объект [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Это содержит параметры, такие как числовой десятичной сепаратор или формат даты.
 
-Некоторые параметры культуры можно [изменить с помощью Excel пользовательского интерфейса.](https://support.microsoft.com/office/c093b545-71cb-4903-b205-aebb9837bd1e) Параметры системы сохраняются в `CultureInfo` объекте. Любые локальные изменения хранятся как [свойства уровня приложения,](/javascript/api/excel/excel.application)например `Application.decimalSeparator` .
+Некоторые параметры культуры можно [изменить с помощью Excel пользовательского интерфейса](https://support.microsoft.com/office/c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в объекте `CultureInfo` . Любые локальные изменения хранятся в [качестве](/javascript/api/excel/excel.application) свойств уровня приложений, например `Application.decimalSeparator`.
 
 В следующем примере изменяется десятичное сепараторное течение числовой строки с "," на символ, используемый в параметрах системы.
 
@@ -341,14 +336,14 @@ context.application.suspendApiCalculationUntilNextSync();
 
 ## <a name="detect-workbook-activation"></a>Обнаружение активации книг
 
-Ваша надстройка может обнаруживать при активации книги. Книга становится  неактивной, когда пользователь переключает фокус на другую книгу, на другое приложение или (в Excel в Интернете) на другую вкладку веб-браузера. Книга *активируется,* когда пользователь возвращает фокус в книгу. Активация книги может вызвать функции вызова в надстройке, например освежающие данные книги.
+Ваша надстройка может обнаруживать при активации книги. Книга становится неактивной, когда пользователь переключает фокус на другую книгу, на другое приложение или (в Excel в Интернете) на другую вкладку веб-браузера. Книга активируется *,* когда пользователь возвращает фокус в книгу. Активация книги может вызвать функции вызова в надстройке, например освежающие данные книги.
 
-Чтобы определить, когда книга активирована, [зарегистрируйте](excel-add-ins-events.md#register-an-event-handler) обработник событий для [события onActivated](/javascript/api/excel/excel.workbook#onActivated) книги. Обработчики событий `onActivated` для события получают объект [WorkbookActivatedEventArgs](/javascript/api/excel/excel.workbookactivatedeventargs) при пожаре события.
+Чтобы определить, когда книга активирована, [зарегистрируйте](excel-add-ins-events.md#register-an-event-handler) обработник событий для [события onActivated](/javascript/api/excel/excel.workbook#excel-excel-workbook-onactivated-member) книги. Обработчики событий для `onActivated` события получают объект [WorkbookActivatedEventArgs](/javascript/api/excel/excel.workbookactivatedeventargs) при пожаре события.
 
 > [!IMPORTANT]
 > Событие `onActivated` не определяет, когда книга открывается. Это событие обнаруживает только тогда, когда пользователь переключается на уже открытую книгу.
 
-В следующем примере кода показано, как зарегистрировать обработник событий `onActivated` и настроить функцию вызова.
+В следующем примере кода показано, как `onActivated` зарегистрировать обработник событий и настроить функцию вызова.
 
 ```js
 Excel.run(function (context) {
