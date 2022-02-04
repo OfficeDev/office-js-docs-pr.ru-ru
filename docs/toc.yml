@@ -107,42 +107,46 @@ items:
               - name: Обновление API и версии манифеста
                 href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
                 displayName: manifest
-          - name: 'Конфиденциальность, безопасность и проверка подлинности'
+          - name: Конфиденциальность и безопасность
             items:
               - name: Обзор конфиденциальности и безопасности надстроек
                 href: concepts/privacy-and-security.md
-              - name: Обзор проверки подлинности и авторизации
+              - name: Запрос разрешений на использование API в надстройках
+                href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
+              - name: ITP и сторонние файлы cookie
+                href: develop/itp-and-third-party-cookies.md
+          - name: Проверка подлинности и авторизация
+            items:
+              - name: Обзор
                 href: develop/overview-authn-authz.md
-              - name: Проверка подлинности и авторизация с помощью Office Dialog API
-                href: develop/auth-with-office-dialog-api.md
-              - name: Авторизация внешних служб
-                href: develop/auth-external-add-ins.md
-              - name: Авторизация в Microsoft Graph без единого входа
-                href: develop/authorize-to-microsoft-graph-without-sso.md
-              - name: Включение единого входа в надстройке
+              - name: Единый вход (SSO)
                 items:
-                  - name: Активация единого входа
+                  - name: Включение единого входа в надстройке Office
                     href: develop/sso-in-office-add-ins.md
-                  - name: Краткое руководство по единому входу
+                  - name: Краткое руководство
                     href: quickstarts/sso-quickstart.md
-                  - name: Настройка надстройки с поддержкой единого входа
+                  - name: Настройка быстрого начала
                     href: quickstarts/sso-quickstart-customize.md
-                  - name: Авторизация в Microsoft Graph с помощью единого входа
+                  - name: Регистрация на платформе удостоверений Майкрософт для разработчиков
+                    href: develop/register-sso-add-in-aad-v2.md
+                  - name: Предоставление согласия администратора
+                    href: develop/grant-admin-consent-to-an-add-in.md
+                  - name: Получение токена удостоверения
+                    href: develop/use-sso-to-get-office-signed-in-user-token.md
+                  - name: Авторизация в Microsoft Graph
                     href: develop/authorize-to-microsoft-graph.md
                   - name: Создание надстройки с единым входом с помощью ASP.NET
                     href: develop/create-sso-office-add-ins-aspnet.md
                   - name: Создание надстройки с поддержкой единого входа при помощи Node.js
                     href: develop/create-sso-office-add-ins-nodejs.md
-                  - name: 'Регистрация надстройки Office, использующей единый вход, в Azure AD 2.0'
-                    href: develop/register-sso-add-in-aad-v2.md
-                  - name: Предоставление надстройке разрешений администратора
-                    href: develop/grant-admin-consent-to-an-add-in.md
-                  - name: Устранение ошибок единого входа
+                  - name: Устранение неполадок с сообщениями об ошибках
                     href: develop/troubleshoot-sso-in-office-add-ins.md
-              - name: Запрос разрешений на использование API в надстройках
-                href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
-              - name: ITP и сторонние файлы cookie
-                href: develop/itp-and-third-party-cookies.md
+              - name: API диалоговых окон Office
+                href: develop/auth-with-office-dialog-api.md
+              - name: Поставщики удостоверений
+                href: develop/auth-external-add-ins.md
+              - name: Доступ к Microsoft Graph
+                href: develop/authorize-to-microsoft-graph-without-sso.md
           - name: Пользовательский интерфейс и взаимодействие с пользователем
             items:
               - name: Обзор
@@ -1269,7 +1273,7 @@ items:
       - name: Документация по надстройкам Word
         href: word/index.yml
         displayName: Word
-      - name: Общие сведения
+      - name: Обзор
         href: word/word-add-ins-programming-overview.md
         displayName: Word
       - name: Создание первой надстройки Word
