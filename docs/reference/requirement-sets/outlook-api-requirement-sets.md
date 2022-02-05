@@ -1,16 +1,11 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 01/25/2022
+ms.date: 02/01/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 111b8c0b0b0f01877821e1a0d292355a779a026e
-ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "62263088"
 ---
+
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
 Для надстроек Outlook требуются определенные версии API, которые указываются в элементе Requirements в их манифесте. Надстройки Outlook всегда включают элемент Set с атрибутом , для которого задано значение , и атрибутом , для которого установлен минимальный набор обязательных элементов API, поддерживающий сценарии надстройки.
@@ -107,7 +102,7 @@ if (item.somePropertyOrFunction !== undefined) {
 || 2016 одноразовая покупка | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), [1.6](../objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md) |
 | iOS | Подписка на Microsoft 365 | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md)<sup>5</sup> |
 | Android | Подписка на Microsoft 365 | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md)<sup>5</sup> |
-| Веб-браузер | современный пользовательский интерфейс Outlook при подключении к<br>Exchange Online: подписка Microsoft 365, Outlook.com | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), [1.6](../objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md), [1.7](../objectmodel/requirement-set-1.7/outlook-requirement-set-1.7.md), [1.8](../objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md), [1.9](../objectmodel/requirement-set-1.9/outlook-requirement-set-1.9.md), [1.10](../objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md), [1.11](../objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)<br>[IdentityAPI 1.3](../requirement-sets/identity-api-requirement-sets.md)<sup>2</sup> |
+| Веб-браузер<sup>6</sup> | современный пользовательский интерфейс Outlook при подключении к<br>Exchange Online: подписка Microsoft 365, Outlook.com | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), [1.6](../objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md), [1.7](../objectmodel/requirement-set-1.7/outlook-requirement-set-1.7.md), [1.8](../objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md), [1.9](../objectmodel/requirement-set-1.9/outlook-requirement-set-1.9.md), [1.10](../objectmodel/requirement-set-1.10/outlook-requirement-set-1.10.md), [1.11](../objectmodel/requirement-set-1.11/outlook-requirement-set-1.11.md)<br>[IdentityAPI 1.3](../requirement-sets/identity-api-requirement-sets.md)<sup>2</sup> |
 || классический пользовательский интерфейс Outlook при подключении к<br>Локальная среда Exchange | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), [1.6](../objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md) |
 
 > [!NOTE]
@@ -120,6 +115,8 @@ if (item.somePropertyOrFunction !== undefined) {
 > <sup>4</sup> Поддержка нового пользовательского интерфейса Mac (предварительной версии) доступна в Outlook с версии 16.38.506. Дополнительные сведения см. в разделе [Поддержка надстроек в Outlook в новом интерфейсе Mac](../../outlook/compare-outlook-add-in-support-in-outlook-for-mac.md#add-in-support-in-outlook-on-new-mac-ui-preview).
 >
 > <sup>5</sup> В настоящее время при проектировании и внедрении надстроек для мобильных клиентов следует учитывать и другие факторы. Например, единственный поддерживаемый режим — это "Сообщение прочитано". Дополнительные сведения см. в статье [Рекомендации по использованию кода при добавлении поддержки для команд надстроек Outlook Mobile](../../outlook/add-mobile-support.md#code-considerations).
+>
+> <sup>6</sup> Надстройки не работают в современной версии Outlook в веб-браузере на Android. Сведения о поддерживаемых устройствах см. в разделе [Требования к запуску надстроек для Office](../../concepts/requirements-for-running-office-add-ins.md#client-requirements-non-windows-smartphone-and-tablet).
 
 > [!TIP]
 > Классическую и современную версии Outlook в веб-браузере можно различить по внешнему виду панели инструментов почтового ящика.
