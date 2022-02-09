@@ -283,6 +283,8 @@ items:
               - name: Отладка с помощью Visual Studio Code и Edge Chromium WebView2
                 href: testing/debug-desktop-using-edge-chromium.md
                 displayName: 'debug, windows'
+              - name: Отладка с помощью Visual Studio Code и WebView2 в устаревшей версии Microsoft Edge
+                href: testing/debug-with-vs-extension.md
               - name: Тестирование с помощью Internet Explorer 11
                 href: testing/ie-11-testing.md
           - name: Веб-браузер
@@ -302,8 +304,6 @@ items:
             displayName: 'uninstall, sideload'
           - name: Отладка с помощью журнала среды выполнения
             href: testing/runtime-logging.md
-          - name: Расширение отладчика для Visual Studio Code
-            href: testing/debug-with-vs-extension.md
           - name: Производительность
             items:
               - name: Избегайте использования метода context.sync в циклах
@@ -485,6 +485,12 @@ items:
                     href: reference/manifest/allformfactors.md
                   - name: Элемент управления
                     href: reference/manifest/control.md
+                  - name: Элемент управления (Button)
+                    href: reference/manifest/control-button.md
+                  - name: Элемент управления (Menu)
+                    href: reference/manifest/control-menu.md
+                  - name: Элемент управления (MobileButton)
+                    href: reference/manifest/control-mobilebutton.md
                   - name: CustomTab
                     href: reference/manifest/customtab.md
                   - name: DesktopFormFactor
@@ -513,6 +519,10 @@ items:
                     href: reference/manifest/hosts.md
                   - name: Значок
                     href: reference/manifest/icon.md
+                  - name: Item
+                    href: reference/manifest/item.md
+                  - name: Элементы
+                    href: reference/manifest/items.md
                   - name: LaunchEvent
                     href: reference/manifest/launchevent.md
                   - name: LaunchEvents
