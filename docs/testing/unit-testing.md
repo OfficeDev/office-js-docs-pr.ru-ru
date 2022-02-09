@@ -1,10 +1,15 @@
 ---
 title: Тестирование единиц в Office надстройки
-description: 'Узнайте, как унифизировать тестовый код, который вызывает Office API JavaScript'
-ms.date: 11/30/2021
+description: Узнайте, как унифизировать тестовый код, который вызывает Office API JavaScript
+ms.date: 02/07/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 39bd49f52087433a7095d0949bf22abd10dd0bb6
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467759"
 ---
-
 # <a name="unit-testing-in-office-add-ins"></a>Тестирование единиц в Office надстройки
 
 Unit tests check your add-in's functionality without requiring network or service connections, including connections to the Office application. Код на стороне сервера unit и клиентский код, который не называет  API Office [JavaScript](../develop/understanding-the-javascript-api-for-office.md), в Office надстройки такие же, как и в любом веб-приложении, поэтому для этого не требуется специальная документация. Но клиентский код, который вызывает Office API JavaScript, тестировать сложно. Чтобы решить эти проблемы, мы создали библиотеку для упрощения создания макетных объектов Office в unit tests: [Office-Addin-Mock](https://www.npmjs.com/package/office-addin-mock). Библиотека упрощает тестирование следующими способами:
@@ -20,7 +25,7 @@ Unit tests check your add-in's functionality without requiring network or servic
 
 В примерах этой статьи используется фреймворк Jest. Примеры использования фреймворка Mocha на домашней [странице Office-Addin-Mock](https://github.com/OfficeDev/Office-Addin-Scripts/tree/master/packages/office-addin-mock#examples).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 В этой статье предполагается, что вы знакомы с основными понятиями тестирования и макетов единиц, включая создание и запуск тестовых файлов, и что у вас есть некоторый опыт работы с инфраструктурой тестирования единицы.
 
@@ -185,6 +190,7 @@ module.exports = myOutlookAddinFeature;
 
 Тестовый файл, названный `my-outlook-add-in-feature.test.js` в подмостке, относительно расположения файла кода надстройки. Ниже показано содержимое файла. Обратите внимание, что свойство верхнего уровня `context`— это Office[. Объект Context](/javascript/api/office/office.context), поэтому объект, на который ведется насмешка, является родителем этого свойства: [Office](/javascript/api/office) объектом. Обратите внимание на следующие особенности этого кода:
 
+- Свойство `host` на макете используется внутренней библиотекой макета для идентификации Office приложения. Это обязательно для Outlook. В настоящее время он не предназначен для любого другого Office приложения.
 - Так как Office JavaScript не загружается в процесс узла, объект, который ссылается в коде надстройки, `Office` должен быть объявлен и инициализирован.
 
 ```javascript
@@ -193,6 +199,8 @@ const myOutlookAddinFeature = require("../my-outlook-add-in-feature");
 
 // Create the seed mock object.
 const mockData = {
+  // Identify the host to the mock library (required for Outlook).
+  host: "outlook",
   context: {
     mailbox: {
       item: {

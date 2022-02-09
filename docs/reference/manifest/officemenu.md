@@ -1,10 +1,15 @@
 ---
 title: Элемент OfficeMenu в файле манифеста
-description: 'Элемент OfficeMenu определяет коллекцию элементов управления, которые будут добавлены в Office контексте.'
-ms.date: 02/02/2022
+description: Элемент OfficeMenu определяет коллекцию элементов управления, которые будут добавлены в Office контексте.
+ms.date: 02/04/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 11b68edaef4044fb7ddde0d413debc0339b15c3a
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467745"
 ---
-
 # <a name="officemenu-element"></a>Элемент OfficeMenu
 
 Определяет коллекцию элементов управления, которые нужно добавить в контекстное меню Office. Применяется в надстройках Word, Excel, PowerPoint и OneNote.
@@ -42,7 +47,7 @@ ms.localizationpriority: medium
 
 ## <a name="control"></a>Control
 
-Для каждого элемента **OfficeMenu** требуется один или несколько элементов управления [меню](control.md#menu-dropdown-button-controls). 
+**Каждый элемент OfficeMenu** требует одного или более элементов [управления меню](control-menu.md). 
 
 ## <a name="example"></a>Пример
 

@@ -1,13 +1,18 @@
 ---
 title: Элемент OverriddenByRibbonApi в файле манифеста
-description: 'Узнайте, как указать, что настраиваемая вкладка, группа, элемент управления или меню не должны отображаться, когда он также является частью настраиваемой контекстной вкладки.'
-ms.date: 02/02/2022
+description: Узнайте, как указать, что настраиваемая вкладка, группа, элемент управления или меню не должны отображаться, когда он также является частью настраиваемой контекстной вкладки.
+ms.date: 02/04/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 48977691ee4bf2ccd71bc146647dae452ce9e2fc
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467689"
 ---
-
 # <a name="overriddenbyribbonapi-element"></a>Элемент OverriddenByRibbonApi
 
-Указывает, будет ли элемент [управления](group.md) [группой,](control.md#button-control) кнопкой[,](control.md#menu-dropdown-button-controls) элементом меню или элементом меню скрываться в сочетаниях приложений и платформ, поддерживаюх [API (Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#office-office-ribbon-requestcreatecontrols-member(1))), который устанавливает настраиваемые контекстные вкладки на ленте.
+Указывает, будет ли элемент [управления группой](group.md)[,](control-button.md) кнопкой[,](control-menu.md) элементом меню или элементом меню скрываться в сочетаниях приложений и платформ, которые поддерживают API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#office-office-ribbon-requestcreatecontrols-member(1))), который устанавливает настраиваемые контекстные вкладки на ленте.
 
 **Тип надстройки:** надстройки области задач
 
@@ -38,7 +43,7 @@ ms.localizationpriority: medium
 ```xml
 <ExtensionPoint xsi:type="PrimaryCommandSurface">
   <CustomTab id="Contoso.TabCustom1">
-    <Group id="Contoso.CustomTab.group1">
+    <Group id="Contoso.CustomTab1.group1">
       <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
       <Control  xsi:type="Button" id="Contoso.MyButton1">
         <!-- Child elements omitted. -->
@@ -70,7 +75,7 @@ ms.localizationpriority: medium
 ```xml
 <ExtensionPoint xsi:type="PrimaryCommandSurface">
   <CustomTab id="Contoso.TabCustom3">
-    <Group id="Contoso.CustomTab3.group3.">
+    <Group id="Contoso.CustomTab3.group3">
       <Control  xsi:type="Menu" id="Contoso.MyMenu">
         <!-- Other child elements omitted. -->
         <Items>

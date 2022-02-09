@@ -1,18 +1,18 @@
 ---
 title: Элемент Action в файле манифеста
 description: Этот элемент указывает действие, выполняемое, когда пользователь выбирает кнопку или элемент управления меню.
-ms.date: 06/08/2021
+ms.date: 02/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fb213d8d2938d2d2c0654c1b3a7bf4f177931321
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 5eee17864ecacf101d7fbfe3519b3da500768deb
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153750"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467873"
 ---
 # <a name="action-element"></a>Элемент Action
 
-Указывает действие, выполняемое при выборе пользователем кнопки [или](control.md#button-control) [управления меню.](control.md#menu-dropdown-button-controls)
+Указывает действие, выполняемое при выборе пользователем кнопки [управления](control-button.md) или [управления меню](control-menu.md).
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -38,7 +38,7 @@ ms.locfileid: "59153750"
 - `ShowTaskpane`
 
 > [!IMPORTANT]
-> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна при **xsi:type.** `ExecuteFunction`
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна при **xsi:type**`ExecuteFunction`.
 
 ## <a name="functionname"></a>FunctionName
 
@@ -52,7 +52,7 @@ ms.locfileid: "59153750"
 
 ## <a name="sourcelocation"></a>SourceLocation
 
-Необходимый **элемент, когда xsi:type** — "ShowTaskpane". Указывает расположение исходного файла для этого действия. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **URL** в элементе **URL-адресов** в [элементе Resources.](resources.md)
+Необходимый элемент **, когда xsi:type** — "ShowTaskpane". Указывает расположение исходного файла для этого действия. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **URL** в элементе **URL-адресов** в [элементе Resources](resources.md) .
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -109,7 +109,7 @@ ms.locfileid: "59153750"
 > [!NOTE]
 > Этот элемент не поддерживается Outlook надстройки.
 
-В следующем примере показано действие, использующее **элемент Title.** Обратите внимание, что вы не назначаете **заголовок** строке напрямую. Вместо этого вы назначите ему ИД ресурса (resid), который определяется в разделе **Ресурсы** манифеста и может быть не более 32 символов.
+В следующем примере показано действие, использующее **элемент Title** . Обратите внимание, что вы не назначаете **заголовок** строке напрямую. Вместо этого вы назначите ему ИД ресурса (resid), который определяется в разделе **Ресурсы** манифеста и может быть не более 32 символов.
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -137,7 +137,7 @@ ms.locfileid: "59153750"
 Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](../../outlook/pinnable-taskpane.md).
 
 > [!IMPORTANT]
-> Несмотря на то, что элемент был представлен в наборе `SupportsPinning` [требований 1.5,](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md)в настоящее время он поддерживается только для Microsoft 365 абонентов с помощью следующих элементов:
+> Хотя элемент `SupportsPinning` был представлен в наборе [требований 1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), в настоящее время он поддерживается только для Microsoft 365 абонентов с помощью следующих элементов:
 >
 > - Outlook 2016 или более поздней Windows (сборка 7628.1000 или более поздней)
 > - Outlook 2016 или позже на Mac (сборка 16.13.503 или более поздней)

@@ -1,17 +1,17 @@
 ---
-title: Наборы требований к ярлыкам клавиатуры
+title: Наборы обязательных элементов cочетаний клавиш
 description: Клавиша Shortcuts заданная информация для Office надстройки.
-ms.date: 11/22/2021
+ms.date: 02/07/2022
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 209cc46c37ac004422796e267a8c350e33ffc615
-ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
+ms.openlocfilehash: 074460510e054cdcfbeca4676883c4180bb2202d
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61153799"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467845"
 ---
-# <a name="keyboard-shortcuts-requirement-sets"></a>Наборы требований к ярлыкам клавиатуры
+# <a name="keyboard-shortcuts-requirement-sets"></a>Наборы обязательных элементов cочетаний клавиш
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
@@ -19,7 +19,10 @@ ms.locfileid: "61153799"
 
 |  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| KeyboardShortcuts 1.1  | Недоступно | Версия: 2111 (сборка 14701.10000) | Недоступно | 16.55 | Сентябрь 2021 г. |
+| KeyboardShortcuts 1.1  | Н/Д | Версия: 2111 (сборка 14701.10000) | Н/Д | 16.55 | Сентябрь 2021 г. |
+
+> [!NOTE]
+> Набор **требований KeyboardShortcuts 1.1** поддерживается только в Excel.
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 
@@ -34,7 +37,7 @@ ms.locfileid: "61153799"
 
 ## <a name="keyboardshortcuts-11"></a>KeyboardShortcuts 1.1
 
-Сведения об API в этом наборе требований см. [в Office.actions.](/javascript/api/office/office.actions)
+Сведения об API в этом наборе требований см. [в Office.actions](/javascript/api/office/office.actions).
 
 ## <a name="see-also"></a>См. также
 

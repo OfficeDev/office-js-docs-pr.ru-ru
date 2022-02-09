@@ -1,13 +1,18 @@
 ---
 title: Элемент Supertip в файле манифеста
-description: 'Элемент Supertip определяет богатый инструментарий (как название, так и описание).'
-ms.date: 02/02/2022
+description: Элемент Supertip определяет богатый инструментарий (как название, так и описание).
+ms.date: 02/04/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: aab7ab3f17e772940403e75796346020b2b9aebe
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467859"
 ---
-
 # <a name="supertip"></a>Supertip
 
-Определяет форматированную подсказку (элементы Title и Description). Используется элементами управления [Button](control.md#button-control) или [Menu](control.md#menu-dropdown-button-controls).
+Определяет форматированную подсказку (элементы Title и Description). Он используется как с помощью [элементов управления кнопками,](control-button.md) так и [элементов управления меню](control-menu.md).
 
 **Тип надстройки:** Области задач, Почта
 

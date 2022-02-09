@@ -1,302 +1,48 @@
 ---
 title: Элемент Control в файле манифеста
-description: Определяет функцию JavaScript, которая выполняет действие или открывает область задач.
-ms.date: 01/29/2021
+description: Определяет управление, которое выполняет действие или запускает области задач.
+ms.date: 02/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: effc47ffe9d145dcc8bf924b243c4a2bc9329f43
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: aa7ff9b0162070b378352ce187de15a34323b998
+ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153718"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62467838"
 ---
 # <a name="control-element"></a>Элемент Control
 
-Определяет функцию JavaScript, которая выполняет действие или открывает область задач. Элемент **Control** может быть кнопкой или пунктом меню. Элемент [Group](group.md) должен содержать по крайней мере один элемент **Control**.
+Определяет управление, которое выполняет действие или запускает области задач. Элемент **Control** может быть кнопкой или пунктом меню. Элемент **Group** должен содержать по крайней мере один элемент [Control](group.md).
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Область задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
+
+**Связанные с этими наборами требований**:
+
+- [AddinCommands 1.1](../requirement-sets/add-in-commands-requirement-sets.md) (Для надстройки области задач.)
+- Некоторые детские элементы могут быть связаны с дополнительными наборами требований.
 
 ## <a name="attributes"></a>Атрибуты
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|**xsi:type**|Да|Тип определяемого элемента управления. Доступные варианты: `Button`, `Menu` или `MobileButton`. |
-|**id**|Нет|ИД элемента управления. Может содержать до 125 знаков.|
+|**xsi:type**|Да|Тип определяемого элемента управления. Может быть `Button`, `Menu`или `MobileButton`. |
+|**id**|Да|ИД элемента управления. Может содержать до 125 знаков. Должно быть уникальным для всех **элементов управления** в манифесте.|
 
 > [!NOTE]
 > Значение `MobileButton` для **xsi:type** определено в схеме 1.1 VersionOverrides. Применяется только к элементам **Control**, которые содержатся в элементе [MobileFormFactor](mobileformfactor.md).
 
-## <a name="button-control"></a>Элемент управления ''Кнопка''
+## <a name="child-elements"></a>Дочерние элементы
 
-Кнопка выполняет одно действие, когда пользователь ее нажимает. Она может выполнять функцию или отображать область задач. Каждый элемент управления "Кнопка" должен иметь элемент `id`, уникальный для манифеста. 
+Допустимые элементы ребенка зависят от значения **атрибута xsi:type** .
 
-### <a name="child-elements"></a>Дочерние элементы
-|  Элемент |  Обязательный  |  Описание  |
-|:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
-|  **ToolTip**    |Нет|Подсказка для кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String.** **String** — это дочерний элемент **LongStrings**, являющийся дочерним для элемента [Resources](resources.md).|        
-|  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
-|  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
-|  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
-|  [Enabled](enabled.md)    | Нет |  Указывает, включен ли контроль при запуске надстройки.  |
-|  [OverriddenByRibbonApi](overriddenbyribbonapi.md)      | Нет |  Указывает, должна ли кнопка отображаться в сочетаниях приложений и платформ, поддерживаюх настраиваемые контекстные вкладки. Если используется, он должен быть первым *элементом* ребенка. |
-
-### <a name="executefunction-button-example"></a>Пример кнопки ExecuteFunction
-
-В следующем примере кнопка отключена при запуске надстройки. Его можно включить программным путем. Дополнительные сведения см. в статье о [Включение и отключение команд надстроек](../../design/disable-add-in-commands.md).
-
-```xml
-<Control xsi:type="Button" id="msgReadFunctionButton">
-  <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
-  <Label resid="funcReadButtonLabel" />
-  <Supertip>
-    <Title resid="funcReadSuperTipTitle" />
-    <Description resid="funcReadSuperTipDescription" />
-  </Supertip>
-  <Icon>
-    <bt:Image size="16" resid="blue-icon-16" />
-    <bt:Image size="32" resid="blue-icon-32" />
-    <bt:Image size="80" resid="blue-icon-80" />
-  </Icon>
-  <Action xsi:type="ExecuteFunction">
-    <FunctionName>getSubject</FunctionName>
-  </Action>
-  <Enabled>false</Enabled>
-</Control>
-```
-
-### <a name="showtaskpane-button-example"></a>Пример кнопки ShowTaskpane
-
-```xml
-<Control xsi:type="Button" id="msgReadOpenPaneButton">
-  <Label resid="paneReadButtonLabel" />
-  <Supertip>
-    <Title resid="paneReadSuperTipTitle" />
-    <Description resid="paneReadSuperTipDescription" />
-  </Supertip>
-  <Icon>
-    <bt:Image size="16" resid="green-icon-16" />
-    <bt:Image size="32" resid="green-icon-32" />
-    <bt:Image size="80" resid="green-icon-80" />
-  </Icon>
-  <Action xsi:type="ShowTaskpane">
-    <SourceLocation resid="readTaskPaneUrl" />
-  </Action>
-</Control>
-```
-
-## <a name="menu-dropdown-button-controls"></a>Элементы управления "Меню" (кнопка с раскрывающимся списком)
-
-Меню определяет статический список вариантов. Каждый элемент меню либо выполняет функцию, либо отображает область задач. Вложенные меню не поддерживаются. 
-
-При использовании с [точкой расширения](extensionpoint.md) **ContextMenu****PrimaryCommandSurface** элемент управления Menu определяет следующее:
-
-- элемент меню корневого уровня;
-
-- список элементов подменю.
-
-При использовании совместно с элементом **PrimaryCommandSurface**, корневой элемент меню отображается в виде кнопки на ленте. При выборе кнопки отображается подменю в виде раскрывающегося списка. При использовании совместно с элементом **ContextMenu**, элемент меню с подменю вставляется в контекстное меню. В обоих случаях индивидуальные элементы подменю могут выполнять функцию JavaScript или отображать область задач. В настоящее время поддерживается только один уровень подменю.
-
-В приведенном ниже примере показано, как определить элемент меню с двумя элементами подменю. Первый элемент подменю отображает область задач, а второй запускает функцию JavaScript.
-
-```xml
-<Control xsi:type="Menu" id="TestMenu2">
-  <Label resid="residLabel3" />
-  <Tooltip resid="residToolTip" />
-  <Supertip>
-    <Title resid="residLabel" />
-    <Description resid="residToolTip" />
-  </Supertip>
-  <Icon>
-    <bt:Image size="16" resid="icon1_32x32" />
-    <bt:Image size="32" resid="icon1_32x32" />
-    <bt:Image size="80" resid="icon1_32x32" />
-  </Icon>
-  <Items>
-    <Item id="showGallery2">
-      <Label resid="residLabel3"/>
-      <Supertip>
-        <Title resid="residLabel" />
-        <Description resid="residToolTip" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="icon1_32x32" />
-        <bt:Image size="32" resid="icon1_32x32" />
-        <bt:Image size="80" resid="icon1_32x32" />
-      </Icon>
-      <Action xsi:type="ShowTaskpane">
-        <TaskpaneId>MyTaskPaneID1</TaskpaneId>
-        <SourceLocation resid="residUnitConverterUrl" />
-      </Action>
-    </Item>
-    <Item id="showGallery3">
-      <Label resid="residLabel5"/>
-      <Supertip>
-        <Title resid="residLabel" />
-        <Description resid="residToolTip" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="icon4_32x32" />
-        <bt:Image size="32" resid="icon4_32x32" />
-        <bt:Image size="80" resid="icon4_32x32" />
-      </Icon>
-      <Action xsi:type="ExecuteFunction">
-        <FunctionName>getButton</FunctionName>
-      </Action>
-    </Item>
-  </Items>
-</Control>
-
-```
-
-### <a name="child-elements"></a>Дочерние элементы
-
-|  Элемент |  Обязательный  |  Описание  |
-|:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)      |
-|  **ToolTip**    |Нет|Подсказка для кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String.** **String** — это дочерний элемент **LongStrings**, являющийся дочерним для элемента [Resources](resources.md).|        
-|  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
-|  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
-|  **Items**     | Да |  Коллекция кнопок, отображающихся в меню. Содержит элементы **Item** для каждого элемента подменю. Каждый элемент **Item** содержит дочерние элементы, вложенные в [элемент управления Button](#button-control).|
-|  [OverriddenByRibbonApi](overriddenbyribbonapi.md)      | Нет |  Указывает, должно ли меню отображаться в сочетаниях приложений и платформ, поддерживаюх настраиваемые контекстные вкладки. Если используется, он должен быть первым *элементом* ребенка. |
-
-### <a name="menu-control-examples"></a>Примеры элементов управления Menu
-
-```xml
-<Control xsi:type="Menu" id="TestMenu2">
-  <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
-  <Label resid="residLabel3" />
-  <Tooltip resid="residToolTip" />
-  <Supertip>
-    <Title resid="residLabel" />
-    <Description resid="residToolTip" />
-  </Supertip>
-  <Icon>
-    <bt:Image size="16" resid="icon1_32x32" />
-    <bt:Image size="32" resid="icon1_32x32" />
-    <bt:Image size="80" resid="icon1_32x32" />
-  </Icon>
-  <Items>
-    <Item id="showGallery2">
-      <Label resid="residLabel3"/>
-      <Supertip>
-        <Title resid="residLabel" />
-        <Description resid="residToolTip" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="icon1_32x32" />
-        <bt:Image size="32" resid="icon1_32x32" />
-        <bt:Image size="80" resid="icon1_32x32" />
-      </Icon>
-      <Action xsi:type="ShowTaskpane">
-        <TaskpaneId>MyTaskPaneID1</TaskpaneId>
-        <SourceLocation resid="residUnitConverterUrl" />
-      </Action>
-    </Item>
-    <Item id="showGallery3">
-      <Label resid="residLabel5"/>
-      <Supertip>
-        <Title resid="residLabel" />
-        <Description resid="residToolTip" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="icon4_32x32" />
-        <bt:Image size="32" resid="icon4_32x32" />
-        <bt:Image size="80" resid="icon4_32x32" />
-      </Icon>
-      <Action xsi:type="ExecuteFunction">
-        <FunctionName>getButton</FunctionName>
-      </Action>
-    </Item>
-  </Items>
-</Control>
-
-```
-
-```xml
-<Control xsi:type="Menu" id="msgReadMenuButton">
-  <Label resid="menuReadButtonLabel" />
-  <Supertip>
-    <Title resid="menuReadSuperTipTitle" />
-    <Description resid="menuReadSuperTipDescription" />
-  </Supertip>
-  <Icon>
-    <bt:Image size="16" resid="red-icon-16" />
-    <bt:Image size="32" resid="red-icon-32" />
-    <bt:Image size="80" resid="red-icon-80" />
-  </Icon>
-  <Items>
-    <Item id="msgReadMenuItem1">
-      <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
-      <Label resid="menuItem1ReadLabel" />
-      <Supertip>
-        <Title resid="menuItem1ReadLabel" />
-        <Description resid="menuItem1ReadTip" />
-      </Supertip>
-      <Icon>
-        <bt:Image size="16" resid="red-icon-16" />
-        <bt:Image size="32" resid="red-icon-32" />
-        <bt:Image size="80" resid="red-icon-80" />
-      </Icon>
-      <Action xsi:type="ExecuteFunction">
-        <FunctionName>getItemClass</FunctionName>
-      </Action>
-    </Item>
-  </Items>
-</Control>
-```
-
-## <a name="mobilebutton-control"></a>Элемент управления MobileButton
-
-Кнопка мобильного устройства выполняет одно действие, когда пользователь ее нажимает. Она может выполнять функцию или отображать область задач. Каждый элемент управления "Кнопка мобильного устройства" должен иметь атрибут `id`, уникальный для манифеста.
-
-Значение `MobileButton` для **xsi:type** определено в схеме 1.1 VersionOverrides. Содержащийся элемент [VersionOverrides](versionoverrides.md) должен иметь значение `VersionOverridesV1_1` атрибута `xsi:type`.
-
-### <a name="child-elements"></a>Дочерние элементы
-|  Элемент |  Обязательный  |  Описание  |
-|:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
-|  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
-|  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
-
-### <a name="executefunction-mobile-button-example"></a>Пример кнопки ExecuteFunction для мобильного устройства
-
-```xml
-<Control xsi:type="MobileButton" id="msgReadFunctionButton">
-  <Label resid="funcReadButtonLabel" />
-  <Icon>
-    <bt:Image resid="blue-icon-16-1" size="25" scale="1" />
-    <bt:Image resid="blue-icon-16-2" size="25" scale="2" />
-    <bt:Image resid="blue-icon-16-3" size="25" scale="3" />
-    <bt:Image resid="blue-icon-32-1" size="32" scale="1" />
-    <bt:Image resid="blue-icon-32-2" size="32" scale="2" />
-    <bt:Image resid="blue-icon-32-3" size="32" scale="3" />
-    <bt:Image resid="blue-icon-80-1" size="48" scale="1" />
-    <bt:Image resid="blue-icon-80-2" size="48" scale="2" />
-    <bt:Image resid="blue-icon-80-3" size="48" scale="3" />
-  </Icon>
-  <Action xsi:type="ExecuteFunction">
-    <FunctionName>getSubject</FunctionName>
-  </Action>
-</Control>
-```
-
-### <a name="showtaskpane-mobile-button-example"></a>Пример кнопки ShowTaskpane для мобильного устройства
-
-```xml
-<Control xsi:type="MobileButton" id="msgReadOpenPaneButton">
-  <Label resid="paneReadButtonLabel" />
-  <Icon>
-    <bt:Image resid="blue-icon-16-1" size="25" scale="1" />
-    <bt:Image resid="blue-icon-16-2" size="25" scale="2" />
-    <bt:Image resid="blue-icon-16-3" size="25" scale="3" />
-    <bt:Image resid="blue-icon-32-1" size="32" scale="1" />
-    <bt:Image resid="blue-icon-32-2" size="32" scale="2" />
-    <bt:Image resid="blue-icon-32-3" size="32" scale="3" />
-    <bt:Image resid="blue-icon-80-1" size="48" scale="1" />
-    <bt:Image resid="blue-icon-80-2" size="48" scale="2" />
-    <bt:Image resid="blue-icon-80-3" size="48" scale="3" />
-  </Icon>
-  <Action xsi:type="ShowTaskpane">
-    <SourceLocation resid="readTaskPaneUrl" />
-  </Action>
-</Control>
-```
+- [Тип элемента Control button](control-button.md)
+- [Элемент Control типа меню](control-menu.md)
+- [Элемент Управления типа MobileButton](control-mobilebutton.md)
