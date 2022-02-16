@@ -1,19 +1,24 @@
 ---
 title: Использование модели API для определенных приложений
-description: 'Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.'
-ms.date: 07/08/2021
+description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
+ms.date: 02/11/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 2ffce8433be95de0bf75ec1cfba813f7d6cbf57f
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855585"
 ---
-
 # <a name="application-specific-api-model"></a>Модель API для конкретных приложений
 
-В этой статье описано, как использовать модель API для создания надстроек в Excel, Word и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
+В этой статье описывается использование модели API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
 
 > [!NOTE]
 > Эта модель не поддерживается клиентами Office 2013. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](../overview/office-add-in-availability.md).
 
 > [!TIP]
-> В примерах на этой странице используются API JavaScript для Excel, но эти понятия также относятся к API JavaScript для OneNote, Visio и Word.
+> В примерах на этой странице используются Excel API JavaScript, но эти понятия также применяются к API OneNote, PowerPoint, Visio и API JavaScript Word.
 
 ## <a name="asynchronous-nature-of-the-promise-based-apis"></a>Асинхронный характер API на основе обещаний
 
@@ -90,18 +95,11 @@ worksheet.getRange("A1").set({
 В примере ниже показана пакетная функция, которая определяет локальный прокси-объект JavaScript (`selectedRange`), загружает свойство этого объекта, а затем использует шаблон обещаний JavaScript для вызова метода `context.sync()` и, соответственно, синхронизации состояния прокси-объектов и объектов в документе Excel.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     var selectedRange = context.workbook.getSelectedRange();
     selectedRange.load('address');
-    return context.sync()
-      .then(function () {
-        console.log('The selected range is: ' + selectedRange.address);
-    });
-}).catch(function (error) {
-    console.log('error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
+    await context.sync();
+    console.log('The selected range is: ' + selectedRange.address);
 });
 ```
 
@@ -118,25 +116,18 @@ Excel.run(function (context) {
 Чтобы можно было считывать свойства прокси-объекта, вам необходимо явно загрузить их и заполнить прокси-объект данными из документа Office, а затем вызвать метод `context.sync()`. Например, вы создали прокси-объект для ссылки на выделенный диапазон, а затем вам потребовалось считать свойство `address` выделенного диапазона. Прежде чем вы сможете считать свойство `address`, вам потребуется загрузить его. Чтобы запросить загрузку свойств прокси-объекта, вызовите метод `load()` в объекте и укажите свойства, которые необходимо загрузить. В следующем примере показана загрузка свойства `Range.address` для `myRange`.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     var sheetName = 'Sheet1';
     var rangeAddress = 'A1:B2';
     var myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
 
     myRange.load('address');
+    await context.sync();
+      
+    console.log (myRange.address);   // ok
+    //console.log (myRange.values);  // not ok as it was not loaded
 
-    return context.sync()
-      .then(function () {
-        console.log (myRange.address);   // ok
-        //console.log (myRange.values);  // not ok as it was not loaded
-        });
-    }).then(function () {
-        console.log('done');
-}).catch(function (error) {
-    console.log('Error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
+    console.log('done');
 });
 ```
 
@@ -179,11 +170,10 @@ var tableCount = context.workbook.tables.getCount();
 
 // This sync call implicitly loads tableCount.value.
 // Any other ClientResult values are loaded too.
-return context.sync()
-    .then(function () {
-        // Trying to log the value before calling sync would throw an error.
-        console.log (tableCount.value);
-    });
+await context.sync();
+
+// Trying to log the value before calling sync would throw an error.
+console.log (tableCount.value);
 ```
 
 ### <a name="set"></a>set()
@@ -193,8 +183,8 @@ return context.sync()
 В приведенном ниже примере кода показано, как задать несколько свойств формата диапазона, вызвав метод `set()` и передав в него объект JavaScript, имена и типы свойств которого повторяют структуру свойств объекта `Range`. В этом примере предполагается, что данные находятся в диапазоне **B2:E2**.
 
 ```js
-Excel.run(function (ctx) {
-    var sheet = ctx.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    var sheet = context.workbook.worksheets.getItem("Sample");
     var range = sheet.getRange("B2:E2");
     range.set({
         format: {
@@ -209,12 +199,7 @@ Excel.run(function (ctx) {
     });
     range.format.autofitColumns();
 
-    return ctx.sync();
-}).catch(function(error) {
-    console.log("Error: " + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-    }
+    await context.sync();
 });
 ```
 
@@ -250,20 +235,21 @@ range.format.font.size = 10;
 > [!NOTE]
 > Варианты `*OrNullObject` никогда не возвращают значение JavaScript `null`. Они возвращают обычные прокси-объекты Office. Если сущность, представляемая объектом, не существует, свойству `isNullObject` объекта присваивается значение `true`. Не проверяйте возвращенный объект на нулевое значение или ложность. Для него никогда не используются значения `null`, `false` или `undefined`.
 
-В следующем примере кода осуществляется попытка получить лист Excel с именем Data с помощью метода `getItemOrNullObject()`. Если лист с таким именем не существует, создается новый лист. Обратите внимание, что код не загружает свойство `isNullObject`. Office автоматически загружает это свойство, когда вызывается `context.sync`, поэтому вам не нужно явным образом загружать его с помощью `datasheet.load('isNullObject')`.
+В следующем примере кода осуществляется попытка получить лист Excel с именем Data с помощью метода `getItemOrNullObject()`. Если лист с таким именем не существует, создается новый лист. Обратите внимание, что код не загружает свойство `isNullObject`. Office автоматически загружает это свойство, когда вызывается `context.sync`, поэтому вам не нужно явным образом загружать его с помощью `dataSheet.load('isNullObject')`.
 
 ```js
-var dataSheet = context.workbook.worksheets.getItemOrNullObject("Data");
-
-return context.sync()
-    .then(function () {
-        if (dataSheet.isNullObject) {
-            dataSheet = context.workbook.worksheets.add("Data");
-        }
-
-        // Set `dataSheet` to be the second worksheet in the workbook.
-        dataSheet.position = 1;
-    });
+await Excel.run(async (context) => {
+    var dataSheet = context.workbook.worksheets.getItemOrNullObject("Data");
+    
+    await context.sync();
+    
+    if (dataSheet.isNullObject) {
+        dataSheet = context.workbook.worksheets.add("Data");
+    }
+    
+    // Set `dataSheet` to be the second worksheet in the workbook.
+    dataSheet.position = 1;
+});
 ```
 
 ## <a name="see-also"></a>См. также

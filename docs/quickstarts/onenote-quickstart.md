@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 01/13/2022
+ms.date: 02/11/2022
 ms.prod: onenote
 ms.localizationpriority: high
-ms.openlocfilehash: e377f3f73f6879b374672157ebc127a0cf412830
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: 7d806922785f97430619bd74eb04c7c42595aa4e
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62222088"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855578"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -50,7 +50,7 @@ ms.locfileid: "62222088"
 
 ```js
 try {
-    await OneNote.run(async context => {
+    await OneNote.run(async (context) => {
 
         // Get the current page.
         var page = context.application.getActivePage();
@@ -62,8 +62,8 @@ try {
         var html = "<p><ol><li>Item #1</li><li>Item #2</li></ol></p>";
         page.addOutline(40, 90, html);
 
-        // Run the queued commands, and return a promise to indicate task completion.
-        return context.sync();
+        // Run the queued commands.
+        await context.sync();
     });
 } catch (error) {
     console.log("Error: " + error);
@@ -78,20 +78,13 @@ try {
     cd "My Office Add-in"
     ```
 
-1. Запустите локальный веб-сервер и загрузите неопубликованную надстройку.
+1. Запустите локальный веб-сервер. Выполните указанную ниже команду в корневом каталоге своего проекта.
+
+    ```command&nbsp;line
+    npm run dev-server
+    ```
 
     [!INCLUDE [alert use https](../includes/alert-use-https.md)]
-
-    > [!TIP]
-    > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
-    >
-    > ```command&nbsp;line
-    > npm run dev-server
-    > ```
-
-    Выполните указанную ниже команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер. Замените "{url}" на URL-адрес документа OneNote в OneDrive или библиотеке SharePoint, для которой у вас есть разрешения.
-
-    [!INCLUDE [npm start:web command syntax](../includes/start-web-sideload-instructions.md)]`
 
 1. Откройте записную книжку в [OneNote в Интернете](https://www.onenote.com/notebooks) и создайте страницу.
 

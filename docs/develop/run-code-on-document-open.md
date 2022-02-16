@@ -3,12 +3,12 @@ title: Запуск кода в надстройке Office при открыт�
 description: Узнайте, как запускать код Office надстройки при запуске документа.
 ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 884409fb161970c57b32921192544592ca39bb2c
-ms.sourcegitcommit: 517786511749c9910ca53e16eb13d0cee6dbfee6
+ms.openlocfilehash: b14d6e9d03bdb9dcec57f76e4ad6b8dbfbc66fe4
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "59990553"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855550"
 ---
 # <a name="run-code-in-your-office-add-in-when-the-document-opens"></a>Запуск кода в надстройке Office при открытии документа
 
@@ -31,7 +31,7 @@ Office.addin.setStartupBehavior(Office.StartupBehavior.load);
 
 ## <a name="place-startup-code-in-officeinitialize"></a>Поместите код запуска в Office.initialize
 
-Когда надстройка настроена для загрузки открытого документа, она будет немедленно работать. `Office.initialize`Обработник событий будет вызван. Поместите код запуска в `Office.initialize` обработник событий или `Office.onReady` обработник событий.
+Когда надстройка настроена для загрузки открытого документа, она будет немедленно работать. Обработник `Office.initialize` событий будет вызван. Поместите код запуска в обработник `Office.initialize` `Office.onReady` событий или обработник событий.
 
 В следующем Excel кода надстройки показано, как зарегистрировать обработник событий для событий изменения из активного таблицы. Если вы настроите надстройку для загрузки открытого документа, этот код зарегистрирует обработчик событий при открываемом документе. Перед открытием области задач можно обрабатывать события изменений.
 
@@ -55,12 +55,11 @@ Office.initialize = () => {
  * @param event The event information from Excel
  */
 async function onChange(event) {
-  return Excel.run(function(context) {
-    return context.sync().then(function() {
-      console.log("Change type of event: " + event.changeType);
-      console.log("Address of event: " + event.address);
-      console.log("Source of event: " + event.source);
-    });
+    await Excel.run(async (context) => {    
+        await context.sync();
+        console.log("Change type of event: " + event.changeType);
+        console.log("Address of event: " + event.address);
+        console.log("Source of event: " + event.source);
   });
 }
 ```

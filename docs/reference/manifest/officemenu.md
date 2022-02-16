@@ -1,14 +1,14 @@
 ---
 title: Элемент OfficeMenu в файле манифеста
 description: Элемент OfficeMenu определяет коллекцию элементов управления, которые будут добавлены в Office контексте.
-ms.date: 02/04/2022
+ms.date: 02/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 11b68edaef4044fb7ddde0d413debc0339b15c3a
-ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.openlocfilehash: e09f5dfcba131912a1a2842bd88c9760a0992235
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62467745"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855508"
 ---
 # <a name="officemenu-element"></a>Элемент OfficeMenu
 
@@ -36,7 +36,7 @@ ms.locfileid: "62467745"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [Control](#control)    | Да |  Коллекция из одного или нескольких объектов Control.  |
+|  [Управление типом Меню](control-menu.md)    | Да |  Коллекция из одного или нескольких объектов Control.  |
 
 ## <a name="xsitype"></a>xsi:type
 
@@ -44,10 +44,6 @@ ms.locfileid: "62467745"
 
 - `ContextMenuText`. Отображает элемент в контекстном меню, когда пользователь открывает это меню, щелкая правой кнопкой мыши по выделенному тексту. Применяется для Word, Excel, PowerPoint и OneNote.
 - `ContextMenuCell`. Отображает элемент в контекстном меню, когда пользователь открывает это меню, щелкая правой кнопкой мыши ячейку электронной таблицы. Применяется для Excel.
-
-## <a name="control"></a>Control
-
-**Каждый элемент OfficeMenu** требует одного или более элементов [управления меню](control-menu.md). 
 
 ## <a name="example"></a>Пример
 

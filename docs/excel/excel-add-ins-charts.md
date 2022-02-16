@@ -1,10 +1,15 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
-description: 'Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.'
+description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
 ms.date: 11/29/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 31b65a6523753f47304adb4e007bb19e2e644c6d
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855613"
 ---
-
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel.
@@ -228,8 +233,8 @@ Excel.run(function (context) {
 Диаграммы можно отображать как изображения за пределами Excel. Метод `Chart.getImage` возвращает диаграмму в виде строки в кодировке base64, представляющей диаграмму в формате изображения JPEG. В приведенном ниже коде показано, как получить строку изображения и записать ее в консоли.
 
 ```js
-Excel.run(function (ctx) {
-    var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");
+Excel.run(function (context) {
+    var chart = context.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");
     var imageAsString = chart.getImage();
     return context.sync().then(function () {
         console.log(imageAsString.value);

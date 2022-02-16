@@ -1345,6 +1345,9 @@ items:
         displayName: Excel
   - name: Ресурсы
     items:
+      - name: Глоссарий
+        href: resources/resources-glossary.md
+        displayName: 'Excel, Word, OneNote, Project, PowerPoint, Visio, Outlook'
       - name: Внешние ресурсы
         href: resources/resources-links-help.md
         displayName: 'Excel, Word, OneNote, Project, PowerPoint, Visio, Outlook'

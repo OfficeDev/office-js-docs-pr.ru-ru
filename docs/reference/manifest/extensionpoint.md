@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 02/07/2022
+ms.date: 02/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 279cc1b27f42d55e2ead00ee0c4df64afab16a3d
-ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.openlocfilehash: 1f8ccc08a9c0d42edf89c904b8809a530239be4c
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62467866"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855634"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -28,71 +28,111 @@ ms.locfileid: "62467866"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **xsi:type**  |  Да  | Тип определяемой точки расширения.|
+|  **xsi:type**  |  Да  | Тип определяемой точки расширения. Возможные значения зависят от Office хост-приложения, определенного в значении  элемента host-дедушек.|
 
-## <a name="extension-points-for-excel-only"></a>Точки расширения только для Excel
+## <a name="extension-points-for-excel-onenote-powerpoint-and-word-add-in-commands"></a>Точки расширения для команд Excel, OneNote, PowerPoint и Word
 
-- **CustomFunctions** — пользовательская функция, написанная на JavaScript для Excel.
+Существует три типа точек расширения, доступных в некоторых или всех этих хостов.
 
-[В этом примере кода XML](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/manifest.xml) показано, как использовать элемент **ExtensionPoint** со значением атрибута **CustomFunctions** и какие дочерние элементы следует использовать.
+- [PrimaryCommandSurface](#primarycommandsurface) (Допустимо для Word, Excel, PowerPoint и OneNote) — лента в Office.
+- [ContextMenu](#contextmenu) (Допустимо для Word, Excel, PowerPoint и OneNote) — меню ярлыка, которое отображается при выборе и удержании (или правой кнопкой мыши) Office пользовательского интерфейса.
+- [CustomFunctions](#customfunctions) (Допустимо только для Excel) — настраиваемая функция, написанная в JavaScript для Excel.
 
-## <a name="extension-points-for-word-excel-powerpoint-and-onenote-add-in-commands"></a>Точки расширения для команд надстроек Word, Excel, PowerPoint и OneNote
+См. следующие подсекции для детских элементов и примеры этих типов точек расширения.
 
-- **PrimaryCommandSurface** — лента в Office.
-- **ContextMenu** — контекстное меню, которое появляется при нажатии правой кнопкой мыши в интерфейсе Office.
+### <a name="primarycommandsurface"></a>PrimaryCommandSurface
 
-В приведенных ниже примерах показано, как применять элемент **ExtensionPoint** со значениями атрибута **PrimaryCommandSurface** и **ContextMenu**, и какие дочерние элементы использовать с каждым из них.
+Основная поверхность команды в Word, Excel, PowerPoint и OneNote является лентой.
+
+#### <a name="child-elements"></a>Дочерние элементы
+
+|Элемент|Описание|
+|:-----|:-----|
+|[CustomTab] (customtab.md|Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. |
+|[OfficeTab](officetab.md)|Требуется, если требуется расширить вкладку ленты Приложение Office по умолчанию (с помощью **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно.|
+
+#### <a name="example"></a>Пример
+
+В следующем примере показано, как использовать **элемент ExtensionPoint** с **PrimaryCommandSurface**. В ленту добавляется настраиваемая вкладка.
 
 > [!IMPORTANT]
-> Для элементов, содержащих атрибут идентификатора, необходимо предоставить уникальный идентификатор. Рекомендуем указать название компании с идентификатором. Используйте, например, формат `<CustomTab id="mycompanyname.mygroupname">`.
+> Убедитесь, что для элементов, которые содержат атрибут ID, указан уникальный идентификатор.
 
 ```XML
 <ExtensionPoint xsi:type="PrimaryCommandSurface">
-          <CustomTab id="Contoso Tab">
-          <!-- If you want to use a default tab that comes with Office, remove the above CustomTab element, and then uncomment the following OfficeTab element -->
-            <!-- <OfficeTab id="TabData"> -->
-            <Label resid="residLabel4" />
-            <Group id="Group1Id12">
-              <Label resid="residLabel4" />
-              <Icon>
-                <bt:Image size="16" resid="icon1_32x32" />
-                <bt:Image size="32" resid="icon1_32x32" />
-                <bt:Image size="80" resid="icon1_32x32" />
-              </Icon>
-              <Tooltip resid="residToolTip" />
-              <Control xsi:type="Button" id="Button1Id1">
-
-                  <!-- information about the control -->
-              </Control>
-              <!-- other controls, as needed -->
-            </Group>
-          </CustomTab>
-        </ExtensionPoint>
-
-      <ExtensionPoint xsi:type="ContextMenu">
-        <OfficeMenu id="ContextMenuCell">
-          <Control xsi:type="Menu" id="ContextMenu2">
-                  <!-- information about the control -->
-          </Control>
-          <!-- other controls, as needed -->
-        </OfficeMenu>
-        </ExtensionPoint>
+  <CustomTab id="Contoso.MyTab1">
+    <Label resid="residLabel4" />
+    <Group id="Contoso.Group1">
+      <Label resid="residLabel4" />
+      <Icon>
+        <bt:Image size="16" resid="icon1_32x32" />
+        <bt:Image size="32" resid="icon1_32x32" />
+        <bt:Image size="80" resid="icon1_32x32" />
+      </Icon>
+      <Tooltip resid="residToolTip" />
+      <Control xsi:type="Button" id="Contoso.Button1">
+          <!-- information about the control -->
+      </Control>
+      <!-- other controls, as needed -->
+    </Group>
+  </CustomTab>
+</ExtensionPoint>
 ```
+
+### <a name="contextmenu"></a>ContextMenu
+
+Меню контекста — это меню ярлыка, которое появляется при щелчке правой кнопкой мыши в Office пользовательского интерфейса.
 
 #### <a name="child-elements"></a>Дочерние элементы
  
 |Элемент|Описание|
 |:-----|:-----|
-|[CustomTab](customtab.md)|Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. |
-|[OfficeTab](officetab.md)|Требуется, если требуется расширить вкладку ленты Приложение Office по умолчанию (с помощью **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно.|
-|[OfficeMenu](officemenu.md)|Обязательный при добавлении команд надстройки в контекстное меню по умолчанию (с помощью элемента **ContextMenu**). Для атрибута **id** необходимо задать следующее значение: <br/> - **ContextMenuText** для Excel или Word. Отображает элемент в контекстном меню, когда пользователь щелкает выделенный текст правой кнопкой мыши. <br/> - **ContextMenuCell** для Excel. Отображает элемент в контекстном меню, когда пользователь нажимает ячейку электронной таблицы правой кнопкой мыши.|
-|[Group](group.md)|Группа точек расширения интерфейса пользователя на вкладке. В группе может быть до шести элементов управления. Атрибут **id** является обязательным. Это строка длиной до 125 символов. |
-|**Label**|Обязательный. Метка группы. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** . **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**.|
-|[Icon](icon.md)|Обязательный. Определяет значок группы для использования на устройствах с малым форм-фактором или в случаях, когда отображается слишком много кнопок. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **Image** . **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64.|
-|**Tooltip**|Необязательный параметр. Всплывающая подсказка группы. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** . **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**.|
-|[Control](control.md)|В каждой группе должен быть по крайней мере один элемент управления. Элемент **управления** может быть **кнопкой или** **меню.** Используйте **Меню** , чтобы указать список элементов управления кнопками. В настоящее время поддерживаются только кнопки и меню. [Дополнительные сведения см](control-button.md). в [пункте](control-menu.md) Управление кнопками и управление меню.<br/>**Примечание:**  Чтобы упростить устранение неполадок, рекомендуется добавлять по одному **элементу Control** и связанным с ними детским элементам **Resources** .|
-|[Script](script.md)|Ссылка на файл JavaScript с пользовательским определением функции и кодом регистрации. Этот элемент не используется в предварительной версии для разработчиков. Загрузку всех файлов JavaScript выполняет страница HTML.|
-|[Page](page.md)|Ссылка на HTML-страницу для пользовательских функций.|
+|[OfficeMenu](officemenu.md)|Обязательный при добавлении команд надстройки в контекстное меню по умолчанию (с помощью элемента **ContextMenu**). Атрибут **id** должен быть установлен к одной из следующих строк: <br/> - **ContextMenuText** , если контекстное меню должно открываться, когда пользователь щелкает правой кнопкой мыши по выбранному тексту. <br/> - **ContextMenuCell**, если контекстное меню должно открываться, когда пользователь щелкает правой кнопкой мыши по ячейке на Excel таблице.|
+
+#### <a name="example"></a>Пример
+
+Ниже добавлено настраиваемое контекстное меню для ячеек в Excel таблицы.
+
+```xml
+<ExtensionPoint xsi:type="ContextMenu">
+  <OfficeMenu id="ContextMenuCell">
+    <Control xsi:type="Menu" id="Contoso.ContextMenu2">
+            <!-- information about the control -->
+    </Control>
+    <!-- other controls, as needed -->
+  </OfficeMenu>
+</ExtensionPoint>
+```
+
+### <a name="customfunctions"></a>Настраиваемые функции
+
+Настраиваемая функция, написанная в JavaScript или TypeScript для Excel.
+
+#### <a name="child-elements"></a>Дочерние элементы
+
+|Элемент|Описание|
+|:-----|:-----|
+|[Script](script.md)|Обязательный элемент. Ссылки на файл JavaScript с определением и кодом регистрации пользовательской функции.|
+|[Page](page.md)|Обязательный элемент. Ссылка на HTML-страницу для пользовательских функций.|
+|[Метаданные](metadata.md)|Обязательный элемент. Определяет параметры метаданных, используемые пользовательской функцией в Excel.|
+|[Namespace](namespace.md)|Необязательное свойство. Определяет пространство имен, используемых пользовательской функцией в Excel.|
+
+#### <a name="example"></a>Пример
+
+```xml
+<ExtensionPoint xsi:type="CustomFunctions">
+  <Script>
+    <SourceLocation resid="Functions.Script.Url"/>
+  </Script>
+  <Page>
+    <SourceLocation resid="Shared.Url"/>
+  </Page>
+  <Metadata>
+    <SourceLocation resid="Functions.Metadata.Url"/>
+  </Metadata>
+  <Namespace resid="Functions.Namespace"/>
+</ExtensionPoint>
+```
 
 ## <a name="extension-points-for-outlook"></a>Точки расширения для Outlook
 
@@ -132,7 +172,7 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="MessageReadCommandSurface">
-  <CustomTab id="TabCustom1">
+  <CustomTab id="Contoso.TabCustom2">
         <-- CustomTab Definition -->
   </CustomTab>
 </ExtensionPoint>
@@ -163,7 +203,7 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="MessageComposeCommandSurface">
-  <CustomTab id="TabCustom1">
+  <CustomTab id="Contoso.TabCustom3">
         <-- CustomTab Definition -->
   </CustomTab>
 </ExtensionPoint>
@@ -194,7 +234,7 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
-  <CustomTab id="TabCustom1">
+  <CustomTab id="Contoso.TabCustom4">
         <-- CustomTab Definition -->
   </CustomTab>
 </ExtensionPoint>
@@ -225,7 +265,7 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
-  <CustomTab id="TabCustom1">
+  <CustomTab id="Contoso.TabCustom5">
         <-- CustomTab Definition -->
   </CustomTab>
 </ExtensionPoint>
@@ -263,9 +303,9 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
-  <Group id="mobileGroupID">
+  <Group id="Contoso.mobileGroup1">
     <Label resid="residAppName"/>
-      <Control id="mobileButton1" xsi:type="MobileButton">
+      <Control  xsi:type="MobileButton id="Contoso.mobileButton1"">
         <!-- Control definition -->
       </Control>
   </Group>
@@ -297,7 +337,7 @@ ms.locfileid: "62467866"
 
 ```xml
 <ExtensionPoint xsi:type="MobileOnlineMeetingCommandSurface">
-  <Control xsi:type="MobileButton" id="onlineMeetingFunctionButton">
+  <Control xsi:type="MobileButton" id="Contoso.onlineMeetingFunctionButton1">
     <Label resid="residUILessButton0Name" />
     <Icon>
       <bt:Image resid="UiLessIcon" size="25" scale="1" />

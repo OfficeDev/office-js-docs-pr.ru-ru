@@ -1,38 +1,38 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: Узнайте, как преобразовать проект Office надстройки в Visual Studio с помощью TypeScript.
-ms.date: 07/08/2021
+ms.date: 02/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2771dbde52689200bc861aa208b33280776798b0
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 78a03c29662a981c51a93fcae0c61050a2007dda
+ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150733"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855571"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
 Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!IMPORTANT]
-> В этой статье  описываются минимальные действия, необходимые для обеспечения того, чтобы при нажатии F5 код был перенагружен на JavaScript, который затем автоматически перезагружается в Office. Однако код не очень "TypeScripty". Например, переменные объявляются с ключевым словом, а не с указанным `var` `let` типом. Чтобы в полной мере воспользоваться преимуществами сильного ввода TypeScript, рассмотрите возможность внесения дополнительных изменений в код. 
+> В этой статье описываются  минимальные действия, необходимые для обеспечения того, чтобы при нажатии F5 код был перенагружен на JavaScript, который затем автоматически перезагружается в Office. Однако код не очень "TypeScripty". Например, переменные объявляются с ключевым словом `var` `let` , а не с указанным типом. Чтобы в полной мере воспользоваться преимуществами сильного ввода TypeScript, рассмотрите возможность внесения дополнительных изменений в код.
 
 > [!NOTE]
 > Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые условия
 
-- [Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
-
-    > [!TIP]
-    > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-workloads).
-
-- Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2019)
+- [Visual Studio 2019](https://www.visualstudio.com/vs/) или более поздней с установленной рабочей **нагрузкой Office/SharePoint** разработки
 
     > [!TIP]
-    > В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если ни один из компонентов **TypeScript SDK** не выбран, выберите последнюю доступную версию SDK и выберите **Изменение** для установки этого [отдельного компонента.](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-individual-components)
+    > Если вы уже установили [Visual Studio, используйте](/visualstudio/install/modify-visual-studio) Visual Studio Installer, чтобы обеспечить Office **/SharePoint** разработки. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio#modify-workloads).
 
-- Excel 2016 или более поздней версии
+- TypeScript SDK версии 2.3 или более поздней версии.
+
+    > [!TIP]
+    > В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если ни один из компонентов **TypeScript SDK** не выбран, выберите последнюю доступную версию SDK и выберите **Изменение** для установки этого [отдельного компонента](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-individual-components).
+
+- Excel 2016 или позже.
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -56,12 +56,12 @@ ms.locfileid: "59150733"
 
 4. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
 
-5. С **выбранной** вкладке Просмотр введите **jquery. TypeScript.DefinitelyTyped**. Установите этот пакет или обнови его, если он уже установлен. Это позволит обеспечить, чтобы определения jQuery TypeScript были включены в проект. Пакеты для jQuery отображаются в файле, Visual Studio, называемом **packages.config.**
+5. С **выбранной** вкладке Просмотр введите **jquery. TypeScript.DefinitelyTyped**. Установите этот пакет или обнови его, если он уже установлен. Это позволит обеспечить, чтобы определения jQuery TypeScript были включены в проект. Пакеты для jQuery отображаются в файле, Visual Studio, называемом **packages.config**.
 
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.
 
-6. В **Home.ts** найдите строку и добавьте строку сразу же после нее для полифулля `Office.initialize = function (reason) {` `window.Promise` глобального, как показано здесь.
+6. В **Home.ts** найдите `Office.initialize = function (reason) {` строку и добавьте строку сразу же после нее, чтобы полифайл глобальной `window.Promise`, как показано здесь.
 
     ```TypeScript
     Office.initialize = function (reason) {
@@ -70,7 +70,7 @@ ms.locfileid: "59150733"
         ...
     ```
 
-7. В **Home.ts** найдите функцию, замените всю функцию `displaySelectedCells` следующим кодом и сохраните файл.
+7. В **Home.ts** найдите `displaySelectedCells` функцию, замените всю функцию следующим кодом и сохраните файл.
 
     ```TypeScript
     function displaySelectedCells() {
@@ -237,4 +237,4 @@ ms.locfileid: "59150733"
 ## <a name="see-also"></a>См. также
 
 - [Обсуждение реализации обещаний на сайте StackOverflow](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
-- [Примеры надстроек Office на сайте GitHub](https://github.com/officedev)
+- [Примеры надстроек Office на сайте GitHub](https://github.com/OfficeDev/Office-Add-in-samples)

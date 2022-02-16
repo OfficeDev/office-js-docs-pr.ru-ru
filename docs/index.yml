@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page
   author: o365devx
   ms.author: o365devx
-  ms.date: 09/09/2021
+  ms.date: 02/10/2022
 highlightedContent:
   items:
     - itemType: overview
@@ -29,13 +29,13 @@ highlightedContent:
       title: Примеры для Office надстройки
       url: overview/office-add-in-code-samples.md
     - itemType: how-to-guide
-      title: Office Руководство для начинающих надстройок
+      title: Office руководство для начинающих надстройок
       url: overview/learning-path-beginner.md
     - itemType: reference
       title: Справочная документация по API JavaScript для Office
       url: /javascript/api/overview
     - itemType: whats-new
-      title: Microsoft 365 Блог разработчика
+      title: Microsoft 365 блог разработчика
       url: 'https://developer.microsoft.com/office/blogs/technology/office-add-ins'
 conceptualContent:
   title: Ваше путешествие разработчика
@@ -101,9 +101,12 @@ conceptualContent:
         - url: 'https://developer.microsoft.com/office'
           itemType: whats-new
           text: Присоединиться к программе разработчика
-        - url: /answers/products/m365
+        - url: 'https://aka.ms/m365dev-suggestions'
           itemType: architecture
           text: Предложить функцию
+        - url: /answers/products/m365
+          itemType: reference
+          text: Задайте вопросы о Office.js в Microsoft Q&A
         - url: 'https://stackoverflow.com/questions/tagged/office-js'
           itemType: reference
           text: Задайте вопросы о Office.js в переполнении стека
