@@ -1,14 +1,14 @@
 ---
 title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
-ms.date: 11/18/2021
+ms.date: 02/17/2022
 localization_priority: high
-ms.openlocfilehash: de86cacef6ae991af219e25351d32b8001ae6d39
-ms.sourcegitcommit: 63e9ef5e210e353700a3d27cfbd5ed838ce55d01
+ms.openlocfilehash: 81d82b2ff2624836d6f298e55618a0c5b0d172bb
+ms.sourcegitcommit: 789545a81bd61ec2e7adef2bc24c06b5be113b00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62177717"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62892554"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
@@ -18,56 +18,81 @@ ms.locfileid: "62177717"
 
 В следующих примерах показано, как создать простейшую надстройку Office, содержащую только манифест, веб-страницу HTML и логотип. Эти компоненты являются основными частями надстройки Office. Дополнительные сведения о том, как начать работу, см. в наших [кратких руководствах](../quickstarts/excel-quickstart-jquery.md) и [учебниках](/search/?terms=tutorial&scope=Office%20Add-ins).
 
-* [Надстройка Excel "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/excel-hello-world)
-* [Надстройка Outlook "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/outlook-hello-world)
-* [Надстройка PowerPoint "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/powerpoint-hello-world)
-* [Надстройка Word "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
+- [Надстройка Excel "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/excel-hello-world)
+- [Надстройка Outlook "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/outlook-hello-world)
+- [Надстройка PowerPoint "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/powerpoint-hello-world)
+- [Надстройка Word "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
+
+<br>
+
+---
+
+---
+
+## <a name="excel"></a>Excel
+
+| Имя                | Описание         |
+|:--------------------|:--------------------|
+| [Открытие в Teams](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-open-in-teams) | Создайте новую электронную таблицу Excel в Microsoft Teams, содержащую определенные вами данные.|
+| [Вставка внешнего файла Excel и его заполнение данными JSON](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-insert-file)  | Вставьте существующий шаблон из внешнего файла Excel в открытую книгу Excel. Затем заполните шаблон данными веб-службы JSON. |
+| [Создание настраиваемых контекстных вкладок на ленте](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-contextual-tabs) | Создайте настраиваемую контекстную вкладку на ленте в пользовательском интерфейсе Office. В примере создается таблица: если пользователь перемещает фокус внутри нее, отображается настраиваемая вкладка. Если пользователь перемещается за ее пределы, настраиваемая вкладка будет скрыта. |
+| [Использование сочетаний клавиш для действий надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-keyboard-shortcuts) | Настройте базовый проект надстройки Excel с использованием сочетаний клавиш. |
+| [Пример пользовательской функции, использующей рабочий веб-процесс](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/web-worker) | Используйте рабочие веб-процессы в пользовательских функциях, чтобы предотвратить блокировку пользовательского интерфейса надстройки Office. |
+| [Использование методов хранения для доступа к данным из надстройки Office в автономном режиме](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/Excel.OfflineStorageAddin) | Реализуйте localStorage, чтобы включить ограниченную функциональность для надстройки Office, если соединение прервано. |
+| [Шаблон пакетной обработки пользовательских функций](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/Batching)| Объедините несколько вызовов в один, чтобы уменьшить количество сетевых вызовов к удаленной службе.|
 
 ## <a name="outlook"></a>Outlook
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|
 | [Шифрование вложений, обработка участников в приглашениях на собрания и реагирование на изменения даты и времени встречи](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-encrypt-attachments) | Используйте активацию на основе событий для шифрования вложений, добавленных пользователем. Также используйте обработку событий для получателей, измененных в приглашении на собрание, и изменений даты и времени начала и окончания в приглашении на собрание. |
-| [Использование активации Outlook на основе событий для пометки внешних получателей (предварительная версия)](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-tag-external) | Используйте активацию на основе событий для запуска надстройки Outlook при изменении получателей в процессе создания сообщения. Надстройка также использует API `appendOnSendAsync` для добавления заявления об отказе. |
+| [Использование активации Outlook на основе событий для пометки внешних получателей](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-tag-external) | Используйте активацию на основе событий для запуска надстройки Outlook при изменении получателей в процессе создания сообщения. Надстройка также использует API `appendOnSendAsync` для добавления заявления об отказе. |
 | [Использование активации Outlook на основе событий для задания подписи](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-set-signature) | Используйте активацию на основе событий для запуска надстройки Outlook при создании нового сообщения или встречи. Надстройка может отвечать на события, даже если область задач не открыта. Она также использует API `setSignatureAsync`. |
 
-## <a name="excel"></a>Excel
+## <a name="word"></a>Word
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|
-| [Открытие в Teams](/samples/officedev/pnp-officeaddins/office-excel-add-in-open-in-teams/) | Создайте новую электронную таблицу Excel в Microsoft Teams, содержащую определенные вами данные.|
-| [Вставка внешнего файла Excel и его заполнение данными JSON](/samples/officedev/pnp-officeaddins/excel-add-in-insert-external-file/)  | Вставьте существующий шаблон из внешнего файла Excel в открытую книгу Excel. Затем заполните шаблон данными веб-службы JSON. |
-| [Создание настраиваемых контекстных вкладок на ленте](/samples/officedev/pnp-officeaddins/office-add-in-contextual-tabs/) | Создайте настраиваемую контекстную вкладку на ленте в пользовательском интерфейсе Office. В примере создается таблица: если пользователь перемещает фокус внутри нее, отображается настраиваемая вкладка. Если пользователь перемещается за ее пределы, настраиваемая вкладка будет скрыта. |
-| [Использование сочетаний клавиш для действий надстройки Office](/samples/officedev/pnp-officeaddins/office-add-in-keyboard-shortcuts) | Настройте базовый проект надстройки Excel с использованием сочетаний клавиш. |
-| [Пример пользовательской функции, использующей рабочий веб-процесс](/samples/officedev/pnp-officeaddins/excel-custom-function-web-worker-pattern/) | Используйте рабочие веб-процессы в пользовательских функциях, чтобы предотвратить блокировку пользовательского интерфейса надстройки Office. |
-| [Использование методов хранения для доступа к данным из надстройки Office в автономном режиме](/samples/officedev/pnp-officeaddins/use-storage-techniques-to-access-data-from-an-office-add-in-when-offline/) | Реализуйте localStorage, чтобы включить ограниченную функциональность для надстройки Office, если соединение прервано. |
-| [Шаблон пакетной обработки пользовательских функций](/samples/officedev/pnp-officeaddins/excel-custom-function-batching-pattern/)| Объедините несколько вызовов в один, чтобы уменьшить количество сетевых вызовов к удаленной службе.|
+| [Получение, редактирование и настройка OOXML-содержимого в документе Word с помощью надстройки Word](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/word-add-in-get-set-edit-openxml) | В этом примере показано, как получать, редактировать и настраивать OOXML-содержимое в документе Word. Пример надстройки предоставляет электронный блокнот для получения собственного контента в формате Office Open XML, а также тестирования собственных фрагментов Office Open XML.|
+| [Загрузка и запись содержимого в формате Open XML в надстройке Word](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/word-add-in-load-and-write-open-xml)  | В этом примере надстройки показано, как добавлять форматированное содержимое различных типов в документ Word с помощью метода setSelectedDataAsync с типом приведения ooxml. С помощью этой надстройки также можно показывать разметку Office Open XML для каждого типа контента в примере прямо на странице. |
 
-## <a name="shared-javascript-runtime"></a>Общая среда выполнения JavaScript
+<br>
 
-| Имя                | Описание         |
-|:--------------------|:--------------------|
-[Совместный доступ к глобальным данным с общей средой выполнения](/samples/officedev/pnp-officeaddins/office-add-in-shared-runtime-global-data/) | Настройте базовый проект, в котором используется общая среда выполнения, для запуска кода для кнопок ленты, области задач и пользовательских функций в единой среде выполнения браузера. |
-| [Управление лентой и пользовательским интерфейсом области задач и запуск кода при открытии документа](/samples/officedev/pnp-officeaddins/office-add-in-ribbon-task-pane-ui/) | Создайте контекстные кнопки ленты, которые включаются в зависимости от состояния вашей надстройки. |
+---
+
+---
 
 ## <a name="authentication-authorization-and-single-sign-on-sso"></a>Проверка подлинности, авторизация и единый вход
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|
-| [Пример надстройки Outlook с единым входом](/samples/officedev/pnp-officeaddins/outlook-add-in-sso-aspnet/) | Используйте функцию единого входа в Office, чтобы предоставить надстройке доступ к данным Microsoft Graph.|
-| [Получение данных OneDrive с помощью Microsoft Graph и msal.js в надстройке Office](/samples/officedev/pnp-officeaddins/office-add-in-auth-graph-react/) | Создайте надстройку Office как одностраничное приложение без серверной части, которое подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу.  |
-| [Проверка подлинности надстройки Office для Microsoft Graph](/samples/officedev/pnp-officeaddins/office-add-in-auth-aspnet-graph/) | Узнайте, как создать надстройку Microsoft Office, которая подключается к Microsoft Graph, и получить доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу. |
+| [Пример надстройки Outlook с единым входом](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO) | Используйте функцию единого входа в Office, чтобы предоставить надстройке доступ к данным Microsoft Graph.|
+| [Получение данных OneDrive с помощью Microsoft Graph и msal.js в надстройке Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React) | Создайте надстройку Office как одностраничное приложение без серверной части, которое подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу.  |
+| [Проверка подлинности надстройки Office для Microsoft Graph](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) | Узнайте, как создать надстройку Microsoft Office, которая подключается к Microsoft Graph, и получить доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы обновить электронную таблицу. |
 | [Проверка подлинности надстройки Outlook для Microsoft Graph](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) | Создайте надстройку Outlook, которая подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы создать новое сообщение электронной почты. |
-| [Надстройка Office с единым входом на ASP.NET](/samples/officedev/pnp-officeaddins/office-add-in-sso-aspnet/) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе ASP.NET. |
+| [Надстройка Office с единым входом на ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе ASP.NET. |
 | [Надстройка Office с единым входом на Node.js](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе Node.js.|
+
+## <a name="shared-javascript-runtime"></a>Общая среда выполнения JavaScript
+
+| Имя                | Описание         |
+|:--------------------|:--------------------|
+| [Совместный доступ к глобальным данным с общей средой выполнения](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-shared-runtime-global-state) | Настройте базовый проект, в котором используется общая среда выполнения, для запуска кода для кнопок ленты, области задач и пользовательских функций в единой среде выполнения браузера. |
+| [Управление лентой и пользовательским интерфейсом области задач и запуск кода при открытии документа](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-shared-runtime-scenario) | Создайте контекстные кнопки ленты, которые включаются в зависимости от состояния вашей надстройки. |
+
+<br>
+
+---
+
+---
 
 ## <a name="additional-samples"></a>Дополнительные примеры
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|
-|[Использование общей библиотеки для переноса надстройки набора средств Visual Studio для Office в веб-надстройку Office](/samples/officedev/pnp-officeaddins/vsto-shared-library-excel/) |Предоставляет стратегию повторного использования кода при переходе с надстроек VSTO на надстройки Office. |
-| [Интеграция функции Azure с пользовательской функцией Excel](/samples/officedev/pnp-officeaddins/azure-function-with-excel-custom-function/) | Интегрируйте функции Azure с пользовательскими функциями для перемещения в облако или интегрируйте дополнительные службы. |
-|[Примеры динамического кода DPI](/samples/officedev/pnp-officeaddins/dynamic-dpi-code-samples/) |Коллекция примеров для обработки изменений DPI в надстройках COM, VSTO и Office. |
+| [Использование общей библиотеки для переноса надстройки набора средств Visual Studio для Office в веб-надстройку Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/VSTO-shared-code-migration) | Предоставляет стратегию повторного использования кода при переходе с надстроек VSTO на надстройки Office. |
+| [Интеграция функции Azure с пользовательской функцией Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/AzureFunction) | Интегрируйте функции Azure с пользовательскими функциями для перемещения в облако или интегрируйте дополнительные службы. |
+| [Примеры динамического кода DPI](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/dynamic-dpi) | Коллекция примеров для обработки изменений DPI в надстройках COM, VSTO и Office. |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

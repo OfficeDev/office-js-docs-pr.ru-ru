@@ -1,11 +1,16 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 02/01/2022
+ms.date: 02/15/2022
 ms.prod: outlook
 ms.localizationpriority: high
+ms.openlocfilehash: 4398afa60c2a3a15571db2a706cb01811c9f41f7
+ms.sourcegitcommit: 789545a81bd61ec2e7adef2bc24c06b5be113b00
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62892512"
 ---
-
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
 Для надстроек Outlook требуются определенные версии API, которые указываются в элементе Requirements в их манифесте. Надстройки Outlook всегда включают элемент Set с атрибутом , для которого задано значение , и атрибутом , для которого установлен минимальный набор обязательных элементов API, поддерживающий сценарии надстройки.
@@ -116,18 +121,9 @@ if (item.somePropertyOrFunction !== undefined) {
 >
 > <sup>5</sup> В настоящее время при проектировании и внедрении надстроек для мобильных клиентов следует учитывать и другие факторы. Например, единственный поддерживаемый режим — это "Сообщение прочитано". Дополнительные сведения см. в статье [Рекомендации по использованию кода при добавлении поддержки для команд надстроек Outlook Mobile](../../outlook/add-mobile-support.md#code-considerations).
 >
-> <sup>6</sup> Надстройки не работают в современной версии Outlook в веб-браузере на Android. Сведения о поддерживаемых устройствах см. в разделе [Требования к запуску надстроек для Office](../../concepts/requirements-for-running-office-add-ins.md#client-requirements-non-windows-smartphone-and-tablet).
+> <sup>6</sup> Надстройки не работают в современной версии Outlook в Интернете на iPhone и Android-смартфонах. Сведения о поддерживаемых устройствах см. в разделе [Требования к запуску надстроек для Office](../../concepts/requirements-for-running-office-add-ins.md#client-requirements-non-windows-smartphone-and-tablet).
 
-> [!TIP]
-> Классическую и современную версии Outlook в веб-браузере можно различить по внешнему виду панели инструментов почтового ящика.
->
-> **современная версия**
->
-> ![Снимок части экрана с изображением панели инструментов современной версии Outlook.](../../images/outlook-on-the-web-new-toolbar.png)
->
-> **классическая версия**
->
-> ![Снимок части экрана с изображением панели инструментов классической версии Outlook.](../../images/outlook-on-the-web-classic-toolbar.png)
+[!INCLUDE [How to distinguish between classic and modern Outlook on the web](../../includes/classic-versus-modern-Outlook-on-the-web.md)]
 
 ## <a name="using-preview-apis"></a>Использование предварительных версий API
 
