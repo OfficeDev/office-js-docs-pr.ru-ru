@@ -1,10 +1,15 @@
 ---
 title: Устранение Excel надстройки
-description: 'Узнайте, как устранить ошибки разработки в Excel надстройки.'
-ms.date: 02/12/2021
+description: Узнайте, как устранить ошибки разработки в Excel надстройки.
+ms.date: 02/17/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: c6a523354cc938ac9e9ba041ddb09f12142a3a58
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340794"
 ---
-
 # <a name="troubleshooting-excel-add-ins"></a>Устранение Excel надстройки
 
 В этой статье обсуждаются проблемы устранения неполадок, которые уникальны для Excel. Используйте средство обратной связи в нижней части страницы, чтобы предложить другие проблемы, которые можно добавить в статью.
@@ -50,27 +55,28 @@ ms.localizationpriority: medium
 В следующем примере кода показано, как использовать этот временный код привязки для получения связанного `Binding` объекта. В примере слушателю событий назначена привязка. При запуске `getBindingId` `onDataChanged` события слушатель вызывает метод. Метод `getBindingId` использует ID временного `Binding` объекта `Binding` для получения объекта, который поднял событие.
 
 ```js
-Excel.run(function (context) {
-    // Retrieve your binding.
-    var binding = context.workbook.bindings.getItemAt(0);
-
-    return context.sync().then(function () {
+async function run() {
+    await Excel.run(async (context) => {
+        // Retrieve your binding.
+        let binding = context.workbook.bindings.getItemAt(0);
+    
+        await context.sync();
+    
         // Register an event listener to detect changes to your binding
         // and then trigger the `getBindingId` method when the data changes. 
         binding.onDataChanged.add(getBindingId);
-
-        return context.sync();
+        await context.sync();
     });
-});
+}
 
-function getBindingId(eventArgs) {
-    return Excel.run(function (context) {
+async function getBindingId(eventArgs) {
+    await Excel.run(async (context) => {
         // Get the temporary binding object and load its ID. 
-        var tempBindingObject = eventArgs.binding;
+        let tempBindingObject = eventArgs.binding;
         tempBindingObject.load("id");
 
         // Use the temporary binding object's ID to retrieve the original binding object. 
-        var originalBindingObject = context.workbook.bindings.getItem(tempBindingObject.id);
+        let originalBindingObject = context.workbook.bindings.getItem(tempBindingObject.id);
 
         // You now have the binding object that raised the event: `originalBindingObject`. 
     });
@@ -79,9 +85,9 @@ function getBindingId(eventArgs) {
 
 ### <a name="cell-format-usestandardheight-and-usestandardwidth-issues"></a>Формат ячейки `useStandardHeight` и `useStandardWidth` проблемы
 
-Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) не `CellPropertiesFormat` работает должным образом в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете, `useStandardHeight` `true` задав свойство для нечетких расчетов высоты на этой платформе. Например, стандартная высота **14** изменена до **14,25** в Excel в Интернете.
+Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) не `CellPropertiesFormat` работает должным образом в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете `useStandardHeight` `true`, задав свойство для нечетких расчетов высоты на этой платформе. Например, стандартная высота **14** изменена до **14,25** в Excel в Интернете.
 
-На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) и [UseStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardwidth-member) `CellPropertiesFormat` `true`предназначены только для . Настройка этих свойств не влияет `false` . 
+На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardheight-member) и [UseStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#excel-excel-cellpropertiesformat-usestandardwidth-member) `CellPropertiesFormat` `true`предназначены только для . Настройка этих свойств не влияет `false` .
 
 ### <a name="range-getimage-method-unsupported-on-excel-for-mac"></a>Метод Range`getImage`, неподтвердимый Excel для Mac
 

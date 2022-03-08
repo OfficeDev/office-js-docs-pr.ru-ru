@@ -1,42 +1,54 @@
 ---
 title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
-ms.date: 11/16/2021
+ms.date: 02/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5dcc6991e762f8d3defca50df406952ee7f1385b
-ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
+ms.openlocfilehash: fa03cd9a3ccee9fce1cbb7025baf6c2463ff938d
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61066662"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340542"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
 При создании надстройки с использованием API JavaScript для Excel не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Это очень важно из-за асинхронного характера API.
 
 > [!NOTE]
-> Дополнительные сведения о методе и асинхронном характере API JavaScript Excel см. в Excel объектной модели JavaScript в Office `sync()` [надстройки.](excel-add-ins-core-concepts.md)
+> Дополнительные сведения `sync()` о методе и асинхронном характере API JavaScript Excel см. в Excel объектной модели [JavaScript](excel-add-ins-core-concepts.md) в Office надстройки.
 
 ## <a name="best-practices"></a>Рекомендации
 
-В примерах кода в этой документации вы заметите, что каждый вызов `Excel.run` сопровождается оператором `catch`, что позволяет перехватывать все ошибки, возникающие в `Excel.run`. Мы рекомендуем использовать этот шаблон, когда вы будете создавать надстройки с использованием API JavaScript для Excel.
+В наших [примерах](https://github.com/OfficeDev/Office-Add-in-samples) кода [и Script Lab](../overview/explore-with-script-lab.md) фрагментах, вы заметите, `Excel.run` `catch` что каждый вызов сопровождается заявлением, чтобы поймать все ошибки, которые происходят в `Excel.run`пределах . Мы рекомендуем использовать этот шаблон, когда вы будете создавать надстройки с использованием API JavaScript для Excel.
 
 ```js
-Excel.run(function (context) {
-  
-  // Excel JavaScript API calls here
+$("#run").click(() => tryCatch(run));
 
-  // Await the completion of context.sync() before continuing.
-  return context.sync()
-    .then(function () {
-      console.log("Finished!");
-    })
-}).catch(errorHandlerFunction);
+async function run() {
+  await Excel.run(async (context) => {
+      // Add your Excel JavaScript API calls here.
+
+      // Await the completion of context.sync() before continuing.
+    await context.sync();
+    console.log("Finished!");
+  });
+}
+
+/** Default helper for invoking an action and handling errors. */
+async function tryCatch(callback) {
+  try {
+    await callback();
+  } catch (error) {
+    // Note: In a production add-in, you'd want to notify the user through your add-in's UI.
+    console.error(error);
+  }
+}
+
 ```
 
 ## <a name="api-errors"></a>Ошибки API
 
-Если Excel API JavaScript не удается успешно выполнить, API возвращает объект ошибки, содержащий следующие свойства.
+Если Excel API JavaScript не удается выполнить успешно, API возвращает объект ошибки, содержащий следующие свойства.
 
 - **code**.  Свойство `code` сообщения об ошибке содержит строку, входящую в список `OfficeExtension.ErrorCodes` или `Excel.ErrorCodes`. Например, код ошибки InvalidReference указывает, что ссылка недопустима для указанной операции. Коды ошибок не локализованы.
 
@@ -56,7 +68,7 @@ Excel.run(function (context) {
 |`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.| |
 |`ActivityLimitReached`|Достигнут предел действий.| |
 |`ApiNotAvailable`|Запрашиваемый интерфейс API недоступен.| |
-|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript.](../reference/requirement-sets/excel-api-requirement-sets.md)| |
+|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript](../reference/requirement-sets/excel-api-requirement-sets.md).| |
 |`BadPassword`|Предоставленный пароль является неправильным.| |
 |`Conflict`|Запрос не удалось обработать из-за конфликта.| |
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.| |
@@ -69,7 +81,7 @@ Excel.run(function (context) {
 |`InvalidArgument` |Аргумент недопустим, отсутствует или имеет неправильный формат.| |
 |`InvalidBinding` |Эта привязка объектов недопустима из-за предыдущих обновлений.| |
 |`InvalidOperation`|Выполняемая операция недопустима для этого объекта.| |
-|`InvalidOperationInCellEditMode`|Операция недоступна, пока Excel находится в режиме Изменить ячейку. Выход Из режима редактирования с помощью клавиш **Enter** или **Tab** или путем выбора другой ячейки, а затем попробуйте еще раз.| |
+|`InvalidOperationInCellEditMode`|Операция недоступна, пока Excel в режиме Изменить ячейку. Выход Из режима редактирования с помощью клавиш **Enter** или **Tab** или путем выбора другой ячейки, а затем попробуйте еще раз.| |
 |`InvalidReference`|Эта ссылка недопустима для текущей операции.| |
 |`InvalidRequest`  |Не удается обработать запрос.| |
 |`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.| |
@@ -79,13 +91,13 @@ Excel.run(function (context) {
 |`MergedRangeConflict`|Не удается выполнить операцию. Таблица не может пересекаться с другой таблицей, отчетом PivotTable, результатами запроса, объединенными ячейками или XML-картой.|
 |`NonBlankCellOffSheet`|Microsoft Excel не может вставить новые ячейки, так как это отодвигает непустые ячейки с конца таблицы. Эти непустые ячейки могут казаться пустыми, но имеют пустые значения, некоторое форматирование или формулу. Удалите достаточно строк или столбцов, чтобы сделать место для того, что вы хотите вставить, а затем попробуйте еще раз.| |
 |`NotImplemented`|Запрашиваемая функция не реализована.| |
-|`OperationCellsExceedLimit`|Попытка операции затрагивает более 33554000 ячеек.| Если эта ошибка вызывается, подтвердим, что в таблице нет непреднамеральных данных, но за `TableColumnCollection.add API` пределами таблицы. В частности, проверьте данные в наиболее правильных столбцах таблицы. Удалите непреднамеренные данные для устранения этой ошибки. Один из способов проверки того, сколько ячеек в процессе операции необходимо выполнить следующий расчет: `(number of table rows) x (16383 - (number of table columns))` . Число 16383 — это максимальное число столбцов, Excel поддерживается. <br><br>Эта ошибка возникает только в Excel в Интернете. |
+|`OperationCellsExceedLimit`|Попытка операции затрагивает более 33554000 ячеек.| Если эта `TableColumnCollection.add API` ошибка вызывается, подтвердим, что в таблице нет непреднамеральных данных, но за пределами таблицы. В частности, проверьте данные в наиболее правильных столбцах таблицы. Удалите непреднамеренные данные для устранения этой ошибки. Один из способов проверки того, сколько ячеек в процессе операции необходимо выполнить следующий расчет: `(number of table rows) x (16383 - (number of table columns))`. Число 16383 — это максимальное число столбцов, Excel поддерживается. <br><br>Эта ошибка возникает только в Excel в Интернете. |
 |`PivotTableRangeConflict`|Попытка операции вызывает конфликт с диапазоном PivotTable.| |
-|`RangeExceedsLimit`|Количество ячейки в диапазоне превысило максимально поддерживаемый номер. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)| |
+|`RangeExceedsLimit`|Количество ячейки в диапазоне превысило максимально поддерживаемый номер. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).| |
 |`RefreshWorkbookLinksBlocked`|Операция не удалась из-за того, что пользователь не предоставил разрешение на обновление внешних ссылок на книги.| |
 |`RequestAborted`|Запрос прерван во время выполнения.| |
-|`RequestPayloadSizeLimitExceeded`|Размер полезной нагрузки запроса превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)| Эта ошибка возникает только в Excel в Интернете.|
-|`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки отклика превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins)|  Эта ошибка возникает только в Excel в Интернете.|
+|`RequestPayloadSizeLimitExceeded`|Размер полезной нагрузки запроса превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).| Эта ошибка возникает только в Excel в Интернете.|
+|`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки отклика превысил предел. Дополнительные сведения см. в статье Ограничения ресурсов и [оптимизация производительности для Office надстройки](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).|  Эта ошибка возникает только в Excel в Интернете.|
 |`ServiceNotAvailable`|Служба недоступна.| |
 |`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.| |
 |`UnsupportedFeature`|Операция не удалась, так как исходный таблица содержит одну или несколько неподтверченных функций.| |
@@ -93,7 +105,7 @@ Excel.run(function (context) {
 |`UnsupportedSheet`|Этот тип листа не поддерживает эту операцию, так как это лист Макроса или Диаграммы.| |
 
 > [!NOTE]
-> В предыдущей таблице перечислены сообщения об ошибках, с которыми вы можете столкнуться при использовании Excel API JavaScript. Если вы работаете с общим API вместо приложения Excel API JavaScript, см. Office общие коды ошибок [API,](../reference/javascript-api-for-office-error-codes.md) чтобы узнать о соответствующих сообщениях об ошибках.
+> В предыдущей таблице перечислены сообщения об ошибках, с которыми вы можете столкнуться при использовании Excel API JavaScript. Если вы работаете с общим API вместо приложения Excel API JavaScript, см. в Office общие коды ошибок [API](../reference/javascript-api-for-office-error-codes.md), чтобы узнать о соответствующих сообщениях об ошибках.
 
 ## <a name="see-also"></a>См. также
 

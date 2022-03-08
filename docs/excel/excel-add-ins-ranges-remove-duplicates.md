@@ -1,14 +1,19 @@
 ---
 title: Удаление дубликатов с Excel API JavaScript
-description: 'Узнайте, как использовать API Excel JavaScript для удаления дубликатов.'
-ms.date: 04/02/2021
+description: Узнайте, как использовать API Excel JavaScript для удаления дубликатов.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 80e1227e06f177d0e37cc2750a7830c727a59436
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340577"
 ---
-
 # <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с Excel API JavaScript
 
-В этой статье содержится пример кода, который удаляет дублирующиеся записи в диапазоне с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
+В этой статье приводится пример кода, который удаляет дублирующиеся записи в диапазоне с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="remove-rows-with-duplicate-entries"></a>Удаление строк с дублирующими записями
 
@@ -24,18 +29,18 @@ ms.localizationpriority: medium
 В следующем примере кода показано удаление записей с дублирующими значениями в первом столбце.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:D11");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let range = sheet.getRange("B2:D11");
 
-    var deleteResult = range.removeDuplicates([0],true);
+    let deleteResult = range.removeDuplicates([0],true);
     deleteResult.load();
 
-    return context.sync().then(function () {
-        console.log(deleteResult.removed + " entries with duplicate names removed.");
-        console.log(deleteResult.uniqueRemaining + " entries with unique names remain in the range.");
-    });
-}).catch(errorHandlerFunction);
+    await context.sync();
+
+    console.log(deleteResult.removed + " entries with duplicate names removed.");
+    console.log(deleteResult.uniqueRemaining + " entries with unique names remain in the range.");
+});
 ```
 
 ### <a name="data-before-duplicate-entries-are-removed"></a>Данные перед удалением дублирующих записей

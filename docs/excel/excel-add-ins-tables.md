@@ -1,25 +1,30 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
-description: 'Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.'
-ms.date: 10/22/2021
+description: Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.
+ms.date: 02/17/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: a2f383209d8c267757fa39b8a4da539adb24e78e
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340269"
 ---
-
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице Object [(API JavaScript для Excel)](/javascript/api/excel/excel.table) и [TableCollection Object (API JavaScript для Excel)](/javascript/api/excel/excel.tablecollection).`Table` `TableCollection`
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице Object [(API JavaScript для Excel)](/javascript/api/excel/excel.table) и [TableCollection Object (API JavaScript](/javascript/api/excel/excel.tablecollection) для Excel).`Table` `TableCollection`
 
 ## <a name="create-a-table"></a>Создание таблицы
 
-В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример). В таблице имеются заголовки, а также четыре столбца и семь строк с данными. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример). В таблице имеются заголовки, а также четыре столбца и семь строк с данными. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 > [!NOTE]
 > Чтобы указать имя таблицы, сначала необходимо создать таблицу, а затем задать ее `name` свойство, как показано в следующем примере.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.add("A1:D1", true /*hasHeaders*/);
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.add("A1:D1", true /*hasHeaders*/);
     expensesTable.name = "ExpensesTable";
 
     expensesTable.getHeaderRowRange().values = [["Date", "Merchant", "Category", "Amount"]];
@@ -41,25 +46,25 @@ Excel.run(function (context) {
 
     sheet.activate();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Новая таблица**
+### <a name="new-table"></a>Новая таблица
 
 ![Новая таблица Excel.](../images/excel-tables-create.png)
 
 ## <a name="add-rows-to-a-table"></a>Добавление строк в таблицу
 
-В примере ниже показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новые строки будут добавлены в конец таблицы. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере ниже показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новые строки будут добавлены в конец таблицы. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 > [!NOTE]
 > Свойство `index` объекта [TableRow](/javascript/api/excel/excel.tablerow) указывает номер индекса строки в коллекции строк таблицы. Объект `TableRow` не содержит свойства `id` , которые можно использовать в качестве уникального ключа для идентификации строки.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.rows.add(null /*add rows to the end of the table*/, [
         ["1/16/2017", "THE PHONE COMPANY", "Communications", "$120"],
@@ -76,11 +81,11 @@ Excel.run(function (context) {
         sheet.getUsedRange().format.autofitRows();
     }
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Таблица с новыми строками**
+### <a name="table-with-new-rows"></a>Таблица с новыми строками
 
 ![Таблица с новыми строками в Excel.](../images/excel-tables-add-rows.png)
 
@@ -93,12 +98,12 @@ Excel.run(function (context) {
 
 ### <a name="add-a-column-that-contains-static-values"></a>Добавление столбца, содержащего статические значения
 
-В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен после всех существующих столбцов в таблице. Он будет содержать заголовок Day of the Week (День недели), а также данные для заполнения ячеек в столбце. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен после всех существующих столбцов в таблице. Он будет содержать заголовок Day of the Week (День недели), а также данные для заполнения ячеек в столбце. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.columns.add(null /*add columns to the end of the table*/, [
         ["Day of the Week"],
@@ -116,22 +121,22 @@ Excel.run(function (context) {
         sheet.getUsedRange().format.autofitRows();
     }
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Таблица с новым столбцом**
+#### <a name="table-with-new-column"></a>Таблица с новым столбцом
 
 ![Таблица с новым столбцом в Excel.](../images/excel-tables-add-column.png)
 
 ### <a name="add-a-column-that-contains-formulas"></a>Добавление столбца, содержащего формулы
 
-В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен в конец таблицы, будет содержать заголовок Type of the Day (Тип дня), и в нем будет использована формула для заполнения каждой ячейки столбца. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен в конец таблицы, будет содержать заголовок Type of the Day (Тип дня), и в нем будет использована формула для заполнения каждой ячейки столбца. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.columns.add(null /*add columns to the end of the table*/, [
         ["Type of the Day"],
@@ -149,64 +154,63 @@ Excel.run(function (context) {
         sheet.getUsedRange().format.autofitRows();
     }
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Таблица с новым столбцом, содержащим вычисленные значения**
+#### <a name="table-with-new-calculated-column"></a>Таблица с новым столбцом, содержащим вычисленные значения
 
-![Таблица с новым вычисляемой колонкой в Excel.](../images/excel-tables-add-calculated-column.png)
+![Таблица с новым вычисляемой столбцом в Excel.](../images/excel-tables-add-calculated-column.png)
 
 ## <a name="resize-a-table"></a>Resize a table
 
 Надстройка может изменять объем таблицы без добавления данных в таблицу или изменения значений ячейки. Чтобы повторно использовать таблицу, используйте [метод Table.resize](/javascript/api/excel/excel.table#excel-excel-table-resize-member(1)) . В следующем примере кода показано, как сделать таблицу повторной. В этом примере кода используется **раздел ExpensesTable** из раздела [Create a table](#create-a-table) earlier in this article and sets the new range of the table to **A1:D20**.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Retrieve the worksheet and a table on that worksheet.
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     // Resize the table.
     expensesTable.resize("A1:D20");
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 > [!IMPORTANT]
 > Новый диапазон таблицы должен совпадать с исходным диапазоном, а загонщики (или верхняя часть таблицы) должны быть в одной строке.
 
-**Таблица после повторного** 
+### <a name="table-after-resize"></a>Таблица после повторного
 
 ![Таблица с несколькими пустыми строками в Excel.](../images/excel-tables-resize.png)
 
 ## <a name="update-column-name"></a>Изменение имени столбца
 
-В примере кода ниже показано, как изменить имя первого столбца в таблице на **Purchase date**. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере кода ниже показано, как изменить имя первого столбца в таблице на **Purchase date**. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
     expensesTable.columns.load("items");
 
-    return context.sync()
-        .then(function () {
-            expensesTable.columns.items[0].name = "Purchase date";
+    await context.sync();
+        
+    expensesTable.columns.items[0].name = "Purchase date";
 
-            if (Office.context.requirements.isSetSupported("ExcelApi", "1.2")) {
-                sheet.getUsedRange().format.autofitColumns();
-                sheet.getUsedRange().format.autofitRows();
-            }
+    if (Office.context.requirements.isSetSupported("ExcelApi", "1.2")) {
+        sheet.getUsedRange().format.autofitColumns();
+        sheet.getUsedRange().format.autofitRows();
+    }
 
-            return context.sync();
-        });
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Таблица со столбцом с новым именем**
+### <a name="table-with-new-column-name"></a>Таблица со столбцом с новым именем
 
 ![Таблица с новым именем столбца в Excel.](../images/excel-tables-update-column-name.png)
 
@@ -215,44 +219,43 @@ Excel.run(function (context) {
 В примере кода ниже показано, как считать данные из таблицы **ExpensesTable** (Таблица расходов), размещенной на листе **Sample** (Пример), а затем отобразить эти данные под таблицей на том же листе.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
-    // Get data from the header row
-    var headerRange = expensesTable.getHeaderRowRange().load("values");
+    // Get data from the header row.
+    let headerRange = expensesTable.getHeaderRowRange().load("values");
 
-    // Get data from the table
-    var bodyRange = expensesTable.getDataBodyRange().load("values");
+    // Get data from the table.
+    let bodyRange = expensesTable.getDataBodyRange().load("values");
 
-    // Get data from a single column
-    var columnRange = expensesTable.columns.getItem("Merchant").getDataBodyRange().load("values");
+    // Get data from a single column.
+    let columnRange = expensesTable.columns.getItem("Merchant").getDataBodyRange().load("values");
 
-    // Get data from a single row
-    var rowRange = expensesTable.rows.getItemAt(1).load("values");
+    // Get data from a single row.
+    let rowRange = expensesTable.rows.getItemAt(1).load("values");
 
-    // Sync to populate proxy objects with data from Excel
-    return context.sync()
-        .then(function () {
-            var headerValues = headerRange.values;
-            var bodyValues = bodyRange.values;
-            var merchantColumnValues = columnRange.values;
-            var secondRowValues = rowRange.values;
+    // Sync to populate proxy objects with data from Excel.
+    await context.sync();
 
-            // Write data from table back to the sheet
-            sheet.getRange("A11:A11").values = [["Results"]];
-            sheet.getRange("A13:D13").values = headerValues;
-            sheet.getRange("A14:D20").values = bodyValues;
-            sheet.getRange("B23:B29").values = merchantColumnValues;
-            sheet.getRange("A32:D32").values = secondRowValues;
+    let headerValues = headerRange.values;
+    let bodyValues = bodyRange.values;
+    let merchantColumnValues = columnRange.values;
+    let secondRowValues = rowRange.values;
 
-            // Sync to update the sheet in Excel
-            return context.sync();
-        });
-}).catch(errorHandlerFunction);
+    // Write data from table back to the sheet
+    sheet.getRange("A11:A11").values = [["Results"]];
+    sheet.getRange("A13:D13").values = headerValues;
+    sheet.getRange("A14:D20").values = bodyValues;
+    sheet.getRange("B23:B29").values = merchantColumnValues;
+    sheet.getRange("A32:D32").values = secondRowValues;
+
+    // Sync to update the sheet in Excel.
+    await context.sync();
+});
 ```
 
-**Таблица и выведенные данные**
+### <a name="table-and-data-output"></a>Таблица и выведенные данные
 
 ![Таблица данных в Excel.](../images/excel-tables-get-data.png)
 
@@ -264,15 +267,15 @@ Excel.run(function (context) {
 
 ```js
 // This function would be used as an event handler for the Table.onChanged event.
-function onTableChanged(eventArgs) {
-    Excel.run(function (context) {
-        var details = eventArgs.details;
-        var address = eventArgs.address;
+async function onTableChanged(eventArgs) {
+    await Excel.run(async (context) => {
+        let details = eventArgs.details;
+        let address = eventArgs.address;
 
         // Print the before and after types and values to the console.
         console.log(`Change at ${address}: was ${details.valueBefore}(${details.valueTypeBefore}),`
             + ` now is ${details.valueAfter}(${details.valueTypeAfter})`);
-        return context.sync();
+        await context.sync();
     });
 }
 ```
@@ -282,12 +285,12 @@ function onTableChanged(eventArgs) {
 В примере кода ниже показано, как отсортировать данные по убыванию в четвертом столбце таблицы.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
-    // Queue a command to sort data by the fourth column of the table (descending)
-    var sortRange = expensesTable.getDataBodyRange();
+    // Queue a command to sort data by the fourth column of the table (descending).
+    let sortRange = expensesTable.getDataBodyRange();
     sortRange.sort.apply([
         {
             key: 3,
@@ -295,12 +298,12 @@ Excel.run(function (context) {
         },
     ]);
 
-    // Sync to run the queued command in Excel
-    return context.sync();
-}).catch(errorHandlerFunction);
+    // Sync to run the queued command in Excel.
+    await context.sync();
+});
 ```
 
-**Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**
+### <a name="table-data-sorted-by-amount-descending"></a>Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания
 
 ![Отсортировали данные таблицы в Excel.](../images/excel-tables-sort.png)
 
@@ -311,49 +314,49 @@ Excel.run(function (context) {
 В примере кода ниже показано, как применить фильтры для столбцов **Amount** (Сумма) и **Category** (Категория) в таблице. В результате применения фильтров будут отображены только те строки, у которых в столбце **Category** (Категория) содержится одно из указанных значений, а значения в столбце **Amount** (Сумма) меньше среднего значения для всех строк.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
-    // Queue a command to apply a filter on the Category column
-    filter = expensesTable.columns.getItem("Category").filter;
-    filter.apply({
-        filterOn: Excel.FilterOn.values,
-        values: ["Restaurant", "Groceries"]
+    // Queue a command to apply a filter on the Category column.
+    let categoryFilter = expensesTable.columns.getItem("Category").filter;
+    categoryFilter.apply({
+      filterOn: Excel.FilterOn.values,
+      values: ["Restaurant", "Groceries"]
     });
 
-    // Queue a command to apply a filter on the Amount column
-    var filter = expensesTable.columns.getItem("Amount").filter;
-    filter.apply({
-        filterOn: Excel.FilterOn.dynamic,
-        dynamicCriteria: Excel.DynamicFilterCriteria.belowAverage
+    // Queue a command to apply a filter on the Amount column.
+    let amountFilter = expensesTable.columns.getItem("Amount").filter;
+    amountFilter.apply({
+      filterOn: Excel.FilterOn.dynamic,
+      dynamicCriteria: Excel.DynamicFilterCriteria.belowAverage
     });
 
-    // Sync to run the queued commands in Excel
-    return context.sync();
-}).catch(errorHandlerFunction);
+    // Sync to run the queued commands in Excel.
+    await context.sync();
+});
 ```
 
-**Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)**
+### <a name="table-data-with-filters-applied-for-category-and-amount"></a>Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)
 
-![Данные таблицы фильтруются в Excel.](../images/excel-tables-filters-apply.png)
+![Данные таблицы, фильтруемые в Excel.](../images/excel-tables-filters-apply.png)
 
 ## <a name="clear-table-filters"></a>Удаление фильтров в таблице
 
 В примере кода ниже показано, как удалить все фильтры, примененные к таблице.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.clearFilters();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Данные таблицы без фильтров**
+### <a name="table-data-with-no-filters-applied"></a>Данные таблицы без фильтров
 
 ![Данные таблицы не фильтруются в Excel.](../images/excel-tables-filters-clear.png)
 
@@ -362,18 +365,16 @@ Excel.run(function (context) {
 В примере кода ниже показано, как получить диапазон, содержащий данные только из тех ячеек, которые в данный момент отображаются в указанной таблице, и записать значения из этого диапазона в консоль. Метод, как `getVisibleView()` показано ниже, можно использовать для получения видимого содержимого таблицы при применении фильтров столбцов.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
-    var visibleRange = expensesTable.getDataBodyRange().getVisibleView();
+    let visibleRange = expensesTable.getDataBodyRange().getVisibleView();
     visibleRange.load("values");
 
-    return context.sync()
-        .then(function() {
-            console.log(visibleRange.values);
-        });
-}).catch(errorHandlerFunction);
+    await context.sync();
+    console.log(visibleRange.values);
+});
 ```
 
 ## <a name="autofilter"></a>Автофильтр
@@ -383,9 +384,9 @@ Excel.run(function (context) {
 В следующем примере кода показана такая же [фильтрация данных, как в примере кода выше](#apply-filters-to-a-table), но выполненная полностью с помощью автофильтра.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.autoFilter.apply(expensesTable.getRange(), 2, {
         filterOn: Excel.FilterOn.values,
@@ -396,8 +397,8 @@ Excel.run(function (context) {
         dynamicCriteria: Excel.DynamicFilterCriteria.belowAverage
     });
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 Объект `AutoFilter` можно также применять к диапазону на уровне листа. Дополнительные сведения см. в статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md#filter-data).
@@ -407,20 +408,20 @@ Excel.run(function (context) {
 В примере кода ниже показано, как применить форматирование к таблице. В примере показано, как указать различные цвета заливки для строки заголовков, основной части, второй строки и первого столбца таблицы. Сведения о свойствах, которые вы можете использовать для задания формата, см. в статье [Объект RangeFormat (API JavaScript для Excel)](/javascript/api/excel/excel.rangeformat).
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var expensesTable = sheet.tables.getItem("ExpensesTable");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let expensesTable = sheet.tables.getItem("ExpensesTable");
 
     expensesTable.getHeaderRowRange().format.fill.color = "#C70039";
     expensesTable.getDataBodyRange().format.fill.color = "#DAF7A6";
     expensesTable.rows.getItemAt(1).getRange().format.fill.color = "#FFC300";
     expensesTable.columns.getItemAt(0).getDataBodyRange().format.fill.color = "#FFA07A";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Таблица после применения форматирования**
+### <a name="table-after-formatting-is-applied"></a>Таблица после применения форматирования
 
 ![Таблица после форматирования применяется в Excel.](../images/excel-tables-formatting-after.png)
 
@@ -429,11 +430,11 @@ Excel.run(function (context) {
 В примере кода ниже показано, как создать диапазон данных и преобразовывать его в таблицу.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    // Define values for the range
-    var values = [["Product", "Qtr1", "Qtr2", "Qtr3", "Qtr4"],
+    // Define values for the range.
+    let values = [["Product", "Qtr1", "Qtr2", "Qtr3", "Qtr4"],
     ["Frames", 5000, 7000, 6544, 4377],
     ["Saddles", 400, 323, 276, 651],
     ["Brake levers", 12000, 8766, 8456, 9812],
@@ -441,8 +442,8 @@ Excel.run(function (context) {
     ["Mirrors", 225, 600, 923, 544],
     ["Spokes", 6005, 7634, 4589, 8765]];
 
-    // Create the range
-    var range = sheet.getRange("A1:E7");
+    // Create the range.
+    let range = sheet.getRange("A1:E7");
     range.values = values;
 
     if (Office.context.requirements.isSetSupported("ExcelApi", "1.2")) {
@@ -452,35 +453,35 @@ Excel.run(function (context) {
 
     sheet.activate();
 
-    // Convert the range to a table
-    var expensesTable = sheet.tables.add('A1:E7', true);
+    // Convert the range to a table.
+    let expensesTable = sheet.tables.add('A1:E7', true);
     expensesTable.name = "ExpensesTable";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Данные в диапазоне (перед его преобразованием в таблицу)**
+### <a name="data-in-the-range-before-the-range-is-converted-to-a-table"></a>Данные в диапазоне (перед его преобразованием в таблицу)
 
 ![Данные в диапазоне Excel.](../images/excel-ranges.png)
 
-**Данные в таблице (после преобразования диапазона в таблицу)**
+### <a name="data-in-the-table-after-the-range-is-converted-to-a-table"></a>Данные в таблице (после преобразования диапазона в таблицу)
 
-![Данные в таблице Excel.](../images/excel-tables-from-range.png)
+![Данные в таблице в Excel.](../images/excel-tables-from-range.png)
 
 ## <a name="import-json-data-into-a-table"></a>Импорт данных JSON в таблицу
 
-В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример), а затем заполнить ее с помощью объекта JSON, который определяет две строки данных. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
+В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример), а затем заполнить ее с помощью объекта JSON, который определяет две строки данных. Если Excel, в котором работает код, поддерживает набор требований [](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var expensesTable = sheet.tables.add("A1:D1", true /*hasHeaders*/);
+    let expensesTable = sheet.tables.add("A1:D1", true /*hasHeaders*/);
     expensesTable.name = "ExpensesTable";
     expensesTable.getHeaderRowRange().values = [["Date", "Merchant", "Category", "Amount"]];
 
-    var transactions = [
+    let transactions = [
       {
         "DATE": "1/1/2017",
         "MERCHANT": "The Phone Company",
@@ -495,7 +496,7 @@ Excel.run(function (context) {
       }
     ];
 
-    var newData = transactions.map(item =>
+    let newData = transactions.map(item =>
         [item.DATE, item.MERCHANT, item.CATEGORY, item.AMOUNT]);
 
     expensesTable.rows.add(null, newData);
@@ -507,13 +508,13 @@ Excel.run(function (context) {
 
     sheet.activate();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Новая таблица**
+### <a name="new-table"></a>Новая таблица
 
-![Новая таблица из импортируемых данных JSON в Excel.](../images/excel-tables-create-from-json.png)
+![Новая таблица из импортных данных JSON в Excel.](../images/excel-tables-create-from-json.png)
 
 ## <a name="see-also"></a>См. также
 

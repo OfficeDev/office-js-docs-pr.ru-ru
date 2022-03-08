@@ -1,14 +1,14 @@
 ---
 title: Элемент Host в файле манифеста
 description: Определяет тип приложения Office, в котором следует активировать надстройку.
-ms.date: 11/05/2019
+ms.date: 02/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e262183f11361d02d1a710d1f442539a8e936bcd
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: ea0f5c8bc07c72c0c888fb56b40d98c6030c2ebc
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154710"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340689"
 ---
 # <a name="host-element"></a>Элемент Host
 
@@ -53,13 +53,25 @@ ms.locfileid: "59154710"
 
 ## <a name="versionoverrides-node"></a>Узел VersionOverrides
 
-Если основной элемент задается в узле [VersionOverrides](versionoverrides.md), его тип определяет атрибут `xsi:type`.
+Если основной элемент задается в узле [VersionOverrides](versionoverrides.md), его тип определяет атрибут `xsi:type`. 
+
+Этот элемент переопределяет **элемент Hosts** в базовом манифесте.
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Область задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
 
 ### <a name="attributes"></a>Атрибуты
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [xsi:type](#xsitype)  |  Да  | Описывает приложение Office, в котором применяются эти параметры.|
+|  [xsi:type](#xsitype)  |  Да  | Указывает приложение Office, в котором применяются эти параметры.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 

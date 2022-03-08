@@ -1,14 +1,19 @@
 ---
 title: Поиск специальных ячеек в диапазоне с Excel API JavaScript
-description: 'Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.'
-ms.date: 07/08/2021
+description: Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 1252fe599f93a3408fb161e2b8204600fa483339
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340521"
 ---
-
 # <a name="find-special-cells-within-a-range-using-the-excel-javascript-api"></a>Поиск специальных ячеек в диапазоне с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="find-ranges-with-special-cells"></a>Поиск диапазонов с помощью специальных ячеек
 
@@ -28,14 +33,14 @@ getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Exc
 - Метод `getSpecialCells` возвращает объект `RangeAreas`, поэтому все ячейки с формулами окрашены розовым цветом даже в том случае, если они не являются смежными.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var formulaRanges = usedRange.getSpecialCells(Excel.SpecialCellType.formulas);
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaRanges = usedRange.getSpecialCells(Excel.SpecialCellType.formulas);
     formulaRanges.format.fill.color = "pink";
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если блокировки нет `catch` , ошибка останавливает метод.
@@ -47,20 +52,20 @@ Excel.run(function (context) {
 - Этот код можно проверить, выбрав сначала диапазон без ячеек с формулами и запустив его. Затем следует выбрать диапазон, содержащий по крайней мере одну ячейку с формулой, и снова запустить его.
 
 ```js
-Excel.run(function (context) {
-    var range = context.workbook.getSelectedRange();
-    var formulaRanges = range.getSpecialCellsOrNullObject(Excel.SpecialCellType.formulas);
-    return context.sync()
-        .then(function() {
-            if (formulaRanges.isNullObject) {
-                console.log("No cells have formulas");
-            }
-            else {
-                formulaRanges.format.fill.color = "pink";
-            }
-        })
-        .then(context.sync);
-})
+await Excel.run(async (context) => {
+    let range = context.workbook.getSelectedRange();
+    let formulaRanges = range.getSpecialCellsOrNullObject(Excel.SpecialCellType.formulas);
+    await context.sync();
+        
+    if (formulaRanges.isNullObject) {
+        console.log("No cells have formulas");
+    }
+    else {
+        formulaRanges.format.fill.color = "pink";
+    }
+    
+    await context.sync();
+});
 ```
 
 Для простоты все остальные образцы кода в этой статье используют `getSpecialCells` метод вместо  `getSpecialCellsOrNullObject`.
@@ -87,16 +92,16 @@ Excel.run(function (context) {
 - Чтобы протестировать код, убедитесь, что в листе есть ячейки с числовыми значениями литералов, ячейки с другими значениями литералов и ячейки с формулами.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var constantNumberRanges = usedRange.getSpecialCells(
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let constantNumberRanges = usedRange.getSpecialCells(
         Excel.SpecialCellType.constants,
         Excel.SpecialCellValueType.numbers);
     constantNumberRanges.format.fill.color = "pink";
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 ### <a name="test-for-multiple-cell-value-types"></a>Тестирование для ячеек с несколькими типами значений
@@ -104,16 +109,16 @@ Excel.run(function (context) {
 Иногда требуется работать с ячейками, имеющими несколько типов значений, например со всеми ячейками с текстовыми значениями и всеми ячейками с логическими значениями (`Excel.SpecialCellValueType.logical`). Для перечисления `Excel.SpecialCellValueType` существуют значения с объединенными типами. Например, `Excel.SpecialCellValueType.logicalText` обрабатывает все ячейки с логическими и текстовыми значениями. `Excel.SpecialCellValueType.all` является значением по умолчанию, которое не ограничивает возвращаемые типы значений ячеек. В следующем примере кода цвета всех ячеек с формулами, которые производят количество или значение boolean.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var formulaLogicalNumberRanges = usedRange.getSpecialCells(
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaLogicalNumberRanges = usedRange.getSpecialCells(
         Excel.SpecialCellType.formulas,
         Excel.SpecialCellValueType.logicalNumbers);
     formulaLogicalNumberRanges.format.fill.color = "pink";
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 ## <a name="see-also"></a>См. также

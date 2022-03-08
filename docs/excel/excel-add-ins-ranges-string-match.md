@@ -1,19 +1,19 @@
 ---
 title: Поиск строки с Excel API JavaScript
 description: Узнайте, как найти строку в диапазоне с Excel API JavaScript.
-ms.date: 04/02/2021
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: c143acdfb94928b3c59e4fa92eab41ca635f021a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 042465e01af55bbb3f4325ea44edc27174d558f2
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153846"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340990"
 ---
 # <a name="find-a-string-within-a-range-using-the-excel-javascript-api"></a>Поиск строки в диапазоне с Excel API JavaScript
 
-В этой статье приводится пример кода, который находит строку в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье приводится пример кода, который находит строку в диапазоне с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -24,22 +24,21 @@ ms.locfileid: "59153846"
 Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), чтобы ваш код корректно обработал этот сценарий.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var table = sheet.tables.getItem("ExpensesTable");
-    var searchRange = table.getRange();
-    var foundRange = searchRange.find("Food", {
-        completeMatch: true, // find will match the whole cell value
-        matchCase: false, // find will not match case
-        searchDirection: Excel.SearchDirection.forward // find will start searching at the beginning of the range
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let table = sheet.tables.getItem("ExpensesTable");
+    let searchRange = table.getRange();
+    let foundRange = searchRange.find("Food", {
+        completeMatch: true, // Match the whole cell value.
+        matchCase: false, // Don't match case.
+        searchDirection: Excel.SearchDirection.forward // Start search at the beginning of the range.
     });
 
     foundRange.load("address");
-    return context.sync()
-        .then(function() {
-            console.log(foundRange.address);
-    });
-}).catch(errorHandlerFunction);
+    await context.sync();
+
+    console.log(foundRange.address);
+});
 ```
 
 Если метод `find` вызывается для диапазона, представляющего одну ячейку, поиск выполняется во всем листе. Поиск начинается в этой ячейке и продолжается в направлении, которое определяется параметром `SearchCriteria.searchDirection`, охватывающим концы листа при необходимости.

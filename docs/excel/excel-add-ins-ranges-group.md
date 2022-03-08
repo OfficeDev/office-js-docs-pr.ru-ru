@@ -1,14 +1,19 @@
 ---
 title: Диапазоны групп с Excel API JavaScript
-description: 'Узнайте, как сгруппить строки или столбцы диапазона вместе, чтобы создать контур с Excel API JavaScript.'
-ms.date: 04/05/2021
+description: Узнайте, как сгруппить строки или столбцы диапазона вместе, чтобы создать контур с Excel API JavaScript.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 7a982fc9965772cfeb27934cf60cc4c83967ce51
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340801"
 ---
-
 # <a name="group-ranges-for-an-outline-using-the-excel-javascript-api"></a>Диапазоны групп для контура с Excel API JavaScript
 
-В этой статье приводится пример кода, в который показано, как группировать диапазоны для контура с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
+В этой статье приводится пример кода, который показывает, как группировать диапазоны для контура с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="group-rows-or-columns-of-a-range-for-an-outline"></a>Групповые строки или столбцы диапазона для контура
 
@@ -19,8 +24,8 @@ ms.localizationpriority: medium
 В следующем примере кода создается контур с двумя уровнями групп для строк и столбцов. На последующем изображении показаны группировки этого контура. В примере кода диапазоны, которые группуются, не включают строку или столбец управления контурами (в этом примере "Итоги"). Группа определяет, что будет свернуто, а не строка или столбец с управлением.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
     // Group the larger, main level. Note that the outline controls
     // will be on row 10, meaning 4-9 will collapse and expand.
@@ -40,8 +45,8 @@ Excel.run(function (context) {
     sheet.getRange("C:F").group(Excel.GroupOption.byColumns);
     sheet.getRange("H:K").group(Excel.GroupOption.byColumns);
     sheet.getRange("M:P").group(Excel.GroupOption.byColumns);
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ![Диапазон с двухуровневой двухмерной схемой.](../images/excel-outline.png)

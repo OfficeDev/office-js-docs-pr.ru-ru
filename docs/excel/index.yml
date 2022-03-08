@@ -6,14 +6,14 @@ metadata:
   description: Учебные ресурсы по надстройкам Excel.
   ms.prod: excel
   ms.topic: landing-page
-  ms.date: 03/29/2021
+  ms.date: 02/24/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 56d57a14b6f76c0a0b13574e261118d9e2d29d97
-  ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+  ms.openlocfilehash: e3003c4ed73413a4e5b786a0ec22fdd637197a9f
+  ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "59153838"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63340934"
 landingContent:
 - title: О Excel надстройки
   linkLists:
@@ -31,6 +31,8 @@ landingContent:
     links:
     - text: Используйте API Excel JavaScript для взаимодействия с объектами и контентом книг
       url: ../reference/overview/excel-add-ins-reference-overview.md
+    - text: Использование типов данных в Excel надстройки (предварительный просмотр)
+      url: excel-data-types-overview.md
     - text: Добавление настраиваемой функции в Excel
       url: custom-functions-overview.md
     - text: Тестирование и отлагивание Excel надстройки

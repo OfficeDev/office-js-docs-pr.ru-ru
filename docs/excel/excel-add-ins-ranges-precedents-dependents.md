@@ -1,11 +1,16 @@
 ---
 title: Работа с прецедентами формул и зависимыми с помощью Excel API JavaScript
-description: 'Узнайте, как использовать API Excel JavaScript для получения прецедентов формул и зависимых.'
-ms.date: 11/30/2021
+description: Узнайте, как использовать API Excel JavaScript для получения прецедентов формул и зависимых.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 8e401ea6dfe285a56fe0da3d250222a6e016b24c
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340703"
 ---
-
 # <a name="get-formula-precedents-and-dependents-using-the-excel-javascript-api"></a>Получите прецеденты формул и иждивенцев с Excel API JavaScript
 
 Excel часто ссылаются на другие ячейки. Эти межклеточные ссылки называются "прецедентами" и "зависимыми". Прецедент — это ячейка, которая предоставляет данные формуле. Зависимая ячейка содержит формулу, которая ссылается на другие ячейки. Дополнительные информацию о Excel, связанных с отношениями между ячейками, см[](https://support.microsoft.com/office/a59bef2b-3701-46bf-8ff1-d3518771d507). в этой информации.
@@ -20,9 +25,9 @@ Excel часто ссылаются на другие ячейки. Эти ме�
 
 Чтобы найти только прямые ячейки-прецеденты формулы, используйте [Range.getDirectPrecedents](/javascript/api/excel/excel.range#excel-excel-range-getdirectprecedents-member(1)). `Range.getDirectPrecedents` работает как `Range.getPrecedents` и возвращает объект `WorkbookRangeAreas` , содержащий адреса прямых прецедентов.
 
-На следующем скриншоте показан результат выбора кнопки **Trace Precedents** в Excel пользовательском интерфейсе. Эта кнопка рисует стрелку из ячеек-прецедентов в выбранную ячейку. Выбранная ячейка **E3** содержит формулу "=C3 * D3", поэтому **C3** и **D3** являются прецедентными ячейками. В отличие Excel кнопки пользовательского интерфейса, `getPrecedents` стрелки и `getDirectPrecedents` методы не рисуют.
+На следующем скриншоте показан результат выбора кнопки **Trace Precedents** в пользовательском Excel интерфейсе. Эта кнопка рисует стрелку из ячеек-прецедентов в выбранную ячейку. Выбранная ячейка **E3** содержит формулу "=C3 * D3", поэтому **C3** и **D3** являются прецедентными ячейками. В отличие Excel пользовательского интерфейса, стрелки `getPrecedents` и `getDirectPrecedents` методы не рисуют.
 
-![Отслеживание прецедентных ячеек стрелки в Excel пользовательского интерфейса.](../images/excel-ranges-trace-precedents.png)
+![Отслеживание прецедентных ячеек стрелки Excel пользовательского интерфейса.](../images/excel-ranges-trace-precedents.png)
 
 > [!IMPORTANT]
 > Эти `getPrecedents` методы `getDirectPrecedents` и методы не извлекать ячейки прецедентов в книгах.
@@ -32,43 +37,42 @@ Excel часто ссылаются на другие ячейки. Эти ме�
 ```js
 // This code sample shows how to find and highlight the precedents 
 // and direct precedents of the currently selected cell.
-Excel.run(function (context) {
-  var range = context.workbook.getActiveCell();
+await Excel.run(async (context) => {
+  let range = context.workbook.getActiveCell();
   // Precedents are all cells that provide data to the selected formula.
-  var precedents = range.getPrecedents();
+  let precedents = range.getPrecedents();
   // Direct precedents are the parent cells, or the first preceding group of cells that provide data to the selected formula.    
-  var directPrecedents = range.getDirectPrecedents();
+  let directPrecedents = range.getDirectPrecedents();
 
   range.load("address");
   precedents.areas.load("address");
   directPrecedents.areas.load("address");
   
-  return context.sync()
-    .then(function () {
-      console.log(`All precedent cells of ${range.address}:`);
-      
-      // Use the precedents API to loop through all precedents of the active cell.
-      for (var i = 0; i < precedents.areas.items.length; i++) {
-        // Highlight and print out the address of all precedent cells.
-        precedents.areas.items[i].format.fill.color = "Orange";
-        console.log(`  ${precedents.areas.items[i].address}`);
-      }
+  await context.sync();
 
-      console.log(`Direct precedent cells of ${range.address}:`);
+  console.log(`All precedent cells of ${range.address}:`);
+  
+  // Use the precedents API to loop through all precedents of the active cell.
+  for (let i = 0; i < precedents.areas.items.length; i++) {
+    // Highlight and print out the address of all precedent cells.
+    precedents.areas.items[i].format.fill.color = "Orange";
+    console.log(`  ${precedents.areas.items[i].address}`);
+  }
 
-      // Use the direct precedents API to loop through direct precedents of the active cell.
-      for (var i = 0; i < directPrecedents.areas.items.length; i++) {
-        // Highlight and print out the address of each direct precedent cell.
-        directPrecedents.areas.items[i].format.fill.color = "Yellow";
-        console.log(`  ${directPrecedents.areas.items[i].address}`);
-      }
-    });
-}).catch(errorHandlerFunction);
+  console.log(`Direct precedent cells of ${range.address}:`);
+
+  // Use the direct precedents API to loop through direct precedents of the active cell.
+  for (let i = 0; i < directPrecedents.areas.items.length; i++) {
+    // Highlight and print out the address of each direct precedent cell.
+    directPrecedents.areas.items[i].format.fill.color = "Yellow";
+    console.log(`  ${directPrecedents.areas.items[i].address}`);
+  }
+});
 ```
 
 ## <a name="get-the-direct-dependents-of-a-formula"></a>Получить прямые иждивенцы формулы
 
-Найдите прямые зависимые ячейки формулы [с помощью Range.getDirectDependents](/javascript/api/excel/excel.range#excel-excel-range-getdirectdependents-member(1)). Как `Range.getDirectPrecedents`, `Range.getDirectDependents` также возвращает `WorkbookRangeAreas` объект. Этот объект содержит адреса всех прямых иждивенцев в книге. Он имеет отдельный `RangeAreas` объект для каждого таблицы, содержащего по крайней мере одну зависимую формулу. Дополнительные сведения о работе с объектом `RangeAreas` см. в совместной работе с несколькими диапазонами в [Excel надстройки](excel-add-ins-multiple-ranges.md).
+Найдите прямые зависимые ячейки формулы [с помощью Range.getDirectDependents](/javascript/api/excel/excel.range#excel-excel-range-getdirectdependents-member(1)). Как `Range.getDirectPrecedents`, `Range.getDirectDependents` также возвращает `WorkbookRangeAreas` объект. Этот объект содержит адреса всех прямых иждивенцев в книге. Он имеет отдельный `RangeAreas` объект для каждого таблицы, содержащего по крайней мере одну зависимую формулу. Дополнительные сведения о работе с объектом `RangeAreas` см. в совместной работе с несколькими [диапазонами Excel надстройки](excel-add-ins-multiple-ranges.md).
 
 На следующем скриншоте показан результат выбора кнопки **Trace Dependents** в Excel пользовательском интерфейсе. Эта кнопка рисует стрелку из зависимых ячеек в выбранную ячейку. Выбранная ячейка **D3** имеет ячейку **E3** в качестве зависимой. **E3** содержит формулу "=C3 * D3". В отличие Excel пользовательского интерфейса, метод `getDirectDependents` не рисует стрелки.
 
@@ -81,25 +85,23 @@ Excel.run(function (context) {
 
 ```js
 // This code sample shows how to find and highlight the dependents of the currently selected cell.
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Direct dependents are cells that contain formulas that refer to other cells.
-    var range = context.workbook.getActiveCell();
-    var directDependents = range.getDirectDependents();
+    let range = context.workbook.getActiveCell();
+    let directDependents = range.getDirectDependents();
     range.load("address");
     directDependents.areas.load("address");
     
-    return context.sync()
-        .then(function () {
-            console.log(`Direct dependent cells of ${range.address}:`);
-    
-            // Use the direct dependents API to loop through direct dependents of the active cell.
-            for (var i = 0; i < directDependents.areas.items.length; i++) {
-              // Highlight and print the address of each dependent cell.
-              directDependents.areas.items[i].format.fill.color = "Yellow";
-              console.log(`  ${directDependents.areas.items[i].address}`);
-            }
-        });
-}).catch(errorHandlerFunction);
+    await context.sync();
+    console.log(`Direct dependent cells of ${range.address}:`);
+
+    // Use the direct dependents API to loop through direct dependents of the active cell.
+    for (let i = 0; i < directDependents.areas.items.length; i++) {
+      // Highlight and print the address of each dependent cell.
+      directDependents.areas.items[i].format.fill.color = "Yellow";
+      console.log(`  ${directDependents.areas.items[i].address}`);
+    }
+});
 ```
 
 ## <a name="see-also"></a>См. также

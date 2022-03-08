@@ -1,18 +1,34 @@
 ---
 title: Элемент Icon в файле манифеста
 description: Определяет элементы Image для элементов управления Button или Menu.
-ms.date: 02/04/2022
+ms.date: 02/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ddacd3fdb8b9306e9f26b7bf2431f3564b579264
-ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.openlocfilehash: 9eb4ccf394bb1c894f2b17f34038ca64fee09dc5
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62467731"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63341067"
 ---
 # <a name="icon-element"></a>Элемент Icon
 
-Определяет **элементы изображения** для элементов [управления кнопками и](control-button.md) [элементов управления меню](control-menu.md).
+Определяет набор элементов **Изображения** для элементов [управления кнопкой или](control-button.md) [меню](control-menu.md) .
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Область задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
+
+**Связанные с этими наборами требований**:
+
+- [AddinCommands 1.1](../requirement-sets/add-in-commands-requirement-sets.md) , когда родительский **VersionOverrides** — это тип Taskpane 1.0.
+- [Почтовый ящик 1.3,](../../reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md) когда родительский **VersionOverrides** — это тип Почта 1.0.
+- [Почтовый ящик 1.5,](../../reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md) когда родительский **VersionOverrides** — это тип Почта 1.1.
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -39,7 +55,7 @@ ms.locfileid: "62467731"
 ```
 
 > [!IMPORTANT]
-> Если это изображение является символом представительства надстройки, см. в этой записи Создание эффективных списков в [AppSource](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) и в Office для размера и других требований.
+> Если это изображение является представителем значка надстройки, см. в приложении [Create effective listings in AppSource и в](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) Office для размера и других требований.
 
 ## <a name="additional-requirements-for-mobile-form-factors"></a>Дополнительные требования для форм-факторов мобильных устройств
 

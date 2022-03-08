@@ -1,14 +1,14 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: Узнайте, как Excel JavaScript позволяет вашей надстройки выполнять операции и устанавливать свойства одновременно на нескольких диапазонах.
-ms.date: 04/01/2021
+ms.date: 02/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 571e19814cb5f1b8d3117cd6cccbe18f584330d8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 75b1248a15c37c548b11fa8ac47a809b045571e4
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151492"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340913"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 
@@ -16,7 +16,7 @@ ms.locfileid: "59151492"
 
 ## <a name="rangeareas"></a>RangeAreas
 
-Набор (возможно, дисконтных) диапазонов представлен [объектом RangeAreas.](/javascript/api/excel/excel.rangeareas) Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
+Набор (возможно, дисконтных) диапазонов представлен [объектом RangeAreas](/javascript/api/excel/excel.rangeareas) . Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
 
 - Типы данных для свойств и поведений методов задания и методов получения.
 - Типы данных параметров метода и поведений метода.
@@ -31,9 +31,9 @@ ms.locfileid: "59151492"
 - `RangeAreas.getEntireColumn` и `RangeAreas.getEntireRow` возвращают другой объект `RangeAreas`, представляющий все столбцы (или строки) во всех диапазонах в `RangeAreas`. Например, если `RangeAreas` представляет "A1:C4" и "F14:L15", то `RangeAreas.getEntireColumn` возвращает объект `RangeAreas`, представляющий "A:C" и "F:L".
 - `RangeAreas.copyFrom` может использовать параметр `Range` или `RangeAreas`, представляющий исходный диапазон (или диапазоны) операции копирования.
 
-#### <a name="complete-list-of-range-members-that-are-also-available-on-rangeareas"></a>Полный список элементов Range, также доступных в RangeAreas
+### <a name="complete-list-of-range-members-that-are-also-available-on-rangeareas"></a>Полный список элементов Range, также доступных в RangeAreas
 
-##### <a name="properties"></a>Свойства
+#### <a name="properties"></a>Свойства
 
 Ознакомьтесь со статьей [Чтение свойств RangeAreas](#read-properties-of-rangeareas) перед написанием кода, считывающего любое из перечисленных свойств. Возвращаемое значение зависит от ряда факторов.
 
@@ -49,7 +49,7 @@ ms.locfileid: "59151492"
 - `style`
 - `worksheet`
 
-##### <a name="methods"></a>Методы
+#### <a name="methods"></a>Методы
 
 - `calculate()`
 - `clear()`
@@ -60,12 +60,12 @@ ms.locfileid: "59151492"
 - `getEntireRow()`
 - `getIntersection()`
 - `getIntersectionOrNullObject()`
-- `getOffsetRange()``getOffsetRangeAreas`(названо на `RangeAreas` объекте)
+- `getOffsetRange()` (названо `getOffsetRangeAreas` на объекте `RangeAreas` )
 - `getSpecialCells()`
 - `getSpecialCellsOrNullObject()`
 - `getTables()`
-- `getUsedRange()``getUsedRangeAreas`(названо на `RangeAreas` объекте)
-- `getUsedRangeOrNullObject()``getUsedRangeAreasOrNullObject`(названо на `RangeAreas` объекте)
+- `getUsedRange()` (названо `getUsedRangeAreas` на объекте `RangeAreas` )
+- `getUsedRangeOrNullObject()` (названо `getUsedRangeAreasOrNullObject` на объекте `RangeAreas` )
 - `load()`
 - `set()`
 - `setDirty()`
@@ -79,7 +79,7 @@ ms.locfileid: "59151492"
 
 - `areas`. Объект `RangeCollection`, содержащий все диапазоны, которые представлены объектом `RangeAreas`. Объект `RangeCollection` — еще один новый объект, аналогичный другим объектам коллекции Excel. У него есть свойство `items`, являющееся массивом объектов `Range`, которые представляют диапазоны.
 - `areaCount`. Общее количество диапазонов в `RangeAreas`.
-- `getOffsetRangeAreas`. Действует аналогично методу [Range.getOffsetRange](/javascript/api/excel/excel.range#getOffsetRange_rowOffset__columnOffset_), за исключением того, что возвращается объект `RangeAreas`, содержащий диапазоны, каждый из которых смещен относительно одного из диапазонов в исходном объекте `RangeAreas`.
+- `getOffsetRangeAreas`. Действует аналогично методу [Range.getOffsetRange](/javascript/api/excel/excel.range#excel-excel-range-getoffsetrange-member(1)), за исключением того, что возвращается объект `RangeAreas`, содержащий диапазоны, каждый из которых смещен относительно одного из диапазонов в исходном объекте `RangeAreas`.
 
 ## <a name="create-rangeareas"></a>Создание RangeAreas
 
@@ -103,13 +103,13 @@ ms.locfileid: "59151492"
 Ниже приведен пример установки свойства в нескольких диапазонах. Функция выделяет диапазоны **F3:F5** и **H3:H5**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var rangeAreas = sheet.getRanges("F3:F5, H3:H5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let rangeAreas = sheet.getRanges("F3:F5, H3:H5");
     rangeAreas.format.fill.color = "pink";
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 Этот пример применяется к сценариям, в которых можно жестко задать адреса диапазонов, передаваемых в `getRanges`, или легко рассчитать их во время выполнения. Ниже перечислены некоторые сценарии, в которых это возможно:
@@ -119,7 +119,7 @@ Excel.run(function (context) {
 
 ## <a name="get-special-cells-from-multiple-ranges"></a>Получение специальных ячеек из нескольких диапазонов
 
-Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в материале [Find special cells within a range.](excel-add-ins-ranges-special-cells.md)
+Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в материале [Find special cells within a range](excel-add-ins-ranges-special-cells.md).
 
 При вызове метода `getSpecialCells` или `getSpecialCellsOrNullObject` для объекта `RangeAreas`:
 
@@ -128,25 +128,22 @@ Excel.run(function (context) {
 
 ## <a name="read-properties-of-rangeareas"></a>Чтение свойств RangeAreas
 
-Чтение значений свойств `RangeAreas` требует внимания, так как определенное свойство может иметь разные значения для разных диапазонов в `RangeAreas`. Общее правило заключается в том, что если соответствующее значение *может* быть возвращено, оно будет возвращено. Например, в следующем коде код RGB для розового () и будет вошел в консоль, так как оба диапазона в объекте имеют розовую заливка и оба являются целые `#FFC0CB` `true` `RangeAreas` столбцы.
+Чтение значений свойств `RangeAreas` требует внимания, так как определенное свойство может иметь разные значения для разных диапазонов в `RangeAreas`. Общее правило заключается в том, что если соответствующее значение *может* быть возвращено, оно будет возвращено. Например, в следующем коде код RGB для розового (`#FFC0CB`) `true` `RangeAreas` и будет вошел в консоль, так как оба диапазона объекта имеют розовую заливка и оба являются целые столбцы.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
 
     // The ranges are the F column and the H column.
-    var rangeAreas = sheet.getRanges("F:F, H:H");  
+    let rangeAreas = sheet.getRanges("F:F, H:H");  
     rangeAreas.format.fill.color = "pink";
 
     rangeAreas.load("format/fill/color, isEntireColumn");
+    await context.sync();
 
-    return context.sync()
-        .then(function () {
-            console.log(rangeAreas.format.fill.color); // #FFC0CB
-            console.log(rangeAreas.isEntireColumn); // true
-        })
-        .then(context.sync);
-})
+    console.log(rangeAreas.format.fill.color); // #FFC0CB
+    console.log(rangeAreas.isEntireColumn); // true
+});
 ```
 
 Все усложняется, если согласование невозможно. Свойства `RangeAreas` действуют в соответствии с приведенными ниже тремя принципами:
@@ -158,23 +155,20 @@ Excel.run(function (context) {
 Например, в приведенном ниже коде создается объект `RangeAreas`, в котором только один диапазон является целым столбцом и только один залит розовым цветом. Консоль отобразит значение `null` для цвета заливки, `false` для свойства `isEntireRow` и "Sheet1!F3:F5, Sheet1!H:H" (при условии, что имя листа — "Sheet1") для свойства `address`.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var rangeAreas = sheet.getRanges("F3:F5, H:H");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let rangeAreas = sheet.getRanges("F3:F5, H:H");
 
-    var pinkColumnRange = sheet.getRange("H:H");
+    let pinkColumnRange = sheet.getRange("H:H");
     pinkColumnRange.format.fill.color = "pink";
 
     rangeAreas.load("format/fill/color, isEntireColumn, address");
+    await context.sync();
 
-    return context.sync()
-        .then(function () {
-            console.log(rangeAreas.format.fill.color); // null
-            console.log(rangeAreas.isEntireColumn); // false
-            console.log(rangeAreas.address); // "Sheet1!F3:F5, Sheet1!H:H"
-        })
-        .then(context.sync);
-})
+    console.log(rangeAreas.format.fill.color); // null
+    console.log(rangeAreas.isEntireColumn); // false
+    console.log(rangeAreas.address); // "Sheet1!F3:F5, Sheet1!H:H"
+});
 ```
 
 ## <a name="see-also"></a>См. также

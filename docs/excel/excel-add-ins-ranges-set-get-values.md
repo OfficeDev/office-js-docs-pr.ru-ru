@@ -1,19 +1,19 @@
 ---
 title: Установите и получите значения диапазона, текст или формулы с Excel API JavaScript
 description: Узнайте, как использовать API Excel JavaScript для набора и получения значений диапазона, текста или формул.
-ms.date: 04/02/2021
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 8db6e66c5f8eff106225d59fc4b82c9d092c8ee1
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 0567e9033606461c85ba695b3be1dc39954cdb18
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153854"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340535"
 ---
 # <a name="set-and-get-range-values-text-or-formulas-using-the-excel-javascript-api"></a>Установите и получите значения диапазона, текст или формулы с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые устанавливают и получают значения диапазона, текст или формулы с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые устанавливают и получают значения диапазона, текст или формулы с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -26,15 +26,15 @@ ms.locfileid: "59153854"
 В примере кода ниже показано, как присвоить ячейке **C3** значение 5, а затем настроить ширину столбцов для наилучшего размещения данных.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var range = sheet.getRange("C3");
+    let range = sheet.getRange("C3");
     range.values = [[ 5 ]];
     range.format.autofitColumns();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="data-before-cell-value-is-updated"></a>Данные перед изменением значения ячейки
@@ -50,19 +50,19 @@ Excel.run(function (context) {
 В примере кода ниже показано, как присвоить значения ячейкам в диапазоне **B5:D5**, а затем настроить ширину столбцов для наилучшего размещения данных.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var data = [
+    let data = [
         ["Potato Chips", 10, 1.80],
     ];
 
-    var range = sheet.getRange("B5:D5");
+    let range = sheet.getRange("B5:D5");
     range.values = data;
     range.format.autofitColumns();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="data-before-cell-values-are-updated"></a>Данные перед изменением значений ячеек
@@ -78,15 +78,15 @@ Excel.run(function (context) {
 В примере кода ниже показано, как задать формулу для ячейки **E3**, а затем настроить ширину столбцов для наилучшего размещения данных.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var range = sheet.getRange("E3");
+    let range = sheet.getRange("E3");
     range.formulas = [[ "=C3 * D3" ]];
     range.format.autofitColumns();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="data-before-cell-formula-is-set"></a>Данные перед заданием формулы для ячейки
@@ -102,22 +102,22 @@ Excel.run(function (context) {
 В примере кода ниже показано, как задать формулы для ячеек в диапазоне **E2:E6**, а затем настроить ширину столбцов для наилучшего размещения данных.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var data = [
+    let data = [
         ["=C3 * D3"],
         ["=C4 * D4"],
         ["=C5 * D5"],
         ["=SUM(E3:E5)"]
     ];
 
-    var range = sheet.getRange("E3:E6");
+    let range = sheet.getRange("E3:E6");
     range.formulas = data;
     range.format.autofitColumns();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="data-before-cell-formulas-are-set"></a>Данные перед заданием формул для ячеек
@@ -134,19 +134,18 @@ Excel.run(function (context) {
 
 ### <a name="get-values-from-a-range-of-cells"></a>Получение значений из диапазона ячеек
 
-В следующем примере кода получает диапазон **B2:E6,** загружается его свойство и записывает значения `values` на консоль. Свойство `values` диапазона указывает необработанные значения, содержащиеся в ячейках. Даже если некоторые ячейки в диапазоне содержат формулы, свойство диапазона указывает необработанные значения для этих ячеек, а не какие-либо `values` формулы.
+В следующем примере кода получает диапазон **B2:E6**, `values` загружается его свойство и записывает значения на консоль. Свойство `values` диапазона указывает необработанные значения, содержащиеся в ячейках. Даже если некоторые ячейки в диапазоне содержат формулы, `values` свойство диапазона указывает необработанные значения для этих ячеек, а не какие-либо формулы.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:E6");
-    range.load("values");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(JSON.stringify(range.values, null, 4));
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getRange("B2:E6");
+    range.load("values");
+    await context.sync();
+
+    console.log(JSON.stringify(range.values, null, 4));
+});
 ```
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
@@ -192,19 +191,18 @@ Excel.run(function (context) {
 
 ### <a name="get-text-from-a-range-of-cells"></a>Получение текста из диапазона ячеек
 
-Следующий пример кода получает диапазон **B2:E6,** загружает его `text` свойство и записывает его на консоль. Свойство диапазона указывает значения отображения для `text` ячеек в диапазоне. Даже если некоторые ячейки в диапазоне содержат формулы, свойство диапазона указывает значения отображения для этих ячеек, а не любые `text` формулы.
+В следующем примере кода получает диапазон **B2:E6**, загружается `text` его свойство и записывает его на консоль. Свойство `text` диапазона указывает значения отображения для ячеек в диапазоне. Даже если некоторые ячейки в диапазоне содержат формулы, `text` свойство диапазона указывает значения отображения для этих ячеек, а не любые формулы.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:E6");
-    range.load("text");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(JSON.stringify(range.text, null, 4));
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getRange("B2:E6");
+    range.load("text");
+    await context.sync();
+
+    console.log(JSON.stringify(range.text, null, 4));
+});
 ```
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
@@ -250,19 +248,18 @@ Excel.run(function (context) {
 
 ### <a name="get-formulas-from-a-range-of-cells"></a>Получение формул из диапазона ячеек
 
-Следующий пример кода получает диапазон **B2:E6,** загружает его `formulas` свойство и записывает его на консоль. Свойство диапазона указывает формулы для ячеек в диапазоне, содержащих формулы, и необработанные значения для ячеек в диапазоне, которые не `formulas` содержат формул.
+В следующем примере кода получает диапазон **B2:E6**, загружается `formulas` его свойство и записывает его на консоль. Свойство `formulas` диапазона указывает формулы для ячеек в диапазоне, содержащих формулы, и необработанные значения для ячеек в диапазоне, которые не содержат формул.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:E6");
-    range.load("formulas");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(JSON.stringify(range.formulas, null, 4));
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getRange("B2:E6");
+    range.load("formulas");
+    await context.sync();
+
+    console.log(JSON.stringify(range.formulas, null, 4));
+});
 ```
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
@@ -306,7 +303,7 @@ Excel.run(function (context) {
 ]
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

@@ -1,19 +1,19 @@
 ---
 title: Установите формат диапазона с помощью API Excel JavaScript
 description: Узнайте, как использовать Excel API JavaScript для набора формата диапазона.
-ms.date: 04/02/2021
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a380a64c76709e423be2d5c529a6e35cd44a5d1
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 41727f6fd71636be24bdc1bb8416cb3ba07c06e1
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151141"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340353"
 ---
 # <a name="set-range-format-using-the-excel-javascript-api"></a>Настройка формата диапазона с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые устанавливают цвет шрифта, заполняют цвет и формат номеров для ячеек в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые устанавливают цвет шрифта, цвет и формат номеров для ячеек в диапазоне с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -22,15 +22,15 @@ ms.locfileid: "59151141"
 В примере ниже показано, как задать цвет шрифта и цвет заливки для ячеек в диапазоне **B2: E2**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var range = sheet.getRange("B2:E2");
+    let range = sheet.getRange("B2:E2");
     range.format.fill.color = "#4472C4";
     range.format.font.color = "white";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ### <a name="data-in-range-before-font-color-and-fill-color-are-set"></a>Данные в диапазоне перед заданием цвета шрифта и цвета заливки
@@ -46,20 +46,20 @@ Excel.run(function (context) {
 В примере ниже показано, как задать формат чисел для ячеек в диапазоне **D3:E5**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var formats = [
+    let formats = [
         ["0.00", "0.00"],
         ["0.00", "0.00"],
         ["0.00", "0.00"]
     ];
 
-    var range = sheet.getRange("D3:E5");
+    let range = sheet.getRange("D3:E5");
     range.numberFormat = formats;
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ### <a name="data-in-range-before-number-format-is-set"></a>Данные в диапазоне перед заданием формата чисел
@@ -70,7 +70,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после набора формата номеров.](../images/excel-ranges-format-numbers.png)
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

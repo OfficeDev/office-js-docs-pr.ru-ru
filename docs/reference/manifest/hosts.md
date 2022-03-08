@@ -1,20 +1,34 @@
 ---
 title: Элемент Hosts в файле манифеста
-description: Указывает клиентское приложение Office, в котором будет активирована надстройка Office.
-ms.date: 10/09/2018
+description: Указывает Office клиентские приложения, Office надстройка активируется.
+ms.date: 02/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2684753fc32a295d7e177ef3bf668c194458128e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 9ea6cc9745f47b6e9b1c9bb0232b744304078053
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151444"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63341074"
 ---
 # <a name="hosts-element"></a>Элемент Hosts
 
-Указывает клиентское приложение Office, в котором будет активирована надстройка Office. Содержит коллекцию элементов **Host** и их параметров. 
+Указывает Office клиентские приложения, Office надстройка активируется. Содержит коллекцию элементов **Host** и их параметров. 
 
-При включении в узел [VersionOverrides](versionoverrides.md) этот элемент переопределяет элемент **Hosts** в родительской части манифеста. 
+## <a name="as-child-of-versionoverrides-element"></a>Как ребенок элемента VersionOverrides
+
+Сведения в этом разделе применяются только *в том случае* , если элемент **Hosts** является ребенком [VersionOverrides](versionoverrides.md).
+
+Этот элемент переопределяет **элемент Hosts** в базовом манифесте.
+
+**Тип надстройки:** Области задач, Почта
+
+**Допустимо только в этих схемах VersionOverrides**:
+
+- Область задач 1.0
+- Почта 1.0
+- Почта 1.1
+
+Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
 
 ## <a name="child-elements"></a>Дочерние элементы
 

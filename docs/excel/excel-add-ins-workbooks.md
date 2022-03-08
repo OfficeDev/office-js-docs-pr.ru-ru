@@ -1,11 +1,16 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: 'Узнайте, как выполнять общие задачи с помощью книг или функций уровня приложений с помощью Excel API JavaScript.'
-ms.date: 06/07/2021
+description: Узнайте, как выполнять общие задачи с помощью книг или функций на уровне приложений с Excel API JavaScript.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 4e07ac7ba679a7016ce19bfbce1b7570ddf29ee5
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340556"
 ---
-
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств `Workbook` и методов, поддерживаемых объектом, см. в книге [Объект (API JavaScript для Excel)](/javascript/api/excel/excel.workbook). В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
@@ -17,24 +22,23 @@ ms.localizationpriority: medium
 Объект Workbook содержит два метода для получения диапазона ячеек, выделенных пользователем или надстройкой: `getActiveCell()` и `getSelectedRange()`. `getActiveCell()` получает активную ячейку из книги в виде [объекта Range](/javascript/api/excel/excel.range). В приведенном ниже примере показан вызов `getActiveCell()` с последующей печатью адреса ячейки в консоль.
 
 ```js
-Excel.run(function (context) {
-    var activeCell = context.workbook.getActiveCell();
+await Excel.run(async (context) => {
+    let activeCell = context.workbook.getActiveCell();
     activeCell.load("address");
+    await context.sync();
 
-    return context.sync().then(function () {
-        console.log("The active cell is " + activeCell.address);
-    });
-}).catch(errorHandlerFunction);
+    console.log("The active cell is " + activeCell.address);
+});
 ```
 
 Метод `getSelectedRange()` возвращает один диапазон, выделенный в настоящее время. Если выделено несколько диапазонов, возникает ошибка InvalidSelection. В приведенном ниже примере показан вызов метода `getSelectedRange()`, который затем устанавливает желтый цвет заливки для диапазона.
 
 ```js
-Excel.run(function(context) {
-    var range = context.workbook.getSelectedRange();
+await Excel.run(async (context) => {
+    let range = context.workbook.getSelectedRange();
     range.format.fill.color = "yellow";
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ## <a name="create-a-workbook"></a>Создание книги
@@ -51,18 +55,18 @@ Excel.createWorkbook();
 
 ```js
 // Retrieve the external workbook file and set up a `FileReader` object. 
-var myFile = document.getElementById("file");
-var reader = new FileReader();
+let myFile = document.getElementById("file");
+let reader = new FileReader();
 
 reader.onload = (function (event) {
     Excel.run(function (context) {
         // Remove the metadata before the base64-encoded string.
-        var startIndex = reader.result.toString().indexOf("base64,");
-        var externalWorkbook = reader.result.toString().substr(startIndex + 7);
+        let startIndex = reader.result.toString().indexOf("base64,");
+        let externalWorkbook = reader.result.toString().substr(startIndex + 7);
 
         Excel.createWorkbook(externalWorkbook);
         return context.sync();
-    }).catch(errorHandlerFunction);
+    });
 });
 
 // Read the file as a data URL so we can parse the base64-encoded string.
@@ -71,33 +75,33 @@ reader.readAsDataURL(myFile.files[0]);
 
 ### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one"></a>Вставка копии существующей книги в текущую книгу.
 
-В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. В [книге](/javascript/api/excel/excel.workbook) используется метод `insertWorksheetsFromBase64` вставки копий таблиц целевой книги в себя. Файл другой книги передается как строка с кодом base64, как и вызов `Excel.createWorkbook` . 
+В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. В [книге](/javascript/api/excel/excel.workbook) используется метод `insertWorksheetsFromBase64` вставки копий таблиц целевой книги в себя. Файл другой книги передается как строка с кодом base64, как и вызов `Excel.createWorkbook` .
 
 ```TypeScript
 insertWorksheetsFromBase64(base64File: string, options?: Excel.InsertWorksheetOptions): OfficeExtension.ClientResult<string[]>;
 ```
 
 > [!IMPORTANT]
-> Метод `insertWorksheetsFromBase64` поддерживается для Excel на Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, `insertWorksheetsFromBase64` `UnsupportedFeature` метод возвращает ошибку в Excel в Интернете. 
+> Метод `insertWorksheetsFromBase64` поддерживается для Excel на Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, `insertWorksheetsFromBase64` `UnsupportedFeature` метод возвращает ошибку в Excel в Интернете.
 
 В следующем примере кода показано, как вставить в текущую книгу таблицы из другой книги. Этот пример [`FileReader`](https://developer.mozilla.org/docs/Web/API/FileReader) кода сначала обрабатывает файл книги с объектом и извлекает строку с кодом base64, а затем вставляет эту строку с кодом base64 в текущую книгу. Новые листы вставляются после листа с именем **Sheet1**. Обратите внимание `[]` , что он передается в качестве параметра свойства [InsertWorksheetOptions.sheetNamesToInsert](/javascript/api/excel/excel.insertworksheetoptions#excel-excel-insertworksheetoptions-sheetnamestoinsert-member) . Это означает, что все таблицы из целевой книги вставляются в текущую книгу.
 
 ```js
 // Retrieve the external workbook file and set up a `FileReader` object. 
-var myFile = document.getElementById("file");
-var reader = new FileReader();
+let myFile = document.getElementById("file");
+let reader = new FileReader();
 
 reader.onload = (event) => {
     Excel.run((context) => {
         // Remove the metadata before the base64-encoded string.
-        var startIndex = reader.result.toString().indexOf("base64,");
-        var externalWorkbook = reader.result.toString().substr(startIndex + 7);
+        let startIndex = reader.result.toString().indexOf("base64,");
+        let externalWorkbook = reader.result.toString().substr(startIndex + 7);
             
         // Retrieve the current workbook.
-        var workbook = context.workbook;
+        let workbook = context.workbook;
             
         // Set up the insert options. 
-        var options = { 
+        let options = { 
             sheetNamesToInsert: [], // Insert all the worksheets from the source workbook.
             positionType: Excel.WorksheetPositionType.after, // Insert after the `relativeTo` sheet.
             relativeTo: "Sheet1" // The sheet relative to which the other worksheets will be inserted. Used with `positionType`.
@@ -118,16 +122,15 @@ reader.readAsDataURL(myFile.files[0]);
 Надстройка может управлять возможностью пользователя по изменению структуры книги. Свойство `protection` объекта Workbook является объектом [WorkbookProtection](/javascript/api/excel/excel.workbookprotection) с методом `protect()`. В приведенном ниже примере показан основной сценарий переключения защиты структуры книги.
 
 ```js
-Excel.run(function (context) {
-    var workbook = context.workbook;
+await Excel.run(async (context) => {
+    let workbook = context.workbook;
     workbook.load("protection/protected");
+    await context.sync();
 
-    return context.sync().then(function() {
-        if (!workbook.protection.protected) {
-            workbook.protection.protect();
-        }
-    });
-}).catch(errorHandlerFunction);
+    if (!workbook.protection.protected) {
+        workbook.protection.protect();
+    }
+});
 ```
 
 Метод `protect` принимает необязательный строковый параметр. Эта строка представляет пароль, необходимый пользователю для обхода защиты и изменения структуры книги.
@@ -142,11 +145,11 @@ Excel.run(function (context) {
 Объекты Workbook имеют доступ к метаданным файлов Office, называемым [свойствами документов](https://support.microsoft.com/office/21d604c2-481e-4379-8e54-1dd4622c6b75). Свойство `properties` объекта Workbook является объектом [DocumentProperties](/javascript/api/excel/excel.documentproperties), содержащим эти значения метаданных. В следующем примере показано, как установить `author` свойство.
 
 ```js
-Excel.run(function (context) {
-    var docProperties = context.workbook.properties;
+await Excel.run(async (context) => {
+    let docProperties = context.workbook.properties;
     docProperties.author = "Alex";
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ### <a name="custom-properties"></a>Настраиваемые свойства
@@ -154,24 +157,23 @@ Excel.run(function (context) {
 Также можно установить настраиваемые свойства. Объект DocumentProperties содержит свойство `custom`, представляющее коллекцию пар "ключ-значение" для свойств, определяемых пользователем. В приведенном ниже примере показано, как создать настраиваемое свойство с именем **Introduction** со значением "Hello", а затем вызвать его.
 
 ```js
-Excel.run(function (context) {
-    var customDocProperties = context.workbook.properties.custom;
+await Excel.run(async (context) => {
+    let customDocProperties = context.workbook.properties.custom;
     customDocProperties.add("Introduction", "Hello");
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 
 [...]
 
-Excel.run(function (context) {
-    var customDocProperties = context.workbook.properties.custom;
-    var customProperty = customDocProperties.getItem("Introduction");
+await Excel.run(async (context) => {
+    let customDocProperties = context.workbook.properties.custom;
+    let customProperty = customDocProperties.getItem("Introduction");
     customProperty.load(["key, value"]);
+    await context.sync();
 
-    return context.sync().then(function() {
-        console.log("Custom key  : " + customProperty.key); // "Introduction"
-        console.log("Custom value : " + customProperty.value); // "Hello"
-    });
-}).catch(errorHandlerFunction);
+    console.log("Custom key  : " + customProperty.key); // "Introduction"
+    console.log("Custom value : " + customProperty.value); // "Hello"
+});
 ```
 
 #### <a name="worksheet-level-custom-properties"></a>Настраиваемые свойства на уровне таблицы
@@ -179,31 +181,31 @@ Excel.run(function (context) {
 Настраиваемые свойства также можно установить на уровне таблицы. Они похожи на настраиваемые свойства на уровне документов, за исключением того, что один и тот же ключ может повторяться в разных таблицах. В следующем примере показано, как создать настраиваемую свойство **WorksheetGroup** со значением "Альфа" на текущем таблице, а затем получить его.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Add the custom property.
-    var customWorksheetProperties = context.workbook.worksheets.getActiveWorksheet().customProperties;
+    let customWorksheetProperties = context.workbook.worksheets.getActiveWorksheet().customProperties;
     customWorksheetProperties.add("WorksheetGroup", "Alpha");
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 
 [...]
 
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Load the keys and values of all custom properties in the current worksheet.
-    var worksheet = context.workbook.worksheets.getActiveWorksheet();
+    let worksheet = context.workbook.worksheets.getActiveWorksheet();
     worksheet.load("name");
 
-    var customWorksheetProperties = worksheet.customProperties;
-    var customWorksheetProperty = customWorksheetProperties.getItem("WorksheetGroup");
+    let customWorksheetProperties = worksheet.customProperties;
+    let customWorksheetProperty = customWorksheetProperties.getItem("WorksheetGroup");
     customWorksheetProperty.load(["key", "value"]);
 
-    return context.sync().then(function() {
-        // Log the WorksheetGroup custom property to the console.
-        console.log(worksheet.name + ": " + customWorksheetProperty.key); // "WorksheetGroup"
-        console.log("  Custom value : " + customWorksheetProperty.value); // "Alpha"
-    });
-}).catch(errorHandlerFunction);
+    await context.sync();
+
+    // Log the WorksheetGroup custom property to the console.
+    console.log(worksheet.name + ": " + customWorksheetProperty.key); // "WorksheetGroup"
+    console.log("  Custom value : " + customWorksheetProperty.value); // "Alpha"
+});
 ```
 
 ## <a name="access-document-settings"></a>Доступ к параметрам документа
@@ -211,16 +213,15 @@ Excel.run(function (context) {
 Параметры книги похожи на коллекцию настраиваемых свойств. Различие заключается в том, что параметры уникальны для одного файла Excel и соединения надстройки, а свойства связаны только с файлом. В приведенном ниже примере показано, как создать параметр и получить к нему доступ.
 
 ```js
-Excel.run(function (context) {
-    var settings = context.workbook.settings;
+await Excel.run(async (context) => {
+    let settings = context.workbook.settings;
     settings.add("NeedsReview", true);
-    var needsReview = settings.getItem("NeedsReview");
+    let needsReview = settings.getItem("NeedsReview");
     needsReview.load("value");
 
-    return context.sync().then(function() {
-        console.log("Workbook needs review : " + needsReview.value);
-    });
-}).catch(errorHandlerFunction);
+    await context.sync();
+    console.log("Workbook needs review : " + needsReview.value);
+});
 ```
 
 ## <a name="access-application-culture-settings"></a>Доступ к настройкам культуры приложений
@@ -236,25 +237,25 @@ Excel.run(function (context) {
 ```js
 // This will convert a number like "14,37" to "14.37"
 // (assuming the system decimal separator is ".").
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var decimalSource = sheet.getRange("B2");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let decimalSource = sheet.getRange("B2");
+
     decimalSource.load("values");
     context.application.cultureInfo.numberFormat.load("numberDecimalSeparator");
+    await context.sync();
 
-    return context.sync().then(function() {
-        var systemDecimalSeparator =
-            context.application.cultureInfo.numberFormat.numberDecimalSeparator;
-        var oldDecimalString = decimalSource.values[0][0];
+    let systemDecimalSeparator =
+        context.application.cultureInfo.numberFormat.numberDecimalSeparator;
+    let oldDecimalString = decimalSource.values[0][0];
 
-        // This assumes the input column is standardized to use "," as the decimal separator.
-        var newDecimalString = oldDecimalString.replace(",", systemDecimalSeparator);
+    // This assumes the input column is standardized to use "," as the decimal separator.
+    let newDecimalString = oldDecimalString.replace(",", systemDecimalSeparator);
 
-        var resultRange = sheet.getRange("C2");
-        resultRange.values = [[newDecimalString]];
-        resultRange.format.autofitColumns();
-        return context.sync();
-    });
+    let resultRange = sheet.getRange("C2");
+    resultRange.values = [[newDecimalString]];
+    resultRange.format.autofitColumns();
+    await context.sync();
 });
 ```
 
@@ -267,39 +268,38 @@ Excel.run(function (context) {
 В приведенных ниже примерах показано, как использовать настраиваемые части XML. В первом блоке кода показано, как внедрять XML-данные в документ. Выполняется сохранение списка проверяющих, а затем используются параметры книги, чтобы сохранить параметр `id` XML для будущих извлечений. Во втором блоке показано, как получить доступ к этим XML-данным позднее. Параметр "ContosoReviewXmlPartId" загружается и передается объекту `customXmlParts` книги. Данные XML затем печатаются в консоль.
 
 ```js
-Excel.run(async (context) => {
+await Excel.run(async (context) => {
     // Add reviewer data to the document as XML
-    var originalXml = "<Reviewers xmlns='http://schemas.contoso.com/review/1.0'><Reviewer>Juan</Reviewer><Reviewer>Hong</Reviewer><Reviewer>Sally</Reviewer></Reviewers>";
-    var customXmlPart = context.workbook.customXmlParts.add(originalXml);
+    let originalXml = "<Reviewers xmlns='http://schemas.contoso.com/review/1.0'><Reviewer>Juan</Reviewer><Reviewer>Hong</Reviewer><Reviewer>Sally</Reviewer></Reviewers>";
+    let customXmlPart = context.workbook.customXmlParts.add(originalXml);
     customXmlPart.load("id");
+    await context.sync();
 
-    return context.sync().then(function() {
-        // Store the XML part's ID in a setting
-        var settings = context.workbook.settings;
-        settings.add("ContosoReviewXmlPartId", customXmlPart.id);
-    });
-}).catch(errorHandlerFunction);
+    // Store the XML part's ID in a setting
+    let settings = context.workbook.settings;
+    settings.add("ContosoReviewXmlPartId", customXmlPart.id);
+});
 ```
 
 ```js
-Excel.run(async (context) => {
+await Excel.run(async (context) => {
     // Retrieve the XML part's id from the setting
-    var settings = context.workbook.settings;
-    var xmlPartIDSetting = settings.getItemOrNullObject("ContosoReviewXmlPartId").load("value");
+    let settings = context.workbook.settings;
+    let xmlPartIDSetting = settings.getItemOrNullObject("ContosoReviewXmlPartId").load("value");
 
-    return context.sync().then(function () {
-        if (xmlPartIDSetting.value) {
-            var customXmlPart = context.workbook.customXmlParts.getItem(xmlPartIDSetting.value);
-            var xmlBlob = customXmlPart.getXml();
+    await context.sync();
 
-            return context.sync().then(function () {
-                // Add spaces to make more human readable in the console
-                var readableXML = xmlBlob.value.replace(/></g, "> <");
-                console.log(readableXML);
-            });
-        }
-    });
-}).catch(errorHandlerFunction);
+    if (xmlPartIDSetting.value) {
+        let customXmlPart = context.workbook.customXmlParts.getItem(xmlPartIDSetting.value);
+        let xmlBlob = customXmlPart.getXml();
+
+        await context.sync();
+
+        // Add spaces to make it more human-readable in the console.
+        let readableXML = xmlBlob.value.replace(/></g, "> <");
+        console.log(readableXML);
+    }
+});
 ```
 
 > [!NOTE]
@@ -346,26 +346,26 @@ context.application.suspendApiCalculationUntilNextSync();
 В следующем примере кода показано, как `onActivated` зарегистрировать обработник событий и настроить функцию вызова.
 
 ```js
-Excel.run(function (context) {
-    // Retrieve the workbook.
-    var workbook = context.workbook;
+async function run() {
+    await Excel.run(async (context) => {
+        // Retrieve the workbook.
+        let workbook = context.workbook;
+    
+        // Register the workbook activated event handler.
+        workbook.onActivated.add(workbookActivated);
+        await context.sync();
+    });
+}
 
-    // Register the workbook activated event handler.
-    workbook.onActivated.add(workbookActivated);
-
-    return context.sync();
-});
-
-function workbookActivated(event) {
-    Excel.run(function (context) {
+async function workbookActivated(event) {
+    await Excel.run(async (context) => {
         // Retrieve the workbook and load the name.
-        var workbook = context.workbook;
-        workbook.load("name");
-        
-        return context.sync().then(function () {
-            // Callback function for when the workbook is activated.
-            console.log(`The workbook ${workbook.name} was activated.`);
-        });
+        let workbook = context.workbook;
+        workbook.load("name");        
+        await context.sync();
+
+        // Callback function for when the workbook is activated.
+        console.log(`The workbook ${workbook.name} was activated.`);
     });
 }
 ```

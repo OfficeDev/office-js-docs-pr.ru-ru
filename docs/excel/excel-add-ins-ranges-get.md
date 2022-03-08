@@ -1,91 +1,87 @@
 ---
 title: Получите диапазон с помощью Excel API JavaScript
-description: Узнайте, как получить диапазон с помощью Excel API JavaScript.
-ms.date: 04/02/2021
+description: Узнайте, как получить диапазон с Excel API JavaScript.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e51305a822fc528e81a178c20545b11fb80bf2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 16c42ccf8f3496316fbf7b52e4d8139f819c6da1
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153869"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340941"
 ---
 # <a name="get-a-range-using-the-excel-javascript-api"></a>Получите диапазон с помощью Excel API JavaScript
 
-В этой статье приводится ряд примеров получения диапазона в пределах таблицы с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье приводится ряд примеров получения диапазона в пределах таблицы с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
 ## <a name="get-range-by-address"></a>Получение диапазона по адресу
 
-Следующий пример кода получает диапазон с адресом **B2:C5** из таблицы с именем **Sample,** загружает ее свойство и пишет сообщение на `address` консоль.
+Следующий пример кода получает диапазон с адресом **B2:C5** из таблицы с именем **Sample**, `address` загружает ее свойство и пишет сообщение на консоль.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    
+    let range = sheet.getRange("B2:C5");
     range.load("address");
-
-    return context.sync()
-        .then(function () {
-            console.log(`The address of the range B2:C5 is "${range.address}"`);
-        });
-}).catch(errorHandlerFunction);
+    await context.sync();
+    
+    console.log(`The address of the range B2:C5 is "${range.address}"`);
+});
 ```
 
 ## <a name="get-range-by-name"></a>Получение диапазона по имени
 
-Следующий пример кода получает диапазон, названный из таблицы с именем Sample, загружает его свойство и пишет `MyRange` сообщение на  `address` консоль.
+Следующий пример кода получает диапазон, `MyRange` названный из таблицы с именем **Sample**, `address` загружает его свойство и пишет сообщение на консоль.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("MyRange");
-    range.load("address");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(`The address of the range "MyRange" is "${range.address}"`);
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getRange("MyRange");
+    range.load("address");
+    await context.sync();
+
+    console.log(`The address of the range "MyRange" is "${range.address}"`);
+});
 ```
 
 ## <a name="get-used-range"></a>Получение используемого диапазона
 
-В следующем примере кода используется диапазон от таблицы с именем **Sample,** загружается его свойство и записывает сообщение `address` на консоль. Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование. Если весь лист пустой, метод возвращает диапазон, состоящий только из `getUsedRange()` верхнего левого элемента.
+В следующем примере кода используется диапазон от таблицы с именем **Sample**, `address` загружается ее свойство и записывает сообщение на консоль. Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование. Если весь лист пустой, `getUsedRange()` метод возвращает диапазон, состоящий только из верхнего левого элемента.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getUsedRange();
-    range.load("address");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(`The address of the used range in the worksheet is "${range.address}"`);
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getUsedRange();
+    range.load("address");
+    await context.sync();
+    
+    console.log(`The address of the used range in the worksheet is "${range.address}"`);
+});
 ```
 
 ## <a name="get-entire-range"></a>Получение всего диапазона
 
-Следующий пример кода получает весь диапазон таблицы из таблицы с именем **Sample,** загружает ее свойство и пишет сообщение `address` на консоль.
+Следующий пример кода получает весь диапазон таблицы из таблицы с именем **Sample**, `address` загружает ее свойство и пишет сообщение на консоль.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange();
-    range.load("address");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    return context.sync()
-        .then(function () {
-            console.log(`The address of the entire worksheet range is "${range.address}"`);
-        });
-}).catch(errorHandlerFunction);
+    let range = sheet.getRange();
+    range.load("address");
+    await context.sync();
+    
+    console.log(`The address of the entire worksheet range is "${range.address}"`);
+});
 ```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)

@@ -1,86 +1,88 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
 description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
-ms.date: 11/29/2021
+ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 31b65a6523753f47304adb4e007bb19e2e644c6d
-ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
+ms.openlocfilehash: fa9409370d08329a288ba16d6cbb69bbd6c88f7c
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62855613"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340787"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel.
-Полный список свойств и методов, поддерживаемых объектами, см. в таблице [Chart Object (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и Объект коллекции диаграмм [(API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).`Chart` `ChartCollection`
+Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице [Chart Object (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и Объект коллекции диаграмм [(API JavaScript](/javascript/api/excel/excel.chartcollection) для Excel).`Chart` `ChartCollection`
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 
 В примере кода ниже показано, как создать диаграмму на листе **Sample** (Пример). Диаграмма представляет собой **график**, построенный на основе данных из диапазона **A1:B13**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var dataRange = sheet.getRange("A1:B13");
-    var chart = sheet.charts.add("Line", dataRange, "auto");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let dataRange = sheet.getRange("A1:B13");
+    let chart = sheet.charts.add(
+      Excel.ChartType.line, 
+      dataRange, 
+      Excel.ChartSeriesBy.auto);
 
     chart.title.text = "Sales Data";
-    chart.legend.position = "right"
+    chart.legend.position = Excel.ChartLegendPosition.right;
     chart.legend.format.fill.setSolidColor("white");
     chart.dataLabels.format.font.size = 15;
     chart.dataLabels.format.font.color = "black";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Новый график**
+### <a name="new-line-chart"></a>Новый график
 
 ![Новая диаграмма строки в Excel.](../images/excel-charts-create-line.png)
-
 
 ## <a name="add-a-data-series-to-a-chart"></a>Добавление ряда данных в диаграмму
 
 В примере кода ниже показано, как добавить ряд данных в первую диаграмму на листе. Новый ряд данных соответствует столбцу **2016** и основан на данных из диапазона **D2:D5**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var chart = sheet.charts.getItemAt(0);
-    var dataRange = sheet.getRange("D2:D5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let chart = sheet.charts.getItemAt(0);
+    let dataRange = sheet.getRange("D2:D5");
 
-    var newSeries = chart.series.add("2016");
+    let newSeries = chart.series.add("2016");
     newSeries.setValues(dataRange);
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма перед добавлением ряда данных 2016**
+### <a name="chart-before-the-2016-data-series-is-added"></a>Диаграмма перед добавлением ряда данных 2016
 
 ![Диаграмма в Excel до добавленной серии данных за 2016 г.](../images/excel-charts-data-series-before.png)
 
-**Диаграмма после добавления ряда данных 2016**
+### <a name="chart-after-the-2016-data-series-is-added"></a>Диаграмма после добавления ряда данных 2016
 
-![Диаграмма в Excel после добавленной серии данных 2016 г.](../images/excel-charts-data-series-after.png)
+![Диаграмма Excel после добавленной серии данных 2016 г.](../images/excel-charts-data-series-after.png)
 
 ## <a name="set-chart-title"></a>Задание названия диаграммы
 
 В примере ниже показано, как задать название **Sales Data by Year** (Данные продаж по годам) для первой диаграммы на листе.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
+    let chart = sheet.charts.getItemAt(0);
     chart.title.text = "Sales Data by Year";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма после задания заголовка**
+### <a name="chart-after-title-is-set"></a>Диаграмма после задания заголовка
 
 ![Диаграмма с заголовком в Excel.](../images/excel-charts-title-set.png)
 
@@ -93,17 +95,17 @@ Excel.run(function (context) {
 В примере кода ниже показано, как задать название **Product** (Продукт) для оси категорий первой диаграммы на листе.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
+    let chart = sheet.charts.getItemAt(0);
     chart.axes.categoryAxis.title.text = "Product";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма после задания названия оси категорий**
+### <a name="chart-after-title-of-category-axis-is-set"></a>Диаграмма после задания названия оси категорий
 
 ![Диаграмма с названием оси в Excel.](../images/excel-charts-axis-title-set.png)
 
@@ -112,17 +114,17 @@ Excel.run(function (context) {
 В примере ниже показано, как задать отображаемую единицу измерения **Hundreds** (Сотни) для оси значений первой диаграммы на листе.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
+    let chart = sheet.charts.getItemAt(0);
     chart.axes.valueAxis.displayUnit = "Hundreds";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма после задания единицы измерения оси значений**
+### <a name="chart-after-display-unit-of-value-axis-is-set"></a>Диаграмма после задания единицы измерения оси значений
 
 ![Диаграмма с блоком отображения оси в Excel.](../images/excel-charts-axis-display-unit-set.png)
 
@@ -131,17 +133,17 @@ Excel.run(function (context) {
 В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Основные линии сетки для оси значения диаграммы можно показать, `chart.axes.valueAxis.majorGridlines.visible` установив значение `true`.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
+    let chart = sheet.charts.getItemAt(0);
     chart.axes.valueAxis.majorGridlines.visible = false;
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма со скрытыми линиями сетки**
+### <a name="chart-with-gridlines-hidden"></a>Диаграмма со скрытыми линиями сетки
 
 ![Диаграмма с сетками, скрытыми в Excel.](../images/excel-charts-gridlines-removed.png)
 
@@ -152,18 +154,18 @@ Excel.run(function (context) {
 В примере кода ниже показано, как добавить линию тренда "скользящее среднее" в первый ряд первой диаграммы на листе **Sample** (Пример). Линия тренда отображает "скользящее среднее" за 5 периодов.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
-    var seriesCollection = chart.series;
+    let chart = sheet.charts.getItemAt(0);
+    let seriesCollection = chart.series;
     seriesCollection.getItemAt(0).trendlines.add("MovingAverage").movingAveragePeriod = 5;
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма с линией тренда "скользящее среднее"**
+#### <a name="chart-with-moving-average-trendline"></a>Диаграмма с линией тренда "скользящее среднее"
 
 ![Диаграмма с скользящего среднего тренда в Excel.](../images/excel-charts-create-trendline.png)
 
@@ -172,19 +174,19 @@ Excel.run(function (context) {
 Следующий пример кода задает линию тренда `Linear` для введите для первой серии в первой диаграмме в таблице с именем **Sample**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
-    var chart = sheet.charts.getItemAt(0);
-    var seriesCollection = chart.series;
-    var series = seriesCollection.getItemAt(0);
+    let chart = sheet.charts.getItemAt(0);
+    let seriesCollection = chart.series;
+    let series = seriesCollection.getItemAt(0);
     series.trendlines.getItem(0).type = "Linear";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
-**Диаграмма с линейной линией тренда**
+#### <a name="chart-with-linear-trendline"></a>Диаграмма с линейной линией тренда
 
 ![Диаграмма с линейным трендом в Excel.](../images/excel-charts-trendline-linear.png)
 
@@ -199,12 +201,12 @@ Excel.run(function (context) {
 ```js
 // This code sample adds a data table to a chart that already exists on the worksheet, 
 // and then adjusts the display and format of that data table.
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Retrieve the chart on the "Sample" worksheet.
-    var chart = context.workbook.worksheets.getItem("Sample").charts.getItemAt(0);
+    let chart = context.workbook.worksheets.getItem("Sample").charts.getItemAt(0);
 
     // Get the chart data table object and load its properties.
-    var chartDataTable = chart.getDataTableOrNullObject();
+    let chartDataTable = chart.getDataTableOrNullObject();
     chartDataTable.load();
 
     // Set the display properties of the chart data table.
@@ -215,13 +217,13 @@ Excel.run(function (context) {
     chartDataTable.showOutlineBorder = true;
 
     // Retrieve the chart data table format object and set font and border properties. 
-    var chartDataTableFormat = chartDataTable.format;
+    let chartDataTableFormat = chartDataTable.format;
     chartDataTableFormat.font.color = "#B76E79";
     chartDataTableFormat.font.name = "Comic Sans";
     chartDataTableFormat.border.color = "blue";
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 На следующем скриншоте показана таблица данных, которую создает предыдущий пример кода.
@@ -233,14 +235,14 @@ Excel.run(function (context) {
 Диаграммы можно отображать как изображения за пределами Excel. Метод `Chart.getImage` возвращает диаграмму в виде строки в кодировке base64, представляющей диаграмму в формате изображения JPEG. В приведенном ниже коде показано, как получить строку изображения и записать ее в консоли.
 
 ```js
-Excel.run(function (context) {
-    var chart = context.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");
-    var imageAsString = chart.getImage();
-    return context.sync().then(function () {
-        console.log(imageAsString.value);
-        // Instead of logging, your add-in may use the base64-encoded string to save the image as a file or insert it in HTML.
-    });
-}).catch(errorHandlerFunction);
+await Excel.run(async (context) => {
+    let chart = context.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");
+    let imageAsString = chart.getImage();
+    await context.sync();
+    
+    console.log(imageAsString.value);
+    // Instead of logging, your add-in may use the base64-encoded string to save the image as a file or insert it in HTML.
+});
 ```
 
 Метод `Chart.getImage` использует три дополнительных параметра: ширина, высота и режим подгонки.

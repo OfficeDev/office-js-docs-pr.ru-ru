@@ -3,10 +3,15 @@ title: Обзор создания кода с помощью API JavaScript д�
 description: Узнайте об API OneNote JavaScript для надстроек OneNote в Интернете.
 ms.date: 10/14/2020
 ms.topic: overview
-ms.custom: 'scenarios:getting-started'
+ms.custom: scenarios:getting-started
 ms.localizationpriority: high
+ms.openlocfilehash: 1aa50bf12bb7e2777e31a3dc7875208d8b2966a4
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340976"
 ---
-
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
 В OneNote представлен API JavaScript для надстроек OneNote в Интернете. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
@@ -50,33 +55,24 @@ ms.localizationpriority: high
 Например,
 
 ```js
-function getPagesInSection() {
-    OneNote.run(function (context) {
+async function getPagesInSection() {
+    await OneNote.run(async (context) => {
 
         // Get the pages in the current section.
-        var pages = context.application.getActiveSection().pages;
+        const pages = context.application.getActiveSection().pages;
 
         // Queue a command to load the id and title for each page.
         pages.load('id,title');
 
         // Run the queued commands, and return a promise to indicate task completion.
-        return context.sync()
-            .then(function () {
-
-                // Read the id and title of each page.
-                $.each(pages.items, function(index, page) {
-                    var pageId = page.id;
-                    var pageTitle = page.title;
-                    console.log(pageTitle + ': ' + pageId);
-                });
-            })
-            .catch(function (error) {
-                app.showNotification("Error: " + error);
-                console.log("Error: " + error);
-                if (error instanceof OfficeExtension.Error) {
-                    console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                }
-            });
+        await context.sync();
+            
+        // Read the id and title of each page.
+        $.each(pages.items, function(index, page) {
+            let pageId = page.id;
+            let pageTitle = page.title;
+            console.log(pageTitle + ': ' + pageId);
+        });
     });
 }
 ```

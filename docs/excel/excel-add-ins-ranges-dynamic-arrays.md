@@ -1,14 +1,19 @@
 ---
 title: Обработка динамических массивов и разлива диапазона с Excel API JavaScript
-description: 'Узнайте, как обрабатывать динамические массивы и разливать диапазоны с помощью Excel API JavaScript.'
-ms.date: 04/02/2021
+description: Узнайте, как обрабатывать динамические массивы и разливать диапазоны с помощью Excel API JavaScript.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: b096225a7f4582f15b5707dcd0059e8e8869ad8d
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340696"
 ---
-
 # <a name="handle-dynamic-arrays-and-spilling-using-the-excel-javascript-api"></a>Обработка динамических массивов и разлив с помощью Excel API JavaScript
 
-В этой статье приводится пример кода, который обрабатывает динамические массивы и разлив диапазонов с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
+В этой статье приводится пример кода, который обрабатывает динамические массивы и разлив диапазонов с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="dynamic-arrays"></a>Динамические массивы
 
@@ -17,23 +22,23 @@ ms.localizationpriority: medium
 В следующем примере показана базовая формула, которая копирует содержимое диапазона в ячейку, которая разливается в соседние ячейки. Затем надстройка регистрит диапазон, содержащий разлив.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getItem("Sample");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
 
     // Set G4 to a formula that returns a dynamic array.
-    var targetCell = sheet.getRange("G4");
+    let targetCell = sheet.getRange("G4");
     targetCell.formulas = [["=A4:D4"]];
 
     // Get the address of the cells that the dynamic array spilled into.
-    var spillRange = targetCell.getSpillingToRange();
+    let spillRange = targetCell.getSpillingToRange();
     spillRange.load("address");
 
     // Sync and log the spilled-to range.
-    return context.sync().then(function () {
-        // This will log the range as "G4:J4".
-        console.log(`Copying the table headers spilled into ${spillRange.address}.`);
-    });
-}).catch(errorHandlerFunction);
+    await context.sync();
+
+    // This will log the range as "G4:J4".
+    console.log(`Copying the table headers spilled into ${spillRange.address}.`);
+});
 ```
 
 ## <a name="range-spilling"></a>Разлиение диапазона

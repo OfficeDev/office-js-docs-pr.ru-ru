@@ -1,14 +1,19 @@
 ---
 title: Установите и получите выбранный диапазон с Excel API JavaScript
-description: 'Узнайте, как использовать API Excel JavaScript для набора и получения выбранного диапазона с Excel API JavaScript.'
-ms.date: 07/02/2021
+description: Узнайте, как использовать API Excel JavaScript для набора и получения выбранного диапазона с Excel API JavaScript.
+ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: ff8690d1d79063114441320232bdef2000af71d5
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340731"
 ---
-
 # <a name="set-and-get-the-selected-range-using-the-excel-javascript-api"></a>Установите и получите выбранный диапазон с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые устанавливают и получают выбранный диапазон с Excel API JavaScript. Полный список свойств и `Range` методов, поддерживаемых объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые устанавливают и получают выбранный диапазон с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -17,14 +22,14 @@ ms.localizationpriority: medium
 В примере кода ниже показано, как выделить диапазон **B2:E6** на активном листе.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:E6");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:E6");
 
     range.select();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 ### <a name="selected-range-b2e6"></a>Выделенный диапазон B2:E6
@@ -36,15 +41,14 @@ Excel.run(function (context) {
 Следующий пример кода получает выбранный диапазон, загружает его `address` свойство и пишет сообщение на консоль.
 
 ```js
-Excel.run(function (context) {
-    var range = context.workbook.getSelectedRange();
+await Excel.run(async (context) => {
+    let range = context.workbook.getSelectedRange();
     range.load("address");
 
-    return context.sync()
-        .then(function () {
-            console.log(`The address of the selected range is "${range.address}"`);
-        });
-}).catch(errorHandlerFunction);
+    await context.sync();
+    
+    console.log(`The address of the selected range is "${range.address}"`);
+});
 ```
 
 ## <a name="select-the-edge-of-a-used-range"></a>Выберите край используемого диапазона
@@ -60,26 +64,26 @@ Excel.run(function (context) {
 В следующем примере `Range.getRangeEdge` кода показано, как использовать метод для выбора ячейки на самом дальнем краю используемого диапазона тока в направлении вверх. Это действие соответствует результату использования клавиши Ctrl+Up при выборе диапазона.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Get the selected range.
-    var range = context.workbook.getSelectedRange();
+    let range = context.workbook.getSelectedRange();
 
     // Specify the direction with the `KeyboardDirection` enum.
-    var direction = Excel.KeyboardDirection.up;
+    let direction = Excel.KeyboardDirection.up;
 
     // Get the active cell in the workbook.
-    var activeCell = context.workbook.getActiveCell();
+    let activeCell = context.workbook.getActiveCell();
 
     // Get the top-most cell of the current used range.
     // This method acts like the Ctrl+Up arrow key keyboard shortcut while a range is selected.
-    var rangeEdge = range.getRangeEdge(
+    let rangeEdge = range.getRangeEdge(
       direction,
       activeCell
     );
     rangeEdge.select();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="before-selecting-the-cell-at-the-edge-of-the-used-range"></a>Перед выбором ячейки на краю используемого диапазона
@@ -99,26 +103,26 @@ Excel.run(function (context) {
 В следующем примере `Range.getExtendedRange` кода показано, как использовать метод для выбора всех ячеек из выбранного диапазона до самого дальнего края используемого диапазона в направлении вниз. Это действие соответствует результату использования клавиши Ctrl+Shift+Down при выборе диапазона.
 
 ```js
-Excel.run(function (context) {
+await Excel.run(async (context) => {
     // Get the selected range.
-    var range = context.workbook.getSelectedRange();
+    let range = context.workbook.getSelectedRange();
 
     // Specify the direction with the `KeyboardDirection` enum.
-    var direction = Excel.KeyboardDirection.down;
+    let direction = Excel.KeyboardDirection.down;
 
     // Get the active cell in the workbook.
-    var activeCell = context.workbook.getActiveCell();
+    let activeCell = context.workbook.getActiveCell();
 
     // Get all the cells from the currently selected range to the bottom-most edge of the used range.
     // This method acts like the Ctrl+Shift+Down arrow key keyboard shortcut while a range is selected.
-    var extendedRange = range.getExtendedRange(
+    let extendedRange = range.getExtendedRange(
       direction,
       activeCell
     );
     extendedRange.select();
 
-    return context.sync();
-}).catch(errorHandlerFunction);
+    await context.sync();
+});
 ```
 
 #### <a name="before-selecting-all-the-cells-from-the-current-range-to-the-edge-of-the-used-range"></a>Перед выбором всех ячеек от текущего диапазона до края используемого диапазона
