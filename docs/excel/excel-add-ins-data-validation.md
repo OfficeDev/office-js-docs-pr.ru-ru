@@ -1,10 +1,15 @@
 ---
 title: Добавление проверки данных в диапазоны Excel
-description: 'Узнайте, как Excel API JavaScript позволяют надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге.'
-ms.date: 03/19/2019
+description: Узнайте, как Excel API JavaScript позволяют надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге.
+ms.date: 02/16/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: e2f77bcfad39addbda2ad14044ceffef2141bed7
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340122"
 ---
-
 # <a name="add-data-validation-to-excel-ranges"></a>Добавление проверки данных в диапазоны Excel
 
 Библиотека JavaScript Excel предоставляет API, позволяющие вашей надстройке добавлять функцию автоматической проверки данных для таблиц, столбцов, строк и других диапазонов в книге.  Чтобы понять понятия и терминологию проверки данных, см. в следующих статьях о том, как пользователи добавляют проверку данных Excel пользовательского интерфейса.
@@ -18,7 +23,7 @@ ms.localizationpriority: medium
 Свойство `Range.dataValidation`, которое получает объект [DataValidation](/javascript/api/excel/excel.datavalidation), является точкой входа для программного управления проверкой данных в Excel. Существует пять свойств объекта `DataValidation`:
 
 - `rule` — определяет, какие данные для диапазона являются допустимыми. См. статью [DataValidationRule](/javascript/api/excel/excel.datavalidationrule).
-- `errorAlert` — указывает, появляется ли ошибка, если пользователь вводит недопустимые данные, и определяет текст, название и стиль оповещения, например **Informational** (информирование), **Warning** (предупреждение) и **Stop** (остановка).  См. статью [DataValidationErrorAlert](/javascript/api/excel/excel.datavalidationerroralert).
+- `errorAlert`&#8212; указывает, всплывает ли ошибка, если пользователь вводит недействительные данные, и определяет текст оповещения, название и стиль; например, `information`и `warning``stop`. См. статью [DataValidationErrorAlert](/javascript/api/excel/excel.datavalidationerroralert).
 - `prompt` — указывает, появляется ли подсказка, когда пользователь наводит указатель мыши на диапазон, и определяет текст подсказки. См. статью [DataValidationPrompt](/javascript/api/excel/excel.datavalidationprompt).
 - `ignoreBlanks` — указывает, применяется ли правило проверки данных к пустым ячейкам в диапазоне. Значение по умолчанию: `true`.
 - `type` — идентификация типа проверки "только для чтения", например WholeNumber, Date, TextLength и т. д. Это свойство устанавливается неявно при задании свойства `rule`.
@@ -40,44 +45,44 @@ ms.localizationpriority: medium
 
 Ниже приведен пример создания правила проверки.  Обратите внимание на указанные ниже аспекты этого кода.
 
-- `operator` — это бинарный оператор "GreaterThan". При использовании бинарного оператора значение, которое пользователь пытается ввести в ячейку, — это левый операнд, а значение, указанное в `formula1`, — это правый операнд. Поэтому согласно этому правилу только целые числа больше 0 являются допустимыми.
+- Это `operator` двоичный оператор `greaterThan`. При использовании бинарного оператора значение, которое пользователь пытается ввести в ячейку, — это левый операнд, а значение, указанное в `formula1`, — это правый операнд. Поэтому согласно этому правилу только целые числа больше 0 являются допустимыми.
 - `formula1` — это жестко заданное число. Если во время кодирования вы не знаете, какое значение должно быть задано, можно также использовать формулу Excel (в виде строки) для значения. Например, "= A3" и "= SUM(A4,B5)" могут также быть значениями `formula1`.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");
 
     range.dataValidation.rule = {
             wholeNumber: {
                 formula1: 0,
-                operator: "GreaterThan"
+                operator: Excel.DataValidationOperator.greaterThan
             }
         };
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
-Перечень других бинарных операторов см. в статье [BasicDataValidation](/javascript/api/excel/excel.basicdatavalidation). 
+Перечень других бинарных операторов см. в статье [BasicDataValidation](/javascript/api/excel/excel.basicdatavalidation).
 
-Существует также два тернарных оператора: "Between" и "NotBetween". Для их использования необходимо указать необязательное свойство `formula2`.  Значения `formula1` и `formula2` — это ограничивающие операнды. Значение, которое пользователь пытается ввести в ячейку, — это третий (вычисленный) операнд. Ниже приводится пример использования оператора "Между".
+Есть также два ternary операторов: `between` и `notBetween`. Для их использования необходимо указать необязательное свойство `formula2`.  Значения `formula1` и `formula2` — это ограничивающие операнды. Значение, которое пользователь пытается ввести в ячейку, — это третий (вычисленный) операнд. Ниже приводится пример использования оператора "Между".
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");
 
     range.dataValidation.rule = {
             decimal: {
                 formula1: 0,
                 formula2: 100,
-                operator: "Between"
+              operator: Excel.DataValidationOperator.between
             }
         };
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 Следующие два свойства правила в качестве своего значения принимают объект [DateTimeDataValidation](/javascript/api/excel/excel.datetimedatavalidation).
@@ -85,23 +90,23 @@ Excel.run(function (context) {
 - `date`
 - `time`
 
-Объект `DateTimeDataValidation` структурирован так же, как и `BasicDataValidation`: он имеет свойства `formula1`, `formula2` и `operator` и используется аналогичным образом. Различие состоит в том, что в свойствах формулы нельзя использовать число, но можно ввести строку [даты и времени ISO 8606](https://www.iso.org/iso-8601-date-and-time-format.html) (или формулу Excel). Ниже приведен пример, в котором определяются допустимые значения для дат в первую неделю апреля 2018 года. 
+Объект `DateTimeDataValidation` структурирован так же, как и `BasicDataValidation`: он имеет свойства `formula1`, `formula2` и `operator` и используется аналогичным образом. Различие состоит в том, что в свойствах формулы нельзя использовать число, но можно ввести строку [даты и времени ISO 8606](https://www.iso.org/iso-8601-date-and-time-format.html) (или формулу Excel). Ниже приводится пример, который определяет допустимые значения как даты в первую неделю апреля 2022 г.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");
 
     range.dataValidation.rule = {
             date: {
-                formula1: "2018-04-01",
-                formula2: "2018-04-08",
-                operator: "Between"
+                formula1: "2022-04-01",
+                formula2: "2022-04-08",
+                operator: Excel.DataValidationOperator.between
             }
         };
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 ### <a name="list-validation-rule-type"></a>Тип правила проверки для списка
@@ -113,10 +118,10 @@ Excel.run(function (context) {
 - Свойство `inCellDropDown` указывает, будет ли раскрывающийся элемент управления отображаться в ячейке, когда пользователь выбирает ее. Если свойству присвоено значение `true`, то раскрывающийся список отображается со списком значений из `source`.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");   
-    var nameSourceRange = context.workbook.worksheets.getItem("Names").getRange("A1:A3");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");   
+    let nameSourceRange = context.workbook.worksheets.getItem("Names").getRange("A1:A3");
 
     range.dataValidation.rule = {
         list: {
@@ -125,7 +130,7 @@ Excel.run(function (context) {
         }
     };
 
-    return context.sync();
+    await context.sync();
 })
 ```
 
@@ -138,10 +143,9 @@ Excel.run(function (context) {
 - `SEARCH(A2,B2)` возвращает стартовую позицию строки в ячейке A2 в строку в ячейке B2. Если A2 не находится в ячейке B2, не возвращается числовое значение. `ISNUMBER()` возвращает логическое значение. Поэтому свойство `formula` указывает, что допустимые данные для столбца **Комментарии** — это данные, которые не содержат строку в столбце **Имя спортсмена**.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
-    var commentsRange = sheet.tables.getItem("AthletesTable").columns.getItem("Comments").getDataBodyRange();
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let commentsRange = sheet.tables.getItem("AthletesTable").columns.getItem("Comments").getDataBodyRange();
 
     commentsRange.dataValidation.rule = {
             custom: {
@@ -149,33 +153,33 @@ Excel.run(function (context) {
             }
         };
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 ## <a name="create-validation-error-alerts"></a>Создание оповещений об ошибках проверки
 
 Вы можете создать настраиваемое оповещение об ошибке, которое отображается, если пользователь пытается ввести недопустимые данные в ячейке. Ниже приведен простой пример. Обратите внимание на указанные ниже аспекты этого кода.
 
-- Свойство `style` определяет, получает ли пользователь информационное уведомление, предупреждение или оповещение "stop". Только `Stop` действительно не позволяет пользователю добавлять недопустимые данные.  Всплывающее окно для `Warning` и `Information` содержит параметры, позволяющие пользователю в любом случае ввести недопустимые данные.
-- Свойству `showAlert` по умолчанию присвоено значение `true`.  Это означает, что Excel будет всплывающее общее оповещение (`Stop`типа), `showAlert` `false` если вы не создайте настраиваемую оповещение, которое задает или задает настраиваемые сообщения, название и стиль. Этот код задает настраиваемое сообщение и заголовок.
+- Свойство `style` определяет, получает ли пользователь информационное уведомление, предупреждение или оповещение "stop". Только `stop` действительно не позволяет пользователю добавлять недопустимые данные.  Всплывающие точки для и `warning` имеют параметры `information` , которые позволяют пользователю вводить недействительные данные в любом случае.
+- Свойству `showAlert` по умолчанию присвоено значение `true`.  Это означает, Excel будет всплывающее общее оповещение (`stop`типа), `showAlert` `false` если вы не создайте настраиваемую оповещение, которое задает или задает настраиваемые сообщения, название и стиль. Этот код задает настраиваемое сообщение и заголовок.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");
 
     range.dataValidation.errorAlert = {
             message: "Sorry, only positive whole numbers are allowed",
-            showAlert: true, // default is 'true'
-            style: "Stop", // other possible values: Warning, Information
+            showAlert: true, // The default is 'true'.
+              style: Excel.DataValidationAlertStyle.stop,
             title: "Negative or Decimal Number Entered"
         };
 
     // Set range.dataValidation.rule and optionally .prompt here.
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 Дополнительные сведения см. в статье [DataValidationErrorAlert](/javascript/api/excel/excel.datavalidationerroralert).
@@ -185,20 +189,20 @@ Excel.run(function (context) {
 Вы можете создать пояснительную подсказку, которая появляется, когда пользователь наводит указатель мыши на ячейку, к которой была применена проверка данных, или выбирает ее. Ниже приведен пример.
 
 ```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var range = sheet.getRange("B2:C5");
+await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getActiveWorksheet();
+    let range = sheet.getRange("B2:C5");
 
     range.dataValidation.prompt = {
             message: "Please enter a positive whole number.",
-            showPrompt: true, // default is 'false'
+            showPrompt: true, // The default is 'false'.
             title: "Positive Whole Numbers Only."
         };
 
     // Set range.dataValidation.rule and optionally .errorAlert here.
 
-    return context.sync();
-})
+    await context.sync();
+});
 ```
 
 Дополнительные сведения см. в статье [DataValidationPrompt](/javascript/api/excel/excel.datavalidationprompt).

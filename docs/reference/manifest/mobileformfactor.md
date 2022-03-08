@@ -1,13 +1,22 @@
 ---
 title: Элемент MobileFormFactor в файле манифеста
 description: Элемент MobileFormFactor указывает параметры мобильного форм-фактора для надстройки.
-ms.date: 02/02/2022
+ms.date: 02/25/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 88ed8a351cdb2e52dab79c30315123ad33550500
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340129"
 ---
-
 # <a name="mobileformfactor-element"></a>Элемент MobileFormFactor
 
 Указывает параметры для надстройки в случае форм-фактора мобильного устройства. Содержит все сведения о надстройке для форм-фактора мобильного устройства, кроме узла **Resources**.
+
+**Каждое определение MobileFormFactor** содержит элемент **FunctionFile** и один или несколько **элементов ExtensionPoint**. Дополнительные сведения см. в [элементе FunctionFile и](functionfile.md) [элементе ExtensionPoint](extensionpoint.md).
+
+Элемент **MobileFormFactor** определен в схеме 1.1 VersionOverrides. Содержащийся элемент [VersionOverrides](versionoverrides.md) должен иметь значение `xsi:type` атрибута `VersionOverridesV1_1`.
 
 **Тип надстройки:** почтовая
 
@@ -16,10 +25,6 @@ ms.localizationpriority: medium
 - Почта 1.1
 
 Дополнительные сведения см. [в переопределениях Версии в манифесте](../../develop/add-in-manifests.md#version-overrides-in-the-manifest).
-
-**Каждое определение MobileFormFactor** содержит элемент **FunctionFile** и один или несколько **элементов ExtensionPoint**. Дополнительные сведения см. в [элементе FunctionFile и](functionfile.md) [элементе ExtensionPoint](extensionpoint.md).
-
-Элемент **MobileFormFactor** определен в схеме 1.1 VersionOverrides. Содержащийся элемент [VersionOverrides](versionoverrides.md) должен иметь значение `VersionOverridesV1_1` атрибута `xsi:type`.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
