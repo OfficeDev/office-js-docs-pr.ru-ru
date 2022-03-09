@@ -1,14 +1,14 @@
 ---
 title: Отладка настроек в Windows с использованием Visual Studio Code и Microsoft Edge WebView2 (на основе Chromium)
 description: Узнайте, как отлаживать надстройки Office, использующие Microsoft Edge WebView2 (на базе Chromium), в VS Code.
-ms.date: 02/01/2022
+ms.date: 02/18/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 90e7bef4d3902f0282a739569a87b8ca57095f50
-ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.openlocfilehash: 5e2a3622537702be48ac1653a336f6cf0f0d2485
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62467708"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340157"
 ---
 # <a name="debug-add-ins-on-windows-using-visual-studio-code-and-microsoft-edge-webview2-chromium-based"></a>Отладка настроек в Windows с использованием Visual Studio Code и Microsoft Edge WebView2 (на основе Chromium)
 
@@ -68,8 +68,7 @@ ms.locfileid: "62467708"
 
    Нажмите **ОК**.
 
-   > [!NOTE]
-   > После нажатия кнопки **Отмена** диалоговое окно не будет отображаться в процессе работы с этим экземпляром надстройки. Однако при перезапуске надстройки диалоговое окно снова появится.
+   [!INCLUDE [Cancelling the WebView Stop On Load dialog box](../includes/webview-stop-on-load-cancel-dialog.md)]
 
 1. Теперь можно задать точки останова в коде проекта и выполнить отладку. Чтобы установить точки останова в Visual Studio Code, наведите указатель мыши на строку кода выберите появившийся красный кружок.
 
@@ -132,7 +131,7 @@ ms.locfileid: "62467708"
 1. Закройте окно узла, в котором работает локальный сервер, если это окно не закроется автоматически.
 1. Закройте приложение Office, если оно не закроется автоматически.
 1. Откройте файл `\.vscode\launch.json` в проекте. 
-1. В массиве `configurations` существует несколько объектов конфигурации. Найдите объект, имя которого устроено по шаблону `$HOST$ Desktop (Edge Chromium)`, где $HOST$ — приложение Office, в котором выполняется надстройка, например, `Outlook Desktop (Edge Chromium)` или `Word Desktop (Edge Chromium)`. 
+1. В массиве `configurations` существует несколько объектов конфигурации. Найдите объект, имя которого использует шаблон `$HOST$ Desktop (Edge Chromium)`, где $HOST$ — приложение Office, в котором выполняется надстройка, например, `Outlook Desktop (Edge Chromium)` или `Word Desktop (Edge Chromium)`. 
 1. Измените значение свойства `"type"` с `"edge"` на `"pwa-msedge"`.
 1. Измените значение свойства `"useWebView"` из строки `"advanced"` на логическое значение `true` (обратите внимание, что вокруг `true` нет кавычек).
 1. Сохраните файл.

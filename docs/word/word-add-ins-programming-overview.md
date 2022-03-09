@@ -1,16 +1,16 @@
 ---
 title: Обзор надстроек Word
 description: Изучите основы надстроек Word.
-ms.date: 10/14/2020
+ms.date: 02/24/2022
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 488b009861349940c7ccc69a720139c2c3599ee1
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: d298caa78dab205740723998c1fa7ed42c821c66
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514147"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340647"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
@@ -29,13 +29,13 @@ ms.locfileid: "61514147"
 Надстройка Word может (1) отправлять запросы в документ Word и (2) обновлять, удалять или перемещать абзац, используя JavaScript для доступа к объекту paragraph. Например, в приведенном ниже коде показано, как добавить в абзац новое предложение.
 
 ```js
-Word.run(function (context) {
-    var paragraphs = context.document.getSelection().paragraphs;
+await Word.run(async (context) => {
+    const paragraphs = context.document.getSelection().paragraphs;
     paragraphs.load();
-    return context.sync().then(function () {
-        paragraphs.items[0].insertText(' New sentence in the paragraph.',
+    await context.sync();
+    paragraphs.items[0].insertText(' New sentence in the paragraph.',
                                        Word.InsertLocation.end);
-    }).then(context.sync);
+    await context.sync();
 });
 
 ```
