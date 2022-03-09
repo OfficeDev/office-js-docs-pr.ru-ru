@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: Разработайте надстройку Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 01/13/2022
+ms.date: 02/26/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: b4bbc96f03b19b0212f65f9f6688272545b4cab9
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: ad7a0332d303b7f774c394340fba303fcb3e782e
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62222186"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340878"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -54,7 +54,7 @@ ms.locfileid: "62222186"
 
 1. Откройте проект в редакторе кода.
 
-1. Откройте файл **./src/taskpane/taskpane.html**.  Этот файл содержит HTML-разметку для панели задач.
+1. Откройте файл **./src/taskpane/taskpane.html**. Этот файл содержит HTML-разметку для панели задач.
 
 1. Найдите элемент `<main>` и удалите все строки, которые появляются после открывающего тега `<main>` и перед закрывающим тегом `</main>`.
 
@@ -64,7 +64,7 @@ ms.locfileid: "62222186"
     <button class="ms-Button" id="create-table">Create Table</button><br/><br/>
     ```
 
-1. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
+1. Откройте файл **./src/taskpane/taskpane.js**, который содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
 
 1. Удалите все ссылки на кнопку`run` и функцию`run()`, выполнив следующие действия:
 
@@ -94,11 +94,11 @@ ms.locfileid: "62222186"
 
     - Метод `context.sync` отправляет все команды из очереди в Excel для выполнения.
 
-    - За методом `Excel.run` следует блок `catch`. Рекомендуется всегда следовать этой методике. 
+    - За методом `Excel.run` следует блок `catch`. Рекомендуется всегда следовать этой методике.
 
     ```js
-    function createTable() {
-        Excel.run(function (context) {
+    async function createTable() {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue table creation logic here.
 
@@ -106,7 +106,7 @@ ms.locfileid: "62222186"
 
             // TODO3: Queue commands to format the table.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -126,8 +126,8 @@ ms.locfileid: "62222186"
     - Имена таблиц должны быть уникальными в рамках всей книги, а не только одного листа.
 
     ```js
-    var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
-    var expensesTable = currentWorksheet.tables.add("A1:D1", true /*hasHeaders*/);
+    const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
+    const expensesTable = currentWorksheet.tables.add("A1:D1", true /*hasHeaders*/);
     expensesTable.name = "ExpensesTable";
     ```
 
@@ -227,13 +227,13 @@ ms.locfileid: "62222186"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function filterTable() {
-        Excel.run(function (context) {
+    async function filterTable() {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue commands to filter out all expense categories except
             //        Groceries and Education.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -251,9 +251,9 @@ ms.locfileid: "62222186"
    - Метод `applyValuesFilter` является одним из нескольких методов фильтрации объекта `Filter`.
 
     ```js
-    var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
-    var expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
-    var categoryFilter = expensesTable.columns.getItem('Category').filter;
+    const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
+    const expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
+    const categoryFilter = expensesTable.columns.getItem('Category').filter;
     categoryFilter.applyValuesFilter(['Education', 'Groceries']);
     ```
 
@@ -278,12 +278,12 @@ ms.locfileid: "62222186"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function sortTable() {
-        Excel.run(function (context) {
+    async function sortTable() {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue commands to sort the table by Merchant name.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -303,9 +303,9 @@ ms.locfileid: "62222186"
    - Элемент `sort` объекта `Table` — это объект `TableSort`, а не метод. Объекты `SortField` передаются методу `apply` объекта `TableSort`.
 
     ```js
-    var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
-    var expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
-    var sortFields = [
+    const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
+    const expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
+    const sortFields = [
         {
             key: 1,            // Merchant column
             ascending: false,
@@ -354,8 +354,8 @@ ms.locfileid: "62222186"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function createChart() {
-        Excel.run(function (context) {
+    async function createChart() {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue commands to get the range of data to be charted.
 
@@ -363,7 +363,7 @@ ms.locfileid: "62222186"
 
             // TODO3: Queue commands to position and format the chart.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -377,12 +377,12 @@ ms.locfileid: "62222186"
 1. В функции `createChart()` замените `TODO1` следующим кодом. Обратите внимание, что для исключения строки заголовков в коде вместо метода `getRange` используется метод `Table.getDataBodyRange`, чтобы получить нужный диапазон данных для диаграммы.
 
     ```js
-    var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
-    var expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
-    var dataRange = expensesTable.getDataBodyRange();
+    const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
+    const expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
+    const dataRange = expensesTable.getDataBodyRange();
     ```
 
-1. В функции `createChart()` замените `TODO2` следующим кодом. Обратите внимание на следующие параметры:
+1. В функции `createChart()` замените `TODO2` следующим кодом. Обратите внимание на следующие параметры.
 
    - Первый параметр метода `add` задает тип диаграммы. Существует несколько десятков типов.
 
@@ -391,7 +391,7 @@ ms.locfileid: "62222186"
    - Третий параметр определяет, как следует отображать на диаграмме ряд точек данных из таблицы: по строкам или по столбцам. Значение `auto` сообщает Excel, что следует выбрать оптимальный способ.
 
     ```js
-    var chart = currentWorksheet.charts.add('ColumnClustered', dataRange, 'Auto');
+    const chart = currentWorksheet.charts.add('ColumnClustered', dataRange, 'Auto');
     ```
 
 1. В функции `createChart()` замените `TODO3` следующим кодом. Большая часть этого кода не требует объяснений. Примечание.
@@ -449,12 +449,12 @@ ms.locfileid: "62222186"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function freezeHeader() {
-        Excel.run(function (context) {
+    async function freezeHeader() {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue commands to keep the header visible when the user scrolls.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -472,7 +472,7 @@ ms.locfileid: "62222186"
    - Метод `freezeRows` принимает в качестве параметра количество строк сверху, которые необходимо закрепить. Мы передаем значение `1`, чтобы закрепить первую строку.
 
     ```js
-    var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
+    const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
     currentWorksheet.freezePanes.freezeRows(1);
     ```
 
@@ -502,7 +502,7 @@ ms.locfileid: "62222186"
 
 1. Откройте файл манифеста **./manifest.xml**.
 
-1. Найдите элемент `<Control>`. Этот элемент определяет кнопку **Show Taskpane** (Показать область задач) на вкладке **Главная**, которую вы используете для запуска надстройки. Мы добавим вторую кнопку в эту же группу на ленте **Главная**. Добавьте следующий код между закрывающим тегом`</Control>` и закрывающим тегом`</Group>`.
+1. Найдите элемент `<Control>`. Этот элемент определяет кнопку **Показать область задач** на вкладке **Главная**, которую вы используете для запуска надстройки. Мы добавим вторую кнопку в эту же группу на вкладке **Главная**. Добавьте следующий текст разметки между закрывающим тегом `</Control>` и закрывающим тегом `</Group>`.
 
     ```xml
     <Control xsi:type="Button" id="<!--TODO1: Unique (in manifest) name for button -->">
@@ -528,7 +528,7 @@ ms.locfileid: "62222186"
     <Control xsi:type="Button" id="ToggleProtection">
     ```
 
-1. Следующие три `TODO`s устанавливают идентификаторы ресурсов или `resid`s. Ресурс должен быть строкой (максимальная длина — 32 символа), и вы создадите эти три строки на следующем этапе. Сейчас вам нужно присвоить идентификаторы ресурсам. Кнопка должна называться "Переключение защиты", но у строки должен быть *идентификатор* "ProtectionButtonLabel", поэтому элемент `Label` выглядит следующим образом:
+1. Следующие три объекта `TODO` устанавливают идентификаторы ресурсов, или `resid`. Ресурс должен быть строкой (максимальная длина — 32 символа), и вы создадите эти три строки на следующем этапе. Сейчас вам нужно присвоить идентификаторы ресурсам. Кнопка будет называться "Переключение защиты", но у строки должен быть *идентификатор* "ProtectionButtonLabel", поэтому элемент `Label` выглядит следующим образом:
 
     ```xml
     <Label resid="ProtectionButtonLabel" />
@@ -546,7 +546,7 @@ ms.locfileid: "62222186"
    > [!NOTE]
    > В рабочей надстройке не нужно использовать один и тот же значок для двух разных кнопок, но сейчас мы предлагаем сделать это для простоты. Поэтому код `Icon` в новом теге `Control` представляет собой лишь копию элемента `Icon` из существующего тега `Control`.
 
-1. Для элемента `Action` в исходном элементе `Control`, задан тип `ShowTaskpane`, но новая кнопка будет не открывать область задач, а выполнять специальную функцию, которую вы создадите позже. Поэтому замените `TODO5` на `ExecuteFunction` (тип действия для кнопок, запускающих специальные функции). Открывающий тег элемента `Action` должен выглядеть следующим образом:
+1. Для элемента `Action` в исходном элементе `Control` задан тип `ShowTaskpane`, но новая кнопка не будет открывать область задач. Она будет выполнять специальную функцию, которую вы создадите позже. Поэтому замените `TODO5` на `ExecuteFunction` (тип действия для кнопок, запускающих специальные функции). Открывающий тег элемента `Action` должен выглядеть следующим образом:
 
     ```xml
     <Action xsi:type="ExecuteFunction">
@@ -601,12 +601,12 @@ ms.locfileid: "62222186"
 1. Добавьте указанную ниже функцию сразу после функции `action`. Обратите внимание, что мы указываем параметр `args` для функции, а самая последняя строка функции вызывает `args.completed`. Это требование для всех команд надстройки типа **ExecuteFunction**. Это сигнализирует клиентскому приложению Office, что действие функции завершено и пользовательский интерфейс снова может отвечать на запросы.
 
     ```js
-    function toggleProtection(args) {
-        Excel.run(function (context) {
+    async function toggleProtection(args) {
+        await Excel.run(async (context) => {
 
             // TODO1: Queue commands to reverse the protection status of the current worksheet.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -627,7 +627,7 @@ ms.locfileid: "62222186"
 1. В функции `toggleProtection` замените `TODO1` следующим кодом. В этом коде используется свойство защиты объекта листа в стандартном шаблоне переключателя. Объяснение `TODO2` будет приведено в следующем разделе.
 
     ```js
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    const sheet = context.workbook.worksheets.getActiveWorksheet();
 
     // TODO2: Queue command to load the sheet's "protection.protected" property from
     //        the document and re-synchronize the document and task pane.
@@ -641,7 +641,7 @@ ms.locfileid: "62222186"
 
 ### <a name="add-code-to-fetch-document-properties-into-the-task-panes-script-objects"></a>Добавление кода для получения свойств документа в объекты скрипта области задач
 
-В каждой функции, созданной в этом руководстве до настоящего момента, вы помещаете в очередь команды на *запись* в документе Office. Каждая функция заканчивалась вызовом метода `context.sync()`, который отправляет выставленные в очередь команды документу для выполнения. При этом код, который вы добавили на последнем этапе, вызывает свойство`sheet.protection.protected property`. В этом заключается существенное отличие от ранее написанных функций, так как `sheet` является лишь объектом прокси, существующим в скрипте вашей области задач. Объект-прокси не знает о фактическом состоянии защиты документа, поэтому его свойство `protection.protected` не может иметь реального значения. Чтобы избежать возникновения ошибки, сначала нужно получить сведения о состоянии защиты от документа и задать значение `sheet.protection.protected`, используя их. Процесс получения делится на три этапа.
+В каждой функции, созданной в соответствии с этим руководством до настоящего момента, вы помещали в очередь команды на *запись* в документе Office. Каждая функция заканчивалась вызовом метода `context.sync()`, который отправляет выставленные в очередь команды документу для выполнения. При этом код, который вы добавили на последнем этапе, вызывает `sheet.protection.protected property`. В этом заключается существенное отличие от ранее написанных функций, так как `sheet` является лишь прокси-объектом, существующим в сценарии вашей области задач. Прокси-объект не знает о фактическом состоянии защиты документа, поэтому его свойство `protection.protected` не может иметь реального значения. Чтобы избежать ошибки исключения, сначала нужно получить сведения о состоянии защиты от документа и задать значение `sheet.protection.protected`, используя их. Процесс получения делится на три этапа.
 
    1. Добавление в очередь команды для загрузки (т. е. получения) свойств, которые должен прочесть ваш код.
 
@@ -655,53 +655,30 @@ ms.locfileid: "62222186"
 
    - У каждого объекта Excel есть метод `load`. Вы указываете свойства объекта, которые нужно прочесть в параметре как строку имен, разделенных запятыми. В этом случае нужно прочесть подсвойство свойства `protection`. На подсвойство нужно ссылаться почти так же, как и в остальных частях кода. Отличие заключается в том, что вместо символа "." нужно указать косую черту ("/").
 
-   - Чтобы логика переключения, которая считывает `sheet.protection.protected`, не срабатывала до выполнения `sync` и присвоения `sheet.protection.protected` правильного значения, полученного из документа, она будет перемещена (на следующем этапе) в функцию `then`, которая не выполняется до завершения `sync`.
+   - Чтобы логика переключения, которая считывает `sheet.protection.protected`, не срабатывала до выполнения `sync` и присвоения `sheet.protection.protected` правильного значения, полученного из документа, она должна использоваться после того, как оператор `await` обеспечит выполнение `sync`.
 
     ```js
     sheet.load('protection/protected');
-    return context.sync()
-        .then(
-            function() {
-                // TODO3: Move the queued toggle logic here.
-            }
-        )
-        // TODO4: Move the final call of `context.sync` here and ensure that it
-        //        does not run until the toggle logic has been queued.
-    ```
-
-1. Для двух операторов `return` не может использоваться один путь кода, который не разветвляется, поэтому удалите последнюю строку `return context.sync();` в конце `Excel.run`. Вы добавите новую последнюю строку `context.sync` позже.
-
-1. Вырежьте структуру `if ... else` в функции `toggleProtection` и вставьте вместо `TODO3`.
-
-1. Замените `TODO4` приведенным ниже кодом. Примечание:
-
-   - Благодаря тому, что метод `sync` передается функции `then`, он не будет запускаться до добавления `sheet.protection.unprotect()` или `sheet.protection.protect()` в очередь.
-
-   - Метод `then` вызывает любую функцию, которая ему передана. Не нужно вызывать `sync` дважды, поэтому уберите "()" после `context.sync`.
-
-    ```js
-    .then(context.sync);
+    await context.sync();
     ```
 
    Когда все будет готово, функция должна выглядеть так:
 
     ```js
-    function toggleProtection(args) {
-        Excel.run(function (context) {
-          var sheet = context.workbook.worksheets.getActiveWorksheet();
-          sheet.load('protection/protected');
+    async function toggleProtection(args) {
+        await Excel.run(async (context) => {
+            const sheet = context.workbook.worksheets.getActiveWorksheet();
+            sheet.load('protection/protected');
 
-          return context.sync()
-              .then(
-                  function() {
-                    if (sheet.protection.protected) {
-                        sheet.protection.unprotect();
-                    } else {
-                        sheet.protection.protect();
-                    }
-                  }
-              )
-              .then(context.sync);
+            await context.sync();
+
+            if (sheet.protection.protected) {
+                sheet.protection.unprotect();
+            } else {
+                sheet.protection.protect();
+            }
+            
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -832,7 +809,7 @@ ms.locfileid: "62222186"
 
     ```js
     function sendStringToParentPage() {
-        var userName = document.getElementById("name-box").value;
+        const userName = document.getElementById("name-box").value;
         Office.context.ui.messageParent(userName);
     }
     ```
@@ -935,7 +912,7 @@ ms.locfileid: "62222186"
 1. Добавьте следующее объявление в конец файла. Эта переменная удерживает объект в контексте выполнения родительской страницы, который служит посредником для контекста выполнения страницы диалогового окна.
 
     ```js
-    var dialog = null;
+    let dialog = null;
     ```
 
 1. Добавьте следующую функцию в конец файла (после объявления `dialog`). Важно отметить, что в этом коде *отсутствует* вызов `Excel.run`. Это связано с тем, что API, открывающий диалоговое окно, совместно используется всеми приложениями Office, поэтому относится к общему API JavaScript для Office, а не API для Excel.
