@@ -4,12 +4,12 @@ description: В этом руководстве показано создани�
 ms.date: 01/13/2022
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: 7a83eb3d8ca35c8d29cf795db1906a7f9594e2e8
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: 13378646671698dadc74cc2e1c4aada5bc2b0e6a
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62222298"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63340171"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 
@@ -53,7 +53,7 @@ ms.locfileid: "62222298"
 
 1. Откройте проект в редакторе кода.
 
-1. Откройте файл **./src/taskpane/taskpane.html**. Этот файл содержит HTML-разметку для панели задач.
+1. Откройте файл **./src/taskpane/taskpane.html**, который содержит разметку HTML для области задач.
 
 1. Найдите элемент `<main>` и удалите все строки, которые появляются после открывающего тега `<main>` и перед закрывающим тегом `</main>`.
 
@@ -63,7 +63,7 @@ ms.locfileid: "62222298"
     <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button><br/><br/>
     ```
 
-1. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
+1. Откройте файл **./src/taskpane/taskpane.js**, который содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
 
 1. Удалите все ссылки на кнопку`run` и функцию`run()`, выполнив следующие действия:
 
@@ -95,12 +95,12 @@ ms.locfileid: "62222298"
    - За методом `Word.run` следует блок `catch`. Рекомендуется всегда следовать этой методике.
 
     ```js
-    function insertParagraph() {
-        Word.run(function (context) {
+    async function insertParagraph() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to insert a paragraph into the document.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -118,7 +118,7 @@ ms.locfileid: "62222298"
    - Второй параметр — расположение в основном тексте, где будет вставлен абзац. Другие варианты вставки абзаца, родительским объектом которого является основной текст, — End и Replace.
 
     ```js
-    var docBody = context.document.body;
+    const docBody = context.document.body;
     docBody.insertParagraph("Office has several versions, including Office 2016, Microsoft 365 subscription, and Office on the web.",
                             "Start");
     ```
@@ -156,7 +156,7 @@ ms.locfileid: "62222298"
 
 1. Внесите изменение в абзац.
 
-1. Снова нажмите кнопку **Вставка абзаца**. Обратите внимание, что новый абзац появляется над предыдущим, потому что метод `insertParagraph` вставляется в начало тела документа.
+1. Снова нажмите кнопку **Вставка абзаца**. Обратите внимание: новый абзац появится над предыдущим, так как метод `insertParagraph` вставляет текст в начало основного текста документа.
 
     ![Снимок экрана: кнопка "Вставить абзац" в надстройке.](../images/word-tutorial-insert-paragraph-2.png)
 
@@ -185,12 +185,12 @@ ms.locfileid: "62222298"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function applyStyle() {
-        Word.run(function (context) {
+    async function applyStyle() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to style text.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -204,7 +204,7 @@ ms.locfileid: "62222298"
 1. В функции `applyStyle()` замените `TODO1` следующим кодом: Обратите внимание, что этот код применяет стиль к абзацу, но стили также можно применять к диапазонам текста.
 
     ```js
-    var firstParagraph = context.document.body.paragraphs.getFirst();
+    const firstParagraph = context.document.body.paragraphs.getFirst();
     firstParagraph.styleBuiltIn = Word.Style.intenseReference;
     ```
 
@@ -229,12 +229,12 @@ ms.locfileid: "62222298"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function applyCustomStyle() {
-        Word.run(function (context) {
+    async function applyCustomStyle() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to apply the custom style.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -248,7 +248,7 @@ ms.locfileid: "62222298"
 1. В функции `applyCustomStyle()` замените `TODO1` следующим кодом: Обратите внимание, что этот код применяет пользовательский стиль, который еще не существует. Мы создадим стиль с именем **MyCustomStyle** во время [тестирования настройки](#test-the-add-in-1).
 
     ```js
-    var lastParagraph = context.document.body.paragraphs.getLast();
+    const lastParagraph = context.document.body.paragraphs.getLast();
     lastParagraph.style = "MyCustomStyle";
     ```
 
@@ -275,12 +275,12 @@ ms.locfileid: "62222298"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function changeFont() {
-        Word.run(function (context) {
+    async function changeFont() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to apply a different font.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -291,10 +291,10 @@ ms.locfileid: "62222298"
     }
     ```
 
-1. В функции `changeFont()` замените `TODO1` следующим кодом: Обратите внимание, что этот код получает ссылку на второй абзац с помощью метода `ParagraphCollection.getFirst`, привязанного к методу `Paragraph.getNext`.
+1. В функции `changeFont()` замените `TODO1` на приведенный ниже код. Обратите внимание, что этот код получает ссылку на второй абзац с помощью метода `ParagraphCollection.getFirst`, привязанного к методу `Paragraph.getNext`.
 
     ```js
-    var secondParagraph = context.document.body.paragraphs.getFirst().getNext();
+    const secondParagraph = context.document.body.paragraphs.getFirst().getNext();
     secondParagraph.font.set({
             name: "Courier New",
             bold: true,
@@ -347,8 +347,8 @@ ms.locfileid: "62222298"
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function insertTextIntoRange() {
-        Word.run(function (context) {
+    async function insertTextIntoRange() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to insert text into a selected range.
 
@@ -358,7 +358,7 @@ ms.locfileid: "62222298"
             // TODO3: Queue commands to repeat the text of the original
             //        range at the end of the document.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -382,8 +382,8 @@ ms.locfileid: "62222298"
    - На одном из предыдущих этапов руководства вы могли заметить, что в методах insert* объекта body нет параметров Before и After. Это связано с тем, что содержимое невозможно добавлять за пределами основного текста документа.
 
     ```js
-    var doc = context.document;
-    var originalRange = doc.getSelection();
+    const doc = context.document;
+    const originalRange = doc.getSelection();
     originalRange.insertText(" (C2R)", "End");
     ```
 
@@ -409,45 +409,33 @@ ms.locfileid: "62222298"
   
     ```js
     originalRange.load("text");
-    return context.sync()
-        .then(function() {
-            // TODO4: Move the doc.body.insertParagraph line here.
-        })
-        // TODO5: Move the final call of context.sync here and ensure
-        //        that it does not run until the insertParagraph has
-        //        been queued.
-    ```
+    await context.sync();
 
-1. Для двух операторов `return` не может использоваться один путь кода, который не разветвляется, поэтому удалите последнюю строку `return context.sync();` в конце метода `Word.run`. Последний метод `context.sync` будет добавлен позже в этом руководстве.
+    // TODO4: Move the doc.body.insertParagraph line here.
+
+    // TODO5: Move the final call of context.sync here and ensure
+    //        that it does not run until the insertParagraph has
+    //        been queued.
+    ```
 
 1. Вырежьте строку `doc.body.insertParagraph` и вставьте ее вместо заполнителя `TODO4`.
-
-1. Замените `TODO5` на приведенный ниже код. Обратите внимание:
-
-   - Передача метода `sync` в функцию `then` гарантирует, что он не будет выполняться, пока логика `insertParagraph` не будет поставлена в очередь.
-
-   - Метод `then` вызывает функцию, которая передается ей, и вы не хотите, чтобы `sync` выводились дважды, таким образом, "()" следует опустить после context.sync.
-
-    ```js
-    .then(context.sync);
-    ```
 
 Когда все будет готово, функция должна будет выглядеть так:
 
 ```js
-function insertTextIntoRange() {
-    Word.run(function (context) {
+async function insertTextIntoRange() {
+    await Word.run(async (context) => {
 
-        var doc = context.document;
-        var originalRange = doc.getSelection();
+        const doc = context.document;
+        const originalRange = doc.getSelection();
         originalRange.insertText(" (C2R)", "End");
 
         originalRange.load("text");
-        return context.sync()
-            .then(function() {
-                doc.body.insertParagraph("Current text of original range: " + originalRange.text, "End");
-            })
-            .then(context.sync);
+        await context.sync();
+
+        doc.body.insertParagraph("Original range: " + originalRange.text, "End");
+
+        await context.sync();
     })
     .catch(function (error) {
         console.log("Error: " + error);
@@ -479,8 +467,8 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function insertTextBeforeRange() {
-        Word.run(function (context) {
+    async function insertTextBeforeRange() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to insert a new range before the
             //        selected range.
@@ -507,8 +495,8 @@ function insertTextIntoRange() {
    - Второй параметр указывает, в каком месте диапазона требуется вставить дополнительный текст. Дополнительные сведения о вариантах расположения см. выше в описании функции `insertTextIntoRange`.
 
     ```js
-    var doc = context.document;
-    var originalRange = doc.getSelection();
+    const doc = context.document;
+    const originalRange = doc.getSelection();
     originalRange.insertText("Office 2019, ", "Before");
     ```
 
@@ -516,14 +504,13 @@ function insertTextIntoRange() {
 
      ```js
     originalRange.load("text");
-    return context.sync()
-        .then(function() {
-            // TODO3: Queue commands to insert the original range as a
-            //        paragraph at the end of the document.
-        })
-        // TODO4: Make a final call of context.sync here and ensure
-        //        that it does not run until the insertParagraph has
-        //        been queued.
+    await context.sync();
+
+    // TODO3: Queue commands to insert the original range as a
+    //        paragraph at the end of the document.
+
+    // TODO4: Make a final call of context.sync here and ensure
+    //        that it runs after the insertParagraph has been queued.
     ```
 
 1. Замените `TODO3` на приведенный ниже код. Этот абзац покажет, что новый текст ***не*** входит в исходный выделенный диапазон. Исходный диапазон по-прежнему содержит такой же текст, как и когда он был выделен.
@@ -535,7 +522,7 @@ function insertTextIntoRange() {
 1. Замените `TODO4` на приведенный ниже код.
 
     ```js
-    .then(context.sync);
+    await context.sync();
     ```
 
 ### <a name="replace-the-text-of-a-range"></a>Замена текста диапазона
@@ -559,12 +546,12 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function replaceText() {
-        Word.run(function (context) {
+    async function replaceText() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to replace the text.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -578,8 +565,8 @@ function insertTextIntoRange() {
 1. В функции `replaceText()` замените `TODO1` следующим кодом: Обратите внимание, что этот метод предназначен для замены строки "several" на строку "many". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
     ```js
-    var doc = context.document;
-    var originalRange = doc.getSelection();
+    const doc = context.document;
+    const originalRange = doc.getSelection();
     originalRange.insertText("many", "Replace");
     ```
 
@@ -651,12 +638,12 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function insertImage() {
-        Word.run(function (context) {
+    async function insertImage() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to insert an image.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -694,12 +681,12 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function insertHTML() {
-        Word.run(function (context) {
+    async function insertHTML() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to insert a string of HTML.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -717,7 +704,7 @@ function insertTextIntoRange() {
    - Вторая команда вставляет строку HTML-кода в конце абзаца. В частности, вставляются два абзаца, в одном из которых используется шрифт Verdana, а в другом — стандартный стиль документа Word. Как видно по вышеописанному методу `insertImage`, у объекта `context.document.body` также есть методы `insert*`.
 
     ```js
-    var blankParagraph = context.document.body.paragraphs.getLast().insertParagraph("", "After");
+    const blankParagraph = context.document.body.paragraphs.getLast().insertParagraph("", "After");
     blankParagraph.insertHtml('<p style="font-family: verdana;">Inserted HTML.</p><p>Another paragraph</p>', "End");
     ```
 
@@ -742,15 +729,15 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function insertTable() {
-        Word.run(function (context) {
+    async function insertTable() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to get a reference to the paragraph
             //        that will proceed the table.
 
             // TODO2: Queue commands to create a table and populate it with data.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -761,10 +748,10 @@ function insertTextIntoRange() {
     }
     ```
 
-1. В функции `insertTable()` замените `TODO1` следующим кодом: Обратите внимание, что в этой строке используется метод `ParagraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
+1. В функции `insertTable()` замените `TODO1` на приведенный ниже код. Обратите внимание, что в этой строке используется метод `ParagraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
 
     ```js
-    var secondParagraph = context.document.body.paragraphs.getFirst().getNext();
+    const secondParagraph = context.document.body.paragraphs.getFirst().getNext();
     ```
 
 1. В функции `insertTable()` замените `TODO2` указанным ниже кодом. Примечание.
@@ -778,7 +765,7 @@ function insertTextIntoRange() {
    - К таблице применяется простой стиль по умолчанию, но метод `insertTable` возвращает объект `Table` со множеством элементов, некоторые из которых используются для настройки стиля таблицы.
 
     ```js
-    var tableData = [
+    const tableData = [
             ["Name", "ID", "Birth City"],
             ["Bob", "434", "Chicago"],
             ["Sue", "719", "Havana"],
@@ -834,12 +821,12 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function createContentControl() {
-        Word.run(function (context) {
+    async function createContentControl() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to create a content control.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -863,8 +850,8 @@ function insertTextIntoRange() {
    - Свойство `ContentControl.color` задает цвет тегов или рамки ограничивающего прямоугольника.
 
     ```js
-    var serviceNameRange = context.document.getSelection();
-    var serviceNameContentControl = serviceNameRange.insertContentControl();
+    const serviceNameRange = context.document.getSelection();
+    const serviceNameContentControl = serviceNameRange.insertContentControl();
     serviceNameContentControl.title = "Service Name";
     serviceNameContentControl.tag = "serviceName";
     serviceNameContentControl.appearance = "Tags";
@@ -892,13 +879,13 @@ function insertTextIntoRange() {
 1. Добавьте указанную ниже функцию в конец файла.
 
     ```js
-    function replaceContentInControl() {
-        Word.run(function (context) {
+    async function replaceContentInControl() {
+        await Word.run(async (context) => {
 
             // TODO1: Queue commands to replace the text in the Service Name
             //        content control.
 
-            return context.sync();
+            await context.sync();
         })
         .catch(function (error) {
             console.log("Error: " + error);
@@ -914,7 +901,7 @@ function insertTextIntoRange() {
     - Метод `ContentControlCollection.getByTag` возвращает значение `ContentControlCollection` для всех элементов управления контентом указанного тега. Чтобы получить ссылку на нужный элемент управления, используйте `getFirst`.
 
     ```js
-    var serviceNameContentControl = context.document.contentControls.getByTag("serviceName").getFirst();
+    const serviceNameContentControl = context.document.contentControls.getByTag("serviceName").getFirst();
     serviceNameContentControl.insertText("Fabrikam Online Productivity Suite", "Replace");
     ```
 
