@@ -1331,6 +1331,9 @@ items:
           - name: Чтение и запись данных в активное выделение
             href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
             displayName: Word
+          - name: Значения NULL
+            href: word/null-values.md
+            displayName: Word
           - name: Поиск текста в надстройке Word
             href: word/search-option-guidance.md
             displayName: Word
