@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office с помощью Visual Studio Code
 description: Как разрабатывать надстройки Office с помощью Visual Studio Code.
-ms.date: 10/14/2020
+ms.date: 02/18/2022
 ms.localizationpriority: high
-ms.openlocfilehash: cca8ad4e07e08553841f4cef5699ee0312d7ccde
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 6710884a9bc751e6a94607581223dabaea0bce3b
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150698"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63511289"
 ---
 # <a name="develop-office-add-ins-with-visual-studio-code"></a>Разработка надстроек Office с помощью Visual Studio Code
 
@@ -25,16 +25,15 @@ ms.locfileid: "59150698"
 
 ## <a name="create-the-add-in-project-using-the-yeoman-generator"></a>Создание проекта надстройки с помощью генератора Yeoman
 
-Если вы используете VS Code в качестве интегрированной среды разработки (IDE), следует создать проект надстройки Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Генератор Yeoman создает проект Node.js, которым можно управлять с помощью VS Code или любого другого редактора. 
+Если вы используете VS Code в качестве интегрированной среды разработки (IDE), следует создать проект надстройки Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Генератор Yeoman создает проект Node.js, которым можно управлять с помощью VS Code или любого другого редактора.
 
 Чтобы создать надстройку Office с помощью генератора Yeoman, следуйте указаниям из [5-минутного краткого руководства](../index.yml), соответствующего типу надстройки, которую нужно создать.
 
 ## <a name="develop-the-add-in-using-vs-code"></a>Разработка надстройки с помощью VS Code
 
-Когда генератор Yeoman закончит создание проекта надстройки, откройте корневую папку проекта с помощью VS Code. 
+Когда генератор Yeoman закончит создание проекта надстройки, откройте корневую папку проекта с помощью VS Code.
 
-> [!TIP]
-> В Windows вы можете перейти в корневой каталог проекта с помощью командной строки и ввести `code .`, чтобы открыть эту папку в VS Code. На компьютере Mac потребуется [добавить в путь команду `code`](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) перед использованием этой команды для открытия папки проекта в VS Code.
+[!INCLUDE [Instructions for opening add-in project in VS Code via command line](../includes/vs-code-open-project-via-command-line.md)]
 
 Генератор Yeoman создает простую надстройку с ограниченными возможностями. Вы можете настроить надстройку, изменив файлы [манифеста](add-in-manifests.md), HTML, JavaScript, TypeScript или CSS в VS Code. Общее описание структуры проекта и файлов в проекте надстройки, созданном генератором Yeoman, см. в рекомендациях по генератору Yeoman в [5-минутном кратком руководстве](../index.yml), соответствующем типу созданной надстройки.
 

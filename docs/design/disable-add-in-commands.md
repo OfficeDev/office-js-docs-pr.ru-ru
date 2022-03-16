@@ -1,14 +1,14 @@
 ---
 title: Включение и отключение команд надстроек
 description: Узнайте, как изменить состояние ("Включено" или "Отключено") настраиваемых кнопок ленты и элементов меню в веб-надстройке Office.
-ms.date: 02/11/2022
+ms.date: 03/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 61ee45e606b8b8981550cab7439eb526ec641ac9
-ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
+ms.openlocfilehash: 2a2f2521b47a304fb358a33068bcccb425fd1a64
+ms.sourcegitcommit: 856f057a8c9b937bfb37e7d81a6b71dbed4b8ff4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62855564"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63511344"
 ---
 # <a name="enable-and-disable-add-in-commands"></a>Включение и отключение команд надстроек
 
@@ -23,16 +23,16 @@ ms.locfileid: "62855564"
 
 ## <a name="office-application-and-platform-support-only"></a>Office только для приложений и платформ
 
-API, описанные в этой статье, доступны только в Excel на всех платформах и в PowerPoint в Интернете.
+API, описанные в этой статье, доступны только в Excel, PowerPoint и Word.
 
 ### <a name="test-for-platform-support-with-requirement-sets"></a>Тестирование поддержки платформ с использованием наборов обязательных элементов
 
-Наборы требований — это именованные группы элементов API. Office надстройки используют наборы требований, указанные в манифесте, или используйте проверку времени запуска, чтобы определить, поддерживает ли сочетание приложений Office платформы API, которые необходимы надстройки. Дополнительные сведения см. [в Office версиях и наборах требований](../develop/office-versions-and-requirement-sets.md).
+Наборы требований — это именованные группы элементов API. Office надстройки используют наборы требований, указанные в манифесте, или используйте проверку времени запуска, чтобы определить, поддерживает ли сочетание приложений Office платформы API, необходимые надстройки. Дополнительные сведения см. [в Office версиях и наборах требований](../develop/office-versions-and-requirement-sets.md).
 
 API enable/disable относятся к набору требований [RibbonApi 1.1](../reference/requirement-sets/ribbon-api-requirement-sets.md) .
 
 > [!NOTE]
-> Набор **требований RibbonApi 1.1** еще не поддерживается в манифесте, поэтому его нельзя указать в разделе **Требования манифеста** . Чтобы проверить поддержку, код должен вызвать `Office.context.requirements.isSetSupported('RibbonApi', '1.1')`. Если и *только в том* случае, если этот вызов возвращается `true`, код может вызывать API- включить или отключить. Если вызов возвращается `isSetSupported` `false`, все настраиваемые команды надстройки включены все время. Необходимо разработать производственную надстройка и все инструкции в приложении, чтобы учитывать, как она будет работать, если набор требований **RibbonApi 1.1** не поддерживается. Дополнительные сведения и `isSetSupported`примеры использования см. в Office приложениях и требованиях [API, особенно](../develop/specify-office-hosts-and-api-requirements.md) проверках времени запуска для поддержки набора [методов и требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). (В разделе [Укажите](../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in), какие Office и платформы могут вмещая надстройка этой статьи, не применяется к Ленте 1.1.)
+> Набор **требований RibbonApi 1.1** еще не поддерживается в манифесте, поэтому его нельзя указать в разделе **Требования манифеста** . Чтобы проверить поддержку, код должен вызвать `Office.context.requirements.isSetSupported('RibbonApi', '1.1')`. Если и *только в том* случае, если этот вызов возвращается `true`, код может вызывать API- включить или отключить. Если вызов возвращается `isSetSupported` `false`, все настраиваемые команды надстройки включены все время. Необходимо разработать производственную надстройка и все инструкции в приложении, чтобы учитывать, как она будет работать, если набор требований **RibbonApi 1.1** не поддерживается. Дополнительные сведения `isSetSupported`и примеры использования см. в Office приложениях и требованиях [API, особенно](../develop/specify-office-hosts-and-api-requirements.md) проверках времени запуска для поддержки набора [методов и требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). (Раздел [Укажите, какие Office](../develop/specify-office-hosts-and-api-requirements.md#specify-which-office-versions-and-platforms-can-host-your-add-in) и платформы могут вмещая надстройки этой статьи, не применяется к Ленте 1.1.)
 
 ## <a name="shared-runtime-required"></a>Необходима общая среда выполнения
 

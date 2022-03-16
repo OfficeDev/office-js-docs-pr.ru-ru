@@ -1,13 +1,18 @@
 ---
-title: Outlook набор требований к предварительному просмотру API надстройки
-description: 'Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.'
-ms.date: 11/01/2021
+title: Outlook API предварительного просмотра надстройки
+description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
+ms.date: 03/15/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: 714be93351ff67ad49cd07154f145f19949efa68
+ms.sourcegitcommit: 856f057a8c9b937bfb37e7d81a6b71dbed4b8ff4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63511274"
 ---
+# <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook API предварительного просмотра надстройки
 
-# <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
-
-Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
+Подмножество API Outlook надстройки в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!IMPORTANT]
 > Эта документация относится к **предварительной версии** [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки.
@@ -29,7 +34,7 @@ ms.localizationpriority: medium
 
 Надстройки теперь могут активироваться в пунктах, защищенных IRM. Чтобы включить эту возможность, `OBJMODEL` администратору клиента необходимо включить право использования, установив в Office параметр **Разрешить** программный доступ. [Дополнительные сведения см. в дополнительных сведениях о](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) правах и описаниях использования.
 
-**Доступно в**: Outlook на Windows, начиная с сборки 13229.10000 (подключен к подписке Microsoft 365)
+**Доступно в**: Outlook на Windows, начиная со сборки 13229.10000 (подключен к подписке Microsoft 365)
 
 <br>
 
@@ -98,6 +103,12 @@ ms.localizationpriority: medium
 ### <a name="event-based-activation"></a>Активация на основе событий
 
 Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные ссылки на [поддерживаемые события](../../../outlook/autolaunch.md#supported-events).
+
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
+
+#### <a name="officeaddincommandseventcompletedoptionserrormessage"></a>[Office. AddinCommands.EventCompletedOptions.errorMessage](/javascript/api/office/office.addincommands.eventcompletedoptions?view=outlook-js-preview&preserve-view=true#office-office-addincommands-eventcompletedoptions-errormessage-member)
+
+Добавлено новое свойство для отображения сообщения об ошибке пользователю, если обработанное событие не может продолжать выполняться. Например, обратитесь к [погонам Smart Alerts](../../../outlook/smart-alerts-onmessagesend-walkthrough.md).
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
 

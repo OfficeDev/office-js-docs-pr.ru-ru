@@ -4,12 +4,12 @@ description: Разработайте надстройку Excel, которая
 ms.date: 02/26/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: ad7a0332d303b7f774c394340fba303fcb3e782e
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: f8d21b0003f24b1b216e0e6823d1962778e18223
+ms.sourcegitcommit: 3d7792b1f042db589edb74a895fcf6d7ced63903
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340878"
+ms.lasthandoff: 03/11/2022
+ms.locfileid: "63511304"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -30,6 +30,11 @@ ms.locfileid: "63340878"
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
+
+- Пакет Office, подключенный к подписке Microsoft 365 (включая Office в Интернете).
+
+    > [!NOTE]
+    > Если у вас еще нет Office, вы можете [присоединиться к программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program), чтобы получить бесплатную 90-дневную возобновляемую подписку на Microsoft 365 для использования в процессе разработки.
 
 ## <a name="create-your-add-in-project"></a>Создание проекта надстройки
 
@@ -95,6 +100,8 @@ ms.locfileid: "63340878"
     - Метод `context.sync` отправляет все команды из очереди в Excel для выполнения.
 
     - За методом `Excel.run` следует блок `catch`. Рекомендуется всегда следовать этой методике.
+
+    [!include[Information about the use of ES6 JavaScript](../includes/modern-js-note.md)]
 
     ```js
     async function createTable() {

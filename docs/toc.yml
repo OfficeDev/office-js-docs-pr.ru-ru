@@ -115,6 +115,8 @@ items:
                 href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
               - name: ITP и сторонние файлы cookie
                 href: develop/itp-and-third-party-cookies.md
+              - name: 'Обход ограничений, связанных с политикой единого домена'
+                href: develop/addressing-same-origin-policy-limitations.md
           - name: Проверка подлинности и авторизация
             items:
               - name: Обзор
@@ -554,8 +556,6 @@ items:
                     href: reference/manifest/supportssharedfolders.md
                   - name: WebApplicationInfo
                     href: reference/manifest/webapplicationinfo.md
-          - name: 'Обход ограничений, связанных с политикой единого домена'
-            href: develop/addressing-same-origin-policy-limitations.md
           - name: 'Браузеры, используемые надстройками Office'
             href: concepts/browsers-used-by-office-web-add-ins.md
             displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'

@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов для команд надстроек
 description: Обзор Office наборов команд надстройки.
-ms.date: 02/15/2022
+ms.date: 03/12/2022
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: e35a36c10f9ca275d5dd969a3592df42a5e1000a
-ms.sourcegitcommit: 789545a81bd61ec2e7adef2bc24c06b5be113b00
+ms.openlocfilehash: fe0f3d7849886fa9d58b1fd2508f5de5bf97b488
+ms.sourcegitcommit: 856f057a8c9b937bfb37e7d81a6b71dbed4b8ff4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62892547"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63511373"
 ---
 # <a name="add-in-commands-requirement-sets"></a>Наборы обязательных элементов для команд надстроек
 
@@ -34,15 +34,12 @@ ms.locfileid: "62892547"
 
 |  Набор обязательных элементов  |  Office 2013 для Windows<br>(единовременная покупка) | Office 2016 для Windows<br>(единовременная покупка) | Office 2019 для Windows<br>(единовременная покупка) |  Office 2021 для Windows<br>(единовременная покупка) | Office для Windows<br>(подписка)   |  Office для iPad<br>(подписка)  |  Office для Mac<br>(обе подписки<br> и разовая покупка Office Mac 2019 и более поздних периодов)   | Office в Интернете  |  
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| AddinCommands 1.3  | Н/Д | Н/Д | Н/Д | Н/Д | Не поддерживается | Н/Д | Не поддерживается | Ноябрь 2020 г. |
+| AddinCommands 1.3  | Н/Д | Н/Д | Н/Д | Н/Д | Версия 2204 (сборка 14827.10000) или более поздней версии | Н/Д | 16.57.105.0 или более поздней | Ноябрь 2020 г. |
 | AddInCommands 1.1  | Н/Д | Н/Д  | Версия 1809 (сборка 10827.20150) или более поздняя&dagger; | 16.0.14326.20454 или более поздней&dagger; | Версия 1705 (сборка 8121.1000) или более поздняя&dagger; | Н/Д | 15.34 или более поздней&dagger;\*| Май 2017 г. |
 
 \*Метод [Office.context.requirements.isSetSupported](/javascript/api/office/office.requirementsetsupport#office-office-requirementsetsupport-issetsupported-member(1)) ошибочно возвращает значение `false` для версий 16.9&ndash;16.14 (включительно), но набор обязательных элементов *поддерживается* в этих версиях.
 
 &dagger;OneNote поддерживается только в Office в Интернете.
-
-> [!IMPORTANT]
-> AddinCommands 1.3 находится в предварительной версии и доступна только в *PowerPoint в Интернете*. Рекомендуется попробовать разметку только в тестовых средах и средах разработки. Не используйте разметку предварительного просмотра в производственной среде или в критически важных для бизнеса документах.
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 

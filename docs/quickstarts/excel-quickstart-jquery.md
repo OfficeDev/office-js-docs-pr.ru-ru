@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 02/25/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 1a4639aaa49ed06acb3f24bbd8cb132577670bae
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: bd503b9f51bb4c97bc8d0cfa144d448bb4ea649d
+ms.sourcegitcommit: 3d7792b1f042db589edb74a895fcf6d7ced63903
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63341025"
+ms.lasthandoff: 03/11/2022
+ms.locfileid: "63511386"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -23,7 +23,7 @@ ms.locfileid: "63341025"
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Необходимые условия
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
@@ -116,6 +116,8 @@ ms.locfileid: "63341025"
     ```
 
 2. Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+
+    [!include[Information about the use of ES6 JavaScript](../includes/modern-js-note.md)]
 
     ```js
     'use strict';

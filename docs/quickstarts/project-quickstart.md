@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: Узнайте, как создать простую надстройку для области задач Project, используя API JS для Office.
-ms.date: 08/04/2021
+ms.date: 01/06/2022
 ms.prod: project
 ms.localizationpriority: high
-ms.openlocfilehash: cb291a76a97c6cf3c7d816c7c2019337132aecc8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 9c80769d0116186c574b6e4fa86e89eadfadc410
+ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153950"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "63511369"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -98,8 +98,7 @@ Office.context.document.getSelectedTaskAsync(
 
 1. Запустите локальный веб-сервер.
 
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.
+    [!INCLUDE [alert use https](../includes/alert-use-https.md)]
 
     Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер.
 

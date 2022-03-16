@@ -4,16 +4,14 @@ description: Узнайте, как создать простую надстро
 ms.date: 02/23/2022
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: b79ace7495d782cd245c26a5167add46eb668ab9
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 0c6a12cc84f35ceb04e26df8be4635bddd42ca04
+ms.sourcegitcommit: 3d7792b1f042db589edb74a895fcf6d7ced63903
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340451"
+ms.lasthandoff: 03/11/2022
+ms.locfileid: "63511334"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
-
-_Область применения: Word 2016 и более поздних версий для Windows, а также Word для iPad и Word для Mac_
 
 В этой статье вы ознакомитесь с процессом создания надстройки для области задач Word.
 
@@ -25,7 +23,7 @@ _Область применения: Word 2016 и более поздних в�
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
-### <a name="prerequisites"></a>Необходимые компоненты
+### <a name="prerequisites"></a>Необходимые условия
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
@@ -139,6 +137,8 @@ _Область применения: Word 2016 и более поздних в�
     ```
 
 2. Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+
+    [!include[Information about the use of ES6 JavaScript](../includes/modern-js-note.md)]
 
     ```js
     'use strict';
