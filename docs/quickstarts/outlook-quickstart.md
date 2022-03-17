@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 08/04/2021
+ms.date: 02/28/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 51ec95f49ef89f21aaf6a776115f8754c4a87c78
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 356373320919507b81c69cca323965c4d087c7d4
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154482"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63511395"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -21,20 +21,15 @@ ms.locfileid: "59154482"
 
 # <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
-### <a name="prerequisites"></a>Необходимые компоненты
+### <a name="prerequisites"></a>Необходимые условия
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 
-- [Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))
+[!INCLUDE [Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
+- [Visual Studio Code (VS Code)](https://code.visualstudio.com/) или используемый вами редактор кода
 
-    ```command&nbsp;line
-    npm install -g yo generator-office
-    ```
-
-    > [!NOTE]
-    > Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.
+- Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Microsoft 365) или Outlook в Интернете
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -71,7 +66,10 @@ ms.locfileid: "59154482"
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. Откройте в редакторе кода файл **./src/taskpane/taskpane.html** и замените весь элемент `<main>` (внутри элемента `<body>`) приведенной ниже разметкой. Эта новая разметка добавляет метку в том месте, где скрипт **./src/taskpane/taskpane.js** запишет данные.
+1. Откройте проект в VS Code или используемом вами редакторе кода.
+   [!INCLUDE [Instructions for opening add-in project in VS Code via command line](../includes/vs-code-open-project-via-command-line.md)]
+
+1. Откройте файл **./src/taskpane/taskpane.html** и замените весь элемент **\<main\>** (внутри элемента **\<body\>**) приведенной ниже разметкой. Эта новая разметка добавляет метку в том месте, где скрипт **./src/taskpane/taskpane.js** запишет данные.
 
     ```html
     <main id="app-body" class="ms-welcome__main" style="display: none;">
@@ -83,7 +81,7 @@ ms.locfileid: "59154482"
     </main>
     ```
 
-1. Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`. В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи его свойства `subject` в область задач.
+1. Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**. В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи значения его свойства **subject** в область задач.
 
     ```js
     // Get a reference to the current message
@@ -95,16 +93,13 @@ ms.locfileid: "59154482"
 
 ### <a name="try-it-out"></a>Проверка
 
-> [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman. Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.
+[!INCLUDE [alert use https](../includes/alert-use-https.md)]
 
-1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен) и будет загружена ваша неопубликованная надстройка.
+1. Выполните указанную ниже команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер и будет [загружена неопубликованная](../outlook/sideload-outlook-add-ins-for-testing.md) надстройка.
 
     ```command&nbsp;line
     npm start
     ```
-
-1. Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
 
 1. В Outlook просмотрите сообщение в [области чтения](https://support.microsoft.com/office/2fd687ed-7fc4-4ae3-8eab-9f9b8c6d53f0) или откройте сообщение в отдельном окне.
 
@@ -114,6 +109,10 @@ ms.locfileid: "59154482"
 
     > [!NOTE]
     > Если сообщение об ошибке "Не удается открыть эту надстройку с localhost" появляется в области задач, выполните действия, описанные в [статье по устранению неполадок](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).
+
+1. При появлении запроса с диалоговым окном **Остановка при загрузке веб-представления** выберите **ОК**.
+
+    [!INCLUDE [Cancelling the WebView Stop On Load dialog box](../includes/webview-stop-on-load-cancel-dialog.md)]
 
 1. Прокрутите область задачи в самый низ и перейдите по ссылке **Выполнить**, чтобы написать тему сообщения в области задач.
 
@@ -147,7 +146,7 @@ ms.locfileid: "59154482"
 
 1. Укажите имя проекта и нажмите кнопку **ОК**.
 
-1. Visual Studio создаст решение, и два соответствующих проекта появятся в **обозревателе решений**. Файл **MessageRead.html** откроется в Visual Studio.
+1. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **MessageRead.html**.
 
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
@@ -160,7 +159,7 @@ ms.locfileid: "59154482"
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. Файл **MessageRead.html** содержит HTML-контент, который будет отображаться в области задач надстройки. Замените элемент `<body>` в **MessageRead.html** приведенной ниже частью кода и сохраните файл.
+1. Файл **MessageRead.html** содержит HTML-контент, который будет отображаться в области задач надстройки. Замените элемент **\<body\>** в **MessageRead.html** приведенной ниже частью кода и сохраните файл.
  
     ```HTML
     <body class="ms-font-m ms-welcome">
@@ -245,11 +244,11 @@ ms.locfileid: "59154482"
 
 1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
 
-1. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+1. Элемент **ProviderName** содержит заполнитель. Замените его на свое имя.
 
-1. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на текст `My Office Add-in`.
+1. Атрибут **DefaultValue** элемента **DisplayName** содержит заполнитель. Замените его на текст `My Office Add-in`.
 
-1. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на текст `My First Outlook add-in`.
+1. Атрибут **DefaultValue** элемента **Description** содержит заполнитель. Замените его на строку `My First Outlook add-in`.
 
 1. Сохраните файл.
 

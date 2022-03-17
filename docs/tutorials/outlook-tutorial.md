@@ -1,11 +1,16 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
-description: 'В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.'
-ms.date: 01/06/2022
+description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
+ms.date: 02/23/2022
 ms.prod: outlook
 ms.localizationpriority: high
+ms.openlocfilehash: 987084c16f3e8f1af1809866ac248b4f1a4995b0
+ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63511381"
 ---
-
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
 В этом руководстве разъясняется, как выполнить сборку надстройки Outlook, которую можно использовать в режиме создания сообщения для вставки содержимого в его текст.
@@ -20,18 +25,11 @@ ms.localizationpriority: high
 > - Реализация кнопки без пользовательского интерфейса, вызывающей функцию
 > - Реализация области задач, вставляющей содержимое в текст сообщения
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Необходимые условия
 
-- [Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))
+[!INCLUDE [Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
-
-    ```command&nbsp;line
-    npm install -g yo generator-office
-    ```
-
-    > [!NOTE]
-    > Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.
+- [Visual Studio Code (VS Code)](https://code.visualstudio.com/) или используемый вами редактор кода
 
 - Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Microsoft 365) или Outlook в Интернете
 
@@ -119,7 +117,7 @@ ms.localizationpriority: high
 
 1. Эта надстройка будет использовать указанные ниже библиотеки.
 
-    - Библиотека [Showdown](https://github.com/showdownjs/showdown) для преобразования Markdown в HTML
+    - Библиотека [Showdown](https://github.com/showdownjs/showdown) для преобразования Markdown в HTML.
     - Библиотека [URI.js](https://github.com/medialize/URI.js) для создания относительных URL-адресов.
     - Библиотеки [jquery](https://jquery.com/) для упрощения взаимодействий DOM.
 
@@ -129,6 +127,10 @@ ms.localizationpriority: high
     npm install showdown urijs jquery --save
     ```
 
+1. Откройте проект в VS Code или используемом вами редакторе кода.
+
+    [!INCLUDE [Instructions for opening add-in project in VS Code via command line](../includes/vs-code-open-project-via-command-line.md)]
+
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
 Манифест надстройки управляет ее отображением в Outlook. Он определяет, как надстройка отображается в списке, а также задает кнопки на ленте и URL-адреса файлов HTML и JavaScript, используемых надстройкой.
@@ -137,13 +139,13 @@ ms.localizationpriority: high
 
 Внесите следующие изменения в файл **manifest.xml**, чтобы указать некоторые основные сведения о надстройке.
 
-1. Найдите элемент `ProviderName` и замените значение по умолчанию на название вашей компании.
+1. Найдите элемент **ProviderName** и замените значение по умолчанию на название вашей компании.
 
     ```xml
     <ProviderName>Contoso</ProviderName>
     ```
 
-1. Найдите элемент `Description`, замените значение по умолчанию на описание надстройки и сохраните файл.
+1. Найдите элемент **Description**, замените значение по умолчанию на описание надстройки и сохраните файл.
 
     ```xml
     <Description DefaultValue="Allows users to access their GitHub gists."/>
@@ -161,7 +163,13 @@ ms.localizationpriority: high
     npm start
     ```
 
-1. Откройте в Outlook существующее сообщение и нажмите кнопку **Показать область задач**. Если настройка выполнена правильно, откроется область задач и отобразится страница приветствия надстройки.
+1. Откройте в Outlook существующее сообщение и нажмите кнопку **Показать область задач**.
+
+1. При появлении запроса с диалоговым окном **Остановка при загрузке веб-представления** выберите **ОК**.
+
+    [!INCLUDE [Cancelling the WebView Stop On Load dialog box](../includes/webview-stop-on-load-cancel-dialog.md)]
+
+    Если настройка выполнена правильно, откроется область задач и отобразится страница приветствия надстройки.
 
     ![Снимок экрана с кнопкой "Показать область задач" и областью задач Git the gist, добавленной после выполнения примера.](../images/button-and-pane.png)
 
@@ -175,21 +183,21 @@ ms.localizationpriority: high
 
 ### <a name="remove-the-messagereadcommandsurface-extension-point"></a>Удаление точки расширения MessageReadCommandSurface
 
-Откройте файл **manifest.xml** и найдите элемент `ExtensionPoint` с типом `MessageReadCommandSurface`. Удалите этот элемент `ExtensionPoint` (включая его закрывающий тег), чтобы удалить кнопки из окна чтения сообщения.
+Откройте файл **manifest.xml** и найдите элемент **ExtensionPoint** типа **MessageReadCommandSurface**. Удалите этот элемент **ExtensionPoint** (включая его закрывающий тег), чтобы удалить кнопки из окна чтения сообщения.
 
 ### <a name="add-the-messagecomposecommandsurface-extension-point"></a>Добавление точки расширения MessageComposeCommandSurface
 
 Найдите в манифесте строку `</DesktopFormFactor>`. Непосредственно перед ней вставьте приведенную ниже разметку XML. Обратите внимание на следующие особенности этой разметки.
 
-- `ExtensionPoint` с `xsi:type="MessageComposeCommandSurface"` означает, что вы определяете кнопки для добавления окна составления сообщений.
+- **ExtensionPoint** с `xsi:type="MessageComposeCommandSurface"` означает, что вы определяете кнопки для добавления в окно создания сообщений.
 
-- С помощью элемента `OfficeTab` с параметром `id="TabDefault"` вы указываете, что нужно добавить кнопки на вкладку ленты по умолчанию.
+- С помощью элемента **OfficeTab** с параметром `id="TabDefault"` вы указываете, что нужно добавить кнопки на вкладку ленты по умолчанию.
 
-- Элемент `Group` определяет группу новых кнопок, а ресурс `groupLabel` задает подпись группы.
+- Элемент **Group** определяет группу новых кнопок, а ресурс **groupLabel** задает подпись группы.
 
-- Первый элемент `Control` содержит элемент `Action` с параметром `xsi:type="ShowTaskPane"`, поэтому эта кнопка открывает область задач.
+- Первый элемент **Control** содержит элемент **Action** с параметром `xsi:type="ShowTaskPane"`, поэтому эта кнопка открывает область задач.
 
-- Второй элемент `Control` содержит элемент `Action` с параметром `xsi:type="ExecuteFunction"`, поэтому кнопка вызывает функцию JavaScript, содержащуюся в файле функций.
+- Второй элемент **Control** содержит элемент **Action** с параметром `xsi:type="ExecuteFunction"`, поэтому кнопка вызывает функцию JavaScript, содержащуюся в файле функций.
 
 ```xml
 <!-- Message Compose -->
@@ -234,11 +242,11 @@ ms.localizationpriority: high
 
 ### <a name="update-resources-in-the-manifest"></a>Обновление ресурсов в манифесте
 
-Приведенный выше код ссылается на подписи, подсказки и URL-адреса, которые необходимо определить, чтобы манифест был действительным. Вам нужно указать эту информацию в разделе `Resources` манифеста.
+Приведенный выше код ссылается на подписи, подсказки и URL-адреса, которые необходимо определить, чтобы манифест был действительным. Вам нужно указать эту информацию в разделе **Resources** манифеста.
 
-1. Найдите элемент `Resources` в файле манифеста и удалите весь элемент (включая его закрывающий тег).
+1. Найдите элемент **Resources** в файле манифеста и удалите весь элемент (включая его закрывающий тег).
 
-1. Добавьте в то же местоположение следующую разметку, чтобы заменить только что удаленный элемент `Resources`.
+1. Добавьте в то же местоположение следующую разметку, чтобы заменить только что удаленный элемент **Resources**.
 
     ```xml
     <Resources>
@@ -269,15 +277,15 @@ ms.localizationpriority: high
 
 ### <a name="reinstall-the-add-in"></a>Переустановка надстройки
 
-Так как вы ранее установили надстройку из файла, необходимо переустановить ее, чтобы изменения манифеста вступили в силу.
+Чтобы изменения манифеста вступили в силу, переустановите надстройку.
 
-1. Следуйте указаниям по удалению **Git the gist** из [загруженных неопубликованных надстроек](../outlook/sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in).
+1. Если веб-сервер работает, закройте окно команды узла.
 
-1. Закройте окно **Мои надстройки**.
+1. Выполните указанные ниже команды, чтобы запустить локальный веб-сервер и автоматически загрузить неопубликованную надстройку.
 
-1. Пользовательская кнопка должна моментально исчезнуть с ленты.
-
-1. Следуйте инструкциям в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы переустановить надстройку с помощью обновленного файла **manifest.xml**.
+    ```command&nbsp;line
+    npm start
+    ```
 
 После повторной установки надстройки можно убедиться, что она установлена успешно, проверив команды **Insert gist** и **Insert default gist** в окне составления сообщений. Обратите внимание, что при выборе этих двух элементов ничего не происходит, так как вы еще не закончили создание этой надстройки.
 
@@ -360,7 +368,6 @@ ms.localizationpriority: high
       </div>
     </section>
   </main>
-  <script type="text/javascript" src="../../node_modules/core-js/client/core.js"></script>
   <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="../helpers/gist-api.js"></script>
   <script type="text/javascript" src="dialog.js"></script>
@@ -368,6 +375,8 @@ ms.localizationpriority: high
 
 </html>
 ```
+
+Вы могли заметить, что HTML-файл ссылается на файл JavaScript **gist-api.js**, который еще не существует. Этот файл будет создан в разделе [Получение данных из GitHub](#fetch-data-from-github) ниже.
 
 Затем создайте в папке **./src/settings** файл с именем **dialog.css** и добавьте приведенный ниже код, чтобы указать стили, используемые файлом **dialog.html**.
 
@@ -404,7 +413,7 @@ ul {
 }
 ```
 
-Теперь, после определения пользовательского интерфейса диалогового окна, можно написать код для выполнения в нем действий. Создайте в папке **./src/settings** файл с именем **dialog.js** и добавьте приведенный ниже код. Обратите внимание, что в этом коде используется jQuery для регистрации событий, а также функция `messageParent` для возвращения выбранных пользователем параметров вызывающей стороне.
+Теперь, после определения пользовательского интерфейса диалогового окна, можно написать код для выполнения в нем действий. Создайте в папке **./src/settings** файл с именем **dialog.js** и добавьте приведенный ниже код. Обратите внимание, что в этом коде используется jQuery для регистрации событий, а также функция **messageParent** для возвращения выбранных пользователем параметров вызывающей стороне.
 
 ```js
 (function(){
@@ -510,62 +519,70 @@ ul {
 
 #### <a name="update-webpack-config-settings"></a>Обновление настроек конфигурации webpack
 
-Наконец, откройте файл **webpack.config.js** в корневом каталоге проекта и выполните описанные ниже шаги.
+Наконец, откройте файл **webpack.config.js**, расположенный в корневом каталоге проекта, и выполните описанные ниже шаги.
 
 1. Найдите объект `entry` в объекте `config` и добавьте новую запись для `dialog`.
 
     ```js
-    dialog: "./src/settings/dialog.js"
+    dialog: "./src/settings/dialog.js",
     ```
 
     После этого новый объект `entry` будет выглядеть следующим образом:
 
     ```js
     entry: {
-      polyfill: "@babel/polyfill",
+      polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
       taskpane: "./src/taskpane/taskpane.js",
       commands: "./src/commands/commands.js",
-      dialog: "./src/settings/dialog.js"
+      dialog: "./src/settings/dialog.js",
     },
     ```
 
-1. Найдите массив `plugins` в объекте `config`. В массиве `patterns` объекта `new CopyWebpackPlugin` добавьте новую запись после записи `taskpane.css`.
+1. Найдите массив `plugins` в объекте `config`. В массив `patterns` объекта `new CopyWebpackPlugin` добавьте новые записи для **taskpane.css** и **dialog.css**.
 
     ```js
     {
+      from: "./src/taskpane/taskpane.css",
+      to: "taskpane.css",
+    },
+    {
+      from: "./src/settings/dialog.css",
       to: "dialog.css",
-      from: "./src/settings/dialog.css"
     },
     ```
 
     После этого объект `new CopyWebpackPlugin` будет выглядеть следующим образом:
 
     ```js
-      new CopyWebpackPlugin({
-        patterns: [
-        {
-          to: "taskpane.css",
-          from: "./src/taskpane/taskpane.css"
-        },
-        {
-          to: "dialog.css",
-          from: "./src/settings/dialog.css"
-        },
-        {
-          to: "[name]." + buildType + ".[ext]",
-          from: "manifest*.xml",
-          transform(content) {
-            if (dev) {
-              return content;
-            } else {
-              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
-            }
+    new CopyWebpackPlugin({
+      patterns: [
+      {
+        from: "./src/taskpane/taskpane.css",
+        to: "taskpane.css",
+      },
+      {
+        from: "./src/settings/dialog.css",
+        to: "dialog.css",
+      },
+      {
+        from: "assets/*",
+        to: "assets/[name][ext][query]",
+      },
+      {
+        from: "manifest*.xml",
+        to: "[name]." + buildType + "[ext]",
+        transform(content) {
+          if (dev) {
+            return content;
+          } else {
+            return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
           }
-        }
-      ]}),
+        },
+      },
+    ]}),
     ```
 
-1. Найдите массив `plugins` в объекте `config` и добавьте новый объект в конец массива.
+1. В том же массиве `plugins` в объекте `config` добавьте этот новый объект в конец массива.
 
     ```js
     new HtmlWebpackPlugin({
@@ -579,38 +596,42 @@ ul {
 
     ```js
     plugins: [
-      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",
-        chunks: ["polyfill", "taskpane"]
+        chunks: ["polyfill", "taskpane"],
       }),
       new CopyWebpackPlugin({
         patterns: [
-        {
-          to: "taskpane.css",
-          from: "./src/taskpane/taskpane.css"
-        },
-        {
-          to: "dialog.css",
-          from: "./src/settings/dialog.css"
-        },
-        {
-          to: "[name]." + buildType + ".[ext]",
-          from: "manifest*.xml",
-          transform(content) {
-            if (dev) {
-              return content;
-            } else {
-              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
-            }
-          }
-        }
-      ]}),
+          {
+            from: "./src/taskpane/taskpane.css",
+            to: "taskpane.css",
+          },
+          {
+            from: "./src/settings/dialog.css",
+            to: "dialog.css",
+          },
+          {
+            from: "assets/*",
+            to: "assets/[name][ext][query]",
+          },
+          {
+            from: "manifest*.xml",
+            to: "[name]." + buildType + "[ext]",
+            transform(content) {
+              if (dev) {
+                return content;
+              } else {
+                return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+              }
+            },
+          },
+        ],
+      }),
       new HtmlWebpackPlugin({
         filename: "commands.html",
         template: "./src/commands/commands.html",
-        chunks: ["polyfill", "commands"]
+        chunks: ["polyfill", "commands"],
       }),
       new HtmlWebpackPlugin({
         filename: "dialog.html",
@@ -620,23 +641,9 @@ ul {
     ],
     ```
 
-1. Если веб-сервер работает, закройте окно команды узла.
-
-1. Выполните указанную ниже команду, чтобы повторно собрать проект.
-
-    ```command&nbsp;line
-    npm run build
-    ```
-
-1. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
-
-    ```command&nbsp;line
-    npm start
-    ```
-
 ### <a name="fetch-data-from-github"></a>Получение данных из GitHub
 
-Только что созданный файл **Dialog.js** определяет, что надстройка должна загружать элементы gist, если возникает событие `change` для поля имени пользователя GitHub. Для получения элементов gist пользователя из GitHub используется [API элементов gist GitHub](https://developer.github.com/v3/gists/).
+Только что созданный файл **dialog.js** определяет, что надстройка должна загружать элементы gist, если возникает событие **change** для поля имени пользователя GitHub. Для получения элементов gist пользователя из GitHub используется [API элементов gist GitHub](https://developer.github.com/v3/gists/).
 
 Создайте в папке **./src** новую подпапку с именем **helpers**. Создайте в папке **./src/helpers** файл с именем **gist-api.js** и добавьте следующий код, чтобы получить элементы gist пользователя из GitHub и составить список элементов gist.
 
@@ -708,8 +715,11 @@ function buildFileList(files) {
 }
 ```
 
-> [!NOTE]
-> Вы могли заметить, что отсутствует кнопка для вызова диалогового окна параметров. Вместо этого надстройка будет проверять наличие конфигурации при нажатии пользователем кнопки **Insert gist** (Вставить gist) или **Insert default gist** (Вставить gist по умолчанию). Если конфигурация надстройки еще не выполнена, диалоговое окно параметров предложит пользователю выполнить настройку, прежде чем продолжить.
+Выполните указанную ниже команду, чтобы повторно собрать проект.
+
+```command&nbsp;line
+npm run build
+```
 
 ## <a name="implement-a-ui-less-button"></a>Реализация кнопки без пользовательского интерфейса
 
@@ -721,7 +731,7 @@ function buildFileList(files) {
 
 ### <a name="update-the-function-file-html"></a>Обновление файла функции (HTML)
 
-Функция, вызываемая кнопкой без пользовательского интерфейса, должна быть определена в файле, указанном в элементе `FunctionFile` манифеста для соответствующего форм-фактора. Этот манифест надстройки указывает `https://localhost:3000/commands.html` в качестве файла функции.
+Функция, вызываемая кнопкой без пользовательского интерфейса, должна быть определена в файле, указанном в элементе **FunctionFile** манифеста для соответствующего форм-фактора. Этот манифест надстройки указывает `https://localhost:3000/commands.html` в качестве файла функции.
 
 Откройте файл **./src/commands/commands.html** и замените все содержимое приведенной ниже разметкой.
 
@@ -736,11 +746,11 @@ function buildFileList(files) {
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
 
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="../node_modules/showdown/dist/showdown.min.js"></script>
-    <script type="text/javascript" src="../node_modules/urijs/src/URI.min.js"></script>
-    <script type="text/javascript" src="../src/helpers/addin-config.js"></script>
-    <script type="text/javascript" src="../src/helpers/gist-api.js"></script>
+    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../node_modules/showdown/dist/showdown.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/urijs/src/URI.min.js"></script>
+    <script type="text/javascript" src="../helpers/addin-config.js"></script>
+    <script type="text/javascript" src="../helpers/gist-api.js"></script>
 </head>
 
 <body>
@@ -751,9 +761,11 @@ function buildFileList(files) {
 </html>
 ```
 
+Вы могли заметить, что HTML-файл ссылается на файл JavaScript **addin-config.js**, который еще не существует. Этот файл будет создан в этом руководстве в разделе [Создание файла для управления параметрами конфигурации](#create-a-file-to-manage-configuration-settings) ниже.
+
 ### <a name="update-the-function-file-javascript"></a>Обновление файла функции (JavaScript)
 
-Откройте файл **./src/commands/commands.js** и замените все содержимое приведенным ниже кодом. Обратите внимание, если функция `insertDefaultGist` определяет, что конфигурация надстройки не выполнена, добавляется параметр `?warn=1` к URL-адресу диалогового окна. Благодаря этому в диалоговом окне параметров отображается панель сообщений, определенная в файле **./settings/dialog.html**, которая сообщает пользователю причину появления диалогового окна.
+Откройте файл **./src/commands/commands.js** и замените все содержимое приведенным ниже кодом. Обратите внимание, если функция **insertDefaultGist** определяет, что конфигурация надстройки не выполнена, добавляется параметр `?warn=1` к URL-адресу диалогового окна. Благодаря этому в диалоговом окне параметров отображается панель сообщений, определенная в файле **./src/settings/dialog.html**, которая сообщает пользователю причину появления диалогового окна.
 
 ```js
 var config;
@@ -810,7 +822,7 @@ function insertDefaultGist(event) {
     btnEvent = event;
     // Not configured yet, display settings dialog with
     // warn=1 to display warning.
-    var url = new URI('../src/settings/dialog.html?warn=1').absoluteTo(window.location).toString();
+    var url = new URI('dialog.html?warn=1').absoluteTo(window.location).toString();
     var dialogOptions = { width: 20, height: 40, displayInIframe: true };
 
     Office.context.ui.displayDialogAsync(url, dialogOptions, function(result) {
@@ -852,7 +864,7 @@ g.insertDefaultGist = insertDefaultGist;
 
 ### <a name="create-a-file-to-manage-configuration-settings"></a>Создание файла для управления параметрами конфигурации
 
-HTML-файл функции ссылается на файл под названием **addin-config.js**, которого еще не существует. Создайте файл с именем **addin-config.js** в папке **./src/helpers** и добавьте указанный ниже код. В этом коде используется [объект RoamingSettings](/javascript/api/outlook/office.roamingsettings), позволяющий получать и задавать значения конфигурации.
+HTML-файл функции ссылается на файл под названием **addin-config.js**, которого еще не существует. В папке **./src/helpers** создайте файл с именем **addin-config.js** и добавьте указанный ниже код. В этом коде используется [объект RoamingSettings](/javascript/api/outlook/office.roamingsettings), позволяющий получать и задавать значения конфигурации.
 
 ```js
 function getConfig() {
@@ -906,7 +918,7 @@ function buildBodyContent(gist, callback) {
         // We have a winner.
         switch (file.language) {
           case 'HTML':
-            // Insert as-is.
+            // Insert as is.
             callback(file.content);
             break;
           case 'Markdown':
@@ -930,7 +942,7 @@ function buildBodyContent(gist, callback) {
 }
 ```
 
-### <a name="test-the-button"></a>Тестирование кнопки
+### <a name="test-the-insert-default-gist-button"></a>Тестирование кнопки Insert default gist (Вставить gist по умолчанию)
 
 Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).
 
@@ -940,11 +952,11 @@ function buildBodyContent(gist, callback) {
 
     ![Снимок экрана: диалоговое окно с приглашением настроить надстройку.](../images/addin-prompt-configure.png)
 
-1. В диалоговом окне параметров введите имя пользователя GitHub, а затем нажмите кнопку **TAB** или щелкните в другом месте диалогового окна, чтобы вызвать событие `change`, которое должно загрузить ваш список общедоступных элементов gist. Выберите элемент gist в качестве используемого по умолчанию и нажмите кнопку **Done** (Готово).
+1. В диалоговом окне параметров введите имя пользователя GitHub, а затем нажмите клавишу **TAB** или щелкните в другом месте диалогового окна, чтобы вызвать событие **change**, которое должно загрузить ваш список общедоступных элементов gist. Выберите элемент gist, который будет использоваться по умолчанию, и нажмите **Готово**.
 
     ![Снимок экрана с диалоговым окном параметров надстройки.](../images/addin-settings.png)
 
-1. Снова нажмите кнопку **Insert default gist** (Вставить gist по умолчанию). На этот раз содержимое элемента gist должно быть вставлено в текст сообщения.
+1. Нажмите кнопку **Insert default gist** (Вставить gist по умолчанию) снова. На этот раз содержимое элемента gist должно быть вставлено в текст сообщения.
 
    > [!NOTE]
    > Outlook для Windows: чтобы применить последние параметры, может потребоваться закрытие и повторное открытие окна создания сообщения.
@@ -1006,11 +1018,11 @@ function buildBodyContent(gist, callback) {
       <i class="ms-Icon enlarge ms-Icon--Settings ms-fontColor-white"></i>
     </div>
   </footer>
-  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="../node_modules/showdown/dist/showdown.min.js"></script>
-  <script type="text/javascript" src="../node_modules/urijs/src/URI.min.js"></script>
-  <script type="text/javascript" src="../src/helpers/addin-config.js"></script>
-  <script type="text/javascript" src="../src/helpers/gist-api.js"></script>
+  <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="../../node_modules/showdown/dist/showdown.min.js"></script>
+  <script type="text/javascript" src="../../node_modules/urijs/src/URI.min.js"></script>
+  <script type="text/javascript" src="../helpers/addin-config.js"></script>
+  <script type="text/javascript" src="../helpers/gist-api.js"></script>
   <script type="text/javascript" src="taskpane.js"></script>
 </body>
 
@@ -1137,11 +1149,8 @@ ul {
       -webkit-flex: 1 0 0px;
               flex: 1 0 0px;
       padding: 20px; }
-      .ms-landing-page__footer--left:active, .ms-landing-page__footer--left:hover {
-        background: #005ca4;
-        cursor: pointer; }
       .ms-landing-page__footer--left:active {
-        background: #005ca4; }
+        cursor: default; }
       .ms-landing-page__footer--left--disabled {
         opacity: 0.6;
         pointer-events: none;
@@ -1230,7 +1239,7 @@ ul {
       // When the settings icon is selected, open the settings dialog.
       $('#settings-icon').on('click', function(){
         // Display settings dialog.
-        var url = new URI('../src/settings/dialog.html').absoluteTo(window.location).toString();
+        var url = new URI('dialog.html').absoluteTo(window.location).toString();
         if (config) {
           // If the add-in has already been configured, pass the existing values
           // to the dialog.
@@ -1291,7 +1300,7 @@ ul {
 })();
 ```
 
-### <a name="test-the-button"></a>Тестирование кнопки
+### <a name="test-the-insert-gist-button"></a>Тестирование кнопки Insert gist (Вставить gist)
 
 Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).
 
