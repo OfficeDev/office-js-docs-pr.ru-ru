@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек Office на Mac
 description: Узнайте, как использовать Mac для отлаговки Office надстроек.
-ms.date: 10/16/2020
+ms.date: 03/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 46104e5cbd9c81e56c1a83b6f49ae5883097b3e5
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: dc9017eb7bd27ee0bc22d3ad448e5996895c5eee
+ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151449"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63711211"
 ---
 # <a name="debug-office-add-ins-on-a-mac"></a>Отладка надстроек Office на Mac
 
@@ -18,7 +18,7 @@ ms.locfileid: "59151449"
 
 Если у вас есть надстройка, которая отображает пользовательский интерфейс в области задач или контентной надстройке, вы можете отлаживать надстройку Office с помощью Safari Web Inspector.
 
-Чтобы отламыть Office на Mac, необходимо иметь Mac OS High Sierra и Mac Office версии 16.9.1 (сборка 18012504) или более поздней версии. Если у вас нет сборки Office Mac, вы можете получить ее, присоединившись к [Microsoft 365 разработчика](https://developer.microsoft.com/office/dev-program).
+Чтобы иметь возможность отлагоравить Office на Mac, необходимо иметь Mac OS High Sierra и Mac Office версии 16.9.1 (сборка 18012504) или более поздней версии. Если у вас нет сборки Office Mac, вы можете получить ее, присоединившись к Microsoft 365 [разработчика](https://developer.microsoft.com/office/dev-program).
 
 Для этого откройте терминал и установите свойство `OfficeWebAddinDeveloperExtras` для соответствующего приложения Office следующим образом:
 
@@ -31,7 +31,7 @@ ms.locfileid: "59151449"
 - `defaults write com.microsoft.Outlook OfficeWebAddinDeveloperExtras -bool true`
 
     > [!IMPORTANT]
-    > Сборки mac App Store Office не поддерживают `OfficeWebAddinDeveloperExtras` флаг.
+    > Сборки mac App Store Office не поддерживают флаг`OfficeWebAddinDeveloperExtras`.
 
 Затем откройте приложение Office и [загрузите свою неопубликованную надстройку](sideload-an-office-add-in-on-ipad-and-mac.md). Щелкните надстройку правой кнопкой мыши. В контекстном меню отобразится пункт **Проверить элемент**. Выберите его. Он появится в инспекторе, где можно устанавливать точки останова и отлаживать надстройку.
 

@@ -3,12 +3,12 @@ ms.date: 07/08/2021
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf1a1df922a08f63af80498da2e357d285775e9
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: df076c1b148ce604c0b52fe5fbb76fe5f8e3deb5
+ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074233"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63711149"
 ---
 # <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные пользовательские вызовы функции для удаленной службы
 
@@ -20,9 +20,9 @@ ms.locfileid: "62074233"
 
 ## <a name="view-the-completed-sample"></a>Посмотреть готовый пример
 
-Вы можете изучить эту статью и вставить примеры кода в свой проект. Например можно создать в [генераторе Yo Office](https://github.com/OfficeDev/generator-office) проект пользовательской функции для TypeScript, вставить в него весь код из этой статьи, а затем запустить код и посмотреть на результаты его работы.
+Чтобы просмотреть завершенный пример, следуйте этой статье и вклейте примеры кода в собственный проект. Например, чтобы создать новый проект настраиваемой функции для TypeScript, используйте генератор [Yeoman для Office](../develop/yeoman-generator-overview.md) надстройки, а затем добавьте весь код из этой статьи в проект. Запустите код и попробуйте его.
 
-Также можно загрузить или просмотреть готовый образец проекта на странице [Custom function batching pattern (Пакетирование пользовательских функций)](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Excel-custom-functions/Batching/src/functions/functions.js).
+Кроме того, скачайте или просмотреть полный пример проекта в [шаблоне пакетов пользовательских функций](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Excel-custom-functions/Batching/src/functions/functions.js).
 
 ## <a name="create-the-batching-pattern-in-this-article"></a>Создание шаблона пакетирования в этой статье
 
@@ -32,7 +32,7 @@ ms.locfileid: "62074233"
 2. Функция, которая делает удаленный запрос, когда пакет готов.
 3. Код сервера для отклика на пакетный запрос, вычисления результатов всех операций и возвращения значений.
 
-В следующих разделах будет показано создание кода по одному примеру за раз. Добавьте каждый пример кода в файл **functions.ts**. Рекомендуем создавать пользовательские функции заново в генераторе Yo Office. Для создания проекта обратитесь к статье [Начало разработки пользовательских функций Excel](../quickstarts/excel-custom-functions-quickstart.md) и используйте TypeScript вместо JavaScript.
+В следующих разделах вы узнаете, как создать код по одному примеру. Добавьте каждый пример кода в файл **functions.ts**. Рекомендуется создать совершенно новый проект пользовательских функций с помощью [генератора Yeoman для Office надстройки](../develop/yeoman-generator-overview.md). Чтобы создать новый проект, см. в Excel [пользовательские](../quickstarts/excel-custom-functions-quickstart.md) функции и используйте TypeScript вместо JavaScript.
 
 ## <a name="batch-each-call-to-your-custom-function"></a>Включение в пакет каждого вызова пользовательской функции
 
@@ -206,7 +206,7 @@ function pause(ms: number) {
 
 ### <a name="modify-_fetchfromremoteservice-for-your-live-remote-service"></a>Переделка `_fetchFromRemoteService` для действующей удаленной службы
 
-Чтобы изменить функцию, которая будет работать в вашей удаленной службе `_fetchFromRemoteService` в прямом эфире, внести следующие изменения.
+Чтобы изменить функцию `_fetchFromRemoteService` , которая будет работать в вашей удаленной службе в прямом эфире, внести следующие изменения.
 
 - В зависимости от платформы используемого сервера (Node.js или другая) сопоставьте сетевой вызов клиента с этой функцией.
 - Удалите функцию `pause`, которая имитирует задержку в сети.

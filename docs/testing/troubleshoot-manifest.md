@@ -3,12 +3,12 @@ title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью схемы XML и других средств.
 ms.date: 10/29/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e9b7e868b55489c70a5abe067a262b0ea73fbae8
-ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
+ms.openlocfilehash: 89335ffb670f6bb9a41f2d29f300123e1ea78397
+ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "61081423"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63711261"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -19,20 +19,20 @@ ms.locfileid: "61081423"
 
 ## <a name="validate-your-manifest-with-the-yeoman-generator-for-office-add-ins"></a>Проверка манифеста с помощью генератора Yeoman для надстроек Office
 
-Если для создания надстройки использовался [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы также можете использовать его для проверки файла манифеста проекта. Выполните следующую команду в корневом каталоге своего проекта.
+Если для создания надстройки использовался [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), вы также можете использовать его для проверки файла манифеста проекта. Выполните указанную ниже команду в корневом каталоге своего проекта.
 
 ```command&nbsp;line
 npm run validate
 ```
 
-![Анимированный GIF, на который Office проверки, запускаемой в командной строке, и генерирующих результатов, отображающих пройденную проверку.](../images/yo-office-validator.gif)
+![Анимированный GIF, отображающий валидатор Yo Office, запускаемый в командной строке, и генерирующий результаты, отображающие пройденную проверку.](../images/yo-office-validator.gif)
 
 > [!NOTE]
-> Для доступа к этой функции проект надстройки должен быть создан с помощью [генератора Yeoman](https://www.npmjs.com/package/generator-office) 1.1.17 или более поздней версии.
+> Чтобы получить доступ к этой функции, необходимо создать проект надстройки с помощью [генератора Yeoman](../develop/yeoman-generator-overview.md) для Office версии надстройки 1.1.17 или более поздней версии.
 
 ## <a name="validate-your-manifest-with-office-addin-manifest"></a>Проверка манифеста с помощью office-addin-manifest
 
-Если для создания надстройки использовался не [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы можете проверить манифест, используя [office-addin-manifest](https://www.npmjs.com/package/office-addin-manifest).
+Если для создания надстройки использовался не [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), вы можете проверить манифест, используя [office-addin-manifest](https://www.npmjs.com/package/office-addin-manifest).
 
 1. Установите [Node.js](https://nodejs.org/download/).
 
@@ -42,14 +42,14 @@ npm run validate
     npm install -g office-addin-manifest
     ```
 
-1. Запустите следующую команду *в корневом каталоге проекта.*
+1. Запустите следующую команду *в корневом каталоге проекта*.
 
     ```command&nbsp;line
     npm run validate
     ```
 
     > [!NOTE]
-    > Если эта команда недоступна или не работает, запустите следующую команду, чтобы заставить использовать последнюю версию средства office-addin-manifest (заменив имя файла `MANIFEST_FILE` манифеста).
+    > Если эта команда недоступна или не работает, запустите следующую команду, чтобы заставить использовать последнюю версию средства office-addin-manifest ( `MANIFEST_FILE` заменив имя файла манифеста).
     >
     > ```command&nbsp;line
     > npx office-addin-manifest validate MANIFEST_FILE
@@ -77,4 +77,4 @@ npm run validate
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
-- [Отламывка надстроек с помощью средств разработчика в Microsoft Edge (Chromium основе)](debug-add-ins-using-devtools-edge-chromium.md)
+- [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
