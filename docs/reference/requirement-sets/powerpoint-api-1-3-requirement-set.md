@@ -4,8 +4,13 @@ description: Сведения о наборе требований PowerPointApi
 ms.date: 12/14/2021
 ms.prod: powerpoint
 ms.localizationpriority: medium
+ms.openlocfilehash: 185ece64559d124d8af7c4051d54267da7b11542
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746489"
 ---
-
 # <a name="whats-new-in-powerpoint-javascript-api-13"></a>Новые возможности в PowerPoint API JavaScript 1.3
 
 PowerPointApi 1.3 добавила дополнительную поддержку для управления слайдами и настраиваемой метки.
@@ -26,10 +31,10 @@ PowerPointApi 1.3 добавила дополнительную поддержк
 |[AddSlideOptions](/javascript/api/powerpoint/powerpoint.addslideoptions)|[layoutId](/javascript/api/powerpoint/powerpoint.addslideoptions#powerpoint-powerpoint-addslideoptions-layoutid-member)|Указывает ID макета слайда, который будет использоваться для нового слайда.|
 ||[slideMasterId](/javascript/api/powerpoint/powerpoint.addslideoptions#powerpoint-powerpoint-addslideoptions-slidemasterid-member)|Указывает ID мастера слайдов, который будет использоваться для нового слайда.|
 |[Presentation](/javascript/api/powerpoint/powerpoint.presentation)|[slideMasters](/javascript/api/powerpoint/powerpoint.presentation#powerpoint-powerpoint-presentation-slidemasters-member)|Возвращает коллекцию объектов `SlideMaster` , которые находятся в презентации.|
-||[теги](/javascript/api/powerpoint/powerpoint.presentation#powerpoint-powerpoint-presentation-tags-member)|Возвращает коллекцию тегов, присоединенных к презентации.|
+||[tags](/javascript/api/powerpoint/powerpoint.presentation#powerpoint-powerpoint-presentation-tags-member)|Возвращает коллекцию тегов, присоединенных к презентации.|
 |[Shape](/javascript/api/powerpoint/powerpoint.shape)|[delete()](/javascript/api/powerpoint/powerpoint.shape#powerpoint-powerpoint-shape-delete-member(1))|Удаляет фигуру из коллекции фигур.|
 ||[id](/javascript/api/powerpoint/powerpoint.shape#powerpoint-powerpoint-shape-id-member)|Получает уникальный ID формы.|
-||[теги](/javascript/api/powerpoint/powerpoint.shape#powerpoint-powerpoint-shape-tags-member)|Возвращает коллекцию тегов в форме.|
+||[tags](/javascript/api/powerpoint/powerpoint.shape#powerpoint-powerpoint-shape-tags-member)|Возвращает коллекцию тегов в форме.|
 |[ShapeCollection](/javascript/api/powerpoint/powerpoint.shapecollection)|[getCount()](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-getcount-member(1))|Получает количество фигур в коллекции.|
 ||[getItem(key: string)](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-getitem-member(1))|Получает форму с помощью уникального ID.|
 ||[getItemAt(index: number)](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-getitemat-member(1))|Получает фигуру с помощью нулевого индекса в коллекции.|
@@ -38,7 +43,7 @@ PowerPointApi 1.3 добавила дополнительную поддержк
 |[Slide](/javascript/api/powerpoint/powerpoint.slide)|[макет](/javascript/api/powerpoint/powerpoint.slide#powerpoint-powerpoint-slide-layout-member)|Получает макет слайда.|
 ||[shapes](/javascript/api/powerpoint/powerpoint.slide#powerpoint-powerpoint-slide-shapes-member)|Возвращает коллекцию фигур на слайде.|
 ||[slideMaster](/javascript/api/powerpoint/powerpoint.slide#powerpoint-powerpoint-slide-slidemaster-member)|Получает объект `SlideMaster` , который представляет содержимое слайда по умолчанию.|
-||[теги](/javascript/api/powerpoint/powerpoint.slide#powerpoint-powerpoint-slide-tags-member)|Возвращает коллекцию тегов на слайде.|
+||[tags](/javascript/api/powerpoint/powerpoint.slide#powerpoint-powerpoint-slide-tags-member)|Возвращает коллекцию тегов на слайде.|
 |[SlideCollection](/javascript/api/powerpoint/powerpoint.slidecollection)|[add(options?: PowerPoint. AddSlideOptions)](/javascript/api/powerpoint/powerpoint.slidecollection#powerpoint-powerpoint-slidecollection-add-member(1))|Добавляет новый слайд в конце коллекции.|
 |[SlideLayout](/javascript/api/powerpoint/powerpoint.slidelayout)|[id](/javascript/api/powerpoint/powerpoint.slidelayout#powerpoint-powerpoint-slidelayout-id-member)|Получает уникальный ID макета слайда.|
 ||[name](/javascript/api/powerpoint/powerpoint.slidelayout#powerpoint-powerpoint-slidelayout-name-member)|Получает имя макета слайда.|

@@ -1,10 +1,15 @@
 ---
 title: Отображение и скрытие области задач надстройки Office
-description: 'Узнайте, как программным образом скрыть или показать пользовательский интерфейс надстройки во время ее непрерывного работы.'
+description: Узнайте, как программным образом скрыть или показать пользовательский интерфейс надстройки во время ее непрерывного работы.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 7e881f5fc0d5258aa886709a0aee2eee5836feef
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743964"
 ---
-
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
 [!include[Shared JavaScript runtime requirements](../includes/shared-runtime-requirements-note.md)]
@@ -21,7 +26,7 @@ function onCurrentQuarter() {
 }
 ```
 
-Предыдущий код предполагает сценарий, в котором имеется Excel с именем **CurrentQuarterSales**. Надстройка сделает области задач видимыми при активации этого таблицы. Метод обработник `onCurrentQuarter` для Office[. Событие Worksheet.onActivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-onactivated-member), зарегистрированное для таблицы.
+Предыдущий код предполагает сценарий, в котором существует Excel с именем **CurrentQuarterSales**. Надстройка сделает области задач видимыми при активации этого таблицы. Метод обработник `onCurrentQuarter` для Office[. Событие Worksheet.onActivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-onactivated-member), зарегистрированное для таблицы.
 
 Кроме того, можно скрыть области задач, позвонив в эту `Office.addin.hide()` функцию.
 
@@ -42,7 +47,7 @@ function onCurrentQuarterDeactivated() {
 
 ## <a name="configure-your-add-in-to-use-the-shared-runtime"></a>Настройка надстройки для использования общего времени работы
 
-Чтобы использовать эти методы `showAsTaskpane()` `hide()` , надстройка должна использовать общее время работы. Дополнительные сведения см. в Office [надстройки для использования общего времени работы](configure-your-add-in-to-use-a-shared-runtime.md).
+Чтобы использовать эти методы `showAsTaskpane()` `hide()` , надстройка должна использовать общее время работы. Дополнительные сведения см. в раздел [Настройка Office надстройки для использования общего времени работы](configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="preservation-of-state-and-event-listeners"></a>Сохранение слушателей состояния и событий
 
@@ -54,11 +59,11 @@ function onCurrentQuarterDeactivated() {
 
 Кроме того, любые слушатели событий, зарегистрированные в области задач, продолжают работать даже при скрытии области задач.
 
-Рассмотрим следующий сценарий: в `Worksheet.onActivated` `Worksheet.onDeactivated` области задач имеется зарегистрированный обработок для Excel и событий для листа с именем **Sheet1**. Активированный обработок вызывает в области задач зеленую точку. Деактивированный обработок превращает точку красной (это ее состояние по умолчанию). Предположим, что код вызывается `hide()` , когда **sheet1** не активируется, а точка красная. Несмотря на то, что области задач скрыты, **лист1** активируется. Позже код вызывает `showAsTaskpane()` в ответ на какое-либо событие. Когда открывается области задач, точка зеленая, так как слушатели и обработчики событий бежали, даже если области задач были скрыты.
+Рассмотрим следующий сценарий: в области задач имеется зарегистрированный обработок `Worksheet.onActivated` `Worksheet.onDeactivated` для Excel и событий для листа с именем **Sheet1**. Активированный обработок вызывает в области задач зеленую точку. Деактивированный обработок превращает точку красной (это ее состояние по умолчанию). Предположим, что код вызывается `hide()` , когда **sheet1** не активируется, а точка красная. Несмотря на то, что области задач скрыты, **лист1** активируется. Позже код вызывает `showAsTaskpane()` в ответ на какое-либо событие. Когда открывается области задач, точка зеленая, так как слушатели и обработчики событий бежали, даже если области задач были скрыты.
 
 ## <a name="handle-the-visibility-changed-event"></a>Обработка измененного события видимости
 
-Когда код изменяет видимость `showAsTaskpane()` `hide()`области задач с помощью или Office запускает `VisibilityModeChanged` событие. Это событие может быть полезно для обработки. Например, предположим, что в области задач отображается список всех листов в книге. Если при скрытии области задач добавляется новая таблица, то само по себе не добавит новое имя таблицы в список. Но ваш код `VisibilityModeChanged` может откликнуться на событие, чтобы перезагрузить Worksheet.name всех таблиц в коллекции [Workbook.worksheets](/javascript/api/excel/excel.workbook#excel-excel-workbook-worksheets-member), как показано в приведенной ниже примере кода.[](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-name-member)
+Если код изменяет видимость `showAsTaskpane()` `hide()`области задач с помощью или Office запускает `VisibilityModeChanged` событие. Это событие может быть полезно для обработки. Например, предположим, что в области задач отображается список всех листов в книге. Если при скрытии области задач добавляется новая таблица, то само по себе не добавит новое имя таблицы в список. Но ваш код `VisibilityModeChanged` может реагировать на событие, [чтобы перезагрузить](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-name-member) Worksheet.name всех таблиц в коллекции [Workbook.worksheets](/javascript/api/excel/excel.workbook#excel-excel-workbook-worksheets-member) , как показано в приведенной ниже примере кода.
 
 Чтобы зарегистрировать обработатель для события, не используйте метод "добавить обработник", как в большинстве Office JavaScript. Вместо этого существует специальная функция, к которой вы передаете обработчиве: [Office.addin.onVisibilityModeChanged](/javascript/api/office/office.addin#office-office-addin-onvisibilitymodechanged-member(1)). Ниже приведен пример. Обратите внимание, что `args.visibilityMode` свойством [является тип VisibilityMode](/javascript/api/office/office.visibilitymode).
 

@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.11
 ms.date: 04/01/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: ce900104d301fed1038fa1ede78fe661f7257e0f
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745606"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-111"></a>Новые возможности в Excel API JavaScript 1.11
 
 В ExcelApi 1.11 улучшена поддержка комментариев и элементов управления на уровне книг (например, сохранение и закрытие книги). Кроме того, добавлен доступ к настройкам культуры для учета локализации.
@@ -21,7 +26,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API Excel API JavaScript, за набором 1.11. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.11 или ранее, см. в Excel API в наборе требований [1.11 или ранее](/javascript/api/excel?view=excel-js-1.11&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, за набором 1.11. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.11 или ранее, см. в Excel API в наборе требований [1.11 или ранее](/javascript/api/excel?view=excel-js-1.11&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -30,7 +35,7 @@ ms.localizationpriority: medium
 ||[thousandsSeparator](/javascript/api/excel/excel.application#excel-excel-application-thousandsseparator-member)|Получает строку, используемую для отдельных групп цифр слева от десятичной для числимых значений.|
 ||[useSystemSeparators](/javascript/api/excel/excel.application#excel-excel-application-usesystemseparators-member)|Указывает, включены ли системные Excel системы.|
 |[Comment](/javascript/api/excel/excel.comment)|[mentions](/javascript/api/excel/excel.comment#excel-excel-comment-mentions-member)|Получает объекты (например, люди), указанные в комментариях.|
-||[разрешено](/javascript/api/excel/excel.comment#excel-excel-comment-resolved-member)|Состояние потока комментариев.|
+||[resolved](/javascript/api/excel/excel.comment#excel-excel-comment-resolved-member)|Состояние потока комментариев.|
 ||[richContent](/javascript/api/excel/excel.comment#excel-excel-comment-richcontent-member)|Получает богатое содержимое комментариев (например, упоминания в комментариях).|
 ||[updateMentions(contentWithMentions: Excel. CommentRichContent)](/javascript/api/excel/excel.comment#excel-excel-comment-updatementions-member(1))|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
 |[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(cellAddress: Range \| string, content: CommentRichContent \| string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentcollection#excel-excel-commentcollection-add-member(1))|Создает новое примечание с указанным содержимым в определенной ячейке.|
@@ -38,7 +43,7 @@ ms.localizationpriority: medium
 ||[id](/javascript/api/excel/excel.commentmention#excel-excel-commentmention-id-member)|ID объекта.|
 ||[name](/javascript/api/excel/excel.commentmention#excel-excel-commentmention-name-member)|Имя объекта, упомянутого в комментарии.|
 |[CommentReply](/javascript/api/excel/excel.commentreply)|[mentions](/javascript/api/excel/excel.commentreply#excel-excel-commentreply-mentions-member)|Сущностям (например, людям), упомянутым в комментариях.|
-||[разрешено](/javascript/api/excel/excel.commentreply#excel-excel-commentreply-resolved-member)|Состояние ответа на комментарий.|
+||[resolved](/javascript/api/excel/excel.commentreply#excel-excel-commentreply-resolved-member)|Состояние ответа на комментарий.|
 ||[richContent](/javascript/api/excel/excel.commentreply#excel-excel-commentreply-richcontent-member)|Богатое содержимое комментариев (например, упоминания в комментариях).|
 ||[updateMentions(contentWithMentions: Excel. CommentRichContent)](/javascript/api/excel/excel.commentreply#excel-excel-commentreply-updatementions-member(1))|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
 |[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: CommentRichContent \| string, contentType?: Excel. ContentType)](/javascript/api/excel/excel.commentreplycollection#excel-excel-commentreplycollection-add-member(1))|Создает ответ на комментарий для комментария.|

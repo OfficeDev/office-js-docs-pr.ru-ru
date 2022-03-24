@@ -4,8 +4,13 @@ description: Сведения о наборе требований WordApi 1.3.
 ms.date: 03/09/2021
 ms.prod: word
 ms.localizationpriority: medium
+ms.openlocfilehash: d9e0d450b601845d4e11e0fd74652c4e167f802c
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746032"
 ---
-
 # <a name="whats-new-in-word-javascript-api-13"></a>Новые возможности API JavaScript для Word 1.3
 
 WordApi 1.3 добавила больше поддержки элементов управления контентом и параметров уровня документов.
@@ -19,7 +24,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 |[Application](/javascript/api/word/word.application)|[createDocument(base64File?: string)](/javascript/api/word/word.application#word-word-application-createdocument-member(1))|Создает новый документ с помощью дополнительного файла base64, закодированного .docx.|
 |[Основной текст](/javascript/api/word/word.body)|[getRange (rangeLocation?: Word.RangeLocation)](/javascript/api/word/word.body#word-word-body-getrange-member(1))|Возвращает весь основной текст (либо его начальную или конечную точку) в виде диапазона.|
 ||[insertTable (rowCount: number, columnCount: number, insertLocation: Word.InsertLocation, values?: string[][])](/javascript/api/word/word.body#word-word-body-inserttable-member(1))|Вставляет таблицу с указанным количеством строк и столбцов.|
-||[lists](/javascript/api/word/word.body#word-word-body-lists-member)|Возвращает коллекцию объектов списков в основном тексте.|
+||[списков](/javascript/api/word/word.body#word-word-body-lists-member)|Возвращает коллекцию объектов списков в основном тексте.|
 ||[parentBody](/javascript/api/word/word.body#word-word-body-parentbody-member)|Возвращает родительский текст основного текста.|
 ||[parentBodyOrNullObject](/javascript/api/word/word.body#word-word-body-parentbodyornullobject-member)|Возвращает родительский текст основного текста.|
 ||[parentContentControlOrNullObject](/javascript/api/word/word.body#word-word-body-parentcontentcontrolornullobject-member)|Получает элемент управления содержимым, содержащий документ или раздел.|
@@ -27,11 +32,11 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentSectionOrNullObject](/javascript/api/word/word.body#word-word-body-parentsectionornullobject-member)|Возвращает родительский раздел основного текста.|
 ||[styleBuiltIn](/javascript/api/word/word.body#word-word-body-stylebuiltin-member)|Возвращает или задает имя встроенного стиля основного текста.|
 ||[таблицы](/javascript/api/word/word.body#word-word-body-tables-member)|Возвращает коллекцию объектов таблиц в основном тексте.|
-||[type](/javascript/api/word/word.body#word-word-body-type-member)|Возвращает тип основного текста.|
+||[тип](/javascript/api/word/word.body#word-word-body-type-member)|Возвращает тип основного текста.|
 |[ContentControl](/javascript/api/word/word.contentcontrol)|[getRange (rangeLocation?: Word.RangeLocation)](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-getrange-member(1))|Возвращает весь элемент управления содержимым (либо его начальную или конечную точку) в виде диапазона.|
 ||[getTextRanges (endingMarks: string[], trimSpacing?: boolean)](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-gettextranges-member(1))|Получает диапазоны текстов в области управления контентом с помощью знаков препинания и/или других знаков окончания.|
 ||[insertTable (rowCount: number, columnCount: number, insertLocation: Word.InsertLocation, values?: string[][])](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-inserttable-member(1))|Вставляет таблицу с указанным количеством строк и столбцов в элемент управления содержимым или рядом с ним.|
-||[lists](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-lists-member)|Возвращает коллекцию объектов списков в элементе управления содержимым.|
+||[списков](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-lists-member)|Возвращает коллекцию объектов списков в элементе управления содержимым.|
 ||[parentBody](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-parentbody-member)|Возвращает родительский текст элемента управления содержимым.|
 ||[parentContentControlOrNullObject](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-parentcontentcontrolornullobject-member)|Получает элемент управления содержимым, содержащий элемент управления содержимым.|
 ||[parentTable](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-parenttable-member)|Возвращает таблицу, содержащую элемент управления содержимым.|
@@ -48,7 +53,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[getFirstOrNullObject()](/javascript/api/word/word.contentcontrolcollection#word-word-contentcontrolcollection-getfirstornullobject-member(1))|Возвращает первый элемент управления содержимым в коллекции.|
 |[CustomProperty](/javascript/api/word/word.customproperty)|[delete()](/javascript/api/word/word.customproperty#word-word-customproperty-delete-member(1))|Удаляет настраиваемое свойство.|
 ||[key](/javascript/api/word/word.customproperty#word-word-customproperty-key-member)|Возвращает ключ настраиваемого свойства.|
-||[type](/javascript/api/word/word.customproperty#word-word-customproperty-type-member)|Получает тип значения настраиваемого свойства.|
+||[тип](/javascript/api/word/word.customproperty#word-word-customproperty-type-member)|Получает тип значения настраиваемого свойства.|
 ||[value](/javascript/api/word/word.customproperty#word-word-customproperty-value-member)|Получает или задает значение настраиваемого свойства.|
 |[CustomPropertyCollection](/javascript/api/word/word.custompropertycollection)|[add(key: string, value: any)](/javascript/api/word/word.custompropertycollection#word-word-custompropertycollection-add-member(1))|Создает или задает настраиваемое свойство.|
 ||[deleteAll()](/javascript/api/word/word.custompropertycollection#word-word-custompropertycollection-deleteall-member(1))|Удаляет все настраиваемые свойства в коллекции.|
@@ -92,7 +97,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[parentTableOrNullObject](/javascript/api/word/word.inlinepicture#word-word-inlinepicture-parenttableornullobject-member)|Возвращает таблицу, содержащую встроенный рисунок.|
 |[InlinePictureCollection](/javascript/api/word/word.inlinepicturecollection)|[getFirst()](/javascript/api/word/word.inlinepicturecollection#word-word-inlinepicturecollection-getfirst-member(1))|Возвращает первый встроенный рисунок в коллекции.|
 ||[getFirstOrNullObject()](/javascript/api/word/word.inlinepicturecollection#word-word-inlinepicturecollection-getfirstornullobject-member(1))|Возвращает первый встроенный рисунок в коллекции.|
-|[Список](/javascript/api/word/word.list)|[getLevelParagraphs(level: number)](/javascript/api/word/word.list#word-word-list-getlevelparagraphs-member(1))|Возвращает абзацы, обнаруженные на указанном уровне списка.|
+|[Перечисление](/javascript/api/word/word.list)|[getLevelParagraphs(level: number)](/javascript/api/word/word.list#word-word-list-getlevelparagraphs-member(1))|Возвращает абзацы, обнаруженные на указанном уровне списка.|
 ||[getLevelString (уровень: номер)](/javascript/api/word/word.list#word-word-list-getlevelstring-member(1))|Получает пулю, номер или изображение на указанном уровне в качестве строки.|
 ||[id](/javascript/api/word/word.list#word-word-list-id-member)|Получает id списка.|
 ||[insertParagraph (paragraphText: string, insertLocation: Word.InsertLocation)](/javascript/api/word/word.list#word-word-list-insertparagraph-member(1))|Вставляет абзац в указанном расположении.|
@@ -158,7 +163,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[intersectWith (диапазон: Word.Range)](/javascript/api/word/word.range#word-word-range-intersectwith-member(1))|Возвращает новый диапазон, представляющий собой пересечение данного диапазона с другим.|
 ||[intersectWithOrNullObject (диапазон: Word.Range)](/javascript/api/word/word.range#word-word-range-intersectwithornullobject-member(1))|Возвращает новый диапазон, представляющий собой пересечение данного диапазона с другим.|
 ||[isEmpty](/javascript/api/word/word.range#word-word-range-isempty-member)|Проверяет, является ли длина диапазона нулевой.|
-||[lists](/javascript/api/word/word.range#word-word-range-lists-member)|Возвращает коллекцию объектов списков в диапазоне.|
+||[списков](/javascript/api/word/word.range#word-word-range-lists-member)|Возвращает коллекцию объектов списков в диапазоне.|
 ||[parentBody](/javascript/api/word/word.range#word-word-range-parentbody-member)|Возвращает родительский текст диапазона.|
 ||[parentContentControlOrNullObject](/javascript/api/word/word.range#word-word-range-parentcontentcontrolornullobject-member)|Возвращает элемент управления содержимым, содержащий диапазон.|
 ||[parentTable](/javascript/api/word/word.range#word-word-range-parenttable-member)|Возвращает таблицу, содержащую диапазон.|
@@ -235,7 +240,7 @@ WordApi 1.3 добавила больше поддержки элементов 
 ||[verticalAlignment](/javascript/api/word/word.table#word-word-table-verticalalignment-member)|Возвращает и задает вертикальное выравнивание для каждой ячейки в таблице.|
 ||[width](/javascript/api/word/word.table#word-word-table-width-member)|Возвращает и задает ширину таблицы в точках.|
 |[TableBorder](/javascript/api/word/word.tableborder)|[color](/javascript/api/word/word.tableborder#word-word-tableborder-color-member)|Получает или задает цвет границы таблицы.|
-||[type](/javascript/api/word/word.tableborder#word-word-tableborder-type-member)|Возвращает или задает тип границы таблицы.|
+||[тип](/javascript/api/word/word.tableborder#word-word-tableborder-type-member)|Возвращает или задает тип границы таблицы.|
 ||[width](/javascript/api/word/word.tableborder#word-word-tableborder-width-member)|Возвращает или задает ширину границы таблицы в точках.|
 |[TableCell](/javascript/api/word/word.tablecell)|[body](/javascript/api/word/word.tablecell#word-word-tablecell-body-member)|Возвращает объект тела ячейки.|
 ||[cellIndex](/javascript/api/word/word.tablecell#word-word-tablecell-cellindex-member)|Получает индекс ячейки в строке.|

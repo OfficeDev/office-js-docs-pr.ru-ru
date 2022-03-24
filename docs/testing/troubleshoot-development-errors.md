@@ -1,16 +1,21 @@
 ---
 title: Устранение ошибок разработки в надстройках Office
-description: 'Узнайте, как устранить ошибки разработки в Office надстройки.'
+description: Узнайте, как устранить ошибки разработки в Office надстройки.
 ms.date: 09/24/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: c804f4e73dc28e6f401aca01cea68e6d2ce30917
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747102"
 ---
-
 # <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки в надстройках Office
 
 Вот список распространенных проблем, с которыми вы можете столкнуться при разработке Office надстройки.
 
 > [!TIP]
-> Очистка кэша Office часто устраняет проблемы, связанные с устаревшим кодом. Это гарантирует отправку последнего манифеста с использованием текущих имен файлов, текста меню и других элементов команды. Дополнительные дополнительные информации см. [в Office кэш.](clear-cache.md)
+> Очистка кэша Office часто устраняет проблемы, связанные с устаревшим кодом. Это гарантирует отправку последнего манифеста с использованием текущих имен файлов, текста меню и других элементов команды. Дополнительные дополнительные отчеты см. [в Office кэш Office.](clear-cache.md)
 
 ## <a name="add-in-doesnt-load-in-task-pane-or-other-issues-with-the-add-in-manifest"></a>Надстройка не загружается в область задач или возникают другие проблемы с манифестом надстройки
 
@@ -47,7 +52,7 @@ del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC
 
 ## <a name="changes-made-to-property-values-dont-happen-and-there-is-no-error-message"></a>Изменения, внесенные в значения свойств, не происходят, и сообщение об ошибке не сообщается
 
-Проверьте справочную документацию для свойства, чтобы узнать, является ли оно только для чтения. Кроме того, [определения TypeScript для](../develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md) Office JS указывают, какие свойства объектов являются только для чтения. Если вы попытайтесь установить свойство только для чтения, операция записи не будет работать без ошибки. В следующем примере ошибочно пытается установить свойство только [для чтения, Chart.id](/javascript/api/excel/excel.chart#excel-excel-chart-id-member). См. [также Некоторые свойства не могут быть установлены непосредственно](../develop/application-specific-api-model.md#some-properties-cannot-be-set-directly).
+Проверьте справочную документацию для свойства, чтобы узнать, является ли оно только для чтения. Кроме того, [определения TypeScript](../develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md) для Office JS указывают, какие свойства объектов являются только для чтения. Если вы попытайтесь установить свойство только для чтения, операция записи не будет работать без ошибки. В следующем примере ошибочно пытается установить свойство только [для чтения Chart.id](/javascript/api/excel/excel.chart#excel-excel-chart-id-member). См. [также Некоторые свойства не могут быть установлены непосредственно](../develop/application-specific-api-model.md#some-properties-cannot-be-set-directly).
 
 ```js
 // This will do nothing, since `id` is a read-only property.
@@ -60,7 +65,7 @@ myChart.id = "5";
 
 - Если вы используете Visual Studio, может возникнуть проблема с боковой загрузкой. Закрой все экземпляры Office и Visual Studio. Перезапустите Visual Studio и повторите нажатие F5.
 - Манифест надстройки удален из расположения развертывания, например централизированного развертывания, каталога SharePoint или сетевой доли.
-- Значение элемента [ID](../reference/manifest/id.md) в манифесте было изменено непосредственно в развернутой копии. Если по какой-либо причине необходимо изменить этот ID, сначала удалите надстройки из Office, а затем замените исходный манифест на измененный манифест. Многим требуется очистить кэш Office, чтобы удалить все следы оригинала. Инструкции [по очистке кэша для операционной системы см. в статье Clear the Office](clear-cache.md) кэш.
+- Значение элемента [ID](../reference/manifest/id.md) в манифесте было изменено непосредственно в развернутой копии. Если по какой-либо причине необходимо изменить этот ID, сначала удалите надстройки из хоста Office, а затем замените исходный манифест измененным манифестом. Многим требуется очистить кэш Office, чтобы удалить все следы оригинала. Инструкции по очистке [кэша для операционной системы см. в статье Clear the Office](clear-cache.md) кэш.
 - Манифест надстройки `resid` имеет манифест, который не определен нигде в разделе [Ресурсы](../reference/manifest/resources.md) манифеста, `resid` `<Resources>` или существует несоответствие в написании между тем, где он используется и где он определен в разделе.
 - В манифесте `resid` есть атрибут с более чем 32 символами. Атрибут `resid` и атрибут `id` `<Resources>` соответствующего ресурса в разделе не могут быть более 32 символов.
 - Надстройка имеет настраиваемую команду надстройки, но вы пытаетесь запустить ее на платформе, которая не поддерживает их. Дополнительные сведения см. [в дополнительных наборах требований к командам надстройки](../reference/requirement-sets/add-in-commands-requirement-sets.md).
@@ -71,7 +76,7 @@ myChart.id = "5";
 
 ## <a name="excel-add-in-throws-errors-but-not-consistently"></a>Excel надстройка бросает ошибки, но не последовательно
 
-См[. Excel возможные](../excel/excel-add-ins-troubleshooting.md) причины устранения неполадок.
+См. [Excel возможные](../excel/excel-add-ins-troubleshooting.md) причины устранения неполадок.
 
 ## <a name="manifest-schema-validation-errors-in-visual-studio-projects"></a>Ошибки проверки схемы манифеста в Visual Studio проектах
 
@@ -79,7 +84,7 @@ myChart.id = "5";
 
 **Элемент "Host" в пространстве имен "http://schemas.microsoft.com/office/taskpaneappversionoverrides" имеет недействительный детский элемент "Runtimes" в пространстве имен 'http://schemas.microsoft.com/office/taskpaneappversionoverrides'**
 
-В этом случае можно обновить XSD-файлы, Visual Studio используются в последних версиях. Последние версии схемы находятся в [[MS-OWEMXML]: Приложение A: Полная схема XML](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).
+Если это произойдет, вы можете обновить XSD-файлы, Visual Studio используются в последних версиях. Последние версии схемы находятся в [[MS-OWEMXML]: Приложение A: Полная схема XML](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).
 
 ### <a name="locate-the-xsd-files"></a>Найдите XSD-файлы
 

@@ -4,18 +4,18 @@ description: Узнайте, как использовать API Excel JavaScrip
 ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e9b0c56dfd04cd53e01c41fea23fbf826a6fa14
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 5ef9b6a385db5b1de90e1bd61802d20ef7864533
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340955"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745503"
 ---
 # <a name="read-or-write-to-an-unbounded-range-using-the-excel-javascript-api"></a>Чтение или написание в неограниченый диапазон с Excel API JavaScript
 
 В этой статье описывается, как читать и писать в диапазоне с Excel API JavaScript. Полный список свойств `Range` и методов, поддерживаемый объектом, см. в Excel[. Класс Range](/javascript/api/excel/excel.range).
 
-Адрес неограниченого диапазона — это адрес диапазона, который указывает целые столбцы или целые строки. Пример:
+Адрес неограниченого диапазона — это адрес диапазона, который указывает целые столбцы или целые строки. Например.
 
 - Адреса диапазона, состоящие из целых столбцов.
   - `C:C`

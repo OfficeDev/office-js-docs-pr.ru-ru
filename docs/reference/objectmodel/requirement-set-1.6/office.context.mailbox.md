@@ -3,8 +3,13 @@ title: Office.context.mailbox — набор требований 1.6
 description: Outlook API почтовых ящиков установлена версия 1.6 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 6254ec331b007f1535d2999a03be1e426d3d8e51
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745262"
 ---
-
 # <a name="mailbox-requirement-set-16"></a>почтовый ящик (набор требований 1.6)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
@@ -55,6 +60,6 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > События доступны только с реализацией области задач.
 
-| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.6&preserve-view=true) | Description | Minimum<br>набор требований |
+| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.6&preserve-view=true) | Описание | Minimum<br>набор требований |
 |---|---|:---:|
 |`ItemChanged`| Другой элемент Outlook для просмотра при закреплении области задач. | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |

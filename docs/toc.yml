@@ -243,13 +243,15 @@ items:
                 href: develop/show-hide-add-in.md
               - name: Локализация
                 href: develop/localization.md
-          - name: Платформы и идентификаторы
+          - name: 'Платформы, IDE и другие инструменты'
             items:
               - name: Разработка надстроек с помощью Angular
                 href: develop/add-ins-with-angular2.md
+              - name: Создание надстроек с помощью генератора Yeoman
+                href: develop/yeoman-generator-overview.md
               - name: Разработка надстроек с помощью Visual Studio Code
                 href: develop/develop-add-ins-vscode.md
-              - name: Разработка надстроек с помощью Visual Studio
+              - name: Создание и разработка надстроек с помощью Visual Studio
                 items:
                   - name: Обзор
                     href: develop/develop-add-ins-visual-studio.md

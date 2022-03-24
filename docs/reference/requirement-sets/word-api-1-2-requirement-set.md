@@ -1,11 +1,16 @@
 ---
 title: Набор API API Word JavaScript 1.2
-description: Сведения о наборе требований WordApi 1.2
+description: Сведения о наборе требований WordApi 1.2.
 ms.date: 11/09/2020
 ms.prod: word
 ms.localizationpriority: medium
+ms.openlocfilehash: 1a5af83615786b241c43ecb07ee0d23b3758cfc8
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744225"
 ---
-
 # <a name="whats-new-in-word-javascript-api-12"></a>Новые возможности API JavaScript для Word 1.2
 
 WordApi 1.2 добавила поддержку для inline pictures.

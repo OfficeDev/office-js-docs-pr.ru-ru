@@ -1,10 +1,15 @@
 ---
 title: Office.context.mailbox — набор требований 1.9
-description: Outlook API почтовых ящиков за набором 1.9 версии объектной модели почтовых ящиков.
+description: Outlook API почтовых ящиков установлена версия 1.9 объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 9451fb23540f91d11c9f0631b77a7a789372cf9a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746225"
 ---
-
 # <a name="mailbox-requirement-set-19"></a>почтовый ящик (набор требований 1.9)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
@@ -60,6 +65,6 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > События доступны только с реализацией области задач.
 
-| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.9&preserve-view=true) | Description | Minimum<br>набор требований |
+| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.9&preserve-view=true) | Описание | Minimum<br>набор требований |
 |---|---|:---:|
 |`ItemChanged`| Другой элемент Outlook для просмотра при закреплении области задач. | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |

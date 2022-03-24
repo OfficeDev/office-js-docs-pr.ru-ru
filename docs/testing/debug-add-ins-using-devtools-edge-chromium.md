@@ -3,54 +3,54 @@ title: Отламывка надстроек с помощью средств р
 description: Отламывка надстроек с помощью средств разработчика в Microsoft Edge WebView2 (Chromium основе).
 ms.date: 11/09/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d2a8aa41720eebcd15d4cb625d90af1399b87dad
-ms.sourcegitcommit: 3d37c42f5e465dac52d231d31717bdbb3bfa0e30
+ms.openlocfilehash: 7cd4e3d3279ef605c5a9ef5fc21a678984d978e5
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60923550"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744688"
 ---
-# <a name="debug-add-ins-using-developer-tools-in-microsoft-edge-chromium-based"></a>Отламывка надстроек с помощью средств разработчика в Microsoft Edge (Chromium основе)
+# <a name="debug-add-ins-using-developer-tools-in-microsoft-edge-chromium-based"></a>Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)
 
 В этой статье показано, как отлагировать клиентский код (JavaScript или TypeScript) надстройки при условии, при которых будут выполнены следующие условия.
 
 - Вы не можете или не хотите отлаговка с помощью инструментов, встроенных в ваш IDE; или вы столкнулись с проблемой, которая возникает только при запуске надстройки за пределами IDE.
-- На компьютере используется сочетание версий Windows и Office, использующих управление веб-Chromium edge (Chromium веб-просмотров) WebView2.
+- На компьютере используется сочетание версий Windows и Office, использующих управление веб-Chromium веб-просмотров edge (Chromium webView2).
 
 > [!TIP]
-> Сведения о отладке с edge WebView2 (Chromium основе) в Visual Studio Code см. в Windows debug надстроек с использованием Visual Studio Code и [Microsoft Edge WebView2 (Chromium основе).](debug-desktop-using-edge-chromium.md)
+> Сведения об отладке с помощью Edge WebView2 (Chromium на основе) в Visual Studio Code см. в Windows debug надстроек с Visual Studio Code и [Microsoft Edge WebView2 (Chromium основе)](debug-desktop-using-edge-chromium.md).
 
-Чтобы определить, какой браузер вы используете, см. в Office [надстройки.](../concepts/browsers-used-by-office-web-add-ins.md)
+Чтобы определить, какой браузер вы используете, см. в Office [надстройки](../concepts/browsers-used-by-office-web-add-ins.md).
 
 > [!TIP]
 > [!INCLUDE[Identify the webview through the add-in UI](../includes/identify-webview-in-ui.md)]
 
-## <a name="debug-a-task-pane-add-in-using-microsoft-edge-chromium-based-developer-tools"></a>Отламывка надстройки области задач с помощью Microsoft Edge (Chromium) средств разработчика
+## <a name="debug-a-task-pane-add-in-using-microsoft-edge-chromium-based-developer-tools"></a>Отламывка надстройки области задач с помощью Microsoft Edge (Chromium на основе) средств разработчика
 
 > [!NOTE]
-> Если надстройка [](../design/add-in-commands.md) имеет команду надстройки, которая выполняет функцию, функция выполняется в скрытом процессе браузера, из который не могут быть запущены средства разработчика Microsoft Edge (Chromium на основе), поэтому описанный в этой статье метод не может использоваться для отлаговки кода в функции.
+> Если надстройка имеет команду [](../design/add-in-commands.md) надстройки, которая выполняет функцию, функция выполняется в скрытом процессе браузера, из-за который нельзя запустить средства разработчика Microsoft Edge (Chromium на основе), поэтому описанный в этой статье метод не может использоваться для отлаговки кода в функции.
 
 1. [Боковая](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md) загрузка и запуск надстройки.
-1. Запустите Microsoft Edge (Chromium) средства разработчика одним из этих методов:
+1. Запустите Microsoft Edge (Chromium на основе) средств разработчика одним из этих методов:
 
    - Убедитесь, что в области задач надстройки имеется фокус и нажмите **кнопку Ctrl+Shift+I**.
-   - Щелкните правой кнопкой мыши области задач, чтобы открыть [](../design/task-pane-add-ins.md#personality-menu) контекстное меню и выбрать **инспектировать** или открыть меню личности и выбрать Attach **Debugger**.
+   - Щелкните правой кнопкой мыши области задач, чтобы открыть контекстное меню и выбрать **Inspect** или открыть меню [личности](../design/task-pane-add-ins.md#personality-menu) и выбрать **Attach Debugger**.
 
-1. Откройте **вкладку Источники.**
+1. Откройте **вкладку Источники** .
 1. Откройте файл, который необходимо отламыть следующими шагами.
 
-   1. Справа от верхней панели меню инструмента выберите **кнопку ...,** а затем выберите **Поиск.**
+   1. Справа от верхней панели меню инструмента выберите **кнопку ...** , а затем выберите **Поиск**.
    1. Введите строку кода из файла, который необходимо отлагировать в поле поиска. Это должно быть что-то, что вряд ли будет в любом другом файле.
    1. Выберите кнопку обновления.
    1. В результатах поиска выберите строку, чтобы открыть файл кода на области выше результатов поиска.
 
    :::image type="content" source="../images/open-file-in-edge-chromium-devtools.png" alt-text="Снимок экрана Chromium исходных вкладок средств разработки с 4 частями с меткой A через D.":::
 
-1. Чтобы установить точку разрыва, выберите номер строки в файле кода. Красная точка отображается строкой в кодовом файле. В окне отладки справа точка разрыва регистрируется в выпадаемой точке **Breakpoints.**
+1. Чтобы установить точку разрыва, выберите номер строки в файле кода. Красная точка отображается строкой в кодовом файле. В окне отладки справа точка разрыва регистрируется в выпадаемой точке **Breakpoints** .
 1. Выполните функции в надстройке, необходимые для срабатывания точки останова.
 
 > [!TIP]
-> Дополнительные сведения об использовании средств см. в Microsoft Edge [Обзор средств разработки.](/microsoft-edge/devtools-guide-chromium/)
+> Дополнительные сведения об использовании средств см. в Microsoft Edge [Обзор средств разработки](/microsoft-edge/devtools-guide-chromium/).
 
 ## <a name="debug-a-dialog-in-an-add-in"></a>Отламыв диалоговое окно надстройки
 
@@ -63,4 +63,4 @@ ms.locfileid: "60923550"
    - Нажмите **кнопку Ctrl+Shift+I** или **F12**.
    - Щелкните правой кнопкой мыши диалоговое окно, чтобы открыть контекстное меню и выбрать **Inspect**.
 
-1. Используйте этот инструмент так же, как для кода в области задач. См. в статье Отлаговка надстройки области задач с Microsoft Edge [(Chromium на основе)](#debug-a-task-pane-add-in-using-microsoft-edge-chromium-based-developer-tools) средств разработчика.
+1. Используйте этот инструмент так же, как для кода в области задач. См. в статье Отламывка надстройки области задач с Microsoft Edge [(Chromium на основе)](#debug-a-task-pane-add-in-using-microsoft-edge-chromium-based-developer-tools) средств разработчика.

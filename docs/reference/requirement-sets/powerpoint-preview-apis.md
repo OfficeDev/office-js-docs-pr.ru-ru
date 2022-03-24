@@ -4,11 +4,16 @@ description: Сведения о предстоящих PowerPoint API JavaScrip
 ms.date: 12/14/2021
 ms.prod: powerpoint
 ms.localizationpriority: medium
+ms.openlocfilehash: 2d43ca19d36b9f30e8699370bc97ecf194395d06
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63742945"
 ---
-
 # <a name="powerpoint-javascript-preview-apis"></a>PowerPoint API предварительного просмотра JavaScript
 
-Новые PowerPoint API JavaScript сначала вводятся в "предварительную версию", а затем становятся частью определенного набора требований с номерами после достаточного тестирования и получения отзывов пользователей.
+Новые PowerPoint API JavaScript сначала вводятся в режиме предварительного просмотра, а затем становятся частью определенного набора требований с номерами после достаточного тестирования и получения отзывов пользователей.
 
 В первой таблице представлен краткий обзор API, а в последующей таблице приведен подробный список.
 
@@ -45,15 +50,15 @@ ms.localizationpriority: medium
 ||[addLine(connectorType?: PowerPoint. ConnectorType, параметры?: PowerPoint. ShapeAddOptions)](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-addline-member(1))|Добавляет строку в слайд.|
 ||[addTextBox (текст: строка, параметры?: PowerPoint. ShapeAddOptions)](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-addtextbox-member(1))|Добавляет текстовое поле на слайд с предоставленным текстом в качестве контента.|
 |[ShapeFill](/javascript/api/powerpoint/powerpoint.shapefill)|[clear()](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-clear-member(1))|Очищает формат заливки фигуры.|
-||[foregroundColor](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-foregroundcolor-member)|Представляет цвет переднего плана заполнения формы в формате HTML#RRGGBB (например, "FFA500") или в виде htmL-цвета (например, "оранжевый").|
+||[foregroundColor](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-foregroundcolor-member)|Представляет цвет переднего плана заполнения фигуры в формате HTML-цвета в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[setSolidColor(color: string)](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-setsolidcolor-member(1))|Задает заливку одним цветом для фигуры.|
 ||[transparency](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-transparency-member)|Указывает процент прозрачности заполнения как значение от 0.0 (непрозрачная) до 1.0 (clear).|
-||[type](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-type-member)|Возвращает тип заливки фигуры.|
+||[тип](/javascript/api/powerpoint/powerpoint.shapefill#powerpoint-powerpoint-shapefill-type-member)|Возвращает тип заливки фигуры.|
 |[ShapeFont](/javascript/api/powerpoint/powerpoint.shapefont)|[bold](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-bold-member)|Указывает, является ли шрифт полужирным.|
 ||[color](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-color-member)|Представление цветового кода HTML текстового цвета (например, "#FF0000" представляет красный цвет).|
 ||[italic](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-italic-member)|Указывает, применяется ли курсив.|
 ||[name](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-name-member)|Представляет имя шрифта (например, "Калибри").|
-||[size](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-size-member)|Представляет размер шрифта в точках (например, 11).|
+||[размер](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-size-member)|Представляет размер шрифта в точках (например, 11).|
 ||[underline](/javascript/api/powerpoint/powerpoint.shapefont#powerpoint-powerpoint-shapefont-underline-member)|Тип подчеркивания, применяемый для шрифта.|
 |[ShapeLineFormat](/javascript/api/powerpoint/powerpoint.shapelineformat)|[color](/javascript/api/powerpoint/powerpoint.shapelineformat#powerpoint-powerpoint-shapelineformat-color-member)|Представляет цвет строки в формате HTML-цвета в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[dashStyle](/javascript/api/powerpoint/powerpoint.shapelineformat#powerpoint-powerpoint-shapelineformat-dashstyle-member)|Представляет стиль тире строки.|

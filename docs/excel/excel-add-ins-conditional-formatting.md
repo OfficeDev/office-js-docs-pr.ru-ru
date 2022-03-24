@@ -3,12 +3,12 @@ title: Применение условного форматирования к �
 description: Узнайте об условном форматирование в контексте Excel Надстройки JavaScript.
 ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3ce732da461808bfb36bd273ad085eeacdfafb
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: c69de0b998111226939dcb5b2a0d0eb6e47f0083
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340843"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744834"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 

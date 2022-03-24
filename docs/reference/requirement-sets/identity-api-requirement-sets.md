@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: API удостоверений заданная информация для Office надстройки.
-ms.date: 11/16/2021
+ms.date: 02/15/2022
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: d953e3ca2d135b96ab8b3219d9fe0f52fbda9d99
-ms.sourcegitcommit: 6e6c4803fdc0a3cc2c1bcd275288485a987551ff
+ms.openlocfilehash: bff7d75d538922f6d5d5d05a01306a4ba2ec836c
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61066718"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744930"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
@@ -17,7 +17,7 @@ ms.locfileid: "61066718"
 
 Надстройки Office работают в нескольких версиях Office. В следующей таблице перечислены наборы API удостоверений, Office клиентских приложений, поддерживаюющих этот набор требований, а также номера сборки или версии для Office приложения.
 
-|  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
+|  Набор обязательных элементов  | Office 2021 или более поздней Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(обе подписки<br> и разовая покупка Office Mac 2019 и более поздних периодов)   | Office в Интернете  |
 |:-----|:-----|:-----|:-----|:-----|:-----|
 | IdentityAPI 1.3  | Сборка 16.0.14326.20454 или более поздней | Версия 2008 (сборка 13127.20000) или более поздней версии | Не поддерживается | 16.40 или более поздняя | Microsoft Office SharePoint Online и OneDrive\* |
 
@@ -25,10 +25,10 @@ ms.locfileid: "61066718"
 
 ## <a name="outlook-and-identity-api-requirement-sets"></a>Outlook и наборы API удостоверений
 
-Чтобы потребовать, чтобы API удостоверений установил 1.3 в коде надстройки Outlook, проверьте, поддерживается ли он путем `isSetSupported('IdentityAPI', '1.3')` вызова. Объявление его в манифесте Outlook надстройки не поддерживается. Также можно определить, поддерживается ли API, проверив, не `undefined` ли он. Подробнее см. в статье [Использование API из наборов требования более поздних версий](outlook-api-requirement-sets.md#using-apis-from-later-requirement-sets).
+[!INCLUDE [How to use the Identity 1.3 requirement set in Outlook add-ins](../../includes/outlook-identity-13-note.md)]
 
 > [!NOTE]
-> В Outlook надстройки с помощью активации на основе событий интерфейс [OfficeRuntime.Auth](/javascript/api/office-runtime/officeruntime.auth) поддерживается в Office версии Windows версии 2108 (сборка 14326.20258) или более поздней версии. В [Office. Интерфейс Auth](/javascript/api/office/office.auth) поддерживается в версии 2109 (сборка 14425.10000) или более поздней версии. Дополнительные сведения в соответствии с вашей версией см. на странице история обновления для [Office 2021](/officeupdates/update-history-office-2021) или [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и как найти Office клиентскую версию и канал [обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
+> В Outlook с помощью активации на основе событий интерфейс [OfficeRuntime.Auth](/javascript/api/office-runtime/officeruntime.auth) поддерживается в Office версии Windows версии 2108 (сборка 14326.20258) или более поздней версии. В [Office. Интерфейс Auth](/javascript/api/office/office.auth) поддерживается в версии 2109 (сборка 14425.10000) или более поздней версии. Дополнительные сведения в соответствии с вашей версией см. на странице история обновления Office [2021](/officeupdates/update-history-office-2021) или [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и поиске клиентской версии Office и канала [обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 

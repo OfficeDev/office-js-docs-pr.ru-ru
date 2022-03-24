@@ -1,14 +1,14 @@
 ---
 title: 'Надстройки Office: дополнительные ресурсы'
-description: Полезные ресурсы по теме Office надстройки
+description: Полезные ресурсы Office надстройки.
 ms.date: 04/14/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 01bf4b89758194a2d9ea5bd1d59f755d47f32bbb
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 981f5fe89d1bc1a167ea3053693a110caf97f4f1
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150830"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745516"
 ---
 # <a name="office-add-ins-additional-resources"></a>Надстройки Office: дополнительные ресурсы
 
@@ -21,8 +21,8 @@ ms.locfileid: "59150830"
 |**Запросы на добавление функций API JavaScript для Office**| Чтобы отправить запрос на функции для API Office JavaScript, отправьте свою идею в Microsoft 365 [разработчиков Community](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform).|
 |**Ошибки в документации**| Если вы столкнулись с проблемой (ошибкой) с документацией, отправьте ее в репозиторий <a href="https://github.com/officedev/office-js-docs-pr/issues" target="_blank">OfficeDev/office-js-docs-pr</a> GitHub.|
 |**Обновления документации**| Чтобы самостоятельно внести изменения в документацию, выберите ссылку **Изменить** статью и отправьте запрос на вытягивать в репозиторий <a href="https://github.com/officedev/office-js-docs-pr" target="_blank">OfficeDev/office-js-docs-pr</a> GitHub.|
-|**Script Lab**| Если вы хотите изучить Office API JavaScript или попробовать API предварительного просмотра, вы можете использовать Script Lab в Excel, Outlook, PowerPoint и Word. Дополнительные сведения см. в статье [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md). |
-|**Курс Pluralsight о надстройках Office**| Курс Джона Брауна "Основы создания Office надстроек с <a href="https://www.pluralsight.com/courses/build-office-addins-js-api" target="_blank">Office API JavaScript"</a> учит вас разработке надстройки PowerPoint с нуля, включая сведения о том, как взаимодействовать с Trello и публиковать надстройку в Office Store.|
+|**Script Lab**| Если вы хотите изучить Office API JavaScript или опробуете API предварительного просмотра, вы можете использовать Script Lab в Excel, Outlook, PowerPoint и Word. Дополнительные сведения см. в статье [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md). |
+|**Курс Pluralsight о надстройках Office**| Курс Джона Брауна "Основы построения Office надстроек с Office API <a href="https://www.pluralsight.com/courses/build-office-addins-js-api" target="_blank">JavaScript"</a> учит вас разработке надстройки PowerPoint с нуля, включая сведения о том, как взаимодействовать с Trello и публиковать надстройку в Office Store.|
 |**Курс LinkedIn о надстройках Office**| <a href="https://www.linkedin.com/learning/microsoft-office-add-ins-for-developers/microsoft-office-add-ins?u=3322">Курс Билла Айера "Надстройки Microsoft Office для разработчиков"</a> содержит обзор платформы и описание многих основных понятий для надстроек Office.|
 |**Книга *"Создание надстроек Office с помощью Office.js"***| <a href="https://leanpub.com/buildingofficeaddins">В книге Майкла Златковского *"Создание надстроек Office с помощью Office.js"*</a> описаны принципы и шаблоны разработки, используемые в API 2016 для Excel, Word и OneNote. Майкл является участником группы расширяемости Office в корпорации Майкрософт и специалистом со статусом Microsoft MVP, но эта книга написана отдельно, без участия корпорации Майкрософт. Ни корпорация Майкрософт, ни Майкл не получают никакой прибыли от этой книги, так как вырученные за нее средства жертвуются на оказание помощи при стихийных бедствиях и гуманитарную благотворительность.|
 

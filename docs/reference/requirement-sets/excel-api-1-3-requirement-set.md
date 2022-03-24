@@ -4,22 +4,27 @@ description: Сведения о наборе требований ExcelApi 1.3.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 1bf8bc604c2c770f517878193994c1ed32640da1
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745341"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-13"></a>Новые возможности API JavaScript для Excel 1.3
 
 В ExcelApi 1.3 добавлена поддержка привязки к данным и базового доступа к pivotTable.
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, установленный 1.3. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.3 или более ранних, см. Excel API в наборе требований [1.3 или ранее](/javascript/api/excel?view=excel-js-1.3&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, за набором 1.3. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.3 или ранее, см. в Excel API в наборе требований [1.3 или ранее](/javascript/api/excel?view=excel-js-1.3&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
 |[Binding](/javascript/api/excel/excel.binding)|[delete()](/javascript/api/excel/excel.binding#excel-excel-binding-delete-member(1))|Удаляет привязку.|
 |[BindingCollection](/javascript/api/excel/excel.bindingcollection)|[add(range: Range \| string, bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#excel-excel-bindingcollection-add-member(1))|Добавляет привязку к определенному объекту Range.|
 ||[addFromNamedItem (имя: строка, bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#excel-excel-bindingcollection-addfromnameditem-member(1))|Добавляет новую привязку с учетом именованного элемента в книге.|
-||[addFromSelection(bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#excel-excel-bindingcollection-addfromselection-member(1))|Добавляет новую привязку с учетом выделенного в настоящий момент фрагмента.|
+||[addFromSelection (bindingType: Excel. BindingType, id: string)](/javascript/api/excel/excel.bindingcollection#excel-excel-bindingcollection-addfromselection-member(1))|Добавляет новую привязку с учетом выделенного в настоящий момент фрагмента.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[name](/javascript/api/excel/excel.pivottable#excel-excel-pivottable-name-member)|Имя сводной таблицы.|
 ||[refresh()](/javascript/api/excel/excel.pivottable#excel-excel-pivottable-refresh-member(1))|Обновляет сводную таблицу.|
 ||[worksheet](/javascript/api/excel/excel.pivottable#excel-excel-pivottable-worksheet-member)|Лист, содержащий текущую сводную таблицу.|

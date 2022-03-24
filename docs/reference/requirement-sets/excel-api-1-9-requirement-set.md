@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.9.
 ms.date: 04/01/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: f34b109f95f013cf27f0abfca9c2a8c6b1e4e7c9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746699"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-19"></a>Новые возможности в Excel API JavaScript 1.9
 
 С набором обязательных элементов 1.9 добавлено более 500 новых API Excel. В первой таблице представлен краткий обзор API, а в последующей таблице приведен подробный список.
@@ -24,7 +29,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.9. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.9 или более ранних, см. Excel API в наборе требований [1.9 или ранее](/javascript/api/excel?view=excel-js-1.9&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, за набором 1.9. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.9 или ранее, см. в Excel API в наборе требований [1.9 или ранее](/javascript/api/excel?view=excel-js-1.9&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -100,7 +105,7 @@ ms.localizationpriority: medium
 ||[allowUnderflow](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-allowunderflow-member)|Указывает, включен ли недополуч бин в диаграмме гистограммы или диаграмме pareto.|
 ||[count](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-count-member)|Указывает количество бинов диаграммы гистограммы или диаграммы pareto.|
 ||[overflowValue](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-overflowvalue-member)|Указывает значение переполнения ячейки диаграммы гистограммы или диаграммы pareto.|
-||[type](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-type-member)|Указывает тип бина для диаграммы гистограммы или диаграммы pareto.|
+||[тип](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-type-member)|Указывает тип бина для диаграммы гистограммы или диаграммы pareto.|
 ||[underflowValue](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-underflowvalue-member)|Указывает значение недополука бина для диаграммы гистограммы или диаграммы pareto.|
 ||[width](/javascript/api/excel/excel.chartbinoptions#excel-excel-chartbinoptions-width-member)|Указывает значение ширины ячейки диаграммы гистограммы или диаграммы pareto.|
 |[ChartBoxwhiskerOptions](/javascript/api/excel/excel.chartboxwhiskeroptions)|[quartileCalculation](/javascript/api/excel/excel.chartboxwhiskeroptions#excel-excel-chartboxwhiskeroptions-quartilecalculation-member)|Указывает, указывается ли тип квартильного вычисления диаграммы полей и усов.|
@@ -176,7 +181,7 @@ ms.localizationpriority: medium
 ||[shape](/javascript/api/excel/excel.image#excel-excel-image-shape-member)|Возвращает объект `Shape` , связанный с изображением.|
 |[IterativeCalculation](/javascript/api/excel/excel.iterativecalculation)|[enabled](/javascript/api/excel/excel.iterativecalculation#excel-excel-iterativecalculation-enabled-member)|Значение true, если в Excel используется итерация для разрешения циклических ссылок.|
 ||[maxChange](/javascript/api/excel/excel.iterativecalculation#excel-excel-iterativecalculation-maxchange-member)|Указывает максимальное количество изменений между каждой итерацией, Excel устраняет круговые ссылки.|
-||[maxIteration](/javascript/api/excel/excel.iterativecalculation#excel-excel-iterativecalculation-maxiteration-member)|Указывает максимальное количество итераций, Excel можно использовать для решения круговой ссылки.|
+||[maxIteration](/javascript/api/excel/excel.iterativecalculation#excel-excel-iterativecalculation-maxiteration-member)|Указывает максимальное количество итераций, которые Excel для решения круговой ссылки.|
 |[Line](/javascript/api/excel/excel.line)|[beginArrowheadLength](/javascript/api/excel/excel.line#excel-excel-line-beginarrowheadlength-member)|Представляет длину наконечника в начале указанной линии.|
 ||[beginArrowheadStyle](/javascript/api/excel/excel.line#excel-excel-line-beginarrowheadstyle-member)|Представляет стиль наконечника в начале указанной линии.|
 ||[beginArrowheadWidth](/javascript/api/excel/excel.line#excel-excel-line-beginarrowheadwidth-member)|Представляет ширину наконечника в начале указанной линии.|
@@ -332,7 +337,7 @@ ms.localizationpriority: medium
 ||[style](/javascript/api/excel/excel.settablecellproperties#excel-excel-settablecellproperties-style-member)|Представляет свойство `style`.|
 |[SettableColumnProperties](/javascript/api/excel/excel.settablecolumnproperties)|[columnHidden](/javascript/api/excel/excel.settablecolumnproperties#excel-excel-settablecolumnproperties-columnhidden-member)|Представляет свойство `columnHidden`.|
 ||[columnWidth](/javascript/api/excel/excel.settablecolumnproperties#excel-excel-settablecolumnproperties-columnwidth-member)||
-||[формат: Excel. CellPropertiesFormat & { columnWidth](/javascript/api/excel/excel.settablecolumnproperties#excel-excel-settablecolumnproperties-format-member)|Представляет свойство `format`.|
+||[формат: Excel. CellPropertiesFormat & {columnWidth](/javascript/api/excel/excel.settablecolumnproperties#excel-excel-settablecolumnproperties-format-member)|Представляет свойство `format`.|
 |[SettableRowProperties](/javascript/api/excel/excel.settablerowproperties)|[формат: Excel. CellPropertiesFormat & { rowHeight](/javascript/api/excel/excel.settablerowproperties#excel-excel-settablerowproperties-format-member)|Представляет свойство `format`.|
 ||[rowHeight](/javascript/api/excel/excel.settablerowproperties#excel-excel-settablerowproperties-rowheight-member)||
 ||[rowHidden](/javascript/api/excel/excel.settablerowproperties#excel-excel-settablerowproperties-rowhidden-member)|Представляет свойство `rowHidden`.|
@@ -386,15 +391,15 @@ ms.localizationpriority: medium
 ||[type](/javascript/api/excel/excel.shapedeactivatedeventargs#excel-excel-shapedeactivatedeventargs-type-member)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.shapedeactivatedeventargs#excel-excel-shapedeactivatedeventargs-worksheetid-member)|Получает ID таблицы, в которой фигура деактивирована.|
 |[ShapeFill](/javascript/api/excel/excel.shapefill)|[clear()](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-clear-member(1))|Очищает формат заливки фигуры.|
-||[foregroundColor](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-foregroundcolor-member)|Представляет цвет переднего плана заполнения фигуры в формате HTML-цвета в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый")|
+||[foregroundColor](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-foregroundcolor-member)|Представляет цвет переднего плана заполнения фигуры в формате HTML#RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый")|
 ||[setSolidColor(color: string)](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-setsolidcolor-member(1))|Задает заливку одним цветом для фигуры.|
 ||[transparency](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-transparency-member)|Указывает процент прозрачности заполнения как значение от 0.0 (непрозрачная) до 1.0 (clear).|
-||[type](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-type-member)|Возвращает тип заливки фигуры.|
+||[тип](/javascript/api/excel/excel.shapefill#excel-excel-shapefill-type-member)|Возвращает тип заливки фигуры.|
 |[ShapeFont](/javascript/api/excel/excel.shapefont)|[bold](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-bold-member)|Указывает, является ли шрифт полужирным.|
 ||[color](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-color-member)|Представление цветового кода HTML текстового цвета (например, "#FF0000" представляет красный цвет).|
 ||[italic](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-italic-member)|Указывает, применяется ли курсив.|
 ||[name](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-name-member)|Представляет имя шрифта (например, "Калибри").|
-||[size](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-size-member)|Представляет размер шрифта в точках (например, 11).|
+||[размер](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-size-member)|Представляет размер шрифта в точках (например, 11).|
 ||[underline](/javascript/api/excel/excel.shapefont#excel-excel-shapefont-underline-member)|Тип подчеркивания, применяемый для шрифта.|
 |[ShapeGroup](/javascript/api/excel/excel.shapegroup)|[id](/javascript/api/excel/excel.shapegroup#excel-excel-shapegroup-id-member)|Указывает идентификатор формы.|
 ||[shape](/javascript/api/excel/excel.shapegroup#excel-excel-shapegroup-shape-member)|Возвращает объект `Shape` , связанный с группой.|

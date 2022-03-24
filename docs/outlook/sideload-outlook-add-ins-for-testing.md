@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Outlook для тестирования
 description: Используйте загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
-ms.date: 10/22/2021
+ms.date: 03/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 971df0f2e151181f1d595cb0fcd0c0f82b26d759
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: 5f9a76aec20574b5397df9fcfd18e4714e5c8dd4
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711247"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745725"
 ---
 # <a name="sideload-outlook-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Outlook для тестирования
 
@@ -49,7 +49,7 @@ ms.locfileid: "63711247"
 > [!NOTE]
 > Если ваша организация добавили свой логотип на панель инструментов почтового ящика, вы можете увидеть изображение, которое будет немного отличаться от показанных ранее изображений.
 
-### <a name="new-outlook-on-the-web"></a>Новые Outlook в Интернете
+#### <a name="new-outlook-on-the-web"></a>Новые Outlook в Интернете
 
 1. Откройте [Outlook в Интернете](https://outlook.office.com).
 
@@ -69,7 +69,7 @@ ms.locfileid: "63711247"
 
 1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
 
-### <a name="classic-outlook-on-the-web"></a>Классический Outlook в Интернете
+#### <a name="classic-outlook-on-the-web"></a>Классический Outlook в Интернете
 
 1. Откройте [Outlook в Интернете](https://outlook.office.com).
 
@@ -89,22 +89,44 @@ ms.locfileid: "63711247"
 
 ### <a name="outlook-on-the-desktop"></a>Outlook на рабочем столе
 
-### <a name="outlook-2016-or-later"></a>Outlook 2016 или более поздней
+#### <a name="outlook-2016-or-later-on-windows-or-mac"></a>Outlook 2016 или более поздней Windows mac
 
 1. Откройте Outlook 2016 или позже на Windows Mac.
 
 1. Нажмите кнопку **Получить надстройки** на ленте.
 
-    ![Outlook 2016 лента, указывав на кнопку Получить надстройки.](../images/outlook-sideload-desktop-store.png)
+    # <a name="windows"></a>[Windows](#tab/windows)
+
+    ![Outlook на Windows ленте, указывав на кнопку Get Add-ins.](../images/outlook-sideload-desktop-windows.png)
+
+    # <a name="mac"></a>[Mac](#tab/mac)
+
+    ![Outlook на ленте Mac, указывав на кнопку Получить надстройки.](../images/outlook-sideload-mac-classic.png)
+
+    ---
 
     > [!IMPORTANT]
-    > Если вы не видите кнопку **Get Add-ins** в версии Outlook, выберите:
+    > Если вы не видите кнопку **Get Add-ins** в Outlook, сделайте одно из следующих вариантов:
     >
-    > - **Сохранить** кнопку на ленте, если это доступно.
+    > # <a name="windows"></a>[Windows](#tab/windows)
     >
-    >   ИЛИ
+    > - Если вы настроили макет ленты на упрощенную ленту, выберите кнопку ellipsis (`...`) из ленты, а затем выберите **Get Add-ins**.
     >
-    > - **Меню** файла выберите кнопку **Управление** надстройками на вкладке **Info**, чтобы открыть диалоговое  окно надстройки в Outlook в Интернете.<br>Дополнительные статьи о веб-опыте см. в предыдущем разделе [Sideload надстройки в Outlook в Интернете](#outlook-on-the-web).
+    >   ![Outlook на Windows на кнопку Получить надстройки с кнопки ellipsis.](../images/outlook-sideload-simplified-ribbon.png)
+    >
+    > - Выберите **кнопку Store** на ленте, если она доступна.
+    >
+    > - Выберите меню **File**, а затем выберите кнопку **Управление** надстройками на вкладке **Info**, чтобы открыть  диалоговое окно надстройки в Outlook в Интернете. Дополнительные статьи о веб-опыте см. в предыдущем разделе [Sideload надстройки в Outlook в Интернете](#outlook-on-the-web).
+    >
+    > # <a name="mac"></a>[Mac](#tab/mac)
+    >
+    > - Выберите кнопку ellipsis (`...`) из ленты, а затем выберите **Получить надстройки**.
+    >
+    >   ![Outlook на Mac, указыв на кнопку Get Add-ins с кнопки ellipsis.](../images/outlook-sideload-deskop-mac.png)
+    >
+    > - Выберите **кнопку Store** на ленте, если она доступна.
+    >
+    > ---
 
 1. Если в верхней части диалогов есть вкладки, убедитесь, что вкладка **Надстройки** выбрана. Выберите **Мои надстройки**.
 
@@ -116,7 +138,7 @@ ms.locfileid: "63711247"
 
 1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
 
-### <a name="outlook-2013"></a>Outlook 2013
+#### <a name="outlook-2013-on-windows"></a>Outlook 2013 для Windows
 
 1. Откройте Outlook 2013 на Windows.
 

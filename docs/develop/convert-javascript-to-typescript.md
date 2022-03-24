@@ -3,12 +3,12 @@ title: Преобразование проекта надстройки Office �
 description: Узнайте, как преобразовать проект Office надстройки в Visual Studio для использования TypeScript.
 ms.date: 02/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 02ff765533edbd8e3cdd4dba246afed78948c0d2
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: 9c27e0d08421c397de92945e9dc450db1bc2b21f
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711170"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743511"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 

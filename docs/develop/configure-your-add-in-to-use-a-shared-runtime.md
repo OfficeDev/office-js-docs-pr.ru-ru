@@ -4,12 +4,12 @@ title: Настройка надстройки Office для использов�
 ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
 ms.localizationpriority: high
-ms.openlocfilehash: 6d3eeef198ca7b5b99a9a459a3094e5c6a3d6707
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: db4ed73459c76089c67820cbf3099c071ad01ad2
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711177"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743928"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 

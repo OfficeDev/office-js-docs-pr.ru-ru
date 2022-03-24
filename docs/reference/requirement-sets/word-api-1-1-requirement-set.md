@@ -1,14 +1,19 @@
 ---
 title: Набор API API Word JavaScript 1.1
-description: Сведения о наборе требований WordApi 1.1
+description: Сведения о наборе требований WordApi 1.1.
 ms.date: 11/01/2021
 ms.prod: word
 ms.localizationpriority: medium
+ms.openlocfilehash: dfcb1954cd9522de6165130cc115fddbb5f3ec45
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744214"
 ---
-
 # <a name="whats-new-in-word-javascript-api-11"></a>Что нового в API JavaScript Word 1.1
 
-WordApi 1.1 — это первый набор требований API Word JavaScript. Это единственный набор API Word, поддерживаемый Word 2016.
+WordApi 1.1 — это первый набор требований API Word JavaScript. Это единственный набор требований к API Word, поддерживаемый Word 2016.
 
 ## <a name="api-list"></a>Список API
 
@@ -77,7 +82,7 @@ WordApi 1.1 — это первый набор требований API Word Jav
 ||[tag](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-tag-member)|Возвращает или задает тег для определения элемента управления содержимым.|
 ||[text](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-text-member)|Возвращает текст элемента управления содержимым.|
 ||[заголовок](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-title-member)|Получает или задает заголовок для элемента управления содержимым.|
-||[type](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-type-member)|Получает тип элемента управления содержимым.|
+||[тип](/javascript/api/word/word.contentcontrol#word-word-contentcontrol-type-member)|Получает тип элемента управления содержимым.|
 |[ContentControlCollection](/javascript/api/word/word.contentcontrolcollection)|[getById(id: number)](/javascript/api/word/word.contentcontrolcollection#word-word-contentcontrolcollection-getbyid-member(1))|Возвращает элемент управления содержимым по его идентификатору.|
 ||[getByTag(tag: string)](/javascript/api/word/word.contentcontrolcollection#word-word-contentcontrolcollection-getbytag-member(1))|Возвращает элементы управления содержимым с указанным тегом.|
 ||[getByTitle(title: string)](/javascript/api/word/word.contentcontrolcollection#word-word-contentcontrolcollection-getbytitle-member(1))|Возвращает элементы управления контентом с указанным заголовком.|
@@ -95,7 +100,7 @@ WordApi 1.1 — это первый набор требований API Word Jav
 ||[highlightColor](/javascript/api/word/word.font#word-word-font-highlightcolor-member)|Получает или задает цвет выделения.|
 ||[italic](/javascript/api/word/word.font#word-word-font-italic-member)|Возвращает или задает значение, указывающее, является ли шрифт курсивным.|
 ||[name](/javascript/api/word/word.font#word-word-font-name-member)|Получает или задает значение, представляющее имя шрифта.|
-||[size](/javascript/api/word/word.font#word-word-font-size-member)|Получает или задает значение, представляющее размер шрифта в пунктах.|
+||[размер](/javascript/api/word/word.font#word-word-font-size-member)|Получает или задает значение, представляющее размер шрифта в пунктах.|
 ||[strikeThrough](/javascript/api/word/word.font#word-word-font-strikethrough-member)|Получает или задает значение, которое указывает, есть ли у шрифта забастовка.|
 ||[subscript](/javascript/api/word/word.font#word-word-font-subscript-member)|Возвращает или задает значение, указывающее, является ли шрифт подстрочным.|
 ||[superscript](/javascript/api/word/word.font#word-word-font-superscript-member)|Возвращает или задает значение, указывающее, является ли шрифт надстрочным.|

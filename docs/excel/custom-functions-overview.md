@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 44509ab9188d812cf85c9ffa25534444f4d66fe5
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: d3866c5091c586c039029cab205a5ae0519e992b
+ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074219"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63711037"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -40,7 +40,7 @@ function sphereVolume(radius) {
 
 ## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
-Если использовать [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, он создаст файлы, управляющие вашими функциями и областью задач. Мы сосредоточимся на файлах, которые важны для пользовательских функций.
+Если использовать [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md) для создания в Excel проекта надстройки с пользовательскими функциями, он создаст файлы, управляющие вашими функциями и областью задач. Мы сосредоточимся на файлах, которые важны для пользовательских функций.
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
@@ -70,15 +70,15 @@ function add(first, second){
 
 ### <a name="manifest-file"></a>Файл манифеста
 
-XML-файл манифеста для надстройки, определяющий пользовательские функции (**./manifest.xml** в проекте, созданном генератором Yo Office), выполняет несколько задач.
+Файл манифеста XML для надстройки, определяющий пользовательские функции (**./manifest.xml** в проекте, созданном [генератором Yeoman для надстроек Office](../develop/yeoman-generator-overview.md)), выполняет несколько задач.
 
 - Определяет пространство имен для ваших пользовательских функций. Пространство имен добавляется к пользовательским функциям, чтобы клиенты могли определить ваши функции в рамках надстройки.
 - Использует уникальные для манифеста пользовательских функций элементы `<ExtensionPoint>` и `<Resources>`. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
 - Указывает, какую среду выполнения использовать для вашей пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если нет особой потребности в использовании другой среды, поскольку общая позволяет делиться данными между функциями и областью задач.
 
-Если для создания файлов используется генератор Yo Office, рекомендуется настроить манифест для использования общей среды выполнения, так как это не настроено по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+Если для создания файлов используется [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), рекомендуется настроить манифест для использования общей среды выполнения, так как это не является значением по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
-Чтобы просмотреть полный рабочий манифест из примера надстройки, см. [этот репозиторий GitHub](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Samples/excel-shared-runtime-global-state/manifest.xml).
+Полный рабочий манифест из примера надстройки можно просмотреть в [одном из репозиториев Github для примеров надстроек Office](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Samples/excel-shared-runtime-global-state/manifest.xml).
 
 [!include[manifest guidance](../includes/manifest-guidance.md)]
 
@@ -90,7 +90,7 @@ Excel для Интернета и Windows, подключенный к подп
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
+Хотите попробовать пользовательские функции? Ознакомьтесь с простой [краткой инструкцией по работе с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
 
 Еще одно простое средство ознакомления с пользовательскими функциями — [Script Lab](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=1ada79ac-6392-438d-bb16-fce6994a2a7e&omexanonuid=f7b03101-ec22-4270-a274-bcf16c762039&referralurl=https%3a%2f%2fgithub.com%2fofficedev%2fscript-lab), надстройка, в которой можно экспериментировать с пользовательскими функциями прямо в Excel. Вы можете попробовать создать собственные пользовательские функции или поиграть с готовыми примерами.
 

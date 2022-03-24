@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по надстройкам Outlook
-summary: С Outlook надстройки можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в Outlook на нескольких платформах, в том числе в Интернете, Windows, Mac и iOS. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Outlook.
+summary: С Outlook надстроек вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в Outlook различных платформах, в том числе в Интернете, Windows, Mac и iOS. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Outlook.
 metadata:
   title: Документация по надстройкам Outlook
   description: Учебные ресурсы по надстройкам Outlook.
@@ -8,12 +8,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 03/29/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 00b0db41c60a8eaf23d9cee39126df2413ee9c68
-  ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+  ms.openlocfilehash: ac60bd35b7140dbdd2d2ca46196e5fd90318efa8
+  ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "59154109"
+  ms.lasthandoff: 03/23/2022
+  ms.locfileid: "63745060"
 landingContent:
 - title: О Outlook надстройки
   linkLists:

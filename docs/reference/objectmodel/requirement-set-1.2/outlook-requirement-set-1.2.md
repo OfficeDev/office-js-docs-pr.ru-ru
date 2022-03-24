@@ -3,16 +3,16 @@ title: Набор требований к API надстройки Outlook 1.2
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.2.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 75acb3ae5122c4edb8d0661b3cb08a5cc4d4d15a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 14f94bf8b1a1b3560e46f5d4d75955606af8cab7
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153881"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743675"
 ---
 # <a name="outlook-add-in-api-requirement-set-12"></a>Набор требований к API надстройки Outlook 1.2
 
-Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
+Подмножество API Outlook надстройки в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).

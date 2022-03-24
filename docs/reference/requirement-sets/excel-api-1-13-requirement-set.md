@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.13
 ms.date: 07/09/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 5d7358c35dc4560bf5478bb9ad9970fc364a1b6a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747048"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-113"></a>Новые возможности в Excel API JavaScript 1.13
 
 В ExcelApi 1.13 добавлен метод вставки листа в книгу из строки с кодированной базой 64 и событие для обнаружения активации книги. Это также увеличило поддержку формул в диапазонах, добавив API для отслеживания изменений формул и поиска прямых зависимых ячеек формулы. Кроме того, она расширила поддержку PivotTable, добавив API PivotLayout для ALT-текста, стиля и управления пустыми ячейками.
@@ -19,7 +24,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.13. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.13 или ранее, см. в Excel API в наборе требований [1.13 или ранее](/javascript/api/excel?view=excel-js-1.13&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, установленный 1.13. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.13 или ранее, см. в Excel API в наборе требований [1.13 или ранее](/javascript/api/excel?view=excel-js-1.13&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|

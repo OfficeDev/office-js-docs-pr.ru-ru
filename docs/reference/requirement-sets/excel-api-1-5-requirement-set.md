@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.5.
 ms.date: 03/19/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 60da29607a8c8a22b38c9e19345a574e4f923922
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745210"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-15"></a>Новые возможности API JavaScript для Excel 1.5
 
 ExcelApi 1.5 добавляет пользовательские XML-части. Они доступны через настраиваемую [коллекцию частей XML](/javascript/api/excel/excel.workbook#excel-excel-workbook-customxmlparts-member) в объекте книги.
@@ -25,7 +30,7 @@ ExcelApi 1.5 добавляет пользовательские XML-части.
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.5. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.5 или более ранних, см. в Excel API в наборе требований [1.5 или ранее](/javascript/api/excel?view=excel-js-1.5&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, установленный 1.5. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.5 или более ранних, см. в Excel API в наборе требований [1.5 или ранее](/javascript/api/excel?view=excel-js-1.5&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -48,7 +53,7 @@ ExcelApi 1.5 добавляет пользовательские XML-части.
 ||[items](/javascript/api/excel/excel.customxmlpartscopedcollection#excel-excel-customxmlpartscopedcollection-items-member)|Получает загруженные дочерние элементы в этой коллекции.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[id](/javascript/api/excel/excel.pivottable#excel-excel-pivottable-id-member)|ID of the PivotTable.|
 |[RequestContext](/javascript/api/excel/excel.requestcontext)|[runtime](/javascript/api/excel/excel.requestcontext#excel-excel-requestcontext-runtime-member)||
-|[Время выполнения](/javascript/api/excel/excel.runtime)|||
+|[Runtime](/javascript/api/excel/excel.runtime)|||
 |[Workbook](/javascript/api/excel/excel.workbook)|[customXmlParts](/javascript/api/excel/excel.workbook#excel-excel-workbook-customxmlparts-member)|Представляет коллекцию пользовательских частей XML, содержащихся в этой книге.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[getNext (visibleOnly?: boolean)](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getnext-member(1))|Получает таблицу, которая следует за этим.|
 ||[getNextOrNullObject (visibleOnly?: boolean)](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getnextornullobject-member(1))|Получает таблицу, которая следует за этим.|

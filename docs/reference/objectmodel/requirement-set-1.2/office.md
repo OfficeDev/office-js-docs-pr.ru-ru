@@ -1,20 +1,20 @@
 ---
 title: Office пространства имен — набор требований 1.2
-description: Office пространства имен, доступных для Outlook надстройки с помощью набора API почтовых ящиков 1.2.
+description: Office, доступные для Outlook надстройки с использованием набора API API почтовых ящиков 1.2.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 03bc026a428f33a01079f9337e4008a4bec190c8
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: 04ebf7be90ebecb646288db0287f712d2b429e27
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237310"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746762"
 ---
 # <a name="office-mailbox-requirement-set-12"></a>Office (набор требований к почтовым ящикам 1.2)
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office?view=outlook-js-1.2&preserve-view=true).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -32,12 +32,12 @@ ms.locfileid: "60237310"
 | Перечисление | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
 | [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
 
-[MailboxEnums:](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.2&preserve-view=true)включает ряд Outlook определенных списков, например , , `ItemType` `EntityType` , `AttachmentType` , , , `RecipientType` и `ResponseType` `ItemNotificationMessageType` .
+[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.2&preserve-view=true): включает ряд Outlook определенных списков, `ItemType`например , , `EntityType`, `AttachmentType`, , `RecipientType`, и `ResponseType``ItemNotificationMessageType`.
 
 ## <a name="enumeration-details"></a>Сведения о переумериях
 
@@ -56,7 +56,7 @@ ms.locfileid: "60237310"
 |`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| String|Вызов завершился ошибкой.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -83,7 +83,7 @@ ms.locfileid: "60237310"
 |`Html`| Строка|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -110,7 +110,7 @@ ms.locfileid: "60237310"
 |`Body`| Строка|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

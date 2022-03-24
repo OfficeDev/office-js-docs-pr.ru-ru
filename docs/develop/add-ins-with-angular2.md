@@ -1,21 +1,21 @@
 ---
 title: Разработка надстроек Office с помощью Angular
-description: Используйте Angular для создания надстройки Office в качестве приложения для одной страницы.
+description: Используйте Angular для создания надстройки Office в качестве приложения на одной странице.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 87d63fb8cc6c78d791ca9f5f9231abf375a7b2a1
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: daaeac63055edeadc12dcff727f63b19ffd5a00a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150774"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743655"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
 В этой статье приведены рекомендации по использованию Angular 2 и более поздних версий для создания надстройки Office в виде одностраничного приложения.
 
 > [!NOTE]
-> Вы можете поделиться опытом по использованию Angular для создания надстроек Office? Вы можете внести свой вклад в эту статью [в GitHub](https://github.com/OfficeDev/office-js-docs-pr/blob/master/docs/develop/add-ins-with-angular2.md) или предоставить свои отзывы, подав вопрос [в](https://github.com/OfficeDev/office-js-docs-pr/issues) репо.
+> Вы можете поделиться опытом по использованию Angular для создания надстроек Office? Вы можете внести свой вклад в эту статью [в GitHub](https://github.com/OfficeDev/office-js-docs-pr/blob/master/docs/develop/add-ins-with-angular2.md) или предоставить свои отзывы, подав [вопрос в](https://github.com/OfficeDev/office-js-docs-pr/issues) репо.
 
 Пример надстройки Office, созданной на платформе Angular, приведен в статье [Надстройка на основе Angular для проверки стиля в приложении Word](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker).
 
@@ -29,7 +29,7 @@ npm install --save-dev @types/office-js
 
 ## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна определяться в методе Office.initialize
 
-На любой странице, на которую Office, Word или Excel API JavaScript, код должен сначала назначить метод `Office.initialize` свойству. (Если у вас нет кода инициализации, тело метода может быть просто пустым " символы", но вы не должны оставлять свойство `{}` `Office.initialize` неопределенным. Дополнительные сведения см. в [материале Initialize your Office надстройки.)](initialize-add-in.md) Office вызывает этот метод сразу после инициализации Office JavaScript.
+На любой странице, на которую Office, Word или Excel API JavaScript, код должен сначала назначить метод свойству`Office.initialize`. (Если у вас нет кода инициализации, тело метода может быть пустым "`{}`" символов, `Office.initialize` но вы не должны оставлять свойство неопределенным. Дополнительные сведения см. в Office надстройки[.)](initialize-add-in.md) Office этот метод вызывается сразу после инициализации библиотек Office JavaScript.
 
 **Вызов кода начальной загрузки на основе Angular необходимо задать в методе, который назначен `Office.initialize`**, чтобы сначала выполнялась инициализация библиотек JavaScript для Office. Вот простой пример, в котором показано, как это сделать. Этот код должен находиться в файле main.ts проекта.
 
@@ -82,7 +82,7 @@ export class AppRoutingModule { }
 
 Метод [displayDialogAsync](/javascript/api/office/office.ui) принимает параметр, определяющий URL-адрес страницы, которую нужно открыть в диалоговом окне. В вашей надстройке может быть отдельная HTML-страница (отличающаяся от базовой) для передачи в этот параметр, или же вы можете передать URL-адрес маршрута в программе Angular.
 
-Важно помнить, что в случае передачи маршрута диалоговое окно создает новое окно с собственным контекстом выполнения. Базовая страница со всем ее кодом инициализации и начальной загрузки запускается снова в этом новом контексте, а возможным переменным присваиваются первоначальные значения в диалоговом окне. Такой способ приводит к запуску второго экземпляра одностраничного приложения в диалоговом окне. Код, меняющий переменные в диалоговом окне, не меняет версию области задач этих переменных. Кроме того, диалоговое окно имеет собственное хранилище сеансов (свойство [Window.sessionStorage),](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) которое не доступно из кода в области задач.  
+Важно помнить, что в случае передачи маршрута диалоговое окно создает новое окно с собственным контекстом выполнения. Базовая страница со всем ее кодом инициализации и начальной загрузки запускается снова в этом новом контексте, а возможным переменным присваиваются первоначальные значения в диалоговом окне. Такой способ приводит к запуску второго экземпляра одностраничного приложения в диалоговом окне. Код, меняющий переменные в диалоговом окне, не меняет версию области задач этих переменных. Кроме того, диалоговое окно имеет собственное хранилище сеансов (свойство [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) ), которое не доступно из кода в области задач.  
 
 ## <a name="trigger-the-ui-update"></a>Запуск обновления пользовательского интерфейса
 
@@ -154,7 +154,7 @@ ng serve --aot
 
 ## <a name="support-internet-explorer-if-youre-dynamically-loading-officejs"></a>Поддержка Internet Explorer при динамической загрузке Office.js
 
-На основе Windows версии и Office настольного клиента, в котором работает надстройка, надстройка может использовать Internet Explorer 11. (Дополнительные сведения см. в [браузерах, используемых Office надстройки.)](../concepts/browsers-used-by-office-web-add-ins.md) Angular зависит от нескольких API, но эти API не работают в времени запуска IE, встроенном в Windows `window.history` настольных клиентов. Если эти API не работают, надстройка может не работать должным образом, например, она может загрузить пустую области задач. Чтобы смягчить это, Office.js обнуляет эти API. Однако при динамической загрузке Office.js AngularJS может загрузиться до Office.js. В этом случае необходимо отключить API, добавив следующий код на страницуindex.html`window.history` надстройки. 
+На основе Windows и Office настольного клиента, в котором работает надстройка, надстройка может использовать Internet Explorer 11. (Дополнительные сведения см. в [браузерах, используемых Office надстройки](../concepts/browsers-used-by-office-web-add-ins.md).) Angular зависит от нескольких `window.history` API, но эти API не работают в рабочем времени IE, встроенном в Windows настольных клиентов. Если эти API не работают, надстройка может не работать должным образом, например, она может загрузить пустую области задач. Чтобы смягчить это, Office.js обнуляет эти API. Однако при динамической загрузке Office.js AngularJS может загрузиться перед Office.js. В этом случае необходимо `window.history` отключить API, добавив следующий код на страницу **index.html** надстройки.
 
 ```js
 <script type="text/javascript">window.history.replaceState=null;window.history.pushState=null;</script>

@@ -3,12 +3,12 @@ title: Получение всего документа из надстройк�
 description: Узнайте, как получить весь документ из надстройки Word.
 ms.date: 12/04/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 158161cd74fe5437acf13c03274d35536a35b8be
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 1ea875bf415ef65f8d73ceb0342d8c1881eae18b
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151186"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745655"
 ---
 # <a name="get-the-whole-document-from-an-add-in-for-word-or-powerpoint"></a>Получите весь документ из надстройки для Word или PowerPoint
 

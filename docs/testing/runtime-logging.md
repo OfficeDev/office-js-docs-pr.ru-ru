@@ -3,12 +3,12 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f3e135ef051b79fcfba7aac1252d10ec1109f25d
-ms.sourcegitcommit: 997a20f9fb011b96a50ceb04a4b9943d92d6ecf4
+ms.openlocfilehash: f6fd5e2c184f9daceab999e371e0abab9146d5fb
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "61081444"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745863"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
@@ -85,7 +85,7 @@ ms.locfileid: "61081444"
 
     `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
 
-    Установите одно из следующих значений, чтобы включить ведение журнала времени для `<bundle id>` соответствующего приложения.
+    Установите `<bundle id>` одно из следующих значений, чтобы включить ведение журнала времени для соответствующего приложения.
 
     - `com.microsoft.Word`
     - `com.microsoft.Excel`
@@ -145,4 +145,4 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
-- [Отламывка надстроек с помощью средств разработчика в Microsoft Edge (Chromium основе)](debug-add-ins-using-devtools-edge-chromium.md) 
+- [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md) 

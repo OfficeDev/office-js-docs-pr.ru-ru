@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов cочетаний клавиш
-description: Клавиша Shortcuts заданная информация для Office надстройки.
-ms.date: 02/07/2022
+description: Для надстройок Office набор Office клавиш.
+ms.date: 02/15/2022
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 074460510e054cdcfbeca4676883c4180bb2202d
-ms.sourcegitcommit: d01aa8101630031515bf27f14361c5a3062c3ec4
+ms.openlocfilehash: bf7cd3cb8e0a6054f3e279e148e4b47c480e28fb
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62467845"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745908"
 ---
 # <a name="keyboard-shortcuts-requirement-sets"></a>Наборы обязательных элементов cочетаний клавиш
 
@@ -17,9 +17,9 @@ ms.locfileid: "62467845"
 
 Надстройки Office работают в нескольких версиях Office. В следующей таблице перечислены наборы требований к клавишам shortcuts, Office клиентские приложения, которые поддерживают этот набор требований, а также номера сборки или версии для Office приложения.
 
-|  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
+|  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(обе подписки<br> и разовая покупка Office Mac 2019 и более поздних периодов)   | Office в Интернете  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| KeyboardShortcuts 1.1  | Н/Д | Версия: 2111 (сборка 14701.10000) | Н/Д | 16.55 | Сентябрь 2021 г. |
+| KeyboardShortcuts 1.1  | Недоступно | Версия: 2111 (сборка 14701.10000) | Недоступно | 16.55 | Сентябрь 2021 г. |
 
 > [!NOTE]
 > Набор **требований KeyboardShortcuts 1.1** поддерживается только в Excel.
@@ -37,7 +37,7 @@ ms.locfileid: "62467845"
 
 ## <a name="keyboardshortcuts-11"></a>KeyboardShortcuts 1.1
 
-Сведения об API в этом наборе требований см. [в Office.actions](/javascript/api/office/office.actions).
+Сведения об API в этом наборе требований см. в [Office.actions](/javascript/api/office/office.actions).
 
 ## <a name="see-also"></a>См. также
 

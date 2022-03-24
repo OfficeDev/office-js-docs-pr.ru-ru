@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.8.
 ms.date: 03/19/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 39f3a5daf89849d3f8517794ab8cd4214309a667
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746858"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности в Excel API JavaScript 1.8
 
 Функции набора обязательных элементов API JavaScript для Excel 1.8 включают API для сводных таблиц, проверку данных, диаграммы, события для диаграмм, параметры производительности и создание рабочей книги.
@@ -28,7 +33,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.8. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.8 или ранее, см. в Excel API в наборе требований [1.8 или ранее](/javascript/api/excel?view=excel-js-1.8&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, установленный 1.8. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.8 или ранее, см. в Excel API в наборе требований [1.8 или ранее](/javascript/api/excel?view=excel-js-1.8&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -121,7 +126,7 @@ ms.localizationpriority: medium
 ||[перекрытие](/javascript/api/excel/excel.chartseries#excel-excel-chartseries-overlap-member)|Указывает на расположение строк и столбцов.|
 ||[secondPlotSize](/javascript/api/excel/excel.chartseries#excel-excel-chartseries-secondplotsize-member)|Указывает размер вторичного раздела диаграммы пирога или диаграммы с круговым пирогом в процентах от размера первичного пирога.|
 ||[splitType](/javascript/api/excel/excel.chartseries#excel-excel-chartseries-splittype-member)|Указывает способ разделения двух разделов диаграммы "пирог-пирог" или диаграммы "планка пирога".|
-||[varyByCategories](/javascript/api/excel/excel.chartseries#excel-excel-chartseries-varybycategories-member)|True, Excel назначит каждому маркеру данных другой цвет или шаблон.|
+||[varyByCategories](/javascript/api/excel/excel.chartseries#excel-excel-chartseries-varybycategories-member)|True, если Excel каждому маркеру данных назначается другой цвет или шаблон.|
 |[ChartTrendline](/javascript/api/excel/excel.charttrendline)|[backwardPeriod](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-backwardperiod-member)|Представляет число периодов, на которые линия тренда расширяется назад.|
 ||[forwardPeriod](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-forwardperiod-member)|Представляет число периодов, на которые линия тренда расширяется вперед.|
 ||[метка](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-label-member)|Представляет метку линии тренда диаграммы.|
@@ -162,7 +167,7 @@ ms.localizationpriority: medium
 ||[ignoreBlanks](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-ignoreblanks-member)|Указывает, будет ли проверка данных выполняться на пустых ячейках.|
 ||[сообщение](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-prompt-member)|Подсказка, когда пользователи выбирают ячейку.|
 ||[правило](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-rule-member)|Правило проверки данных, которое содержит различные типы критериев проверки данных.|
-||[type](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-type-member)|Тип проверки данных см. в `Excel.DataValidationType` подробностях.|
+||[тип](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-type-member)|Тип проверки данных см. в `Excel.DataValidationType` подробностях.|
 ||[допустимо](/javascript/api/excel/excel.datavalidation#excel-excel-datavalidation-valid-member)|Указывает, являются ли все значения ячеек допустимыми в соответствии с правилами проверки данных.|
 |[DataValidationErrorAlert](/javascript/api/excel/excel.datavalidationerroralert)|[message](/javascript/api/excel/excel.datavalidationerroralert#excel-excel-datavalidationerroralert-message-member)|Представляет сообщение оповещений об ошибке.|
 ||[showAlert](/javascript/api/excel/excel.datavalidationerroralert#excel-excel-datavalidationerroralert-showalert-member)|Указывает, следует ли показывать диалоговое окно оповещения об ошибке при вводе пользователем недействительных данных.|

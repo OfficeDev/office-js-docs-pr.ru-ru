@@ -3,12 +3,12 @@ ms.date: 01/14/2020
 description: Узнайте, как реализовать нестабильную и офлайновую потоковую передачу пользовательских функций.
 title: Пересчитываемые значения в функциях
 ms.localizationpriority: medium
-ms.openlocfilehash: 90f0ecea718282ce85e7e6f2b604239c18533a9a
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 401be3e04a7b36a226547175df4311fc653c027a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151509"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744471"
 ---
 # <a name="volatile-values-in-functions"></a>Пересчитываемые значения в функциях
 
@@ -20,7 +20,7 @@ ms.locfileid: "59151509"
 
 Настраиваемые функции позволяют создавать собственные летучие функции, которые могут быть полезны при обработке дат, времени, случайных чисел и моделирования. Например, [моделирование Монте-Карло](https://en.wikipedia.org/wiki/Monte_Carlo_method) требует генерации случайных входных данных для определения оптимального решения.
 
-Если вы решили автогенерировать файл JSON, заявите о волатильной функции с помощью тега комментариев JSDoc. `@volatile` Дополнительные сведения об автогенерации см. в [метаданных Autogenerate JSON для пользовательских функций.](custom-functions-json-autogeneration.md)
+Если вы решили автогенерировать файл JSON, заявите о волатильной функции с помощью тега комментариев JSDoc `@volatile`. Дополнительные сведения об автогенерации см. в метаданных [Autogenerate JSON для настраиваемой функции](custom-functions-json-autogeneration.md).
 
 Пример волатильной настраиваемой функции, которая имитирует развертывание шестистолковой кости.
 
@@ -37,10 +37,10 @@ function roll6sided() {
 }
 ```
 
-## <a name="next-steps"></a>Следующие шаги
-* Узнайте о [настраиваемом параметре функций](custom-functions-parameter-options.md).
+## <a name="next-steps"></a>Дальнейшие действия
+* Узнайте о [параметрах настраиваемой функции](custom-functions-parameter-options.md).
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 * [Вручную создайте метаданные JSON для пользовательских функций](custom-functions-json.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

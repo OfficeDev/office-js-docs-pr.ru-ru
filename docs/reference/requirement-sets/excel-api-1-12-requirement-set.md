@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.12
 ms.date: 04/01/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 3c88f8c472ba2ac08ad8c96128616b290dcbb1f1
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747066"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-112"></a>Новые возможности в Excel API JavaScript 1.12
 
 ExcelApi 1.12 увеличил поддержку формул в диапазонах, добавив API для отслеживания динамических массивов и поиска прямых прецедентов формулы. Кроме того, добавлен контроль API фильтров PivotTable. Улучшения также были сделаны в областях комментариев, параметров культуры и пользовательских свойств.
@@ -63,7 +68,7 @@ ExcelApi 1.12 увеличил поддержку формул в диапазо
 ||[clearAllFilters()](/javascript/api/excel/excel.pivotfield#excel-excel-pivotfield-clearallfilters-member(1))|Очищает все критерии от всех фильтров поля.|
 ||[clearFilter(filterType: Excel. PivotFilterType)](/javascript/api/excel/excel.pivotfield#excel-excel-pivotfield-clearfilter-member(1))|Очищает все существующие критерии от фильтра поля данного типа (если он применяется в настоящее время).|
 ||[getFilters()](/javascript/api/excel/excel.pivotfield#excel-excel-pivotfield-getfilters-member(1))|Получает все фильтры, применяемые в настоящее время на поле.|
-||[isFiltered (filterType?: Excel. PivotFilterType)](/javascript/api/excel/excel.pivotfield#excel-excel-pivotfield-isfiltered-member(1))|Проверяет, есть ли на поле примененные фильтры.|
+||[isFiltered(filterType?: Excel. PivotFilterType)](/javascript/api/excel/excel.pivotfield#excel-excel-pivotfield-isfiltered-member(1))|Проверяет, есть ли на поле примененные фильтры.|
 |[PivotFilters](/javascript/api/excel/excel.pivotfilters)|[dateFilter](/javascript/api/excel/excel.pivotfilters#excel-excel-pivotfilters-datefilter-member)|В настоящее время применяется фильтр дат PivotField.|
 ||[labelFilter](/javascript/api/excel/excel.pivotfilters#excel-excel-pivotfilters-labelfilter-member)|Фильтр меток PivotField в настоящее время применяется.|
 ||[manualFilter](/javascript/api/excel/excel.pivotfilters#excel-excel-pivotfilters-manualfilter-member)|В настоящее время применяется ручной фильтр PivotField.|

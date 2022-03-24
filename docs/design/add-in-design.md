@@ -3,12 +3,12 @@ title: Разработка пользовательского интерфей�
 description: Изучите лучшие методики визуального проектирования надстроек Office.
 ms.date: 07/08/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 68b398cb04b59f7ce4506739db1357b7cbc3998e
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 77e54e39531ef6308fdc79d73ed3bc3ef2d3a0ae
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151110"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743068"
 ---
 # <a name="design-the-ui-of-office-add-ins"></a>Разработка пользовательского интерфейса надстроек Office
 

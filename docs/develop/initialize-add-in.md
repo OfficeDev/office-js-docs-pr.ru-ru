@@ -3,12 +3,12 @@ title: Инициализация надстройки Office
 description: Узнайте, как инициализировать Office надстройки.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 7879edce59aa3915b2e5a0d8c1b5e1c2c5a9fd30
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: afc8b5fa497c517c943708837829636e2867c9f7
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151014"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743426"
 ---
 # <a name="initialize-your-office-add-in"></a>Инициализация надстройки Office
 
@@ -24,13 +24,13 @@ ms.locfileid: "59151014"
 
 - Используйте API Office диалогов, чтобы подсказыть пользователю значения параметров надстройки по умолчанию.
 
-Однако надстройка Office успешно вызывать Office API JavaScript до загрузки библиотеки. В этой статье описываются два способа загрузки библиотеки.
+Однако, Office надстройка не может успешно вызывать Office API JavaScript до загрузки библиотеки. В этой статье описываются два способа загрузки библиотеки.
 
-- Инициализация `Office.onReady()` с .
-- Инициализация `Office.initialize` с .
+- Инициализация с `Office.onReady()`.
+- Инициализация с `Office.initialize`.
 
 > [!TIP]
-> Рекомендуется использовать `Office.onReady()` вместо `Office.initialize`. Хотя `Office.initialize` поддержка по-прежнему `Office.onReady()` поддерживается, обеспечивает больше гибкости. Вы можете назначить только одному обработнику, и он вызван только один раз Office `Office.initialize` инфраструктурой. Вы можете `Office.onReady()` звонить в разных местах кода и использовать различные вызовы.
+> Рекомендуется использовать `Office.onReady()` вместо `Office.initialize`. Хотя `Office.initialize` поддержка по-прежнему поддерживается, `Office.onReady()` обеспечивает больше гибкости. Вы можете назначить только одному `Office.initialize` обработители, и он вызван только один раз Office инфраструктуры. Вы можете звонить `Office.onReady()` в разных местах кода и использовать различные вызовы.
 > 
 > Сведения о различиях описанных ниже приемов см. в статье [Основные различия между Office.initialize и Office.onReady()](#major-differences-between-officeinitialize-and-officeonready).
 
@@ -38,7 +38,7 @@ ms.locfileid: "59151014"
 
 ## <a name="initialize-with-officeonready"></a>Инициализация с использованием Office.onReady()
 
-`Office.onReady()` это асинхронный метод, который возвращает объект [Promise,](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) проверяя, загружена ли Office.js библиотека. Когда библиотека загружена, она устраняет обещание как объект, который указывает Office клиентского приложения со значением enum (, и т.д.) и платформы со значением `Office.HostType` `Excel` `Word` `Office.PlatformType` enum `PC` (, `Mac` , , и `OfficeOnline` т.д.). Объект Promise сопоставляется незамедлительно, если библиотека уже загружена, когда вызывается `Office.onReady()`.
+`Office.onReady()` это асинхронный метод, который возвращает объект [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) при проверке загрузки Office.js библиотеки. Когда библиотека загружена, `Office.HostType` она устраняет обещание как объект, который указывает Office клиентского приложения со значением enum (`Excel`и `Word`т. д.) `Office.PlatformType` и платформы со значением enum (`PC`, `Mac`, и `OfficeOnline`т.д.). Объект Promise сопоставляется незамедлительно, если библиотека уже загружена, когда вызывается `Office.onReady()`.
 
 Один из способов вызова `Office.onReady()` состоит в передаче ему метода обратного вызова. Ниже приведен пример.
 
@@ -90,7 +90,7 @@ Office.onReady(function() {
 
 Однако существуют исключения для таких случаев. Например, предположим, что необходимо открыть надстройку в браузере (а не в Office приложении), чтобы отгрузить пользовательский интерфейс с помощью средств браузера. Так как Office.js не загружается в браузер, `onReady` не будет работать, а `$(document).ready` не будет работать при вызове внутри Office `onReady`. 
 
-Другим исключением будет, если индикатор прогресса должен отображаться в области задач во время загрузки надстройки. В этом сценарии код должен вызвать jQuery и использовать его вызов для `ready` отображения индикатора прогресса. Затем обратный вызов `onReady` Office может заменять индикатор выполнения на окончательный пользовательский интерфейс  
+Другим исключением будет, если индикатор прогресса должен отображаться в области задач во время загрузки надстройки. В этом сценарии код должен вызвать jQuery `ready` и использовать его вызов для отображения индикатора прогресса. Затем обратный вызов `onReady` Office может заменять индикатор выполнения на окончательный пользовательский интерфейс  
 
 ## <a name="initialize-with-officeinitialize"></a>Инициализация с использованием Office.initialize
 
@@ -104,7 +104,7 @@ Office.initialize = function () {
 };
 ```
 
-Если вы используете дополнительные платформы JavaScript, которые включают собственный  обработок инициализации или тесты, они обычно должны помещаться в событие (исключения, описанные в разделе `Office.initialize` **Initialize с Office.onReady()** ранее, применяются и в этом случае). Например, ссылка на [JQuery](https://jquery.com) функция `$(document).ready()` должна выглядеть следующим образом:
+Если вы используете дополнительные платформы JavaScript, которые включают собственный обработатель инициализации или  тесты, `Office.initialize` они обычно должны помещаться в событие (исключения, описанные в разделе **Initialize с Office.onReady()** ранее, применяются и в этом случае). Например, ссылка на [JQuery](https://jquery.com) функция `$(document).ready()` должна выглядеть следующим образом:
 
 ```js
 Office.initialize = function () {
@@ -148,7 +148,7 @@ Office.initialize = function (reason) {
 >Office.initialize = function () {};
 >```
 
-## <a name="see-also"></a>Дополнительные материалы
+## <a name="see-also"></a>См. также
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md)

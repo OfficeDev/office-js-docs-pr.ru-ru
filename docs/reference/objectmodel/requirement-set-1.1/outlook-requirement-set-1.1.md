@@ -3,23 +3,23 @@ title: Набор требований к API надстройки Outlook 1.1
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.1.
 ms.date: 12/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 57abdcfc5cc4974e315284357e85c94045885479
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 74a6b2561cf7d0ec28d97810d7337fe909a30837
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153882"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746678"
 ---
 # <a name="outlook-add-in-api-requirement-set-11"></a>Набор требований к API надстройки Outlook 1.1
 
-Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки. Outlook API JavaScript 1.1 (Почтовый ящик 1.1) — первая версия API.
+Подмножество API Outlook надстройки в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки. Outlook API JavaScript 1.1 (почтовый ящик 1.1) является первой версией API.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-11"></a>Новые возможности в версии 1.1
 
-Набор требований 1.1 включает все наборы общих [API,](../../requirement-sets/office-add-in-requirement-sets.md) поддерживаемые в Outlook. В нем надстройки получили возможность доступа к тексту сообщений и встреч, а также возможность изменения текущего элемента.
+Набор требований 1.1 включает все наборы общих [API](../../requirement-sets/office-add-in-requirement-sets.md), поддерживаемые в Outlook. В нем надстройки получили возможность доступа к тексту сообщений и встреч, а также возможность изменения текущего элемента.
 
 ### <a name="change-log"></a>Журнал изменений
 
@@ -32,7 +32,7 @@ ms.locfileid: "59153882"
 - Добавлен метод [Office.context.mailbox.item.addItemAttachmentAsync](office.context.mailbox.item.md#methods). Добавляет к сообщению или встрече элемент Exchange (например, сообщение) в виде вложения.
 - Добавлен метод [Office.context.mailbox.item.removeAttachmentAsync](office.context.mailbox.item.md#methods). Удаляет вложение из сообщения или встречи.
 - Добавлено свойство [Office.context.mailbox.item.body](office.context.mailbox.item.md#properties). Получает объект, предоставляющий методы для работы с текстом элемента.
-- Добавлена [Office.context.mailbox.item.bcc](office.context.mailbox.item.md#properties) строки сообщения.
+- [Добавлена Office.context.mailbox.item.bcc](office.context.mailbox.item.md#properties) строки сообщения.
 - Добавлено свойство [Office.MailboxEnums.RecipientType](/javascript/api/outlook/office.mailboxenums.recipienttype?view=outlook-js-1.1&preserve-view=true). Указывает тип получателя для встречи.
 
 ## <a name="see-also"></a>См. также

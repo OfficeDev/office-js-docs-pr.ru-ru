@@ -3,20 +3,20 @@ title: Office.context — набор требований 1.4
 description: Office. Участники объекта Context, доступные для Outlook надстройки с помощью API почтовых ящиков, устанавливают 1.4.
 ms.date: 12/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: c334265e5f4a6ad8273bd30baf1fe9fb59296047
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: 44b44b1092e65e3ae810411a8e383b75b4060e84
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237324"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746841"
 ---
 # <a name="context-mailbox-requirement-set-14"></a>контекст (набор требований к почтовым ящикам 1.4)
 
 ### <a name="officecontext"></a>[Office](office.md).context
 
-Office.context предоставляет общие интерфейсы, используемые надстройки во всех Office приложениях. Этот список документов только те интерфейсы, которые используются Outlook надстройки. Полный список пространства имен Office.context см. в [ссылке Office.context в общем API.](/javascript/api/office/office.context?view=outlook-js-1.4&preserve-view=true)
+Office.context предоставляет общие интерфейсы, используемые надстройки во всех Office приложениях. Этот список документов только те интерфейсы, которые используются Outlook надстройки. Полный список пространства имен Office.context см. в [ссылке Office.context в общем API](/javascript/api/office/office.context?view=outlook-js-1.4&preserve-view=true).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -29,7 +29,7 @@ Office.context предоставляет общие интерфейсы, ис�
 |---|---|---|:---:|
 | [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [диагностика](#diagnostics-contextinformation) | Создание<br>Чтение | [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.4&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.4&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [требования](#requirements-requirementsetsupport) | Создание<br>Чтение | [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.4&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [roamingSettings](#roamingsettings-roamingsettings) | Создание<br>Чтение | [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.4&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
@@ -41,7 +41,7 @@ Office.context предоставляет общие интерфейсы, ис�
 
 Получает локализ (язык), указанный пользователем для редактирования элемента.
 
-Это значение отражает текущий параметр Язык редактирования, указанный в файле > `contentLanguage` **Параметры > язык** в клиентском приложении Office. 
+Это `contentLanguage` значение отражает текущий параметр **Язык** редактирования, указанный в файле > **Параметры > язык** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -84,11 +84,11 @@ function write(message){
 
 Получает сведения об среде, в которой работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-1.4&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -113,7 +113,7 @@ console.log("Platform: " + contextInfo.platform);
 
 Получает локализ (язык) в формате языковых тегов RFC 1766, заданный пользователем для пользовательского интерфейса Office клиентского приложения.
 
-Это значение отражает текущий параметр Язык отображения, указанный в файле > `displayLanguage` **Параметры > язык** в клиентском приложении Office. 
+Это `displayLanguage` значение отражает текущий параметр **Язык** отображения, указанный в файле > **Параметры > язык** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -156,11 +156,11 @@ function write(message){
 
 Предоставляет метод определения, какие наборы требований поддерживаются в текущем приложении и платформе.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.4&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -182,13 +182,13 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
-Объект позволяет хранить и получать доступ к данным для почтовой надстройки, хранимой в почтовом ящике пользователя, чтобы она была доступна этой надстройке, когда она запущена из любого клиента Outlook, используемого для доступа к этому `RoamingSettings` почтовому ящику.
+`RoamingSettings` Объект позволяет хранить и получать доступ к данным для почтовой надстройки, хранимой в почтовом ящике пользователя, чтобы она была доступна этой надстройке, когда она запущена из любого клиента Outlook, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.4&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -205,11 +205,11 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Предоставляет объекты и методы, которые можно использовать для создания и управления компонентами пользовательского интерфейса, такими как диалоговое окно, в Office надстройки.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [UI](/javascript/api/office/office.ui?view=outlook-js-1.4&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

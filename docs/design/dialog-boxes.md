@@ -3,12 +3,12 @@ title: Диалоговые окна в надстройках Office
 description: Узнайте о лучших практиках визуального оформления диалогов в Office надстройки.
 ms.date: 03/19/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e3dff8249e7d198712c0058f9876aa4806c7e08
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 623a94b5cd0fdd398de2e61cb779f5d256c46d76
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151062"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743254"
 ---
 # <a name="dialog-boxes-in-office-add-ins"></a>Диалоговые окна в надстройках Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "59151062"
 
 *Рисунок 1. Типичный макет диалогового окна*
 
-![Типичная макетная схема диалогового окна, отображаемого в Office приложении.](../images/overview-with-app-dialog.png)
+![Типичная макетная схема диалоговое окно, отображаемого в Office приложении.](../images/overview-with-app-dialog.png)
 
 ## <a name="best-practices"></a>Рекомендации
 

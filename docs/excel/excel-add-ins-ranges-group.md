@@ -4,12 +4,12 @@ description: Узнайте, как сгруппить строки или ст�
 ms.date: 02/17/2022
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a982fc9965772cfeb27934cf60cc4c83967ce51
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: f1150bdbe198fc2ebc7e026dedd49358006f6bc6
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340801"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745203"
 ---
 # <a name="group-ranges-for-an-outline-using-the-excel-javascript-api"></a>Диапазоны групп для контура с Excel API JavaScript
 

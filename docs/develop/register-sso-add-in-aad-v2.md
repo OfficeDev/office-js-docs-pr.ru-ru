@@ -1,14 +1,14 @@
 ---
 title: Зарегистрируйте Office надстройки, использующей SSO с помощью платформа удостоверений Майкрософт
-description: Узнайте, как зарегистрировать Office в платформа удостоверений Майкрософт использовать SSO с word, Excel, PowerPoint и Outlook.
+description: Узнайте, как зарегистрировать Office надстройки с помощью платформа удостоверений Майкрософт с помощью Word, Excel, PowerPoint и Outlook.
 ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b11ce5130e020b049038631b9ae1c0e62fdadeab
-ms.sourcegitcommit: 57e15f0787c0460482e671d5e9407a801c17a215
+ms.openlocfilehash: e408a57534437f0d0fe0c5fb3b4ab844f7dde9ac
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62320250"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743389"
 ---
 # <a name="register-an-office-add-in-that-uses-single-sign-on-sso-with-the-microsoft-identity-platform"></a>Зарегистрируйте Office надстройку, использующую один вход (SSO) с помощью платформа удостоверений Майкрософт
 

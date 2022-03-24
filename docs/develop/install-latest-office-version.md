@@ -3,21 +3,21 @@ title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d1a9b40daa648d33f1bf30cfa9a14cdbf69679d2
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: ce13e35ecd3969d4b5917a2635bb785b499ec787
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151013"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743806"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
 Первыми новые функции для разработчиков, в том числе предварительные версии, получают подписчики, которые получают последние сборки Office раньше других.
 
-## <a name="opt-in-to-getting-the-latest-builds-of-office"></a>Выберите получение последних сборки Office
+## <a name="opt-in-to-getting-the-latest-builds-of-office"></a>Выбор в получении последних сборки Office
 
-- Если вы абонент Microsoft 365 для семьи, личный или университетский, см. статью [Be an Office Insider](https://insider.office.com).
-- Если вы клиент Приложения Microsoft 365 для бизнеса, см. в выпуске [Install the First Release build for Приложения Microsoft 365 для бизнеса клиентов.](https://support.office.com/article/4dd8ba40-73c0-4468-b778-c7b744d03ead)
+- Если вы абонент Microsoft 365 для семьи, personal или university, см. статью [Be an Office Insider](https://insider.office.com).
+- Если вы клиент Приложения Microsoft 365 для бизнеса, см. в этой версии Сборка первого выпуска для [Приложения Microsoft 365 для бизнеса клиентов](https://support.office.com/article/4dd8ba40-73c0-4468-b778-c7b744d03ead).
 - Если вы используете Office для Mac:
   - Запустите приложение Office.
   - Выберите пункт **Проверить наличие обновлений** в меню "Справка".

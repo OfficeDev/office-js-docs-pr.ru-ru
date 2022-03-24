@@ -3,20 +3,20 @@ title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
 ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a44d389bb480ec17b73fe445c885c45aff768f7
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: 44b5b770d36177307989500db89f1f4f8ca859ec
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074296"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745689"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
-Чтобы использовать API-интерфейсы в надстройке Outlook, необходимо указать расположение библиотеки Office.js, набор требований, схему и разрешения. В основном вы будете использовать Office API JavaScript, выставленные через объект [почтовых ящиков.](#mailbox-object)
+Чтобы использовать API-интерфейсы в надстройке Outlook, необходимо указать расположение библиотеки Office.js, набор требований, схему и разрешения. В основном вы будете использовать Office API JavaScript, выставленные через объект [почтовых ящиков](#mailbox-object).
 
 ## <a name="officejs-library"></a>Библиотека Office.js
 
-Для взаимодействия с API надстроек Outlook необходимо использовать интерфейсы API JavaScript из библиотеки Office.js. Сеть доставки контента (CDN) для библиотеки `https://appsforoffice.microsoft.com/lib/1/hosted/Office.js` . Надстройки, отправляемые в AppSource, должны ссылаться на библиотеку Office.js в этой сети CDN. Нельзя использовать локальную ссылку.
+Для взаимодействия с API надстроек Outlook необходимо использовать интерфейсы API JavaScript из библиотеки Office.js. Сеть доставки контента (CDN) для библиотеки .`https://appsforoffice.microsoft.com/lib/1/hosted/Office.js` Надстройки, отправляемые в AppSource, должны ссылаться на библиотеку Office.js в этой сети CDN. Нельзя использовать локальную ссылку.
 
 Добавьте ссылку на сеть CDN в теге `<script>`, вложенном в тег `<head>`, на веб-странице (HTML-, ASPX- или PHP-файле), где определяется пользовательский интерфейс надстройки.
 
@@ -27,7 +27,7 @@ ms.locfileid: "62074296"
 При добавлении новых API-интерфейсов не будет меняться URL-адрес Office.js. Мы укажем другую версию в URL-адресе, только если изменится поведение API.
 
 > [!IMPORTANT]
-> При разработке надстройки для Office клиентского приложения ссылайся на Office API JavaScript из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов body.
+> При разработке надстройки для Office клиентского приложения ссылайся Office API `<head>` JavaScript из раздела страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов body.
 
 ## <a name="requirement-sets"></a>Наборы требований
 
@@ -65,7 +65,7 @@ if (item.somePropertyOrFunction) {
 | **Чтение и запись** | Помимо возможностей уровня **Чтение элемента**, поддерживаются:<ul><li>полный доступ ко всем элементам API Outlook, кроме метода `makeEwsRequestAsync`;</li><li>задание свойств элемента.</li></ul> |
 | **Чтение и запись почтового ящика** | Помимо возможностей уровня **Чтение и запись**, поддерживаются:<ul><li>создание, чтение и запись элементов и папок;</li><li>отправка папок;</li><li>вызов метода [makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods).</li></ul> |
 
-Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в элементе `<Permissions>` манифеста. Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах безопасности см. в Office конфиденциальности и [безопасности надстройки.](../concepts/privacy-and-security.md)
+Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в элементе `<Permissions>` манифеста. Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах безопасности см. в Office и безопасности [надстройки](../concepts/privacy-and-security.md).
 
 ## <a name="mailbox-object"></a>Объект Mailbox
 

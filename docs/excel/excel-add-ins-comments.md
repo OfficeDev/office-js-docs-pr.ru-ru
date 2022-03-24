@@ -3,12 +3,12 @@ title: Работа с комментариями с помощью Excel API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования потоков комментариев и комментариев.
 ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: bcf364d120693e503eb74b6ea6744265fec0008c
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 2b8994ed9941eec1321b4fbc5029388cd82a65fc
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340136"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744816"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работа с комментариями с помощью Excel API JavaScript
 

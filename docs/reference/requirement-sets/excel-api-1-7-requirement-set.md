@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.7.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: cd8f0f333b76306a6feecff95b9ba8831428606a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744530"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-17"></a>Новые возможности API JavaScript для Excel 1.7
 
 Функции набора обязательных элементов API JavaScript для Excel 1.7 включают API для диаграмм, событий, рабочих листов, диапазонов, свойств документа, именованных элементов, параметров защиты и стилей.
@@ -60,7 +65,7 @@ API событий Excel предоставляют разнообразные �
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, установленный 1.7. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.7 или ранее, см. Excel API в наборе требований [1.7 или ранее](/javascript/api/excel?view=excel-js-1.7&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, установленный 1.7. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, за набором 1.7 или ранее, см. в Excel API в наборе требований [1.7 или ранее](/javascript/api/excel?view=excel-js-1.7&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -81,7 +86,7 @@ API событий Excel предоставляют разнообразные �
 ||[majorTimeUnitScale](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-majortimeunitscale-member)|Указывает главное значение масштабирования единицы для оси категории при `categoryType` заданном свойстве `dateAxis`.|
 ||[minorTickMark](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-minortickmark-member)|Указывает тип незначительной метки галочки для указанной оси.|
 ||[minorTimeUnitScale](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-minortimeunitscale-member)|Указывает незначительное значение масштабирования единицы для оси категории при `categoryType` заданном свойстве `dateAxis`.|
-||[reversePlotOrder](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-reverseplotorder-member)|Указывает, Excel заданы точки данных с последнего до первого.|
+||[reversePlotOrder](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-reverseplotorder-member)|Указывает, Excel заданы точки данных от последнего до первого.|
 ||[scaleType](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-scaletype-member)|Указывает тип шкалы оси значения.|
 ||[setCategoryNames (sourceData: Range)](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-setcategorynames-member(1))|Устанавливает все имена категорий для указанной оси.|
 ||[setCustomDisplayUnit (значение: номер)](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-setcustomdisplayunit-member(1))|Задает отображаемую единицу измерения оси в виде настраиваемого значения.|
@@ -90,7 +95,7 @@ API событий Excel предоставляют разнообразные �
 ||[tickLabelSpacing](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-ticklabelspacing-member)|Указывает количество категорий или рядов между меткими метами.|
 ||[tickMarkSpacing](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-tickmarkspacing-member)|Указывает количество категорий или рядов между метками галочки.|
 ||[top](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-top-member)|Указывает расстояние в точках от верхнего края оси до верхней области диаграммы.|
-||[type](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-type-member)|Указывает тип оси.|
+||[тип](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-type-member)|Указывает тип оси.|
 ||[visible](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-visible-member)|Указывает, видна ли ось.|
 ||[width](/javascript/api/excel/excel.chartaxis#excel-excel-chartaxis-width-member)|Указывает ширину оси диаграммы в точках.|
 |[ChartBorder](/javascript/api/excel/excel.chartborder)|[color](/javascript/api/excel/excel.chartborder#excel-excel-chartborder-color-member)|HTML-код цвета, представляющий цвет границ в диаграмме.|
@@ -160,7 +165,7 @@ API событий Excel предоставляют разнообразные �
 ||[movingAveragePeriod](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-movingaverageperiod-member)|Представляет период трендовой линии диаграммы.|
 ||[name](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-name-member)|Представляет имя линии тренда.|
 ||[polynomialOrder](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-polynomialorder-member)|Представляет порядок трендовой линии диаграммы.|
-||[type](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-type-member)|Представляет тип линии тренда диаграммы.|
+||[тип](/javascript/api/excel/excel.charttrendline#excel-excel-charttrendline-type-member)|Представляет тип линии тренда диаграммы.|
 |[ChartTrendlineCollection](/javascript/api/excel/excel.charttrendlinecollection)|[add(type?: Excel. ChartTrendlineType)](/javascript/api/excel/excel.charttrendlinecollection#excel-excel-charttrendlinecollection-add-member(1))|Добавляет новую линию тренда в коллекцию линий тренда.|
 ||[getCount()](/javascript/api/excel/excel.charttrendlinecollection#excel-excel-charttrendlinecollection-getcount-member(1))|Возвращает количество линий тренда в коллекции.|
 ||[getItem(index: number)](/javascript/api/excel/excel.charttrendlinecollection#excel-excel-charttrendlinecollection-getitem-member(1))|Получает объект trendline по индексу, который является порядком вставки в массиве элементов.|
@@ -168,7 +173,7 @@ API событий Excel предоставляют разнообразные �
 |[ChartTrendlineFormat](/javascript/api/excel/excel.charttrendlineformat)|[line](/javascript/api/excel/excel.charttrendlineformat#excel-excel-charttrendlineformat-line-member)|Представляет форматирование линий диаграммы.|
 |[CustomProperty](/javascript/api/excel/excel.customproperty)|[delete()](/javascript/api/excel/excel.customproperty#excel-excel-customproperty-delete-member(1))|Удаляет настраиваемое свойство.|
 ||[key](/javascript/api/excel/excel.customproperty#excel-excel-customproperty-key-member)|Ключ настраиваемого свойства.|
-||[type](/javascript/api/excel/excel.customproperty#excel-excel-customproperty-type-member)|Тип значения, используемого для настраиваемого свойства.|
+||[тип](/javascript/api/excel/excel.customproperty#excel-excel-customproperty-type-member)|Тип значения, используемого для настраиваемого свойства.|
 ||[value](/javascript/api/excel/excel.customproperty#excel-excel-customproperty-value-member)|Значение настраиваемого свойства.|
 |[CustomPropertyCollection](/javascript/api/excel/excel.custompropertycollection)|[add(key: string, value: any)](/javascript/api/excel/excel.custompropertycollection#excel-excel-custompropertycollection-add-member(1))|Создает или задает настраиваемое свойство.|
 ||[deleteAll()](/javascript/api/excel/excel.custompropertycollection#excel-excel-custompropertycollection-deleteall-member(1))|Удаляет все настраиваемые свойства в коллекции.|
@@ -199,7 +204,7 @@ API событий Excel предоставляют разнообразные �
 ||[hyperlink](/javascript/api/excel/excel.range#excel-excel-range-hyperlink-member)|Представляет гиперссылку для текущего диапазона.|
 ||[isEntireColumn](/javascript/api/excel/excel.range#excel-excel-range-isentirecolumn-member)|Указывает, является ли текущий диапазон целым столбцом.|
 ||[isEntireRow](/javascript/api/excel/excel.range#excel-excel-range-isentirerow-member)|Указывает, является ли текущий диапазон целой строкой.|
-||[numberFormatLocal](/javascript/api/excel/excel.range#excel-excel-range-numberformatlocal-member)|Представляет Excel формата номера для данного диапазона в зависимости от языковых параметров пользователя.|
+||[numberFormatLocal](/javascript/api/excel/excel.range#excel-excel-range-numberformatlocal-member)|Представляет Excel формат номера для данного диапазона в зависимости от языковых параметров пользователя.|
 ||[showCard()](/javascript/api/excel/excel.range#excel-excel-range-showcard-member(1))|Отображает карточку для активной ячейки, если она имеет содержимое c форматированным значением.|
 ||[style](/javascript/api/excel/excel.range#excel-excel-range-style-member)|Представляет стиль текущего диапазона.|
 |[RangeFormat](/javascript/api/excel/excel.rangeformat)|[textOrientation](/javascript/api/excel/excel.rangeformat#excel-excel-rangeformat-textorientation-member)|Текстовая ориентация всех ячеек в диапазоне.|

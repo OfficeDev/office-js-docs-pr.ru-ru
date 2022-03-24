@@ -1,18 +1,18 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.7
-description: Обзор API Outlook надстройки (набор требований 1.7)
+description: Обзор API Outlook надстройки (набор требований 1.7).
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 51cd018d5e4438daf76b53e00195671b63afd50f
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: 1b84043f03d0d08ace420ac6f32a97aad975e92f
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237345"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746468"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
-Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
+Подмножество API Outlook надстройки в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).

@@ -1,11 +1,15 @@
 ---
 title: Совместное редактирование в надстройках Excel
-description: 'Узнайте, как совместно Excel книги, хранимой в OneDrive, OneDrive для бизнеса или SharePoint Online.'
+description: Узнайте, как совместно Excel книги, хранимой в OneDrive, OneDrive для бизнеса или SharePoint Online.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 7fd2e2846c4256e7aac1ffa7263b4aa57b744d21
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744380"
 ---
-
-
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
 Благодаря функции [совместного редактирования](https://support.microsoft.com/office/7152aa8b-b791-414c-a3bb-3024e46fb104) несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Чтобы книги Excel можно было совместно редактировать, они должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
@@ -15,7 +19,7 @@ ms.localizationpriority: medium
 
 ## <a name="coauthoring-overview"></a>Общие сведения о совместном редактировании
 
-Когда вы меняете содержимое книги, Excel автоматически синхронизирует эти изменения для всех соавторов. Вносить изменения в содержимое книги могут не только соавторы, но и код в надстройке Excel. Например, если следующий код JavaScript выполняется в Office надстройки, значение диапазона устанавливается в Contoso.
+Когда вы меняете содержимое книги, Excel автоматически синхронизирует эти изменения для всех соавторов. Вносить изменения в содержимое книги могут не только соавторы, но и код в надстройке Excel. Например, если следующий код JavaScript выполняется в надстройки Office, значение диапазона устанавливается в Contoso.
 
 ```js
 range.values = [['Contoso']];

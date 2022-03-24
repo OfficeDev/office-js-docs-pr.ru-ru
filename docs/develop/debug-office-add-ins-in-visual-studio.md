@@ -1,18 +1,18 @@
 ---
 title: Отладка надстроек Office в Visual Studio
-description: Используйте Visual Studio для отладки надстроек Office в настольном клиенте Office для Windows
+description: Используйте Visual Studio для отлаговки Office надстроек в клиенте Office на Windows.
 ms.date: 02/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 08f8b48666955db413e3bdaa6c329326f80bdb07
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 49d52bd9b34b6f03dcf8b333cff816632c47c1c9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340262"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743527"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
-В этой статье описывается отламывка клиентского кода в Office надстроек, созданных с помощью одного из шаблонов Office надстроек в Visual Studio 2022 г.  Сведения о отладке кода на стороне сервера в Office надстройки см. в обзоре отладки Office надстроек - на стороне сервера или на стороне [клиента?](../testing/debug-add-ins-overview.md#server-side-or-client-side).
+В этой статье описывается отламывка клиентского кода в Office надстроек, созданных с помощью одного из шаблонов Office надстроек в Visual Studio 2022 г.  Сведения об отладке кода на стороне сервера в Office надстройки см. в обзоре отладки Office надстроек - на стороне сервера или на стороне [клиента?](../testing/debug-add-ins-overview.md#server-side-or-client-side).
 
 > [!NOTE]
 > Вы не можете использовать Visual Studio для отлаговки надстроек в Office Mac. Сведения о отладки на Mac см. в Office [надстроек на Mac](../testing/debug-office-add-ins-on-ipad-and-mac.md).

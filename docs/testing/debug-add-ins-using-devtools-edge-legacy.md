@@ -3,37 +3,37 @@ title: Отламывка надстроек с помощью средств р
 description: Отламывка надстроек с помощью средств разработчика в устаревшая версия Microsoft Edge.
 ms.date: 11/02/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e3d0b77a6898dcefc7fba7c9d52eb739a2d685aa
-ms.sourcegitcommit: a3debae780126e03a1b566efdec4d8be83e405b8
+ms.openlocfilehash: 62f27e2ee266e3b6a92d090e8008b74bac4a9663
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60809079"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744682"
 ---
 # <a name="debug-add-ins-using-developer-tools-in-microsoft-edge-legacy"></a>Отламывка надстроек с помощью средств разработчика в устаревшая версия Microsoft Edge
 
 В этой статье показано, как отлагировать клиентский код (JavaScript или TypeScript) надстройки при условии, при которых будут выполнены следующие условия.
 
 - Вы не можете или не хотите отлаговка с помощью инструментов, встроенных в ваш IDE; или вы столкнулись с проблемой, которая возникает только при запуске надстройки за пределами IDE.
-- На компьютере используется сочетание версий Windows Office, использующих оригинальный контроль веб-просмотров Edge EdgeHTML.
+- На вашем компьютере используется сочетание Windows и Office, использующих оригинальный контроль веб-просмотров Edge Edge, EdgeHTML.
 
 > [!TIP]
-> Сведения о отладке с помощью edge Legacy Visual Studio Code см. в Microsoft Office расширения надстройки для [Visual Studio Code.](debug-with-vs-extension.md)
+> Сведения о отладке с помощью edge Legacy в Visual Studio Code см. в Microsoft Office расширения надстройки для [Visual Studio Code](debug-with-vs-extension.md).
 
-Чтобы определить, какой браузер вы используете, см. в Office [надстройки.](../concepts/browsers-used-by-office-web-add-ins.md) 
+Чтобы определить, какой браузер вы используете, см. в Office [надстройки](../concepts/browsers-used-by-office-web-add-ins.md). 
 
 > [!TIP]
 > [!INCLUDE[Identify the webview through the add-in UI](../includes/identify-webview-in-ui.md)]
 
 > [!NOTE]
-> Чтобы установить версию Office с устаревшим веб Office edge или заставить текущую версию Office использовать Edge Legacy, см. в странице [Switch to the Edge Legacy webview.](#switch-to-the-edge-legacy-webview)
+> Чтобы установить версию Office с устаревшим веб-Office Edge или заставить текущую версию Office использовать Edge Legacy, см. в странице [Switch to the Edge Legacy webview](#switch-to-the-edge-legacy-webview).
 
 ## <a name="debug-a-task-pane-add-in-using-microsoft-edge-devtools-preview"></a>Отладка надстройки области задач с помощью Microsoft Edge DevTools Preview
 
 1. Установите [предварительный Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj?activetab=pivot%3Aoverviewtab). (Слово "Preview" находится в названии по историческим причинам. Более последней версии нет.)
 
    > [!NOTE]
-   > Если надстройка [](../design/add-in-commands.md) имеет команду надстройки, которая выполняет функцию, функция выполняется в скрытом процессе браузера, который Microsoft Edge DevTools не могут обнаружить или прикрепить, поэтому описанный в этой статье метод не может использоваться для отладки кода в функции.
+   > Если надстройка имеет команду [](../design/add-in-commands.md) надстройки, которая выполняет функцию, функция выполняется в скрытом процессе браузера, который Microsoft Edge DevTools не могут обнаружить или прикрепить, поэтому описанный в этой статье метод не может использоваться для отладки кода в функции.
 
 1. [Боковая](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md) загрузка и запуск надстройки.
 1. Запустите Microsoft Edge DevTools.
@@ -45,7 +45,7 @@ ms.locfileid: "60809079"
 1. Перейдите на вкладку **Отладчик**.
 1. Откройте файл, который необходимо отламыть следующими шагами.
 
-   1. На панели задач отладки выберите **Показать поиск в файлах.** Это откроет окно поиска.
+   1. На панели задач отладки выберите **Показать поиск в файлах**. Это откроет окно поиска.
    1. Введите строку кода из файла, который необходимо отлагировать в поле поиска. Это должно быть что-то, что вряд ли будет в любом другом файле.
    1. Выберите кнопку обновления.
    1. В результатах поиска выберите строку, чтобы открыть файл кода на области выше результатов поиска.
@@ -63,7 +63,7 @@ ms.locfileid: "60809079"
 Если надстройка использует API Office диалогов, диалоговое окно запускается в отдельном процессе от области задач (если таковое имеется), и средства должны присоединяться к этому процессу. Выполните указанные ниже действия.
 
 1. Запустите надстройку и средства.
-1. Откройте диалоговое окно и выберите кнопку **Обновить** в средствах. Показан диалоговое окно. Его имя происходит от `<title>` элемента HTML-файла, открытого в диалоговом окте.
+1. Откройте диалоговое окно и выберите кнопку **Обновить** в средствах. Показан диалоговое окно. Его имя происходит от элемента `<title>` HTML-файла, открытого в диалоговом окте.
 1. Выберите процесс, чтобы открыть его и отладить так же, как описано в разделе Отладка надстройки области задач с помощью [Microsoft Edge DevTools Preview](#debug-a-task-pane-add-in-using-microsoft-edge-devtools-preview).
 
    :::image type="content" source="../images/edge-devtools-with-add-in-and-dialog-processes.png" alt-text="Снимок экрана Edge DevTools, показывающий процесс с именем My Dialog.":::

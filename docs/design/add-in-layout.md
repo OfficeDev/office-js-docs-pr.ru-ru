@@ -3,18 +3,18 @@ title: Рекомендации по созданию макетов для на
 description: Инструкции по макету области задач или диалоговом окантовке Office надстройки.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e309a274835f429d3c9fd5f71de497161474ad45
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3e9f64a4568015b4149eee537da2d80b0218ac2e
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151294"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63742973"
 ---
 # <a name="layout"></a>Макет
 
 Для каждого контейнера HTML, внедренного в Office, создается макет. Эти макеты являются основными экранами надстройки. В них создаются интерфейсы, с помощью которых клиенты могут инициировать действия, изменять параметры, а также просматривать и прокручивать содержимое. При разработке надстройки стремитесь, чтобы макеты для разных экранов согласовывались. Это обеспечит преемственность интерфейса. Если имеется веб-сайт, с которым знакомы ваши клиенты, рекомендуется использовать макеты из уже существующих веб-страниц. Настройте их в соответствии с HTML-контейнерами Office.
 
-Инструкции по макету см. в [поле Task pane](task-pane-add-ins.md), [Content](content-add-ins.md)и [Dialog box.](dialog-boxes.md) Дополнительные сведения о сборке Fluent пользовательского интерфейса [React](using-office-ui-fabric-react.md)или [Office UI Fabric JS](fabric-core.md), компонентов в общие макеты и потоки пользовательского интерфейса см. в шаблонах шаблонов дизайна [UX.](ux-design-pattern-templates.md)
+Рекомендации по макету см. в [поле Task pane](task-pane-add-ins.md), [Content](content-add-ins.md) и [Dialog](dialog-boxes.md). Дополнительные сведения о сборке Fluent [](using-office-ui-fabric-react.md)пользовательского интерфейса React или [Office UI Fabric JS](fabric-core.md), компонентов в общие макеты и потоки пользовательского интерфейса см. в шаблонах шаблонов дизайна [UX](ux-design-pattern-templates.md).
 
 Применяйте следующие общие рекомендации для макетов.
 

@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.14
 ms.date: 12/08/2021
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: 93b1690a3c03e51dadb2110ec6382ca6ee86cfe1
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747018"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-114"></a>Новые возможности в Excel API JavaScript 1.14
 
 В ExcelApi 1.14 добавлены объекты для управления функцией таблицы данных диаграммы, методом обнаружения всех ячеек-прецедентов формулы и событиями защиты листа для отслеживания изменений состояния защиты листа. Он также добавил несколько методов [`getItemOrNullObject`](../../develop/application-specific-api-model.md#ornullobject-methods-and-properties) для таких объектов`CommentCollection`, как , и `ShapeCollection``StyleCollection` для улучшения обработки ошибок.
@@ -19,7 +24,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.14. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.14 или ранее, см. Excel API в наборе требований [1.14 или ранее](/javascript/api/excel?view=excel-js-1.14&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, за набором 1.14. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.14 или ранее, см. в Excel API в наборе требований [1.14 или ранее](/javascript/api/excel?view=excel-js-1.14&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|

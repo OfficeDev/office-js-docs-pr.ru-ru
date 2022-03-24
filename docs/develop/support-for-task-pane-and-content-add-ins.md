@@ -3,8 +3,13 @@ title: Поддержка API JavaScript для Office для контентны
 description: Используйте API Office JavaScript для создания области задач в Office 2013 г.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 4f0edaa6c58399542a87721f4429a72b90cf1667
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744242"
 ---
-
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
 [!include[information about the common API](../includes/alert-common-api-info.md)]
@@ -15,7 +20,7 @@ ms.localizationpriority: medium
 
 2. **Объект Document.** Большей частью API, доступной для контентных надстроек и надстроек области задач, можно воспользоваться с помощью методов, свойств и событий объекта [Document](/javascript/api/office/office.document). Контентная надстройка или надстройка области задач может использовать свойство [Office.context.document](/javascript/api/office/office.context#office-office-context-document-member) для доступа к объекту **Document** и с его помощью получать доступ к ключевым компонентам API для работы с данными в документах, например к объектам [Bindings](/javascript/api/office/office.bindings) и [CustomXmlParts](/javascript/api/office/office.customxmlparts) и методам [getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)), [setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1))и [getFileAsync](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)). Объект `Document` также предоставляет свойство mode [](/javascript/api/office/office.document#office-office-document-mode-member) для определения, является ли документ только для чтения или в режиме редактирования, url-адрес для получения URL-адреса текущего документа и доступа к объекту Параметры[](/javascript/api/office/office.settings).[](/javascript/api/office/office.document#office-office-document-url-member) Объект `Document` также поддерживает добавление обработчиков событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) , чтобы можно было определить, когда пользователь меняет свой выбор в документе.
 
-   Надстройка `Document` содержимого или области задач может получить доступ к объекту только после загрузки среды DOM и среды запуска, как правило, в обработчике событий для [события Office.initialize](/javascript/api/office). Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
+   `Document` Надстройка содержимого или области задач может получить доступ к объекту только после загрузки среды DOM и среды запуска, как правило, в обработчике событий для [события Office.initialize](/javascript/api/office). Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
 
 3. **Объекты для работы с конкретными функциями.** Для работы с определенными функциями API используйте следующие объекты и методы.
 
@@ -30,11 +35,11 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > Некоторые элементы API поддерживаются не всеми приложениями Office, в которых могут размещаться контентные надстройки и надстройки области задач. Чтобы определить, какие элементы поддерживаются, см. один из указанных ниже ресурсов.
 
-Сводка о поддержке API Office JavaScript в Office клиентских приложений см. в Office [API JavaScript](understanding-the-javascript-api-for-office.md).
+Сводка о поддержке Office JavaScript в Office клиентских приложениях см. в Office [API JavaScript](understanding-the-javascript-api-for-office.md).
 
 ## <a name="read-and-write-to-an-active-selection-in-a-document-spreadsheet-or-presentation"></a>Чтение и написание активного выбора в документе, таблице или презентации
 
-Вы можете считывать данные из текущего выделения пользователя в документе, электронной таблице или презентации, а также записывать их в это выделение. В зависимости Office приложения для надстройки можно указать тип структуры данных для чтения или записи в качестве параметра в [методах getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) и [setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1)) объекта [Document](/javascript/api/office/office.document). Например, вы можете указать любой тип данных (текст, HTML, табличные данные или Office Open XML) для Word, текст и табличные данные для Excel, а также текст для PowerPoint и Project. Вы также можете создать обработчики событий для обнаружения изменений в выделении пользователя. В следующем примере получаются данные из выбора в виде текста с помощью `getSelectedDataAsync` метода.
+Вы можете считывать данные из текущего выделения пользователя в документе, электронной таблице или презентации, а также записывать их в это выделение. В зависимости Office приложения для надстройки можно указать тип структуры данных для чтения или записи в качестве параметра в [методе getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) и [setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1)) объекта [Document](/javascript/api/office/office.document). Например, вы можете указать любой тип данных (текст, HTML, табличные данные или Office Open XML) для Word, текст и табличные данные для Excel, а также текст для PowerPoint и Project. Вы также можете создать обработчики событий для обнаружения изменений в выделении пользователя. В следующем примере получаются данные из выбора в виде текста с помощью `getSelectedDataAsync` метода.
 
 
 ```js

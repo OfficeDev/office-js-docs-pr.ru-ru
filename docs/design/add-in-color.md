@@ -3,12 +3,12 @@ title: Рекомендации по цвету надстроек Office
 description: Узнайте, как использовать цвета в пользовательском интерфейсе Office надстройки.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fa24acc442a959e449357f436d3a0ed685b3d808
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: b43d3144f24f7b90878bcabe12db492f8dbe4f6f
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150794"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63742806"
 ---
 # <a name="color-guidelines-for-office-add-ins"></a>Рекомендации по цвету надстроек Office
 
@@ -22,7 +22,7 @@ ms.locfileid: "59150794"
 
 > [!NOTE]
 >
-> - Для надстроек почты и области задач используйте свойство [Context.officeTheme](/javascript/api/office/office.context), чтобы соответствовать темам приложений Office. Этот API в настоящее время доступен Office 2016 или более поздней стадии.
+> - Для надстроек почты и области задач используйте свойство [Context.officeTheme](/javascript/api/office/office.context), чтобы соответствовать темам приложений Office. Этот API в настоящее время доступен в Office 2016 или более поздней стадии.
 > - Информацию о контентных надстройках PowerPoint см. в инструкциях по [использованию тем Office в надстройках для PowerPoint](../powerpoint/use-document-themes-in-your-powerpoint-add-ins.md).
 
 Применяйте следующие общие рекомендации для цвета.

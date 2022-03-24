@@ -3,8 +3,13 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 01/22/2022
 ms.localizationpriority: medium
+ms.openlocfilehash: c84a5cd9079b1af754375dfc803284165ccea6e9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743828"
 ---
-
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
 Вы можете использовать [Office dialog API](/javascript/api/office/office.ui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит инструкции по использованию dialog API в надстройке Office.
@@ -27,7 +32,7 @@ ms.localizationpriority: medium
 
 ![Снимок экрана, показывающий диалоговое окно с 3 вариантами входа, отображаемой перед Word.](../images/auth-o-dialog-open.png)
 
-Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно является *немодальным* — пользователь может продолжать взаимодействовать как с документом в приложении Office, так и со страницей в области задач, если она есть.
+Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно является *немодальным*— пользователь может продолжать взаимодействовать как с документом в приложении Office, так и со страницей в области задач, если она есть.
 
 ## <a name="open-a-dialog-box-from-a-host-page"></a>Откройте диалоговое окно с главной страницы
 
@@ -92,7 +97,7 @@ if (loginSuccess) {
 ```
 
 > [!IMPORTANT]
-> - Эта `messageParent` функция является одним из *двух* Office API JS, которые можно назвать в диалоговом окне.
+> - Эта `messageParent` функция является *одним из двух* Office API JS, которые можно назвать в диалоговом окне.
 > - Другой API JS, который можно назвать в диалоговом окне, — `Office.context.requirements.isSetSupported`. Сведения об этом см. в [Office приложениях и требованиях API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается Outlook 2016 одноразовой покупке (то есть версии MSI).
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
@@ -222,7 +227,7 @@ Office.context.ui.messageParent("Some message", { targetOrigin: "https://resourc
 ```
 
 > [!NOTE]
-> Параметр `DialogMessageOptions` был выпущен приблизительно 19 июля 2021 г. Примерно через 30 дней после этой даты в Office в Интернете первый раз, `messageParent` `DialogMessageOptions` когда он называется без параметра, а родительский домен отличается от диалогового, пользователю будет предложено утвердить отправку данных в целевой домен. Если пользователь одобряет, ответ пользователя кэшется в течение 24 часов. В этот период, `messageParent` когда он вызван с тем же целевым доменом, пользователю больше не будет предложено.
+> Параметр `DialogMessageOptions` был выпущен приблизительно 19 июля 2021 г. Примерно через 30 `messageParent` `DialogMessageOptions` дней после этой даты в Office в Интернете, когда первый раз называется без параметра, а родительский домен отличается от диалогового, пользователю будет предложено утвердить отправку данных в целевой домен. Если пользователь одобряет, ответ пользователя кэшется в течение 24 часов. В этот период, `messageParent` когда он вызван с тем же целевым доменом, пользователю больше не будет предложено.
 
 Если в сообщении не содержатся конфиденциальные данные, `targetOrigin` можно установить "\*", что позволяет отправлять его в любой домен. Ниже приведен пример.
 
@@ -231,7 +236,7 @@ Office.context.ui.messageParent("Some message", { targetOrigin: "*" });
 ```
 
 > [!TIP]
-> Параметр `DialogMessageOptions` был добавлен в метод в `messageParent` качестве обязательного параметра в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром **реестра:HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте `.reg` файл с расширением, сохраните его на Windows, а затем дважды щелкните его, чтобы запустить его. Ниже приводится пример содержимого такого файла.
+> Параметр `DialogMessageOptions` был добавлен в метод в `messageParent` качестве обязательного параметра в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром реестра: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте `.reg` файл с расширением, сохраните его на Windows, а затем дважды щелкните его, чтобы запустить его. Ниже приводится пример содержимого такого файла.
 >
 > ```
 > Windows Registry Editor Version 5.00
@@ -366,7 +371,7 @@ function onMessageFromParent(arg) {
 Например, в коде можно [использовать методы Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство можно проверить в обработнике с этим списком.
 
 > [!TIP]
-> Параметр `DialogMessageOptions` был добавлен в метод в `messageChild` качестве обязательного параметра в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром **реестра:HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте `.reg` файл с расширением, сохраните его на Windows, а затем дважды щелкните его, чтобы запустить его. Ниже приводится пример содержимого такого файла.
+> Параметр `DialogMessageOptions` был добавлен в метод в `messageChild` качестве обязательного параметра в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром реестра: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте `.reg` файл с расширением, сохраните его на Windows, а затем дважды щелкните его, чтобы запустить его. Ниже приводится пример содержимого такого файла.
 >
 > ```
 > Windows Registry Editor Version 5.00
@@ -411,7 +416,7 @@ function processMessage(arg) {
 
 См. статью[ Проверка подлинности с помощью Office Dialog API ](auth-with-office-dialog-api.md).
 
-### <a name="use-the-office-dialog-api-with-single-page-applications-and-client-side-routing"></a>Используйте API Office диалогов с одно-страницами и маршрутизами клиента
+### <a name="use-the-office-dialog-api-with-single-page-applications-and-client-side-routing"></a>Используйте API Office диалогов с односпальтными приложениями и маршрутизами на стороне клиента
 
 При использовании Office dialog API, SPA и маршрутизация на стороне клиента должны обрабатываться с осторожностью См. статью[Рекомендации по использованию Office dialog API в SPA](dialog-best-practices.md#best-practices-for-using-the-office-dialog-api-in-an-spa).
 
@@ -425,7 +430,7 @@ function processMessage(arg) {
 
 ## <a name="samples"></a>Примеры
 
-Все следующие примеры использования `displayDialogAsync`. Некоторые из них имеют серверы на основе NodeJS, а другие — серверы на ASP.NET/IIS, но логика использования метода та же, независимо от того, как реализуется серверная сторона надстройки.
+Все следующие примеры использования `displayDialogAsync`. Некоторые из них имеют серверы на основе NodeJS, а другие имеют ASP.NET/IIS-серверы, но логика использования метода та же, независимо от того, как реализована серверная сторона надстройки.
 
 **Основы:**
 
@@ -437,14 +442,14 @@ function processMessage(arg) {
 - [Office надстройки Microsoft Graph ASPNET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
 - [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React)
 - [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO)
-- [Office ASPNET SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
+- [Office надстройки ASPNET SSO](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO)
 - [Office saAS пример монетизации надстройки](https://github.com/OfficeDev/office-add-in-saas-monetization-sample)
-- [Outlook Надстройка Microsoft Graph ASPNET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
+- [Outlook надстройки Microsoft Graph ASPNET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
 - [Outlook SSO надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)
 - [Outlook просмотра маркеров надстройки](https://github.com/OfficeDev/Outlook-Add-In-Token-Viewer)
 - [Outlook надстройки Actionable Message](https://github.com/OfficeDev/Outlook-Add-In-Actionable-Message)
-- [Outlook совместное использование надстройки для OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)
-- [PowerPoint надстройки Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
+- [Outlook надстройки Общего доступа к OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)
+- [PowerPoint Надстройка Microsoft Graph ASPNET InsertChart](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
 - [Excel общего времени работы](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-shared-runtime-scenario)
 - [Excel надстройки ASPNET QuickBooks](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
 - [Word Add-in JS Redact](https://github.com/OfficeDev/Word-Add-in-JS-Redact)

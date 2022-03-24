@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office
 description: Общие сведения о разработке надстроек Office.
-ms.date: 07/08/2021
+ms.date: 03/11/2022
 ms.localizationpriority: high
-ms.openlocfilehash: da68ea157673a81fba9e04a3c73aacec020c61a4
-ms.sourcegitcommit: 33824aa3995a2e0bcc6d8e67ada46f296c224642
+ms.openlocfilehash: aa56af832d1be3d868700ec4fae731ec55507579
+ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61765943"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63711163"
 ---
 # <a name="develop-office-add-ins"></a>Разработка надстроек Office
 
@@ -19,11 +19,11 @@ ms.locfileid: "61765943"
 
 ## <a name="create-an-office-add-in"></a>Создание надстройки Office
 
-Надстройку Office можно создать с помощью генератора Yeoman для надстроек Office или Visual Studio.
+Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](yeoman-generator-overview.md) или Visual Studio.
 
-### <a name="yeoman-generator-for-office-add-ins"></a>Генератор Yeoman для надстроек Office
+### <a name="yeoman-generator"></a>Генератор Yeoman
 
-[Генератор Yeoman для надстроек Office](https://github.com/officedev/generator-office) можно использовать для создания проекта надстройки Office Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора. В генераторе можно создавать надстройки Office для любой из следующих целей.
+Генератор Yeoman для надстроек Office можно использовать для создания проекта надстройки Office Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора. В генераторе можно создавать надстройки Office для любого из следующих приложений:
 
 - Excel
 - OneNote
@@ -33,7 +33,7 @@ ms.locfileid: "61765943"
 - Word
 - Пользовательские функции Excel
 
-Проект можно создать с помощью HTML, CSS и JavaScript или с помощью Angular или React. Для любой платформы можно также выбирать между JavaScript и Typescript. Дополнительные сведения о создании надстроек с помощью генератора Yeoman см. в статье [Разработка надстроек Office с помощью Visual Studio Code](../develop/develop-add-ins-vscode.md).
+Создайте проект с помощью HTML, CSS и JavaScript (или TypeScript) либо с помощью Angular или React. Для любой платформы можно также выбирать между JavaScript и Typescript. Дополнительные сведения о создании надстроек с помощью генератора см. в статье [Генератор Yeoman для надстроек Office](yeoman-generator-overview.md).
 
 ### <a name="visual-studio"></a>Visual Studio
 

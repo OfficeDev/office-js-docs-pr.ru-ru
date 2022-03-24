@@ -1,12 +1,17 @@
 ---
 title: Надстройки PowerPoint
-description: 'Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.'
+description: Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.
 ms.date: 10/14/2020
 ms.topic: overview
-ms.custom: 'scenarios:getting-started'
+ms.custom: scenarios:getting-started
 ms.localizationpriority: high
+ms.openlocfilehash: a1bfa8f17f6a63896025a374a9fe8a6bdbf36f55
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746996"
 ---
-
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
 С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и в браузере. Можно создать два типа надстроек PowerPoint:

@@ -1,10 +1,15 @@
 ---
 title: Office.context.mailbox — набор требований 1.3
-description: Outlook API почтовых ящиков за набор 1.3 версии объектной модели почтовых ящиков.
+description: Outlook API почтовых ящиков за набором 1.3 версии объектной модели почтовых ящиков.
 ms.date: 03/18/2020
 ms.localizationpriority: medium
+ms.openlocfilehash: ebeba75e43cb48c435e16c7d53b706ff0b77af55
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746272"
 ---
-
 # <a name="mailbox-requirement-set-13"></a>почтовый ящик (набор требований 1.3)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox

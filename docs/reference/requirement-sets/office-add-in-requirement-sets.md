@@ -4,12 +4,12 @@ description: Дополнительные дополнительные Office о
 ms.date: 11/22/2021
 ms.prod: non-product-specific
 ms.localizationpriority: medium
-ms.openlocfilehash: 65ab09d62a3ca551cb1295744f88ff2fd095861a
-ms.sourcegitcommit: b3ddc1ddf7ee810e6470a1ea3a71efd1748233c9
+ms.openlocfilehash: 743473566e632022946bdc2b7e372b5bb6fede49
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61153472"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744113"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -29,10 +29,10 @@ ms.locfileid: "61153472"
 
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В следующих разделах перечисляются общие наборы требований API, методы в каждом наборе и Office клиентские приложения, которые поддерживают этот набор требований. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
+В следующих разделах  перечислить общие наборы требований API, методы в каждом наборе и Office клиентских приложений, которые поддерживают этот набор требований. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
 
 > [!TIP]
-> Нужна информация о том, где надстройки и наборы требований поддерживаются Office и версией? См. Office клиентского приложения и доступности [платформы для Office надстройки](../../overview/office-add-in-availability.md).
+> Нужна информация о том, где надстройки и наборы требований поддерживаются Office приложения и версии? См[. Office клиентского приложения и доступности платформы для Office надстройки](../../overview/office-add-in-availability.md).
 
 ### <a name="activeview"></a>ActiveView
 
@@ -60,7 +60,7 @@ ms.locfileid: "61153472"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel 2016 и более поздней Windows<br>Excel в Интернете<br>Excel 2016 и позднее на Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
+| Excel 2016 и более поздней Windows<br>Excel в Интернете<br>Excel 2016 и более поздней основе на Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
 
 ---
 
@@ -84,7 +84,7 @@ ms.locfileid: "61153472"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. [наборы требований к диалоговом происхождению.](dialog-origin-requirement-sets.md) | Поддержка кросс-домена для:<br>UI.messageParent<br>пользовательский интерфейс. Dialog.messageChild |
+| См [. наборы требований к диалоговом происхождению](dialog-origin-requirement-sets.md). | Поддержка кросс-домена для:<br>UI.messageParent<br>пользовательский интерфейс. Dialog.messageChild |
 
 ---
 
@@ -132,7 +132,7 @@ ms.locfileid: "61153472"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. [наборы требований к ярлыкам клавиатуры.](keyboard-shortcuts-requirement-sets.md) | Office.actions.areShortcutsInUse<br>Office.actions.getShortcuts<br>Office.actions.replaceShortcuts |
+| См [. наборы требований к ярлыкам клавиатуры](keyboard-shortcuts-requirement-sets.md). | Office.actions.areShortcutsInUse<br>Office.actions.getShortcuts<br>Office.actions.replaceShortcuts |
 
 ---
 
@@ -172,7 +172,7 @@ ms.locfileid: "61153472"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. [наборы требований к API API окна открытого браузера.](open-browser-window-api-requirement-sets.md) | Office.context.ui.openBrowserWindow |
+| См [. наборы требований к API окна открытого браузера](open-browser-window-api-requirement-sets.md). | Office.context.ui.openBrowserWindow |
 
 ---
 
@@ -196,7 +196,7 @@ ms.locfileid: "61153472"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. [наборы требований к API ленты.](ribbon-api-requirement-sets.md) | Office.ribbon.requestUpdate |
+| См [. наборы требований к API ленты](ribbon-api-requirement-sets.md). | Office.ribbon.requestUpdate |
 
 ---
 
@@ -220,7 +220,7 @@ ms.locfileid: "61153472"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. [общие наборы требований к времени работы.](shared-runtime-requirement-sets.md) | Office.addin.getStartupBehavior<br>Office.addin.hide<br>Office.addin.onVisibilityModeChanged<br>Office.addin.setStartupBehavior<br>Office.addin.showAsTaskpane<br> |
+| См [. общие наборы требований к времени работы](shared-runtime-requirement-sets.md). | Office.addin.getStartupBehavior<br>Office.addin.hide<br>Office.addin.onVisibilityModeChanged<br>Office.addin.setStartupBehavior<br>Office.addin.showAsTaskpane<br> |
 
 ---
 
@@ -266,7 +266,7 @@ ms.locfileid: "61153472"
 
 ## <a name="methods-that-arent-part-of-a-requirement-set"></a>Методы, отсутствующие в наборе требований
 
-Следующие методы в API Office JavaScript не являются частью набора требований. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в [Office приложениях и требованиях API.](../../develop/specify-office-hosts-and-api-requirements.md)
+Следующие методы в API Office JavaScript не являются частью набора требований. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. [в Office приложениях и требованиях API](../../develop/specify-office-hosts-and-api-requirements.md).
 
 |**Имя метода**|**Office поддержки приложений**|
 |:-----|:-----|

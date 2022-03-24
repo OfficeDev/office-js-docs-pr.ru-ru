@@ -1,13 +1,18 @@
 ---
 title: Добавление поддержки мобильных устройств в надстройку Outlook
-description: 'Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.'
+description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 07/16/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: ae8fbc6635e568cc6a9e8888ed52f0877f817320
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745969"
 ---
-
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
-Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к той же функции (с некоторыми ограничениями[), что](#code-considerations) и в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
+Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к той же функциональности (с некоторыми ограничениями[), что](#code-considerations) у них уже есть в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 
 ## <a name="updating-the-manifest"></a>Обновление манифеста
 
@@ -67,7 +72,7 @@ ms.localizationpriority: medium
 
 Метод [Office.context.mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) не поддерживается в Outlook Mobile. По мере возможности надстройки должны отдавать предпочтение данным из API Office.js. Если надстройкам требуются сведения, которые не предоставляет API Office.js, то для доступа к почтовому ящику пользователя следует использовать [интерфейсы REST API Outlook](/outlook/rest/).
 
-Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.context.mailbox.restUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties), которое можно использовать для поиска конечной точки API REST для пользователя.
+Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.mailbox.restUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties), которое можно использовать для поиска конечной точки API REST для пользователя.
 
 ### <a name="pinch-zoom"></a>Масштабирование жестами
 

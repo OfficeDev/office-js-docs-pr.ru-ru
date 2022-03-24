@@ -4,8 +4,13 @@ description: Сведения о наборе требований ExcelApi 1.6.
 ms.date: 11/09/2020
 ms.prod: excel
 ms.localizationpriority: medium
+ms.openlocfilehash: d68bfae3494ec21df1eee5909ac2df532a0537b9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745835"
 ---
-
 # <a name="whats-new-in-excel-javascript-api-16"></a>Новые возможности API JavaScript для Excel 1.6
 
 ## <a name="conditional-formatting"></a>Условное форматирование
@@ -27,7 +32,7 @@ ms.localizationpriority: medium
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в Excel API JavaScript, за набором 1.6. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.6 или ранее, см. Excel API в наборе требований [1.6 или ранее](/javascript/api/excel?view=excel-js-1.6&preserve-view=true).
+В следующей таблице перечислены API в Excel API JavaScript, за набором 1.6. Чтобы просмотреть справочную документацию API для всех API, поддерживаемых Excel API JavaScript, установленного 1.6 или ранее, см. в Excel API в наборе требований [1.6 или ранее](/javascript/api/excel?view=excel-js-1.6&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -44,7 +49,7 @@ ms.localizationpriority: medium
 ||[minimum](/javascript/api/excel/excel.conditionalcolorscalecriteria#excel-excel-conditionalcolorscalecriteria-minimum-member)|Минимальная точка критерия цветовой шкалы.|
 |[ConditionalColorScaleCriterion](/javascript/api/excel/excel.conditionalcolorscalecriterion)|[color](/javascript/api/excel/excel.conditionalcolorscalecriterion#excel-excel-conditionalcolorscalecriterion-color-member)|Представление цветового кода HTML цвета (например, #FF0000 представляет красный цвет).|
 ||[formula](/javascript/api/excel/excel.conditionalcolorscalecriterion#excel-excel-conditionalcolorscalecriterion-formula-member)|Число, формула или `null` (если `type` есть `lowestValue`).|
-||[type](/javascript/api/excel/excel.conditionalcolorscalecriterion#excel-excel-conditionalcolorscalecriterion-type-member)|На чем должна основываться условная формула критерия.|
+||[тип](/javascript/api/excel/excel.conditionalcolorscalecriterion#excel-excel-conditionalcolorscalecriterion-type-member)|На чем должна основываться условная формула критерия.|
 |[ConditionalDataBarNegativeFormat](/javascript/api/excel/excel.conditionaldatabarnegativeformat)|[borderColor](/javascript/api/excel/excel.conditionaldatabarnegativeformat#excel-excel-conditionaldatabarnegativeformat-bordercolor-member)|ЦВЕТОВой код HTML, представляющий цвет пограничной строки, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[fillColor](/javascript/api/excel/excel.conditionaldatabarnegativeformat#excel-excel-conditionaldatabarnegativeformat-fillcolor-member)|ЦВЕТОВой код HTML, представляющий цвет заполнения, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[matchPositiveBorderColor](/javascript/api/excel/excel.conditionaldatabarnegativeformat#excel-excel-conditionaldatabarnegativeformat-matchpositivebordercolor-member)|Указывает, имеет ли отрицательная планка данных тот же цвет границы, что и положительная планка данных.|
@@ -53,7 +58,7 @@ ms.localizationpriority: medium
 ||[fillColor](/javascript/api/excel/excel.conditionaldatabarpositiveformat#excel-excel-conditionaldatabarpositiveformat-fillcolor-member)|ЦВЕТОВой код HTML, представляющий цвет заполнения, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[gradientFill](/javascript/api/excel/excel.conditionaldatabarpositiveformat#excel-excel-conditionaldatabarpositiveformat-gradientfill-member)|Указывает, есть ли в панели данных градиент.|
 |[ConditionalDataBarRule](/javascript/api/excel/excel.conditionaldatabarrule)|[formula](/javascript/api/excel/excel.conditionaldatabarrule#excel-excel-conditionaldatabarrule-formula-member)|Формула, если требуется, для оценки правила панели данных.|
-||[type](/javascript/api/excel/excel.conditionaldatabarrule#excel-excel-conditionaldatabarrule-type-member)|Тип правила для панели данных.|
+||[тип](/javascript/api/excel/excel.conditionaldatabarrule#excel-excel-conditionaldatabarrule-type-member)|Тип правила для панели данных.|
 |[ConditionalFormat](/javascript/api/excel/excel.conditionalformat)|[cellValue](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-cellvalue-member)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является типом `CellValue` .|
 ||[cellValueOrNullObject](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-cellvalueornullobject-member)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является типом `CellValue` .|
 ||[colorScale](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-colorscale-member)|Возвращает свойства условного формата цветовой шкалы, если текущий условный формат является типом `ColorScale` .|
@@ -76,7 +81,7 @@ ms.localizationpriority: medium
 ||[textComparisonOrNullObject](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-textcomparisonornullobject-member)|Возвращает определенные свойства условного формата текста, если текущий условный формат — это текстовый тип.|
 ||[topBottom](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-topbottom-member)|Возвращает свойства верхнего и нижнего условного формата, если текущий условный формат является типом `TopBottom` .|
 ||[topBottomOrNullObject](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-topbottomornullobject-member)|Возвращает свойства верхнего и нижнего условного формата, если текущий условный формат является типом `TopBottom` .|
-||[type](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-type-member)|Тип условного формата.|
+||[тип](/javascript/api/excel/excel.conditionalformat#excel-excel-conditionalformat-type-member)|Тип условного формата.|
 |[ConditionalFormatCollection](/javascript/api/excel/excel.conditionalformatcollection)|[add(type: Excel. ConditionalFormatType)](/javascript/api/excel/excel.conditionalformatcollection#excel-excel-conditionalformatcollection-add-member(1))|Добавляет новый условный формат в коллекцию с первого и верхнего приоритета.|
 ||[clearAll()](/javascript/api/excel/excel.conditionalformatcollection#excel-excel-conditionalformatcollection-clearall-member(1))|Полное удаление условного форматирование в указанном диапазоне.|
 ||[getCount()](/javascript/api/excel/excel.conditionalformatcollection#excel-excel-conditionalformatcollection-getcount-member(1))|Возвращает количество условных форматов в книге.|
@@ -89,7 +94,7 @@ ms.localizationpriority: medium
 |[ConditionalIconCriterion](/javascript/api/excel/excel.conditionaliconcriterion)|[customIcon](/javascript/api/excel/excel.conditionaliconcriterion#excel-excel-conditionaliconcriterion-customicon-member)|Пользовательский значок для текущего критерия, если он отличается от набора значков по умолчанию, будет `null` возвращен.|
 ||[formula](/javascript/api/excel/excel.conditionaliconcriterion#excel-excel-conditionaliconcriterion-formula-member)|Число или формула в зависимости от типа.|
 ||[operator](/javascript/api/excel/excel.conditionaliconcriterion#excel-excel-conditionaliconcriterion-operator-member)|`greaterThan` или `greaterThanOrEqual` для каждого из типов правил для условного формата значка.|
-||[type](/javascript/api/excel/excel.conditionaliconcriterion#excel-excel-conditionaliconcriterion-type-member)|На чем должна основываться условная формула значка.|
+||[тип](/javascript/api/excel/excel.conditionaliconcriterion#excel-excel-conditionaliconcriterion-type-member)|На чем должна основываться условная формула значка.|
 |[ConditionalPresetCriteriaRule](/javascript/api/excel/excel.conditionalpresetcriteriarule)|[критерий](/javascript/api/excel/excel.conditionalpresetcriteriarule#excel-excel-conditionalpresetcriteriarule-criterion-member)|Критерий условного формата.|
 |[ConditionalRangeBorder](/javascript/api/excel/excel.conditionalrangeborder)|[color](/javascript/api/excel/excel.conditionalrangeborder#excel-excel-conditionalrangeborder-color-member)|ЦВЕТОВой код HTML, представляющий цвет пограничной строки, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[sideIndex](/javascript/api/excel/excel.conditionalrangeborder#excel-excel-conditionalrangeborder-sideindex-member)|Постоянное значение, указывающее определенную сторону границы.|
@@ -106,7 +111,7 @@ ms.localizationpriority: medium
 ||[color](/javascript/api/excel/excel.conditionalrangefill#excel-excel-conditionalrangefill-color-member)|ЦВЕТОВой код HTML, представляющий цвет заполнения, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 |[ConditionalRangeFont](/javascript/api/excel/excel.conditionalrangefont)|[bold](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-bold-member)|Указывает, является ли шрифт смелым.|
 ||[clear()](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-clear-member(1))|Удаляет форматирование шрифтов.|
-||[color](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-color-member)|Представление цветового кода HTML текстового цвета (например, #FF0000 представляет красный цвет).|
+||[color](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-color-member)|Представление цветового кода HTML текстового цвета (например, #FF0000 представляет красный).|
 ||[italic](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-italic-member)|Указывает, является ли шрифт italic.|
 ||[strikethrough](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-strikethrough-member)|Указывает состояние забастовки шрифта.|
 ||[underline](/javascript/api/excel/excel.conditionalrangefont#excel-excel-conditionalrangefont-underline-member)|Тип подчеркнутого, примененного к шрифту.|
@@ -117,10 +122,10 @@ ms.localizationpriority: medium
 |[ConditionalTextComparisonRule](/javascript/api/excel/excel.conditionaltextcomparisonrule)|[operator](/javascript/api/excel/excel.conditionaltextcomparisonrule#excel-excel-conditionaltextcomparisonrule-operator-member)|Оператор текстового условного формата.|
 ||[text](/javascript/api/excel/excel.conditionaltextcomparisonrule#excel-excel-conditionaltextcomparisonrule-text-member)|Текстовое значение условного формата.|
 |[ConditionalTopBottomRule](/javascript/api/excel/excel.conditionaltopbottomrule)|[rank](/javascript/api/excel/excel.conditionaltopbottomrule#excel-excel-conditionaltopbottomrule-rank-member)|От 1 до 1000 для числовых рейтингов или от 1 до 100 для процентных рейтингов.|
-||[type](/javascript/api/excel/excel.conditionaltopbottomrule#excel-excel-conditionaltopbottomrule-type-member)|Значения формата на основе верхнего или нижнего ранга.|
+||[тип](/javascript/api/excel/excel.conditionaltopbottomrule#excel-excel-conditionaltopbottomrule-type-member)|Значения формата на основе верхнего или нижнего ранга.|
 |[CustomConditionalFormat](/javascript/api/excel/excel.customconditionalformat)|[format](/javascript/api/excel/excel.customconditionalformat#excel-excel-customconditionalformat-format-member)|Возвращает объект формата, инкапсулируя шрифт условных форматов, заполнять, границы и другие свойства.|
 ||[правило](/javascript/api/excel/excel.customconditionalformat#excel-excel-customconditionalformat-rule-member)|Указывает объект в `Rule` этом условном формате.|
-|[DataBarConditionalFormat](/javascript/api/excel/excel.databarconditionalformat)|[axisColor](/javascript/api/excel/excel.databarconditionalformat#excel-excel-databarconditionalformat-axiscolor-member)|ЦВЕТОВой код HTML, представляющий цвет линии Axis, в форме #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
+|[DataBarConditionalFormat](/javascript/api/excel/excel.databarconditionalformat)|[axisColor](/javascript/api/excel/excel.databarconditionalformat#excel-excel-databarconditionalformat-axiscolor-member)|ЦВЕТОВой код HTML, представляющий цвет линии Axis, в виде #RRGGBB (например, "FFA500") или в виде имени HTML-цвета (например, "оранжевый").|
 ||[axisFormat](/javascript/api/excel/excel.databarconditionalformat#excel-excel-databarconditionalformat-axisformat-member)|Представление того, как ось определяется для Excel панели данных.|
 ||[barDirection](/javascript/api/excel/excel.databarconditionalformat#excel-excel-databarconditionalformat-bardirection-member)|Указывает, в каком направлении должна основываться графика панели данных.|
 ||[lowerBoundRule](/javascript/api/excel/excel.databarconditionalformat#excel-excel-databarconditionalformat-lowerboundrule-member)|Правило для нижней границы гистограммы (и как ее вычислить).|

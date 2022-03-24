@@ -3,12 +3,12 @@ ms.date: 03/08/2021
 description: Узнайте, как использовать различные параметры в настраиваемой функции, такие как диапазоны Excel, необязательные параметры, контекст вызовов и другие.
 title: Параметры Excel пользовательских функций
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cc0c825932afe3a70d0f9ab6483327051c199fd
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: c9fb645f9bf82390e82f55f12d543fab6358f0ad
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711023"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744484"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры настраиваемой функции
 

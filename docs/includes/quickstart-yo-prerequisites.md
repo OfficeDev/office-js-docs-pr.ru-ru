@@ -1,6 +1,6 @@
 - [Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases)).
 
-- Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
+- Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](../develop/yeoman-generator-overview.md). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
 
     ```command&nbsp;line
     npm install -g yo generator-office

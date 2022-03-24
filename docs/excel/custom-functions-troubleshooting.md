@@ -3,12 +3,12 @@ ms.date: 03/30/2021
 description: Устранение распространенных проблем с Excel пользовательскими функциями.
 title: Устранение проблем в пользовательских функциях
 ms.localizationpriority: medium
-ms.openlocfilehash: b95dae1acb60fe21298641076fb63f0655193e11
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: e2332d6e7696ba630953f4fd69154a9bb736c229
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151510"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744478"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -76,11 +76,11 @@ function add(first, second) {
 CustomFunctions.associate("ADD", add);
 ```
 
-Дополнительные сведения об этом процессе см. в ссылке [Associating function names with JSON metadata.](../excel/custom-functions-json.md#associating-function-names-with-json-metadata)
+Дополнительные сведения об этом процессе см. в ссылке [Associating function names with JSON metadata](../excel/custom-functions-json.md#associating-function-names-with-json-metadata).
 
 ## <a name="known-issues"></a>Известные проблемы
 
-Известные проблемы отслеживаются и сообщаются в репозитории [Excel пользовательских GitHub.](https://github.com/OfficeDev/Excel-Custom-Functions/issues)
+Известные проблемы отслеживаются и сообщаются в [Excel настраиваемой GitHub репозитории](https://github.com/OfficeDev/Excel-Custom-Functions/issues).
 
 ## <a name="reporting-feedback"></a>Обратная связь
 

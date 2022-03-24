@@ -1,15 +1,15 @@
 ---
-title: PowerPoint Набор API JavaScript 1.1
+title: PowerPoint API JavaScript установлено 1.1
 description: Сведения о наборе требований PowerPointApi 1.1.
 ms.date: 01/08/2021
 ms.prod: powerpoint
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ad178a4b989412ec98c7ad3d75e2baa1faa91f0
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3a9e82721945751169ef573965890b71e20bd930
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154319"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63745804"
 ---
 # <a name="whats-new-in-powerpoint-javascript-api-11"></a>Новые возможности в PowerPoint API JavaScript 1.1
 
@@ -17,8 +17,8 @@ API JavaScript для PowerPoint 1.1 содержит [единый API для �
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в PowerPoint API JavaScript, за набором 1.1.
+В следующей таблице перечислены API в PowerPoint API JavaScript, установленный 1.1.
 
 | Класс | Метод | Описание |
 |:---|:---|:---|
-|[PowerPoint](/javascript/api/powerpoint)|[createPresentation](/javascript/api/powerpoint#PowerPoint_createPresentation_base64File_)|Создает новую презентацию и открывает ее в другом PowerPoint окне.|
+|[PowerPoint](/javascript/api/powerpoint)|[createPresentation](/javascript/api/powerpoint#PowerPoint_createPresentation_base64File_)|Создает новую презентацию и открывает ее в другом окне PowerPoint.|

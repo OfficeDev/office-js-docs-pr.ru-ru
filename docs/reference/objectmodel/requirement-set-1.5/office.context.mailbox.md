@@ -1,10 +1,15 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
-description: 'Outlook API почтовых ящиков за набором 1,5 версии объектной модели почтовых ящиков.'
+description: Outlook API почтовых ящиков установлено 1,5 версии объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 2dabfe43b9c34bb3758a5af54fac32d204790c4c
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747167"
 ---
-
 # <a name="mailbox-requirement-set-15"></a>почтовый ящик (набор требований 1.5)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
@@ -26,7 +31,7 @@ ms.localizationpriority: medium
 | [диагностика](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5&preserve-view=true#outlook-office-mailbox-diagnostics-member) | ReadItem | Создание<br>Чтение | [Диагностика](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.5&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [ewsUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5&preserve-view=true#outlook-office-mailbox-ewsurl-member) | ReadItem | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [элемента](office.context.mailbox.item.md) | Restricted | Создание<br>Чтение | [Элемент](/javascript/api/outlook/office.item?view=outlook-js-1.5&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [restUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5&preserve-view=true#outlook-office-mailbox-resturl-member) | ReadItem | Создание<br>Чтение | String | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [restUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5&preserve-view=true#outlook-office-mailbox-resturl-member) | ReadItem | Создание<br>Чтение | Строка | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [userProfile](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5&preserve-view=true#outlook-office-mailbox-userprofile-member) | ReadItem | Создание<br>Чтение | [UserProfile](/javascript/api/outlook/office.userprofile?view=outlook-js-1.5&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="methods"></a>Методы
@@ -54,6 +59,6 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > События доступны только с реализацией области задач.
 
-| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.5&preserve-view=true) | Description | Minimum<br>набор требований |
+| [Event](/javascript/api/office/office.eventtype?view=outlook-js-1.5&preserve-view=true) | Описание | Minimum<br>набор требований |
 |---|---|:---:|
 |`ItemChanged`| Другой элемент Outlook для просмотра при закреплении области задач. | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |

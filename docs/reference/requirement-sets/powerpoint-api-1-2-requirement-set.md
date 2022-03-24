@@ -4,8 +4,13 @@ description: Сведения о наборе требований PowerPointApi
 ms.date: 01/27/2021
 ms.prod: powerpoint
 ms.localizationpriority: medium
+ms.openlocfilehash: 0e8ae36a7a137db1645051628aa90a451caf4d56
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744230"
 ---
-
 # <a name="whats-new-in-powerpoint-javascript-api-12"></a>Новые возможности в PowerPoint API JavaScript 1.2
 
 PowerPointApi 1.2 добавила поддержку для вставки слайдов из другой презентации в текущую презентацию и удаления слайдов.

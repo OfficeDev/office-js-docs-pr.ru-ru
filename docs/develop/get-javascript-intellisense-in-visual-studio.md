@@ -3,12 +3,12 @@ title: Использование IntelliSense для JavaScript в Visual Studi
 description: Узнайте, как использовать JSDoc для создания IntelliSense для переменных JavaScript, объектов, параметров и значений возврата.
 ms.date: 10/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fedf9e637ffaa32318e6eeca5f0f724abf62ba1
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 142f4cf81f83cdc518fb94f65a8e6f67f41a4783
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151018"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743492"
 ---
 # <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
 
@@ -71,7 +71,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана, показывающий отрывок IntelliSense для возвращаемого значения "myFunc()".](../images/intellisense-vs17-return.png)
+![Снимок экрана с выдержкой IntelliSense для возвращаемого значения "myFunc()".](../images/intellisense-vs17-return.png)
 
 ### <a name="complex-types"></a>Сложные типы
 
@@ -84,7 +84,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана IntelliSense для сложного типа объявления "var myVar;" например.](../images/intellisense-vs17-complex-type.png)
+![Снимок экрана IntelliSense для сложного объявления типа "var myVar;" например.](../images/intellisense-vs17-complex-type.png)
 
 ## <a name="see-also"></a>См. также
 

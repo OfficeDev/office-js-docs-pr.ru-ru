@@ -3,12 +3,12 @@ title: Элементы пользовательского интерфейса 
 description: Получите обзор различных элементов пользовательского интерфейса в Office надстройки.
 ms.date: 12/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a3855c5b0f30ba795d1fd5d6becd1e8632927e3
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 92ba1d85b534f70c6fca511c03dbcb25d3fd4e33
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151053"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743219"
 ---
 # <a name="office-ui-elements-for-office-add-ins"></a>Элементы пользовательского интерфейса Office для надстроек Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "59151053"
 
 ## <a name="add-in-commands"></a>Команды надстроек
 
-Используйте [команды надстройки,](add-in-commands.md) чтобы добавить точки входа в надстройки к ленте Приложение Office. Команды запускают действия в надстройке путем выполнения кода JavaScript или запуска контейнера HTML. Можно создать два типа команд надстроек.
+Используйте [команды надстройки](add-in-commands.md), чтобы добавить точки входа в надстройки к ленте Приложение Office. Команды запускают действия в надстройке путем выполнения кода JavaScript или запуска контейнера HTML. Можно создать два типа команд надстроек.
 
 |Тип команды|Описание|
 |:---------------|:--------------|

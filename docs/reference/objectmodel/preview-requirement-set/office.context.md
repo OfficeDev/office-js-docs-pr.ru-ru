@@ -1,22 +1,22 @@
 ---
 title: Office.context — предварительная версия набора обязательных элементов
-description: Office. Участники объектов Context, доступные для Outlook надстройки с помощью набора требований к API API почтовых ящиков.
+description: Office. Участники объекта Context, доступные для Outlook надстройки с помощью набора требований к API API почтовых ящиков.
 ms.date: 12/03/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: c418c3acb4b02c11f56e87d3a27745111c3e968e
-ms.sourcegitcommit: efd0966f6400c8e685017ce0c8c016a2cbab0d5c
+ms.openlocfilehash: a7013f37a1b9de698b1e03c3cc1099684ed8d972
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60237758"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746121"
 ---
 # <a name="context-mailbox-preview-requirement-set"></a>контекст (набор требований предварительного просмотра почтовых ящиков)
 
 ### <a name="officecontext"></a>[Office](office.md).context
 
-Office.context предоставляет общие интерфейсы, используемые надстройки во всех Office приложениях. Этот список документов только те интерфейсы, которые используются Outlook надстройки. Полный список пространства имен Office.context см. в [ссылке Office.context в общем API.](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true)
+Office.context предоставляет общие интерфейсы, используемые надстройки во всех Office приложениях. Этот список документов только те интерфейсы, которые используются Outlook надстройки. Полный список пространства имен Office.context см. в [ссылке Office.context в общем API](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -30,7 +30,7 @@ Office.context предоставляет общие интерфейсы, ис�
 | [auth](#auth-auth) | Создание<br>Чтение | [Auth](/javascript/api/office/office.auth?view=outlook-js-preview&preserve-view=true) | [IdentityAPI 1.3](../../requirement-sets/identity-api-requirement-sets.md) |
 | [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [диагностика](#diagnostics-contextinformation) | Создание<br>Чтение | [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-preview&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [хост](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-preview&preserve-view=true) | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-preview&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [officeTheme](#officetheme-officetheme) | Создание<br>Чтение | [OfficeTheme](/javascript/api/office/office.officetheme?view=outlook-js-preview&preserve-view=true) | [Предварительная версия](../preview-requirement-set/outlook-requirement-set-preview.md) |
@@ -45,11 +45,11 @@ Office.context предоставляет общие интерфейсы, ис�
 
 Поддерживает один вход [(SSO),](../../../outlook/authenticate-a-user-with-an-sso-token.md) предоставляя метод, который позволяет Office приложению получить маркер доступа к веб-приложению надстройки. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [Auth](/javascript/api/office/office.auth?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -78,7 +78,7 @@ Office.context.auth.getAccessTokenAsync(function(result) {
 
 Получает локализ (язык), указанный пользователем для редактирования элемента.
 
-Это значение отражает текущий параметр Язык редактирования, указанный в файле > `contentLanguage` **Параметры > язык** в клиентском приложении Office. 
+Это `contentLanguage` значение отражает текущий параметр **Язык** редактирования, указанный в файле > **Параметры > язык** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -121,11 +121,11 @@ function write(message){
 
 Получает сведения об среде, в которой работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [ContextInformation](/javascript/api/office/office.contextinformation?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -150,7 +150,7 @@ console.log("Platform: " + contextInfo.platform);
 
 Получает локализ (язык) в формате языковых тегов RFC 1766, заданный пользователем для пользовательского интерфейса Office клиентского приложения.
 
-Это значение отражает текущий параметр Язык отображения, указанный в файле > `displayLanguage` **Параметры > язык** в клиентском приложении Office. 
+Это `displayLanguage` значение отражает текущий параметр **Язык** отображения, указанный в файле > **Параметры > язык** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -194,13 +194,13 @@ function write(message){
 Получает Office приложение, в которое размещена надстройка.
 
 > [!NOTE]
-> Кроме того, для получения хоста можно использовать [свойство Office.context.diagnostics.](#diagnostics-contextinformation)
+> Кроме того, для получения [хоста можно использовать свойство Office.context.diagnostics](#diagnostics-contextinformation).
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [HostType](/javascript/api/office/office.hosttype?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -225,9 +225,9 @@ console.log(JSON.stringify(Office.context.host));
 > [!NOTE]
 > Этот член поддерживается только в Outlook на Windows.
 
-Использование Office тем позволяет координировать цветовую схему надстройки с текущей темой Office, выбранной пользователем с пользовательским интерфейсом **File > Office Account > Office Theme,** который применяется во всех Office клиентских приложениях. Using Office theme colors is appropriate for mail and task pane add-ins.
+Использование Office тем позволяет координировать цветовую схему надстройки с текущей темой Office, выбранной пользователем с пользовательским интерфейсом **File > Office Account > Office Theme**, который применяется во всех Office клиентских приложениях. Using Office theme colors is appropriate for mail and task pane add-ins.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [OfficeTheme](/javascript/api/office/office.officetheme?view=outlook-js-preview&preserve-view=true)
 
@@ -240,7 +240,7 @@ console.log(JSON.stringify(Office.context.host));
 |`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -272,13 +272,13 @@ function applyOfficeTheme(){
 Предоставляет платформу, на которой запущена надстройка.
 
 > [!NOTE]
-> Кроме того, для получения [платформы можно использовать свойство Office.context.diagnostics.](#diagnostics-contextinformation)
+> Кроме того, для получения [платформы можно использовать свойство Office.context.diagnostics](#diagnostics-contextinformation).
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -300,11 +300,11 @@ console.log(JSON.stringify(Office.context.platform));
 
 Предоставляет метод определения, какие наборы требований поддерживаются в текущем приложении и платформе.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RequirementSetSupport](/javascript/api/office/office.requirementsetsupport?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -326,13 +326,13 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
-Объект позволяет хранить и получать доступ к данным для почтовой надстройки, хранимой в почтовом ящике пользователя, чтобы она была доступна этой надстройке, когда она запущена из любого клиента Outlook, используемого для доступа к этому `RoamingSettings` почтовому ящику.
+`RoamingSettings` Объект позволяет хранить и получать доступ к данным для почтовой надстройки, хранимой в почтовом ящике пользователя, чтобы она была доступна этой надстройке, когда она запущена из любого клиента Outlook, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -349,11 +349,11 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Предоставляет объекты и методы, которые можно использовать для создания и управления компонентами пользовательского интерфейса, такими как диалоговое окно, в Office надстройки.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [UI](/javascript/api/office/office.ui?view=outlook-js-preview&preserve-view=true)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

@@ -3,12 +3,12 @@ title: Вызов встроенных функций листов Excel с по
 description: Узнайте, как вызывать встроенные функции `VLOOKUP` `SUM` Excel таблицы, такие как Excel API JavaScript.
 ms.date: 02/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b6e3ca14064934ed45228d14a95a0226a998937c
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: cc7622b642720a8cb8f80ad553600fd22ac7c25c
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63341039"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744071"
 ---
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 

@@ -3,12 +3,12 @@ title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
 ms.date: 05/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 352874739b0a7c5aa2caaa930aaeb1562c065454
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: c7994073dde86c76368f0a0e6ea4a4b71b8ca71b
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59151030"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743241"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
 

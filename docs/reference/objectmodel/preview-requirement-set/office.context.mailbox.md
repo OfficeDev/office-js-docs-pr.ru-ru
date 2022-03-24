@@ -1,10 +1,15 @@
 ---
 title: Office.context.mailbox — набор требований к предварительному просмотру
-description: Outlook API API предварительного просмотра заданная версия объектной модели почтовых ящиков.
+description: Outlook API API предварительной версии объектной модели почтовых ящиков.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 84af94fb0700c416c01ff853cc330d984ed4c7ac
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743953"
 ---
-
 # <a name="mailbox-preview-requirement-set"></a>почтовый ящик (набор требований предварительного просмотра)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
@@ -60,7 +65,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > События доступны только с реализацией области задач.
 
-| [Event](/javascript/api/office/office.eventtype?view=outlook-js-preview&preserve-view=true) | Description | Minimum<br>набор требований |
+| [Event](/javascript/api/office/office.eventtype?view=outlook-js-preview&preserve-view=true) | Описание | Minimum<br>набор требований |
 |---|---|:---:|
 |`ItemChanged`| Другой элемент Outlook для просмотра при закреплении области задач. | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-|`OfficeThemeChanged`| Тема Office на почтовом ящике изменилась. | [Предварительная версия](../preview-requirement-set/outlook-requirement-set-preview.md) |
+|`OfficeThemeChanged`| Тема Office почтового ящика изменилась. | [Предварительная версия](../preview-requirement-set/outlook-requirement-set-preview.md) |

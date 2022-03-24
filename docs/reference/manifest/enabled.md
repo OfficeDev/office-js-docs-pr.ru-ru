@@ -3,12 +3,12 @@ title: Включен элемент в файле манифеста
 description: Узнайте, как указать, что команда надстройки отключена при запуске надстройки.
 ms.date: 03/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fc635e91b005eb51c70e8517058fc03fa4f26c6c
-ms.sourcegitcommit: 856f057a8c9b937bfb37e7d81a6b71dbed4b8ff4
+ms.openlocfilehash: 75a2664143e29c86a05aaf039b0ea7bce659cef9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63511263"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744758"
 ---
 # <a name="enabled-element"></a>Элемент Включен
 

@@ -3,12 +3,12 @@ title: Отладка настроек в Windows с использование�
 description: Узнайте, как отладить Office надстройки, использующие устаревшая версия Microsoft Edge WebView (EdgeHTML) с помощью расширения Office надстройки debugger в VS Code.
 ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 98ac2fc4eab8ef20ddc416b299fde88095ef4fb4
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: e43afbe2ae600a7013a8d4872d4148c571c0861d
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63710946"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744093"
 ---
 # <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 

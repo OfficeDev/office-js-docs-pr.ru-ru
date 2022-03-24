@@ -1,14 +1,14 @@
 ---
 ms.date: 07/08/2021
-description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
+description: Запрос, поток и отмена потоковой передачи внешних данных в книгу с пользовательскими функциями в Excel.
 title: Получение и обработка данных с помощью пользовательских функций
 ms.localizationpriority: medium
-ms.openlocfilehash: 5aee26cb3c22d43a11ee2b0f500d04f9c7e596e8
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 641c6da717ede364d59591838849cd47d887f63c
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153765"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744655"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -27,7 +27,7 @@ ms.locfileid: "59153765"
 
 ### <a name="fetch-example"></a>Пример получения данных
 
-В следующем примере кода функция достигает гипотетического `webRequest` API Contoso "Number of People in Space", который отслеживает количество людей на Международной космической станции. Функция возвращает обещание JavaScript и использует метод Fetch для запроса сведений из API. Итоговые данные преобразуются в формат JSON, а свойство `names` преобразуется в строку, использующуюся для разрешения обещания.
+В следующем примере `webRequest` кода функция достигает гипотетического API Contoso "Number of People in Space", который отслеживает количество людей на Международной космической станции. Функция возвращает обещание JavaScript и использует метод Fetch для запроса сведений из API. Итоговые данные преобразуются в формат JSON, а свойство `names` преобразуется в строку, использующуюся для разрешения обещания.
 
 При разработке собственных функций может потребоваться выполнение действия, если веб-запрос не завершается своевременно. Также можно рассмотреть [совмещение нескольких запросов API](custom-functions-batching.md).
 
@@ -56,7 +56,7 @@ function webRequest() {
 
 ### <a name="xhr-example"></a>Пример XHR
 
-В следующем примере кода функция вызывает API Github для обнаружения количества звезд, отдаваемого репозиторию `getStarCount` конкретного пользователя. Это асинхронная функция, возвращающая обещание JavaScript. При получении данных из веб-вызова обещание разрешается, что возвращает данные в ячейку.
+В следующем примере кода `getStarCount` функция вызывает API Github для обнаружения количества звезд, отдаваемого репозиторию конкретного пользователя. Это асинхронная функция, возвращающая обещание JavaScript. При получении данных из веб-вызова обещание разрешается, что возвращает данные в ячейку.
 
 ```TS
 /**
@@ -101,7 +101,7 @@ async function getStarCount(userName: string, repoName: string) {
 
 Чтобы объявить функцию потоковой передачи, можно использовать:
 
-- `@streaming`Тег.
+- Тег `@streaming` .
 - Параметр `CustomFunctions.StreamingInvocation` вызовов.
 
 Следующий пример кода — это пользовательская функция, которая добавляет число к результату каждую секунду. Обратите внимание на указанные ниже аспекты этого кода.
@@ -145,9 +145,9 @@ Excel отменяет выполнение функции в следующих
 
 ### <a name="use-an-invocation-parameter"></a>Использование параметра вызовов
 
-Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр дает контекст о ячейке (например, ее адрес и содержимое) и позволяет `invocation` использовать и `setResult` `onCanceled` методы. Эти методы определяют, что делает функция во время ее потоковой передачи (`setResult`) или отмены (`onCanceled`).
+Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр `invocation` дает контекст о ячейке (например, ее адрес и содержимое) и позволяет использовать и `setResult` методы `onCanceled` . Эти методы определяют, что делает функция во время ее потоковой передачи (`setResult`) или отмены (`onCanceled`).
 
-Если вы используете TypeScript, обработатель вызовов должен быть типа [`CustomFunctions.StreamingInvocation`](/javascript/api/custom-functions-runtime/customfunctions.streaminginvocation) или [`CancelableInvocation`](/javascript/api/custom-functions-runtime/customfunctions.cancelableinvocation) .
+Если вы используете TypeScript, обработатель вызовов должен быть типа [`CustomFunctions.StreamingInvocation`](/javascript/api/custom-functions-runtime/customfunctions.streaminginvocation) или [`CancelableInvocation`](/javascript/api/custom-functions-runtime/customfunctions.cancelableinvocation).
 
 ## <a name="receiving-data-via-websockets"></a>Получение данных через WebSockets
 
