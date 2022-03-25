@@ -3,19 +3,19 @@ title: Разработка надстроек Office с помощью Visual S
 description: Как разрабатывать надстройки Office с помощью Visual Studio.
 ms.date: 01/26/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 26fd9d138dc05f7e0ca2961591b9d45b21a9dbe6
-ms.sourcegitcommit: e837f966d7360ed11b3ff9363ff20380f7d0c45e
+ms.openlocfilehash: 52740e16363e3e038269e08a9e50e0f08877db66
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "62263046"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743845"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
 В этой статье описано, как использовать Visual Studio для разработки надстроек Office. Если надстройка уже создана, можно перейти к разделу [Разработка надстройки с помощью Visual Studio](#develop-the-add-in-using-visual-studio).
 
 > [!NOTE]
-> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения о выборе средств создания см. в разделе [Создание надстроек Office](../develop/develop-overview.md#create-an-office-add-in).
+> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения об этом выборе см. в разделе [Создание надстройки Office](../develop/develop-overview.md#create-an-office-add-in).
 
 ## <a name="create-the-add-in-project-using-visual-studio"></a>Создание проекта надстройки с помощью Visual Studio
 
@@ -26,7 +26,7 @@ ms.locfileid: "62263046"
 - [Краткое руководство по началу работы с Word](../quickstarts/word-quickstart.md?tabs=visualstudio)
 - [Краткое руководство по началу работы с PowerPoint](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio)
 
-В Visual Studio не поддерживается создание надстроек Office для OneNote и Project. Чтобы создавать надстройки Office для любого из этих приложений, потребуется использовать генератор Yeoman для надстроек Office, как описано в [кратком руководстве по началу работы с OneNote](../quickstarts/onenote-quickstart.md) и в [кратком руководстве по началу работы с Project](../quickstarts/project-quickstart.md).
+Visual Studio не поддерживает создание надстроек Office для OneNote или Project. Чтобы создавать надстройки Office для любого из этих приложений, потребуется использовать генератор Yeoman для надстроек Office, как описано в [кратком руководстве по началу работы с OneNote](../quickstarts/onenote-quickstart.md) и в [кратком руководстве по началу работы с Project](../quickstarts/project-quickstart.md).
 
 ## <a name="develop-the-add-in-using-visual-studio"></a>Разработка надстройки с помощью Visual Studio
 

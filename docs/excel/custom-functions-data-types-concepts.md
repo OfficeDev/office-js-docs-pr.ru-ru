@@ -5,12 +5,12 @@ ms.date: 12/27/2021
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: dfce989064ac21a09e07805b408ef744f9dcd3bf
-ms.sourcegitcommit: b46d2afc92409bfc6612b016b1cdc6976353b19e
+ms.openlocfilehash: 393777730a6f4889d7d053382fd885de3714a4d9
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "61647960"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744357"
 ---
 # <a name="use-data-types-with-custom-functions-in-excel-preview"></a>Используйте типы данных в пользовательских функциях Excel (предварительная версия)
 

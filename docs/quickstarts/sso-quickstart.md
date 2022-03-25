@@ -4,12 +4,12 @@ description: Создание надстройки Office на платформ�
 ms.date: 01/25/2022
 ms.prod: non-product-specific
 ms.localizationpriority: high
-ms.openlocfilehash: fba13fbef0c9e40b913c97885a67fef5adc11223
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: 86094d4aea8addc4dee670845f33b24a6f31d84a
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711240"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63747194"
 ---
 # <a name="single-sign-on-sso-quick-start"></a>Краткое руководство по единому входу (SSO)
 

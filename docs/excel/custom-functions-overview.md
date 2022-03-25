@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: d3866c5091c586c039029cab205a5ae0519e992b
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: 0d3e478e6deaf630f6665b3bba2796c26826fcde
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63711037"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744495"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 

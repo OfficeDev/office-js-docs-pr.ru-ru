@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек Office
-description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки
+description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки.
 ms.date: 02/17/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 67afa308625c4f18775c3470c2bc2410af37905c
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 87265e8aeb760aa9449c86a7991b3ad6ed8943ee
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63340381"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63744704"
 ---
 # <a name="overview-of-debugging-office-add-ins"></a>Обзор отладки надстроек Office
 

@@ -3,8 +3,13 @@ title: XML-манифест надстроек Office
 description: Получите обзор манифеста надстройки Office и его использования.
 ms.date: 09/28/2021
 ms.localizationpriority: high
+ms.openlocfilehash: d1e644b73b11f32edebcb74d85e8cf52e66ce479
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63743698"
 ---
-
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
 XML-файл манифеста надстройки Office описывает способ ее активации, когда пользователь устанавливает и использует эту надстройку для работы с документами и приложениями Office.

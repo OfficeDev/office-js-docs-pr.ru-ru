@@ -1,14 +1,14 @@
 ---
 title: Объектная модель JavaScript для Word в надстройках Office
-description: Сведения о важнейших классах в объектной модели JavaScript для Word.
+description: Узнайте о ключевых компонентах объектной модели JavaScript, определенной в Word.
 ms.date: 3/17/2022
 ms.localizationpriority: high
-ms.openlocfilehash: c0e601c75bdf4f163118de93d0c06d4668594c4b
-ms.sourcegitcommit: 4a7b9b9b359d51688752851bf3b41b36f95eea00
+ms.openlocfilehash: d3c2a43e2febbf31fe132dfb5c220bffcc7a1fef
+ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63710939"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746102"
 ---
 # <a name="word-javascript-object-model-in-office-add-ins"></a>Объектная модель JavaScript для Word в надстройках Office
 
