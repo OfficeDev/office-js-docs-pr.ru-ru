@@ -1,15 +1,15 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: В этом руководстве вы создадите надстройку Excel, содержащую пользовательскую функцию, которая может выполнять вычисления, запрашивать веб-данные или потоковые веб-данные.
-ms.date: 03/18/2022
+ms.date: 03/23/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: c6121b4d2041e04cdd5c978b1d8d2a1ba6f5cf5a
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 984a2090a70360af4f361bb531190a7ee2a05c4c
+ms.sourcegitcommit: 64942cdd79d7976a0291c75463d01cb33a8327d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745576"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64404732"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -44,7 +44,7 @@ ms.locfileid: "63745576"
     - **Выберите тип сценария:** `JavaScript`
     - **Как вы хотите назвать надстройку?** `starcount`
 
-    ![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.](../images/starcountPrompt.png)
+    :::image type="content" source="../images/starcountPrompt.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
 
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
@@ -99,6 +99,8 @@ npm run start:desktop
 
 Пользовательская функция `ADD` вычисляет сумму двух чисел, которые вы указываете и возвращает результат **210**.
 
+[!include[Manually register an add-in](../includes/excel-custom-functions-manually-register.md)]
+
 ## <a name="create-a-custom-function-that-requests-data-from-the-web"></a>Создание пользовательской функции, которая запрашивает данные из сети Интернет
 
 Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Затем вы создадите пользовательскую функцию с именем `getStarCount`, показывающую, сколько звезд имеет данный репозиторий Github.
@@ -145,14 +147,19 @@ npm run start:desktop
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
-1. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Снимок экрана: лента "Вставка" Excel для Windows с выделенной стрелкой вниз "Мои надстройки".](../images/select-insert.png)
+1. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, находящуюся справа от элемента **Мои надстройки**.
+
+    :::image type="content" source="../images/select-insert.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной стрелкой &quot;Мои надстройки&quot;":::
 
 1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите вашу надстройку **starcount**, чтобы ее зарегистрировать.
-    ![Снимок экрана: лента "Вставка" в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/list-starcount.png)
+
+    :::image type="content" source="../images/list-starcount.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной надстройкой &quot;Пользовательские функции Excel&quot; в списке &quot;Мои надстройки&quot;.":::
 
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
-1. В Excel выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Снимок экрана: лента "Вставка" Excel для Интернета с выделенной кнопкой "Мои надстройки".](../images/excel-cf-online-register-add-in-1.png)
+1. В Excel на вкладке **Вставка** выберите пункт **Надстройки**.
+
+    :::image type="content" source="../images/excel-cf-online-register-add-in-1.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel в Интернете с выделенной кнопкой &quot;Мои надстройки&quot;.":::
 
 1. Выберите пункт **Управление моими надстройками**, а затем выберите **Отправить мою надстройку**.
 
@@ -160,7 +167,7 @@ npm run start:desktop
 
 1. Выберите файл **manifest.xml** и нажмите **Открыть**, затем нажмите кнопку **Отправить**.
 
-5. Теперь давайте оценим, как работает новая функция. В ячейке **B1** введите текст **=CONTOSO.GETSTARCOUNT("OfficeDev", "Excel-Custom-Functions")** и нажмите клавишу ВВОД. Результат в ячейке **B1** — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).
+1. Теперь давайте оценим, как работает новая функция. В ячейке **B1** введите текст **=CONTOSO.GETSTARCOUNT("OfficeDev", "Excel-Custom-Functions")** и нажмите клавишу ВВОД. Результат в ячейке **B1** — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).
 
 ---
 

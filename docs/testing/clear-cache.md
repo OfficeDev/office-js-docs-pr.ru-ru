@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 03/11/2022
 ms.localizationpriority: high
-ms.openlocfilehash: f0264ff5d8dd58419ede370cb28a2ceec888cd13
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 87cffbe8d28961f8469fbe149ece029bcaaa481d
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746248"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484035"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -63,7 +63,7 @@ ms.locfileid: "63746248"
 > Если вы хотите, чтобы в неопубликованной надстройке отражались только последние изменения ее исходных файлов HTML или JavaScript, не нужно очищать кэш. Вместо этого просто переместите фокус в область задач надстройки (щелкнув в любом месте области задач) и нажмите клавиши **CTRL + F5**, чтобы перезагрузить надстройку.
 
 > [!NOTE]
-> Для очистки кэша Office с помощью перечисленных ниже действий в вашей надстройке должна быть область задач. Если в вашей надстройке нет пользовательского интерфейса (например, она использует функцию [проверки при отправке](../outlook/outlook-on-send-addins.md)), потребуется добавить в надстройку область задач, использующую такой же домен для [SourceLocation](../reference/manifest/sourcelocation.md), прежде чем можно будет использовать указанные ниже действия для очистки кэша.
+> Для очистки кэша Office с помощью перечисленных ниже действий в вашей надстройке должна быть область задач. Если в вашей надстройке нет пользовательского интерфейса (например, она использует функцию [проверки при отправке](../outlook/outlook-on-send-addins.md)), потребуется добавить в надстройку область задач, использующую такой же домен для [SourceLocation](/javascript/api/manifest/sourcelocation), прежде чем можно будет использовать указанные ниже действия для очистки кэша.
 
 1. Установите [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj).
 

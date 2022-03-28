@@ -3,12 +3,12 @@ title: Рекомендации и правила Office dialog API
 description: Предоставляет правила и лучшие практики для API Office диалогов, такие как лучшие практики для одно-страничного приложения (SPA).
 ms.date: 07/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 773edd6b041ad6e49b479b3705ebcdea1875e561
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: a9d9dcbbeeb52aa8d05c27c3cd823ce336c71233
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743496"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483733"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -23,7 +23,7 @@ ms.locfileid: "63743496"
 
 - Диалоговое окно может перемещаться только по URL-адресам HTTPS, а не по HTTP.
 - URL-адрес, переданный [методу displayDialogAsync](/javascript/api/office/office.ui) , должен быть в том же домене, что и сама надстройка. Это не может быть поддомен. Но страница, которая передается ему, может перенаправляться на страницу в другом домене.
-- В окне хост, которое может быть области задач или файл функций без пользовательского интерфейса команды надстройки, может одновременно открываться только одно диалоговое окно.[](../reference/manifest/functionfile.md)
+- В окне хост, которое может быть области задач или файл функций без пользовательского интерфейса команды надстройки, может одновременно открываться только одно диалоговое окно.[](/javascript/api/manifest/functionfile)
 - В диалоговом окне Office только два API:
   - Функция [messageParent](/javascript/api/office/office.ui#office-office-ui-messageparent-member(1)) .
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в [Office приложениях и требованиях API](specify-office-hosts-and-api-requirements.md).)

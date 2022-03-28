@@ -3,12 +3,12 @@ title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
 ms.date: 05/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b7d4cc9605d330bade217f43958b0c2fcb37c724
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: ea167f338834245975f2e752803e264ddb8da5e6
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63742952"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483927"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -49,13 +49,13 @@ ms.locfileid: "63742952"
 
 ## <a name="support-considerations"></a>Что касается поддержки
 
-- Убедитесь, что Office надстройка будет работать на [определенном Office или платформе](../overview/office-add-in-availability.md).
+- Убедитесь, что Office надстройка будет работать на [определенном Office или платформе](/javascript/api/requirement-sets).
 - Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) для пользователя в манифесте надстройки.  
 - Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
 
 ## <a name="see-also"></a>См. также
 
-- [Доступность клиентских приложений и платформ Office для надстроек Office](../overview/office-add-in-availability.md)
+- [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets)
 - [Fabric Core в надстройках Office](fabric-core.md)
 - [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
 - [Запрос разрешений на использование API в надстройках](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)

@@ -3,12 +3,12 @@ title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
 ms.date: 02/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 829e8ccc947ffd7997146de1aafaf517fd7ebf06
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: f826968ae5137931fc334e62c9594461850cf649
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744975"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484078"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
@@ -63,12 +63,12 @@ async function tryCatch(callback) {
 
 В таблице ниже перечислены ошибки, которые может возвращать API.
 
-|Код ошибки | Сообщение об ошибке | Заметки |
+|Код ошибки | Сообщение об ошибке | Примечания |
 |:----------|:--------------|:------|
 |`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.| |
 |`ActivityLimitReached`|Достигнут предел действий.| |
 |`ApiNotAvailable`|Запрашиваемый интерфейс API недоступен.| |
-|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript](../reference/requirement-sets/excel-api-requirement-sets.md).| |
+|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript](/javascript/api/requirement-sets/excel-api-requirement-sets).| |
 |`BadPassword`|Предоставленный пароль является неправильным.| |
 |`Conflict`|Запрос не удалось обработать из-за конфликта.| |
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.| |

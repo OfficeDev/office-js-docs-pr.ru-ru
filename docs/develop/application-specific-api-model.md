@@ -3,19 +3,19 @@ title: Использование модели API для определенны
 description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
 ms.date: 02/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 39a89ad869305d88736c72619f9f86ecd7121437
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 2a300791eced4504faa75973cb4184f6965e39f3
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743650"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483820"
 ---
 # <a name="application-specific-api-model"></a>Модель API для конкретных приложений
 
 В этой статье описывается использование модели API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
 
 > [!NOTE]
-> Эта модель не поддерживается клиентами Office 2013. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](../overview/office-add-in-availability.md).
+> Эта модель не поддерживается клиентами Office 2013. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets).
 
 > [!TIP]
 > В примерах на этой странице используются Excel API JavaScript, но эти понятия также применяются к API OneNote, PowerPoint, Visio и API JavaScript Word.

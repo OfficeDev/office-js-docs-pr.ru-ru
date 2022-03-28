@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью схемы XML и других средств.
-ms.date: 10/29/2020
+ms.date: 03/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 15d885fbfca96d759c10c556bea3533bc54433db
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 02273647a2e1f639aec7adb260453a811035d7e4
+ms.sourcegitcommit: 64942cdd79d7976a0291c75463d01cb33a8327d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745669"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64404724"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -19,7 +19,7 @@ ms.locfileid: "63745669"
 
 ## <a name="validate-your-manifest-with-the-yeoman-generator-for-office-add-ins"></a>Проверка манифеста с помощью генератора Yeoman для надстроек Office
 
-Если для создания надстройки использовался [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), вы также можете использовать его для проверки файла манифеста проекта. Выполните указанную ниже команду в корневом каталоге своего проекта.
+Если для создания надстройки использовался [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), вы также можете использовать его для проверки файла манифеста проекта. Выполните следующую команду в корневом каталоге своего проекта.
 
 ```command&nbsp;line
 npm run validate
@@ -29,6 +29,8 @@ npm run validate
 
 > [!NOTE]
 > Чтобы получить доступ к этой функции, необходимо создать проект надстройки с помощью [генератора Yeoman](../develop/yeoman-generator-overview.md) для Office версии надстройки 1.1.17 или более поздней версии.
+
+[!INCLUDE [validate also runs Office Store validation](../includes/office-store-validate.md)]
 
 ## <a name="validate-your-manifest-with-office-addin-manifest"></a>Проверка манифеста с помощью office-addin-manifest
 
@@ -54,6 +56,14 @@ npm run validate
     > ```command&nbsp;line
     > npx office-addin-manifest validate MANIFEST_FILE
     > ```
+
+[!INCLUDE [validate also runs Office Store validation](../includes/office-store-validate.md)]
+
+Если у вас возникли проблемы с этой командой, попробуйте следующее (заменив `MANIFEST_FILE` имя файла манифеста).
+
+```command&nbsp;line
+npx office-addin-manifest validate -p MANIFEST_FILE
+```
 
 ## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
 

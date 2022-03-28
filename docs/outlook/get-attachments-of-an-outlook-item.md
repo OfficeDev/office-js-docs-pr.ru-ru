@@ -3,12 +3,12 @@ title: Получение вложений в надстройке Outlook
 description: Надстройка может использовать API вложений для отправки информации о вложениях удаленной службе.
 ms.date: 09/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ae6d635535e9d8882877a6567160fa540c138310
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: b8f851eba0eae9373d751b63e37c35db5f5ead3a
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62074352"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484265"
 ---
 # <a name="get-attachments-of-an-outlook-item-from-the-server"></a>Получение вложений элемента Outlook с сервера
 
@@ -18,21 +18,21 @@ ms.locfileid: "62074352"
 
     Ваша надстройка может использовать API вложений для отправки сведений о вложениях в удаленную службу. Затем эта служба может обратиться напрямую к серверу Exchange для получения вложений.
 
-1. Используйте [API getAttachmentContentAsync,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) доступный из набора требований 1.8. Поддерживаемые форматы: [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat).
+1. Используйте [API getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) , доступный из набора требований 1.8. Поддерживаемые форматы: [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat).
 
-    Этот API может быть удобен, если EWS/REST недоступен (например, из-за конфигурации администратора вашего сервера Exchange), или ваша надстройка хочет использовать контент base64 непосредственно в HTML или JavaScript. Кроме того, API доступен в сценариях, в которых вложение еще не синхронизировано с Exchange; см. в статье Управление вложениями элемента в форме сложения в Outlook, чтобы узнать `getAttachmentContentAsync` больше. [](add-and-remove-attachments-to-an-item-in-a-compose-form.md)
+    Этот API может быть удобен, если EWS/REST недоступен (например, из-за конфигурации администратора вашего сервера Exchange), или ваша надстройка хочет использовать контент base64 непосредственно в HTML или JavaScript. Кроме того, `getAttachmentContentAsync` API доступен в сценариях, в которых вложение еще не синхронизировано с Exchange; см. в статье [Управление](add-and-remove-attachments-to-an-item-in-a-compose-form.md) вложениями элемента в форме сложения в Outlook, чтобы узнать больше.
 
 В этой статье подробно извеется о первом варианте. Чтобы отправить сведения о вложении в удаленную службу, используйте следующие свойства и функции.
 
 - Свойство [Office.context.mailbox.ewsUrl](/javascript/api/outlook/office.entities): предоставляет URL-адрес веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик. Служба использует этот URL-адрес, чтобы вызвать метод [ExchangeService.GetAttachments](/exchange/client-developer/exchange-web-services/how-to-get-attachments-by-using-ews-in-exchange) или операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) для EWS.
 
-- Свойство [Office.context.mailbox.item.attachments](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties): получает массив объектов [AttachmentDetails](/javascript/api/outlook/office.attachmentdetails) (по одному для каждого вложения в элемент).
+- Свойство [Office.context.mailbox.item.attachments](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties): получает массив объектов [AttachmentDetails](/javascript/api/outlook/office.attachmentdetails) (по одному для каждого вложения в элемент).
 
-- Функция [Office.context.mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods): асинхронно вызывает сервер Exchange Server с почтовым ящиком, чтобы получить маркер обратного вызова, который клиентский сервер отправит обратно на сервер Exchange Server для проверки подлинности запроса на получение вложения.
+- Функция [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods): асинхронно вызывает сервер Exchange Server с почтовым ящиком, чтобы получить маркер обратного вызова, который клиентский сервер отправит обратно на сервер Exchange Server для проверки подлинности запроса на получение вложения.
 
 ## <a name="using-the-attachments-api"></a>Использование API вложений
 
-Чтобы использовать API вложений для получения вложений Exchange почтового ящика, выполните следующие действия.
+Чтобы использовать API вложений для получения вложений из Exchange почтового ящика, выполните следующие действия.
 
 1. Отобразите надстройку, когда пользователь просматривает сведения о встрече или сообщение, которые содержат вложение.
 
@@ -49,7 +49,7 @@ ms.locfileid: "62074352"
 
 ## <a name="get-a-callback-token"></a>Получение маркера обратного вызова
 
-Объект [Office.context.mailbox](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md) предоставляет функцию `getCallbackTokenAsync` для получения маркера, с помощью которого удаленный сервер может пройти проверку подлинности на сервере Exchange Server. В приведенном ниже фрагменте кода показаны функция надстройки, отправляющая асинхронный запрос маркера обратного вызова, и функция обратного вызова, получающая ответ. Маркер обратного вызова хранится в объекте запроса к службе, определяемом в следующем разделе.
+Объект [Office.context.mailbox](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox) предоставляет функцию `getCallbackTokenAsync` для получения маркера, с помощью которого удаленный сервер может пройти проверку подлинности на сервере Exchange Server. В приведенном ниже фрагменте кода показаны функция надстройки, отправляющая асинхронный запрос маркера обратного вызова, и функция обратного вызова, получающая ответ. Маркер обратного вызова хранится в объекте запроса к службе, определяемом в следующем разделе.
 
 ```js
 function getAttachmentToken() {

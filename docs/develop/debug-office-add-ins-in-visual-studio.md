@@ -3,12 +3,12 @@ title: Отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для отлаговки Office надстроек в клиенте Office на Windows.
 ms.date: 02/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 49d52bd9b34b6f03dcf8b333cff816632c47c1c9
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: c0f5d0545c67ee64de40fa27c8bf3ae34fa62414
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743527"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483774"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
@@ -88,7 +88,7 @@ ms.locfileid: "63743527"
 
 Затем Visual Studio выполняет следующее:
 
-1. Изменяет элемент [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста XML ( `_ProjectName_\bin\Debug\OfficeAppManifests` который был скопирован в каталог) `~remoteAppUrl` путем замены маркера на полностью квалифицированный адрес страницы запуска (например, `https://localhost:44302/Home.html`).
+1. Изменяет элемент [SourceLocation](/javascript/api/manifest/sourcelocation) файла манифеста XML ( `_ProjectName_\bin\Debug\OfficeAppManifests` который был скопирован в каталог) `~remoteAppUrl` путем замены маркера на полностью квалифицированный адрес страницы запуска (например, `https://localhost:44302/Home.html`).
 
 2. Запускает проект веб-приложения в IIS Express.
 
@@ -144,7 +144,7 @@ ms.locfileid: "63743527"
 
 Затем Visual Studio выполняет следующее:
 
-1. Изменяет элемент [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста XML ( `_ProjectName_\bin\Debug\OfficeAppManifests` который был скопирован в каталог) `~remoteAppUrl` путем замены маркера на полностью квалифицированный адрес страницы запуска (например, `https://localhost:44302/Home.html`).
+1. Изменяет элемент [SourceLocation](/javascript/api/manifest/sourcelocation) файла манифеста XML ( `_ProjectName_\bin\Debug\OfficeAppManifests` который был скопирован в каталог) `~remoteAppUrl` путем замены маркера на полностью квалифицированный адрес страницы запуска (например, `https://localhost:44302/Home.html`).
 
 2. Запускает проект веб-приложения в IIS Express.
 

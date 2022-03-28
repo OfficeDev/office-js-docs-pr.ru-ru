@@ -3,19 +3,19 @@ title: Устранение ошибок единого входа
 description: Руководство по устранению неполадок с одним входом (SSO) в Office надстройки и обработке специальных условий или ошибок.
 ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 181eeb5f45884c2f54b90a07578a5c2844cc17dd
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: dd32fb1ff3b3f0522085f9940b91f7e01dde21ab
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744184"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483521"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/identity-api-requirement-sets).
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
@@ -36,7 +36,7 @@ ms.locfileid: "63744184"
 Надстройка или версия Office не поддерживает API [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#office-runtime-officeruntime-auth-getaccesstoken-member(1)).
 
 - Эта версия Office не поддерживает единый вход. Требуемая версия Microsoft 365 в любом ежемесячном канале.
-- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](../reference/manifest/webapplicationinfo.md).
+- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](/javascript/api/manifest/webapplicationinfo).
 
 Ваша надстройка должна отреагировать на эту ошибку, переключившись на альтернативную систему проверки подлинности пользователя. Дополнительные сведения см. в разделе [Требования и рекомендации](../develop/sso-in-office-add-ins.md#requirements-and-best-practices).
 
@@ -98,7 +98,7 @@ ms.locfileid: "63744184"
 
 Существует несколько возможных причин.
 
-- Надстройка выполняется на платформе, которая не поддерживает API `getAccessToken`. Например, она не поддерживается на iPad. См. также [наборы требований API удостоверений](../reference/requirement-sets/identity-api-requirement-sets.md).
+- Надстройка выполняется на платформе, которая не поддерживает API `getAccessToken`. Например, она не поддерживается на iPad. См. также [наборы требований API удостоверений](/javascript/api/requirement-sets/identity-api-requirement-sets).
 - Параметр `forMSGraphAccess` был передан в вызов `getAccessToken`, и пользователь получил надстройку через AppSource. В этом сценарии администратор клиента не предоставил надстройке согласие на области Microsoft Graph (разрешения), которые ей нужны. При отзыве `getAccessToken` с помощью `allowConsentPrompt` проблема не будет устранена, так как для Office допускается предложить пользователю разрешение только для области `profile` AAD.
 
 Ваш код должен инициировать возврат к альтернативной системе проверки подлинности пользователя.
@@ -140,7 +140,7 @@ ms.locfileid: "63744184"
 Эта ошибка возникает только в процессе разработки.
 
 - Код на стороне сервера должен отправить отклик `403 Forbidden` клиенту, который должен записать ошибку в консоли или журнале.
-- Убедитесь, что в разделе [Scopes](../reference/manifest/scopes.md) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статье [Регистрация надстройки с помощью конечной точки Azure AD версии 2.0](register-sso-add-in-aad-v2.md).
+- Убедитесь, что в разделе [Scopes](/javascript/api/manifest/scopes) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статье [Регистрация надстройки с помощью конечной точки Azure AD версии 2.0](register-sso-add-in-aad-v2.md).
 
 ### <a name="invalid-audience-error-in-the-access-token-for-microsoft-graph"></a>Ошибка недействительной аудитории в маркере доступа для Microsoft Graph
 

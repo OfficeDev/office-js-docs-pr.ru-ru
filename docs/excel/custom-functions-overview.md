@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 0d3e478e6deaf630f6665b3bba2796c26826fcde
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 6141b8e99f823383842ea9785341a6cecf401e86
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744495"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483409"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -97,7 +97,7 @@ Excel для Интернета и Windows, подключенный к подп
 ## <a name="see-also"></a>См. также
 
 * [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
-* [Наборы обязательных элементов пользовательских функций](../reference/requirement-sets/custom-functions-requirement-sets.md)
+* [Наборы обязательных элементов пользовательских функций](/javascript/api/requirement-sets/custom-functions-requirement-sets)
 * [Правила именования пользовательских функций](custom-functions-naming.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
 * [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

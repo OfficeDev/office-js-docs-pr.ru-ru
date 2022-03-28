@@ -1,10 +1,15 @@
 ---
 title: Извлечение строк сущностей из элемента Outlook
-description: 'Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.'
+description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 ms.localizationpriority: medium
+ms.openlocfilehash: 3270409dcd24cb0cde4f0e7693400e49efb5c868
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484480"
 ---
-
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
 В этой статье рассказано, как создать надстройку Outlook **для отображения сущностей**, которая извлекает экземпляры строк поддерживаемых известных сущностей в теме и основном тексте выбранного элемента Outlook. Этим элементом может быть встреча, электронное сообщение, приглашение на собрание, ответ на такое приглашение или отказ от него.
@@ -200,7 +205,7 @@ div#meeting_suggestions
 
 ## <a name="extracting-entities-upon-initialization"></a>Извлечение сущностей при инициализации
 
-Когда происходит событие [Office.initialize](/javascript/api/office#Office_initialize_reason_), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. Метод `getEntities` возвращает глобальной переменной `_MyEntities` массив экземпляров поддерживаемых сущностями. Ниже представлен соответствующий код JavaScript.
+Когда происходит событие [Office.initialize](/javascript/api/office#Office_initialize_reason_), надстройка для работы с сущностями вызывает метод [getEntities](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) текущего элемента. Метод `getEntities` возвращает глобальной переменной `_MyEntities` массив экземпляров поддерживаемых сущностями. Ниже представлен соответствующий код JavaScript.
 
 
 ```js
@@ -253,7 +258,7 @@ function myGetAddresses()
 ## <a name="extracting-contact-information"></a>Извлечение контактных данных
 
 
-Когда пользователь нажимает кнопку **Получить** контактные сведения, `myGetContacts` [](/javascript/api/outlook/office.entities#outlook-office-entities-contacts-member) `_MyEntities` обработник событий получает массив контактов вместе с их сведениями из свойства контактов объекта, если таково было извлечено. Каждый извлеченный контакт хранится в виде объекта [Contact](/javascript/api/outlook/office.contact) в массиве. Обработчик событий `myGetContacts` получает дополнительные данные о каждом контакте. Обратите внимание, что контекст определяет, может ли Outlook извлечения контакта из подписи itema&mdash; в конце сообщения электронной почты или хотя бы некоторые из следующих сведений должны существовать в непосредственной близости от контакта.
+Когда пользователь нажимает кнопку **Получить** контактные сведения, `myGetContacts` [](/javascript/api/outlook/office.entities#outlook-office-entities-contacts-member) `_MyEntities` обработник событий получает массив контактов вместе с их сведениями из свойства контактов объекта, если таково было извлечено. Каждый извлеченный контакт хранится в виде объекта [Contact](/javascript/api/outlook/office.contact) в массиве. Обработчик событий `myGetContacts` получает дополнительные данные о каждом контакте. Обратите внимание, что контекст определяет, может ли Outlook извлечения контакта из подписи itema&mdash; в конце сообщения электронной почты, или хотя бы некоторые из следующих сведений должны существовать в непосредственной близости от контакта.
 
 
 - Имя контакта из свойства [Contact.personName](/javascript/api/outlook/office.contact#outlook-office-contact-personname-member).
@@ -825,4 +830,4 @@ function myGetUrls()
 
 - [Создание надстроек Outlook для форм чтения](read-scenario.md)
 - [Сопоставление строк в элементе Outlook как известных сущностей](match-strings-in-an-item-as-well-known-entities.md)
-- [Метод item.getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Метод item.getEntities](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods)

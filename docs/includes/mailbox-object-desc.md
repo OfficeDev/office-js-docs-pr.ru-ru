@@ -1,4 +1,4 @@
-Outlook надстройки в основном используют API, выставленные через объект [почтовых ящиков.](/javascript/api/outlook/office.mailbox) Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md), используйте свойство [mailbox](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
+Outlook надстройки в основном используют API, выставленные через объект [почтовых ящиков](/javascript/api/outlook/office.mailbox). Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item), используйте свойство [mailbox](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
 
 ```js
 // Access the Item object.
@@ -14,4 +14,4 @@ var item = Office.context.mailbox.item;
 
 -  Объект **RoamingSettings** для сохранения пользовательских свойств, относящихся к надстройке Outlook, в почтовом ящике пользователя, в котором установлено приложение.
 
-Сведения об использовании API Outlook JavaScript см. в Outlook [надстройки.](../outlook/outlook-add-ins-overview.md)
+Сведения об использовании API Outlook JavaScript см. в Outlook [надстройки](../outlook/outlook-add-ins-overview.md).

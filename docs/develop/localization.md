@@ -3,12 +3,12 @@ title: Локализация надстроек для Office
 description: Используйте Office API JavaScript для определения локального кода и отображения строк на основе Office приложения, а также для интерпретации или отображения данных на основе локального кода данных.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 049cf3c8e6f0d498e6d4a0f9ca223499635cd5ab
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: d82b4408f55ee94fe1fe27bfb00b335cb08b85bd
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743407"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483676"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек для Office
 
@@ -144,9 +144,9 @@ API Office JavaScript предоставляет два свойства, под
 
 ## <a name="localize-extended-overrides"></a>Локализовать расширенные переопределения
 
-Некоторые функции Office надстройки, например ярлыки клавиатуры, настраиваются с помощью файлов JSON, которые находятся на сервере, а не с XML-манифестом надстройки. В этом разделе предполагается, что вы знакомы с расширенными переопределениями. См. в этой ссылке Работа с расширенными [переопределениями элемента манифеста](extended-overrides.md) и [ExtendedOverrides](../reference/manifest/extendedoverrides.md) .
+Некоторые функции Office надстройки, например ярлыки клавиатуры, настраиваются с помощью файлов JSON, которые находятся на сервере, а не с XML-манифестом надстройки. В этом разделе предполагается, что вы знакомы с расширенными переопределениями. См. в этой ссылке Работа с расширенными [переопределениями элемента манифеста](extended-overrides.md) и [ExtendedOverrides](/javascript/api/manifest/extendedoverrides) .
 
-Используйте атрибут `ResourceUrl` элемента [ExtendedOverrides](../reference/manifest/extendedoverrides.md), чтобы указать Office файлу локализованных ресурсов. Ниже приведен пример.
+Используйте атрибут `ResourceUrl` элемента [ExtendedOverrides](/javascript/api/manifest/extendedoverrides), чтобы указать Office файлу локализованных ресурсов. Ниже приведен пример.
 
 ```xml
     ...
@@ -493,17 +493,17 @@ API Office JavaScript предоставляет два свойства, под
 - [Рекомендации по разработке надстроек Office](../design/add-in-design.md)
 - [Идентификаторы языков и значения OptionState Id в Office 2013](/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15))
 
-[DefaultLocale]:         ../reference/manifest/defaultlocale.md
-[Описание]:           ../reference/manifest/description.md
-[DisplayName]:           ../reference/manifest/displayname.md
-[IconUrl]:               ../reference/manifest/iconurl.md
-[HighResolutionIconUrl]: ../reference/manifest/highresolutioniconurl.md
-[Resources]:             ../reference/manifest/resources.md
-[SourceLocation]:        ../reference/manifest/sourcelocation.md
-[Override]:              ../reference/manifest/override.md
-[DesktopSettings]:       ../reference/manifest/desktopsettings.md
-[TabletSettings]:        ../reference/manifest/tabletsettings.md
-[PhoneSettings]:         ../reference/manifest/phonesettings.md
+[DefaultLocale]:         /javascript/api/manifest/defaultlocale
+[Описание]:           /javascript/api/manifest/description
+[DisplayName]:           /javascript/api/manifest/displayname
+[IconUrl]:               /javascript/api/manifest/iconurl
+[HighResolutionIconUrl]: /javascript/api/manifest/highresolutioniconurl
+[Resources]:             /javascript/api/manifest/resources
+[SourceLocation]:        /javascript/api/manifest/sourcelocation
+[Override]:              /javascript/api/manifest/override
+[DesktopSettings]:       /javascript/api/manifest/desktopsettings
+[TabletSettings]:        /javascript/api/manifest/tabletsettings
+[PhoneSettings]:         /javascript/api/manifest/phonesettings
 [displayLanguage]:       /javascript/api/office/office.context#displayLanguage
 [contentLanguage]:       /javascript/api/office/office.context#contentLanguage
 [RFC 3066]:              https://www.rfc-editor.org/info/rfc3066

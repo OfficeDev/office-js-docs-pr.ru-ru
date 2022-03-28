@@ -3,12 +3,12 @@ title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 11/22/2021
 localization_priority: Normal
-ms.openlocfilehash: 5282d803900e3f18ecbf8799520eae71779f8f73
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 98d799f62710b124b8836583d2d30cac7976100d
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743232"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483879"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -35,7 +35,7 @@ ms.locfileid: "63743232"
 
 ### <a name="link-the-mapping-file-to-the-manifest"></a>Привязка файла сопоставления к манифесту
 
-Сразу *ниже* (не внутри) элемента `<VersionOverrides>` манифеста добавьте элемент [ExtendedOverrides](../reference/manifest/extendedoverrides.md) . Установите атрибут `Url` для полного URL-адреса файла JSON в проекте, который будет создан на более позднем этапе.
+Сразу *ниже* (не внутри) элемента `<VersionOverrides>` манифеста добавьте элемент [ExtendedOverrides](/javascript/api/manifest/extendedoverrides) . Установите атрибут `Url` для полного URL-адреса файла JSON в проекте, который будет создан на более позднем этапе.
 
 ```xml
     ...
@@ -46,7 +46,7 @@ ms.locfileid: "63743232"
 
 ## <a name="create-or-edit-the-shortcuts-json-file"></a>Создание или изменение ярлыков JSON-файла
 
-Создайте файл JSON в проекте. Убедитесь, что путь `Url` файла соответствует расположению, указанному для атрибута элемента [ExtendedOverrides](../reference/manifest/extendedoverrides.md) . В этом файле будут описаны ярлыки клавиатуры и действия, которые они будут вызывать.
+Создайте файл JSON в проекте. Убедитесь, что путь `Url` файла соответствует расположению, указанному для атрибута элемента [ExtendedOverrides](/javascript/api/manifest/extendedoverrides) . В этом файле будут описаны ярлыки клавиатуры и действия, которые они будут вызывать.
 
 1. В файле JSON есть два массива. Массив действий будет содержать объекты, которые определяют действия, которые будут вызываться, а массив ярлыков будет содержать объекты, которые соотносят комбинации ключей с действиями. Пример:
     ```json
@@ -270,7 +270,7 @@ ms.locfileid: "63743232"
 > Хороший способ ознакомиться с такими возможностями — использование подписки на Microsoft 365. Если у вас еще нет подписки на Microsoft 365, вы можете оформить ее, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 > [!NOTE]
-> API, описанные в этом разделе, требуют набора требований [KeyboardShortcuts 1.1](../reference/requirement-sets/keyboard-shortcuts-requirement-sets.md) .
+> API, описанные в этом разделе, требуют набора требований [KeyboardShortcuts 1.1](/javascript/api/requirement-sets/keyboard-shortcuts-requirement-sets) .
 
 Используйте [метод Office.actions.replaceShortcuts](/javascript/api/office/office.actions#office-office-actions-replaceshortcuts-member) для назначения пользовательских комбинаций клавиатуры пользователя для действий надстройки. Метод принимает параметр типа `{[actionId:string]: string|null}`, `actionId`где s являются подмножество ID действий, которые должны быть определены в расширенном манифесте надстройки JSON. Значения — это предпочтительные сочетания ключей пользователя. Также может `null`быть значение , `actionId` которое удаляет любую настройку для этого и возвращается к комбинации клавиатуры по умолчанию, которая определена в расширенном манифесте надстройки JSON.
 

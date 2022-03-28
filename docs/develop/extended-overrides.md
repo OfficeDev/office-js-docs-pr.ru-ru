@@ -3,12 +3,12 @@ title: Работа с расширенными переопределениям
 description: Узнайте, как настроить функции расширяемости с расширенными переопределениями манифеста.
 ms.date: 02/23/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 43a922f559100157dbdacbb401d38c4d9ba22010
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 34002ffcb621fad9f318aad80b32feb22ac45f67
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743791"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483719"
 ---
 # <a name="work-with-extended-overrides-of-the-manifest"></a>Работа с расширенными переопределениями манифеста
 
@@ -30,7 +30,7 @@ ms.locfileid: "63743791"
 
 ## <a name="tell-office-where-to-find-the-json-file"></a>Сообщите Office, где найти файл JSON
 
-Используйте манифест, чтобы Office, где найти файл JSON. Сразу *ниже* (не внутри) элемента `<VersionOverrides>` манифеста добавьте элемент [ExtendedOverrides](../reference/manifest/extendedoverrides.md) . Установите атрибут `Url` для полного URL-адреса файла JSON. Ниже приводится пример простейшего элемента `<ExtendedOverrides>` .
+Используйте манифест, чтобы Office, где найти файл JSON. Сразу *ниже* (не внутри) элемента `<VersionOverrides>` манифеста добавьте элемент [ExtendedOverrides](/javascript/api/manifest/extendedoverrides) . Установите атрибут `Url` для полного URL-адреса файла JSON. Ниже приводится пример простейшего элемента `<ExtendedOverrides>` .
 
 ```xml
     ...

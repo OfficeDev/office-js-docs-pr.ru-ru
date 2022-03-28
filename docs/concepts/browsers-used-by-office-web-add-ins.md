@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 10/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff3bd07ff10e46705ac9a23139bf3cafaf7ef8b
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: a6dd2eceb320b9f88575c80f1f4a17becc06cbe5
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63742832"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483366"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -48,7 +48,7 @@ Office надстройки — это веб-приложения, которы
 
 <sup>2</sup>. [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19) обновления и Office клиентской версии и канала обновления.
 
-<sup>3</sup> Если надстройка `<Runtimes>` включает элемент манифеста, она не будет Microsoft Edge с исходным WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
+<sup>3</sup> Если надстройка `<Runtimes>` включает элемент манифеста, она не будет Microsoft Edge с исходным WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](/javascript/api/manifest/runtimes).
 
 <sup>4</sup> В Windows до Windows 11 необходимо установить управление WebView2, чтобы Office его встраить. Он установлен с Microsoft 365 версии 2101 или более поздней версии, а также с Office 2021 или более поздней версией, но он не устанавливается автоматически с Microsoft Edge. Если у вас есть более раная версия Microsoft 365 или разовая покупка Office, используйте инструкции по установке управления в [Microsoft Edge WebView2 / Embed веб-контента ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/). На Microsoft 365 сборки до 16.0.14326.xxxxx необходимо также создать ключ реестраHKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\Win32WebView2и установить **его** `dword:00000001`значение .
 

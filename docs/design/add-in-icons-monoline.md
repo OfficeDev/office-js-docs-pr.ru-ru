@@ -3,12 +3,12 @@ title: Руководство по значкам стилей monoline для O
 description: Рекомендации по использованию значков стилей Monoline в Office надстройки.
 ms.date: 03/30/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 10c6f2d11384a900e994a574f7a567684c5f4054
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 8c076bae2efd15cdc927f65804f33096fd6ecacb
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743046"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483968"
 ---
 # <a name="monoline-style-icon-guidelines-for-office-add-ins"></a>Руководство по значкам стилей monoline для Office надстройки
 
@@ -210,7 +210,7 @@ Monoline — это стиль, в котором преобладают лин�
 
 ## <a name="see-also"></a>См. также
 
-- [Элемент манифеста Icon](../reference/manifest/icon.md)
-- [Элемент манифеста IconUrl](../reference/manifest/iconurl.md)
-- [Элемент манифеста HighResolutionIconUrl](../reference/manifest/highresolutioniconurl.md)
+- [Элемент манифеста Icon](/javascript/api/manifest/icon)
+- [Элемент манифеста IconUrl](/javascript/api/manifest/iconurl)
+- [Элемент манифеста HighResolutionIconUrl](/javascript/api/manifest/highresolutioniconurl)
 - [Создание значка для надстройки](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in)

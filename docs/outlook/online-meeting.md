@@ -1,14 +1,19 @@
 ---
 title: Создание надстройки Outlook для поставщика онлайн-собраний
-description: Обсуждается настройка мобильной надстройки Outlook для поставщика услуг онлайн-собраний.
+description: Обсуждается настройка надстройки Outlook мобильной связи для поставщика услуг онлайн-собраний.
 ms.topic: article
 ms.date: 07/09/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 2ba2d3b9889bd07065aca584d72f8213739c3532
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484365"
 ---
-
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
-Настройка собрания в Интернете — это основной опыт для Outlook, и легко создать Teams с [Outlook](/microsoftteams/teams-add-in-for-outlook) мобильным телефоном. Однако создание онлайн-собрания в Outlook с помощью службы, не в microsoft, может быть обременительным. Реализуя эту функцию, поставщики услуг могут упростить работу по созданию собраний в Интернете для Outlook пользователей надстройки.
+Настройка собрания в Интернете — это основной опыт для Outlook, и легко создать Teams с [Outlook мобильным](/microsoftteams/teams-add-in-for-outlook) телефоном. Однако создание онлайн-собрания в Outlook с помощью службы, не в microsoft, может быть громоздкой задачей. Реализуя эту функцию, поставщики услуг могут оптимизировать работу по созданию собраний в Интернете для Outlook пользователей надстройки.
 
 > [!IMPORTANT]
 > Эта функция поддерживается только на Android и iOS с Microsoft 365 подпиской.
@@ -21,11 +26,11 @@ ms.localizationpriority: medium
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы пользователи могли создавать онлайн-собрания с помощью надстройки, необходимо настроить точку расширения [MobileOnlineMeetingCommandSurface](../reference/manifest/extensionpoint.md#mobileonlinemeetingcommandsurface) в манифесте под родительским элементом `MobileFormFactor`. Другие форм-факторы не поддерживаются.
+Чтобы пользователи могли создавать онлайн-собрания с помощью надстройки, необходимо настроить точку расширения [MobileOnlineMeetingCommandSurface](/javascript/api/manifest/extensionpoint#mobileonlinemeetingcommandsurface) в манифесте под родительским элементом `MobileFormFactor`. Другие форм-факторы не поддерживаются.
 
 1. В редакторе кода откройте проект быстрого запуска.
 
-1. Откройте **manifest.xmlфайл** , расположенный в корне проекта.
+1. Откройте файл **manifest.xml** , расположенный в корне проекта.
 
 1. Выберите весь узел `<VersionOverrides>` (включая открытые и закрываемые теги) и замените его на следующий XML.
 
@@ -117,7 +122,7 @@ ms.localizationpriority: medium
 ```
 
 > [!TIP]
-> Дополнительные информацию о манифестах для Outlook надстройки см. в Outlook [](manifests.md) манифестах надстройки и добавлении поддержки команд надстройки [для Outlook Mobile](add-mobile-support.md).
+> Дополнительные информацию о манифестах для Outlook надстройки см. в Outlook манифестах надстройки и добавлении поддержки команд надстройки [для Outlook Mobile](add-mobile-support.md).[](manifests.md)
 
 ## <a name="implement-adding-online-meeting-details"></a>Реализация добавления сведений о собраниях в Интернете
 
@@ -202,7 +207,7 @@ ms.localizationpriority: medium
 
 ## <a name="testing-and-validation"></a>Тестирование и проверка
 
-Следуйте обычным рекомендациям [по проверке и проверке надстройки](testing-and-tips.md). После [загрузки](sideload-outlook-add-ins-for-testing.md) в Outlook в Интернете, Windows или Mac перезапустите Outlook на мобильном устройстве Android или iOS. Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype очки заменены на собственные.
+Следуйте обычным рекомендациям [по проверке и проверке надстройки](testing-and-tips.md). Перезагрузив Outlook в Интернете, Windows Mac, перезапустите Outlook на мобильном устройстве Android или iOS.[](sideload-outlook-add-ins-for-testing.md) Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype будет заменена на собственную.
 
 ### <a name="create-meeting-ui"></a>Создание пользовательского интерфейса собрания
 
@@ -244,7 +249,7 @@ ms.localizationpriority: medium
   - [Office.context.mailbox.item.requiredAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-requiredattendees-member) ([Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-preview&preserve-view=true))
   - [Office.context.mailbox.item.start](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-start-member) ([Время](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true))
   - [Office.context.mailbox.item.subject](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-subject-member) ([Subject](/javascript/api/outlook/office.subject?view=outlook-js-preview&preserve-view=true))
-  - [Office.context.roamingSettings](../reference/objectmodel/preview-requirement-set/office.context.md?view=outlook-js-preview&preserve-view=true#roamingsettings-roamingsettings) ([RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-preview&preserve-view=true))
+  - [Office.context.roamingSettings](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context?view=outlook-js-preview&preserve-view=true#roamingsettings-roamingsettings) ([RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-preview&preserve-view=true))
 - Обработка потока auth
   - [API диалоговых окон](../develop/dialog-api-in-office-add-ins.md)
 

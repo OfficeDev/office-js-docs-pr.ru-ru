@@ -1,38 +1,38 @@
 ---
-title: Реализация приложения-на-отправки в Outlook надстройки
+title: Реализация надстройки надстройки Outlook надстройки
 description: Узнайте, как реализовать функцию приложения по отправке в Outlook надстройки.
 ms.topic: article
 ms.date: 02/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ff3411ba2527e0b6c99e5e5674811ff76e240ccf
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 3054742a90f66e9ee1bfc75bded5090bd18947f3
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154236"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484169"
 ---
-# <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация приложения-на-отправки в Outlook надстройки
+# <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация надстройки надстройки Outlook надстройки
 
 К концу этого погона у вас будет надстройка Outlook, которая может вставить отказ при отправлении сообщения.
 
 > [!NOTE]
-> Поддержка этой функции была представлена в наборе требований 1.9. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была представлена в наборе требований 1.9. См [клиенты и платформы](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [Outlook,](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) который создает проект надстройки с генератором Yeoman для Office надстройки.
+Выполните [Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator), который создает проект надстройки с генератором Yeoman для Office надстройки.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы включить функцию приложения по отправке в надстройке, необходимо включить разрешение в коллекцию `AppendOnSend` [ExtendedPermissions.](../reference/manifest/extendedpermissions.md)
+Чтобы включить функцию приложения по отправке в надстройке, `AppendOnSend` необходимо включить разрешение в коллекцию [ExtendedPermissions](/javascript/api/manifest/extendedpermissions).
 
-В этом сценарии вместо выполнения функции при выборе кнопки Выполнить действие будет `action` запущена  `appendOnSend` функция.
+В этом сценарии вместо `action` выполнения функции при выборе кнопки **Выполнить** действие будет запущена `appendOnSend` функция.
 
 1. В редакторе кода откройте проект быстрого запуска.
 
-1. Откройте **manifest.xml** файл, расположенный в корне проекта.
+1. Откройте файл **manifest.xml** , расположенный в корне проекта.
 
-1. Выберите весь узел (включая открытые и закрываемые теги) и замените его `<VersionOverrides>` на следующий XML.
+1. Выберите весь узел `<VersionOverrides>` (включая открытые и закрываемые теги) и замените его на следующий XML.
 
     ```XML
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -120,20 +120,20 @@ ms.locfileid: "59154236"
     ```
 
 > [!TIP]
-> Дополнительные информацию о манифестах для Outlook надстройки см. в Outlook [манифестах надстройки.](manifests.md)
+> Дополнительные новости об манифестах для Outlook надстройки см. в Outlook [манифестах надстройки](manifests.md).
 
 ## <a name="implement-append-on-send-handling"></a>Реализация обработки приложения по отправке
 
 Далее реализуйте приложение в событии отправки.
 
 > [!IMPORTANT]
-> Если надстройка [ `ItemSend` ](outlook-on-send-addins.md)также реализует обработку событий при отправке с помощью, вызов обработчиком отправки возвращает ошибку, так как этот сценарий `AppendOnSendAsync` не поддерживается.
+> Если надстройка также реализует обработку событий при отправке с помощью, `AppendOnSendAsync` вызов обработчиком отправки возвращает ошибку, так как этот сценарий не поддерживается.[`ItemSend`](outlook-on-send-addins.md)
 
 В этом случае при отправке пользователя будет реализовано приложение к элементу об отказе.
 
 1. В том же проекте быстрого запуска откройте **файл ./src/commands/commands.js** в редакторе кода.
 
-1. После `action` функции вставьте следующую функцию JavaScript.
+1. После функции `action` вставьте следующую функцию JavaScript.
 
     ```js
     function appendDisclaimerOnSend(event) {
@@ -167,19 +167,19 @@ ms.locfileid: "59154236"
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Выполните следующую команду в корневом каталоге своего проекта. При запуске этой команды начнется локальный веб-сервер, если он еще не запущен и ваша надстройка будет перегружена. 
+1. Выполните указанную ниже команду в корневом каталоге своего проекта. При запуске этой команды начнется локальный веб-сервер, если он еще не запущен и ваша надстройка будет перегружена. 
 
     ```command&nbsp;line
     npm start
     ```
 
-1. Создайте новое сообщение и добавьте себя в **строку To.**
+1. Создайте новое сообщение и добавьте себя в **строку To** .
 
-1. Из меню ленты или переполнения выберите **Выполнить действие.**
+1. Из меню ленты или переполнения выберите **Выполнить действие**.
 
-1. Отправьте сообщение, а затем откройте его из папки **"Входящие"** или **"Отправленные** элементы", чтобы просмотреть приложенный отказ.
+1. Отправьте сообщение, а затем откройте его из папки **"Входящие** " или **"** Отправленные элементы", чтобы просмотреть приложенный отказ.
 
-    ![Снимок экрана примера сообщения с приложением об отказе при отправке Outlook в Интернете.](../images/outlook-web-append-disclaimer.png)
+    ![Снимок экрана примера сообщения с заявлением об отказе, приложенным при отправке Outlook в Интернете.](../images/outlook-web-append-disclaimer.png)
 
 ## <a name="see-also"></a>См. также
 

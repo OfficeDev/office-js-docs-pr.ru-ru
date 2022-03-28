@@ -3,12 +3,12 @@ title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
 ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 44b5b770d36177307989500db89f1f4f8ca859ec
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: dffc494778d02feaedb302a4c42ca843637caa71
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745689"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484295"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
@@ -48,7 +48,7 @@ if (item.somePropertyOrFunction) {
 > [!NOTE]
 > Эти проверки необязательны для API, входящих в набор обязательных элементов версии, указанной в манифесте.
 
-Укажите минимальный набор обязательных элементов API для вашего сценария, без которого функции надстройки не будут работать. Набор обязательных элементов указывается в элементе `<Requirements>` манифеста. Дополнительные сведения см. в статьях [Манифесты надстроек Outlook](manifests.md) и [Общие сведения о наборах обязательных элементов API Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md).
+Укажите минимальный набор обязательных элементов API для вашего сценария, без которого функции надстройки не будут работать. Набор обязательных элементов указывается в элементе `<Requirements>` манифеста. Дополнительные сведения см. в статьях [Манифесты надстроек Outlook](manifests.md) и [Общие сведения о наборах обязательных элементов API Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets).
 
 Элемент `<Methods>` не применяется к надстройкам Outlook, поэтому невозможно объявить поддержку определенных методов.
 
@@ -63,7 +63,7 @@ if (item.somePropertyOrFunction) {
 | **Ограниченный доступ** | Позволяет использовать сущности, но не регулярные выражения. |
 | **Чтение элемента** | Помимо возможностей уровня **Ограниченный доступ**, поддерживаются:<ul><li>регулярные выражения;</li><li>доступ на чтение API надстроек Outlook;</li><li>получение свойств элемента и маркера обратного вызова.</li></ul> |
 | **Чтение и запись** | Помимо возможностей уровня **Чтение элемента**, поддерживаются:<ul><li>полный доступ ко всем элементам API Outlook, кроме метода `makeEwsRequestAsync`;</li><li>задание свойств элемента.</li></ul> |
-| **Чтение и запись почтового ящика** | Помимо возможностей уровня **Чтение и запись**, поддерживаются:<ul><li>создание, чтение и запись элементов и папок;</li><li>отправка папок;</li><li>вызов метода [makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods).</li></ul> |
+| **Чтение и запись почтового ящика** | Помимо возможностей уровня **Чтение и запись**, поддерживаются:<ul><li>создание, чтение и запись элементов и папок;</li><li>отправка папок;</li><li>вызов метода [makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods).</li></ul> |
 
 Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в элементе `<Permissions>` манифеста. Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах безопасности см. в Office и безопасности [надстройки](../concepts/privacy-and-security.md).
 
@@ -74,5 +74,5 @@ if (item.somePropertyOrFunction) {
 ## <a name="see-also"></a>См. также
 
 - [Манифесты надстроек Outlook](manifests.md)
-- [Общие сведения о наборах требований API Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md)
+- [Общие сведения о наборах требований API Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets)
 - [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)

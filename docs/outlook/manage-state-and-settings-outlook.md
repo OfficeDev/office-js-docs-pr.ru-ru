@@ -1,16 +1,21 @@
 ---
 title: Управление состоянием и настройками Outlook надстройки
-description: 'Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.'
+description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
 ms.date: 05/17/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 896c473baad95515b199d8934c81745c619374a0
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484680"
 ---
-
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
 > [!NOTE]
 > Перед [чтением этой](../develop/persisting-add-in-state-and-settings.md) статьи просмотрите состояние и параметры сохраняющихся надстройок в разделе **Основные** концепции этой документации.
 
-Для Outlook надстройки Office API JavaScript предоставляет объекты [RoamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](../reference/manifest/id.md) создавшей их надстройки.
+Для Outlook надстройки Office API JavaScript предоставляет объекты [RoamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](/javascript/api/manifest/id) создавшей их надстройки.
 
 |**Object**|**Расположение хранилища**|
 |:-----|:-----|
@@ -132,9 +137,9 @@ function saveCallback(asyncResult) {
 
 ### <a name="platform-behavior-in-emails"></a>Поведение платформы в сообщениях электронной почты
 
-В следующей таблице обобщается сохраненное поведение пользовательских свойств в сообщениях электронной почты для Outlook клиентов.
+В следующей таблице обобщается сохраненное поведение пользовательских свойств в сообщениях электронной почты для различных Outlook клиентов.
 
-|Сценарий|Windows|Веб|Mac|
+|Сценарий|Windows|Web|Mac|
 |---|---|---|---|
 |Новое сочинение|null|null|null|
 |Ответ, ответ все|null|null|null|

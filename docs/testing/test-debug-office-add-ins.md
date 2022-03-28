@@ -3,12 +3,12 @@ title: Тестирование надстроек Office
 description: Узнайте, как протестировать надстройку Office.
 ms.date: 12/02/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 3c02968a3726a696d76d728fc38030172c815cf2
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: ab730a9acc141195c378a490c670fada82ecc90f
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745940"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484550"
 ---
 # <a name="test-office-add-ins"></a>Тестирование надстроек Office
 
@@ -22,7 +22,7 @@ ms.locfileid: "63745940"
 > На компьютерах с Windows браузер, используемый надстройкой, определяется версией Windows и Office. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
 
 > [!IMPORTANT]
-> Надстройки, предлагаемые через AppSource, проходят проверку, включающую тестирование на всех платформах. Кроме того, надстройки тестируются в Office для Интернета со всеми основными современными браузерами, включая Microsoft Edge (WebView2 на основе Chromium), Chrome и Safari. Соответственно, перед отправкой в AppSource необходимо протестировать эти платформы и браузеры. Дополнительные сведения о проверке см. в статье [Политики сертификации коммерческой платформы Marketplace](/legal/marketplace/certification-policies), особенно в [разделе 1120.3](/legal/marketplace/certification-policies#11203-functionality), а также на странице [Доступность и применение надстроек Office](../overview/office-add-in-availability.md).
+> Надстройки, предлагаемые через AppSource, проходят проверку, включающую тестирование на всех платформах. Кроме того, надстройки тестируются в Office для Интернета со всеми основными современными браузерами, включая Microsoft Edge (WebView2 на основе Chromium), Chrome и Safari. Соответственно, перед отправкой в AppSource необходимо протестировать эти платформы и браузеры. Дополнительные сведения о проверке см. в статье [Политики сертификации коммерческой платформы Marketplace](/legal/marketplace/certification-policies), особенно в [разделе 1120.3](/legal/marketplace/certification-policies#11203-functionality), а также на странице [Доступность и применение надстроек Office](/javascript/api/requirement-sets).
 >
 > AppSource не использует Internet Explorer или устаревшую версию Microsoft Edge (WebView1) для тестирования надстроек в Office для Интернета. Но если значительное число ваших пользователей будет использовать браузер Edge прежних версий для открытия Office в Интернете, вам следует протестировать надстройку с ним. (Office в Интернете не будет открываться в Internet Explorer, поэтому тестировать надстройку с этим браузером не нужно.) Дополнительные сведения см. в статьях "[Поддержка Internet Explorer 11](../develop/support-ie-11.md)" и "[Устранение неполадок Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues)". Office по-прежнему поддерживает эти браузеры как поставщики сред выполнения надстроек, поэтому если вы считаете, что столкнулись с ошибкой в работе надстроек в них, создайте запись о проблеме для репозитория [office-js.](https://github.com/OfficeDev/office-js/issues/new/choose)
 

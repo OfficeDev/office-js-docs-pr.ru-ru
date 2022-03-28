@@ -4,12 +4,12 @@ description: Узнайте больше об Excel JavaScript API.
 ms.date: 02/23/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 8c4ac87a9498832854aad65f00fb9cd255e7c0c6
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 6a5c943653b4a24ed7de0e6bfe4b9cf2de227263
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746294"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484200"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
@@ -57,5 +57,5 @@ ms.locfileid: "63746294"
 * [Документация по надстройкам Excel](../../excel/index.yml)
 * [Общие сведения о надстройках Excel](../../excel/excel-add-ins-overview.md)
 * [Справочник по API JavaScript для Excel](/javascript/api/excel)
-* [Доступность клиентских приложений и платформ Office для надстроек Office](../../overview/office-add-in-availability.md)
+* [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets)
 * [Использование модели API для определенных приложений](../../develop/application-specific-api-model.md)

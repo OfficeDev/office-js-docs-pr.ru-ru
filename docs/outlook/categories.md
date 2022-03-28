@@ -3,19 +3,19 @@ title: Get and set categories
 description: Управление категориями в почтовом ящике и элементе.
 ms.date: 01/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 93f9167fcc31110543d08019e5428952beab0ccc
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 3f39fba37e209b4f23955aebb54e8f88807f24dd
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746296"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484526"
 ---
 # <a name="get-and-set-categories"></a>Get and set categories
 
 В Outlook пользователь может применять категории к сообщениям и встречам в качестве средства организации данных почтовых ящиков. Пользователь определяет список категорий с цветным кодом для своего почтового ящика и может применить одну или несколько из этих категорий к любому элементу сообщения или встречи. Каждая [категория](/javascript/api/outlook/office.categorydetails) в мастер-списке представлена именем и цветом [,](/javascript/api/outlook/office.mailboxenums.categorycolor) указанными пользователем. Вы можете использовать API Office JavaScript для управления списком категорий в почтовом ящике и категориями, примененными к элементу.
 
 > [!NOTE]
-> Поддержка этой функции была представлена в наборе требований 1.8. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была представлена в наборе требований 1.8. См [клиенты и платформы](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="manage-categories-in-the-master-list"></a>Управление категориями в списке master
 
@@ -141,4 +141,4 @@ Office.context.mailbox.item.categories.removeAsync(categoriesToRemove, function 
 ## <a name="see-also"></a>См. также
 
 - [Outlook разрешений](understanding-outlook-add-in-permissions.md)
-- [Элемент Permissions в манифесте](../reference/manifest/permissions.md)
+- [Элемент Permissions в манифесте](/javascript/api/manifest/permissions)

@@ -3,12 +3,12 @@ title: Добавление и удаление вложений в надстр
 description: Используйте различные API-интерфейсы вложений для управления файлами или Outlook элементов, присоединенных к элементу, который создает пользователь.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ebecb1b0674641b58c20c0d8d78681f2bbf48110
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: bf49b5ad099541602d94dea0cab5869dbd54a960
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744347"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483954"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме композиции в Outlook
 
@@ -18,9 +18,9 @@ API Office JavaScript предоставляет несколько API, кот�
 
 Вы можете прикрепить файл или элемент Outlook к форме композиции с помощью метода, подходящего для типа вложения.
 
-- [addFileAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods): прикрепить файл
-- [addFileAttachmentFromBase64Async](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods): прикрепить файл с помощью строки base64
-- [addItemAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods): прикрепите элемент Outlook
+- [addFileAttachmentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods): прикрепить файл
+- [addFileAttachmentFromBase64Async](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods): прикрепить файл с помощью строки base64
+- [addItemAttachmentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods): прикрепите элемент Outlook
 
 Это асинхронные методы, что означает, что выполнение можно выполнить, не дожидаясь завершения действия. В зависимости от исходного расположения и размера добавляемого вложения асинхронный вызов может занять некоторое время.
 
@@ -81,7 +81,7 @@ function write(message){
 
 ### <a name="attach-an-outlook-item"></a>Прикрепить элемент Outlook
 
-Вы можете прикрепить элемент Outlook (например, электронную почту, календарь или контактный элемент) к сообщению или встрече в форме записи, указав Exchange веб-служб (EWS) ID `addItemAttachmentAsync` элемента и с помощью метода. Вы можете получить EWS-ID элемента электронной почты, календаря, контакта или задачи в почтовом ящике пользователя с помощью метода [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) и доступа к операции EWS [FindItem](/exchange/client-developer/web-service-reference/finditem-operation). Свойство [item.itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) также предоставляет идентификатор EWS существующего элемента в форме чтения.
+Вы можете прикрепить элемент Outlook (например, электронную почту, календарь или контактный элемент) к сообщению или встрече в форме записи, указав Exchange веб-служб (EWS) ID `addItemAttachmentAsync` элемента и с помощью метода. Вы можете получить EWS-ID элемента электронной почты, календаря, контакта или задачи в почтовом ящике пользователя с помощью метода [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) и доступа к операции EWS [FindItem](/exchange/client-developer/web-service-reference/finditem-operation). Свойство [item.itemId](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) также предоставляет идентификатор EWS существующего элемента в форме чтения.
 
 Следующая функция JavaScript расширяет `addItemAttachment`первый пример выше и добавляет элемент в качестве вложения в составную электронную почту или встречу. В качестве параметра функция принимает идентификатор EWS прикрепляемого элемента. Если присоединение успешно, он получает ID вложения для дальнейшей обработки, включая удаление этого вложения в том же сеансе.
 
@@ -116,14 +116,14 @@ function addItemAttachment(itemId) {
 
 ## <a name="get-attachments"></a>Получение вложений
 
-API для получения вложений в режиме композитации доступны [из набора требований 1.8](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md).
+API для получения вложений в режиме композитации доступны [из набора требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8).
 
-- [getAttachmentsAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-- [getAttachmentContentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [getAttachmentsAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods)
+- [getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods)
 
-Вы можете использовать [метод getAttachmentsAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) для получения вложений сообщения или записи на прием.
+Вы можете использовать [метод getAttachmentsAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) для получения вложений сообщения или записи на прием.
 
-Чтобы получить содержимое вложения, можно использовать [метод getAttachmentContentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) . Поддерживаемые форматы перечислены в перечислении [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat) .
+Чтобы получить содержимое вложения, можно использовать [метод getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) . Поддерживаемые форматы перечислены в перечислении [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat) .
 
 Необходимо предоставить метод вызова, чтобы проверить состояние и любую ошибку с помощью `AsyncResult` объекта параметра вывода. Вы также можете передать все дополнительные параметры методу вызова, используя необязательный `asyncContext` параметр.
 
@@ -165,7 +165,7 @@ function handleAttachmentsCallback(result) {
 
 ## <a name="remove-an-attachment"></a>Удаление вложения
 
-Вы можете удалить вложение файла или элемента из сообщения или элемента встречи в форме записи, указав соответствующий ID вложения при использовании метода [removeAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) .
+Вы можете удалить вложение файла или элемента из сообщения или элемента встречи в форме записи, указав соответствующий ID вложения при использовании метода [removeAttachmentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) .
 
 > [!IMPORTANT]
 > Если используется набор требований 1.7 или ранее, следует удалять только вложения, добавленные той же надстройкой в том же сеансе.

@@ -3,8 +3,13 @@ title: Просмотр и изменение метаданных элемен�
 description: Управление пользовательскими данными в надстройке Outlook с помощью параметров перемещения или настраиваемых свойств.
 ms.date: 10/31/2019
 ms.localizationpriority: medium
+ms.openlocfilehash: b07322733f741747568fd57a99f03dc2d3e4d3bb
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484148"
 ---
-
 # <a name="get-and-set-add-in-metadata-for-an-outlook-add-in"></a>Просмотр и изменение метаданных для надстройки Outlook
 
 Для управления пользовательскими данными в настройке Outlook можно использовать следующее:
@@ -113,7 +118,7 @@ function removeAddInSetting()
 
 ### <a name="using-custom-properties"></a>Использование настраиваемых свойств
 
-Перед использованием настраиваемых свойств необходимо загрузить их, вызвав метод [loadCustomPropertiesAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods). После создания контейнера свойств можно использовать методы [set](/javascript/api/outlook/office.customproperties#outlook-office-customproperties-set-member(1)) и [get](/javascript/api/outlook/office.customproperties) для добавления и извлечения настраиваемых свойств. Чтобы сохранить любые изменения, внесенные в контейнер свойств, необходимо использовать метод [saveAsync](/javascript/api/outlook/office.customproperties#outlook-office-customproperties-saveasync-member(1)).
+Перед использованием настраиваемых свойств необходимо загрузить их, вызвав метод [loadCustomPropertiesAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods). После создания контейнера свойств можно использовать методы [set](/javascript/api/outlook/office.customproperties#outlook-office-customproperties-set-member(1)) и [get](/javascript/api/outlook/office.customproperties) для добавления и извлечения настраиваемых свойств. Чтобы сохранить любые изменения, внесенные в контейнер свойств, необходимо использовать метод [saveAsync](/javascript/api/outlook/office.customproperties#outlook-office-customproperties-saveasync-member(1)).
 
 
  > [!NOTE]
@@ -196,7 +201,7 @@ function saveCallback() {
 
 #### <a name="get-custom-properties-using-ews"></a>Просмотр настраиваемых свойств с помощью EWS
 
-Надстройка почты может получить расширенное `CustomProperties` свойство MAPI с помощью операции EWS [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) . Доступ `GetItem` на стороне сервера с помощью маркера вызова или с клиентской стороны с помощью метода [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) . В запросе `GetItem` укажите `CustomProperties` свойство MAPI в наборе свойств с помощью сведений, предоставленных в предыдущем разделе Как настраиваемые свойства хранятся [на элементе](#how-custom-properties-are-stored-on-an-item).
+Надстройка почты может получить расширенное `CustomProperties` свойство MAPI с помощью операции EWS [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) . Доступ `GetItem` на стороне сервера с помощью маркера вызова или с клиентской стороны с помощью метода [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) . В запросе `GetItem` укажите `CustomProperties` свойство MAPI в наборе свойств с помощью сведений, предоставленных в предыдущем разделе Как настраиваемые свойства хранятся [на элементе](#how-custom-properties-are-stored-on-an-item).
 
 В приведенном ниже примере показано, как получить элемент и его настраиваемые свойства.
 

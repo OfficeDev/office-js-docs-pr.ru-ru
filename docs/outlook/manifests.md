@@ -3,12 +3,12 @@ title: Манифесты надстройки Outlook
 description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
 ms.date: 05/27/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 1b89a351ad19c6038c4ffe0942e5b7335c4206b6
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 837ceac37375052b31acb0c243f4d5b2e2601511
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59150661"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484207"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 
@@ -386,7 +386,7 @@ ms.locfileid: "59150661"
 
 ## <a name="permissions"></a>Разрешения
 
-Элемент **Permissions** содержит необходимые надстройке разрешения. Как правило, следует указать минимальные необходимые разрешения, требуемые для надстройки, в зависимости от конкретных методов, которые вы собираетесь использовать. Например, для почтовой надстройки, которая активируется в форме создания и только считывает свойства элементов типа [item.requiredAttendees](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties), но не записывает их и не вызывает метод [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) для получения доступа к любым операциям веб-служб Exchange, следует указать разрешение **ReadItem**. Дополнительные сведения о доступных разрешениях см. в статье [Указание разрешений для доступа надстройки Outlook к почтовому ящику пользователя](understanding-outlook-add-in-permissions.md).
+Элемент **Permissions** содержит необходимые надстройке разрешения. Как правило, следует указать минимальные необходимые разрешения, требуемые для надстройки, в зависимости от конкретных методов, которые вы собираетесь использовать. Например, для почтовой надстройки, которая активируется в форме создания и только считывает свойства элементов типа [item.requiredAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), но не записывает их и не вызывает метод [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) для получения доступа к любым операциям веб-служб Exchange, следует указать разрешение **ReadItem**. Дополнительные сведения о доступных разрешениях см. в статье [Указание разрешений для доступа надстройки Outlook к почтовому ящику пользователя](understanding-outlook-add-in-permissions.md).
 
 **Четырехуровневая модель разрешений для почтовых надстроек**
 

@@ -3,19 +3,19 @@ title: Просмотр и изменение повторения в надст
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
 ms.date: 08/18/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b211e72304e22874f847f2231e3a800efaceb4d
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 0c763abd238d007fd397c17278472db1fb97e04e
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154134"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484663"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 
 Иногда требуется создать или обновить повторяющуюся встречу, например еженедельное собрание, посвященное ходу выполнения командного проекта, или ежегодное напоминание о дне рождения. Вы можете использовать Office API JavaScript для управления шаблонами повторения серии встреч в надстройки.
 
 > [!NOTE]
-> Поддержка этой функции была представлена в наборе требований 1.7. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была представлена в наборе требований 1.7. См [клиенты и платформы](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="available-recurrence-patterns"></a>Доступные расписания повторения
 
@@ -42,12 +42,12 @@ ms.locfileid: "59154134"
 
 |Состояние встречи|Возможность изменения повторения|Возможность просмотра повторения|
 |---|---|---|
-|Организатор встречи — создание ряда|Да ( [`setAsync`][setAsync link] )|Да ( [`getAsync`][getAsync link] )|
-|Организатор встречи — создание экземпляра|Нет (`setAsync` возвращает ошибку)|Да ( [`getAsync`][getAsync link] )|
-|Участник встречи — чтение ряда|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
-|Участник встречи — чтение экземпляра|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
-|Приглашение на собрание — чтение ряда|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
-|Приглашение на собрание — чтение экземпляра|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
+|Организатор встречи — создание ряда|Да ([`setAsync`][setAsync link])|Да ([`getAsync`][getAsync link])|
+|Организатор встречи — создание экземпляра|Нет (`setAsync` возвращает ошибку)|Да ([`getAsync`][getAsync link])|
+|Участник встречи — чтение ряда|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
+|Участник встречи — чтение экземпляра|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
+|Приглашение на собрание — чтение ряда|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
+|Приглашение на собрание — чтение экземпляра|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
 
 ## <a name="set-recurrence-as-the-organizer"></a>Изменение повторения в качестве организатора
 
@@ -201,7 +201,7 @@ var recurrenceType = recurrence.recurrenceType;
 [Событие RecurrenceChanged](/javascript/api/office/office.eventtype)
 
 [getAsync link]: /javascript/api/outlook/office.recurrence#getAsync_options__callback_
-[item.recurrence link]: ../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties
+[item.recurrence link]: /javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item.md#properties
 [setAsync link]: /javascript/api/outlook/office.recurrence#setAsync_recurrencePattern__options__callback_
 
 [dayOfMonth link]: /javascript/api/outlook/office.recurrenceproperties#dayOfMonth

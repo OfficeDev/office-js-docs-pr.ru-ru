@@ -3,12 +3,12 @@ title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
 ms.date: 07/07/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 52c1bda4a21fba869d67cb3a15d9573d660b8471
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 41e1b3d200e75b214a8619021b2ccf5514e30055
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745765"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483530"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 
@@ -28,7 +28,7 @@ ms.locfileid: "63745765"
 
 ## <a name="creating-the-add-in-command"></a>Создание команды надстройки
 
-Команды надстроек объявляются в манифесте в элементе [VersionOverrides](../reference/manifest/versionoverrides.md). Этот элемент является дополнением к схеме манифестов версии 1.1, которая обеспечивает обратную совместимость. В клиенте, который не поддерживает узел `VersionOverrides`, имеющиеся надстройки продолжат работать так же, как и без команд надстроек.
+Команды надстроек объявляются в манифесте в элементе [VersionOverrides](/javascript/api/manifest/versionoverrides). Этот элемент является дополнением к схеме манифестов версии 1.1, которая обеспечивает обратную совместимость. В клиенте, который не поддерживает узел `VersionOverrides`, имеющиеся надстройки продолжат работать так же, как и без команд надстроек.
 
 В записях манифеста `VersionOverrides` указывается множество свойств надстройки, например приложение, типы элементов управления, добавляемых на ленту, текст, значки и соответствующие функции.
 

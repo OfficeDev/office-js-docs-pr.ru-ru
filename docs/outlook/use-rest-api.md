@@ -1,22 +1,27 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
-description: 'Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа'
+description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
 ms.date: 07/06/2021
 ms.localizationpriority: medium
+ms.openlocfilehash: 063a819ccb7f71351e0eec8cef1702d98c8466b0
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483383"
 ---
-
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
-Пространство имен [Office.context.mailbox.item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
+Пространство имен [Office.context.mailbox.item](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
 
 > [!IMPORTANT]
 > **API Outlook REST обесценились**
 >
-> Конечные Outlook REST будут полностью списаны в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/).). Чтобы использовать Microsoft Graph, необходимо перенести существующие [надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки Graph и Outlook API](/outlook/rest/compare-graph) REST.
+> Конечные точки rest Outlook полностью списаются в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/).). Чтобы использовать Microsoft Graph, необходимо перенести [существующие надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки Graph и Outlook API](/outlook/rest/compare-graph) REST.
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 
-Интерфейсам REST API для Outlook необходим маркер носителя в заголовке `Authorization`. Как правило, приложения используют потоки OAuth2 для получения маркера. Однако надстройка может получить маркер без реализации OAuth2, используя новый метод [Office.context.mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), который появился в наборе требований 1.5 для почтовых ящиков.
+Интерфейсам REST API для Outlook необходим маркер носителя в заголовке `Authorization`. Как правило, приложения используют потоки OAuth2 для получения маркера. Однако надстройка может получить маркер без реализации OAuth2, используя новый метод [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods), который появился в наборе требований 1.5 для почтовых ящиков.
 
 Задав для параметра `isRest` значение `true`, вы можете запросить маркер, совместимый с интерфейсами REST API.
 
@@ -43,10 +48,10 @@ Office.context.mailbox.getCallbackTokenAsync({isRest: true}, function(result){
 
 ## <a name="get-the-item-id"></a>Получение идентификатора элемента
 
-Чтобы получить текущий элемент с помощью REST, надстройке потребуется его идентификатор, правильно отформатированный для службы REST. Его можно получить из свойства [Office.context.mailbox.item.itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties), но необходимо выполнить некоторые проверки, чтобы убедиться, что идентификатор отформатирован для REST.
+Чтобы получить текущий элемент с помощью REST, надстройке потребуется его идентификатор, правильно отформатированный для службы REST. Его можно получить из свойства [Office.context.mailbox.item.itemId](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), но необходимо выполнить некоторые проверки, чтобы убедиться, что идентификатор отформатирован для REST.
 
 - В Outlook Mobile свойство `Office.context.mailbox.item.itemId` возвращает идентификатор в формате REST, который можно использовать без изменений.
-- В других клиентах Outlook свойство `Office.context.mailbox.item.itemId` возвращает идентификатор в формате EWS, который необходимо преобразовать с помощью метода [Office.context.mailbox.convertToRestId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods).
+- В других клиентах Outlook свойство `Office.context.mailbox.item.itemId` возвращает идентификатор в формате EWS, который необходимо преобразовать с помощью метода [Office.context.mailbox.convertToRestId](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods).
 - Обратите внимание: чтобы использовать идентификатор вложения, его нужно преобразовать в идентификатор в формате REST. Это преобразование необходимо, потому что идентификаторы EWS могут содержать небезопасные в отношении URL-адресов значения, которые вызывают проблемы с REST.
 
 Надстройка может определить, в каком клиенте Outlook она загружена, с помощью свойства [Office.context.mailbox.diagnostics.hostName](/javascript/api/outlook/office.diagnostics#outlook-office-diagnostics-hostname-member).
@@ -70,7 +75,7 @@ function getItemRestId() {
 
 ## <a name="get-the-rest-api-url"></a>Использование URL-адреса REST API
 
-Последнее значение, необходимое надстройке для вызова REST API, — это имя узла, используемое для отправки запросов API. Оно содержится в свойстве [Office.context.mailbox.restUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties).
+Последнее значение, необходимое надстройке для вызова REST API, — это имя узла, используемое для отправки запросов API. Оно содержится в свойстве [Office.context.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties).
 
 ### <a name="example"></a>Пример
 

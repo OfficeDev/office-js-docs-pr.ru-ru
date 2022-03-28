@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 03/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: aa301996d653170d02280efbdb7e94733b5dd924
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 3591c320fbe0c2ade41725ef2da32c31b059ac7d
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63742935"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483890"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки в Office надстроек
 
@@ -29,8 +29,8 @@ ms.locfileid: "63742935"
 > [!NOTE]
 > Настраиваемые контекстные вкладки работают только на платформах, поддерживаюх следующие наборы требований. Дополнительные информацию о наборах требований и работе с ними см. в Office [приложений и API](../develop/specify-office-hosts-and-api-requirements.md).
 >
-> - [RibbonApi 1.2](../reference/requirement-sets/ribbon-api-requirement-sets.md)
-> - [SharedRuntime 1.1](../reference/requirement-sets/shared-runtime-requirement-sets.md)
+> - [RibbonApi 1.2](/javascript/api/requirement-sets/ribbon-api-requirement-sets)
+> - [SharedRuntime 1.1](/javascript/api/requirement-sets/shared-runtime-requirement-sets)
 >
 > Вы можете использовать проверки времени работы в коде, чтобы проверить, поддерживает ли комбинация хост и платформа пользователя эти наборы требований, описанные в проверках времени запуска для поддержки набора методов и [требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). (Метод указания наборов требований в манифесте, который также описан в этой статье, в настоящее время не работает для RibbonApi 1.2.) Кроме того, можно реализовать [альтернативный интерфейс,](#implement-an-alternate-ui-experience-when-custom-contextual-tabs-are-not-supported) если пользовательские контекстные вкладки не поддерживаются.
 
@@ -62,7 +62,7 @@ ms.locfileid: "63742935"
 В отличие от настраиваемой вкладки ядра, которые определяются с помощью XML в манифесте, настраиваемые контекстные вкладки определяются во время запуска с помощью BLOB JSON. Код разрезает blob в объект JavaScript, а затем передает объект [методу Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#office-office-ribbon-requestcreatecontrols-member(1)). Настраиваемые контекстные вкладки присутствуют только в документах, на которых в настоящее время запущена надстройка. Это отличается от настраиваемой основной вкладки, которые добавляются в ленту Office приложения при установке надстройки и остаются при открываемом другом документе. Кроме того, `requestCreateControls` метод может запускаться только один раз в сеансе надстройки. Если он снова вызван, ошибка будет выброшена.
 
 > [!NOTE]
-> Структура свойств и свойств BLOB JSON (и имен ключей) примерно параллельна структуре элемента [CustomTab](../reference/manifest/customtab.md) и его элементов потомка в манифесте XML.
+> Структура свойств и свойств BLOB JSON (и имен ключей) примерно параллельна структуре элемента [CustomTab](/javascript/api/manifest/customtab) и его элементов потомка в манифесте XML.
 
 Мы пошаговую соберем пример контекстных вкладок JSON blob. Полная схема контекстной вкладки JSON находится на [динамической ленте.schema.json](https://developer.microsoft.com/json-schemas/office-js/dynamic-ribbon.schema.json). Если вы работаете в Visual Studio Code, вы можете использовать этот файл для получения IntelliSense проверки JSON. Дополнительные сведения см. в Visual Studio Code [JSON с схемами и настройками JSON](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings).
 
@@ -530,9 +530,9 @@ var contextualTabJSON = GetContextualTabsJsonSupportedLocale();
 
 #### <a name="use-noncontextual-tabs-or-controls"></a>Использование неконтекстуальных вкладок или элементов управления
 
-Существует элемент манифеста [OverriddenByRibbonApi](../reference/manifest/overriddenbyribbonapi.md), который предназначен для создания впечатления от отката в надстройке, которая реализует настраиваемые контекстные вкладки при работе надстройки на приложении или платформе, не поддерживаюх настраиваемые контекстные вкладки.
+Существует элемент манифеста [OverriddenByRibbonApi](/javascript/api/manifest/overriddenbyribbonapi), который предназначен для создания впечатления от отката в надстройке, которая реализует настраиваемые контекстные вкладки при работе надстройки на приложении или платформе, не поддерживаюх настраиваемые контекстные вкладки.
 
-Простейшая стратегия использования этого элемента заключается в том, чтобы определить одну или несколько настраиваемых вкладки ядра (  то есть неконтекстуальные пользовательские вкладки) в манифесте, дублирующем настройки ленты пользовательских контекстных вкладок в надстройке. Но вы добавляете `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` в качестве первого детского элемента элементы элементов ["Группа](../reference/manifest/group.md)[",](../reference/manifest/control.md) "Управление" и "Элемент меню" на настраиваемые вкладки ядра. Эффект от этого ниже:
+Простейшая стратегия использования этого элемента заключается в том, чтобы определить одну или несколько настраиваемых вкладки ядра (  то есть неконтекстуальные пользовательские вкладки) в манифесте, дублирующем настройки ленты пользовательских контекстных вкладок в надстройке. Но вы добавляете `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` в качестве первого детского элемента элементы элементов ["Группа](/javascript/api/manifest/group)[",](/javascript/api/manifest/control) "Управление" и "Элемент меню" на настраиваемые вкладки ядра. Эффект от этого ниже:
 
 - Если надстройка работает на приложении и платформе, поддерживаюх настраиваемые контекстные вкладки, то настраиваемые основные группы и элементы управления не будут отображаться на ленте. Вместо этого настраиваемая контекстная вкладка будет создана, когда надстройка вызывает `requestCreateControls` метод.
 - Если надстройка работает на  `requestCreateControls`приложении или платформе, которые не поддерживаются, элементы отображаются на пользовательских вкладок ядра.
@@ -561,7 +561,7 @@ var contextualTabJSON = GetContextualTabsJsonSupportedLocale();
 </OfficeApp>
 ```
 
-Дополнительные примеры см. в [примере OverriddenByRibbonApi](../reference/manifest/overriddenbyribbonapi.md).
+Дополнительные примеры см. в [примере OverriddenByRibbonApi](/javascript/api/manifest/overriddenbyribbonapi).
 
 Если родительская `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>`группа или меню помечены, то она не отображается, и вся ее детская разметка игнорируется, когда настраиваемые контекстные вкладки не поддерживаются. Поэтому не важно, есть ли какой-либо из этих детских элементов элемент **OverriddenByRibbonApi** или его значение. Следствием этого является то, что если элемент меню или элемент управления должен быть виден во всех контекстах, `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>`то не только он не должен быть отмечен, но и его предок меню и группа также не должны быть отмечены *таким образом*.
 

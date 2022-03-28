@@ -3,12 +3,12 @@ title: Контекстные надстройки Outlook
 description: Инициируют задачи, связанные с сообщением, не выходя из самого сообщения, что обеспечивает большее удобство и богатый пользовательский опыт
 ms.date: 04/09/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f343f48f0c49de2b322cb737c5896df2f130ec9
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 0f85716feb31284492ae2faba1981d1b1ba12f1c
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63747202"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484682"
 ---
 # <a name="contextual-outlook-add-ins"></a>Контекстные надстройки Outlook
 
@@ -24,11 +24,11 @@ ms.locfileid: "63747202"
 > [!NOTE]
 > Контекстные надстройки в настоящее время недоступны в Outlook для Android и iOS, но в будущем мы добавим эту функцию.
 >
-> Поддержка этой функции была реализована в наборе обязательных элементов 1.6 См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была реализована в наборе обязательных элементов 1.6 См [клиенты и платформы](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="how-to-make-a-contextual-add-in"></a>Создание контекстной надстройки
 
-Манифест контекстной надстройки должен содержать элемент [ExtensionPoint](../reference/manifest/extensionpoint.md#detectedentity), для атрибута `xsi:type` которого задано значение `DetectedEntity`. В элементе **ExtensionPoint** надстройка задает сущности или регулярное выражение, которые могут активировать ее. Если указывается сущность, это может быть любое из свойств объекта [Entities](/javascript/api/outlook/office.entities).
+Манифест контекстной надстройки должен содержать элемент [ExtensionPoint](/javascript/api/manifest/extensionpoint#detectedentity), для атрибута `xsi:type` которого задано значение `DetectedEntity`. В элементе **ExtensionPoint** надстройка задает сущности или регулярное выражение, которые могут активировать ее. Если указывается сущность, это может быть любое из свойств объекта [Entities](/javascript/api/outlook/office.entities).
 
 Следовательно, манифест надстройки должен содержать правило типа **ItemHasKnownEntity** или **ItemHasRegularExpressionMatch**. В следующем примере показано, как указать, что надстройка должна активировать сообщения с обнаруженной сущностью, которая является номером телефона.
 

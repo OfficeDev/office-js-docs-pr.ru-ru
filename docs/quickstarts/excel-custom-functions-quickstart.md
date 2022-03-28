@@ -1,15 +1,15 @@
 ---
-ms.date: 03/18/2022
+ms.date: 03/23/2022
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 920575a1976248be2cbc0ad945654cec63f542ab
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: cac81cb25b9880a3057e2246d39ac226666a4cb4
+ms.sourcegitcommit: 64942cdd79d7976a0291c75463d01cb33a8327d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746402"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64404710"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
@@ -35,7 +35,7 @@ ms.locfileid: "63746402"
     - **Выберите тип сценария:** `JavaScript`
     - **Как вы хотите назвать надстройку?** `starcount`
 
-    ![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.](../images/starcountPrompt.png)
+    :::image type="content" source="../images/starcountPrompt.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
 
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
@@ -62,7 +62,7 @@ npm run start:desktop
 ```
 
 [!INCLUDE [alert use https](../includes/alert-use-https.md)]
-    
+
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
 Чтобы проверить надстройку в Excel в Интернете, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер. Замените "{url}" на URL-адрес документа Excel в OneDrive или библиотеке SharePoint, для которой у вас есть разрешения.
@@ -84,6 +84,8 @@ npm run start:desktop
 1. Запустите функцию `CONTOSO.ADD` с числами `10` и `200` в качестве входных параметров, введя значение `=CONTOSO.ADD(10,200)` в ячейке и нажав клавишу ВВОД.
 
 Пользовательская функция `ADD` вычисляет сумму двух чисел, которые вы указываете в качестве входных параметров. При вводе `=CONTOSO.ADD(10,200)` в ячейке должен отобразиться результат **210** после нажатия клавиши ВВОД.
+
+[!include[Manually register an add-in](../includes/excel-custom-functions-manually-register.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

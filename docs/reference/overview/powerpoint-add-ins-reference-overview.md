@@ -4,12 +4,12 @@ description: Обзор API PowerPoint JavaScript.
 ms.date: 07/05/2019
 ms.prod: powerpoint
 ms.localizationpriority: high
-ms.openlocfilehash: 406c22c3f35e5e749aabbbed9631dbb3b82cd4d9
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 3657ff530743bf5bf06c30483aa7de4d2cdff6c1
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746880"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64484648"
 ---
 # <a name="javascript-api-for-powerpoint"></a>API JavaScript для PowerPoint
 
@@ -38,5 +38,5 @@ ms.locfileid: "63746880"
 - [Документация по надстройкам PowerPoint](../../powerpoint/index.yml)
 - [Обзор надстроек PowerPoint](../../powerpoint/powerpoint-add-ins.md)
 - [Справочник по API JavaScript для PowerPoint](/javascript/api/powerpoint)
-- [Доступность клиентских приложений и платформ Office для надстроек Office](../../overview/office-add-in-availability.md)
+- [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets)
 - [Справочная документация по API](../javascript-api-for-office.md)

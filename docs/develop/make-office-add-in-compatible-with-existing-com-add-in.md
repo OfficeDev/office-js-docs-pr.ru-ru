@@ -3,12 +3,12 @@ title: Убедитесь, что надстройка Office совместим
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
 ms.date: 09/24/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f78f41532f916dc5df43cf5a6d4e455b6f16864f
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: d6c2b891fa12f4ec79b52bbff8cac02a8eb45861
+ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743800"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64483669"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -27,7 +27,7 @@ ms.locfileid: "63743800"
 
 Чтобы обеспечить совместимость Office надстройки и надстройки COM, определите эквивалентную надстройка COM в манифесте [](add-in-manifests.md) Office надстройки. Затем Office на Windows надстройка COM вместо надстройки Office, если они установлены.
 
-В следующем примере показана часть манифеста, которая указывает надстройки COM в качестве эквивалентной надстройки. Значение элемента определяет `ProgId` надстройку COM, а элемент [EquivalentAddins](../reference/manifest/equivalentaddins.md) должен быть позиционен непосредственно перед закрывающими тегами `VersionOverrides` .
+В следующем примере показана часть манифеста, которая указывает надстройки COM в качестве эквивалентной надстройки. Значение элемента определяет `ProgId` надстройку COM, а элемент [EquivalentAddins](/javascript/api/manifest/equivalentaddins) должен быть позиционен непосредственно перед закрывающими тегами `VersionOverrides` .
 
 ```xml
 <VersionOverrides>
