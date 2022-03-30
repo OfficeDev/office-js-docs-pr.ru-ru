@@ -3,12 +3,12 @@ title: Обработка ошибок с Excel API JavaScript
 description: Узнайте о Excel логике обработки ошибок API JavaScript для учета ошибок во время работы.
 ms.date: 02/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f826968ae5137931fc334e62c9594461850cf649
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: d62a146262f66bb675fce2dbf0ec2a7c5da3ce2a
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484078"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496875"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с Excel API JavaScript
 
@@ -68,7 +68,7 @@ async function tryCatch(callback) {
 |`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.| |
 |`ActivityLimitReached`|Достигнут предел действий.| |
 |`ApiNotAvailable`|Запрашиваемый интерфейс API недоступен.| |
-|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript](/javascript/api/requirement-sets/excel-api-requirement-sets).| |
+|`ApiNotFound`|API, который вы пытаетесь использовать, не удалось найти. Он может быть доступен в более новой версии Excel. Дополнительные [сведения см. в Excel API JavaScript](/javascript/api/requirement-sets/excel/excel-api-requirement-sets).| |
 |`BadPassword`|Предоставленный пароль является неправильным.| |
 |`Conflict`|Запрос не удалось обработать из-за конфликта.| |
 |`ContentLengthRequired`|Отсутствует `Content-length` заглавная головка HTTP.| |

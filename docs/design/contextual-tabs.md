@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 03/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3591c320fbe0c2ade41725ef2da32c31b059ac7d
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 57d95db1e425f1ca4f5111a79d99de44f8f09e31
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483890"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496749"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки в Office надстроек
 
@@ -29,8 +29,8 @@ ms.locfileid: "64483890"
 > [!NOTE]
 > Настраиваемые контекстные вкладки работают только на платформах, поддерживаюх следующие наборы требований. Дополнительные информацию о наборах требований и работе с ними см. в Office [приложений и API](../develop/specify-office-hosts-and-api-requirements.md).
 >
-> - [RibbonApi 1.2](/javascript/api/requirement-sets/ribbon-api-requirement-sets)
-> - [SharedRuntime 1.1](/javascript/api/requirement-sets/shared-runtime-requirement-sets)
+> - [RibbonApi 1.2](/javascript/api/requirement-sets/common/ribbon-api-requirement-sets)
+> - [SharedRuntime 1.1](/javascript/api/requirement-sets/common/shared-runtime-requirement-sets)
 >
 > Вы можете использовать проверки времени работы в коде, чтобы проверить, поддерживает ли комбинация хост и платформа пользователя эти наборы требований, описанные в проверках времени запуска для поддержки набора методов и [требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). (Метод указания наборов требований в манифесте, который также описан в этой статье, в настоящее время не работает для RibbonApi 1.2.) Кроме того, можно реализовать [альтернативный интерфейс,](#implement-an-alternate-ui-experience-when-custom-contextual-tabs-are-not-supported) если пользовательские контекстные вкладки не поддерживаются.
 

@@ -4,19 +4,19 @@ description: Узнайте, как реализовать функцию при
 ms.topic: article
 ms.date: 02/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3054742a90f66e9ee1bfc75bded5090bd18947f3
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 1a7ec463c3998d9f85f1a085b6b28c43637651bd
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484169"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496896"
 ---
 # <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация надстройки надстройки Outlook надстройки
 
 К концу этого погона у вас будет надстройка Outlook, которая может вставить отказ при отправлении сообщения.
 
 > [!NOTE]
-> Поддержка этой функции была представлена в наборе требований 1.9. См [клиенты и платформы](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была представлена в наборе требований 1.9. См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 

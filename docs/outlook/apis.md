@@ -3,12 +3,12 @@ title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
 ms.date: 01/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: dffc494778d02feaedb302a4c42ca843637caa71
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 2c3f1d445ca86c04caa3950a05278fe309ff2af5
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484295"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496315"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
@@ -48,7 +48,7 @@ if (item.somePropertyOrFunction) {
 > [!NOTE]
 > Эти проверки необязательны для API, входящих в набор обязательных элементов версии, указанной в манифесте.
 
-Укажите минимальный набор обязательных элементов API для вашего сценария, без которого функции надстройки не будут работать. Набор обязательных элементов указывается в элементе `<Requirements>` манифеста. Дополнительные сведения см. в статьях [Манифесты надстроек Outlook](manifests.md) и [Общие сведения о наборах обязательных элементов API Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets).
+Укажите минимальный набор обязательных элементов API для вашего сценария, без которого функции надстройки не будут работать. Набор обязательных элементов указывается в элементе `<Requirements>` манифеста. Дополнительные сведения см. в статьях [Манифесты надстроек Outlook](manifests.md) и [Общие сведения о наборах обязательных элементов API Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets).
 
 Элемент `<Methods>` не применяется к надстройкам Outlook, поэтому невозможно объявить поддержку определенных методов.
 
@@ -74,5 +74,5 @@ if (item.somePropertyOrFunction) {
 ## <a name="see-also"></a>См. также
 
 - [Манифесты надстроек Outlook](manifests.md)
-- [Общие сведения о наборах требований API Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets)
+- [Общие сведения о наборах требований API Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets)
 - [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)

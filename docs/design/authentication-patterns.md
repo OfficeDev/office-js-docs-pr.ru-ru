@@ -3,12 +3,12 @@ title: Рекомендации по разработке аутентифика
 ms.date: 02/09/2021
 description: Узнайте, как визуально спроектировать страницу регистрации или регистрации в Office надстройки.
 ms.localizationpriority: medium
-ms.openlocfilehash: 0188487f7a4a32bf16c00eed3f151d0a9a52be87
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 4973ba8f81ff075d7db8021b15fdfe0f8f0683c4
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483933"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496791"
 ---
 # <a name="authentication-patterns"></a>Шаблоны аутентификации
 
@@ -49,7 +49,7 @@ ms.locfileid: "64483933"
 ## <a name="single-sign-on-authentication-flow"></a>Поток Sign-On проверки подлинности
 
 > [!NOTE]
-> Единый API входов в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о поддержке единого входного знака см. в наборе [требований IdentityAPI](/javascript/api/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> Единый API входов в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о поддержке единого входного знака см. в наборе [требований IdentityAPI](/javascript/api/requirement-sets/common/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Использование единой входной записи для более плавного интерфейса для конечных пользователей. Удостоверение пользователя в Office (учетная запись Майкрософт или Microsoft 365) используется для регистрации в вашей надстройки. В результате пользователи впишутся только один раз. Это упрощает начало работы для пользователей.
 

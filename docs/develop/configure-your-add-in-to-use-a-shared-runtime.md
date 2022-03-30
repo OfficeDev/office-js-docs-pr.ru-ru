@@ -1,15 +1,15 @@
 ---
-ms.date: 10/05/2021
+ms.date: 03/23/2022
 title: Настройка надстройки Office для использования общей среды выполнения JavaScript
 ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
 ms.localizationpriority: high
-ms.openlocfilehash: db4ed73459c76089c67820cbf3099c071ad01ad2
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 58715c7c7eaf89dd4ce6bc3545121be03f12af78
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743928"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496861"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 
@@ -23,11 +23,14 @@ ms.locfileid: "63743928"
 
 Выполните одно из указанных ниже действий.
 
-- Чтобы создать надстройку Excel с пользовательскими функциями, выполните команду `yo office --projectType excel-functions --name 'Excel shared runtime add-in' --host excel --js true`.
+- Чтобы создать надстройку Excel с пользовательскими функциями, выполните команду `yo office --projectType excel-functions --name "NAME OF YOUR PROJECT HERE" --host excel --js true`.
 
     или
 
-- Чтобы создать надстройку PowerPoint, выполните команду `yo office --projectType taskpane --name 'PowerPoint shared runtime add-in' --host powerpoint --js true`.
+- Чтобы создать надстройку PowerPoint, выполните команду `yo office --projectType taskpane --name "NAME OF YOUR PROJECT HERE" --host powerpoint --js true`.
+
+> [!IMPORTANT]
+> Значение аргумента `--name` должно быть указано в двойных кавычках, даже если оно не содержит пробелов.
 
 Генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -40,7 +43,7 @@ ms.locfileid: "63743928"
 
 1. Запустите код Visual Studio и откройте созданный вами проект надстройки Excel или PowerPoint.
 1. Откройте файл **manifest.xml**.
-1. Если вы создали надстройку для Excel, обновите раздел требований, чтобы использовать [общую среду выполнения](../reference/requirement-sets/shared-runtime-requirement-sets.md), а не среду выполнения пользовательских функций. Код XML должен выглядеть следующим образом.
+1. Если вы создали надстройку для Excel, обновите раздел требований, чтобы использовать [общую среду выполнения](/javascript/api/requirement-sets/common/shared-runtime-requirement-sets), а не среду выполнения пользовательских функций. Код XML должен выглядеть следующим образом.
 
     ```xml
     <Hosts>
@@ -200,7 +203,7 @@ ms.locfileid: "63743928"
 ```
 
 > [!NOTE]
-> Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в статьях "[Элемент Runtimes](../reference/manifest/runtimes.md)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
+> Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в статьях "[Элемент Runtimes](/javascript/api/manifest/runtimes)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
 
 ## <a name="about-the-shared-javascript-runtime"></a>Сведения об общей среде выполнения JavaScript
 

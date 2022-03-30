@@ -3,12 +3,12 @@ title: Требования к надстройкам Outlook
 description: Чтобы надстройки Outlook загружались и работали надлежащим образом, существует ряд требований к серверам и клиентам.
 ms.date: 02/09/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 0b163c7c90cd430a4502800e7e39fe474b188a44
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 5ac132cfe76f496b198cf70b791b81b0b85d0788
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483456"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496945"
 ---
 # <a name="outlook-add-in-requirements"></a>Требования к надстройкам Outlook
 
@@ -45,4 +45,4 @@ ms.locfileid: "64483456"
 
 - [Требования для запуска надстроек Office](../concepts/requirements-for-running-office-add-ins.md)
 - [Доступность клиентских приложений и платформ Office для надстроек Office (раздел Outlook)](/javascript/api/requirement-sets#outlook)
-- [Поддержка наборов обязательных элементов API JavaScript для Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)
+- [Поддержка наборов обязательных элементов API JavaScript для Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)

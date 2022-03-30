@@ -3,20 +3,19 @@ title: Устранение ошибок единого входа
 description: Руководство по устранению неполадок с одним входом (SSO) в Office надстройки и обработке специальных условий или ошибок.
 ms.date: 01/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: dd32fb1ff3b3f0522085f9940b91f7e01dde21ab
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: e0607a059ec0ab14dc987d7703b7162330c58c44
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483521"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496798"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/identity-api-requirement-sets).
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](/javascript/api/requirement-sets/common/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Инструкции см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
 
@@ -98,7 +97,7 @@ ms.locfileid: "64483521"
 
 Существует несколько возможных причин.
 
-- Надстройка выполняется на платформе, которая не поддерживает API `getAccessToken`. Например, она не поддерживается на iPad. См. также [наборы требований API удостоверений](/javascript/api/requirement-sets/identity-api-requirement-sets).
+- Надстройка выполняется на платформе, которая не поддерживает API `getAccessToken`. Например, она не поддерживается на iPad. См. также [наборы требований API удостоверений](/javascript/api/requirement-sets/common/identity-api-requirement-sets).
 - Параметр `forMSGraphAccess` был передан в вызов `getAccessToken`, и пользователь получил надстройку через AppSource. В этом сценарии администратор клиента не предоставил надстройке согласие на области Microsoft Graph (разрешения), которые ей нужны. При отзыве `getAccessToken` с помощью `allowConsentPrompt` проблема не будет устранена, так как для Office допускается предложить пользователю разрешение только для области `profile` AAD.
 
 Ваш код должен инициировать возврат к альтернативной системе проверки подлинности пользователя.

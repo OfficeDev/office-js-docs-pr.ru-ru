@@ -3,16 +3,16 @@ title: Альтернативные способы передачи сообще
 description: Узнайте обходные пути, которые необходимо использовать, если метод messageChild не поддерживается.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 36500ac554c9e96de2c20ba76f80dd9dcb628a5a
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 94b002970084a13fe69e1469aa26577039600989
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483633"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496812"
 ---
 # <a name="alternative-ways-of-passing-messages-to-a-dialog-box-from-its-host-page"></a>Альтернативные способы передачи сообщений в диалоговое окно со своей хост-страницы
 
-Рекомендуемый `messageChild` способ передачи данных и сообщений с родительской страницы в диалоговое окно с помощью метода, описанного в [API](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) диалоговых Office в Office надстройки. Если надстройка работает на платформе или хосте, не поддерживающей набор требований [DialogApi 1.2](/javascript/api/requirement-sets/dialog-api-requirement-sets), существует два других способа передать информацию в диалоговое окно.
+Рекомендуемый `messageChild` способ передачи данных и сообщений с родительской страницы в диалоговое окно с помощью метода, описанного в [API](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) диалоговых Office в Office надстройки. Если надстройка работает на платформе или хосте, не поддерживающей набор требований [DialogApi 1.2](/javascript/api/requirement-sets/common/dialog-api-requirement-sets), существует два других способа передать информацию в диалоговое окно.
 
 - Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
 - Храните информацию в месте, доступном как для главного, так и для диалогового окна. Два окна не имеют общего хранилища сеансов (свойство [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)), но если они имеют один и тот же *домен (включая* номер порта, если таковые имеются), они имеют общий локальный [служба хранилища](https://www.w3schools.com/html/html5_webstorage.asp).\*

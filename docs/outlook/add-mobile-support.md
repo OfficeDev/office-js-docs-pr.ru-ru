@@ -3,12 +3,12 @@ title: Добавление поддержки мобильных устройс
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 07/16/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 451476e9cd7eda9902ad156966558c182752547f
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 6e99c862d4cd63590a86c757bf2b720c096826a9
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484306"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496973"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
@@ -20,7 +20,7 @@ ms.locfileid: "64484306"
 
 Этот элемент содержит все данные для загрузки надстройки в мобильных клиентах. Это позволяет определять совершенно другие элементы пользовательского интерфейса и файлы JavaScript для мобильной версии.
 
-В приведенном ниже примере показана одна кнопка области задач в элементе `MobileFormFactor`.
+В следующем примере показана одна кнопка области задач в элементе `MobileFormFactor` .
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
@@ -109,4 +109,4 @@ API, введенные в наборе требований 1.6 или боле
 
 ## <a name="see-also"></a>См. также
 
-[Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)
+[Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)

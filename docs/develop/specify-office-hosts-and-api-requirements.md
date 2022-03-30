@@ -3,12 +3,12 @@ title: Указание ведущих приложений Office и требо
 description: Узнайте, как указать Office приложений и API для вашей надстройки, чтобы работать как ожидалось.
 ms.date: 01/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e4533f1de76b8d40c5b9c938ff0e113529d73d95
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 7e43aa05d543eb55f10c6e700b5011733792a401
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483595"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496805"
 ---
 # <a name="specify-office-applications-and-api-requirements"></a>Указание приложений Office и требований API
 
@@ -58,12 +58,12 @@ ms.locfileid: "64483595"
 
 | Имя          | Office клиентских приложений                     | Доступные типы надстройки |
 |:--------------|:-----------------------------------------------|:-----------------------|
-| Database      | Веб-приложения Access                                | Для области задач              |
-| Document      | Word в Интернете, Windows, Mac, iPad            | Для области задач              |
+| Database      | Веб-приложения Access                                | Область задач              |
+| Document      | Word в Интернете, Windows, Mac, iPad            | Область задач              |
 | Mailbox       | Outlook в Интернете, Windows, Mac, Android, iOS | Почта                   |
 | Notebook      | OneNote в Интернете                             | Области задач, контент     |
 | Presentation  | PowerPoint в Интернете, Windows, Mac, iPad      | Области задач, контент     |
-| Проект       | Project для Windows                             | Для области задач              |
+| Проект       | Project для Windows                             | Область задач              |
 | Workbook      | Excel в Интернете, Windows, Mac, iPad           | Области задач, контент     |
 
 > [!NOTE]
@@ -91,7 +91,7 @@ ms.locfileid: "64483595"
 Поддержка набора требований зависит Office приложения, версии Office и платформы, на которой оно запущено. Например, DialogApi 1.2 не поддерживается в одноразовой версии Office до Office 2021 г., но диалоговое окно DialogApi 1.1 поддерживается во всех одноразовых версиях покупки Office 2013 г. Вы хотите, чтобы надстройка устанавливалась на каждую комбинацию платформы и Office версии, которая поддерживает API, которые она использует, поэтому всегда следует указать в манифесте минимальную  версию каждого набора требований, которые требуются вашей надстройки. Подробные сведения о том, как это сделать, далее в этой статье.
 
 > [!TIP]
-> Дополнительные сведения о версии набора требований см. [](office-versions-and-requirement-sets.md#office-requirement-sets-availability)в Office наборов требований, а полные списки наборов требований и сведения об API в каждом из них начинаются с Office наборов требований [к надстройки](/javascript/api/requirement-sets/office-add-in-requirement-sets). Справочные темы для большинства Office.js API также указывают набор требований, к который они принадлежат (если таково).
+> Дополнительные сведения о версии набора требований см. [](office-versions-and-requirement-sets.md#office-requirement-sets-availability)в Office наборов требований, а полные списки наборов требований и сведения об API в каждом из них начинаются с Office наборов требований [к надстройки](/javascript/api/requirement-sets/common/office-add-in-requirement-sets). Справочные темы для большинства Office.js API также указывают набор требований, к который они принадлежат (если таково).
 
 > [!NOTE]
 > Некоторые наборы требований также имеют элементы манифеста, связанные с ними. Сведения о том, когда этот факт относится к разработке надстройки, см. в документе "Указание требований в [элементе VersionOverrides](#specify-requirements-in-a-versionoverrides-element) ".
@@ -107,7 +107,7 @@ ms.locfileid: "64483595"
 Если Office или платформа не поддерживает наборы требований или членов API, указанных в элементе **Requirements**, надстройка не будет работать в этом приложении или платформе и не будет отображаться в моих надстройких. .
 
 > [!NOTE]
-> Элемент **Requirements** необязателен для всех надстройок, за исключением Outlook надстройки. При атрибуте `xsi:type` `OfficeApp` `MailBox`корневого элемента должен быть элемент **Requirements**, который указывает минимальную версию набора требований MailBox, который требуется надстройке. Дополнительные сведения см. [в Outlook наборов требований к API JavaScript](/javascript/api/requirement-sets/outlook-api-requirement-sets).
+> Элемент **Requirements** необязателен для всех надстройок, за исключением Outlook надстройки. При атрибуте `xsi:type` `OfficeApp` `MailBox`корневого элемента должен быть элемент **Requirements**, который указывает минимальную версию набора требований MailBox, который требуется надстройке. Дополнительные сведения см. [в Outlook наборов требований к API JavaScript](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets).
 
 В следующем примере кода показано, как настроить надстройку, которая устанавливается во всех Office приложениях, поддерживаюх следующие:
 
@@ -167,7 +167,7 @@ if (Office.context.requirements.isSetSupported('WordApi', '1.1'))
 ```
 Вот что нужно знать об этом коде:
 
-- Требуется первый параметр. Это строка, которая представляет имя набора требований. Дополнительные сведения о доступных наборах обязательных элементов см. в статье [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/office-add-in-requirement-sets).
+- Требуется первый параметр. Это строка, которая представляет имя набора требований. Дополнительные сведения о доступных наборах обязательных элементов см. в статье [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/common/office-add-in-requirement-sets).
 - Второй параметр необязателен. Это строка`if`, которая указывает минимальную версию набора требований, которую Office приложение должно поддерживать для запуска кода в заявлении (например, "**1.9**"). Если не используется, предполагается версия "1.1".
 
 > [!WARNING]
@@ -199,7 +199,7 @@ else
 > [!NOTE] 
 > Метод `isSetSupported` и наборы требований для этих приложений доступны в последнем Office.js файле CDN. Если вы не используете Office.js из CDN, `isSetSupported` ваша надстройка может создавать исключения, если используется старая версия библиотеки, в которой не разопределен. Дополнительные сведения см. в Office [библиотеке API JavaScript](#use-the-latest-office-javascript-api-library).
 
-Если надстройка зависит от метода, который не входит в набор требований, используйте проверку времени запуска, чтобы определить, поддерживается ли метод приложением Office, как показано в следующем примере кода. Список всех методов, не входящих в набор обязательных элементов, см. в статье [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/office-add-in-requirement-sets#methods-that-arent-part-of-a-requirement-set).
+Если надстройка зависит от метода, который не входит в набор требований, используйте проверку времени запуска, чтобы определить, поддерживается ли метод приложением Office, как показано в следующем примере кода. Список всех методов, не входящих в набор обязательных элементов, см. в статье [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/common/office-add-in-requirement-sets#methods-that-arent-part-of-a-requirement-set).
 
 > [!NOTE]
 > Рекомендуем ограничить использование этого типа проверки в среде выполнения в коде надстройки.
@@ -253,5 +253,5 @@ if (Office.context.document.setSelectedDataAsync)
 ## <a name="see-also"></a>См. также
 
 - [XML-манифест надстройки Office](add-in-manifests.md)
-- [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов для надстроек Office](/javascript/api/requirement-sets/common/office-add-in-requirement-sets)
 - [Word-Add-in-Get-Set-EditOpen-XML ](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML)

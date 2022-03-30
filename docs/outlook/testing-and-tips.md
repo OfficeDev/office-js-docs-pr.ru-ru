@@ -3,12 +3,12 @@ title: Развертывание и установка надстроек Outlo
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
 ms.date: 07/08/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 7d612fcfa8f5bb79cded469e203371a499703ad0
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: b627dbf4b32daee4327cb139db58a56c4a704580
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484428"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496882"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 
@@ -96,7 +96,7 @@ New-App -URL:"http://<fully-qualified URL">
 - [Rackspace](https://www.rackspace.com/email-hosting/exchange-server)
 - [Hostway](https://hostway.com/microsoft-exchange/)
 
-Кроме того, если вы не хотите, чтобы ваши надстройки были доступны для пользователей, подключенных к локальной среде Exchange, вы можете настроить для [набора обязательных элементов](/javascript/api/requirement-sets/outlook-api-requirement-sets#exchange-server-support) в манифесте надстройки версию 1.6 или более позднюю. Такие надстройки не будут проверяться в классическом интерфейсе Outlook в Интернете.
+Кроме того, если вы не хотите, чтобы ваши надстройки были доступны для пользователей, подключенных к локальной среде Exchange, вы можете настроить для [набора обязательных элементов](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#exchange-server-support) в манифесте надстройки версию 1.6 или более позднюю. Такие надстройки не будут проверяться в классическом интерфейсе Outlook в Интернете.
 
 ## <a name="see-also"></a>См. также
 

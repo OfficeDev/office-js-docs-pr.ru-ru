@@ -3,12 +3,12 @@ title: 'Сценарий: реализация единого входа для 
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа и маркера удостоверения Exchange, предоставляемых надстройкой Outlook.
 ms.date: 09/03/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: cc13b13b0ba3469fe1bfd1a02689f39a28c4b0a6
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 2b9c4031a0011d2333582b4a10abe42f6844f763
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484595"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496924"
 ---
 # <a name="scenario-implement-single-sign-on-to-your-service-in-an-outlook-add-in"></a>Сценарий: реализация единого входа для службы в надстройке Outlook
 
@@ -18,8 +18,7 @@ ms.locfileid: "64484595"
 
 
 > [!NOTE]
-> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/identity-api-requirement-sets).
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](/javascript/api/requirement-sets/common/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Инструкции см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 
 ## <a name="why-use-the-sso-access-token"></a>Зачем использовать маркер доступа с единым входом?

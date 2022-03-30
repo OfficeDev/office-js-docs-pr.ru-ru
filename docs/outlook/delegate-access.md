@@ -3,12 +3,12 @@ title: Включить общие папки и сценарии общих п�
 description: Обсуждается настройка поддержки надстройки для общих папок (ака). делегирования доступа) и общих почтовых ящиков.
 ms.date: 10/05/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: e359f4b63aec979d68b0798866fb06bf559a0f67
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 8ff71ad12fc3c0488c8c73040b125a1ae4674d88
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484655"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496931"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включить общие папки и сценарии общих почтовых ящиков в Outlook надстройке
 
@@ -26,7 +26,7 @@ ms.locfileid: "64484655"
 |Веб-браузер:<br>классический Outlook пользовательского интерфейса|Неприменимо|Нет|Нет|Нет|
 
 > [!IMPORTANT]
-> Поддержка этой функции была представлена в [наборе требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8) (подробные сведения см. [в отношении клиентов и платформ](/javascript/api/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)). Однако обратите внимание, что матрица поддержки функции является суперсетью набора требований.
+> Поддержка этой функции была представлена в [наборе требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8) (подробные сведения см. [в отношении клиентов и платформ](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)). Однако обратите внимание, что матрица поддержки функции является суперсетью набора требований.
 
 ## <a name="supported-setups"></a>Поддерживаемые установки
 

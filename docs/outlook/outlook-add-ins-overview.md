@@ -5,12 +5,12 @@ ms.date: 07/16/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: cfda46d5006b8ff351fcd339c601ef3e22613519
-ms.sourcegitcommit: e44a8109d9323aea42ace643e11717fb49f40baa
+ms.openlocfilehash: 1f1d909f655558dd96705cc83ea2996cd21d6c85
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61514140"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496308"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -52,7 +52,7 @@ ms.locfileid: "61514140"
   >
   > - Надстройки активируют сообщения с цифровой подписью в Outlook, связанном с подпиской на Microsoft 365. В Windows эта поддержка представлена в сборке 8711.1000.
   >
-  > - Начиная с Outlook сборки 13229.10000 в Windows, надстройки могут активировать элементы, защищенные с помощью IRM. Дополнительные сведения об этой функции в предварительной версии см. в статье [Активация надстроек для элементов, защищенных службами управления правами на доступ к данным (IRM)](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md#add-in-activation-on-items-protected-by-information-rights-management-irm).
+  > - Начиная с Outlook сборки 13229.10000 в Windows, надстройки могут активировать элементы, защищенные с помощью IRM. Дополнительные сведения об этой функции в предварительной версии см. в статье [Активация надстроек для элементов, защищенных службами управления правами на доступ к данным (IRM)](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview#add-in-activation-on-items-protected-by-information-rights-management-irm).
 
 - Отчет или уведомление о доставке имеет класс сообщения IPM.Report.*, включая отчеты о доставке, о недоставке, а также уведомления о прочтении, о непрочтении и о задержке.
 
@@ -63,19 +63,19 @@ ms.locfileid: "61514140"
 - В [групповом почтовом ящике](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide&preserve-view=true#shared-mailboxes), общем почтовом ящике\*, почтовом ящике другого пользователя\*, [архивном почтовом ящике](/office365/servicedescriptions/exchange-online-archiving-service-description/archive-features#archive-mailbox) или общедоступной папке.
 
   > [!IMPORTANT]
-  > \* Поддержка сценариев делегирования доступа (например, папок, полученных из почтового ящика другого пользователя) была представлена в [наборе требований 1.8](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md). Поддержка общих почтовых ящиков теперь доступна в предварительной версии. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](delegate-access.md).
+  > \* Поддержка сценариев делегирования доступа (например, папок, полученных из почтового ящика другого пользователя) была представлена в [наборе требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8). Поддержка общих почтовых ящиков теперь доступна в предварительной версии. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](delegate-access.md).
 
 - Использование настраиваемой формы.
 
 - Создано с помощью [Simple MAPI](https://support.microsoft.com/topic/a3d3f856-eaf6-b6d8-3617-186c0a1123c5). Simple MAPI используется, если пользователь Office создает или отправляет сообщение электронной почты из приложения Office в Windows, когда Outlook закрыт. Например, пользователь может создать сообщение электронной почты Outlook во время работы в Word, что запускает окно создания сообщения Outlook без запуска основного приложения Outlook. Однако если Outlook уже запущен, когда пользователь создает сообщение электронной почты из Word, это не сценарий Simple MAPI, поэтому надстройки Outlook работают в форме создания при условии, что выполнены другие требования к активации.
 
-В общем случае Outlook может активировать надстройки в формах просмотра для элементов в папке "Отправленные", за исключением надстроек, активируемых на основании совпадений строк для известных сущностей. Дополнительные сведения о причинах этого см. "Поддержка известных сущностей" в статье [Сопоставление строк в элементе Outlook как известных сущностей](match-strings-in-an-item-as-well-known-entities.md).
+В общем случае Outlook может активировать надстройки в форме чтения для элементов в папке "Отправленные", за исключением надстроек, которые активируются на основе совпадений с известными сущностями. Дополнительные сведения о причинах этого см. в разделе "Поддержка известных сущностей" статьи [Сопоставление строк в элементе Outlook как известных сущностей](match-strings-in-an-item-as-well-known-entities.md).
 
 В настоящее время при проектировании и внедрении надстроек для мобильных клиентов следует учитывать и другие факторы. Дополнительные сведения см. в статье [Добавление поддержки мобильных устройств в надстройку Outlook](add-mobile-support.md#compose-mode-and-appointments).
 
 ## <a name="supported-clients"></a>Поддерживаемые клиенты
 
-Надстройки Outlook поддерживают Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook в Интернете для локальной версии Exchange 2013 и более поздних версий, Outlook для iOS, Outlook для Android, Outlook в Интернете и Outlook.com. Не все новые функции поддерживаются сразу всеми [клиентами](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients). Просмотрите статьи и справочные материалы по API для этих функций, чтобы узнать, в каких приложениях они поддерживаются.
+Надстройки Outlook поддерживают Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook в Интернете для локальной версии Exchange 2013 и более поздних версий, Outlook для iOS, Outlook для Android, Outlook в Интернете и Outlook.com. Не все новые функции поддерживаются сразу всеми [клиентами](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients). Просмотрите статьи и справочные материалы по API для этих функций, чтобы узнать, в каких приложениях они поддерживаются.
 
 ## <a name="get-started-building-outlook-add-ins"></a>Знакомство с разработкой надстроек Outlook
 

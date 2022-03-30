@@ -3,12 +3,12 @@ title: Включение единого вход (SSO) в надстройке 
 description: Узнайте об основных шагах по включению единого входа (SSO) в надстройке Office с использованием обычной личной, рабочей или учебной учетной записи Майкрософт.
 ms.date: 01/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 50adb80137cc01db2ee0f36587e1b7a4cc359237
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 517677b01254862f29011a7773e3953fc59f4baa
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483606"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496329"
 ---
 # <a name="enable-single-sign-on-sso-in-an-office-add-in"></a>Включение единого вход (SSO) в надстройке Office
 
@@ -107,7 +107,7 @@ ms.locfileid: "64483606"
 
 ### <a name="include-the-identity-api-requirement-set"></a>Включение набора обязательных элементов API удостоверений
 
-Для использования единого входа надстройке требуется набор обязательных элементов API удостоверений 1.3. Дополнительные сведения см. в разделе [IdentityAPI](/javascript/api/requirement-sets/identity-api-requirement-sets).
+Для использования единого входа надстройке требуется набор обязательных элементов API удостоверений 1.3. Дополнительные сведения см. в разделе [IdentityAPI](/javascript/api/requirement-sets/common/identity-api-requirement-sets).
 
 ### <a name="add-client-side-code"></a>Добавьте код для клиента
 
@@ -248,4 +248,4 @@ $.ajax({
 
 - [Документация по платформе удостоверений Майкрософт](/azure/active-directory/develop/)
 - [Наборы требований](specify-office-hosts-and-api-requirements.md)
-- [IdentityAPI](/javascript/api/requirement-sets/identity-api-requirement-sets)
+- [IdentityAPI](/javascript/api/requirement-sets/common/identity-api-requirement-sets)

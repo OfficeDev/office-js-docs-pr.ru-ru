@@ -8,5 +8,5 @@
 > [!NOTE]
 > Ярлыки клавиатуры работают только на платформах, поддерживаюх следующие наборы требований. Дополнительные информацию о наборах требований и работе с ними см. в Office [приложений и API](../develop/specify-office-hosts-and-api-requirements.md).
 >
-> - [SharedRuntime 1.1](/javascript/api/requirement-sets/shared-runtime-requirement-sets)
-> - Также необходимо, если надстройка позволяет пользователю настраивать ярлыки клавиатуры: [KeyboardShortcuts 1.1](/javascript/api/requirement-sets/keyboard-shortcuts-requirement-sets)
+> - [SharedRuntime 1.1](/javascript/api/requirement-sets/common/shared-runtime-requirement-sets)
+> - Также необходимо, если надстройка позволяет пользователю настраивать ярлыки клавиатуры: [KeyboardShortcuts 1.1](/javascript/api/requirement-sets/common/keyboard-shortcuts-requirement-sets)

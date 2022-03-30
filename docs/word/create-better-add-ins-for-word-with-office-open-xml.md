@@ -3,12 +3,12 @@ title: Создание надстроек Word с помощью Office Open XM
 description: Обзор улучшения надстройки Word с помощью Office XML.
 ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f742c4a295e3f6312a4bcb01effc35d8b650b61
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 8747f4c7f98cdb88a02e4fe55ec2bf09514c9eb3
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484576"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496952"
 ---
 # <a name="create-better-add-ins-for-word-with-office-open-xml"></a>Создание надстроек Word с помощью Office Open XML
 
@@ -16,7 +16,7 @@ ms.locfileid: "64484576"
 
 Если вы строите Office надстроек, которые будут работать в Word, вы уже знаете, что Office API JavaScript (Office.js) предлагает несколько форматов для чтения и записи контента документов. Они называются типами приведения, и к ним относятся обычный текст, таблицы, HTML и Office Open XML.
 
-Итак, что вы можете сделать, если вам нужно добавить в документ форматированный контент, например изображения, форматированные таблицы, диаграммы или просто форматированный текст? Начните с API, доступных через наборы требований [WordApi](/javascript/api/requirement-sets/word-api-requirement-sets) , чтобы узнать, предоставляют ли они необходимые данные. Например, см. фрагмент текста [в формате Insert](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/word/25-paragraph/insert-formatted-text.yaml) в [лаборатории скриптов](https://appsource.microsoft.com/product/office/wa104380862) на Word.
+Итак, что вы можете сделать, если вам нужно добавить в документ форматированный контент, например изображения, форматированные таблицы, диаграммы или просто форматированный текст? Начните с API, доступных через наборы требований [WordApi](/javascript/api/requirement-sets/word/word-api-requirement-sets) , чтобы узнать, предоставляют ли они необходимые данные. Например, см. фрагмент текста [в формате Insert](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/word/25-paragraph/insert-formatted-text.yaml) в [лаборатории скриптов](https://appsource.microsoft.com/product/office/wa104380862) на Word.
 
 Если API еще не доступны, вы можете использовать HTML для вставки некоторых типов богатого контента, например изображений. В зависимости от ситуации у HTML-приведения могут быть недостатки, такие как ограниченные возможности форматирования и расположения контента.
 

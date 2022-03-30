@@ -3,12 +3,12 @@ title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 11/22/2021
 localization_priority: Normal
-ms.openlocfilehash: 98d799f62710b124b8836583d2d30cac7976100d
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 69fbc94c0d0cda700ae3362168cc02a055c0e521
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483879"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496784"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -270,7 +270,7 @@ ms.locfileid: "64483879"
 > Хороший способ ознакомиться с такими возможностями — использование подписки на Microsoft 365. Если у вас еще нет подписки на Microsoft 365, вы можете оформить ее, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 > [!NOTE]
-> API, описанные в этом разделе, требуют набора требований [KeyboardShortcuts 1.1](/javascript/api/requirement-sets/keyboard-shortcuts-requirement-sets) .
+> API, описанные в этом разделе, требуют набора требований [KeyboardShortcuts 1.1](/javascript/api/requirement-sets/common/keyboard-shortcuts-requirement-sets) .
 
 Используйте [метод Office.actions.replaceShortcuts](/javascript/api/office/office.actions#office-office-actions-replaceshortcuts-member) для назначения пользовательских комбинаций клавиатуры пользователя для действий надстройки. Метод принимает параметр типа `{[actionId:string]: string|null}`, `actionId`где s являются подмножество ID действий, которые должны быть определены в расширенном манифесте надстройки JSON. Значения — это предпочтительные сочетания ключей пользователя. Также может `null`быть значение , `actionId` которое удаляет любую настройку для этого и возвращается к комбинации клавиатуры по умолчанию, которая определена в расширенном манифесте надстройки JSON.
 

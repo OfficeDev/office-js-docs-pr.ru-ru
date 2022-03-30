@@ -3,12 +3,12 @@ title: Версии Office и наборы обязательных элемен
 description: Поддерживаемые платформы Office.js с использованием JavaScript API
 ms.date: 07/08/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 62dbac6c5f08596792c29ce5451cdaca077ddcdb
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 956a58433aca10895a1badeb0492a2c7b0883679
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483653"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496819"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -36,18 +36,18 @@ ms.locfileid: "64483653"
 
 Надстройка может использовать API только в наборах обязательных элементов, поддерживаемых версией приложения Office, в которой она работает. Чтобы узнать, какие наборы обязательных элементов доступны для конкретной версии приложения Office, просмотрите следующие статьи:
 
-- [Наборы обязательных элементов API JavaScript для Excel](/javascript/api/requirement-sets/excel-api-requirement-sets) (ExcelApi)
-- [Наборы обязательных элементов API JavaScript для Word](/javascript/api/requirement-sets/word-api-requirement-sets) (WordApi)
-- [Наборы обязательных элементов API JavaScript для OneNote](/javascript/api/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
-- [Наборы обязательных элементов PowerPoint JavaScript API](/javascript/api/requirement-sets/powerpoint-api-requirement-sets) (PowerPointApi)
-- [Общие сведения о наборах обязательных элементов API Outlook](/javascript/api/requirement-sets/outlook-api-requirement-sets) (MailBox)
+- [Наборы обязательных элементов API JavaScript для Excel](/javascript/api/requirement-sets/excel/excel-api-requirement-sets) (ExcelApi)
+- [Наборы обязательных элементов API JavaScript для Word](/javascript/api/requirement-sets/word/word-api-requirement-sets) (WordApi)
+- [Наборы обязательных элементов API JavaScript для OneNote](/javascript/api/requirement-sets/onenote/onenote-api-requirement-sets) (OneNoteApi)
+- [Наборы обязательных элементов PowerPoint JavaScript API](/javascript/api/requirement-sets/powerpoint/powerpoint-api-requirement-sets) (PowerPointApi)
+- [Общие сведения о наборах обязательных элементов API Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets) (MailBox)
 
 Некоторые наборы обязательных элементов содержат API, которые могут использоваться любым приложением Office. Информацию об этих наборах обязательных элементов см. в следующих статьях:
 
-- [Общие наборы обязательных элементов для Office](/javascript/api/requirement-sets/office-add-in-requirement-sets)
-- [Наборы обязательных элементов для команд надстроек](/javascript/api/requirement-sets/add-in-commands-requirement-sets)
-- [Наборы обязательных элементов API диалоговых окон](/javascript/api/requirement-sets/dialog-api-requirement-sets)
-- [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/identity-api-requirement-sets)
+- [Общие наборы обязательных элементов для Office](/javascript/api/requirement-sets/common/office-add-in-requirement-sets)
+- [Наборы обязательных элементов для команд надстроек](/javascript/api/requirement-sets/common/add-in-commands-requirement-sets)
+- [Наборы обязательных элементов API диалоговых окон](/javascript/api/requirement-sets/common/dialog-api-requirement-sets)
+- [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/common/identity-api-requirement-sets)
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других приложений Office (например, Word, Outlook и т. д.). Наборы обязательных элементов для разных приложений Office выпускаются с разной частотой. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 

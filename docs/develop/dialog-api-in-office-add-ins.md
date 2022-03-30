@@ -3,19 +3,19 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 01/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f1972524db31226d3e850deb4f6a73057487fa7
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 03859956fbc005f33212343b83470d4f91ef65ee
+ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483752"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64496833"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
 Вы можете использовать [Office dialog API](/javascript/api/office/office.ui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит инструкции по использованию dialog API в надстройке Office.
 
 > [!NOTE]
-> Сведения о том, где поддерживается API диалогов, см. в наборе требований [к API диалогов](/javascript/api/requirement-sets/dialog-api-requirement-sets). API диалогов в настоящее время поддерживается для Excel, PowerPoint и Word. Outlook поддержка включается в различные&mdash; наборы требований к почтовым ящикам, дополнительные сведения по ссылке API.
+> Сведения о том, где поддерживается API диалогов, см. в наборе требований [к API диалогов](/javascript/api/requirement-sets/common/dialog-api-requirement-sets). API диалогов в настоящее время поддерживается для Excel, PowerPoint и Word. Outlook поддержка включается в различные&mdash; наборы требований к почтовым ящикам, дополнительные сведения по ссылке API.
 
 Основной сценарий для Dialog API - включить аутентификацию с помощью таких ресурсов, как Google, Facebook или Microsoft Graph. Дополнительные сведения см. в статье [Проверка подлинности с помощью Office Dialog API](auth-with-office-dialog-api.md) *после* ознакомления с текущей статьей.
 
@@ -218,7 +218,7 @@ function processMessage(arg) {
 Диалоговое окно или родительское время запуска JavaScript (либо в области задач, либо в пользовательском интерфейсе, в котором размещен файл функций) может перемещаться в стороне от домена надстройки после открытия диалоговое окно. Если что-либо из этих вещей произошло, `messageParent` вызов сбой, если в коде не указан домен родительского времени запуска. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageParent`. Этот объект имеет свойство `targetOrigin` , которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и диалоговое окно.
 
 > [!NOTE]
-> Для `messageParent` отправки меж доменного сообщения требуется набор требований [Диалоговое начало 1.1](/javascript/api/requirement-sets/dialog-origin-requirement-sets). Параметр `DialogMessageOptions` игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его пропуск.
+> Для `messageParent` отправки меж доменного сообщения требуется набор требований [Диалоговое начало 1.1](/javascript/api/requirement-sets/common/dialog-origin-requirement-sets). Параметр `DialogMessageOptions` игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его пропуск.
 
 Ниже приводится пример использования для `messageParent` отправки меж доменного сообщения.
 
@@ -331,17 +331,17 @@ function onRegisterMessageComplete(asyncResult) {
 Так как `messageChild` на хост-странице можно сделать несколько вызовов, `DialogParentMessageReceived` но в диалоговом окне для события есть только один обработок, обработник должен использовать условную логику, чтобы различать различные сообщения. Это можно сделать точно параллельно структуре условного обмена сообщениями, когда диалоговое окно отправляет сообщение на хост-страницу, как описано в условном [сообщении](#conditional-messaging).
 
 > [!NOTE]
-> В некоторых ситуациях `messageChild` API, который входит в набор требований [DialogApi 1.2](/javascript/api/requirement-sets/dialog-api-requirement-sets), может не поддерживаться. Некоторые альтернативные способы передачи сообщений из родительского окна в диалоговое окно описаны в альтернативных способах передачи сообщений в диалоговое окно со [своей хост-страницы](parent-to-dialog.md).
+> В некоторых ситуациях `messageChild` API, который входит в набор требований [DialogApi 1.2](/javascript/api/requirement-sets/common/dialog-api-requirement-sets), может не поддерживаться. Некоторые альтернативные способы передачи сообщений из родительского окна в диалоговое окно описаны в альтернативных способах передачи сообщений в диалоговое окно со [своей хост-страницы](parent-to-dialog.md).
 
 > [!IMPORTANT]
-> Набор [требований DialogApi 1.2](/javascript/api/requirement-sets/dialog-api-requirement-sets) не может быть указан в разделе Требования манифеста надстройки. Вам придется проверять поддержку DialogApi 1.2 `isSetSupported` во время запуска с помощью метода, описанного в проверках времени запуска для поддержки набора [методов и требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). Поддержка требований манифеста находится в стадии разработки.
+> Набор [требований DialogApi 1.2](/javascript/api/requirement-sets/common/dialog-api-requirement-sets) не может быть указан в разделе Требования манифеста надстройки. Вам придется проверять поддержку DialogApi 1.2 `isSetSupported` во время запуска с помощью метода, описанного в проверках времени запуска для поддержки набора [методов и требований](../develop/specify-office-hosts-and-api-requirements.md#runtime-checks-for-method-and-requirement-set-support). Поддержка требований манифеста находится в стадии разработки.
 
 ### <a name="cross-domain-messaging-to-the-dialog-runtime"></a>Меж доменная передача сообщений в диалоговое время работы
 
 Диалоговое окно или родительское время запуска JavaScript (либо в области задач, либо в пользовательском интерфейсе, в котором размещен файл функций) может перемещаться в стороне от домена надстройки после открытия диалоговое окно. Если что-либо из этих вещей произошло, `messageChild` вызов сбой, если в коде не указан домен времени запуска диалогов. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageChild`. Этот объект имеет свойство `targetOrigin` , которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и родительское время запуска. 
 
 > [!NOTE]
-> Для `messageChild` отправки меж доменного сообщения требуется набор требований [Диалоговое начало 1.1](/javascript/api/requirement-sets/dialog-origin-requirement-sets). Параметр `DialogMessageOptions` игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его пропуск.
+> Для `messageChild` отправки меж доменного сообщения требуется набор требований [Диалоговое начало 1.1](/javascript/api/requirement-sets/common/dialog-origin-requirement-sets). Параметр `DialogMessageOptions` игнорируется в старых версиях Office, которые не поддерживают набор требований, поэтому поведение метода не влияет на его пропуск.
 
 Ниже приводится пример использования для `messageChild` отправки меж доменного сообщения.
 
