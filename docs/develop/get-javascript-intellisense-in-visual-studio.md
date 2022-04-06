@@ -1,18 +1,18 @@
 ---
-title: Использование IntelliSense для JavaScript в Visual Studio 2019
-description: Узнайте, как использовать JSDoc для создания IntelliSense для переменных JavaScript, объектов, параметров и значений возврата.
-ms.date: 10/11/2019
+title: Использование IntelliSense для JavaScript в Visual Studio
+description: Узнайте, как использовать JSDoc для создания IntelliSense для переменных JavaScript, объектов, параметров и возвращаемых значений.
+ms.date: 04/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 142f4cf81f83cdc518fb94f65a8e6f67f41a4783
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 4fb18199c53b7b836079754b5fb4561b76a968b1
+ms.sourcegitcommit: 3c5ede9c4f9782947cea07646764f76156504ff9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743492"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64682261"
 ---
-# <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
+# <a name="get-javascript-intellisense-in-visual-studio"></a>Использование IntelliSense для JavaScript в Visual Studio
 
-При применении Visual Studio 2019 для разработки надстроек Office можно использовать JSDoc, чтобы активировать IntelliSense для переменных, объектов, параметров и возвращаемых значений JavaScript. В этой статье предоставлен обзор JSDoc, а также возможности его использования для создания IntellSense в Visual Studio. Дополнительные сведения см. в статьях [IntelliSense для JavaScript](/visualstudio/ide/javascript-intellisense) и [Поддержка JSDoc в JavaScript](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript). 
+При использовании Visual Studio 2019 и более поздних версий для разработки надстроек Office можно использовать JSDoc для включения IntelliSense для переменных JavaScript, объектов, параметров и возвращаемых значений. В этой статье представлен обзор JSDoc и способы его использования для создания IntellSense в Visual Studio. Дополнительные сведения см. в статье о поддержке [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense) и [JSDoc в JavaScript](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript). 
 
 ## <a name="officejs-type-definitions"></a>Определения типов Office.js
 
@@ -49,7 +49,7 @@ ms.locfileid: "63743492"
 var subsetRange;
 ```
 
-![Снимок экрана с выдержкой IntelliSense переменной "subsetRange".](../images/intellisense-vs17-var.png)
+![Снимок экрана: фрагмент IntelliSense для переменной subsetRange.](../images/intellisense-vs17-var.png)
 
 ### <a name="parameter"></a>Параметр
 
@@ -60,7 +60,7 @@ function myFunc(paragraphs){
 }
 ```
 
-![Снимок экрана с выдержкой IntelliSense параметра "paras" (параметр "абзацы" в примере JavaScript).](../images/intellisense-vs17-param.png)
+![Снимок экрана: фрагмент IntelliSense для параметра paras (параметр paragraphs в примере JavaScript).](../images/intellisense-vs17-param.png)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -71,7 +71,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана с выдержкой IntelliSense для возвращаемого значения "myFunc()".](../images/intellisense-vs17-return.png)
+![Снимок экрана: фрагмент intelliSense для возвращаемого значения myFunc().](../images/intellisense-vs17-return.png)
 
 ### <a name="complex-types"></a>Сложные типы
 
@@ -84,7 +84,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана IntelliSense для сложного объявления типа "var myVar;" например.](../images/intellisense-vs17-complex-type.png)
+![Снимок экрана: IntelliSense для объявления сложного типа "var myVar;", например.](../images/intellisense-vs17-complex-type.png)
 
 ## <a name="see-also"></a>См. также
 
