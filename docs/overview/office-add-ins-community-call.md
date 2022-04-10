@@ -1,26 +1,28 @@
 ---
-title: Microsoft Office вызов сообщества надстройки
-description: Ежемесячная Microsoft Office, расписание и ресурсы сообщества надстройок.
-ms.date: 03/28/2022
+title: Microsoft Office вызова сообщества надстроек
+description: Ежемесячная Microsoft Office, расписание и ресурсы для проектов сообщества надстроек.
+ms.date: 04/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 4572c1fd7c3b65a07eb2d655ab94a74c4980a80a
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: 225d3aa87101ba1c168435be7f27fb741e54a7e1
+ms.sourcegitcommit: 87f6a53a4df3966ff0dc1e12903198b2b94e9662
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496847"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64743885"
 ---
-# <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
+# <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызова сообщества надстроек
 
-Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функциях, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по ссылке https://aka.ms/officeaddinscommunitycall.
+Вызов Microsoft Office надстроек — это ежемесячный звонок, где вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании Office надстроек. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
 
-## <a name="agenda-for-april-13th-call"></a>Повестка дня на 13 апреля
+## <a name="agenda-for-april-13th-call"></a>Повестка дня для звонка 13 апреля
 
-Повестка дня на апрель будет опубликована примерно за неделю до звонка.
+- Обновления API ленты
+- PowerPoint API выбора
+- Надстройки на сайте Appointment read on Outlook Mobile
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
-Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
+Пропустили предыдущий звонок сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы узнать больше о обсуждении.
 
 - [9 марта 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-9-2022/ba-p/3255173)
 - [9 февраля 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-february-9-2022/ba-p/3164559)
@@ -35,13 +37,13 @@ ms.locfileid: "64496847"
 - [12 мая 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-may-2021/ba-p/2369804)
 - [14 апреля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-14-2021/ba-p/2318886)
 - [10 марта 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-10-2021/ba-p/2205369)
-- [Архивные вызовы Office надстройки — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
+- [Архивные Office надстроек — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
 
 ## <a name="see-also"></a>См. также
 
-- [Периодические ежемесячные приглашения в календарь вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
-- [Community темы вызовов и вопросов](https://aka.ms/officeaddinsform)
-- [Microsoft 365 youTube-канал разработчика](https://aka.ms/m365devyoutube)
-- [Microsoft 365 youTube-канал сообщества](https://aka.ms/m365pnp/videos )
-- [Microsoft 365 PnP по техническим Community](https://aka.ms/m365pnp/community)
-- [Microsoft 365 блог сообщества тек PnP](https://aka.ms/m365pnp/community/blog)
+- [Приглашение в календарь повторяющихся ежемесячных вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
+- [Community запросы и вопросы по теме звонка](https://aka.ms/officeaddinsform)
+- [Microsoft 365 youTube для разработчиков](https://aka.ms/m365devyoutube)
+- [Microsoft 365 youTube](https://aka.ms/m365pnp/videos )
+- [Microsoft 365 PnP на tech Community](https://aka.ms/m365pnp/community)
+- [Microsoft 365 технического сообщества PnP](https://aka.ms/m365pnp/community/blog)
