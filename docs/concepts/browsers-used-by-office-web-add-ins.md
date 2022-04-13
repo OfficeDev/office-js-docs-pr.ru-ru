@@ -3,70 +3,70 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 10/22/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: a6dd2eceb320b9f88575c80f1f4a17becc06cbe5
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 38eefad27511935289d74a06744d1afc686dc5b7
+ms.sourcegitcommit: c1a41d3c52a1d3bd7ef8bebff257777bcde15e0a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483366"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822404"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
-Office надстройки — это веб-приложения, которые отображаются с помощью iFrames при Office в Интернете. В Office для настольных и мобильных Office надстройки используют встроенный элемент управления браузером (также известный как веб-просмотр). Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и двигатель поставляются браузером, установленным на компьютере пользователя.
+Office надстройки — это веб-приложения, которые отображаются с помощью iFrame при запуске в Office в Интернете. В Office для настольных и мобильных клиентов надстройки Office используют встроенный элемент управления браузером (также называемый веб-представлением). Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и обработчик предоставляются браузером, установленным на компьютере пользователя.
 
 Используемый браузер зависит от указанных ниже факторов.
 
 - Операционная система компьютера.
-- Работает ли надстройка в Office в Интернете, Microsoft 365 или без подписки Office 2013 или более поздней.
+- Работает ли надстройка в Office в Интернете, Microsoft 365 или без подписки Office 2013 или более поздней версии.
 
 > [!IMPORTANT]
-> **Internet Explorer по-прежнему Office надстройки**
+> **Internet Explorer по-прежнему используется в Office надстройки**
 >
-> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не Office надстройки. Некоторые сочетания платформ и Office версий, включая версии с одновековой покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поясняется в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
+> Корпорация Майкрософт завершает поддержку Internet Explorer, но это не Office надстроек. Некоторые сочетания платформ и Office версий, в том числе версии с однофакторной покупкой до Office 2019, будут по-прежнему использовать элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Кроме того, для надстроек, отправленных в [AppSource](/office/dev/store/submit-to-appsource-via-partner-center), по-прежнему требуется поддержка этих сочетаний и, следовательно, Internet Explorer. Меняются *две* вещи:
 >
-> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации платформы и Office настольных версий, которые используют Internet Explorer. 
-> - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете в качестве браузера. Но AppSource по-прежнему проверяет сочетания платформы и Office версий,  использующих Internet Explorer.
+> - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
 |ОС|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
 |:-----|:-----|:-----|:-----|
-|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.<br>(Но обратите внимание, Office в Интернете не откроется в Internet Explorer.<br>Попытка сделать это открывает Office в Интернете edge.) |
-|Mac|любой|Неприменимо|Safari|
-|iOS|любой|Неприменимо|Safari|
+|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.<br>(Обратите внимание, Office в Интернете не будет открываться в Internet Explorer.<br>Попытка сделать это откроется Office в Интернете Edge.) |
+|Mac|любой|Неприменимо|Safari с WKWebView|
+|iOS|любой|Неприменимо|Safari с WKWebView|
 |Android|любой|Неприменимо|Chrome.|
-|Windows 7, 8.1, 10, 11 | подписка Office 2013 Office 2019 г.|Всё равно|Internet Explorer 11|
-|Windows 10, 11 | подписка Office 2021 или более поздней|Да|Microsoft Edge <sup>1 с</sup> WebView2 (Chromium основе)|
+|Windows 7, 8.1, 10, 11 | с 2013 Office 2013 по Office 2019|Всё равно|Internet Explorer 11|
+|Windows 10, 11 | не из подписки Office 2021 или более поздней версии|Да|Microsoft Edge <sup>1 с</sup> WebView2 (Chromium на основе)|
 |Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8.1,<br>Windows 10 ver.&nbsp;<&nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;<&nbsp; 16.0.116292<sup></sup>| Всё равно|Internet Explorer 11|
-|Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.11629AND16.0.13530.204242&nbsp;&nbsp;<sup></sup><&nbsp;| Всё равно|Microsoft Edge <sup>1, 3 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Окно 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| Нет |Microsoft Edge <sup>1, 3 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 8.1<br>Windows 10,<br>Windows 11| Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| <sup>Yes4</sup>|  Microsoft Edge <sup>1 с</sup> WebView2 (Chromium основе) |
+|Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.11629AND16.0.13530.204242&nbsp;&nbsp;<sup></sup><&nbsp;| Всё равно|Microsoft Edge <sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
+|Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Окно 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| Нет |Microsoft Edge <sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
+|Windows 8.1<br>Windows 10,<br>Windows 11| Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| <sup>Да4</sup>|  Microsoft Edge <sup>1 с</sup> WebView2 (Chromium на основе) |
 
-<sup>1</sup> Когда Microsoft Edge используется, Windows рассказчик (иногда называемый "считывателем экрана") `<title>` читает тег на странице, открываемой в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
+<sup>1</sup> При Microsoft Edge экранный диктор Windows (иногда называемый средством чтения с экрана) `<title>` считывает тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
-<sup>2</sup>. [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19) обновления и Office клиентской версии и канала обновления.
+<sup>2. Дополнительные</sup> [сведения см](/officeupdates/update-history-office365-proplus-by-date). на странице журнала [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19) обновлений и способах поиска Office версии клиента и канала обновления.
 
-<sup>3</sup> Если надстройка `<Runtimes>` включает элемент манифеста, она не будет Microsoft Edge с исходным WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](/javascript/api/manifest/runtimes).
+<sup>3</sup>. Если надстройка `<Runtimes>` включает элемент в манифест, она не будет использовать Microsoft Edge с исходным WebView (EdgeHTML). Если выполняются условия Microsoft Edge webView2 (на Chromium webView2), надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](/javascript/api/manifest/runtimes).
 
-<sup>4</sup> В Windows до Windows 11 необходимо установить управление WebView2, чтобы Office его встраить. Он установлен с Microsoft 365 версии 2101 или более поздней версии, а также с Office 2021 или более поздней версией, но он не устанавливается автоматически с Microsoft Edge. Если у вас есть более раная версия Microsoft 365 или разовая покупка Office, используйте инструкции по установке управления в [Microsoft Edge WebView2 / Embed веб-контента ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/). На Microsoft 365 сборки до 16.0.14326.xxxxx необходимо также создать ключ реестраHKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\Win32WebView2и установить **его** `dword:00000001`значение .
+<sup>4</sup> В Windows до Windows 11 необходимо установить элемент управления WebView2, чтобы Office его можно было внедрить. Он устанавливается с Microsoft 365 версии 2101 или более поздней версии и с однофакторной покупкой Office 2021 или более поздней версии, но не устанавливается автоматически с Microsoft Edge. Если у вас есть более раннюю версию Microsoft 365 или Office, следуйте инструкциям по установке элемента управления на веб-сайте [Microsoft Edge WebView2 / Внедрение веб-содержимого... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/). В Microsoft 365 сборках до версии 16.0.14326.xxxxx **** `dword:00000001`необходимо также создать раздел реестраHKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\Win32WebView2и задать его значение .
 
 > [!IMPORTANT]
-> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей надстройки есть платформы, которые используют Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней модели есть два варианта.
+> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей надстройки есть платформы, использующие Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней версии у вас есть два варианта.
 >
-> - Напишите код в ECMAScript 2015 (также называемый ES6) или позже JavaScript или в TypeScript, а затем составить код в ES5 JavaScript с помощью компиляторов, таких как [babel](https://babeljs.io/) или [tsc](https://www.typescriptlang.org/index.html).
-> - Напишите в ECMAScript 2015 или более поздний JavaScript, а также [](https://en.wikipedia.org/wiki/Polyfill_(programming)) загрузите библиотеку полифильмов, например [core-js](https://github.com/zloirock/core-js), которая позволяет IE запускать код.
+> - Напишите код в ECMAScript 2015 (также называемом ES6) или более поздней версии JavaScript или в TypeScript, а затем скомпилируете код в ES5 JavaScript с помощью компилятора, такого как [pythonel](https://babeljs.io/) или [tsc](https://www.typescriptlang.org/index.html).
+> - Написание в ECMAScript 2015 или более поздней версии JavaScript, [](https://en.wikipedia.org/wiki/Polyfill_(programming)) но также загрузка библиотеки полизаполнения, например [core-js](https://github.com/zloirock/core-js), которая позволяет IE выполнять код.
 >
-> Дополнительные сведения об этих параметрах см. в [меню Support Internet Explorer 11](../develop/support-ie-11.md).
+> Дополнительные сведения об этих параметрах см. в [разделе "Поддержка Internet Explorer 11"](../develop/support-ie-11.md).
 >
-> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение. Дополнительные дополнительные информации см. в добавлении Определение времени запуска надстройки в [Internet Explorer](../develop/support-ie-11.md#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer).
+> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение. Дополнительные сведения см. в статье "Определение во время выполнения", если надстройка [запущена в Internet Explorer](../develop/support-ie-11.md#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer).
 
-## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение Microsoft Edge проблем
+## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение неполадок Microsoft Edge проблем
 
-### <a name="service-workers-are-not-working"></a>Работники служб не работают
+### <a name="service-workers-are-not-working"></a>Рабочие роли службы не работают
 
-Office надстройки не поддерживают сотрудников службы при Microsoft Edge WebView[, EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML). Они поддерживаются с помощью [Chromium Edge WebView2](/microsoft-edge/hosting/webview2).
+Office надстройки не поддерживают рабочие роли служб при использовании исходного Microsoft Edge WebView, [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML). Они поддерживаются в Chromium [Edge WebView2](/microsoft-edge/hosting/webview2).
 
 ### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
 
@@ -80,9 +80,9 @@ Office надстройки не поддерживают сотрудников
 
 Одной из известных причин является требование Microsoft Edge, чтобы для localhost предоставлялось исключение замыкания на себя. Следуйте инструкциям из статьи [Не удается открыть надстройку из localhost](/office/troubleshoot/error-messages/cannot-open-add-in-from-localhost).
 
-### <a name="get-errors-trying-to-download-a-pdf-file"></a>Получить ошибки при попытке скачивания PDF-файла
+### <a name="get-errors-trying-to-download-a-pdf-file"></a>Получение ошибок при попытке скачать PDF-файл
 
-Непосредственное скачивание blobs в формате PDF-файлов в надстройке не поддерживается при браузере Edge. Обходным решением является создание простого веб-приложения, которое скачивает blobs в формате PDF-файлов. В надстройки позвоните методу `Office.context.ui.openBrowserWindow(url)` и передайте URL-адрес веб-приложения. Это откроет веб-приложение в окне браузера за пределами Office.
+Непосредственное скачивание больших двоичных объектов в виде PDF-файлов в надстройке не поддерживается, если браузером является Edge. Решением является создание простого веб-приложения, которое скачивает большие двоичные объекты в виде PDF-файлов. В надстройке вызовите метод `Office.context.ui.openBrowserWindow(url)` и передайте URL-адрес веб-приложения. Откроется веб-приложение в окне браузера за пределами Office.
 
 ## <a name="see-also"></a>См. также
 
