@@ -866,6 +866,8 @@ items:
       - name: Открыть в Excel
         href: excel/pnp-open-in-excel.md
         displayName: Excel
+      - name: Копирование фрагмента кода Script Lab в Yo Office
+        href: overview/create-an-office-add-in-from-script-lab.md
   - name: Ресурсы
     items:
       - name: Глоссарий

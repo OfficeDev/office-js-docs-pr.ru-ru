@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: Разработайте надстройку Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 02/26/2022
+ms.date: 04/13/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 5ca9ea0fdc600d6044cf3a5ef405dd0f3a98e2b3
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: d0308468ace3612a69c3059c730fd56e8f61a39f
+ms.sourcegitcommit: 5ef2c3ed9eb92b56e36c6de77372d3043ad5b021
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746418"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64863289"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -541,7 +541,7 @@ ms.locfileid: "63746418"
     <Label resid="ProtectionButtonLabel" />
     ```
 
-1. Элемент `SuperTip` определяет подсказку для кнопки. Заголовок этой подсказки должен совпадать с названием кнопки, поэтому мы используем тот же ИД ресурса — "ProtectionButtonLabel". Описание подсказки будет следующим: "Click to turn protection of the worksheet on and off" (Нажмите для включения или выключения защиты листа). У `resid` должно быть значение "ProtectionButtonToolTip". Поэтому после завершения элемент `SuperTip` должен выглядеть следующим образом:
+1. Элемент `SuperTip` определяет подсказку для кнопки. Заголовок этой подсказки должен совпадать с названием кнопки, поэтому мы используем тот же ИД ресурса — "ProtectionButtonLabel". Описание подсказки будет следующим: "Click to turn protection of the worksheet on and off" (Нажмите для включения или выключения защиты листа). У `resid` должно быть значение "ProtectionButtonToolTip". Поэтому после завершения элемент `SuperTip` должен выглядеть следующим образом.
 
     ```xml
     <Supertip>
@@ -717,7 +717,11 @@ ms.locfileid: "63746418"
       >  - `~/Library/Containers/com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/`
       >  - `~/Library/Containers/com.microsoft.Office365ServiceV2/Data/Library/Caches/com.microsoft.Office365ServiceV2/`
 
-1. Если локальный веб-сервер уже запущен, остановите его, закрыв окно команды узла.
+1. Если локальный веб-сервер уже запущен, остановите его, введя следующую команду в командной строке. Это должно закрыть командное окно узла.
+
+    ```command&nbsp;line
+    npm stop
+    ```
 
 1. Так как файл манифеста был обновлен, требуется повторно загрузить неопубликованную надстройку, используя обновленный файл манифеста. Запустите локальный веб-сервер и загрузите неопубликованную надстройку:
 
@@ -884,7 +888,11 @@ ms.locfileid: "63746418"
     ],
     ```
 
-1. Если локальный веб-сервер запущен, остановите его, закрыв окно команды узла.
+1. Если локальный веб-сервер запущен, остановите его, введя следующую команду в командной строке. Это должно закрыть командное окно узла.
+
+    ```command&nbsp;line
+    npm stop
+    ```
 
 1. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
