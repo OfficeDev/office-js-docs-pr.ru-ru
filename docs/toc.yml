@@ -656,8 +656,6 @@ items:
                 href: outlook/add-mobile-support.md
           - name: Требования к надстройкам
             href: outlook/add-in-requirements.md
-          - name: API надстроек
-            href: outlook/apis.md
           - name: Вызов REST API Outlook
             href: outlook/use-rest-api.md
           - name: Вызов веб-служб Exchange
