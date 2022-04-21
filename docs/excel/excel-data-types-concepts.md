@@ -1,17 +1,17 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 02/15/2022
+ms.date: 04/19/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: b0827509c4592958a9529af20e3a76da4a4008be
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: eb1d459a75ef0268cc7ffa68153613aa975e5fe6
+ms.sourcegitcommit: 9795f671cacaa0a9b03431ecdfff996f690e30ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743355"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64963472"
 ---
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
@@ -29,7 +29,24 @@ ms.locfileid: "63743355"
 
 ## <a name="core-concepts"></a>Основные понятия
 
-Используйте свойство [`Range.valuesAsJson`](/javascript/api/excel/excel.range#excel-excel-range-valuesasjson-member) для работы со значениями типов данных. Это свойство аналогично свойству [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member), но `Range.values` возвращает только четыре основных типа: значения строки, числа, логического типа или ошибки. Свойство `Range.valuesAsJson` может возвращать расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+Используйте свойство [`Range.valuesAsJson`](/javascript/api/excel/excel.range#excel-excel-range-valuesasjson-member) для работы со значениями типов данных. Это свойство аналогично свойству [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member), но `Range.values` возвращает только четыре основных типа: значения строки, числа, логического типа или ошибки. Свойство `Range.valuesAsJson` возвращает расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+
+Свойство `valuesAsJson` возвращает псевдоним типа [CellValue](/javascript/api/excel/excel.cellvalue), который является [объединением](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) следующих типов данных.
+
+- [ArrayCellValue](/javascript/api/excel/excel.arraycellvalue)
+- [BooleanCellValue](/javascript/api/excel/excel.booleancellvalue)
+- [DoubleCellValue](/javascript/api/excel/excel.doublecellvalue)
+- [EntityCellValue](/javascript/api/excel/excel.entitycellvalue)
+- [EmptyCellValue](/javascript/api/excel/excel.emptycellvalue)
+- [ErrorCellValue](/javascript/api/excel/excel.errorcellvalue)
+- [FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue)
+- [LinkedEntityCellValue](/javascript/api/excel/excel.linkedentitycellvalue)
+- [ReferenceCellValue](/javascript/api/excel/excel.referencecellvalue)
+- [StringCellValue](/javascript/api/excel/excel.stringcellvalue)
+- [ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue)
+- [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue)
+
+Объект [CellValueExtraProperties](/javascript/api/excel/excel.cellvalueextraproperties) является [пересечением](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) с остальными типами `*CellValue`. Это не тип данных. Свойства объекта `CellValueExtraProperties` используются со всеми типами данных для указания сведений, связанных с перезаписью значений ячеек.
 
 ### <a name="json-schema"></a>Схема JSON
 
