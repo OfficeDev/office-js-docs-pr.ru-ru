@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
-description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
-ms.date: 02/17/2022
+description: Примеры кода, в которых показано, как выполнять общие задачи с листами с помощью Excel API JavaScript.
+ms.date: 04/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 565a186220fb9b9a33d97ad73954fe405658cf97
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 932666d178da827b314339bfc05c12b5553bdaa7
+ms.sourcegitcommit: d7e5c243ad65f81d479b4fead283003fc494074e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743395"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65076686"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -295,17 +295,17 @@ function onWorksheetChanged(eventArgs) {
 
 ## <a name="detect-formula-changes"></a>Обнаружение изменений формулы
 
-Надстройка может отслеживать изменения формул в таблице. Это полезно, если таблица подключена к внешней базе данных. Если формула изменяется в таблице, событие в этом сценарии вызывает соответствующие обновления во внешней базе данных.
+Надстройка может отслеживать изменения формул на листе. Это полезно, если лист подключен к внешней базе данных. При изменении формулы на листе событие в этом сценарии активирует соответствующие обновления во внешней базе данных.
 
-Чтобы обнаружить изменения формул, [зарегистрируйте](excel-add-ins-events.md#register-an-event-handler) обработчителя событий для [события onFormulaChanged](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onformulachanged-member) для таблицы. Обработчики событий для `onFormulaChanged` события получают объект [WorksheetFormulaChangedEventArgs](/javascript/api/excel/excel.worksheetformulachangedeventargs) при пожаре события.
+Чтобы обнаружить изменения в формулах, [зарегистрируйте обработчик](excel-add-ins-events.md#register-an-event-handler) событий [для события onFormulaChanged](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onformulachanged-member) листа. Обработчики `onFormulaChanged` событий для события получают объект [WorksheetFormulaChangedEventArgs](/javascript/api/excel/excel.worksheetformulachangedeventargs) при срабатывании события.
 
 > [!IMPORTANT]
-> Событие `onFormulaChanged` определяет, когда изменяется сама формула, а не значение данных, которое приводит к вычислению формулы.
+> Это `onFormulaChanged` событие определяет, когда изменяется сама формула, а не значение данных, полученное в результате вычисления формулы.
 
-В следующем `onFormulaChanged` примере кода показано, как зарегистрировать обработник событий, `WorksheetFormulaChangedEventArgs` использовать объект для получения массива [formulaDetails](/javascript/api/excel/excel.worksheetformulachangedeventargs#excel-excel-worksheetformulachangedeventargs-formuladetails-member) измененной формулы, а затем распечатать сведения об измененной формуле с свойствами [FormulaChangedEventDetail](/javascript/api/excel/excel.formulachangedeventdetail) .
+В следующем `onFormulaChanged` примере кода показано, как зарегистрировать обработчик событий, `WorksheetFormulaChangedEventArgs` использовать объект для получения массива [formulaDetails](/javascript/api/excel/excel.worksheetformulachangedeventargs#excel-excel-worksheetformulachangedeventargs-formuladetails-member) измененной формулы, а затем вывести сведения об измененной формуле с помощью свойств [FormulaChangedEventDetail](/javascript/api/excel/excel.formulachangedeventdetail) .
 
 > [!NOTE]
-> Этот пример кода работает только при смене одной формулы.
+> Этот пример кода работает только при изменении одной формулы.
 
 ```js
 async function run() {
@@ -349,13 +349,13 @@ async function formulaChangeHandler(event) {
 
 На приведенных ниже рисунках показаны диапазоны, возвращенные свойством `address` для событий сортировки. Вот образец данных до сортировки:
 
-![Таблица данных в Excel перед сортировкой.](../images/excel-sort-event-before.png)
+![Данные таблицы в Excel перед сортировкой.](../images/excel-sort-event-before.png)
 
-Если в "**Q1**" (значения в "**B**" выполняется сортировка сверху вниз), возвращаются следующие выделенные строки `WorksheetRowSortedEventArgs.address`.
+Если сортировка "сверху вниз" выполняется по "**Q1**" (значения в "**B**"), следующие выделенные строки возвращаются `WorksheetRowSortedEventArgs.address`.
 
 ![Данные из таблицы в Excel после сортировки сверху вниз. Выделены перемещенные строки.](../images/excel-sort-event-after-row.png)
 
-Если в исходных данных выполняется сортировка слева направо на "**Quinces**" (значения в "**4**"), `WorksheetColumnsSortedEventArgs.address`возвращаются следующие столбцы.
+Если сортировка слева направо выполняется для "**Quinces**" (значения в "**4**") исходных данных, следующие выделенные столбцы возвращаются `WorksheetColumnsSortedEventArgs.address`.
 
 ![Данные из таблицы в Excel после сортировки слева направо. Выделены перемещенные столбцы.](../images/excel-sort-event-after-column.png)
 
@@ -387,31 +387,33 @@ await Excel.run(async (context) => {
 
 ## <a name="find-all-cells-with-matching-text"></a>Поиск всех ячеек с соответствующим текстом
 
-У объекта `Worksheet` есть метод `find` для поиска указанной строки в листе. Он возвращает объект `RangeAreas`, являющийся коллекцией объектов `Range`, которые можно отредактировать все сразу. Приведенный ниже пример кода находит все ячейки со значениями, соответствующими строке **Complete** (Завершено), и окрашивает их зеленым цветом. Обратите внимание, что метод `findAll` выдаст ошибку `ItemNotFound`, если указанной строки не существует в листе. Если ожидается, что указанная строка может отсутствовать в листе, используйте вместо этого метод [findAllOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), чтобы ваш код корректно обработал этот сценарий.
+Объект `Worksheet` имеет метод для [`findAll`](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-findall-member(1)) поиска указанной строки на листе. Он возвращает объект `RangeAreas`, являющийся коллекцией объектов `Range`, которые можно отредактировать все сразу.
+
+Приведенный ниже пример кода находит все ячейки со значениями, соответствующими строке **Complete** (Завершено), и окрашивает их зеленым цветом. Обратите внимание `findAll` , что возникает ошибка `ItemNotFound` , если указанная строка не существует на листе. Если вы не уверены, существует ли указанная строка на листе, используйте метод [findAllOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties) для корректной обработки этого сценария.
 
 ```js
 await Excel.run(async (context) => {
     let sheet = context.workbook.worksheets.getItem("Sample");
     let foundRanges = sheet.findAll("Complete", {
-        completeMatch: true, // findAll will match the whole cell value
-        matchCase: false // findAll will not match case
+        completeMatch: true, /* Match the whole cell value, not any part of the text. */
+        matchCase: false /* Make the search case-insensitive. */
     });
 
     await context.sync();
-    foundRanges.format.fill.color = "green"
+    foundRanges.format.fill.color = "green";
 });
 ```
 
 > [!NOTE]
 > В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
 >
-> - Примеры получения `Range` диапазона в пределах таблицы с помощью объекта см. в примере [Get a range using the Excel JavaScript API](excel-add-ins-ranges-get.md).
+> - Примеры, в которых `Range` показано, как получить диапазон на листе с помощью объекта, см. в статье "Получение диапазона с помощью Excel [JavaScript"](excel-add-ins-ranges-get.md).
 > - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
 > - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
 ## <a name="filter-data"></a>Фильтрация данных
 
-Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе. Это создается с `Worksheet.autoFilter.apply`помощью следующих параметров.
+Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе. Он создается с `Worksheet.autoFilter.apply`использованием следующих параметров.
 
 - `range`: диапазон, к которому применяется фильтр, указанный в виде объекта `Range` или строки.
 - `columnIndex`: отсчитываемый от нуля индекс столбца, по которому оценивается условие фильтра.
@@ -443,7 +445,7 @@ await Excel.run(async (context) => {
 });
 ```
 
-В следующем примере кода `clearColumnCriteria` показано, как использовать метод для очистки автофильтра только из одного столбца, оставив фильтр активным в других столбцах.
+В следующем примере кода показано `clearColumnCriteria` , как использовать метод для очистки автоматической фильтрации только из одного столбца, оставив фильтр активным для других столбцов.
 
 ```js
 // This method clears the AutoFilter setting from one column.
@@ -493,11 +495,11 @@ await Excel.run(async (context) => {
 
 В статье [Защита листа](https://support.microsoft.com/office/3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.
 
-### <a name="detect-changes-to-the-worksheet-protection-state"></a>Обнаружение изменений состояния защиты таблицы
+### <a name="detect-changes-to-the-worksheet-protection-state"></a>Обнаружение изменений в состоянии защиты листа
 
-Состояние защиты таблицы можно изменить с помощью надстройки или Excel пользовательского интерфейса. Чтобы обнаружить изменения в состоянии защиты, [зарегистрируйте обработник](excel-add-ins-events.md#register-an-event-handler) событий для [`onProtectionChanged`](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onprotectionchanged-member) события таблицы. Обработчики событий для `onProtectionChanged` события получают объект [`WorksheetProtectionChangedEventArgs`](/javascript/api/excel/excel.worksheetprotectionchangedeventargs) при пожаре события.
+Состояние защиты листа можно изменить с помощью надстройки или Excel пользовательского интерфейса. Чтобы обнаружить изменения состояния защиты, [зарегистрируйте обработчик](excel-add-ins-events.md#register-an-event-handler) [`onProtectionChanged`](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onprotectionchanged-member) событий для события листа. Обработчики событий для `onProtectionChanged` события получают объект [`WorksheetProtectionChangedEventArgs`](/javascript/api/excel/excel.worksheetprotectionchangedeventargs) при срабатывании события.
 
-В следующем примере кода `onProtectionChanged` `WorksheetProtectionChangedEventArgs` `isProtected`показано, как зарегистрировать обработник событий и использовать объект для получения свойств `worksheetId``source` и свойств события.
+В следующем примере кода показано `onProtectionChanged` `worksheetId``WorksheetProtectionChangedEventArgs` `isProtected``source`, как зарегистрировать обработчик событий и использовать объект для извлечения свойств события.
 
 ```js
 // This method registers an event handler for the onProtectionChanged event of a worksheet.
