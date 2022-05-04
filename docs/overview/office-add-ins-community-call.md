@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office вызова сообщества надстроек
 description: Ежемесячная Microsoft Office, расписание и ресурсы для проектов сообщества надстроек.
-ms.date: 04/14/2022
+ms.date: 05/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b96854c2d341b228bd2f70fe8f2010e0dbc5de9
-ms.sourcegitcommit: 345f950b4722903dda77af81ef7d700e6ea4bc83
+ms.openlocfilehash: 0912acca84090b8b73b6209b98a715c0124fc254
+ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64884330"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187310"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызова сообщества надстроек
 
@@ -22,6 +22,7 @@ ms.locfileid: "64884330"
 
 Пропустили предыдущий звонок сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы узнать больше о обсуждении.
 
+- [13 апреля 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-13-2022/ba-p/3288498)
 - [9 марта 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-9-2022/ba-p/3255173)
 - [9 февраля 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-february-9-2022/ba-p/3164559)
 - [12 января 2022 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-january-12-2022/ba-p/3061097)

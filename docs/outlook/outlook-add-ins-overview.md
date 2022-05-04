@@ -1,16 +1,16 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 07/16/2021
+ms.date: 04/28/2022
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 1f1d909f655558dd96705cc83ea2996cd21d6c85
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: ead0787a84b51c890e7951bdaa52bd3e51407916
+ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496308"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65187338"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -63,7 +63,7 @@ ms.locfileid: "64496308"
 - В [групповом почтовом ящике](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide&preserve-view=true#shared-mailboxes), общем почтовом ящике\*, почтовом ящике другого пользователя\*, [архивном почтовом ящике](/office365/servicedescriptions/exchange-online-archiving-service-description/archive-features#archive-mailbox) или общедоступной папке.
 
   > [!IMPORTANT]
-  > \* Поддержка сценариев делегирования доступа (например, папок, полученных из почтового ящика другого пользователя) была представлена в [наборе требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8). Поддержка общих почтовых ящиков теперь доступна в предварительной версии. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](delegate-access.md).
+  > \* Поддержка сценариев делегирования доступа (например, папок, полученных из почтового ящика другого пользователя) была представлена в [наборе требований 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8). Поддержка общих почтовых ящиков теперь доступна в предварительной версии в Outlook для Windows и Mac. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](delegate-access.md).
 
 - Использование настраиваемой формы.
 
