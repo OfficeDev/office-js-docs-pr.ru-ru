@@ -4,9 +4,9 @@
 
 В этой статье предполагается, что вы создаете надстройку области задач для PowerPoint или Word с помощью текстового редактора. Чтобы создать надстройку области задач, необходимо создать следующие файлы.
 
-- В общей сетевой папке или на веб-сервере нужны следующие файлы.
+- В общей сетевой папке или на веб-сервере вам потребуются следующие файлы.
 
-  - HTML-файл (GetDoc_App.html), содержащий пользовательский интерфейс, а также ссылки на файлы JavaScript (в том числе office.js и файлы .js приложений) и каскадный лист стилей (CSS).
+  - HTML-файл (GetDoc_App.html), содержащий пользовательский интерфейс, а также ссылки на файлы JavaScript (включая office.js и файлы .js приложения) и CSS-файлы.
 
   - Файл JavaScript (GetDoc_App.js), содержащий алгоритм надстройки.
 
@@ -14,11 +14,11 @@
 
 - Файл XML-манифеста (GetDoc_App.xml) для надстройки, доступный в общей сетевой папке или каталоге надстроек. Файл манифеста должен указывать на расположение HTML-файла, упомянутого ранее.
 
-Вы также можете создать надстройки для PowerPoint с помощью [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio) или [генератора Yeoman для надстройок Office](../quickstarts/powerpoint-quickstart.md?tabs=yeomangenerator) или для Word с помощью [Visual Studio](../quickstarts/word-quickstart.md?tabs=visualstudio) или [генератора Yeoman для Office](../quickstarts/word-quickstart.md?tabs=yeomangenerator) надстройки.
+Вы также можете создать надстройку для PowerPoint с помощью [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio) или [генератора Yeoman для надстроек Office](../quickstarts/powerpoint-quickstart.md?tabs=yeomangenerator) или Word с помощью [генератора Visual Studio](../quickstarts/word-quickstart.md?tabs=visualstudio) или [Yeoman](../quickstarts/word-quickstart.md?tabs=yeomangenerator) для надстроек Office.
 
 ### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>Основные понятия, позволяющие создавать надстройки области задач
 
-Прежде чем приступать к разработке этой надстройки для PowerPoint или Word, ознакомьтесь с созданием Надстройки Office и работой с HTTP-запросами. В этой статье не рассмотрен способ расшифровки текста из HTTP-запросов на веб-сервере, зашифрованного с помощью Base64.
+Прежде чем приступать к разработке этой надстройки для PowerPoint или Word, ознакомьтесь с созданием Надстройки Office и работой с HTTP-запросами. В этой статье не рассматривается декодирование текста в кодировке Base64 из HTTP-запроса на веб-сервере.
 
 ## <a name="create-the-manifest-for-the-add-in"></a>Создание манифеста надстройки
 
@@ -122,7 +122,7 @@
 
 В коде надстройки обработчик события [Office.initialize](/javascript/api/office) добавляет обработчик события нажатия кнопки **Submit** (Отправить), расположенной на форме, и информирует пользователя о том, что надстройка готова.
 
-В следующем примере кода показан обработщик `Office.initialize` событий для события вместе с функцией помощника для `updateStatus`записи в div состояния.
+В следующем примере кода показан `Office.initialize` обработчик события вместе с вспомогательной функцией для `updateStatus`записи в раздел состояния.
 
 ```js
 // The initialize function is required for all add-ins.
@@ -148,13 +148,13 @@ function updateStatus(message) {
 }
 ```
 
-При выборе кнопки **Отправка** в пользовательском `sendFile` интерфейсе надстройка вызывает функцию, которая содержит вызов метода [Document.getFileAsync](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)) . Метод `getFileAsync` использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_.
+При нажатии **кнопки "** `sendFile` Отправить" в пользовательском интерфейсе надстройка вызывает функцию, содержащую вызов метода [Document.getFileAsync](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)) . Этот `getFileAsync` метод использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_.
 
-Параметр _fileType_ ожидает одну из трех констант из переумерия [FileType](/javascript/api/office/office.filetype): `Office.FileType.Compressed` ("сжатый **"),Office.FileType.PDF** ("pdf") **или Office. FileType.Text** ("текст"). Текущая поддержка типа файлов для каждой платформы указана в статье [Document.getFileType](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)) . При сжатии для параметра _fileType_ `getFileAsync` метод возвращает документ в виде файла презентации PowerPoint 2013 г. (.pptx) или файла документов *Word 2013 (*.docx) путем создания временной копии файла на локальном компьютере.
+Параметр _fileType_ ожидает одну из трех констант из перечисления [FileType](/javascript/api/office/office.filetype): `Office.FileType.Compressed` ("compressed"), **Office.FileType.PDF** ("pdf") **или Office. FileType.Text** ("text"). Текущая поддержка типов файлов для каждой платформы указана в примечаниях [Document.getFileType](/javascript/api/office/office.document#office-office-document-getfileasync-member(1)) . При передаче сжатого для параметра _fileType_ `getFileAsync` метод возвращает документ в виде файла презентации PowerPoint 2013 (*.pptx) или файла документа Word 2013 (*.docx), создав временную копию файла на локальном компьютере.
 
-Метод `getFileAsync` возвращает ссылку на файл в качестве [объекта File](/javascript/api/office/office.file) . Объект `File` предоставляет четыре члена: свойство размера, [](/javascript/api/office/office.file#office-office-file-size-member) [свойство sliceCount](/javascript/api/office/office.file#office-office-file-slicecount-member), [метод getSliceAsync](/javascript/api/office/office.file#office-office-file-getsliceasync-member(1)) и метод [closeAsync](/javascript/api/office/office.file#office-office-file-closeasync-member(1)). Свойство `size` возвращает количество bytes в файле. Возвращает `sliceCount` количество объектов [Slice](/javascript/api/office/office.slice) (рассмотренных в этой статье) в файле.
+Метод `getFileAsync` возвращает ссылку на файл в виде объекта [File](/javascript/api/office/office.file) . Объект `File` предоставляет четыре члена: свойство [size](/javascript/api/office/office.file#office-office-file-size-member) , [свойство sliceCount](/javascript/api/office/office.file#office-office-file-slicecount-member) , [метод getSliceAsync](/javascript/api/office/office.file#office-office-file-getsliceasync-member(1)) и [метод closeAsync](/javascript/api/office/office.file#office-office-file-closeasync-member(1)) . Свойство `size` возвращает количество байтов в файле. Возвращает `sliceCount` количество объектов [Slice](/javascript/api/office/office.slice) (рассмотренных далее в этой статье) в файле.
 
-Используйте следующий код, чтобы получить PowerPoint или Word `File` `Document.getFileAsync` в качестве объекта с помощью метода, а затем делает вызов локально определенной функции`getSlice`. Обратите внимание `File` , что объект, `getSlice` переменная счетчика и общее количество срезов в файле передаются в вызове на анонимный объект.
+Используйте следующий код, чтобы получить PowerPoint или Word `File` `Document.getFileAsync` в качестве объекта с помощью метода, а затем выполняет вызов локально определенной функции`getSlice`. Обратите внимание `File` , что объект, переменная `getSlice` счетчика и общее количество срезов в файле передаются в вызове анонимного объекта.
 
 ```js
 // Get all of the content from a PowerPoint or Word document in 100-KB chunks of text.
@@ -183,10 +183,10 @@ function sendFile() {
 }
 ```
 
-Локализованная функция `getSlice` делает вызов методу `File.getSliceAsync` для получения среза из `File` объекта. Метод `getSliceAsync` возвращает объект из `Slice` коллекции срезов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript для Office, `getSliceAsync` метод также выполняет функцию вызова в качестве параметра для обработки результатов вызова метода.
-ion `getSlice` делает вызов **методу File.getSliceAsync** для получения среза из **объекта File** . Метод **getSliceAsync** возвращает объект **Slice** из коллекции фрагментов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции Office API JavaScript, метод **getSliceAsync** также выполняет функцию вызова в качестве параметра для обработки результатов вызова метода.
+Локальная функция `getSlice` вызывает метод `File.getSliceAsync` для получения среза из `File` объекта. Метод `getSliceAsync` возвращает объект из `Slice` коллекции срезов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript для Office, `getSliceAsync` метод также принимает функцию обратного вызова в качестве параметра для обработки результатов вызова метода.
+ion `getSlice` вызывает метод **File.getSliceAsync** для получения среза из **объекта File** . Метод **getSliceAsync** возвращает объект **Slice** из коллекции фрагментов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript Office, метод **getSliceAsync** также принимает функцию обратного вызова в качестве параметра для обработки результатов вызова метода.
 
-Объект `Slice` предоставляет доступ к данным, содержамся в файле. Если иное не указано в _параметре параметра_ `getFileAsync` параметра метода, `Slice` размер объекта составляет 4 МБ. Объект `Slice` предоставляет три свойства: [размер](/javascript/api/office/office.slice#office-office-slice-size-member), [данные](/javascript/api/office/office.slice#office-office-slice-data-member) и [индекс](/javascript/api/office/office.slice#office-office-slice-index-member). Свойство `size` получает размер среза в bytes. Свойство `index` получает набор, который представляет положение среза в коллекции срезов.
+Объект `Slice` предоставляет доступ к данным, содержащимся в файле. Если в параметре  `getFileAsync` параметров метода не указано иное, `Slice` размер объекта — 4 МБ. Объект `Slice` предоставляет три свойства: [размер](/javascript/api/office/office.slice#office-office-slice-size-member), [данные](/javascript/api/office/office.slice#office-office-slice-data-member) и [индекс](/javascript/api/office/office.slice#office-office-slice-index-member). Свойство `size` получает размер среза в байтах. Свойство `index` получает целое число, представляющее позицию среза в коллекции срезов.
 
 ```js
 // Get a slice from the file and then call sendSlice.
@@ -203,7 +203,7 @@ function getSlice(state) {
 }
 ```
 
-Свойство `Slice.data` возвращает необработанные данные файла в виде массива byte. Если данные имеют текстовый формат (то есть XML или обычного текста), фрагмент содержит необработанный текст. Если вы передаете **Office. FileType.Compressed** для _параметра fileType_ `Document.getFileAsync`, срез содержит двоичные данные файла в качестве массива byte. В случае файла PowerPoint или Word фрагменты содержат массивы байтов.
+Свойство `Slice.data` возвращает необработанные данные файла в виде массива байтов. Если данные имеют текстовый формат (то есть XML или обычного текста), фрагмент содержит необработанный текст. Если вы передаете **Office. FileType.Compressed** для _параметра fileType_ среза `Document.getFileAsync`содержит двоичные данные файла в виде массива байтов. В случае файла PowerPoint или Word фрагменты содержат массивы байтов.
 
 Чтобы преобразовать данные массива байтов в строку с кодировкой Base64, вам необходимо применить собственную функцию (или использовать доступную библиотеку). Сведения о кодировании Base64 с помощью JavaScript см. в статье [Кодирование и декодирование Base64](https://developer.mozilla.org/docs/Web/JavaScript/Base64_encoding_and_decoding).
 
@@ -212,7 +212,7 @@ function getSlice(state) {
 Добавьте следующий код для отправки фрагмента веб-службе.
 
 > [!NOTE]
-> Этот код отправляет файл PowerPoint или Word на веб-сервер в нескольких фрагментах. Веб-сервер или служба должны примять каждый отдельный срез в один файл, а затем сохранить его в .pptx или .docx, прежде чем вы сможете выполнить какие-либо манипуляции на нем.
+> Этот код отправляет файл PowerPoint или Word на веб-сервер в нескольких срезах. Веб-сервер или служба должны добавить каждый отдельный срез в один файл, а затем сохранить его в виде .pptx или .docx файла, прежде чем можно будет выполнять какие-либо манипуляции с ним.
 
 ```js
 function sendSlice(slice, state) {
@@ -258,7 +258,7 @@ function sendSlice(slice, state) {
 }
 ```
 
-Как следует из названия, `File.closeAsync` метод закрывает подключение к документу и выкакает ресурсы. Хотя сборщик мусора Надстройки Office в песочнице собирает недействующие ссылки на файлы, рекомендуется явно закрывать файлы после того, как код завершил работу с ними. Метод `closeAsync` имеет один параметр _callback_, который указывает функцию вызова при завершении вызова.
+Как следует из названия, метод `File.closeAsync` закрывает подключение к документу и освобождает ресурсы. Хотя сборщик мусора Надстройки Office в песочнице собирает недействующие ссылки на файлы, рекомендуется явно закрывать файлы после того, как код завершил работу с ними. Метод `closeAsync` имеет один _параметр обратного_ вызова, который указывает функцию, вызываемую при завершении вызова.
 
 ```js
 function closeFile(state) {
