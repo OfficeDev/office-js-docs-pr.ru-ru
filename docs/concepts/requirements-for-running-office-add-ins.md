@@ -3,12 +3,12 @@ title: Требования для запуска надстроек Office
 description: Сведения о требованиях к клиенту и серверу, которые конечный пользователь должен выполнять Office надстройки.
 ms.date: 04/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bc093b3e04dd1a67ba63bebbe2e44acf5137a07
-ms.sourcegitcommit: 9795f671cacaa0a9b03431ecdfff996f690e30ed
+ms.openlocfilehash: fc13f28f1d0ae22307b4add6f0367bc1fee211bd
+ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64963493"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65244774"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -52,7 +52,7 @@ ms.locfileid: "64963493"
   > Для работы веб-надстроек Office необходимо отключить конфигурацию усиленной безопасности Internet Explorer (ESC). Если вы используете компьютер с Windows Server в качестве клиента при разработке надстроек, учитывайте, что конфигурация ESC включена по умолчанию в Windows Server.
 
 - По умолчанию используется один из следующих браузеров: Internet Explorer 11 или последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
-- Редактор HTML и JavaScript, например "Блокнот", [Visual Studio и Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs) или стороннее средство веб-разработки.
+- Редактор HTML и JavaScript, например [Visual Studio Code](https://code.visualstudio.com/), [Visual Studio средства](https://www.visualstudio.com/features/office-tools-vs) разработчика Майкрософт или средства веб-разработки сторонних разработчиков.
 
 ## <a name="client-requirements-os-x-desktop"></a>Требования к клиенту: настольный компьютер OS X
 
