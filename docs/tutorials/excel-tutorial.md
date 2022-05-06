@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: Разработайте надстройку Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 04/13/2022
+ms.date: 05/01/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: d0308468ace3612a69c3059c730fd56e8f61a39f
-ms.sourcegitcommit: 5ef2c3ed9eb92b56e36c6de77372d3043ad5b021
+ms.openlocfilehash: bcec39ef8cbdeb92636cc57abe8f007e56bbfbe2
+ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2022
-ms.locfileid: "64863289"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65244802"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -624,11 +624,11 @@ ms.locfileid: "64863289"
         args.completed();
     }
     ```
-
-1. Добавьте следующую строку в конец файла:
+    
+1. Добавьте следующую строку непосредственно под функцией, чтобы зарегистрировать ее.
 
     ```js
-    g.toggleProtection = toggleProtection;
+    Office.actions.associate("toggleProtection", toggleProtection);
     ```
 
 1. В функции `toggleProtection` замените `TODO1` следующим кодом. В этом коде используется свойство защиты объекта листа в стандартном шаблоне переключателя. Объяснение `TODO2` будет приведено в следующем разделе.

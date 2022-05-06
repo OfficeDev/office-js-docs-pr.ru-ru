@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 02/23/2022
+ms.date: 05/01/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 987084c16f3e8f1af1809866ac248b4f1a4995b0
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: a143ff743c5dfb692709d0291534fd060352f264
+ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63511381"
+ms.lasthandoff: 05/06/2022
+ms.locfileid: "65244795"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -833,6 +833,9 @@ function insertDefaultGist(event) {
   }
 }
 
+// Register the function.
+Office.actions.associate("insertDefaultGist", insertDefaultGist);
+
 function receiveMessage(message) {
   config = JSON.parse(message.message);
   setConfig(config, function(result) {
@@ -848,18 +851,6 @@ function dialogClosed(message) {
   btnEvent.completed();
   btnEvent = null;
 }
-
-function getGlobal() {
-  return (typeof self !== "undefined") ? self :
-    (typeof window !== "undefined") ? window :
-    (typeof global !== "undefined") ? global :
-    undefined;
-}
-
-var g = getGlobal();
-
-// The add-in command functions need to be available in global scope.
-g.insertDefaultGist = insertDefaultGist;
 ```
 
 ### <a name="create-a-file-to-manage-configuration-settings"></a>Создание файла для управления параметрами конфигурации
@@ -886,7 +877,7 @@ function setConfig(config, callback) {
 
 ### <a name="create-new-functions-to-process-gists"></a>Создание новых функций для обработки элементов gist
 
-Затем откройте файл **./src/helpers/gist-api.js** и добавьте указанные ниже функции. Обратите внимание на следующее:
+Затем откройте файл **./src/helpers/gist-api.js** и добавьте указанные ниже функции. Обратите внимание на перечисленные ниже аспекты.
 
 - Если элемент gist содержит код HTML, надстройка вставит HTML-код в текст сообщения без изменений.
 
