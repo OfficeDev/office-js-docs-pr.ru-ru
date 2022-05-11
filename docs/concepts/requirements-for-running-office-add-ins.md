@@ -1,14 +1,14 @@
 ---
 title: Требования для запуска надстроек Office
 description: Сведения о требованиях к клиенту и серверу, которые конечный пользователь должен выполнять Office надстройки.
-ms.date: 04/14/2022
+ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fc13f28f1d0ae22307b4add6f0367bc1fee211bd
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: a9a86c7a68282135904dba981eeecb27a28e94e5
+ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244774"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65313200"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -46,10 +46,12 @@ ms.locfileid: "65244774"
 
   Если у вас есть действительная Microsoft 365 и у вас нет доступа к Office, можно скачать и установить последнюю версию [Office](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658).
 
-- Браузер Internet Explorer 11 или Microsoft Edge (в зависимости от версий Windows и Office) должен быть установлен, но может не использоваться по умолчанию. Для поддержки надстроек Office клиент Office, выступающий в роли ведущего приложения, использует компоненты браузера, которые входят в состав Internet Explorer 11 или Microsoft Edge. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](browsers-used-by-office-web-add-ins.md).
+- Microsoft Edge должен быть установлен, но не должен быть браузером по умолчанию. Для поддержки Office надстроек клиент Office, который выступает в качестве узла, использует компоненты браузера, которые являются частью Microsoft Edge.
 
   > [!NOTE]
-  > Для работы веб-надстроек Office необходимо отключить конфигурацию усиленной безопасности Internet Explorer (ESC). Если вы используете компьютер с Windows Server в качестве клиента при разработке надстроек, учитывайте, что конфигурация ESC включена по умолчанию в Windows Server.
+  > - Строго говоря, надстройки можно разрабатывать на компьютере, на котором установлен Internet Explorer 11, но не Microsoft Edge. Однако IE используется для запуска надстроек только в некоторых старых сочетаниях Windows и Office версиях. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](browsers-used-by-office-web-add-ins.md). Мы не рекомендуем использовать такие старые среды в качестве основной среды разработки надстроек. Однако если у вас, скорее всего, есть клиенты надстройки, которые работают в этих старых сочетаниях, рекомендуется поддерживать Internet Explorer. Дополнительные сведения см. в [разделе "Поддержка Internet Explorer 11"](../develop/support-ie-11.md).
+  > 
+  > - Для работы веб-надстроек Office необходимо отключить конфигурацию усиленной безопасности Internet Explorer (ESC). Если вы используете компьютер с Windows Server в качестве клиента при разработке надстроек, учитывайте, что конфигурация ESC включена по умолчанию в Windows Server.
 
 - По умолчанию используется один из следующих браузеров: Internet Explorer 11 или последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
 - Редактор HTML и JavaScript, например [Visual Studio Code](https://code.visualstudio.com/), [Visual Studio средства](https://www.visualstudio.com/features/office-tools-vs) разработчика Майкрософт или средства веб-разработки сторонних разработчиков.
@@ -74,17 +76,17 @@ Outlook mac, который распространяется как часть M
 
 | Приложение Office | Устройство | Операционная система | Учетная запись Exchange | Мобильный браузер |
 |:-----|:-----|:-----|:-----|:-----|
-|Outlook для Android|— Планшеты с Android<br>— Смартфоны Android|— Android 4.4 KitKat или более поздней версии;|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для Android. <sup>1</sup>|
-|Outlook для iOS|— iPad планшеты<br>— iPhone смартфоны|— iOS 11 или более поздней версии;|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для iOS. <sup>1</sup>|
-|Outlook в Интернете (современный)<sup>2</sup>|— iPad 2 или более поздней версии;<br>— Планшеты с Android |— iOS 5 или более поздней версии;<br>— Android 4.4 KitKat или более поздней версии;|На Microsoft 365 Exchange Online|— Microsoft Edge<br>— Chrome<br>— Firefox<br>— Safari|
-|Outlook в Интернете (классическая версия)|— iPhone 4 или более поздней версии.<br>— iPad 2 или более поздней версии;<br>— iPod Touch 4 или более поздней версии|— iOS 5 или более поздней версии;|В локальной среде Exchange Server 2013 или более поздней <sup>версии 3</sup>|— Safari|
+|Outlook для Android|— Android планшеты<br>— Android смартфоны|— Android 4.4 KitKat или более поздней версии;|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для Android.<sup> 1</sup>|
+|Outlook для iOS|— iPad планшеты<br>— iPhone смартфоны|— iOS 11 или более поздней версии.|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для iOS.<sup> 1</sup>|
+|Outlook в Интернете (современный)<sup>2</sup>|— iPad 2 или более поздней версии;<br>— Android планшеты |— iOS 5 или более поздней версии<br>— Android 4.4 KitKat или более поздней версии;|На Microsoft 365 Exchange Online|— Microsoft Edge<br>— Chrome<br>— Firefox<br>— Safari|
+|Outlook в Интернете (классическая версия)|— iPhone 4 или более поздней версии.<br>— iPad 2 или более поздней версии;<br>— iPod Touch 4 или более поздней версии|— iOS 5 или более поздней версии|В локальной среде Exchange Server 2013 или более поздней <sup>версии 3</sup>|— Safari|
 
 > [!NOTE]
 > <sup>1</sup> OWA для Android, OWA для iPad и OWA для iPhone собственных приложений [устарели](https://support.microsoft.com/office/076ec122-4576-4900-bc26-937f84d25a4b).
 >
-> <sup>2 современных</sup> Outlook в Интернете на iPhone и смартфонах Android больше не требуются и не доступны для тестирования Outlook надстроек.
+> <sup>2 современных</sup> Outlook в Интернете на iPhone и Android смартфонах больше не требуется или не доступно для тестирования Outlook надстроек.
 >
-> <sup>3</sup> надстройки не поддерживаются в Outlook Android, iOS и современном мобильном веб-сайте с локальными Exchange учетными записями.
+> <sup>3</sup> надстройки не поддерживаются в Outlook на Android, iOS и современном мобильном веб-сайте с локальными Exchange учетными записями.
 
 > [!TIP]
 > Классическую и современную версии Outlook в веб-браузере можно различить по внешнему виду панели инструментов почтового ящика.

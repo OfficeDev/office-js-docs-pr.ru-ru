@@ -1,63 +1,64 @@
 ---
 title: Поддержка Internet Explorer 11
-description: Узнайте, как поддерживать Internet Explorer 11 и Javascript ES5 в надстройки.
-ms.date: 10/22/2021
+description: Узнайте, как поддерживать JavaScript в Internet Explorer 11 и ES5 в надстройке.
+ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d2a504a6e030e6cf8d06c766cb500d6c11710ea9
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 70fea604c17525836857b7cff4c8670da757f2a6
+ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744232"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65313179"
 ---
 # <a name="support-internet-explorer-11"></a>Поддержка Internet Explorer 11
 
 > [!IMPORTANT]
-> **Internet Explorer по-прежнему Office надстройки**
+> **Internet Explorer по-прежнему используется в Office надстройки**
 >
-> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не Office надстройки. Некоторые комбинации платформ и Office версий, включая версии с одновековой покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11 для пользования надстройки, как это объясняется в [браузерах](../concepts/browsers-used-by-office-web-add-ins.md), используемых Office надстройки. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
+> В некоторых сочетаниях платформ и версий Office, включая версии с однофакторной покупкой до Office 2019, по-прежнему используется элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в [браузерах](../concepts/browsers-used-by-office-web-add-ins.md), используемых надстройки Office. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
 >
-> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации платформы и Office настольных версий, которые используют Internet Explorer. 
-> - Средство [Script Lab](../overview/explore-with-script-lab.md) больше не поддерживает Internet Explorer.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете в качестве браузера.
+> - AppSource по-прежнему проверяет комбинации платформы и классических версий Office, использующих Internet Explorer, однако выдано предупреждение только в том случае, если надстройка не поддерживает Internet Explorer; AppSource не отклоняет надстройку. 
+> - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
 
-Office надстройки — это веб-приложения, отображаемые в IFrames при Office в Интернете. Office надстройки отображаются с помощью встроенных элементов управления браузером при Office на Windows или Office на Mac. Встроенные элементы управления браузером поставляются операционной системой или браузером, установленным на компьютере пользователя.
+Office надстройки — это веб-приложения, которые отображаются в IFrame при Office в Интернете. Office надстройки отображаются с помощью встроенных элементов управления браузера при запуске Office на Windows или Office на компьютере Mac. Встроенные элементы управления браузером предоставляются операционной системой или браузером, установленным на компьютере пользователя.
 
-Если вы планируете выставлять надстройку на рынок через AppSource или планируете поддерживать более старые версии Windows и Office, ваша надстройка должна работать в встраиваемом контроле браузера, основанном на Internet Explorer 11 (IE11). Сведения о том, какие сочетания Windows и Office используют управление браузером на основе IE11, см. в браузерах, используемых Office [надстройки](../concepts/browsers-used-by-office-web-add-ins.md).
+Если вы планируете поддерживать более старые версии Windows и Office, надстройка должна работать в элементе управления встраиваемым браузером, основанным на Internet Explorer 11 (IE11). Сведения о том, какие сочетания Windows и Office браузера на основе IE11, см. в разделе "Браузеры", используемые Office [надстройки](../concepts/browsers-used-by-office-web-add-ins.md).
 
 > [!IMPORTANT]
-> Internet Explorer 11 не поддерживает некоторые функции HTML5, такие как мультимедиа, запись и расположение. Если надстройка должна поддерживать Internet Explorer 11, необходимо либо разработать надстройку, чтобы избежать этих неподдержки, либо надстройка должна определить, когда используется Internet Explorer, и предоставить альтернативный опыт, который не использует неподдержку. Дополнительные сведения см. в [добавлении Определение](#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer) времени запуска надстройки в Internet Explorer.
+> Internet Explorer 11 не поддерживает некоторые функции HTML5, такие как мультимедиа, запись и расположение. Если надстройка должна поддерживать Internet Explorer 11, необходимо либо разработать надстройку, чтобы избежать этих неподдерживаемых функций, либо надстройка должна определить, когда используется Internet Explorer, и предоставить альтернативный интерфейс, который не использует неподдерживаемые функции. Дополнительные сведения см. в разделе "Определение во время выполнения, выполняется ли надстройка [в Internet Explorer"](#determine-at-runtime-if-the-add-in-is-running-in-internet-explorer).
 
 ## <a name="support-for-recent-versions-of-javascript"></a>Поддержка последних версий JavaScript
 
-Internet Explorer 11 не поддерживает версии JavaScript позже ES5. Если вы хотите использовать синтаксис и функции ECMAScript 2015 или более поздней части или TypeScript, у вас есть два варианта, описанных в этой статье. Вы также можете объединить эти два метода.
+Internet Explorer 11 не поддерживает версии JavaScript позже ES5. Если вы хотите использовать синтаксис и функции ECMAScript 2015 или более поздней версии или TypeScript, у вас есть два варианта, как описано в этой статье. Вы также можете объединить эти два метода.
 
-### <a name="use-a-transpiler"></a>Использование транспилера
+### <a name="use-a-transpiler"></a>Использование транспиллера
 
-Код можно написать как в TypeScript, так и в современном JavaScript, а затем перенастроить его во время сборки в JavaScript ES5. В результате в веб-приложение надстройки загружаются файлы ES5.
+Вы можете написать код на TypeScript или современном JavaScript, а затем выполнить его транспилирование во время сборки в ES5 JavaScript. Полученные файлы ES5 передаются в веб-приложение надстройки.
 
-Существует два популярных транспилера. Оба из них могут работать с исходными файлами, которые typeScript или post-ES5 JavaScript. Они также работают с React файлами (jsx и .tsx).
+Существует два популярных транспиллера. Оба они могут работать с исходными файлами, которые являются TypeScript или JavaScript после ES5. Они также работают с React файлов (JSX и TSX).
 
-- [babel](https://babeljs.io/)
-- [tsc](https://www.typescriptlang.org/index.html)
+- [Babel](https://babeljs.io/)
+- [Tsc](https://www.typescriptlang.org/index.html)
 
-Сведения об установке и настройке транспилера в проекте надстройки см. в документации для любого из них. Для автоматизации переливания рекомендуется использовать бегун задач, например [Grunt](https://gruntjs.com/) или [WebPack](https://webpack.js.org/) . Пример надстройки, использующей tsc, см. в Office [надстройки Microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React). Пример, использующий babel, см. в служба хранилища [надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/Excel.OfflineStorageAddin).
+Сведения об установке и настройке транспиллера в проекте надстройки см. в документации по ним. Для автоматизации транспилирования рекомендуется использовать средство выполнения задач, например [Grunt](https://gruntjs.com/) или [WebPack](https://webpack.js.org/) . Пример надстройки, использующей TSC, см. в Office [microsoft Graph React](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-Microsoft-Graph-React). Пример, в котором используется надстройка, [служба хранилища автономном режиме](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/Excel.OfflineStorageAddin).
 
 > [!NOTE]
-> Если вы используете Visual Studio (не Visual Studio Code), tsc, вероятно, проще всего использовать. Вы можете установить поддержку для него с помощью пакета nuget. Дополнительные сведения см. в [javaScript и TypeScript в Visual Studio 2019 г](/visualstudio/javascript/javascript-in-vs-2019). Чтобы использовать babel с Visual Studio, создайте сценарий сборки или используйте обозреватель бегуна задач в Visual Studio с помощью таких средств, как [бегун задач WebPack](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner) или [раннер задач NPM](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner).
+> Если вы используете Visual Studio (не Visual Studio Code), tsc, вероятно, проще всего использовать. Вы можете установить для него поддержку с помощью пакета NuGet. Дополнительные сведения см. в [разделах JavaScript и TypeScript Visual Studio 2019](/visualstudio/javascript/javascript-in-vs-2019). Чтобы использовать приложение Visual Studio, создайте скрипт сборки или используйте обозреватель средств выполнения Visual Studio с такими средствами, как средство выполнения задач [WebPack](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner) или [средство выполнения задач NPM](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner).
 
-### <a name="use-a-polyfill"></a>Использование полифайла
+### <a name="use-a-polyfill"></a>Использование полизаполнения
 
-[Полифильм](https://en.wikipedia.org/wiki/Polyfill_(programming)) — это JavaScript более ранней версии, который дублирует функции из более последних версий JavaScript. Полифильм работает с браузерами, которые не поддерживают более поздние версии JavaScript. Например, метод строки `startsWith` не был частью версии ES5 JavaScript, поэтому он не будет работать в Internet Explorer 11. Существуют библиотеки полифильмов, написанные в ES5, которые определяют и реализуют `startsWith` метод. Рекомендуется библиотека [полифильмов core-js](https://github.com/zloirock/core-js) .
+[Polyfill —](https://en.wikipedia.org/wiki/Polyfill_(programming)) это JavaScript более ранней версии, который дублирует функции из более поздних версий JavaScript. Полизаполнение работает в браузерах, которые не поддерживают более поздние версии JavaScript. Например, строковый метод `startsWith` не был частью версии ES5 JavaScript, поэтому он не будет выполняться в Internet Explorer 11. Существуют библиотеки полизаполнения, написанные в ES5, которые определяют и реализуют `startsWith` метод. Мы рекомендуем [использовать библиотеку polyfill core-js](https://github.com/zloirock/core-js) .
 
-Чтобы использовать библиотеку полифильмов, загрузите ее, как и любой другой файл JavaScript или модуль. Например, можно `<script>` использовать тег в HTML-файле домашней страницы надстройки (`<script src="/js/core-js.js"></script>`например), `import` или можно использовать заявление в файле JavaScript (например). `import 'core-js';` Когда двигатель JavaScript `startsWith`видит такой метод, он сначала будет искать, есть ли метод этого имени, встроенный в язык. Если есть, он будет вызывать родной метод. Если метод не встроен и только в том случае, если он не встроен, двигатель будет искать для него все загруженные файлы. Таким образом, полифулловая версия не используется в браузерах, поддерживаюх родную версию.
+Чтобы использовать библиотеку полизаполнения, загрузите ее, как и любой другой файл или модуль JavaScript. Например, можно `<script>` использовать тег в HTML-файле домашней страницы надстройки или `<script src="/js/core-js.js"></script>``import` оператор в файле JavaScript (например, `import 'core-js';`). Когда модуль JavaScript `startsWith`видит такой метод, он сначала будет искать, есть ли метод с таким именем, встроенным в язык. Если он есть, он будет вызывать собственный метод. Если и только в том случае, если метод не является встроенным, подсистема будет искать все загруженные файлы для него. Таким образом, версия с полизаполнением не используется в браузерах, поддерживающих собственную версию.
 
-Импорт всей библиотеки core-js импортирует все функции core-js. Вы также можете импортировать только полифильмы, Office надстройки. Инструкции по этому поводу см. в [API CommonJS](https://github.com/zloirock/core-js#commonjs-api). Библиотека core-js имеет большинство необходимых полифильмов. В разделе Missing [Polyfills](https://github.com/zloirock/core-js#missing-polyfills) документации core-js описано несколько исключений. Например, он не поддерживается `fetch`, но вы можете использовать [подбирать](https://github.com/github/fetch) полифильм.
+При импорте всей библиотеки core-js будут импортированы все функции Core-js. Вы также можете импортировать только полизаполнения, необходимые Office надстройке. Инструкции о том, как это сделать, см. в API [CommonJS](https://github.com/zloirock/core-js#commonjs-api). Библиотека core-js содержит большую часть необходимых полизаполнения. В разделе "Отсутствующие полизаполнения[](https://github.com/zloirock/core-js#missing-polyfills)" документации core-js описано несколько исключений. Например, он не поддерживается `fetch`, но можно использовать полизаполнение [выборки](https://github.com/github/fetch) .
 
-Пример надстройки, использующей core.js, см. в примере [Word Add-in Angular2 StyleChecker](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker).
+Пример надстройки, использующей core.js, см. в разделе [Надстройка Word Angular2 StyleChecker](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker).
 
-## <a name="determine-at-runtime-if-the-add-in-is-running-in-internet-explorer"></a>Определите во время запуска, запущена ли надстройка в Internet Explorer
+## <a name="determine-at-runtime-if-the-add-in-is-running-in-internet-explorer"></a>Определение во время выполнения, выполняется ли надстройка в Internet Explorer
 
-Ваша надстройка может узнать, работает ли она в Internet Explorer, прочитав свойство [window.navigator.userAgent](https://developer.mozilla.org/docs/Web/API/Navigator/userAgent) . Это позволяет надстройки либо предоставить альтернативный опыт, либо изящно сбой. Ниже приведен пример. Обратите внимание, что Internet Explorer отправляет строку начиная с "Trident" в качестве значения userAgent.
+Чтобы узнать, работает ли надстройка в Internet Explorer, прочитайте свойство [window.navigator.userAgent](https://developer.mozilla.org/docs/Web/API/Navigator/userAgent) . Это позволяет надстройке предоставлять альтернативный интерфейс или корректно завершить работу с ошибкой. Ниже приведен пример. Обратите внимание, что Internet Explorer отправляет строку, начинающееся с Trident в качестве значения userAgent.
 
 ```javascript
 if (navigator.userAgent.indexOf("Trident") === -1) {
@@ -78,15 +79,15 @@ if (navigator.userAgent.indexOf("Trident") === -1) {
 ```
 
 > [!IMPORTANT]
-> Обычно чтение свойства не является хорошей `userAgent` практикой. Убедитесь, что вы знакомы со статьей [, обнаружение браузера](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) с помощью агента пользователя, в том числе рекомендации и альтернативы чтению `userAgent`. В частности, если вы принимаете вариант 1 в `else` вышеуказанном пункте, рассмотрите возможность обнаружения функций вместо тестирования для агента пользователя.
+> Обычно чтение свойства не рекомендуется `userAgent` . Убедитесь, что вы знакомы со статьей об обнаружении [браузера](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) с помощью агента пользователя, включая рекомендации и альтернативы чтению `userAgent`. В частности, если вы используете вариант 1 `else` в приведенном выше предложении, рассмотрите возможность использования функции обнаружения, а не тестирования для агента пользователя.
 >
-> По данным на 30 сентября 2021 г. текст в разделе Какая часть агента пользователя содержит сведения, которые вы ищете [?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#which_part_of_the_user_agent_contains_the_information_you_are_looking_for) датируется до выпуска Internet Explorer 11. Она по-прежнему в целом точна, и таблицы в разделе английская версия статьи устарели. Кроме того, текст, а в большинстве случаев таблицы, в не-английских версиях статьи устарели.
+> По данным на 30 сентября 2021 г. текст в разделе "Какая часть агента пользователя содержит информацию, которую вы ищете [?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#which_part_of_the_user_agent_contains_the_information_you_are_looking_for) даты до выпуска Internet Explorer 11". Она по-прежнему является общедоступной, и таблицы в разделе статьи на английском языке актуальны. Аналогичным образом, текст и в большинстве случаев таблицы в версиях статьи, отличных от английского, устарели.
 
 ## <a name="test-an-add-in-on-internet-explorer"></a>Тестирование надстройки в Internet Explorer
 
-См [. тест Internet Explorer 11](../testing/ie-11-testing.md).
+См. [сведения о тестировании Internet Explorer 11](../testing/ie-11-testing.md).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Таблица совместимости ECMAScript 6](https://kangax.github.io/compat-table/es6/)
-- [Могу ли я использовать... Таблицы поддержки для HTML5, CSS3 и т.д.](https://caniuse.com/)
+- [Можно ли использовать... Таблицы поддержки для HTML5, CSS3 и т. д.](https://caniuse.com/)

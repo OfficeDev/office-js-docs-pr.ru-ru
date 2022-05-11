@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 10/22/2021
+ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 38eefad27511935289d74a06744d1afc686dc5b7
-ms.sourcegitcommit: c1a41d3c52a1d3bd7ef8bebff257777bcde15e0a
+ms.openlocfilehash: 5e563c836b48a16f572aca492fa39f33b9661052
+ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822404"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65313186"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -22,10 +22,13 @@ Office надстройки — это веб-приложения, которы
 > [!IMPORTANT]
 > **Internet Explorer по-прежнему используется в Office надстройки**
 >
-> Корпорация Майкрософт завершает поддержку Internet Explorer, но это не Office надстроек. Некоторые сочетания платформ и Office версий, в том числе версии с однофакторной покупкой до Office 2019, будут по-прежнему использовать элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Кроме того, для надстроек, отправленных в [AppSource](/office/dev/store/submit-to-appsource-via-partner-center), по-прежнему требуется поддержка этих сочетаний и, следовательно, Internet Explorer. Меняются *две* вещи:
+> Некоторые сочетания платформ и Office версий, в том числе версии с однофакторной покупкой до Office 2019, по-прежнему используют элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
 >
-> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, AppSource больше не тестирует надстройки в Office в Интернете в качестве браузера. Но AppSource по-прежнему проверяет сочетания платформы и Office версий,  использующих Internet Explorer.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете в качестве браузера.
+> - AppSource по-прежнему проверяет комбинации платформы и классических версий Office, использующих Internet Explorer, однако выдано предупреждение только в том случае, если надстройка не поддерживает Internet Explorer; AppSource не отклоняет надстройку. 
 > - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
+>
+> Дополнительные сведения о поддержке Internet Explorer и настройке корректного сообщения об ошибке в надстройке см. в разделе ["Поддержка Internet Explorer 11"](../develop/support-ie-11.md).
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
@@ -44,7 +47,7 @@ Office надстройки — это веб-приложения, которы
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Окно 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| Нет |Microsoft Edge <sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
 |Windows 8.1<br>Windows 10,<br>Windows 11| Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.204242<sup></sup>| <sup>Да4</sup>|  Microsoft Edge <sup>1 с</sup> WebView2 (Chromium на основе) |
 
-<sup>1</sup> При Microsoft Edge экранный диктор Windows (иногда называемый средством чтения с экрана) `<title>` считывает тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
+<sup>1</sup> При Microsoft Edge используется Windows экранный диктор (иногда называемая средством чтения с экрана) `<title>` считывает тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
 <sup>2. Дополнительные</sup> [сведения см](/officeupdates/update-history-office365-proplus-by-date). на странице журнала [](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19) обновлений и способах поиска Office версии клиента и канала обновления.
 
