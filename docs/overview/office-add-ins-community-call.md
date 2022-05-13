@@ -1,22 +1,22 @@
 ---
 title: Microsoft Office вызова сообщества надстроек
 description: Ежемесячная Microsoft Office, расписание и ресурсы для проектов сообщества надстроек.
-ms.date: 05/02/2022
+ms.date: 05/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0912acca84090b8b73b6209b98a715c0124fc254
-ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
+ms.openlocfilehash: 81e72e5318d1db373d26df789b75f5d95983cf04
+ms.sourcegitcommit: bc9beb8d82e1901e641f57d2dc5f087999ce7d12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187310"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393927"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызова сообщества надстроек
 
 Вызов Microsoft Office надстроек — это ежемесячный звонок, где вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании Office надстроек. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
 
-## <a name="agenda-for-may-11th-call"></a>Повестка дня для звонка 11 мая
+## <a name="agenda-for-june-8th-call"></a>Повестка дня для звонка 8 июня
 
-Повестка дня на май будет опубликована примерно за неделю до звонка.
+Повестка дня на июнь будет опубликована примерно за неделю до звонка.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
