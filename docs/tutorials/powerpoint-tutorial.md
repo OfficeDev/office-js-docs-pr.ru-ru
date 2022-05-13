@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам PowerPoint
 description: В этом руководстве вы создадите надстройку PowerPoint, которая вставляет изображение, вставляет текст, получает метаданные слайда и перемещается между слайдами.
-ms.date: 02/18/2022
+ms.date: 05/11/2022
 ms.prod: powerpoint
 ms.localizationpriority: high
-ms.openlocfilehash: a42d7e0187779687fa179252879d969ea8c0828e
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: fc5709e77dd123ed94808a86d49c15309205e0d8
+ms.sourcegitcommit: bc9beb8d82e1901e641f57d2dc5f087999ce7d12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745087"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393934"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -24,7 +24,19 @@ ms.locfileid: "63745087"
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-[!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
+- [Visual Studio 2019 версии не выше *16.10.3* или Visual Studio 2022](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **разработки Office/SharePoint**. 
+
+    > [!IMPORTANT]
+    > В некоторых версиях Visual Studio 2019 после версии 16.10.3 есть ошибка, которая препятствует завершению работы с этим руководством. Используйте более раннюю версию Visual Studio 2019 или Visual Studio 2022.
+
+    > [!NOTE]
+    > Если вы уже установили Visual Studio, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.
+
+- Пакет Office, подключенный к подписке Microsoft 365 (включая Office в Интернете).
+
+    > [!NOTE]
+    > Если у вас еще нет Office, вы можете [присоединиться к программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program), чтобы получить бесплатную 90-дневную возобновляемую подписку на Microsoft 365 для использования в процессе разработки.
+
 
 ## <a name="create-your-add-in-project"></a>Создание проекта надстройки
 
@@ -124,6 +136,9 @@ ms.locfileid: "63745087"
 3. В диалоговом окне **Добавление шаблона** выберите **Контроллер Web API 2 — пустой** и нажмите кнопку **Добавить**. 
 
 4. В диалоговом окне **Добавление контроллера** введите имя **PhotoController** и нажмите кнопку **Добавить**. Visual Studio создаст и откроет файл **PhotoController.cs**.
+
+    > [!NOTE]
+    > Процесс формирования шаблонов не выполняется должным образом в некоторых версиях Visual Studio 2019 после версии 16.10.3. На работу Visual Studio 2022 это не влияет.
 
 5. Замените все содержимое файла **PhotoController.cs** приведенным ниже кодом, который вызывает службу Bing для получения фотографии дня в виде строки в кодировке Base64. Когда для вставки изображения в документ используется API JavaScript для Office, данные изображения должны быть закодированы в формате Base64.
 
