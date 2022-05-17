@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Документация по надстройкам Office
-summary: 'Используйте платформу Office надстройки для создания решений, расширяющих Office приложений и взаимодействующих с контентом в Office документах и Outlook почтовых сообщениях и элементов календаря. С Office надстройки можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript для создания решений, которые могут работать в Office в Интернете, Windows, Mac и mobile.'
+summary: Используйте платформу Office надстроек для создания решений, расширяющих Office приложения и взаимодействующих с содержимым в Office документах и Outlook почтовых сообщениях и элементах календаря. С Office надстройки можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут выполняться в Office в Интернете, Windows, Mac и мобильных устройствах.
 brand: office
 metadata:
   title: Документация по надстройкам Office
@@ -11,105 +11,111 @@ metadata:
   author: o365devx
   ms.author: o365devx
   ms.date: 02/10/2022
+  ms.openlocfilehash: 07d8e2c8c9dc1dff799c2a1be6ba65e1b4fffc28
+  ms.sourcegitcommit: e63d8e32b25a9987f4a39b92a342a82b37a3404c
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/17/2022
+  ms.locfileid: "65432199"
 highlightedContent:
   items:
-    - itemType: overview
-      title: Обзор платформы надстроек Office
-      url: overview/office-add-ins.md
-    - itemType: quickstart
-      title: Настройка надстройки Excel за 5 минут
-      url: quickstarts/excel-quickstart-jquery.md
-    - itemType: learn
-      title: 'Microsoft Learn: введение Office настройки клиента с помощью надстройок'
-      url: /learn/modules/intro-office-add-ins
-    - itemType: learn
-      title: 'Microsoft Learn: Office клиентов с помощью Office надстройки'
-      url: /learn/paths/m365-office-add-in-associate
-    - itemType: sample
-      title: Примеры для Office надстройки
-      url: overview/office-add-in-code-samples.md
-    - itemType: how-to-guide
-      title: Office руководство для начинающих надстройок
-      url: overview/learning-path-beginner.md
-    - itemType: reference
-      title: Справочная документация по API JavaScript для Office
-      url: /javascript/api/overview
-    - itemType: whats-new
-      title: Microsoft 365 блог разработчика
-      url: 'https://developer.microsoft.com/office/blogs/technology/office-add-ins'
+  - itemType: overview
+    title: Обзор платформы надстроек Office
+    url: overview/office-add-ins.md
+  - itemType: quickstart
+    title: Настройка надстройки Excel за 5 минут
+    url: quickstarts/excel-quickstart-jquery.md
+  - itemType: learn
+    title: Microsoft Learn. Общие сведения Office настройки клиентов с помощью надстроек
+    url: /learn/modules/intro-office-add-ins
+  - itemType: learn
+    title: 'Microsoft Learn: расширение Office клиентов с помощью Office надстроек'
+    url: /learn/paths/m365-office-add-in-associate
+  - itemType: sample
+    title: Примеры для Office надстроек
+    url: overview/office-add-in-code-samples.md
+  - itemType: how-to-guide
+    title: Office руководства по надстройки для начинающих
+    url: overview/learning-path-beginner.md
+  - itemType: reference
+    title: Справочная документация по API JavaScript для Office
+    url: /javascript/api/overview
+  - itemType: whats-new
+    title: Microsoft 365 для разработчиков
+    url: https://developer.microsoft.com/office/blogs/technology/office-add-ins
 conceptualContent:
-  title: Ваше путешествие разработчика
+  title: Путь разработки
   summary: ''
   items:
-    - title: Обзор
-      links:
-        - url: overview/learning-path-beginner.md
-          itemType: get-started
-          text: Начало работы с надстройками Office
-        - url: overview/explore-with-script-lab.md
-          itemType: sample
-          text: Тестирование и эксперимент с Script Lab
-        - url: quickstarts/outlook-quickstart.md
-          itemType: quickstart
-          text: Настройка надстройки Outlook за 5 минут
-        - url: quickstarts/powerpoint-quickstart.md
-          itemType: quickstart
-          text: Настройка надстройки PowerPoint за 5 минут
-    - title: Сборка
-      links:
-        - url: tutorials/excel-tutorial.md
-          itemType: tutorial
-          text: Разработка полного Excel надстройки
-        - url: tutorials/outlook-tutorial.md
-          itemType: tutorial
-          text: Откройте учебник Outlook надстройки
-        - url: overview/patterns-and-practices-overview.md
-          itemType: sample
-          text: Использование общих шаблонов и практик
-        - url: /javascript/api/overview
-          itemType: reference
-          text: Справочная документация по API для чтения
-    - title: Тестирование и отладка
-      links:
-        - url: testing/test-debug-office-add-ins.md
-          itemType: overview
-          text: Ознакомьтесь с обзором отладки
-        - url: testing/testing-and-troubleshooting.md
-          itemType: concept
-          text: 'Устранение ошибок, с которыми сталкиваются пользователи'
-        - url: testing/troubleshoot-manifest.md
-          itemType: architecture
-          text: Проверка манифеста надстройки
-    - title: Развертывание
-      links:
-        - url: publish/publish.md
-          itemType: deploy
-          text: Изучение параметров развертывания
-        - url: /microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps
-          itemType: deploy
-          text: Тестирование и развертывание Приложения Microsoft 365 партнерами на портале интегрированных приложений
-    - title: Публикация
-      links:
-        - url: /office/dev/store
-          itemType: overview
-          text: Проверка Office надстройки
-        - url: /office/dev/store/add-in-submission-guide
-          itemType: how-to-guide
-          text: Просмотрите руководство по отправке Microsoft 365 App Store
-    - title: Взаимодействие
-      links:
-        - url: 'https://developer.microsoft.com/office'
-          itemType: whats-new
-          text: Присоединиться к программе разработчика
-        - url: 'https://aka.ms/m365dev-suggestions'
-          itemType: architecture
-          text: Предложить функцию
-        - url: /answers/products/m365
-          itemType: reference
-          text: Задайте вопросы о Office.js в Microsoft Q&A
-        - url: 'https://stackoverflow.com/questions/tagged/office-js'
-          itemType: reference
-          text: Задайте вопросы о Office.js в переполнении стека
-        - url: 'https://github.com/OfficeDev/office-js/issues'
-          itemType: reference
-          text: Сообщение об ошибке или проблеме
+  - title: Обзор
+    links:
+    - url: overview/learning-path-beginner.md
+      itemType: get-started
+      text: Начало работы с надстройками Office
+    - url: overview/explore-with-script-lab.md
+      itemType: sample
+      text: Тестирование и эксперимент с Script Lab
+    - url: quickstarts/outlook-quickstart.md
+      itemType: quickstart
+      text: Настройка надстройки Outlook за 5 минут
+    - url: quickstarts/powerpoint-quickstart.md
+      itemType: quickstart
+      text: Настройка надстройки PowerPoint за 5 минут
+  - title: Сборка
+    links:
+    - url: tutorials/excel-tutorial.md
+      itemType: tutorial
+      text: Разработка полной Excel надстройки
+    - url: tutorials/outlook-tutorial.md
+      itemType: tutorial
+      text: Знакомство с Outlook надстройки
+    - url: overview/patterns-and-practices-overview.md
+      itemType: sample
+      text: Использование общих шаблонов и методик
+    - url: /javascript/api/overview
+      itemType: reference
+      text: Справочная документация по API чтения
+  - title: Тестирование и отладка
+    links:
+    - url: testing/test-debug-office-add-ins.md
+      itemType: overview
+      text: Обзор отладки
+    - url: testing/testing-and-troubleshooting.md
+      itemType: concept
+      text: Устранение ошибок, с которыми сталкиваются пользователи
+    - url: testing/troubleshoot-manifest.md
+      itemType: architecture
+      text: Проверка манифеста надстройки
+  - title: Развертывание
+    links:
+    - url: publish/publish.md
+      itemType: deploy
+      text: Просмотр параметров развертывания
+    - url: /microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps
+      itemType: deploy
+      text: Тестирование и развертывание Приложения Microsoft 365 с помощью партнеров на портале интегрированных приложений
+  - title: Публикация
+    links:
+    - url: /office/dev/store
+      itemType: overview
+      text: Проверка Office надстройки
+    - url: /office/dev/store/add-in-submission-guide
+      itemType: how-to-guide
+      text: Просмотрите руководство Microsoft 365 App Store отправки
+  - title: Взаимодействие
+    links:
+    - url: https://developer.microsoft.com/microsoft-365/dev-program
+      itemType: whats-new
+      text: Присоединение к программе разработчика
+    - url: https://aka.ms/m365dev-suggestions
+      itemType: architecture
+      text: Предложить функцию
+    - url: /answers/products/m365
+      itemType: reference
+      text: Задайте вопросы о Office.js microsoft Q&A
+    - url: https://stackoverflow.com/questions/tagged/office-js
+      itemType: reference
+      text: Задайте вопросы о Office.js stack Overflow
+    - url: https://github.com/OfficeDev/office-js/issues
+      itemType: reference
+      text: Сообщение об ошибке или проблеме
