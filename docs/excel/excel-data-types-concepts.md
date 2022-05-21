@@ -1,29 +1,21 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 04/19/2022
+ms.date: 05/18/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: eb1d459a75ef0268cc7ffa68153613aa975e5fe6
-ms.sourcegitcommit: 9795f671cacaa0a9b03431ecdfff996f690e30ed
+ms.openlocfilehash: 61485451bf5e0d7dff96a5f4f215def49425e571
+ms.sourcegitcommit: 4ca3334f3cefa34e6b391eb92a429a308229fe89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64963472"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65628090"
 ---
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
-> [!NOTE]
-> API типов данных в настоящее время можно использовать только в общедоступной предварительной версии. API предварительной версии могут быть изменены и не предназначены для использования в рабочей среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте API предварительной версии в рабочей среде или в важных деловых документах.
->
-> Чтобы использовать API предварительной версии:
->
-> - Необходимо ссылаться на **бета-версию** библиотеки в сети доставки содержимого (CDN) (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`. Дополнительные сведения см. в файле сведений пакета NPM [@microsoft/office-js](https://www.npmjs.com/package/@microsoft/office-js).
-> - Возможно, вам потребуется присоединиться к [программе предварительной оценки Office](https://insider.office.com), чтобы получить доступ к более поздним сборкам Office.
->
-> Чтобы попробовать типы данных в Office для Windows, номер вашей сборки Excel должен быть не ниже 16.0.14626.10000. Чтобы попробовать типы данных в Office для Mac, номер вашей сборки Excel должен быть не ниже 16.55.21102600.
+[!include[Data types preview availability note](../includes/excel-data-types-preview.md)]
 
 В этой статье рассказывается о том, как использовать [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) для работы с типами данных. Здесь представлены основные понятия, лежащие в основе разработки типов данных.
 
@@ -60,7 +52,7 @@ ms.locfileid: "64963472"
 
 В следующем примере кода JSON показана полная схема значения форматированного числа. Значение форматированного числа `myDate` в примере кода отображается в пользовательском интерфейсе Excel как **1/16/1990**. Если минимальные требования к совместимости для функции типов данных не выполнены, вычисления используют `basicValue` вместо форматированного числа.
 
-```json
+```TypeScript
 // This is an example of the complete JSON of a formatted number value.
 // In this case, the number is formatted as a date.
 const myDate: Excel.FormattedNumberCellValue = {
@@ -79,7 +71,7 @@ const myDate: Excel.FormattedNumberCellValue = {
 
 В следующем примере кода JSON показана полная схема значения сущности, которое содержит текст, изображение, дату и дополнительное текстовое значение.
 
-```json
+```TypeScript
 // This is an example of the complete JSON for an entity value.
 // The entity contains text and properties which contain an image, a date, and another text value.
 const myEntity: Excel.EntityCellValue = {
@@ -98,6 +90,8 @@ const myEntity: Excel.EntityCellValue = {
 };
 ```
 
+Значения сущностей также предлагают свойство `layouts`, которое создает карточку для сущности. Карточка отображается в виде модального окна в пользовательском интерфейсе Excel и может демонстрировать дополнительные сведения, содержащиеся в значении сущности, помимо того, что отображается в ячейке. Дополнительные сведения см. в статье [Использование карточек с типами данных значений сущностей](excel-data-types-entity-card.md).
+
 ## <a name="web-image-values"></a>Веб-изображение
 
 Объект [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) создает возможность хранения изображения как части [сущности](#entity-values) или как независимого значения в диапазоне. Этот объект позволяет использовать множество свойств, включая `address`, `altText` и `relatedImagesAddress`.
@@ -106,7 +100,7 @@ const myEntity: Excel.EntityCellValue = {
 
 В следующем примере кода JSON показана полная схема веб-изображения.
 
-```json
+```TypeScript
 // This is an example of the complete JSON for a web image.
 const myImage: Excel.WebImageCellValue = {
     type: Excel.CellValueType.webImage,
@@ -142,5 +136,6 @@ API типов данных представляют существующие о
 ## <a name="see-also"></a>См. также
 
 - [Обзор типов данных в надстройках Excel](excel-data-types-overview.md)
+- [Использование карточек с типами данных значений сущностей](excel-data-types-entity-card.md)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
 - [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md)

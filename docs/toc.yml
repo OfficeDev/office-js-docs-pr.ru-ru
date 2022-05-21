@@ -230,9 +230,7 @@ items:
                     href: design/content-add-ins.md
                   - name: Диалоговые окна
                     items:
-                      - name: Обзор
-                        href: design/dialog-boxes.md
-                      - name: Использование Office Dialog API в вашей надстройках Office
+                      - name: Использование Office Dialog API в надстройках Office
                         href: develop/dialog-api-in-office-add-ins.md
                       - name: Рекомендации и правила Office dialog API
                         href: develop/dialog-best-practices.md
@@ -413,6 +411,9 @@ items:
                 displayName: Excel
               - name: Понятия (предварительная версия)
                 href: excel/excel-data-types-concepts.md
+                displayName: Excel
+              - name: Карточки значений сущности (предварительная версия)
+                href: excel/excel-data-types-entity-card.md
                 displayName: Excel
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md

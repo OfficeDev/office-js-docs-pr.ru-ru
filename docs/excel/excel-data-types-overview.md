@@ -1,29 +1,21 @@
 ---
 title: Обзор типов данных в надстройках Excel
 description: Типы данных в API JavaScript для Excel позволяют разработчикам надстроек Office работать с отформатированными значениями чисел, веб-изображениями, значениями сущностей, массивами в значениях сущностей и расширенными ошибками в качестве типов.
-ms.date: 12/27/2021
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: b42717b58afe75ce2f1e2097b861e51e9224a47d
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 99694e7302b7aab6b1dfd0a7ec46122dd5bc69d7
+ms.sourcegitcommit: 4ca3334f3cefa34e6b391eb92a429a308229fe89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745624"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65628140"
 ---
 # <a name="overview-of-data-types-in-excel-add-ins-preview"></a>Обзор типов данных в надстройках Excel (предварительная версия)
 
-> [!NOTE]
-> API типов данных в настоящее время можно использовать только в общедоступной предварительной версии. API предварительной версии могут быть изменены и не предназначены для использования в рабочей среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте API предварительной версии в рабочей среде или в важных деловых документах.
->
-> Чтобы использовать API предварительной версии:
->
-> - Необходимо ссылаться на **бета-версию** библиотеки в сети доставки содержимого (CDN) (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`. Дополнительные сведения см. в файле сведений пакета NPM [@microsoft/office-js](https://www.npmjs.com/package/@microsoft/office-js).
-> - Возможно, вам потребуется присоединиться к [программе предварительной оценки Office](https://insider.office.com), чтобы получить доступ к более поздним сборкам Office.
->
-> Чтобы попробовать типы данных в Office для Windows, номер вашей сборки Excel должен быть не ниже 16.0.14626.10000. Чтобы попробовать типы данных в Office для Mac, номер вашей сборки Excel должен быть не ниже 16.55.21102600.
+[!include[Data types preview availability note](../includes/excel-data-types-preview.md)]
 
 Типы данных в API JavaScript для Excel позволяют разработчикам надстроек организовывать сложные структуры данных в качестве объектов, таких как отформатированные значения чисел, веб-изображения и значения сущностей.
 
