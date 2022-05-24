@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 05/01/2022
+ms.date: 05/19/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: a143ff743c5dfb692709d0291534fd060352f264
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: 22d650d7727c4fdaf099e3ed49d7cd8390deea9d
+ms.sourcegitcommit: fcb8d5985ca42537808c6e4ebb3bc2427eabe4d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244795"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65650642"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -1309,3 +1309,10 @@ ul {
 
 > [!div class="nextstepaction"]
 > [API надстроек Outlook](../outlook/apis.md)
+
+## <a name="see-also"></a>См. также
+
+- [Манифесты надстроек Outlook](../outlook/manifests.md)
+- [Рекомендации по разработке надстроек Outlook](../outlook/outlook-addin-design.md)
+- [Команды надстроек Outlook](../outlook/add-in-commands-for-outlook.md)
+- [Отладка надстройки Outlook без пользовательского интерфейса](../outlook/debug-ui-less.md)

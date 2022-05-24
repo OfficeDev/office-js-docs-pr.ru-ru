@@ -3,12 +3,12 @@ title: Варианты проверки подлинности в надстр�
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
 ms.date: 09/03/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 71b6a8a270bd044a972356db4e6d4394a01d8ace
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: 708b02cabdfafad599171839b29195d49009f37c
+ms.sourcegitcommit: fcb8d5985ca42537808c6e4ebb3bc2427eabe4d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244844"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65650586"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -57,7 +57,7 @@ ms.locfileid: "65244844"
 
 - надстройке требуется доступ к службе, которой вы не управляете.
 
-Если вы применяете этот способ, надстройка предлагает пользователю войти в службу, используя метод [displayDialogAsync](/javascript/api/office/office.ui#office-office-ui-displaydialogasync-member(1)) для инициализации потока OAuth2 или [библиотеку office-js-helpers](https://github.com/OfficeDev/office-js-helpers) для неявного потока OAuth2.
+Если вы применяете этот способ, надстройка предлагает пользователю войти в службу, используя метод [displayDialogAsync](/javascript/api/office/office.ui#office-office-ui-displaydialogasync-member(1)) для инициализации потока OAuth2.
 
 ## <a name="callback-tokens"></a>Маркеры обратного вызова
 
