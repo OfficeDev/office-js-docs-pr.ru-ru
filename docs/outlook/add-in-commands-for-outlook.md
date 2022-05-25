@@ -1,14 +1,14 @@
 ---
 title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
-ms.date: 07/07/2020
+ms.date: 05/19/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 41e1b3d200e75b214a8619021b2ccf5514e30055
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 4d4ffc8e518e5a8d11b3a45630b1a7b42e6bee13
+ms.sourcegitcommit: fcb8d5985ca42537808c6e4ebb3bc2427eabe4d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483530"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65650614"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 
@@ -120,3 +120,5 @@ ms.locfileid: "64483530"
 
 - [Надстройка Outlook "Демонстрация команд надстройки"](https://github.com/officedev/outlook-add-in-command-demo)
 - [Создание команд надстроек в манифесте для Excel, PowerPoint и Word](../develop/create-addin-commands.md)
+- [Отладка надстройки Outlook без пользовательского интерфейса](debug-ui-less.md)
+- [Руководство. Сборка надстройки Outlook для создания сообщения](../tutorials/outlook-tutorial.md)
