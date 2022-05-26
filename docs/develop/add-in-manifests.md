@@ -1,18 +1,21 @@
 ---
 title: XML-манифест надстроек Office
 description: Получите обзор манифеста надстройки Office и его использования.
-ms.date: 09/28/2021
+ms.date: 05/24/2022
 ms.localizationpriority: high
-ms.openlocfilehash: d1e644b73b11f32edebcb74d85e8cf52e66ce479
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: cf24d7db9a3c6b26c080020b3cc31a6b3916561a
+ms.sourcegitcommit: d06a37cd52f7389435bbbb3da3a90815ca2dce4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743698"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672061"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
 XML-файл манифеста надстройки Office описывает способ ее активации, когда пользователь устанавливает и использует эту надстройку для работы с документами и приложениями Office.
+
+> [!TIP]
+> В этой статье описывается текущий манифест в формате XML. Кроме того, существует манифест в формате JSON Teams который доступен в предварительной версии. Дополнительные сведения см. в [Манифест Teams для надстроек Office (предварительная версия)](json-manifest-overview.md).
 
 С помощью XML-файла манифеста надстройка Office может выполнять следующие действия:
 
@@ -70,53 +73,53 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 <!-- Links for above table -->
 
-[officeapp]: ../reference/manifest/officeapp.md
-[id]: ../reference/manifest/id.md
-[version]: ../reference/manifest/version.md
-[providername]: ../reference/manifest/providername.md
-[defaultlocale]: ../reference/manifest/defaultlocale.md
-[displayname]: ../reference/manifest/displayname.md
-[description]: ../reference/manifest/description.md
-[iconurl]: ../reference/manifest/iconurl.md
-[supporturl]: ../reference/manifest/supporturl.md
-[defaultsettings (contentapp)]: ../reference/manifest/defaultsettings.md
-[defaultsettings (taskpaneapp)]: ../reference/manifest/defaultsettings.md
-[sourcelocation (contentapp)]: ../reference/manifest/sourcelocation.md
-[sourcelocation (taskpaneapp)]: ../reference/manifest/sourcelocation.md
+[officeapp]: /javascript/api/manifest/officeapp
+[id]: /javascript/api/manifest/id
+[version]: /javascript/api/manifest/version
+[providername]: /javascript/api/manifest/providername
+[defaultlocale]: /javascript/api/manifest/defaultlocale
+[displayname]: /javascript/api/manifest/displayname
+[description]: /javascript/api/manifest/description
+[iconurl]: /javascript/api/manifest/iconurl
+[supporturl]: /javascript/api/manifest/supporturl
+[defaultsettings (contentapp)]: /javascript/api/manifest/defaultsettings
+[defaultsettings (taskpaneapp)]: /javascript/api/manifest/defaultsettings
+[sourcelocation (contentapp)]: /javascript/api/manifest/sourcelocation
+[sourcelocation (taskpaneapp)]: /javascript/api/manifest/sourcelocation
 [desktopsettings]: /previous-versions/office/fp179684%28v=office.15%29
 [sourcelocation (mailapp)]: /previous-versions/office/fp123668%28v=office.15%29
-[permissions (contentapp)]: ../reference/manifest/permissions.md
-[permissions (taskpaneapp)]: ../reference/manifest/permissions.md
-[permissions (mailapp)]: ../reference/manifest/permissions.md
-[rule (rulecollection)]: ../reference/manifest/rule.md
-[rule (mailapp)]: ../reference/manifest/rule.md
-[Requirements (MailApp)*]: ../reference/manifest/requirements.md
-[Set*]: ../reference/manifest/set.md
-[Sets (MailAppRequirements)*]: ../reference/manifest/sets.md
-[Form*]: ../reference/manifest/form.md
-[FormSettings*]: ../reference/manifest/formsettings.md
-[Sets (Requirements)*]: ../reference/manifest/sets.md
-[Hosts*]: ../reference/manifest/hosts.md
+[permissions (contentapp)]: /javascript/api/manifest/permissions
+[permissions (taskpaneapp)]: /javascript/api/manifest/permissions
+[permissions (mailapp)]: /javascript/api/manifest/permissions
+[rule (rulecollection)]: /javascript/api/manifest/rule
+[rule (mailapp)]: /javascript/api/manifest/rule
+[Requirements (MailApp)*]: /javascript/api/manifest/requirements
+[Set*]: /javascript/api/manifest/set
+[Sets (MailAppRequirements)*]: /javascript/api/manifest/sets
+[Form*]: /javascript/api/manifest/form
+[FormSettings*]: /javascript/api/manifest/formsettings
+[Sets (Requirements)*]: /javascript/api/manifest/sets
+[Hosts*]: /javascript/api/manifest/hosts
 
 ## <a name="hosting-requirements"></a>Требования к размещению
 
 Все URI изображений, в частности используемые для [команд надстройки](create-addin-commands.md), должны поддерживать кэширование. Сервер с изображением не должен возвращать заголовок `Cache-Control`, содержащий `no-cache`, `no-store` или подобные параметры в ответе HTTP.
 
-Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](../reference/manifest/sourcelocation.md), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
+Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](/javascript/api/manifest/sourcelocation), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
 
 ## <a name="best-practices-for-submitting-to-appsource"></a>Рекомендации по отправке решений в AppSource
 
 Убедитесь, что идентификатор надстройки представляет собой допустимый и уникальный GUID. В Интернете доступно множество генераторов, с помощью которых можно создать уникальный GUID.
 
-Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](../reference/manifest/supporturl.md). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](/legal/marketplace/certification-policies).
+Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](/javascript/api/manifest/supporturl). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](/legal/marketplace/certification-policies).
 
-Чтобы указать домены, отличные от указанного в элементе [SourceLocation](../reference/manifest/sourcelocation.md) для сценариев проверки подлинности, используйте только элемент [AppDomains](../reference/manifest/appdomains.md).
+Чтобы указать домены, отличные от указанного в элементе [SourceLocation](/javascript/api/manifest/sourcelocation) для сценариев проверки подлинности, используйте только элемент [AppDomains](/javascript/api/manifest/appdomains).
 
 ## <a name="specify-domains-you-want-to-open-in-the-add-in-window"></a>Укажите домены, которые необходимо открыть в окне надстройки
 
-В Office в Интернете область задач может открывать любой URL-адрес. Если на платформах для настольных компьютеров надстройка пытается перейти на URL-адрес в домене, отличном от домена, где размещена начальная страница (указан в элементе [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста), этот URL-адрес откроется в новом окне браузера, а не в области надстроек приложения Office.
+В Office в Интернете область задач может открывать любой URL-адрес. Если на платформах для настольных компьютеров надстройка пытается перейти на URL-адрес в домене, отличном от домена, где размещена начальная страница (указан в элементе [SourceLocation](/javascript/api/manifest/sourcelocation) файла манифеста), этот URL-адрес откроется в новом окне браузера, а не в области надстроек приложения Office.
 
-Чтобы переопределить это поведение, укажите все домены, которые должны открываться в окне надстройки, в списке доменов в элементе [AppDomains](../reference/manifest/appdomains.md) файла манифеста. URL-адреса в доменах из списка будут открываться в области задач как в классическом Office, так и в Office в Интернете. URL-адреса в доменах не из списка будут открываться в новом окне браузера (не в области надстроек) в классическом Office.
+Чтобы переопределить это поведение, укажите все домены, которые должны открываться в окне надстройки, в списке доменов в элементе [AppDomains](/javascript/api/manifest/appdomains) файла манифеста. URL-адреса в доменах из списка будут открываться в области задач как в классическом Office, так и в Office в Интернете. URL-адреса в доменах не из списка будут открываться в новом окне браузера (не в области надстроек) в классическом Office.
 
 > [!NOTE]
 > Из этого правила есть два исключения.
@@ -124,7 +127,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 > - Это относится только к корневой области надстройки. Если в страницу надстройки внедрен iframe, его можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
 > - Если диалоговое окно открыто с помощью API [displayDialogAsync](/javascript/api/office/office.ui?view=common-js&preserve-view=true#office-office-ui-displaydialogasync-member(1)), URL-адрес, передаваемый методу, должен находиться в том же домене, что и надстройка. Затем диалоговое окно можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
 
-В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. Кроме того, указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](../reference/manifest/appdomain.md) из списка **AppDomains**. Если надстройка выполняет переход на страницу в домене `www.northwindtraders.com`, эта страница открывается в области надстроек (даже в классической версии Office).
+В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. Кроме того, указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](/javascript/api/manifest/appdomain) из списка **AppDomains**. Если надстройка выполняет переход на страницу в домене `www.northwindtraders.com`, эта страница открывается в области надстроек (даже в классической версии Office).
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -149,7 +152,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="version-overrides-in-the-manifest"></a>Переопределение версии в манифесте
 
-Необязательный элемент [VersionOverrides](../reference/manifest/versionoverrides.md) заслуживает особого упоминания. Он содержит вложенную дочернюю разметку, которая активирует дополнительные функции надстройки. Вот некоторые из этих функций:
+Необязательный элемент [VersionOverrides](/javascript/api/manifest/versionoverrides) заслуживает особого упоминания. Он содержит вложенную дочернюю разметку, которая активирует дополнительные функции надстройки. Вот некоторые из этих функций:
 
  - Настройка ленты и меню Office.
  - Настройка работы Office со встроенной средой времени выполнения браузера, в которой запускаются надстройки.
@@ -200,7 +203,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="specify-domains-from-which-officejs-api-calls-are-made"></a>Указание доменов, из которых выполняются вызовы API Office.js
 
-Ваша надстройка может выполнять вызовы API Office.js из домена, указанного в элементе [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста. Если в вашей надстройке есть другие блоки IFrame, которым требуется доступ к API Office.js, добавьте домен этого исходного URL-адреса в список, указанный в элементе [AppDomains](../reference/manifest/appdomains.md) файла манифеста. Если блок IFrame с источником, не содержащимся в списке `AppDomains`, попытается выполнить вызов API Office.js, надстройка получит [ошибку об отказе в разрешении](../reference/javascript-api-for-office-error-codes.md).
+Ваша надстройка может выполнять вызовы API Office.js из домена, указанного в элементе [SourceLocation](/javascript/api/manifest/sourcelocation) файла манифеста. Если в вашей надстройке есть другие блоки IFrame, которым требуется доступ к API Office.js, добавьте домен этого исходного URL-адреса в список, указанный в элементе [AppDomains](/javascript/api/manifest/appdomains) файла манифеста. Если блок IFrame с источником, не содержащимся в списке `AppDomains`, попытается выполнить вызов API Office.js, надстройка получит [ошибку об отказе в разрешении](../reference/javascript-api-for-office-error-codes.md).
 
 ## <a name="manifest-v11-xml-file-examples-and-schemas"></a>XML-файлы манифеста версии 1.1: примеры и схемы
 

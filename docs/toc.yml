@@ -105,6 +105,9 @@ items:
             items:
               - name: Обзор
                 href: develop/add-in-manifests.md
+              - name: Манифест Teams для надстроек Office
+                href: develop/json-manifest-overview.md
+                displayName: preview
               - name: Справочник по манифесту
                 href: reference/manifest-reference.md
               - name: Расширенные переопределения
@@ -404,17 +407,18 @@ items:
           - name: Комментарии
             href: excel/excel-add-ins-comments.md
             displayName: Excel
-          - name: Типы данных (предварительная версия)
+          - name: Типы данных
+            displayName: preview
             items:
-              - name: Обзор (предварительная версия)
+              - name: Обзор
                 href: excel/excel-data-types-overview.md
-                displayName: Excel
-              - name: Понятия (предварительная версия)
+                displayName: 'Excel, preview'
+              - name: Концепции
                 href: excel/excel-data-types-concepts.md
-                displayName: Excel
-              - name: Карточки значений сущности (предварительная версия)
+                displayName: 'Excel, preview'
+              - name: Карточки значений сущности
                 href: excel/excel-data-types-entity-card.md
-                displayName: Excel
+                displayName: 'Excel, preview'
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md
             displayName: Excel
@@ -532,9 +536,9 @@ items:
           - name: Автоматическое создание метаданных JSON
             href: excel/custom-functions-json-autogeneration.md
             displayName: 'Excel, Custom Functions'
-          - name: Типы данных (предварительная версия)
+          - name: Типы данных
             href: excel/custom-functions-data-types-concepts.md
-            displayName: 'Excel, Custom Functions'
+            displayName: 'Excel, Custom Functions, preview'
           - name: Вызов API JavaScript для Excel
             href: excel/call-excel-apis-from-custom-function.md
             displayName: 'Excel, Custom Functions'
@@ -603,6 +607,9 @@ items:
       - name: Создание первой надстройки Outlook
         href: quickstarts/outlook-quickstart.md
         displayName: Outlook
+      - name: Создание надстройки Outlook с помощью манифеста Teams
+        href: quickstarts/outlook-quickstart-json-manifest.md
+        displayName: 'Outlook, preview'
       - name: Руководство по надстройке Outlook
         href: tutorials/outlook-tutorial.md
         displayName: Outlook
@@ -823,7 +830,7 @@ items:
       - name: Документация по надстройкам Word
         href: word/index.yml
         displayName: Word
-      - name: Общие сведения
+      - name: Обзор
         href: word/word-add-ins-programming-overview.md
         displayName: Word
       - name: Создание первой надстройки Word
