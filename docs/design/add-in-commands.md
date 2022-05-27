@@ -1,14 +1,14 @@
 ---
 title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 5d08ba9958d8c2f7002e32f726b087a15dbf27e0
-ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
+ms.openlocfilehash: 8a0d2c425b8603ea5aae30f6e92fdff37c3f54f5
+ms.sourcegitcommit: 690c1cc5f9027fd9859e650f3330801fe45e6e67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65313193"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65752857"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -37,7 +37,7 @@ ms.locfileid: "65313193"
 
 ### <a name="extension-points"></a>Точки расширения
 
-- Вкладки ленты: расширение возможностей встроенных вкладок или создание пользовательской вкладки.
+- Вкладки ленты — расширение встроенных вкладок или создание настраиваемой вкладки. Надстройка может содержать только одну настраиваемую вкладку.
 - Контекстные меню: расширение возможностей выбранных контекстных меню.
 
 ### <a name="control-types"></a>Типы элементов управления
@@ -66,7 +66,7 @@ ms.locfileid: "65313193"
 
 ### <a name="integration-of-built-in-office-buttons"></a>Интеграция встроенных кнопок Office
 
-Вы можете вставлять встроенные кнопки ленты Office в свои группы настраиваемых команд и настраиваемые вкладки ленты.
+Вы можете вставлять встроенные кнопки ленты Office в свои группы настраиваемых команд и настраиваемую вкладку ленты.
 
 > [!NOTE]
 > Эта функция поддерживается не всеми приложениями Office и сценариями. Дополнительные сведения см. в статье [Интеграция встроенных кнопок Office в настраиваемые вкладки](built-in-button-integration.md).

@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: Поддерживаемые платформы Office.js с использованием JavaScript API
-ms.date: 07/08/2021
+ms.date: 05/26/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 956a58433aca10895a1badeb0492a2c7b0883679
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: bedf4378c60d39a121f4d9b7031d5a6aba7e44b8
+ms.sourcegitcommit: 690c1cc5f9027fd9859e650f3330801fe45e6e67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496819"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65752850"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -47,7 +47,13 @@ ms.locfileid: "64496819"
 - [Общие наборы обязательных элементов для Office](/javascript/api/requirement-sets/common/office-add-in-requirement-sets)
 - [Наборы обязательных элементов для команд надстроек](/javascript/api/requirement-sets/common/add-in-commands-requirement-sets)
 - [Наборы обязательных элементов API диалоговых окон](/javascript/api/requirement-sets/common/dialog-api-requirement-sets)
+- [Наборы обязательных элементов источников диалоговых окон](/javascript/api/requirement-sets/common/dialog-origin-requirement-sets)
 - [Наборы обязательных элементов API идентификации](/javascript/api/requirement-sets/common/identity-api-requirement-sets)
+- [Наборы обязательных элементов для приведения изображений](/javascript/api/requirement-sets/common/image-coercion-requirement-sets)
+- [Наборы обязательных элементов cочетаний клавиш](/javascript/api/requirement-sets/common/keyboard-shortcuts-requirement-sets)
+- [Открытие набора обязательных элементов окна браузера](/javascript/api/requirement-sets/common/open-browser-window-api-requirement-sets)
+- [Наборы обязательных элементов API ленты](/javascript/api/requirement-sets/common/ribbon-api-requirement-sets)
+- [Наборы обязательных элементов в среде выполнения](/javascript/api/requirement-sets/common/shared-runtime-requirement-sets)
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других приложений Office (например, Word, Outlook и т. д.). Наборы обязательных элементов для разных приложений Office выпускаются с разной частотой. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 
