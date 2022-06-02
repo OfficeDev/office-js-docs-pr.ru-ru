@@ -3,12 +3,12 @@ title: Манифест Teams для надстроек Office (предвари
 description: Ознакомьтесь с предварительной версией манифеста JSON.
 ms.date: 05/24/2022
 ms.localizationpriority: high
-ms.openlocfilehash: f5c529a982956922ae3a76de6d09e15e710f1f03
-ms.sourcegitcommit: d06a37cd52f7389435bbbb3da3a90815ca2dce4a
+ms.openlocfilehash: 8a40f28674892545dee00e5a3138b55400d04352
+ms.sourcegitcommit: 35e7646c5ad0d728b1b158c24654423d999e0775
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672104"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65833901"
 ---
 # <a name="teams-manifest-for-office-add-ins-preview"></a>Манифест Teams для надстроек Office (предварительная версия)
 
@@ -33,7 +33,7 @@ ms.locfileid: "65672104"
 
 ### <a name="schemas-and-general-points"></a>Схемы и общие точки
 
-Существует только одна схема для [манифеста JSON предварительной версии](/microsoftteams/platform/resources/dev-preview/developer-preview-intro.md) в отличие от текущего XML-манифеста, который содержит в общей сложности семь [схем](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).  
+Существует только одна схема для [манифеста JSON предварительной версии](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) в отличие от текущего XML-манифеста, который содержит в общей сложности семь [схем](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).  
 
 ### <a name="conceptual-mapping-of-the-preview-json-and-current-xml-manifests"></a>Концептуальное сопоставление манифеста JSON предварительной версии и текущего XML-манифеста
 
