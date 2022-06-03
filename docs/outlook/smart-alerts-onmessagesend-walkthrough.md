@@ -2,14 +2,14 @@
 title: Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 description: Узнайте, как обрабатывать события при отправке в надстройке Outlook с помощью активации на основе событий.
 ms.topic: article
-ms.date: 05/26/2022
+ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0174d766423a9b70c67b0c2cf559f5b1ea24c9fe
-ms.sourcegitcommit: 35e7646c5ad0d728b1b158c24654423d999e0775
+ms.openlocfilehash: 1adced1e138ad41cef38947ddb3ffe8c273be871
+ms.sourcegitcommit: 5e678f87b6b886949cc0fcec73468a41fa39fd06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65833942"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872010"
 ---
 # <a name="use-smart-alerts-and-the-onmessagesend-and-onappointmentsend-events-in-your-outlook-add-in-preview"></a>Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 
@@ -20,7 +20,7 @@ ms.locfileid: "65833942"
 > [!IMPORTANT]
 > События `OnMessageSend` и события `OnAppointmentSend` доступны только в предварительной версии с подпиской Microsoft 365 в Outlook на Windows. Дополнительные сведения см. в разделе ["Предварительный просмотр"](autolaunch.md#how-to-preview). События предварительной версии не должны использоваться в рабочих надстройки.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 Это `OnMessageSend` событие доступно с помощью функции активации на основе событий. Чтобы понять, как настроить надстройку для использования этой функции, использовать другие доступные события, настроить предварительную версию для этого события, отладить надстройку и т. д., см. статью "[Настройка](autolaunch.md) надстройки Outlook для активации на основе событий".
 
@@ -327,3 +327,4 @@ ms.locfileid: "65833942"
 - [Настройка надстройки Outlook для активации на основе событий](autolaunch.md)
 - [Отладка надстроек на основе событий](debug-autolaunch.md)
 - [Варианты описания AppSource для надстройки на основе Outlook событий](autolaunch-store-options.md)
+- [Office кода надстроек. Использование интеллектуальных оповещений Outlook](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-check-item-categories)

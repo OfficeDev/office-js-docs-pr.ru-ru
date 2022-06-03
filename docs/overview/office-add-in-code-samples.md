@@ -1,14 +1,14 @@
 ---
 title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
-ms.date: 02/17/2022
+ms.date: 06/02/2022
 localization_priority: high
-ms.openlocfilehash: e727e1df0bfb02eade1133e575234554f7c2b144
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 1ad5fcb3ed860832b093dc6aef212e9d1176f298
+ms.sourcegitcommit: 5e678f87b6b886949cc0fcec73468a41fa39fd06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745960"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872017"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
@@ -48,6 +48,7 @@ ms.locfileid: "63745960"
 | [Шифрование вложений, обработка участников в приглашениях на собрания и реагирование на изменения даты и времени встречи](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-encrypt-attachments) | Используйте активацию на основе событий для шифрования вложений при добавлении пользователем. Также используйте обработку событий для получателей, измененных в приглашении на собрание, и изменений даты и времени начала и окончания в приглашении на собрание. |
 | [Использование активации Outlook на основе событий для пометки внешних получателей](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-tag-external) | Используйте активацию на основе событий для запуска надстройки Outlook при изменении получателей в процессе создания сообщения. Надстройка также использует API `appendOnSendAsync` для добавления заявления об отказе. |
 | [Использование активации Outlook на основе событий для задания подписи](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-set-signature) | Используйте активацию на основе событий для запуска надстройки Outlook при создании нового сообщения или встречи. Надстройка может отвечать на события, даже если область задач не открыта. Она также использует API `setSignatureAsync`. |
+| [Использование интеллектуальных оповещений Outlook](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-check-item-categories) | Используйте интеллектуальные оповещения Outlook, чтобы убедиться, что требуемые цветовые категории применяются к новому сообщению или встрече перед его отправкой. |
 
 ## <a name="word"></a>Word
 
