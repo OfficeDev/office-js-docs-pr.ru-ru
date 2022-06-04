@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Outlook с помощью манифеста Teams (предварительная версия)
 description: Узнайте, как создать простую надстройку области задач Outlook с использованием манифеста JSON.
-ms.date: 05/24/2022
+ms.date: 06/02/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 4e3cf937e18fba69d37c8df6a1d43a019a7cd1e9
-ms.sourcegitcommit: d06a37cd52f7389435bbbb3da3a90815ca2dce4a
+ms.openlocfilehash: 203440e8fca2277b2abd0ed10af3199cc8751b61
+ms.sourcegitcommit: 81f6018ac9731ff73e36d30f5ff10df21504c093
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672098"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65891958"
 ---
 # <a name="build-an-outlook-add-in-with-a-teams-manifest-preview"></a>Создание надстройки Outlook с помощью манифеста Teams (предварительная версия)
 
@@ -166,8 +166,8 @@ ms.locfileid: "65672098"
         event.completed();
     }
 
-    // Put the function on the global namespace
-    g.insertHelloWorld = insertHelloWorld;
+    // Register the function with Office
+    Office.actions.associate("insertHelloWorld", insertHelloWorld);
     ```
 
 1. Откройте файл **./manifest/manifest.json**.
