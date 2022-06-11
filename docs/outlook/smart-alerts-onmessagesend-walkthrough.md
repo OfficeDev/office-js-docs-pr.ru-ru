@@ -2,14 +2,14 @@
 title: Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 description: Узнайте, как обрабатывать события при отправке в надстройке Outlook с помощью активации на основе событий.
 ms.topic: article
-ms.date: 06/02/2022
+ms.date: 06/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 1adced1e138ad41cef38947ddb3ffe8c273be871
-ms.sourcegitcommit: 5e678f87b6b886949cc0fcec73468a41fa39fd06
+ms.openlocfilehash: ed1ce7e1c05bec9a09eefd36e935d1037cf80d98
+ms.sourcegitcommit: 2eeb0423a793b3a6db8a665d9ae6bcb10e867be3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65872010"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66019614"
 ---
 # <a name="use-smart-alerts-and-the-onmessagesend-and-onappointmentsend-events-in-your-outlook-add-in-preview"></a>Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 
@@ -49,7 +49,7 @@ ms.locfileid: "65872010"
         <!-- Event-based activation happens in a lightweight runtime.-->
         <Runtimes>
           <!-- HTML file including reference to or inline JavaScript event handlers.
-               This is used by Outlook on the web and Outlook on the new Mac UI preview. -->
+               This is used by Outlook on the web and on the new Mac UI. -->
           <Runtime resid="WebViewRuntime.Url">
             <!-- JavaScript file containing event handlers. This is used by Outlook Desktop. -->
             <Override type="javascript" resid="JSRuntime.Url"/>
@@ -262,7 +262,7 @@ ms.locfileid: "65872010"
     > Если ваша надстройка не была загружена автоматически неопубликованным приложением, следуйте инструкциям в разделе "Загрузка неопубликованных Outlook надстроек для тестирования, чтобы вручную загрузить неопубликованную надстройку в Outlook.[](../outlook/sideload-outlook-add-ins-for-testing.md#sideload-manually)
 
 1. В Outlook на Windows создайте новое сообщение и задайте тему. В текст добавьте текст, например "Привет, посмотрите этот рисунок моей собаки!".
-1. Отправка сообщения. Должно появиться диалоговое окно с рекомендацией добавить вложение.
+1. Отправьте сообщение. Должно появиться диалоговое окно с рекомендацией добавить вложение.
 
     ![Диалоговое окно, в котором пользователю рекомендуется включить вложение.](../images/outlook-win-smart-alert.png)
 
