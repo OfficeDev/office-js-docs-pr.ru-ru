@@ -1,30 +1,28 @@
 ---
 title: Работа с фигурами с помощью PowerPoint API JavaScript
-description: Узнайте, как добавлять, удалять и форматирование фигур на PowerPoint слайдах.
-ms.date: 02/22/2022
+description: Узнайте, как добавлять, удалять и форматировать фигуры на PowerPoint слайдах.
+ms.date: 06/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 29e2ad48cf4a33fe17c06538d3a22321aebd5561
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 7f314cfebb26450e79dbabe1e65ac9e4c8fe9799
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746986"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091106"
 ---
-# <a name="work-with-shapes-using-the-powerpoint-javascript-api-preview"></a>Работа с фигурами с PowerPoint API JavaScript (предварительный просмотр)
+# <a name="work-with-shapes-using-the-powerpoint-javascript-api"></a>Работа с фигурами с помощью PowerPoint API JavaScript
 
-В этой статье описывается использование геометрических фигур, линий и текстовых полей в сочетании с API [Shape](/javascript/api/powerpoint/powerpoint.shape) и [ShapeCollection](/javascript/api/powerpoint/powerpoint.shapecollection) .
-
-[!INCLUDE [Information about using preview APIs](../includes/using-preview-apis-host.md)]
+В этой статье описывается, как использовать геометрические фигуры, линии и текстовые поля в сочетании с [API-интерфейсами Shape и ShapeCollection](/javascript/api/powerpoint/powerpoint.shapecollection).[](/javascript/api/powerpoint/powerpoint.shape)
 
 ## <a name="create-shapes"></a>Создание фигур
 
-Фигуры создаются и хранятся в коллекции фигур слайда (`slide.shapes`). `ShapeCollection` имеет несколько `.add*` методов для этой цели. Все фигуры имеют имена и ИД, созданные для них при добавлении в коллекцию. Это и `name` `id` свойства, соответственно. `name` может быть установлено вашей надстройки.
+Фигуры создаются и хранятся в коллекции фигур слайда ().`slide.shapes` `ShapeCollection` имеет несколько `.add*` методов для этой цели. Все фигуры имеют имена и идентификаторы, созданные для них при добавлении в коллекцию. Это свойства `name` `id` и свойства соответственно. `name` может быть задано надстройка.
 
 ### <a name="geometric-shapes"></a>Геометрические фигуры
 
-Геометрическая фигура создается с одной из перегрузок `ShapeCollection.addGeometricShape`. Первый параметр — это либо [enum GeometricShapeType](/javascript/api/powerpoint/powerpoint.geometricshapetype) , либо строковой эквивалент одного из значений. Существует необязательный второй параметр типа [ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указывать начальный размер фигуры и ее положение относительно верхней и левой сторон слайда, измеряемого в точках. Или эти свойства можно установить после создания фигуры.
+Геометрическая фигура создается с одной из перегрузок `ShapeCollection.addGeometricShape`. Первый параметр — это перечисление [GeometrShapeType](/javascript/api/powerpoint/powerpoint.geometricshapetype) или строка, эквивалентная одному из значений перечисления. Существует необязательный второй параметр типа [ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указывать начальный размер фигуры и ее положение относительно верхней и левой сторон слайда, измеряемого в точках. Или эти свойства можно задать после создания фигуры.
 
-В следующем примере кода создается прямоугольник с именем **"Square"** , который находится в 100 точках сверху и слева от слайда. Метод возвращает объект `Shape` .
+В следующем примере кода создается прямоугольник с именем **Square** , который располагается на 100 точек сверху и слева от слайда. Метод возвращает `Shape` объект.
 
 ```js
 // This sample creates a rectangle positioned 100 points from the top and left sides
@@ -43,10 +41,10 @@ await PowerPoint.run(async (context) => {
 
 ### <a name="lines"></a>Lines
 
-Создается строка с одной из перегрузок `ShapeCollection.addLine`. Первый параметр — это либо [enum ConnectorType](/javascript/api/powerpoint/powerpoint.connectortype) , либо строковой эквивалент одного из значений, чтобы указать, как линия соединится между конечными точками. Существует необязательный второй параметр [типа ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указать точки запуска и окончания строки. Или эти свойства можно установить после создания фигуры. Метод возвращает объект `Shape` .
+Создается строка с одной из перегрузок `ShapeCollection.addLine`. Первый параметр — это либо перечисление [ConnectorType](/javascript/api/powerpoint/powerpoint.connectortype) , либо строка, эквивалентная одному из значений перечисления, чтобы указать, как строка соединяется между конечными точками. Существует необязательный второй параметр типа [ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указывать конечную и конечную точки строки. Или эти свойства можно задать после создания фигуры. Метод возвращает `Shape` объект.
 
 > [!NOTE]
-> Когда фигура является строкой, `top` `left` `Shape` `ShapeAddOptions` свойства и свойства объектов и объектов указывают отправную точку линии относительно верхних и левых краев слайда. Свойства `height` и `width` свойства указывают конечную точку строки *относительно точки начала*. Таким образом, end point relative to the top and left edges of the slide is (`top` + `height`) by (`left` + `width`). Единица измерения для всех свойств — это точки и разрешены отрицательные значения.
+> Если фигура является линией, `top` `left` `Shape` `ShapeAddOptions` свойства и объекты указывают начальную точку линии относительно верхнего и левого краев слайда. И `height` свойства `width` указывают конечную точку строки *относительно начальной точки*. Таким образом, конечная точка относительно верхнего и левого краев слайда будет (`top` + `height`) по (`left` + `width`). Единицей измерения для всех свойств являются точки, а отрицательные значения разрешены.
 
 В следующем примере кода создается прямая линия на слайде.
 
@@ -62,7 +60,7 @@ await PowerPoint.run(async (context) => {
 
 ### <a name="text-boxes"></a>Надписи
 
-Текстовое поле создается [методом addTextBox](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-addtextbox-member(1)) . Первый параметр — это текст, который должен сначала отображаться в поле. Существует необязательный второй параметр типа [ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указать начальный размер текстового окна и его положение относительно верхней и левой сторон слайда. Или эти свойства можно установить после создания фигуры.
+Текстовое поле создается с помощью [метода addTextBox](/javascript/api/powerpoint/powerpoint.shapecollection#powerpoint-powerpoint-shapecollection-addtextbox-member(1)) . Первый параметр — это текст, который должен изначально отображаться в поле. Существует необязательный второй параметр типа [ShapeAddOptions](/javascript/api/powerpoint/powerpoint.shapeaddoptions) , который может указывать начальный размер текстового поля и его положение относительно верхней и левой сторон слайда. Или эти свойства можно задать после создания фигуры.
 
 В следующем примере кода показано, как создать текстовое поле на первом слайде.
 
@@ -80,15 +78,15 @@ await PowerPoint.run(async (context) => {
 });
 ```
 
-## <a name="move-and-resize-shapes"></a>Перемещение и размер фигур
+## <a name="move-and-resize-shapes"></a>Перемещение и изменение размеров фигур
 
-Фигуры сидят поверх слайда. Их размещение определяется свойствами `left` `top` и свойствами. Они выступают в качестве маржи от соответствующих краев слайда, измеряемого в точках, `left: 0` `top: 0` с верхним левом углу и в левом верхнем углу. Размер фигуры определяется свойствами `height` и свойствами `width` . Код может перемещать или реамизировать форму, сбросив эти свойства. (Эти свойства имеют несколько иное значение, когда фигура является строкой. См. [строки](#lines).)
+Фигуры находятся в верхней части слайда. Их размещение определяется свойствами `left` и свойствами `top` . Они действуют как поля от соответствующих краев слайда, измеряемые в точках, `left: 0` `top: 0` с верхним левым углом и справа от них. Размер фигуры определяется свойствами `height` и свойствами `width` . Код может перемещать или изменить размер фигуры, сбрасывая эти свойства. (Эти свойства имеют немного другое значение, если фигура является линией. См. [строки](#lines).)
 
 ## <a name="text-in-shapes"></a>Текст в фигурах
 
-Геометрические фигуры могут содержать текст. Формы имеют свойство `textFrame` типа [TextFrame](/javascript/api/powerpoint/powerpoint.textframe). Объект `TextFrame` управляет вариантами отображения текста (например, полями и переполнением текста). `TextFrame.textRange` — объект [TextRange](/javascript/api/powerpoint/powerpoint.textrange) с текстовым контентом и настройками шрифтов.
+Геометрические фигуры могут содержать текст. Фигуры имеют свойство `textFrame` типа [TextFrame](/javascript/api/powerpoint/powerpoint.textframe). Объект `TextFrame` управляет параметрами отображения текста (например, полями и переполнением текста). `TextFrame.textRange` — это [объект TextRange](/javascript/api/powerpoint/powerpoint.textrange) с текстовым содержимым и параметрами шрифта.
 
-В следующем примере кода создается геометрическая фигура с именем **"Скобки"** с текстом **"Образ текста"**. Он также регулирует форму и текстовые цвета, а также задает вертикальное выравнивание текста в центре.
+В следующем примере кода создается геометрическая фигура с именем **"Фигурные** скобки" с текстом **"Текст фигуры"**. Он также изменяет цвета фигуры и текста, а также устанавливает вертикальное выравнивание текста по центру.
 
 ```js
 // This sample creates a light blue rectangle with braces ("{}") on the left and right ends
@@ -111,7 +109,7 @@ await PowerPoint.run(async (context) => {
 
 ## <a name="delete-shapes"></a>Удаление фигур
 
-Фигуры удаляются с слайда методом `Shape` объекта `delete` .
+Фигуры удаляются со слайда с помощью `Shape` метода `delete` объекта.
 
 В следующем примере кода показано, как удалить фигуры.
 

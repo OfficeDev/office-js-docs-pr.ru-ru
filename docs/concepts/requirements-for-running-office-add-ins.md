@@ -1,14 +1,14 @@
 ---
 title: Требования для запуска надстроек Office
 description: Сведения о требованиях к клиенту и серверу, которые конечный пользователь должен выполнять Office надстройки.
-ms.date: 05/01/2022
+ms.date: 06/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a9a86c7a68282135904dba981eeecb27a28e94e5
-ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
+ms.openlocfilehash: 06699e8a2c498eb6ad2f9832a8369beef5af4786
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65313200"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091036"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -49,8 +49,8 @@ ms.locfileid: "65313200"
 - Microsoft Edge должен быть установлен, но не должен быть браузером по умолчанию. Для поддержки Office надстроек клиент Office, который выступает в качестве узла, использует компоненты браузера, которые являются частью Microsoft Edge.
 
   > [!NOTE]
+  >
   > - Строго говоря, надстройки можно разрабатывать на компьютере, на котором установлен Internet Explorer 11, но не Microsoft Edge. Однако IE используется для запуска надстроек только в некоторых старых сочетаниях Windows и Office версиях. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](browsers-used-by-office-web-add-ins.md). Мы не рекомендуем использовать такие старые среды в качестве основной среды разработки надстроек. Однако если у вас, скорее всего, есть клиенты надстройки, которые работают в этих старых сочетаниях, рекомендуется поддерживать Internet Explorer. Дополнительные сведения см. в [разделе "Поддержка Internet Explorer 11"](../develop/support-ie-11.md).
-  > 
   > - Для работы веб-надстроек Office необходимо отключить конфигурацию усиленной безопасности Internet Explorer (ESC). Если вы используете компьютер с Windows Server в качестве клиента при разработке надстроек, учитывайте, что конфигурация ESC включена по умолчанию в Windows Server.
 
 - По умолчанию используется один из следующих браузеров: Internet Explorer 11 или последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
@@ -79,7 +79,7 @@ Outlook mac, который распространяется как часть M
 |Outlook для Android|— Android планшеты<br>— Android смартфоны|— Android 4.4 KitKat или более поздней версии;|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для Android.<sup> 1</sup>|
 |Outlook для iOS|— iPad планшеты<br>— iPhone смартфоны|— iOS 11 или более поздней версии.|В последнем обновлении Приложения Microsoft 365 для бизнеса или Exchange Online|Браузер неприменим. Используйте собственное приложение для iOS.<sup> 1</sup>|
 |Outlook в Интернете (современный)<sup>2</sup>|— iPad 2 или более поздней версии;<br>— Android планшеты |— iOS 5 или более поздней версии<br>— Android 4.4 KitKat или более поздней версии;|На Microsoft 365 Exchange Online|— Microsoft Edge<br>— Chrome<br>— Firefox<br>— Safari|
-|Outlook в Интернете (классическая версия)|— iPhone 4 или более поздней версии.<br>— iPad 2 или более поздней версии;<br>— iPod Touch 4 или более поздней версии|— iOS 5 или более поздней версии|В локальной среде Exchange Server 2013 или более поздней <sup>версии 3</sup>|— Safari|
+|Outlook в Интернете (классическая версия)|— iPhone 4 или более поздней версии.<br>— iPad 2 или более поздней версии;<br>— iPod Touch 4 или более поздней версии|— iOS 5 или более поздней версии|В локальной среде Exchange Server 2013 или более поздней<sup>версии 3</sup>|— Safari|
 
 > [!NOTE]
 > <sup>1</sup> OWA для Android, OWA для iPad и OWA для iPhone собственных приложений [устарели](https://support.microsoft.com/office/076ec122-4576-4900-bc26-937f84d25a4b).

@@ -559,9 +559,6 @@ items:
               - name: Аутентификация для функций без пользовательского интерфейса
                 href: excel/custom-functions-authentication.md
                 displayName: 'Excel, Custom Functions'
-              - name: Отладка для функций без пользовательского интерфейса
-                href: excel/custom-functions-debugging.md
-                displayName: 'Excel, Custom Functions'
               - name: Время выполнения
                 href: excel/custom-functions-runtime.md
                 displayName: 'Excel, Custom Functions'
@@ -570,6 +567,9 @@ items:
             displayName: 'Excel, Custom Functions'
           - name: Веб-запросы
             href: excel/custom-functions-web-reqs.md
+            displayName: 'Excel, Custom Functions'
+          - name: Отладка
+            href: excel/custom-functions-debugging.md
             displayName: 'Excel, Custom Functions'
           - name: Устранение неполадок
             href: excel/custom-functions-troubleshooting.md

@@ -2,14 +2,14 @@
 title: Создание Outlook мобильной надстройки для поставщика онлайн-собраний
 description: Описывается, как настроить надстройку Outlook для поставщика услуг онлайн-собраний.
 ms.topic: article
-ms.date: 05/01/2022
+ms.date: 06/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ada539c323ce6fdf578c26c221eb6090280b5a0a
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: 3a8f21caf40b9a0b9a351e4ac6a405201923335b
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244865"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091120"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание Outlook мобильной надстройки для поставщика онлайн-собраний
 
@@ -194,34 +194,33 @@ ms.locfileid: "65244865"
 
 ## <a name="testing-and-validation"></a>Тестирование и проверка
 
-Следуйте обычным рекомендациям [по проверке и проверке надстройки](testing-and-tips.md). После [загрузки неопубликованных](sideload-outlook-add-ins-for-testing.md) Outlook в Интернете, Windows или Mac перезапустите Outlook на мобильном устройстве Android или iOS. Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype переключатель заменен вашим собственным.
+Следуйте обычным рекомендациям [по проверке и проверке надстройки](testing-and-tips.md). После [загрузки неопубликованных](sideload-outlook-add-ins-for-testing.md) Outlook в Интернете, Windows или Mac перезапустите Outlook на Android или iOS мобильном устройстве. Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype переключатель заменен вашим собственным.
 
 ### <a name="create-meeting-ui"></a>Создание пользовательского интерфейса собрания
 
 Организатор собрания должен видеть экраны, аналогичные следующим трем изображениям при создании собрания.
 
-[![Экран создания собрания на Android — выключатель Contoso.](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [![Экран создания собрания на Android — загрузка переключателя Contoso.](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [![Экран создания собрания на Android — переключатель Contoso.](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
+[![Экран создания собрания на Android с выключенным переключательом Contoso.](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [![Экран создания собрания на Android с переключение загрузки Contoso.](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [![На экране создания собрания Android с включенной кнопкой "Contoso".](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
 
 ### <a name="join-meeting-ui"></a>Присоединение к пользовательскому интерфейсу собрания
 
 Как участник собрания вы должны увидеть экран, аналогичный следующему изображению, при просмотре собрания.
 
-[![Снимок экрана: экран присоединения к собранию на Android.](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
+[![Экран присоединения к собранию на Android.](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
 
 > [!IMPORTANT]
 > Если ссылка "Присоединиться" не отображается, возможно, шаблон собрания по сети для вашей службы не зарегистрирован на наших серверах. Дополнительные сведения см. в разделе ["Регистрация шаблона](#register-your-online-meeting-template) собрания по сети".
 
 ## <a name="register-your-online-meeting-template"></a>Регистрация шаблона собрания по сети
 
-Если вы хотите зарегистрировать шаблон собрания по сети для службы, можно создать GitHub с подробными сведениями. После этого мы свяжитесь с вами для координации временной шкалы регистрации.
+Регистрация надстройки собрания по сети не является обязательной. Это применимо только в том случае, если вы  хотите добавить кнопку "Присоединиться" на собраниях в дополнение к ссылке на собрание. После разработки надстройки online-meeting и ее регистрации создайте GitHub с помощью следующих рекомендаций. Мы свяжитесь с вами для координации временной шкалы регистрации.
 
-1. Перейдите к **разделу "** Отзывы" в конце этой статьи.
-1. Нажмите **ссылку на эту** страницу.
+1. Создайте [новую GitHub проблемы](https://github.com/OfficeDev/office-js/issues/new).
 1. **Задайте для** новой проблемы значение "Register the online-meeting template for my-service" (Регистрация шаблона собрания по сети для службы), `my-service` заменив ее именем службы.
-1. В тексте проблемы замените строку "[Введите здесь отзыв]" строкой, заданной в переменной или аналогичной переменной из раздела "Реализация добавления сведений о собрании по сети" `newBody` ранее в этой статье.[](#implement-adding-online-meeting-details)
+1. В тексте проблемы замените существующий текст строкой, `newBody` заданной в переменной или аналогичной переменной из раздела "Реализация добавления сведений о собрании по сети" ранее в этой статье.[](#implement-adding-online-meeting-details)
 1. Нажмите **кнопку "Отправить новую проблему"**.
 
-![снимок экрана с новым GitHub с примером содержимого Contoso.](../images/outlook-request-to-register-online-meeting-template.png)
+![Новый GitHub проблем с примером содержимого Contoso.](../images/outlook-request-to-register-online-meeting-template.png)
 
 ## <a name="available-apis"></a>Доступные API
 
