@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 08/04/2021
+ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 7a463ab61b90914c6fcaebff42599723a3a7e9ee
-ms.sourcegitcommit: 8f7d84c33c61c9f724f956740ced01a83f62ddc6
+ms.openlocfilehash: 57f87d12a5712fb329726a0f405e17b69eddb865
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64605530"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090861"
 ---
 # <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
@@ -240,3 +240,4 @@ vue create my-add-in
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

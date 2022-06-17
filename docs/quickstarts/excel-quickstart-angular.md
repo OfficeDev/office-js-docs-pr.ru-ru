@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки области задач Excel с помощью Angular
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Angular.
-ms.date: 08/04/2021
+ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: f7c4ff77833d4eabc854718c9156a4da0c6e7cc3
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 372649188d8f617f65e0c2eddc4d758047b1a2cc
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154505"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091155"
 ---
 # <a name="use-angular-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Angular
 
@@ -78,3 +78,4 @@ ms.locfileid: "59154505"
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 02/25/2022
+ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: bd503b9f51bb4c97bc8d0cfa144d448bb4ea649d
-ms.sourcegitcommit: 3d7792b1f042db589edb74a895fcf6d7ced63903
+ms.openlocfilehash: 9b9a9a9d7d7d14fcc7d077c0a659e7404bd9e141
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2022
-ms.locfileid: "63511386"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091176"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -228,3 +228,4 @@ ms.locfileid: "63511386"
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

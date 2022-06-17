@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 02/11/2022
+ms.date: 06/10/2022
 ms.prod: onenote
 ms.localizationpriority: high
-ms.openlocfilehash: 7d806922785f97430619bd74eb04c7c42595aa4e
-ms.sourcegitcommit: 61c183a5d8a9d889b6934046c7e4a217dc761b80
+ms.openlocfilehash: 9b5f4dd941ed8cc107bee04bc67a368520439948
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62855578"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090854"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -120,3 +120,4 @@ try {
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](../reference/overview/onenote-add-ins-javascript-reference.md)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

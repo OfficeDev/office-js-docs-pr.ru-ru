@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки области задач Excel с помощью React
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и React.
-ms.date: 08/04/2021
+ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: b97bd4cdf2190f23a99b9fba314906f4cac35aad
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
+ms.openlocfilehash: 08b857b2e6f998d0fe097dee03b5a8a98e32d1cf
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59154494"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091162"
 ---
 # <a name="use-react-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью React
 
@@ -77,3 +77,4 @@ ms.locfileid: "59154494"
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

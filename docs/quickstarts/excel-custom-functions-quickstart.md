@@ -1,15 +1,15 @@
 ---
-ms.date: 03/23/2022
+ms.date: 06/10/2022
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: cac81cb25b9880a3057e2246d39ac226666a4cb4
-ms.sourcegitcommit: 64942cdd79d7976a0291c75463d01cb33a8327d8
+ms.openlocfilehash: aa44caf014a6d617112a616e96e1c67079c4c385
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64404710"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091085"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
@@ -33,16 +33,16 @@ ms.locfileid: "64404710"
 
     - **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     - **Выберите тип сценария:** `JavaScript`
-    - **Как вы хотите назвать надстройку?** `starcount`
+    - **Как вы хотите назвать надстройку?** `My custom functions add-in`
 
-    :::image type="content" source="../images/starcountPrompt.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
+    :::image type="content" source="../images/yo-office-excel-cf-quickstart.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
 
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
 1. Генератор Yeoman предоставит вам инструкции в командной строке по действиям с проектом, но вам нужно их проигнорировать и продолжить выполнять наши инструкции. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd starcount
+    cd "My custom functions add-in"
     ```
 
 1. Выполните построение проекта.
@@ -105,3 +105,4 @@ npm run start:desktop
 - [Обзор пользовательских функций](../excel/custom-functions-overview.md)
 - [Метаданные пользовательских функций](../excel/custom-functions-json.md)
 - [Среда выполнения для пользовательских функций Excel](../excel/custom-functions-runtime.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

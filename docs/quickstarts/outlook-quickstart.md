@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 02/28/2022
+ms.date: 06/10/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 356373320919507b81c69cca323965c4d087c7d4
-ms.sourcegitcommit: 7b6ee73fa70b8e0ff45c68675dd26dd7a7b8c3e9
+ms.openlocfilehash: 56f43e157db9875165689af59ade50b0752fe8dc
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63511395"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091099"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -17,7 +17,7 @@ ms.locfileid: "63511395"
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
-Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) или Visual Studio. Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio. Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.
+Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](../develop/yeoman-generator-overview.md) или Visual Studio. Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio. Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.
 
 # <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
@@ -293,3 +293,7 @@ ms.locfileid: "63511395"
 Поздравляем! Вы успешно создали свою первую надстройку для области задач Outlook! Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).
 
 ---
+
+## <a name="see-also"></a>См. также
+
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

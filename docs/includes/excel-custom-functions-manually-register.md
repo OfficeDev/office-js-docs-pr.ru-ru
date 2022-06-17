@@ -6,9 +6,9 @@
 
     :::image type="content" source="../images/select-insert.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной стрелкой &quot;Мои надстройки&quot;":::
 
-1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите вашу надстройку **starcount**, чтобы ее зарегистрировать.
+1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **Моя надстройка с настраиваемыми функциями**, чтобы ее зарегистрировать.
 
-    :::image type="content" source="../images/list-starcount.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной надстройкой &quot;Пользовательские функции Excel&quot; в списке &quot;Мои надстройки&quot;.":::
+    :::image type="content" source="../images/excel-cf-tutorial-register.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной надстройкой &quot;Пользовательские функции Excel&quot; в списке &quot;Мои надстройки&quot;.":::
 
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 

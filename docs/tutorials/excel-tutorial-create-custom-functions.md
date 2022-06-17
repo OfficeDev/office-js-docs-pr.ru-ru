@@ -1,15 +1,15 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: В этом руководстве вы создадите надстройку Excel, содержащую пользовательскую функцию, которая может выполнять вычисления, запрашивать веб-данные или потоковые веб-данные.
-ms.date: 03/23/2022
+ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 984a2090a70360af4f361bb531190a7ee2a05c4c
-ms.sourcegitcommit: 64942cdd79d7976a0291c75463d01cb33a8327d8
+ms.openlocfilehash: 9550986edcbbed56c69e25e183c304ebe6f6cc07
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64404732"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091073"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -42,9 +42,9 @@ ms.locfileid: "64404732"
 
     - **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     - **Выберите тип сценария:** `JavaScript`
-    - **Как вы хотите назвать надстройку?** `starcount`
+    - **Как вы хотите назвать надстройку?** `My custom functions add-in`
 
-    :::image type="content" source="../images/starcountPrompt.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
+    :::image type="content" source="../images/yo-office-excel-cf-quickstart.png" alt-text="Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, запрашивающий проекты пользовательских функций.":::
 
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
@@ -53,7 +53,7 @@ ms.locfileid: "64404732"
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd starcount
+    cd "My custom functions add-in"
     ```
 
 1. Выполните построение проекта.
@@ -105,7 +105,7 @@ npm run start:desktop
 
 Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Затем вы создадите пользовательскую функцию с именем `getStarCount`, показывающую, сколько звезд имеет данный репозиторий Github.
 
-1. В проекте **starcount** найдите файл **./src/functions/functions.js** и откройте его в редакторе кода.
+1. В проекте **Моя надстройка с настраиваемыми функциями** найдите файл **./src/functions/functions.js** и откройте его в редакторе кода.
 
 1. В **function.js** добавьте следующий код.
 
@@ -151,9 +151,9 @@ npm run start:desktop
 
     :::image type="content" source="../images/select-insert.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной стрелкой &quot;Мои надстройки&quot;":::
 
-1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите вашу надстройку **starcount**, чтобы ее зарегистрировать.
+1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **Моя надстройка с настраиваемыми функциями**, чтобы ее зарегистрировать.
 
-    :::image type="content" source="../images/list-starcount.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной надстройкой &quot;Пользовательские функции Excel&quot; в списке &quot;Мои надстройки&quot;.":::
+    :::image type="content" source="../images/excel-cf-tutorial-register.png" alt-text="Снимок экрана: лента &quot;Вставка&quot; в Excel для Windows с выделенной надстройкой &quot;Пользовательские функции Excel&quot; в списке &quot;Мои надстройки&quot;.":::
 
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
@@ -177,7 +177,7 @@ npm run start:desktop
 
 В примере кода ниже вы заметите наличие двух функций, `currentTime` и `clock`. Функция `currentTime` — это статическая функция, которая не использует потоковую передачу функций. Она возвращает дату в виде строки. Функция `clock` использует функцию `currentTime` для обеспечения нового времени каждую секунду для ячейки в Excel. В ней используется `invocation.setResult` для передачи времени в ячейку Excel и `invocation.onCanceled` для обработки отмены функции. 
 
-Проект **starcount** уже содержит две следующие функции в файле **./src/functions/functions.js**.
+Проект **Моя надстройка с настраиваемыми функциями** уже содержит две следующие функции в файле **./src/functions/functions.js**.
 
 ```JS
 /**

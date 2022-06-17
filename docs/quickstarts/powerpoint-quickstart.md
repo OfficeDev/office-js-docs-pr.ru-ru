@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 01/13/2022
+ms.date: 06/10/2022
 ms.prod: powerpoint
 ms.localizationpriority: high
-ms.openlocfilehash: c85205ac6e7adf5a265e6b68a185d1cacf7298a1
-ms.sourcegitcommit: 45f7482d5adcb779a9672669360ca4d8d5c85207
+ms.openlocfilehash: df4e7ced6c244f4ccf286ce2a9718e22459a144e
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62222208"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091169"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -259,3 +259,4 @@ ms.locfileid: "62222208"
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
+- [Использование Visual Studio Code для публикации](../publish/publish-add-in-vs-code.md#using-visual-studio-code-to-publish)

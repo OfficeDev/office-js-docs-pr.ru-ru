@@ -1,14 +1,14 @@
 ---
 title: Развертывание и публикация надстроек Office
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
-ms.date: 12/07/2021
+ms.date: 06/13/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 81c02a36becb9ef3244f7754dda44d064cdd9925
-ms.sourcegitcommit: e392e7f78c9914d15c4c2538c00f115ee3d38a26
+ms.openlocfilehash: c6a6410ac2466995ceaf723d08a8735a3c4886c2
+ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61331080"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091134"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -18,7 +18,7 @@ ms.locfileid: "61331080"
 |:---------|:------------|
 |[Загрузка неопубликованного приложения](../testing/test-debug-office-add-ins.md#sideload-an-office-add-in-for-testing)|При разработке для проверки работы надстройки в Windows, iPad, Mac или в браузере. (Не для введенных в эксплуатацию надстроек).|
 |[Общая сетевая папка](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|Для тестирования в процессе разработки надстройки, работающей в Windows, после ее публикации на сервере, отличном от localhost. (Не для типовых надстроек и не для тестирования на iPad, Mac или в Интернете).|
-|[AppSource](/office/dev/store/submit-to-appsource-via-partner-center)|Для распространения надстройки среди всех пользователей.|
+|[AppSource][AppSource]|Для распространения надстройки среди всех пользователей.|
 |[Центр администрирования Microsoft 365](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)|Для распространения надстройки среди пользователей в организации с помощью Центра администрирования Microsoft 365 в процессе облачного развертывания. Реализуется с помощью [интегрированных приложений](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) или [централизованного развертывания](/microsoft-365/admin/manage/centralized-deployment-of-add-ins). |
 |[Каталог SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)|В локальной среде для распространения надстройки в организации.|
 |[Сервер Exchange Server](#outlook-add-in-deployment)|В локальной или облачной среде для распространения надстроек Outlook.|
@@ -33,9 +33,9 @@ ms.locfileid: "61331080"
 
 | Точка расширения | Загрузка неопубликованного приложения | Общая сетевая папка | AppSource | Центр администрирования Microsoft 365 | Каталог SharePoint\* |
 |:----------------|:-----------:|:-------------:|:---------:|:--------------------------:|:--------------------:|
-| Контент         | X           | X             | X         | X                          | X                    |
-| Область задач       | X           | X             | X         | X                          | X                    |
-| Команда         | X           | X             | X         | X                          |                      |
+| Контент         | Поддерживается   | Поддерживается     | Поддерживается | Поддерживается                  | Поддерживается            |
+| Для области задач       | Поддерживается   | Поддерживается     | Поддерживается | Поддерживается                  | Поддерживается            |
+| Команда         | Поддерживается   | Поддерживается     | Поддерживается | Поддерживается                  | Недоступно        |
 
 &#42; Каталоги SharePoint не поддерживают Office для Mac.
 
@@ -43,8 +43,8 @@ ms.locfileid: "61331080"
 
 | Точка расширения | Загрузка неопубликованного приложения | AppSource | Сервер Exchange Server |
 |:----------------|:-----------:|:---------:|:---------------:|
-| Почтовое приложение        | X           | X         | X               |
-| Команда         | X           | X         | X               |
+| Почтовое приложение        | Поддерживается   | Поддерживается | Поддерживается       |
+| Команда         | Поддерживается   | Поддерживается | Поддерживается       |
 
 ## <a name="production-deployment-methods"></a>Методы развертывания в рабочей среде
 
@@ -87,9 +87,11 @@ ms.locfileid: "61331080"
 
 - [Загрузка неопубликованных надстроек Outlook для тестирования](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 - [Отправка в AppSource][AppSource]
+- [AppSource](https://appsource.microsoft.com/marketplace/apps?src=office&page=1)
 - [Рекомендации по разработке надстроек Office](../design/add-in-design.md)
 - [Создание эффективных описаний в AppSource](/office/dev/store/create-effective-office-store-listings)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 - [Что такое Microsoft Commercial Marketplace?](/azure/marketplace/overview)
+- [Страница публикации приложения Microsoft Dev Center](https://developer.microsoft.com/microsoft-teams/app-publishing)
 
 [AppSource]: /office/dev/store/submit-to-appsource-via-partner-center
