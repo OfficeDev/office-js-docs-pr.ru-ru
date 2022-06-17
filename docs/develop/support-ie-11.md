@@ -3,12 +3,12 @@ title: Поддержка Internet Explorer 11
 description: Узнайте, как поддерживать JavaScript в Internet Explorer 11 и ES5 в надстройке.
 ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 70fea604c17525836857b7cff4c8670da757f2a6
-ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
+ms.openlocfilehash: 1cb641f1ed1a75fcff23291d1fa566bbf6dc008b
+ms.sourcegitcommit: fb3b1c6055e664d015703623661d624251ceb6b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65313179"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66136427"
 ---
 # <a name="support-internet-explorer-11"></a>Поддержка Internet Explorer 11
 
@@ -79,9 +79,9 @@ if (navigator.userAgent.indexOf("Trident") === -1) {
 ```
 
 > [!IMPORTANT]
-> Обычно чтение свойства не рекомендуется `userAgent` . Убедитесь, что вы знакомы со статьей об обнаружении [браузера](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) с помощью агента пользователя, включая рекомендации и альтернативы чтению `userAgent`. В частности, если вы используете вариант 1 `else` в приведенном выше предложении, рассмотрите возможность использования функции обнаружения, а не тестирования для агента пользователя.
+> Обычно чтение свойства не рекомендуется `userAgent` . Убедитесь, что вы знакомы со статьей об обнаружении [браузера](https://developer.mozilla.org/docs/Web/HTTP/Browser_detection_using_the_user_agent) с помощью агента пользователя, включая рекомендации и альтернативы чтению `userAgent`. В частности, если вы используете вариант 1 `else` в приведенном выше предложении, рассмотрите возможность использования функции обнаружения, а не тестирования для агента пользователя.
 >
-> По данным на 30 сентября 2021 г. текст в разделе "Какая часть агента пользователя содержит информацию, которую вы ищете [?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#which_part_of_the_user_agent_contains_the_information_you_are_looking_for) даты до выпуска Internet Explorer 11". Она по-прежнему является общедоступной, и таблицы в разделе статьи на английском языке актуальны. Аналогичным образом, текст и в большинстве случаев таблицы в версиях статьи, отличных от английского, устарели.
+> По данным на 30 сентября 2021 г. текст в разделе "Какая часть агента пользователя содержит информацию, которую вы ищете [?](https://developer.mozilla.org/docs/Web/HTTP/Browser_detection_using_the_user_agent#which_part_of_the_user_agent_contains_the_information_you_are_looking_for) даты до выпуска Internet Explorer 11". Она по-прежнему является общедоступной, и таблицы в разделе статьи на английском языке актуальны. Аналогичным образом, текст и в большинстве случаев таблицы в версиях статьи, отличных от английского, устарели.
 
 ## <a name="test-an-add-in-on-internet-explorer"></a>Тестирование надстройки в Internet Explorer
 

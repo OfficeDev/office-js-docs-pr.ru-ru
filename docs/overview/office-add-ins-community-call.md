@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office вызова сообщества надстроек
 description: Ежемесячная Microsoft Office, расписание и ресурсы для проектов сообщества надстроек.
-ms.date: 06/10/2022
+ms.date: 06/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c3cdcb49aef2fce79eb761be3962084519594e9
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: 19641c470442c019ff1301a94d230a05ba2d107f
+ms.sourcegitcommit: fb3b1c6055e664d015703623661d624251ceb6b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090840"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66136323"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызова сообщества надстроек
 
@@ -22,6 +22,7 @@ ms.locfileid: "66090840"
 
 Пропустили предыдущий звонок сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы узнать больше о обсуждении.
 
+- [8 июня 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-06-08/)
 - [11 мая 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-05-11/)
 - [13 апреля 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-04-13/)
 - [9 марта 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-march-9-2022/)
