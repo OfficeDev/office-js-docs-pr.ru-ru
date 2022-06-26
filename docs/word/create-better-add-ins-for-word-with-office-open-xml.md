@@ -1,16 +1,16 @@
 ---
-title: Создание надстроек Word с помощью Office Open XML
-description: Общие сведения о том, как улучшить надстройку Word с Office Open XML.
+title: Узнайте, когда и как использовать Office Open XML в надстройке Word
+description: Общие сведения о том, когда и как использовать Office Open XML в надстройке Word.
 ms.date: 02/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e127eb7a05e513daa38f65ea092e7ede8a3133c5
-ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
+ms.openlocfilehash: aa78a530e32dfc07f1f885c3bbdbc5cf74a0e213
+ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187331"
+ms.lasthandoff: 06/25/2022
+ms.locfileid: "66229738"
 ---
-# <a name="create-better-add-ins-for-word-with-office-open-xml"></a>Создание надстроек Word с помощью Office Open XML
+# <a name="understand-when-and-how-to-use-office-open-xml-in-your-word-add-in"></a>Узнайте, когда и как использовать Office Open XML в надстройке Word
 
 **Источник:** Стефани Кригер, корпорация Майкрософт | Хуан Балмори Лабра, корпорация Майкрософт
 
@@ -192,7 +192,7 @@ Office предлагает широкий набор макетов схем Sm
 ```
 
 > [!NOTE]
-> Если добавить разметку, показанную здесь, в XML-файл вместе с тегами объявления XML для версии и mso-application в верхней части файла (как показано на рис. 13), вы можете открыть его в Word как документ Word. Кроме того, без этих тегов его можно открыть с помощью **FileOpen**  >  в Word. Вы увидите режим совместимости **в** строке заголовка Word, так как вы удалили параметры, которые сообщают Word, что это документ Word. Так как вы добавляете эту разметку в существующий документ Word, это никак не повлияет на содержимое.
+> Если добавить разметку, показанную здесь, в XML-файл вместе с тегами объявления XML для версии и mso-application в верхней части файла (как показано на рис. 13), вы можете открыть его в Word как документ Word. Кроме того, без этих тегов его можно открыть, открыв **файл** > **в Word** . Вы увидите режим совместимости **в** строке заголовка Word, так как вы удалили параметры, которые сообщают Word, что это документ Word. Так как вы добавляете эту разметку в существующий документ Word, это никак не повлияет на содержимое.
 
 ### <a name="javascript-for-using-setselecteddataasync"></a>Код JavaScript для использования метода setSelectedDataAsync
 

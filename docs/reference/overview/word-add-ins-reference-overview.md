@@ -4,12 +4,12 @@ description: Обзор Word JavaScript API.
 ms.date: 09/04/2020
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: df250b282c01501155b7e9bd67822dbefb4da84e
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 2bb9b016b8711822164bccbcae45cdc8eb822a8e
+ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484629"
+ms.lasthandoff: 06/25/2022
+ms.locfileid: "66229724"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
@@ -27,7 +27,7 @@ ms.locfileid: "64484629"
 
 ## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-Используйте другие статьи в этом разделе, чтобы узнать, как [получить весь документ из надстройки](../../word/get-the-whole-document-from-an-add-in-for-word.md), [воспользоваться параметрами поиска, чтобы найти текст в надстройке Word](../../word/search-option-guidance.md), и т. д. Полный список доступных статей см. в оглавлении.
+Используйте другие статьи в этом разделе, чтобы узнать, как [получить весь документ из надстройки](../../word/get-the-whole-document-from-an-add-in-for-word.md), [воспользоваться параметрами поиска, чтобы найти текст в надстройке Word](../../word/search-option-guidance.md) и т. д. Полный список доступных статей см. в оглавлении.
 
 Чтобы получить практический опыт доступа к объектам в Word с помощью API JavaScript для Word, выполните инструкции из [руководства по надстройкам Word](../../tutorials/word-tutorial.md).
 

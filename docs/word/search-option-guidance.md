@@ -1,19 +1,18 @@
 ---
-title: Поиск текста в надстройке Word
+title: Поиск текста с помощью параметров поиска в надстройке Word
 description: Узнайте, как использовать параметры поиска в надстройке Word.
 ms.date: 02/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e8f9dd2605af9307a49fabfafdecb0df4e97fe9f
-ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
+ms.openlocfilehash: 988349275dc350a342dfcb80e8e999c76de78e7d
+ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187345"
+ms.lasthandoff: 06/25/2022
+ms.locfileid: "66229710"
 ---
-# <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Поиск текста в надстройке Word
+# <a name="use-search-options-in-your-word-add-in-to-find-text"></a>Поиск текста с помощью параметров поиска в надстройке Word
 
-Надстройки часто должны действовать на основе текста документа.
-Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](/javascript/api/word/word.body), [Paragraph](/javascript/api/word/word.paragraph), [Range](/javascript/api/word/word.range), [Table](/javascript/api/word/word.table), [TableRow](/javascript/api/word/word.tablerow), и базовый объект [ContentControl](/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
+Надстройки часто должны действовать на основе текста документа. Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](/javascript/api/word/word.body), [Paragraph](/javascript/api/word/word.paragraph), [Range](/javascript/api/word/word.range), [Table](/javascript/api/word/word.table), [TableRow](/javascript/api/word/word.tablerow), и базовый объект [ContentControl](/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
 
 ## <a name="search-options"></a>Параметры поиска
 

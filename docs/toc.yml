@@ -554,12 +554,12 @@ items:
           - name: Возвращение динамического массива
             href: excel/custom-functions-dynamic-arrays.md
             displayName: 'Excel, Custom Functions'
-          - name: Пользовательские функции без пользовательского интерфейса
+          - name: Пользовательские функции без общей среды выполнения
             items:
-              - name: Аутентификация для функций без пользовательского интерфейса
+              - name: Аутентификация для пользовательских функций без общей среды выполнения
                 href: excel/custom-functions-authentication.md
                 displayName: 'Excel, Custom Functions'
-              - name: Время выполнения
+              - name: Среда выполнения только для JavaScript для пользовательских функций
                 href: excel/custom-functions-runtime.md
                 displayName: 'Excel, Custom Functions'
           - name: Переменные функции
@@ -850,9 +850,6 @@ items:
           - name: Объектная модель Word
             href: word/word-add-ins-core-concepts.md
             displayName: Word
-          - name: Создание надстроек Word с помощью Office Open XML
-            href: word/create-better-add-ins-for-word-with-office-open-xml.md
-            displayName: Word
           - name: Надстройки области задач словаря
             href: word/dictionary-task-pane-add-ins.md
             displayName: Word
@@ -862,11 +859,14 @@ items:
           - name: Чтение и запись данных в активное выделение
             href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
             displayName: Word
-          - name: Значения NULL
+          - name: Понимание нулевых значений
             href: word/null-values.md
             displayName: Word
-          - name: Поиск текста в надстройке Word
+          - name: 'Используйте параметры поиска, чтобы найти текст'
             href: word/search-option-guidance.md
+            displayName: Word
+          - name: Когда и как использовать Office Open XML
+            href: word/create-better-add-ins-for-word-with-office-open-xml.md
             displayName: Word
   - name: Примеры
     items:
