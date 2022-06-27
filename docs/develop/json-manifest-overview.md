@@ -1,14 +1,14 @@
 ---
 title: Манифест Teams для надстроек Office (предварительная версия)
 description: Ознакомьтесь с предварительной версией манифеста JSON.
-ms.date: 05/24/2022
+ms.date: 06/15/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 8a40f28674892545dee00e5a3138b55400d04352
-ms.sourcegitcommit: 35e7646c5ad0d728b1b158c24654423d999e0775
+ms.openlocfilehash: 7ecf985d63601f032c1296ffe0c1ba73fb7e25cc
+ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65833901"
+ms.lasthandoff: 06/25/2022
+ms.locfileid: "66229640"
 ---
 # <a name="teams-manifest-for-office-add-ins-preview"></a>Манифест Teams для надстроек Office (предварительная версия)
 
@@ -108,7 +108,7 @@ ms.locfileid: "65833901"
 | "requirements.scopes" | Определяет приложения Office, в которых можно установить надстройку. | **Hosts** |  |
 | "ribbons" | Ленты, которые настраивает надстройка. | **Hosts**, **ExtensionPoints** и различные элементы **\*FormFactor** | Свойство ribbons представляет собой массив анонимных объектов, каждый из которых объединяет назначение этих трех элементов. См. раздел [Таблица "ribbons"](#ribbons-table).|
 | "alternatives" | Указывает обратную совместимость с эквивалентной надстройкой COM, XLL или обоими вариантами. | **EquivalentAddins** | Базовые сведения см. в разделе [EquivalentAddins — дополнительные сведения](/javascript/api/manifest/equivalentaddins#see-also). |
-| "runtimes"  | Настраивает различные виды надстроек без пользовательского интерфейса, например пользовательские функции и функции, запускаемые непосредственно из пользовательских кнопок ленты. | **Runtimes**. **FunctionFile** и **ExtensionPoint** (типа CustomFunctions) |  |
+| "runtimes"  | Настраивает различные виды надстроек без пользовательского интерфейса, например пользовательские надстройки только для функций и функции, запускаемые непосредственно из пользовательских кнопок ленты. | **Runtimes**. **FunctionFile** и **ExtensionPoint** (типа CustomFunctions) |  |
 | "autoRunEvents" | Настраивает обработчик для указанного события. | **Event** и **ExtensionPoint** (типа Events) |  |
 
 ##### <a name="ribbons-table"></a>Таблица "ribbons"

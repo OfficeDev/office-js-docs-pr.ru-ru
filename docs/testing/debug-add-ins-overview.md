@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек Office
 description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки.
-ms.date: 02/17/2022
+ms.date: 06/15/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 87265e8aeb760aa9449c86a7991b3ad6ed8943ee
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: c6e9a870b322bc99bafd9bd80b0ba9030433ec12
+ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744704"
+ms.lasthandoff: 06/25/2022
+ms.locfileid: "66229703"
 ---
 # <a name="overview-of-debugging-office-add-ins"></a>Обзор отладки надстроек Office
 
@@ -40,7 +40,7 @@ ms.locfileid: "63744704"
 
 ## <a name="debug-on-windows"></a>Отладка в Windows
 
-Ниже приведены общие рекомендации по отладке в Windows. Существуют специальные инструкции по отладке пользовательских функций без пользовательского интерфейса в Excel и надстроек на основе событий в Outlook. См. [Особые случаи в Windows](#special-cases-in-windows) далее в этом разделе. Отладка в Windows зависит от вашей интегрированной среды разработки.
+Ниже приведены общие рекомендации по отладке в Windows. Существуют специальные инструкции по отладке пользовательских функций в Excel и надстроек на основе событий в Outlook. См. [Особые случаи в Windows](#special-cases-in-windows) далее в этом разделе. Отладка в Windows зависит от вашей интегрированной среды разработки.
 
 - **Visual Studio**: отладка с помощью средств F12 браузера. См. [Отладка настроек Office в Visual Studio](../develop/debug-office-add-ins-in-visual-studio.md).
 - **Visual Studio Code**: отладка с помощью [расширения отладчика надстроек для Visual Studio Code](debug-with-vs-extension.md).
@@ -57,20 +57,20 @@ ms.locfileid: "63744704"
 
 ### <a name="special-cases-in-windows"></a>Особые случаи в Windows
 
-Сведения об отладке пользовательских функций без пользовательского интерфейса в Windows см. в статье [Отладка пользовательских функций без пользовательского интерфейса](../excel/custom-functions-debugging.md).
+Сведения об отладке пользовательских функций без общей среды выполнения Windows см. в разделе [Отладка пользовательских функций](../excel/custom-functions-debugging.md).
 
 Сведения об отладке надстроек на основе событий в Outlook см. в статье [Отладка надстройки Outlook на основе событий](../outlook/debug-autolaunch.md). Для процесса требуется Visual Studio Code.
 
 ## <a name="debug-on-mac"></a>Отладка на компьютере Mac
 
-Ниже приведены общие рекомендации по отладке на компьютере Mac. Существуют специальные инструкции по отладке пользовательских функций без пользовательского интерфейса в Excel. См. [Особые случаи в Mac](#special-cases-in-mac) далее в этом разделе.
+Ниже приведены общие рекомендации по отладке на компьютере Mac. Существуют специальные инструкции по отладке пользовательских функций без общей среды выполнения в Excel. См. [Особые случаи в Mac](#special-cases-in-mac) далее в этом разделе.
 
 - Если вы используете Visual Studio Code, выполните отладку с помощью [расширения отладчика надстроек для Visual Studio Code](debug-with-vs-extension.md).
 - Для любой другой интегрированной среды разработки используйте веб-инспектор Safari. Инструкции приведены в статье [Отладка надстроек Office на компьютере Mac](debug-office-add-ins-on-ipad-and-mac.md).
 
 ### <a name="special-cases-in-mac"></a>Особые случаи в Mac
 
-Сведения об отладке пользовательских функций без пользовательского интерфейса на компьютере Mac см. в статье [Отладка пользовательских функций без пользовательского интерфейса](../excel/custom-functions-debugging.md).
+Сведения об отладке пользовательских функций без общей среды выполнения Mac см. в разделе [Отладка пользовательских функций](../excel/custom-functions-debugging.md).
 
 ## <a name="debug-on-linux"></a>Отладка в Linux
 
