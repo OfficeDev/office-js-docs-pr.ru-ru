@@ -1,19 +1,18 @@
 ---
 title: Просмотр и изменение получателей в надстройке Outlook
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
-ms.date: 10/15/2021
+ms.date: 06/27/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f34bcad93cceb8a5c51c40f3e31471b69065e0
-ms.sourcegitcommit: 35e7646c5ad0d728b1b158c24654423d999e0775
+ms.openlocfilehash: 0cd51bd20d90d0183cbe0794b644eaa307e2d6b7
+ms.sourcegitcommit: 2a0bd3155c732b6010b7e1e612f4bd7e45f79c52
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65833894"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66241290"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
-
-API JavaScript Office предоставляет асинхронные методы ([Recipients.getAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-getasync-member(1)), [Recipients.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1)) или [Recipients.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))) для получения, задания или добавления получателей в форме создания встречи или сообщения. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "[Создание](compose-scenario.md) Outlook надстроек для форм создания".
+API JavaScript для Office предоставляет асинхронные методы ([Recipients.getAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-getasync-member(1)), [Recipients.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1)) или [Recipients.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))) для получения, задания или добавления получателей в форме создания встречи или сообщения. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "Создание надстроек [Outlook](compose-scenario.md) для форм создания".
 
 Некоторые свойства, представляющие получателей в сообщении или встрече, доступны для чтения в формах создания и чтения. Это свойства [optionalAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [requiredAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) для встреч, а также свойства [cc](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [to](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) для сообщений.
 
@@ -25,21 +24,17 @@ item.cc
 
 Но в форме создания, так как пользователь и ваша надстройка могут вставлять или изменять получателя одновременно, `getAsync` для получения этих свойств необходимо использовать асинхронный метод, как показано в следующем примере.
 
-
 ```js
 item.cc.getAsync
 ```
 
 Эти свойства доступны для записи только в формах создания, но не формах чтения.
 
-Как и в случае с большинством асинхронных методов в API JavaScript для Office, `getAsync`и `setAsync``addAsync` принимать необязательные входные параметры. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
-
+Как и большинство асинхронных методов в API JavaScript для Office, `getAsync``setAsync``addAsync` и примите необязательные входные параметры. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 ## <a name="get-recipients"></a>Извлечение получателей
 
-
 В этом разделе показан пример кода, извлекающий получателей создаваемой встречи или сообщения, и показывающий адреса электронной почты получателей. В примере предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения, как показано ниже.
-
 
 ```XML
 <Rule xsi:type="RuleCollection" Mode="Or">
@@ -48,15 +43,26 @@ item.cc.getAsync
 </Rule>
 ```
 
-В API JavaScript Office, так как свойства, которые представляют получателей встречи (**optionalAttendees** и **requiredAttendees**), отличаются от свойств сообщения ([bcc](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), **cc** и **to**), необходимо сначала использовать свойство [item.itemType](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), чтобы определить, является ли создаваемый элемент встречей или сообщением. В режиме создания все эти свойства встреч и сообщений являются объектами [Recipients](/javascript/api/outlook/office.recipients) , поэтому вы можете применить асинхронный метод, `Recipients.getAsync`чтобы получить соответствующих получателей.
+В API JavaScript для Office свойства, которые представляют получателей встречи ( **optionalAttendees** и **requiredAttendees**), отличаются от свойств сообщения ([bcc](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), **cc** и **to**), сначала следует использовать свойство [item.itemType](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) , чтобы определить, является ли создаваемый элемент встречей или сообщением. В режиме создания все эти свойства встреч и сообщений являются объектами [Recipients](/javascript/api/outlook/office.recipients) , поэтому вы можете применить асинхронный метод, `Recipients.getAsync`чтобы получить соответствующих получателей.
 
-Чтобы использовать `getAsync` метод обратного вызова для проверки состояния, результатов и любой ошибки, возвращаемой асинхронным вызовом `getAsync` . Методу обратного вызова можно передать любые аргументы, используя дополнительный параметр  _asyncContext_. Метод обратного вызова возвращает выходной параметр  _asyncResult_. Вы можете `status` `error` использовать свойства объекта параметра [AsyncResult](/javascript/api/office/office.asyncresult) для проверки состояния и любых сообщений об ошибках асинхронного вызова, `value` а также свойство для получения фактических получателей. Они представляются как массив объектов [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails).
+Для использования `getAsync`укажите метод обратного вызова для проверки состояния, результатов и любой ошибки, возвращаемой асинхронным вызовом `getAsync` . Методу обратного вызова можно передать любые аргументы, используя дополнительный параметр  _asyncContext_. Метод обратного вызова возвращает выходной параметр  _asyncResult_. Вы можете `status` `error` использовать свойства объекта параметра [AsyncResult](/javascript/api/office/office.asyncresult) для проверки состояния и любых сообщений об ошибках асинхронного вызова, `value` а также свойство для получения фактических получателей. Они представляются как массив объектов [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails).
 
 `getAsync` Обратите внимание, что, поскольку метод является асинхронным, при наличии последующих действий, которые зависят от успешного получения получателей, следует упорядочить код для запуска таких действий только в соответствующем методе обратного вызова после успешного завершения асинхронного вызова.
 
 > [!IMPORTANT]
-> В Outlook в Интернете, если пользователь создал новое сообщение путем активации ссылки на адрес электронной почты контакта из карточки контакта или профиля, `Recipients.getAsync` `displayName` вызов надстройки в настоящее время не возвращает значение в свойстве связанного `EmailAddressDetails` объекта.
-> Дополнительные сведения см. в GitHub [проблемах](https://github.com/OfficeDev/office-js/issues/2201).
+> Метод `getAsync` возвращает только получателей, разрешенных клиентом Outlook. Разрешенный получатель имеет следующие характеристики.
+>
+> - Если у получателя есть сохраненная запись в адресной книге отправителя, Outlook разрешает адрес электронной почты в сохраненное отображаемое имя получателя.
+> - Значок состояния собрания Teams отображается перед именем или адресом электронной почты получателя.
+> - После имени или адреса электронной почты получателя появляется точка с запятой.
+> - Имя или адрес электронной почты получателя подчеркнуты или заключены в поле.
+>
+> Чтобы разрешить адрес электронной почты после его добавления в почтовый элемент, отправитель должен использовать клавишу **TAB** или выбрать предлагаемый контакт или адрес электронной почты из списка автозавершание.
+
+> [!NOTE]
+> В Outlook в Интернете и Windows, если пользователь создает новое сообщение путем активации ссылки на адрес электронной почты контакта из карточки контакта или профиля, `Recipients.getAsync` `displayName` `EmailAddressDetails` вызов надстройки возвращает адрес электронной почты контакта в свойстве связанного объекта, а не сохраненное имя контакта.
+>
+> Дополнительные сведения см. в [связанной проблеме gitHub](https://github.com/OfficeDev/office-js/issues/2201).
 
 ```js
 var item;
@@ -147,25 +153,17 @@ function write(message){
 }
 ```
 
-
 ## <a name="set-recipients"></a>Установка получателей
-
 
 В этом разделе показан пример кода, устанавливающий получателей встречи или сообщения, создаваемых пользователем. При установке получателей все существующие получателей перезаписываются. Как и предыдущий пример, извлекающий получателей в форме создания, этот пример предполагает, что надстройка активируется в формах создания встреч и сообщений. В этом примере сначала проверяется, является ли составной элемент встречей или сообщением, поэтому для применения асинхронного метода к соответствующим свойствам, `Recipients.setAsync`которые представляют получателей встречи или сообщения.
 
 При вызове `setAsync`укажите массив в качестве входного аргумента для параметра  _получателя_ в одном из следующих форматов.
 
-
 - массив строк, являющихся SMTP-адресами;
-    
 - массив словарей, каждый из которых содержит отображаемое имя и адрес электронной почты, как показано в следующем примере кода;
-    
 - Массив объектов `EmailAddressDetails` , аналогичный возвращаемой методом `getAsync` .
-    
+  
 При необходимости можно `setAsync` указать метод обратного вызова в качестве входного аргумента для метода, чтобы убедиться, что любой код, который зависит от успешной настройки получателей, будет выполняться только в этом случае. Кроме того, методу обратного вызова можно передать любые аргументы, используя дополнительный параметр  _asyncContext_. При использовании метода обратного вызова можно получить доступ к выходному параметру _asyncResult_ и  `AsyncResult` использовать свойства состояния  и ошибки объекта параметра для проверки состояния и любых сообщений об ошибках асинхронного вызова.
-
-
-
 
 ```js
 var item;
@@ -274,11 +272,9 @@ function write(message){
 
 ```
 
-
 ## <a name="add-recipients"></a>Добавление получателей
 
 Если вы не хотите перезаписывать существующих получателей во встрече или сообщении, `Recipients.setAsync``Recipients.addAsync` вместо использования можно использовать асинхронный метод для добавления получателей. `addAsync` работает так же, как `setAsync` и в том, что для него требуется _входной аргумент_ получателя. При необходимости можно указать метод обратного вызова и любые аргументы для обратного вызова с помощью параметра asyncContext. Затем можно проверить состояние, результат `addAsync` и любую ошибку асинхронного вызова с помощью выходного параметра _asyncResult_ метода обратного вызова. В следующем примере проверяется, является ли составленный элемент встречей, и добавляет двух обязательных участников к встрече.
-
 
 ```js
 // Add specified recipients as required attendees of
@@ -307,7 +303,6 @@ function addAttendees() {
 }
 ```
 
-
 ## <a name="see-also"></a>См. также
 
 - [Просмотр и изменение данных элемента в форме создания элементов Outlook](get-and-set-item-data-in-a-compose-form.md)
@@ -318,4 +313,3 @@ function addAttendees() {
 - [Вставка данных в текст при создании встречи или сообщения в Outlook](insert-data-in-the-body.md)
 - [Просмотр или изменение расположения при создании встречи в Outlook](get-or-set-the-location-of-an-appointment.md)
 - [Просмотр или изменение времени при создании встречи в Outlook](get-or-set-the-time-of-an-appointment.md)
-    
