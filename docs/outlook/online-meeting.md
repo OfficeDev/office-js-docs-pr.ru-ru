@@ -1,38 +1,112 @@
 ---
-title: Создание Outlook мобильной надстройки для поставщика онлайн-собраний
-description: Описывается, как настроить надстройку Outlook для поставщика услуг онлайн-собраний.
+title: Создание надстройки Outlook для поставщика онлайн-собраний
+description: Описывается, как настроить надстройку Outlook для поставщика услуг для собраний по сети.
 ms.topic: article
-ms.date: 06/10/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a8f21caf40b9a0b9a351e4ac6a405201923335b
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: 884e27b75f3fc44a645021f8211d7aaf748f3a1d
+ms.sourcegitcommit: e8ce48605f7f33bc5c9af8bfd75d54d4b6b15039
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091120"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574427"
 ---
-# <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание Outlook мобильной надстройки для поставщика онлайн-собраний
+# <a name="create-an-outlook-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
-Настройка собрания по сети — это основной интерфейс для Outlook, и вы можете легко создать собрание Teams с помощью [Outlook мобильных](/microsoftteams/teams-add-in-for-outlook) устройств. Однако создание собрания по сети в Outlook с помощью службы, отличной от Майкрософт, может быть сложной задачей. Внедрив эту функцию, поставщики услуг могут упростить создание собраний по сети для Outlook пользователей надстроек.
+Настройка собрания по сети является основным интерфейсом для пользователя Outlook, и его легко создать в [Outlook](/microsoftteams/teams-add-in-for-outlook). Однако создание собрания по сети в Outlook с помощью службы, отличной от Майкрософт, может быть сложной задачей. Внедрив эту функцию, поставщики услуг могут упростить создание собраний по сети и присоединение пользователей надстроек Outlook.
 
 > [!IMPORTANT]
-> Эта функция поддерживается только в Android и iOS с Microsoft 365 подпиской.
+> Эта функция поддерживается в Outlook в Интернете, Windows, Mac, Android и iOS с подпиской на Microsoft 365.
 
-Из этой статьи вы узнаете, как настроить мобильную надстройку Outlook, чтобы пользователи могли упорядочивать собрания и присоединяться к собранию с помощью службы онлайн-собраний. В этой статье мы будем использовать вымышленного поставщика услуг онлайн-собраний Contoso.
+Из этой статьи вы узнаете, как настроить надстройку Outlook, чтобы пользователи могли упорядочивать собрания и присоединяться к собранию с помощью службы онлайн-собраний. В этой статье мы будем использовать вымышленного поставщика услуг онлайн-собраний Contoso.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [инструкции Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) по созданию проекта надстройки с помощью генератора Yeoman для Office надстроек.
+Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора Yeoman для надстроек Office.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы разрешить пользователям создавать собрания по сети с помощью надстройки, необходимо настроить точку расширения [MobileOnlineMeetingCommandSurface](/javascript/api/manifest/extensionpoint#mobileonlinemeetingcommandsurface) в манифесте в родительском элементе `MobileFormFactor`. Другие форм-факторы не поддерживаются.
+Чтобы разрешить пользователям создавать собрания по сети с помощью надстройки, необходимо настроить узел **VersionOverrides** в манифесте. Если вы создаете надстройку, которая будет поддерживаться только в Outlook в Интернете, Windows и Mac, выберите вкладку **Windows, Mac, веб-вкладку** для справки. Однако если ваша надстройка также будет поддерживаться в Outlook для Android и iOS, перейдите на **вкладку "Мобильные** устройства".
 
-1. В редакторе кода откройте проект быстрого запуска.
+# <a name="windows-mac-web"></a>[Windows, Mac, Web](#tab/non-mobile)
+
+1. В редакторе кода откройте созданный проект быстрого запуска Outlook.
 
 1. Откройте файл **manifest.xml** , расположенный в корневом каталоге проекта.
 
-1. Выберите весь узел `<VersionOverrides>` (включая открытый и закрывающий теги) и замените его следующим XML-кодом.
+1. Выберите весь узел **VersionOverrides** (включая открытые и закрывающее теги) и замените его следующим XML-кодом.
+
+```xml
+<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+    <Description resid="residDescription"></Description>
+    <Requirements>
+      <bt:Sets>
+        <bt:Set Name="Mailbox" MinVersion="1.3"/>
+      </bt:Sets>
+    </Requirements>
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <FunctionFile resid="residFunctionFile"/>
+          <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="apptComposeGroup">
+                <Label resid="residDescription"/>
+                <Control xsi:type="Button" id="insertMeetingButton">
+                  <Label resid="residLabel"/>
+                  <Supertip>
+                    <Title resid="residLabel"/>
+                    <Description resid="residTooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon-16"/>
+                    <bt:Image size="32" resid="icon-32"/>
+                    <bt:Image size="64" resid="icon-64"/>
+                    <bt:Image size="80" resid="icon-80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>insertContosoMeeting</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon-16" DefaultValue="https://contoso.com/assets/icon-16.png"/>
+        <bt:Image id="icon-32" DefaultValue="https://contoso.com/assets/icon-32.png"/>
+        <bt:Image id="icon-48" DefaultValue="https://contoso.com/assets/icon-48.png"/>
+        <bt:Image id="icon-64" DefaultValue="https://contoso.com/assets/icon-64.png"/>
+        <bt:Image id="icon-80" DefaultValue="https://contoso.com/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="residFunctionFile" DefaultValue="https://contoso.com/commands.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="residDescription" DefaultValue="Contoso meeting"/>
+        <bt:String id="residLabel" DefaultValue="Add a contoso meeting"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="residTooltip" DefaultValue="Add a contoso meeting to this appointment."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</VersionOverrides>
+```
+
+# <a name="mobile"></a>[Мобильные устройства](#tab/mobile)
+
+Чтобы разрешить пользователям создавать собрания по сети с мобильного устройства, точка расширения [MobileOnlineMeetingCommandSurface](/javascript/api/manifest/extensionpoint#mobileonlinemeetingcommandsurface) настраивается в манифесте в родительском элементе **MobileFormFactor**. Эта точка расширения не поддерживается в других форм-факторах.
+
+1. В редакторе кода откройте созданный проект быстрого запуска Outlook.
+
+1. Откройте файл **manifest.xml** , расположенный в корневом каталоге проекта.
+
+1. Выберите весь узел **VersionOverrides** (включая открытые и закрывающее теги) и замените его следующим XML-кодом.
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -121,12 +195,14 @@ ms.locfileid: "66091120"
 </VersionOverrides>
 ```
 
+---
+
 > [!TIP]
-> Дополнительные сведения о манифестах для Outlook см. в Outlook манифестах надстроек [](manifests.md) и добавлении поддержки команд надстроек для [Outlook Mobile](add-mobile-support.md).
+> Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах надстроек [Outlook](manifests.md) и добавлении поддержки команд надстроек [для Outlook Mobile](add-mobile-support.md).
 
 ## <a name="implement-adding-online-meeting-details"></a>Реализация добавления сведений о собрании по сети
 
-В этом разделе описано, как скрипт надстройки может обновить собрание пользователя, чтобы включить сведения о собрании по сети.
+В этом разделе описано, как скрипт надстройки может обновить собрание пользователя, чтобы включить сведения о собрании по сети. Следующее относится ко всем поддерживаемым платформам.
 
 1. В том же проекте быстрого запуска откройте файл **./src/commands/commands.js** в редакторе кода.
 
@@ -194,13 +270,13 @@ ms.locfileid: "66091120"
 
 ## <a name="testing-and-validation"></a>Тестирование и проверка
 
-Следуйте обычным рекомендациям [по проверке и проверке надстройки](testing-and-tips.md). После [загрузки неопубликованных](sideload-outlook-add-ins-for-testing.md) Outlook в Интернете, Windows или Mac перезапустите Outlook на Android или iOS мобильном устройстве. Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype переключатель заменен вашим собственным.
+Следуйте обычным рекомендациям, чтобы протестировать [и](testing-and-tips.md) проверить надстройку, а затем загрузить неопубликованный манифест в Outlook в Интернете, Windows или Mac.[](sideload-outlook-add-ins-for-testing.md) Если ваша надстройка также поддерживает мобильные устройства, перезапустите Outlook на устройстве Android или iOS после загрузки неопубликованных приложений. После загрузки неопубликоваемой надстройки создайте новое собрание и убедитесь, что переключатель Microsoft Teams или Skype заменен вашим собственным.
 
 ### <a name="create-meeting-ui"></a>Создание пользовательского интерфейса собрания
 
 Организатор собрания должен видеть экраны, аналогичные следующим трем изображениям при создании собрания.
 
-[![Экран создания собрания на Android с выключенным переключательом Contoso.](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [![Экран создания собрания на Android с переключение загрузки Contoso.](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [![На экране создания собрания Android с включенной кнопкой "Contoso".](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
+[![Экран создания собрания на Android с выключенным переключательом Contoso.](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [![Экран создания собрания на Android с переключательом загрузки Contoso.](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [![Экран создания собрания на Android с включенной кнопкой "Contoso".](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
 
 ### <a name="join-meeting-ui"></a>Присоединение к пользовательскому интерфейсу собрания
 
@@ -209,18 +285,21 @@ ms.locfileid: "66091120"
 [![Экран присоединения к собранию на Android.](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
 
 > [!IMPORTANT]
-> Если ссылка "Присоединиться" не отображается, возможно, шаблон собрания по сети для вашей службы не зарегистрирован на наших серверах. Дополнительные сведения см. в разделе ["Регистрация шаблона](#register-your-online-meeting-template) собрания по сети".
+> **Кнопка "** Присоединиться" поддерживается только в Outlook в Интернете, Mac, Android и iOS. Если вы видите только ссылку на собрание, но не видите кнопку  "Присоединиться" в поддерживаемом клиенте, возможно, шаблон собрания по сети для вашей службы не зарегистрирован на наших серверах. Дополнительные сведения см. в разделе ["Регистрация шаблона](#register-your-online-meeting-template) собрания по сети".
 
 ## <a name="register-your-online-meeting-template"></a>Регистрация шаблона собрания по сети
 
-Регистрация надстройки собрания по сети не является обязательной. Это применимо только в том случае, если вы  хотите добавить кнопку "Присоединиться" на собраниях в дополнение к ссылке на собрание. После разработки надстройки online-meeting и ее регистрации создайте GitHub с помощью следующих рекомендаций. Мы свяжитесь с вами для координации временной шкалы регистрации.
+Регистрация надстройки собрания по сети не является обязательной. Это применимо только в том случае, если вы  хотите добавить кнопку "Присоединиться" на собраниях в дополнение к ссылке на собрание. После разработки надстройки для собраний по сети и ее регистрации создайте проблему на GitHub, следуя приведенным ниже рекомендациям. Мы свяжитесь с вами для координации временной шкалы регистрации.
 
-1. Создайте [новую GitHub проблемы](https://github.com/OfficeDev/office-js/issues/new).
-1. **Задайте для** новой проблемы значение "Register the online-meeting template for my-service" (Регистрация шаблона собрания по сети для службы), `my-service` заменив ее именем службы.
+> [!IMPORTANT]
+> **Кнопка "** Присоединиться" поддерживается только в Outlook в Интернете, Mac, Android и iOS.
+
+1. Создайте [новую проблему на GitHub](https://github.com/OfficeDev/office-js/issues/new).
+1. **Задайте для** заголовка новой проблемы значение "Outlook: Регистрация шаблона собрания по сети для моей службы", `my-service` заменив ее именем службы.
 1. В тексте проблемы замените существующий текст строкой, `newBody` заданной в переменной или аналогичной переменной из раздела "Реализация добавления сведений о собрании по сети" ранее в этой статье.[](#implement-adding-online-meeting-details)
 1. Нажмите **кнопку "Отправить новую проблему"**.
 
-![Новый GitHub проблем с примером содержимого Contoso.](../images/outlook-request-to-register-online-meeting-template.png)
+![Новый экран проблем GitHub с примером содержимого Contoso.](../images/outlook-request-to-register-online-meeting-template.png)
 
 ## <a name="available-apis"></a>Доступные API
 
@@ -228,12 +307,12 @@ ms.locfileid: "66091120"
 
 - API организатора встреч
   - [Office.context.mailbox.item.body](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-body-member) ([Body.getAsync](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#outlook-office-body-getasync-member(1)), [Body.setAsync](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#outlook-office-body-setasync-member(1)))
-  - [Office.context.mailbox.item.end](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-end-member) ([Время](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true))
+  - [Office.context.mailbox.item.end](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-end-member) ([Time](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true))
   - [Office.context.mailbox.item.loadCustomPropertiesAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-loadcustompropertiesasync-member(1)) ([CustomProperties](/javascript/api/outlook/office.customproperties?view=outlook-js-preview&preserve-view=true))
-  - [Office.context.mailbox.item.location](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-location-member) ([Расположение](/javascript/api/outlook/office.location?view=outlook-js-preview&preserve-view=true))
-  - [Office.context.mailbox.item.optionalAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-optionalattendees-member) ([получатели](/javascript/api/outlook/office.recipients?view=outlook-js-preview&preserve-view=true))
+  - [Office.context.mailbox.item.location](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-location-member) ([расположение](/javascript/api/outlook/office.location?view=outlook-js-preview&preserve-view=true))
+  - [Office.context.mailbox.item.optionalAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-optionalattendees-member) ([recipients](/javascript/api/outlook/office.recipients?view=outlook-js-preview&preserve-view=true))
   - [Office.context.mailbox.item.requiredAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-requiredattendees-member) ([получатели](/javascript/api/outlook/office.recipients?view=outlook-js-preview&preserve-view=true))
-  - [Office.context.mailbox.item.start](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-start-member) ([Время](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true))
+  - [Office.context.mailbox.item.start](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-start-member) ([Time](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true))
   - [Office.context.mailbox.item.subject](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#outlook-office-appointmentcompose-subject-member) ([тема](/javascript/api/outlook/office.subject?view=outlook-js-preview&preserve-view=true))
   - [Office.context.roamingSettings](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context?view=outlook-js-preview&preserve-view=true#roamingsettings-roamingsettings) ([RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-preview&preserve-view=true))
 - Обработка потока проверки подлинности
@@ -244,7 +323,7 @@ ms.locfileid: "66091120"
 Применяется несколько ограничений.
 
 - Применимо только к поставщикам услуг онлайн-собраний.
-- На экране создания собрания появятся только установленные администратором надстройки, заменив Teams или Skype. Установленные пользователем надстройки не будут активироваться.
+- На экране создания собрания будут отображаться только надстройки, установленные администратором, заменив параметр Teams или Skype по умолчанию. Установленные пользователем надстройки не будут активироваться.
 - Значок надстройки должен быть в оттенках серого с использованием шестнадцатеричных `#919191` кодов или его эквивалента в [других форматах цвета](https://convertingcolors.com/hex-color-919191.html).
 - В режиме организатора встреч (создания) поддерживается только одна команда без пользовательского интерфейса.
 - Надстройка должна обновить сведения о собрании в форме встречи в течение минутного времени ожидания. Однако любое время, затраченное в диалоговом окне, которое надстройка открывает для проверки подлинности и т. д., исключается из периода времени ожидания.
