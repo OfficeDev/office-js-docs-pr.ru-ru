@@ -632,7 +632,7 @@ items:
             href: outlook/extension-module-outlook-add-ins.md
           - name: Надстройки для Outlook Mobile
             href: outlook/outlook-mobile-addins.md
-          - name: Онлайн встреча на мобильном устройстве
+          - name: Создание надстройки для собраний по сети
             href: outlook/online-meeting.md
           - name: 'Надстройки, поддерживающие проверку сообщений при отправке'
             href: outlook/outlook-on-send-addins.md
