@@ -1,20 +1,20 @@
 ---
 title: Отображение и скрытие области задач надстройки Office
-description: Узнайте, как программным образом скрыть или показать пользовательский интерфейс надстройки во время ее непрерывного работы.
+description: Узнайте, как программно скрыть или отобразить пользовательский интерфейс надстройки во время непрерывной работы.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e881f5fc0d5258aa886709a0aee2eee5836feef
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 95f8c716bf1a0331fe47bc74e5aad49c17b65437
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743964"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66660132"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
 [!include[Shared JavaScript runtime requirements](../includes/shared-runtime-requirements-note.md)]
 
-Вы можете показать области задач Office надстройки, позвонив в функцию`Office.addin.showAsTaskpane()`.
+Вы можете отобразить область задач надстройки Office, вызвав функцию `Office.addin.showAsTaskpane()` .
 
 ```javascript
 function onCurrentQuarter() {
@@ -26,9 +26,9 @@ function onCurrentQuarter() {
 }
 ```
 
-Предыдущий код предполагает сценарий, в котором существует Excel с именем **CurrentQuarterSales**. Надстройка сделает области задач видимыми при активации этого таблицы. Метод обработник `onCurrentQuarter` для Office[. Событие Worksheet.onActivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-onactivated-member), зарегистрированное для таблицы.
+В предыдущем коде предполагается, что существует лист Excel с именем **CurrentQuarterSales**. Надстройка будет делать область задач видимой при активации этого листа. Этот метод `onCurrentQuarter` является обработчиком события [Office.Worksheet.onActivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-onactivated-member) , зарегистрированного для листа.
 
-Кроме того, можно скрыть области задач, позвонив в эту `Office.addin.hide()` функцию.
+Вы также можете скрыть область задач, вызвав функцию `Office.addin.hide()` .
 
 ```javascript
 function onCurrentQuarterDeactivated() {
@@ -36,36 +36,36 @@ function onCurrentQuarterDeactivated() {
 }
 ```
 
-Предыдущий код — обработник, зарегистрированный для [Office. Событие Worksheet.onDeactivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-ondeactivated-member).
+Предыдущий код — это обработчик, зарегистрированный для [события Office.Worksheet.onDeactivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-ondeactivated-member) .
 
-## <a name="additional-details-on-showing-the-task-pane"></a>Дополнительные сведения о показе области задач
+## <a name="additional-details-on-showing-the-task-pane"></a>Дополнительные сведения о отключении области задач
 
-При вызове `Office.addin.showAsTaskpane()`Office будет отображаться в области задач файл, который назначен в качестве ID ресурса (`resid`) значения области задач. Это `resid` значение может быть назначено или изменено путем **открытияmanifest.xml** файла `<SourceLocation>` и размещения внутри `<Action xsi:type="ShowTaskpane">` элемента.
-(См[. раздел Настройка Office надстройки для использования](configure-your-add-in-to-use-a-shared-runtime.md) общего времени работы для получения дополнительных сведений.)
+При вызове `Office.addin.showAsTaskpane()`Office отобразит в области задач файл, назначенный в качестве значения идентификатора ресурса (`resid`) области задач. Это `resid` значение можно назначить или изменить, открыв файлmanifest.xmlи **найдите** внутри **\<SourceLocation\>** `<Action xsi:type="ShowTaskpane">` элемента.
+( [Дополнительные сведения см. в разделе "Настройка надстройки Office для использования](configure-your-add-in-to-use-a-shared-runtime.md) общей среды выполнения".)
 
-Так `Office.addin.showAsTaskpane()` как это асинхронный метод, код будет работать до завершения функции. Подождите завершения с помощью `await` `then()` ключевого слова или метода, в зависимости от того, какой синтаксис JavaScript вы используете.
+Так `Office.addin.showAsTaskpane()` как это асинхронный метод, код будет выполняться до завершения работы функции. Дождитесь завершения с помощью ключевого `await` `then()` слова или метода в зависимости от используемого синтаксиса JavaScript.
 
-## <a name="configure-your-add-in-to-use-the-shared-runtime"></a>Настройка надстройки для использования общего времени работы
+## <a name="configure-your-add-in-to-use-the-shared-runtime"></a>Настройка надстройки для использования общей среды выполнения
 
-Чтобы использовать эти методы `showAsTaskpane()` `hide()` , надстройка должна использовать общее время работы. Дополнительные сведения см. в раздел [Настройка Office надстройки для использования общего времени работы](configure-your-add-in-to-use-a-shared-runtime.md).
+Для использования этих `showAsTaskpane()` методов `hide()` надстройка должна использовать общую среду выполнения. Дополнительные сведения см. в разделе ["Настройка надстройки Office для использования общей среды выполнения"](configure-your-add-in-to-use-a-shared-runtime.md).
 
-## <a name="preservation-of-state-and-event-listeners"></a>Сохранение слушателей состояния и событий
+## <a name="preservation-of-state-and-event-listeners"></a>Сохранение состояния и прослушивателей событий
 
-Только `hide()` методы `showAsTaskpane()` и методы *изменяют видимость* области задач. Они не разгружают или не перезагружают его (или повторно перезагружают его состояние).
+Методы `hide()` и `showAsTaskpane()` методы изменяют *только видимость* области задач. Они не выгружают и не перезагружают его (или повторно инициализют его состояние).
 
-Рассмотрим следующий сценарий: области задач разработаны со вкладками. **Вкладка Home** открывается при первом запуске надстройки. Предположим, пользователь **открывает вкладку Параметры**, `hide()` а затем код в области задач вызывает в ответ на какое-либо событие. Еще более поздние вызовы кода `showAsTaskpane()` в ответ на другое событие. Области задач будут появляться снова, и **вкладка** Параметры по-прежнему выбрана.
+Рассмотрим следующий сценарий: область задач разработана с помощью вкладок. **Вкладка "** Главная" открывается при первом запуске надстройки. Предположим, что пользователь открывает вкладку **"** Параметры", `hide()` а затем код в области задач вызывается в ответ на определенное событие. Но позже код вызывается `showAsTaskpane()` в ответ на другое событие. Область задач снова появится, а вкладка "Параметры" по-прежнему будет выбрана.
 
-![Снимок экрана области задач с четырьмя вкладками с метками Home, Параметры, Избранное и Учетные записи.](../images/TaskpaneWithTabs.png)
+![Снимок экрана: область задач с четырьмя вкладками "Главная", "Параметры", "Избранное" и "Учетные записи".](../images/TaskpaneWithTabs.png)
 
-Кроме того, любые слушатели событий, зарегистрированные в области задач, продолжают работать даже при скрытии области задач.
+Кроме того, все прослушиватели событий, зарегистрированные в области задач, продолжают работать, даже если область задач скрыта.
 
-Рассмотрим следующий сценарий: в области задач имеется зарегистрированный обработок `Worksheet.onActivated` `Worksheet.onDeactivated` для Excel и событий для листа с именем **Sheet1**. Активированный обработок вызывает в области задач зеленую точку. Деактивированный обработок превращает точку красной (это ее состояние по умолчанию). Предположим, что код вызывается `hide()` , когда **sheet1** не активируется, а точка красная. Несмотря на то, что области задач скрыты, **лист1** активируется. Позже код вызывает `showAsTaskpane()` в ответ на какое-либо событие. Когда открывается области задач, точка зеленая, так как слушатели и обработчики событий бежали, даже если области задач были скрыты.
+Рассмотрим следующий сценарий: в области задач есть зарегистрированный обработчик для Excel `Worksheet.onActivated` `Worksheet.onDeactivated` и события для листа **с именем Sheet1**. Активированный обработчик вызывает отображение зеленой точки в области задач. Отключенный обработчик преобразует точку в красный цвет (это состояние по умолчанию). Предположим, что код вызывается `hide()` , если **sheet1** не активирован, а точка красная. Пока область задач скрыта, **лист1** активируется. Последующие вызовы кода `showAsTaskpane()` в ответ на некоторое событие. Когда откроется область задач, точка будет зеленой, так как прослушиватели событий и обработчики выполнялись, даже если область задач была скрыта.
 
-## <a name="handle-the-visibility-changed-event"></a>Обработка измененного события видимости
+## <a name="handle-the-visibility-changed-event"></a>Обработка события изменения видимости
 
-Если код изменяет видимость `showAsTaskpane()` `hide()`области задач с помощью или Office запускает `VisibilityModeChanged` событие. Это событие может быть полезно для обработки. Например, предположим, что в области задач отображается список всех листов в книге. Если при скрытии области задач добавляется новая таблица, то само по себе не добавит новое имя таблицы в список. Но ваш код `VisibilityModeChanged` может реагировать на событие, [чтобы перезагрузить](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-name-member) Worksheet.name всех таблиц в коллекции [Workbook.worksheets](/javascript/api/excel/excel.workbook#excel-excel-workbook-worksheets-member) , как показано в приведенной ниже примере кода.
+Когда код изменяет видимость области `showAsTaskpane()` задач с помощью `hide()`или, Office активирует `VisibilityModeChanged` событие. Это событие может быть полезно для обработки. Например, предположим, что в области задач отображается список всех листов в книге. Если новый лист добавляется, когда область задач скрыта, то, чтобы сделать область задач видимой, это само по себе не приведет к добавлению нового имени листа в список. Но ваш код `VisibilityModeChanged` может реагировать на событие, чтобы перезагрузить свойство [Worksheet.name](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-name-member) всех листов в коллекции [Workbook.worksheets](/javascript/api/excel/excel.workbook#excel-excel-workbook-worksheets-member) , как показано в примере кода ниже.
 
-Чтобы зарегистрировать обработатель для события, не используйте метод "добавить обработник", как в большинстве Office JavaScript. Вместо этого существует специальная функция, к которой вы передаете обработчиве: [Office.addin.onVisibilityModeChanged](/javascript/api/office/office.addin#office-office-addin-onvisibilitymodechanged-member(1)). Ниже приведен пример. Обратите внимание, что `args.visibilityMode` свойством [является тип VisibilityMode](/javascript/api/office/office.visibilitymode).
+Чтобы зарегистрировать обработчик события, не используйте метод add handler, как в большинстве контекстов JavaScript для Office. Вместо этого существует специальная функция, которой передается обработчик: [Office.addin.onVisibilityModeChanged](/javascript/api/office/office.addin#office-office-addin-onvisibilitymodechanged-member(1)). Ниже приведен пример. Обратите внимание, что `args.visibilityMode` свойство имеет тип [VisibilityMode](/javascript/api/office/office.visibilitymode).
 
 ```javascript
 Office.addin.onVisibilityModeChanged(function(args) {
@@ -77,7 +77,7 @@ Office.addin.onVisibilityModeChanged(function(args) {
 });
 ```
 
-Функция возвращает другую функцию, которая *отстранив обработитель* . Вот простой, но не надежный пример.
+Функция возвращает другую функцию, которая *отменяет* регистрацию обработчика. Ниже приведен простой, но не надежный пример.
 
 ```javascript
 var removeVisibilityModeHandler =
@@ -92,7 +92,7 @@ var removeVisibilityModeHandler =
 removeVisibilityModeHandler();
 ```
 
-Метод `onVisibilityModeChanged` является асинхронным и возвращает обещание, что означает, что код должен ожидать выполнения обещания, прежде чем он может вызвать обработитель дерегистрации.
+Метод `onVisibilityModeChanged` является асинхронным и возвращает обещание. Это означает, что код должен ожидать выполнения обещания, прежде чем он сможет вызвать обработчик **отмены** регистрации.
 
 ```javascript
 // await the promise from onVisibilityModeChanged and assign
@@ -105,7 +105,7 @@ var removeVisibilityModeHandler =
     });
 ```
 
-Функция дерегистрации также асинхронна и возвращает обещание. Таким образом, если у вас есть код, который не должен запускаться до завершения дерегулирования, то следует дождаться обещания, возвращенного функцией дерегистрации.
+Функция отмены регистрации также является асинхронной и возвращает обещание. Таким образом, если у вас есть код, который не должен выполняться до завершения отмены регистрации, следует ожидать обещание, возвращенное функцией отмены регистрации.
 
 ```javascript
 // await the promise from the deregister handler before continuing

@@ -1,26 +1,26 @@
 ---
-title: Реализация добавления при отправке в надстройке Outlook надстройки
-description: Узнайте, как реализовать функцию добавления при отправке в Outlook надстройке.
+title: Реализация добавления при отправке в надстройке Outlook
+description: Узнайте, как реализовать функцию добавления при отправке в надстройке Outlook.
 ms.topic: article
 ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 968b730aca1fc36640e43ff45404c8d4c7b92d47
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: 2ea493f4d6b395b2e2f3e596435f15adbfc600dd
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244837"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659831"
 ---
-# <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация добавления при отправке в надстройке Outlook надстройки
+# <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация добавления при отправке в надстройке Outlook
 
-К концу этого пошагового руководства вы получите надстройку Outlook, которая может вставить заявление об отказе при отправке сообщения.
+К концу этого пошагового руководства у вас будет надстройка Outlook, которая может вставить заявление об отказе при отправке сообщения.
 
 > [!NOTE]
 > Поддержка этой функции реализована в наборе обязательных элементов 1.9. См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [инструкции Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) по созданию проекта надстройки с помощью генератора Yeoman для Office надстроек.
+Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора Yeoman для надстроек Office.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
@@ -32,7 +32,7 @@ ms.locfileid: "65244837"
 
 1. Откройте файл **manifest.xml** , расположенный в корневом каталоге проекта.
 
-1. Выберите весь узел `<VersionOverrides>` (включая открытый и закрывающий теги) и замените его следующим XML-кодом.
+1. Выберите весь узел **\<VersionOverrides\>** (включая открытый и закрывающий теги) и замените его следующим XML-кодом.
 
     ```XML
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -120,7 +120,7 @@ ms.locfileid: "65244837"
     ```
 
 > [!TIP]
-> Дополнительные сведения о манифестах Outlook надстроек см. в Outlook [манифестах надстроек](manifests.md).
+> Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).
 
 ## <a name="implement-append-on-send-handling"></a>Реализация обработки добавления при отправке
 

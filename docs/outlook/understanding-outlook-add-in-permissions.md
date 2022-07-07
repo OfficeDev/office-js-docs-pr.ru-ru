@@ -3,12 +3,12 @@ title: Общие сведения о разрешениях для надстр
 description: Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.
 ms.date: 02/19/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 6350e0d3aed499d831c13e440945fda1f60742ca
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: b515ef470331a513d6b57007f372b3e4dec1d25b
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484184"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66660230"
 ---
 # <a name="understanding-outlook-add-in-permissions"></a>Общие сведения о разрешениях для надстроек Outlook
 
@@ -31,7 +31,7 @@ ms.locfileid: "64484184"
 
 ### <a name="cant-do"></a>Не разрешено
 
-- Используйте правило [ItemHasKnownEntity для](/javascript/api/manifest/rule#itemhasknownentity-rule) объекта контактов, электронной почты, предложения собрания или предложения задач.
+- Используйте правило [ItemHasKnownEntity](/javascript/api/manifest/rule#itemhasknownentity-rule) для объекта контакта, адреса электронной почты, предложения собрания или предложения задачи.
 
 - Использовать правило [ItemHasAttachment](/javascript/api/manifest/rule#itemhasattachment-rule) или [ItemHasRegularExpressionMatch](/javascript/api/manifest/rule#itemhasregularexpressionmatch-rule).
 
@@ -64,7 +64,7 @@ ms.locfileid: "64484184"
 
 ## <a name="readitem-permission"></a>Разрешение ReadItem
 
-**ReadItem** — следующий уровень в модели разрешений. Укажите **ReadItem** в элементе **Permissions** манифеста, чтобы запросить это разрешение.
+**ReadItem** — следующий уровень в модели разрешений. **Укажите ReadItem** в элементе **\<Permissions\>** манифеста, чтобы запросить это разрешение.
 
 ### <a name="can-do"></a>Разрешено
 
@@ -76,7 +76,7 @@ ms.locfileid: "64484184"
 
 - [Получать все существующие известные сущности](match-strings-in-an-item-as-well-known-entities.md) (а не только группу) из темы или текста элемента.
 
-- Используйте все [известные](activation-rules.md#itemhasknownentity-rule) сущности в [правилах ItemHasKnownEntity](/javascript/api/manifest/rule#itemhasknownentity-rule) или регулярных выражениях в [правилах ItemHasRegularExpressionMatch](/javascript/api/manifest/rule#itemhasregularexpressionmatch-rule).[](activation-rules.md#itemhasregularexpressionmatch-rule) В следующем примере следует схема v1.1. В нем показано правило, которое активирует надстройки, если одна или несколько известных сущностями находятся в субъекте или теле выбранного сообщения.
+- Используйте все [известные](activation-rules.md#itemhasknownentity-rule) сущности в правилах [ItemHasKnownEntity](/javascript/api/manifest/rule#itemhasknownentity-rule) или регулярных выражениях в [правилах ItemHasRegularExpressionMatch](/javascript/api/manifest/rule#itemhasregularexpressionmatch-rule).[](activation-rules.md#itemhasregularexpressionmatch-rule) В следующем примере показана схема версии 1.1. В нем показано правило, которое активирует надстройку, если одна или несколько известных сущностей находятся в теме или тексте выбранного сообщения.
 
   ```XML
     <Permissions>ReadItem</Permissions>
@@ -128,7 +128,7 @@ ms.locfileid: "64484184"
 
 ## <a name="readwriteitem-permission"></a>Разрешение ReadWriteItem
 
-Укажите элемент **ReadWriteItem** в элементе **Permissions** манифеста, чтобы запросить это разрешение. Почтовые надстройки, активированные в формах создания, которые используют методы записи (**Message.to.addAsync** или **Message.to.setAsync**), должны использовать по крайней мере этот уровень разрешений.
+**Укажите ReadWriteItem в** элементе **\<Permissions\>** манифеста, чтобы запросить это разрешение. Почтовые надстройки, активированные в формах создания, которые используют методы записи (**Message.to.addAsync** или **Message.to.setAsync**), должны использовать по крайней мере этот уровень разрешений.
 
 ### <a name="can-do"></a>Разрешено
 
@@ -136,7 +136,7 @@ ms.locfileid: "64484184"
 
 - [Добавлять или удалять вложения](add-and-remove-attachments-to-an-item-in-a-compose-form.md) для такого элемента.
 
-- Используйте все другие члены Office JavaScript API, применимые к почтовым надстройки, за исключением **Mailbox.makeEWSRequestAsync**.
+- Используйте все остальные члены API JavaScript для Office, применимые к почтовым надстройкам, за исключением **Mailbox.makeEWSRequestAsync**.
 
 ### <a name="cant-do"></a>Не разрешено
 
@@ -148,7 +148,7 @@ ms.locfileid: "64484184"
 
 ## <a name="readwritemailbox-permission"></a>Разрешение ReadWriteMailbox
 
-**ReadWriteMailbox** — самый высокий уровень разрешений. Укажите **ReadWriteMailbox** в элементе **Permissions** манифеста, чтобы запросить это разрешение.
+**ReadWriteMailbox** — самый высокий уровень разрешений. **Укажите ReadWriteMailbox** в элементе **\<Permissions\>** манифеста, чтобы запросить это разрешение.
 
 В дополнение к тому, что поддерживает разрешение **ReadWriteItem**, токен, предоставляемый элементом **mailbox.getCallbackTokenAsync**, позволяет использовать операции веб-служб Exchange или REST API Outlook для выполнения следующих действий:
 
@@ -156,7 +156,7 @@ ms.locfileid: "64484184"
 - Создание, чтение и запись в любую папку или элемент в таком почтовом ящике.
 - Отправка элемента из такого почтового ящика
 
-Через **mailbox.makeEWSRequestAsync** можно получить доступ к следующим операциям EWS.
+С **помощью mailbox.makeEWSRequestAsync** можно получить доступ к следующим операциям EWS.
 
 - [CopyItem](/exchange/client-developer/web-service-reference/copyitem-operation)
 - [CreateFolder](/exchange/client-developer/web-service-reference/createfolder-operation)

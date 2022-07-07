@@ -1,18 +1,18 @@
 ---
 title: 'Ссылки на библиотеку API JavaScript для Office '
-description: Узнайте, как ссылаться на Office API JavaScript и определения типов в надстройки.
+description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определения типов в надстройке.
 ms.date: 02/18/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 514959c7aa703172c61bcf061a9c1f047858caa4
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 38121fe3d3df0a86fef3e2c8e3a58399640f1e2a
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743686"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66660118"
 ---
 # <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 
-Библиотека [API Office JavaScript предоставляет API](../reference/javascript-api-for-office.md), которые ваша надстройка может использовать для взаимодействия с Office приложением. Самый простой способ ссылки на библиотеку — использовать сеть доставки контента (CDN) `<script>` `<head>` путем добавления следующего тега в разделе вашей HTML-страницы.
+Библиотека [API JavaScript для Office](../reference/javascript-api-for-office.md) предоставляет интерфейсы API, которые надстройка может использовать для взаимодействия с приложением Office. Самый простой способ ссылки на библиотеку — использовать сеть доставки содержимого (CDN), `<script>` `<head>` добавив следующий тег в раздел HTML-страницы.
 
 ```html
 <head>
@@ -21,14 +21,14 @@ ms.locfileid: "63743686"
 </head>
 ```
 
-При первом загрузке надстройки загружаются и кэшируются Office API JavaScript, чтобы убедиться, что она использует самые последние реализации Office.js и связанных с ними файлов для указанной версии.
+При первой загрузке надстройка загрузит и кэширует файлы API JavaScript для Office, чтобы убедиться, что она использует последнюю реализацию Office.js и связанных с ней файлов для указанной версии.
 
 > [!IMPORTANT]
-> Вы должны ссылаться на Office API `<head>` JavaScript из раздела страницы, чтобы убедиться, что API полностью инициализирован до любых элементов тела.
+> Необходимо ссылаться на API JavaScript для Office из раздела страницы, чтобы обеспечить полную инициализацию API `<head>` перед любыми элементами основного текста.
 
-## <a name="api-versioning-and-backward-compatibility"></a>Версия API и обратная совместимость
+## <a name="api-versioning-and-backward-compatibility"></a>Управление версиями API и обратная совместимость
 
-В предыдущем фрагменте HTML `/1/` `office.js` перед URL-адресом CDN указывается последний дополнительный выпуск в версии 1 Office.js. Так как Office API JavaScript поддерживает обратную совместимость, последний выпуск будет по-прежнему поддерживать членов API, которые были представлены ранее в версии 1. Если необходимо обновить существующий проект, см. в статью [Обновление версии Office API JavaScript и файлы схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
+В предыдущем фрагменте HTML `/1/` `office.js` перед URL-адресом CDN указывается последний добавочный выпуск в версии 1 Office.js. Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск будет по-прежнему поддерживать элементы API, которые были представлены ранее в версии 1. Если вам нужно обновить существующий проект, см. статью "Обновление версии [API JavaScript для Office и файлов схемы манифеста"](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
 
 Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.
 
@@ -37,15 +37,15 @@ ms.locfileid: "63743686"
 
 ## <a name="enabling-intellisense-for-a-typescript-project"></a>Включение IntelliSense для проекта TypeScript
 
-Помимо ссылки на API Office JavaScript, как описано выше, вы также можете включить IntelliSense для проекта надстройки TypeScript с помощью определений типа из [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js). Для этого запустите следующую команду в системном запросе с поддержкой узла (или в окне баш git) из корневой папки проекта. У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).
+Помимо ссылки на API JavaScript для Office, как описано выше, вы также можете включить IntelliSense для проекта надстройки TypeScript, используя определения типов из [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js). Для этого выполните следующую команду в системной командной строке с поддержкой узла (или в окне Git bash) из корневой папки проекта. У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).
 
 ```command&nbsp;line
 npm install --save-dev @types/office-js
 ```
 
-## <a name="preview-apis"></a>Предварительные API
+## <a name="preview-apis"></a>API предварительной версии
 
-Новые API JavaScript сначала вводятся в "предварительную версию", а затем становятся частью определенного набора требований с номерами после достаточного тестирования и необходимости отзыва пользователей.
+Новые API JavaScript впервые появились в предварительной версии, а затем становятся частью определенного нумерованного набора обязательных элементов после достаточного тестирования и получения отзывов пользователей.
 
 [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis-host.md)]
 
