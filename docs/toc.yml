@@ -619,6 +619,9 @@ items:
           - name: Общие сведения
             href: outlook/apis.md
             displayName: Outlook
+          - name: Набор обязательных элементов Mailbox
+            href: /javascript/api/requirement-sets/outlook/outlook-api-requirement-sets
+            displayName: Outlook
           - name: Справочник по API — последний выпуск
             href: reference/outlook-api-reference-1-11.md
             displayName: Outlook
@@ -830,7 +833,7 @@ items:
       - name: Документация по надстройкам Word
         href: word/index.yml
         displayName: Word
-      - name: Обзор
+      - name: Общие сведения
         href: word/word-add-ins-programming-overview.md
         displayName: Word
       - name: Создание первой надстройки Word

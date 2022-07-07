@@ -4,12 +4,12 @@ description: Разработайте надстройку Excel, которая
 ms.date: 05/01/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: bcec39ef8cbdeb92636cc57abe8f007e56bbfbe2
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: fce53d78af29cceea12f0067d22e9ced0f9c1ace
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244802"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659719"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -509,7 +509,7 @@ ms.locfileid: "65244802"
 
 1. Откройте файл манифеста **./manifest.xml**.
 
-1. Найдите элемент `<Control>`. Этот элемент определяет кнопку **Показать область задач** на вкладке **Главная**, которую вы используете для запуска надстройки. Мы добавим вторую кнопку в эту же группу на вкладке **Главная**. Добавьте следующий текст разметки между закрывающим тегом `</Control>` и закрывающим тегом `</Group>`.
+1. Найдите элемент **\<Control\>**. Этот элемент определяет кнопку **Show Taskpane** (Показать область задач) на вкладке **Главная**, которую вы используете для запуска надстройки. Мы добавим вторую кнопку в эту же группу на ленте **Главная**. Добавьте следующий код между закрывающим тегом **\</Control\>** и закрывающим тегом **\</Group\>**.
 
     ```xml
     <Control xsi:type="Button" id="<!--TODO1: Unique (in manifest) name for button -->">

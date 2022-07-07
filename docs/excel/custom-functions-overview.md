@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 839f88eb1f4e46f50ca08321b48f62e15c07fd89
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: 3eb87c0f2a40dd7650582bb564710aefe43ede0f
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496826"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66660272"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -73,7 +73,7 @@ function add(first, second){
 Файл манифеста XML для надстройки, определяющий пользовательские функции (**./manifest.xml** в проекте, созданном [генератором Yeoman для надстроек Office](../develop/yeoman-generator-overview.md)), выполняет несколько задач.
 
 - Определяет пространство имен для ваших пользовательских функций. Пространство имен добавляется к пользовательским функциям, чтобы клиенты могли определить ваши функции в рамках надстройки.
-- Использует уникальные для манифеста пользовательских функций элементы `<ExtensionPoint>` и `<Resources>`. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
+- Использует уникальные для манифеста пользовательских функций элементы **\<ExtensionPoint\>** и **\<Resources\>**. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
 - Указывает, какую среду выполнения использовать для вашей пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если нет особой потребности в использовании другой среды, поскольку общая позволяет делиться данными между функциями и областью задач.
 
 Если для создания файлов используется [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), рекомендуется настроить манифест для использования общей среды выполнения, так как это не является значением по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).

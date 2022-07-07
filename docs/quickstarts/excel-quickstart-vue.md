@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 57f87d12a5712fb329726a0f405e17b69eddb865
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: 8fb4bd545e1fab44884dd4a5dc388910d71c8336
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090861"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659796"
 ---
 # <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
@@ -112,7 +112,7 @@ vue create my-add-in
    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
    ```
 
-1. Откройте файл **manifest.xml** и найдите теги `<bt:Urls>` внутри тега `<Resources>`. Найдите тег `<bt:Url>` с идентификатором `Taskpane.Url` и обновите его атрибут `DefaultValue`. Новое значение `DefaultValue` — `https://localhost:3000/index.html`. Весь обновленный тег должен совпадать со следующей строкой.
+1. Откройте файл **manifest.xml** и найдите теги `<bt:Urls>` внутри тега **\<Resources\>**. Найдите тег `<bt:Url>` с идентификатором `Taskpane.Url` и обновите его атрибут `DefaultValue`. Новое значение `DefaultValue` — `https://localhost:3000/index.html`. Весь обновленный тег должен совпадать со следующей строкой.
 
    ```html
    <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/index.html" />

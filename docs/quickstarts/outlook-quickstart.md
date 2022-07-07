@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/10/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 56f43e157db9875165689af59ade50b0752fe8dc
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: 2752c81a95cb7f65172d775efa3160b4b7dec10b
+ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091099"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66660153"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -244,11 +244,11 @@ ms.locfileid: "66091099"
 
 1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
 
-1. Элемент **ProviderName** содержит заполнитель. Замените его на свое имя.
+1. Элемент **\<ProviderName\>** содержит заполнитель. Замените его на свое имя.
 
-1. Атрибут **DefaultValue** элемента **DisplayName** содержит заполнитель. Замените его на текст `My Office Add-in`.
+1. Атрибут **DefaultValue** элемента **\<DisplayName\>** содержит заполнитель. Замените его на текст `My Office Add-in`.
 
-1. Атрибут **DefaultValue** элемента **Description** содержит заполнитель. Замените его на строку `My First Outlook add-in`.
+1. Атрибут **DefaultValue** элемента **\<Description\>** содержит заполнитель. Замените его на текст `My First Outlook add-in`.
 
 1. Сохраните файл.
 
