@@ -3,12 +3,12 @@ title: Тестирование надстроек Office
 description: Узнайте, как протестировать надстройку Office.
 ms.date: 12/02/2021
 ms.localizationpriority: high
-ms.openlocfilehash: ab730a9acc141195c378a490c670fada82ecc90f
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: d69d57e677e7f06457f49fef60df63bc6f9577fa
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484550"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712736"
 ---
 # <a name="test-office-add-ins"></a>Тестирование надстроек Office
 
@@ -34,7 +34,9 @@ ms.locfileid: "64484550"
 
 - [Загрузка неопубликованных надстроек Office в Office в Интернете](sideload-office-add-ins-for-testing.md)
 
-- [Загрузка неопубликованных надстроек Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)
+- [Загрузка неопубликованных надстроек Office на Mac](sideload-an-office-add-in-on-mac.md)
+
+- [Загрузка неопубликованных надстроек Office на iPad](sideload-an-office-add-in-on-ipad.md)
 
 - [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md)
 

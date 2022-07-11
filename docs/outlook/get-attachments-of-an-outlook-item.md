@@ -1,14 +1,14 @@
 ---
 title: Получение вложений в надстройке Outlook
 description: Надстройка может использовать API вложений для отправки информации о вложениях удаленной службе.
-ms.date: 09/03/2021
+ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b8f851eba0eae9373d751b63e37c35db5f5ead3a
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 14329134513718ad4025c27abf7621a8ebf4b18f
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484265"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66713107"
 ---
 # <a name="get-attachments-of-an-outlook-item-from-the-server"></a>Получение вложений элемента Outlook с сервера
 
@@ -16,13 +16,13 @@ ms.locfileid: "64484265"
 
 1. Отправьте сведения о вложении в удаленную службу.
 
-    Ваша надстройка может использовать API вложений для отправки сведений о вложениях в удаленную службу. Затем эта служба может обратиться напрямую к серверу Exchange для получения вложений.
+    Надстройка может использовать API вложений для отправки сведений о вложениях в удаленную службу. Затем эта служба может обратиться напрямую к серверу Exchange для получения вложений.
 
-1. Используйте [API getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) , доступный из набора требований 1.8. Поддерживаемые форматы: [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat).
+1. Используйте API [getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) , доступный из набора обязательных элементов 1.8. Поддерживаемые форматы: [AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat).
 
-    Этот API может быть удобен, если EWS/REST недоступен (например, из-за конфигурации администратора вашего сервера Exchange), или ваша надстройка хочет использовать контент base64 непосредственно в HTML или JavaScript. Кроме того, `getAttachmentContentAsync` API доступен в сценариях, в которых вложение еще не синхронизировано с Exchange; см. в статье [Управление](add-and-remove-attachments-to-an-item-in-a-compose-form.md) вложениями элемента в форме сложения в Outlook, чтобы узнать больше.
+    Этот API может быть удобен, если EWS/REST недоступен (например, из-за конфигурации администратора сервера Exchange Server) или ваша надстройка хочет использовать содержимое Base64 непосредственно в HTML или JavaScript. Кроме того, `getAttachmentContentAsync` API доступен в сценариях создания, в которых вложение еще не синхронизировано с Exchange. Дополнительные сведения см. в статье "Управление вложениями элемента в форме создания" в [Outlook](add-and-remove-attachments-to-an-item-in-a-compose-form.md) .
 
-В этой статье подробно извеется о первом варианте. Чтобы отправить сведения о вложении в удаленную службу, используйте следующие свойства и функции.
+В этой статье рассматривается первый вариант. Чтобы отправить сведения о вложении в удаленную службу, используйте следующие свойства и функцию.
 
 - Свойство [Office.context.mailbox.ewsUrl](/javascript/api/outlook/office.entities): предоставляет URL-адрес веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик. Служба использует этот URL-адрес, чтобы вызвать метод [ExchangeService.GetAttachments](/exchange/client-developer/exchange-web-services/how-to-get-attachments-by-using-ews-in-exchange) или операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) для EWS.
 
@@ -32,7 +32,7 @@ ms.locfileid: "64484265"
 
 ## <a name="using-the-attachments-api"></a>Использование API вложений
 
-Чтобы использовать API вложений для получения вложений из Exchange почтового ящика, выполните следующие действия.
+Чтобы использовать API вложений для получения вложений из почтового ящика Exchange, выполните следующие действия.
 
 1. Отобразите надстройку, когда пользователь просматривает сведения о встрече или сообщение, которые содержат вложение.
 
@@ -78,21 +78,19 @@ function attachmentTokenCallback(asyncResult, userContext) {
 // Initialize a context object for the add-in.
 //   Set the fields that are used on the request
 //   object to default values.
- var serviceRequest = {
+ const serviceRequest = {
     attachmentToken: '',
     ewsUrl         : Office.context.mailbox.ewsUrl,
     attachments    : []
  };
 ```
 
-<br/>
-
 Свойство `Office.context.mailbox.item.attachments` содержит коллекцию объектов `AttachmentDetails`, по одному на каждое вложение в элементе. В большинстве случаев надстройке достаточно передать в удаленную службу свойство объекта `AttachmentDetails`, содержащее идентификатор вложения. Если удаленной службе нужно больше сведений о вложении, вы можете полностью или частично передать объект `AttachmentDetails`. Приведенный ниже код определяет метод, который помещает весь массив `AttachmentDetails` в объект `serviceRequest` и отправляет запрос в удаленную службу.
 
 ```js
 function makeServiceRequest() {
   // Format the attachment details for sending.
-  for (var i = 0; i < mailbox.item.attachments.length; i++) {
+  for (let i = 0; i < mailbox.item.attachments.length; i++) {
     serviceRequest.attachments[i] = JSON.parse(JSON.stringify(mailbox.item.attachments[i]));
   }
 
@@ -103,12 +101,12 @@ function makeServiceRequest() {
     contentType: 'application/json;charset=utf-8'
   }).done(function (response) {
     if (!response.isError) {
-      var names = "<h2>Attachments processed using " +
+      const names = "<h2>Attachments processed using " +
                     serviceRequest.service +
                     ": " +
                     response.attachmentsProcessed +
                     "</h2>";
-      for (i = 0; i < response.attachmentNames.length; i++) {
+      for (let i = 0; i < response.attachmentNames.length; i++) {
         names += response.attachmentNames[i] + "<br />";
       }
       document.getElementById("names").innerHTML = names;
@@ -220,7 +218,6 @@ private AttachmentSampleServiceResponse GetAtttachmentsFromExchangeServerUsingEW
 
 Если в удаленной службе используется EWS, для получения вложений с сервера Exchange Server необходимо создать SOAP-запрос [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation). Приведенный ниже код возвращает строку, представляющую SOAP-запрос. Удаленная служба вставляет в строку идентификатор вложения, используя метод `String.Format`.
 
-
 ```cs
 private const string GetAttachmentSoapRequest =
 @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -242,8 +239,6 @@ xmlns:t=""http://schemas.microsoft.com/exchange/services/2006/types"">
   </soap:Body>
 </soap:Envelope>";
 ```
-
-<br/>
 
 Приведенный ниже метод получает вложения с сервера Exchange Server, использует запрос EWS `GetAttachment`. При такой реализации отправляется отдельный запрос для каждого вложения и возвращается количество обработанных вложений. Каждый ответ обрабатывается в отдельном методе `ProcessXmlResponse`, определение которого представлено ниже.
 
@@ -319,8 +314,6 @@ private AttachmentSampleServiceResponse GetAttachmentsFromExchangeServerUsingEWS
   return response;
 }
 ```
-
-<br/>
 
 Каждый ответ на операцию `GetAttachment` отправляется в метод `ProcessXmlResponse`. Этот метод проверяет ответ на наличие ошибок. Если ошибки не найдены, он обрабатывает вложенные файлы и элементы. Метод `ProcessXmlResponse` выполняет большую часть операций по обработке вложения.
 
@@ -420,4 +413,4 @@ private string ProcessXmlResponse(XElement responseEnvelope)
 - [Создание надстроек Outlook для форм чтения](read-scenario.md)
 - [Сведения об управляемом API EWS, EWS и веб-службах в Exchange](/exchange/client-developer/exchange-web-services/explore-the-ews-managed-api-ews-and-web-services-in-exchange)
 - [Начало работы с клиентскими приложениями, использующими управляемый API EWS](/exchange/client-developer/exchange-web-services/get-started-with-ews-managed-api-client-applications)
-- [Outlook SSO надстройки](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)
+- [Единый вход надстройки Outlook](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-SSO)

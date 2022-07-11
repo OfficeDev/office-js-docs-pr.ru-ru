@@ -1,22 +1,29 @@
 ---
-title: Microsoft Office вызова сообщества надстроек
-description: Ежемесячная Microsoft Office, расписание и ресурсы для проектов сообщества надстроек.
-ms.date: 06/14/2022
+title: Вызов сообщества по надстройки Microsoft Office
+description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
+ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 19641c470442c019ff1301a94d230a05ba2d107f
-ms.sourcegitcommit: fb3b1c6055e664d015703623661d624251ceb6b7
+ms.openlocfilehash: a953336dc277d387166dcedffb01f7775e52e9e8
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66136323"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66713009"
 ---
-# <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызова сообщества надстроек
+# <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
-Вызов Microsoft Office надстроек — это ежемесячный звонок, где вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании Office надстроек. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
+Вызов сообщества надстроек Microsoft Office — это ежемесячный звонок, в котором вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании надстроек Office. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
 
 ## <a name="agenda-for-july-13th-call"></a>Повестка дня для звонка 13 июля
 
-Повестка дня за июль будет опубликована примерно за неделю до звонка.
+- Обновление взаимодействия с сообществом
+- Обновление API Word
+- Обновление Outlook
+  - Обновление конечной точки REST версии 2.0 для вывода из эксплуатации
+  - Поддержка общих папок на локальных серверах Exchange
+  - Выбор нескольких элементов ожидается в ближайшее время
+- Обновление API Outlook
+- Обновление примеров единого входа
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
@@ -38,13 +45,13 @@ ms.locfileid: "66136323"
 - [12 мая 2021 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-may-2021/)
 - [14 апреля 2021 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-april-14-2021/)
 - [10 марта 2021 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-march-10-2021/)
-- [Архивные Office надстроек — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
+- [Архивные вызовы сообщества надстроек Office — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
 
 ## <a name="see-also"></a>См. также
 
 - [Приглашение в календарь повторяющихся ежемесячных вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
-- [Community запросы и вопросы по теме звонка](https://aka.ms/officeaddinsform)
-- [Microsoft 365 youTube для разработчиков](https://aka.ms/m365devyoutube)
-- [Microsoft 365 youTube](https://aka.ms/m365pnp/videos)
-- [Microsoft 365 сайта сообщества](https://aka.ms/m365pnp/community)
-- [Microsoft 365 блог сообщества](https://aka.ms/m365pnp/community/blog)
+- [Запросы и вопросы по теме зова сообщества](https://aka.ms/officeaddinsform)
+- [Канал YouTube для разработчиков Microsoft 365](https://aka.ms/m365devyoutube)
+- [Канал YouTube сообщества Microsoft 365](https://aka.ms/m365pnp/videos)
+- [Сайт сообщества Microsoft 365](https://aka.ms/m365pnp/community)
+- [Блог сообщества Microsoft 365](https://aka.ms/m365pnp/community/blog)

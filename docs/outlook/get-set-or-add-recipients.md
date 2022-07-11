@@ -1,14 +1,14 @@
 ---
 title: Просмотр и изменение получателей в надстройке Outlook
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
-ms.date: 06/27/2022
+ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cd51bd20d90d0183cbe0794b644eaa307e2d6b7
-ms.sourcegitcommit: 2a0bd3155c732b6010b7e1e612f4bd7e45f79c52
+ms.openlocfilehash: e7c59765d38e32e7552b5fdf67b6085529ccf03b
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66241290"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712785"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
@@ -65,7 +65,7 @@ item.cc.getAsync
 > Дополнительные сведения см. в [связанной проблеме gitHub](https://github.com/OfficeDev/office-js/issues/2201).
 
 ```js
-var item;
+let item;
 
 Office.initialize = function () {
     item = Office.context.mailbox.item;
@@ -82,7 +82,7 @@ function getAllRecipients() {
     // Local objects to point to recipients of either
     // the appointment or message that is being composed.
     // bccRecipients applies to only messages, not appointments.
-    var toRecipients, ccRecipients, bccRecipients;
+    let toRecipients, ccRecipients, bccRecipients;
     // Verify if the composed item is an appointment or message.
     if (item.itemType == Office.MailboxEnums.ItemType.Appointment) {
         toRecipients = item.requiredAttendees;
@@ -143,7 +143,7 @@ function getAllRecipients() {
 // Recipients are in an array of EmailAddressDetails
 // objects passed in asyncResult.value.
 function displayAddresses (asyncResult) {
-    for (var i=0; i<asyncResult.value.length; i++)
+    for (let i=0; i<asyncResult.value.length; i++)
         write (asyncResult.value[i].emailAddress);
 }
 
@@ -166,7 +166,7 @@ function write(message){
 При необходимости можно `setAsync` указать метод обратного вызова в качестве входного аргумента для метода, чтобы убедиться, что любой код, который зависит от успешной настройки получателей, будет выполняться только в этом случае. Кроме того, методу обратного вызова можно передать любые аргументы, используя дополнительный параметр  _asyncContext_. При использовании метода обратного вызова можно получить доступ к выходному параметру _asyncResult_ и  `AsyncResult` использовать свойства состояния  и ошибки объекта параметра для проверки состояния и любых сообщений об ошибках асинхронного вызова.
 
 ```js
-var item;
+let item;
 
 Office.initialize = function () {
     item = Office.context.mailbox.item;
@@ -184,7 +184,7 @@ function setRecipients() {
     // Local objects to point to recipients of either
     // the appointment or message that is being composed.
     // bccRecipients applies to only messages, not appointments.
-    var toRecipients, ccRecipients, bccRecipients;
+    let toRecipients, ccRecipients, bccRecipients;
 
     // Verify if the composed item is an appointment or message.
     if (item.itemType == Office.MailboxEnums.ItemType.Appointment) {
@@ -269,7 +269,6 @@ function setRecipients() {
 function write(message){
     document.getElementById('message').innerText += message; 
 }
-
 ```
 
 ## <a name="add-recipients"></a>Добавление получателей

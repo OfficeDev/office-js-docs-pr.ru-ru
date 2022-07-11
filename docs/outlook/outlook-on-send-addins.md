@@ -1,14 +1,14 @@
 ---
 title: Функция проверки при отправке для надстроек Outlook
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
-ms.date: 06/15/2022
+ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: eda6444a84632de5349af42deab7744c712551ad
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: cb67a813c876809440b29e029ff899cd34d7e365
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660265"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712757"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -309,7 +309,7 @@ Get-OWAMailboxPolicy OWAOnSendAddinAllUserPolicy | Set-OWAMailboxPolicy –OnSen
 
 Надстройки Outlook для Mac, использующие функцию проверки при отправке, должны запускаться у всех пользователей, установивших их. Однако если пользователям требуется запустить надстройку для выполнения стандартов соответствия требованиям, необходимо применить следующий параметр почтовых ящиков на компьютере каждого пользователя. Этот параметр или ключ совместим с CFPreference, то есть его можно установить, используя программное обеспечение для управления предприятием для Mac, например Jamf Pro.
 
-||Value|
+||Значение|
 |:---|:---|
 |**Домен**|com.microsoft.outlook|
 |**Ключ**|OnSendAddinsWaitForLoad|
@@ -467,13 +467,12 @@ Get-OWAMailboxPolicy OWAOnSendAddinAllUserPolicy | Set-OWAMailboxPolicy –OnSen
 > - [Манифесты надстроек Outlook](manifests.md)
 > - [XML-манифест надстроек Office](../develop/add-in-manifests.md)
 
-
 ### <a name="event-and-item-objects-and-bodygetasync-and-bodysetasync-methods"></a>Объекты `Event` и `item`, методы `body.getAsync` и `body.setAsync`
 
 Чтобы получить доступ к выбранному в данный момент сообщению или элементу собрания (в этом примере — к новому сообщению), используйте пространство имен `Office.context.mailbox.item`. Функция проверки при отправке автоматически передает событие `ItemSend` функции, указанной в манифесте (в данном случае это функция `validateBody`).
 
 ```js
-var mailboxItem;
+let mailboxItem;
 
 Office.initialize = function (reason) {
     mailboxItem = Office.context.mailbox.item;
@@ -491,7 +490,6 @@ function validateBody(event) {
 > [!NOTE]
 > Дополнительные сведения см. в статьях [Объект Event](/javascript/api/office/office.addincommands.event) и [Body.getAsync](/javascript/api/outlook/office.body#outlook-office-body-getasync-member(1)).
   
-
 ### <a name="notificationmessages-object-and-eventcompleted-method"></a>Объект `NotificationMessages` и метод `event.completed`
 
 Функция `checkBodyOnlyOnSendCallBack` использует регулярное выражение, чтобы определить, содержит ли текст сообщения слова, подлежащие блокировке. Если она обнаруживает слово, совпадающие с каким-либо элементом из массива запрещенных слов, отправка сообщения блокируется, а отправитель получает уведомление на панели информации. Для этого в ней используется свойство `notificationMessages` объекта `Item` для возврата объекта `NotificationMessages`. После этого она добавляет уведомление к элементу, вызывая метод `addAsync`, как показано в следующем примере.
@@ -500,13 +498,13 @@ function validateBody(event) {
 // Determine whether the body contains a specific set of blocked words. If it contains the blocked words, block email from being sent. Otherwise allow sending.
 // <param name="asyncResult">ItemSend event passed from the calling function.</param>
 function checkBodyOnlyOnSendCallBack(asyncResult) {
-    var listOfBlockedWords = new Array("blockedword", "blockedword1", "blockedword2");
-    var wordExpression = listOfBlockedWords.join('|');
+    const listOfBlockedWords = new Array("blockedword", "blockedword1", "blockedword2");
+    const wordExpression = listOfBlockedWords.join('|');
 
     // \b to perform a "whole words only" search using a regular expression in the form of \bword\b.
     // i to perform case-insensitive search.
-    var regexCheck = new RegExp('\\b(' + wordExpression + ')\\b', 'i');
-    var checkBody = regexCheck.test(asyncResult.value);
+    const regexCheck = new RegExp('\\b(' + wordExpression + ')\\b', 'i');
+    const checkBody = regexCheck.test(asyncResult.value);
 
     if (checkBody) {
         mailboxItem.notificationMessages.addAsync('NoSend', { type: 'errorMessage', message: 'Blocked words have been found in the body of this email. Please remove them.' });
@@ -534,7 +532,6 @@ function checkBodyOnlyOnSendCallBack(asyncResult) {
 
 Помимо метода `addAsync`, объект `NotificationMessages` также включает методы `replaceAsync`, `removeAsync` и `getAllAsync`.  Эти методы не используются в данном примере кода.  Дополнительные сведения см. в статье [NotificationMessages](/javascript/api/outlook/office.notificationmessages).
 
-
 ### <a name="subject-and-cc-checker-code"></a>Код проверки строк "Тема" и "Копия"
 
 В приведенном ниже примере кода показано, как при отправке сообщения добавить получателя в строку "Копия" и проверить, включает ли сообщение тему. В этом примере функция проверки при отправке используется, чтобы разрешить или запретить отправку сообщения.  
@@ -555,7 +552,7 @@ function shouldChangeSubjectOnSend(event) {
             addCCOnSend(asyncResult.asyncContext);
             //console.log(asyncResult.value);
             // Match string.
-            var checkSubject = (new RegExp(/\[Checked\]/)).test(asyncResult.value)
+            const checkSubject = (new RegExp(/\[Checked\]/)).test(asyncResult.value)
             // Add [Checked]: to subject line.
             subject = '[Checked]: ' + asyncResult.value;
 

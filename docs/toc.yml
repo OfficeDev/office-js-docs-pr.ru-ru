@@ -81,8 +81,6 @@ items:
                 href: develop/persisting-add-in-state-and-settings.md
               - name: Привязка к областям в документе или электронной таблице
                 href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
-              - name: Коды ошибок общего API
-                href: reference/javascript-api-for-office-error-codes.md
           - name: Настройка и запуск надстройки
             items:
               - name: Добавление ссылок на Office.js
@@ -308,8 +306,10 @@ items:
                 href: testing/debug-add-ins-in-office-online.md
           - name: iPad и Mac
             items:
-              - name: Загрузка неопубликованных надстроек Office на iPad и Mac
-                href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
+              - name: Загрузка неопубликованных надстроек Office на Mac
+                href: testing/sideload-an-office-add-in-on-mac.md
+              - name: Загрузка неопубликованных надстроек Office на iPad
+                href: testing/sideload-an-office-add-in-on-ipad.md
               - name: Отладка на компьютере Mac
                 href: testing/debug-office-add-ins-on-ipad-and-mac.md
           - name: Очистка кэша Office
@@ -317,16 +317,22 @@ items:
             displayName: 'uninstall, sideload'
           - name: Отладка с помощью журнала среды выполнения
             href: testing/runtime-logging.md
+          - name: Ошибки
+            items:
+              - name: Обработка ошибок API для определенных приложений
+                href: testing/application-specific-api-error-handling.md
+              - name: Коды ошибок общего API
+                href: reference/javascript-api-for-office-error-codes.md
+              - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
+                href: testing/testing-and-troubleshooting.md
+              - name: Устранение ошибок разработки
+                href: testing/troubleshoot-development-errors.md
           - name: Производительность
             items:
               - name: Избегайте использования метода context.sync в циклах
                 href: concepts/correlated-objects-pattern.md
               - name: Ограничения ресурсов и оптимизация производительности надстроек Office
                 href: concepts/resource-limits-and-performance-optimization.md
-          - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
-            href: testing/testing-and-troubleshooting.md
-          - name: Устранение ошибок разработки
-            href: testing/troubleshoot-development-errors.md
           - name: Модульное тестирование
             href: testing/unit-testing.md
           - name: Тестирование удобства использования
@@ -421,9 +427,6 @@ items:
                 displayName: 'Excel, preview'
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md
-            displayName: Excel
-          - name: Обработка ошибок
-            href: excel/excel-add-ins-error-handling.md
             displayName: Excel
           - name: События
             href: excel/excel-add-ins-events.md
@@ -833,7 +836,7 @@ items:
       - name: Документация по надстройкам Word
         href: word/index.yml
         displayName: Word
-      - name: Общие сведения
+      - name: Обзор
         href: word/word-add-ins-programming-overview.md
         displayName: Word
       - name: Создание первой надстройки Word

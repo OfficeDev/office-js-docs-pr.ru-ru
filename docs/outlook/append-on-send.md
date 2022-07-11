@@ -2,14 +2,14 @@
 title: Реализация добавления при отправке в надстройке Outlook
 description: Узнайте, как реализовать функцию добавления при отправке в надстройке Outlook.
 ms.topic: article
-ms.date: 05/01/2022
+ms.date: 07/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ea493f4d6b395b2e2f3e596435f15adbfc600dd
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 762d8d14bb09d50c836b9a097534d1d23c493e66
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659831"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712974"
 ---
 # <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация добавления при отправке в надстройке Outlook
 
@@ -137,7 +137,7 @@ ms.locfileid: "66659831"
 
     ```js
     function appendDisclaimerOnSend(event) {
-      var appendText =
+      const appendText =
         '<p style = "color:blue"> <i>This and subsequent emails on the same topic are for discussion and information purposes only. Only those matters set out in a fully executed agreement are legally binding. This email may contain confidential information and should not be shared with any third party without the prior written agreement of Contoso. If you are not the intended recipient, take no action and contact the sender immediately.<br><br>Contoso Limited (company number 01624297) is a company registered in England and Wales whose registered office is at Contoso Campus, Thames Valley Park, Reading RG6 1WG</i></p>';  
       /**
         *************************************************************
@@ -158,7 +158,7 @@ ms.locfileid: "66659831"
       event.completed();
     }
     ```
-    
+
 1. Непосредственно под функцией добавьте следующую строку, чтобы зарегистрировать функцию.
 
     ```js
@@ -167,7 +167,7 @@ ms.locfileid: "66659831"
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Выполните указанную ниже команду в корневом каталоге своего проекта. При выполнении этой команды локальный веб-сервер запустится, если он еще не запущен и надстройка будет загружена неопубликованным образом. 
+1. Выполните указанную ниже команду в корневом каталоге своего проекта. При выполнении этой команды локальный веб-сервер запустится, если он еще не запущен и надстройка будет загружена неопубликованным образом.
 
     ```command&nbsp;line
     npm start
@@ -179,7 +179,7 @@ ms.locfileid: "66659831"
 
 1. Отправьте сообщение, а затем откройте его из папки **"** Входящие" или "Отправленные", чтобы просмотреть добавленное заявление об отказе.
 
-    ![Снимок экрана: пример сообщения с заявлением об отказе, добавленным при отправке Outlook в Интернете.](../images/outlook-web-append-disclaimer.png)
+    ![Пример сообщения с заявлением об отказе, добавленным при отправке Outlook в Интернете.](../images/outlook-web-append-disclaimer.png)
 
 ## <a name="see-also"></a>См. также
 

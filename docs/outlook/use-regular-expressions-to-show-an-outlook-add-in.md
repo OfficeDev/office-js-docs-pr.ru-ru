@@ -1,24 +1,22 @@
 ---
 title: Использование правил активации на основе регулярных выражений для отображения надстройки
 description: Узнайте, как использовать правила активации на основе регулярных выражений для контекстных надстроек Outlook.
-ms.date: 07/28/2020
+ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: cdf15fd2ab46fbad679ea6214cde9b9da50a0cfc
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: f145df063f550351941eee5132a7b6b9d3267c04
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484420"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66713072"
 ---
 # <a name="use-regular-expression-activation-rules-to-show-an-outlook-add-in"></a>Использование правил активации на основе регулярных выражений для отображения надстройки Outlook
 
-Вы можете указать правила на основе регулярных выражений для активации [контекстной надстройки](contextual-outlook-add-ins.md) при обнаружении соответствия в определенных полях сообщения. Контекстные надстройки активируются только в режиме чтения. Outlook не активирует контекстные надстройки, когда пользователь создает элемент. Существуют также другие сценарии, в которых Outlook не активирует надстройки, например цифровые подписанные элементы. Дополнительные сведения см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
+Вы можете указать правила на основе регулярных выражений для активации [контекстной надстройки](contextual-outlook-add-ins.md) при обнаружении соответствия в определенных полях сообщения. Контекстные надстройки активируются только в режиме чтения. Outlook не активирует контекстные надстройки, когда пользователь создает элемент. Существуют и другие сценарии, в которых Outlook не активирует надстройки, например элементы с цифровой подписью. Дополнительные сведения см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
 
 Вы можете указать регулярное выражение в составе правила [ItemHasRegularExpressionMatch](/javascript/api/manifest/rule#itemhasregularexpressionmatch-rule) или [ItemHasKnownEntity](/javascript/api/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста надстройки. Правила указываются в точке расширения [DetectedEntity](/javascript/api/manifest/extensionpoint#detectedentity).
 
 Outlook оценивает регулярные выражения на основе правил для интерпретатора JavaScript, используемых браузером на клиентском компьютере. Outlook поддерживает те же специальные знаки, что и все обработчики XML. Они перечислены в следующей таблице. Указывая эти знаки в регулярных выражениях, используйте соответствующие escape-последовательности из следующей таблицы.
-
-<br/>
 
 |Знак|Описание|Escape-последовательность|
 |:-----|:-----|:-----|
@@ -31,8 +29,6 @@ Outlook оценивает регулярные выражения на осно
 ## <a name="itemhasregularexpressionmatch-rule"></a>Правило ItemHasRegularExpressionMatch
 
 Правило `ItemHasRegularExpressionMatch` позволяет управлять активацией надстройки в зависимости от определенных значений поддерживаемого свойства. Ниже описаны атрибуты правила `ItemHasRegularExpressionMatch`.
-
-<br/>
 
 |Имя атрибута|Описание|
 |:-----|:-----|
@@ -53,7 +49,7 @@ Outlook оценивает регулярные выражения на осно
 
 - Текст элемента в HTML-формате немного отличается для полнофункционального клиента Outlook, Outlook в Интернете и Outlook для мобильных устройств. Будьте внимательны, задавая регулярные выражения.
 
-- В зависимости Outlook клиента, типа устройства или свойства, на которое применяется регулярное выражение, для каждого из клиентов существуют другие методы и ограничения, которые следует знать при разработке регулярных выражений в качестве правил активации. Дополнительные сведения см. в материале Ограничения для активации и [API JavaScript для Outlook надстройки](limits-for-activation-and-javascript-api-for-outlook-add-ins.md).
+- В зависимости от клиента Outlook, типа устройства или свойства, к которому применяется регулярное выражение, существуют другие рекомендации и ограничения для каждого клиента, которые следует учитывать при разработке регулярных выражений в качестве правил активации. Дополнительные сведения см. в разделе "Ограничения для [активации и API JavaScript](limits-for-activation-and-javascript-api-for-outlook-add-ins.md) для надстроек Outlook".
 
 ### <a name="examples"></a>Примеры
 
@@ -67,8 +63,6 @@ Outlook оценивает регулярные выражения на осно
 />
 ```
 
-<br/>
-
 Ниже приведен другой способ указания того же регулярного выражения с использованием атрибута `IgnoreCase`.
 
 ```XML
@@ -79,8 +73,6 @@ Outlook оценивает регулярные выражения на осно
     IgnoreCase="true"
 />
 ```
-
-<br/>
 
 Следующее правило `ItemHasRegularExpressionMatch` активирует надстройку, если основной текст текущего элемента содержит биржевой символ акции.
 
@@ -100,8 +92,6 @@ Outlook оценивает регулярные выражения на осно
 > Независимо от языкового стандарта, указанного в манифесте, Outlook может извлекать строки сущностей только на английском языке. Только сообщения поддерживают тип сущности `MeetingSuggestion`. Сущности невозможно извлечь из элементов в папке **Отправленные**. Правило `ItemHasKnownEntity` не подходит для активации надстройки для элементов в папке **Отправленные**.
 
 Правило `ItemHasKnownEntity` поддерживает атрибуты, перечисленные в следующей таблице. Обратите внимание, что указывать регулярное выражение в правиле `ItemHasKnownEntity` необязательно, но при использовании регулярного выражения в качестве фильтра сущности необходимо указывать атрибуты `RegExFilter` и `FilterName`.
-
-<br/>
 
 |Имя атрибута|Описание|
 |:-----|:-----|
@@ -124,7 +114,7 @@ Outlook оценивает регулярные выражения на осно
 
 ## <a name="using-regular-expression-results-in-code"></a>Использование результатов регулярных выражений в коде
 
-Вы можете получить совпадения с регулярным выражением с помощью следующих методов текущего элемента.
+Совпадения с регулярным выражением можно получить с помощью следующих методов для текущего элемента.
 
 - Метод [getRegExMatches](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) возвращает строки текущего элемента, соответствующие всем регулярным выражениям, указанным в правилах `ItemHasRegularExpressionMatch` и `ItemHasKnownEntity` для надстройки.
 
@@ -148,38 +138,32 @@ Outlook оценивает регулярные выражения на осно
 </Rule>
 ```
 
-<br/>
-
 В следующем примере используется метод `getRegExMatches` текущего элемента, чтобы поместить в переменную `videos` результаты предыдущего правила `ItemHasRegularExpressionMatch`.
 
 ```js
-var videos = Office.context.mailbox.item.getRegExMatches().videoURL;
+const videos = Office.context.mailbox.item.getRegExMatches().videoURL;
 ```
-
-<br/>
 
 Несколько совпадений хранятся в этом объекте в виде элементов массива. Следующий пример кода показывает, как выполнять итерацию по совпадениям для регулярного выражения `reg1`, чтобы создать строку для отображения в виде HTML-кода.
 
 ```js
 function initDialer()
 {
-    var myEntities;
-    var myString;
-    var myCell;
+    let myEntities;
+    let myString;
+    let myCell;
     myEntities = Office.context.mailbox.item.getRegExMatches();
 
     myString = "";
     myCell = document.getElementById('dialerholder');
     // Loop over the myEntities collection.
-    for (var i in myEntities.reg1) {
+    for (let i in myEntities.reg1) {
         myString += "<p><a href='callto:tel:" + myEntities.reg1[i] + "'>" + myEntities.reg1[i] + "</a></p>";
     }
 
     myCell.innerHTML = myString;
 }
 ```
-
-<br/>
 
 Ниже приведен пример правила `ItemHasKnownEntity`, которое указывает сущность `MeetingSuggestion` и регулярное выражение `CampSuggestion`. Outlook активирует надстройку, если обнаруживает, что выбранный элемент содержит приглашение на собрание, а тема или текст содержит термин `WonderCamp`.
 
@@ -191,12 +175,10 @@ function initDialer()
     IgnoreCase="false"/>
 ```
 
-<br/>
-
 В следующем примере кода используется метод `getFilteredEntitiesByName` текущего элемента, чтобы поместить в переменную `suggestions` массив обнаруженных приглашений на собрание для предыдущего правила `ItemHasKnownEntity`.
 
 ```js
-var suggestions = Office.context.mailbox.item.getFilteredEntitiesByName("CampSuggestion");
+const suggestions = Office.context.mailbox.item.getFilteredEntitiesByName("CampSuggestion");
 ```
 
 ## <a name="see-also"></a>См. также

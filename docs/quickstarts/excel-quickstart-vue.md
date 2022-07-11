@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/10/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 8fb4bd545e1fab44884dd4a5dc388910d71c8336
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 3024e759acd787a61992b84f31850ef7f0bfbe3b
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659796"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66713058"
 ---
 # <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
@@ -214,7 +214,8 @@ vue create my-add-in
 
    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
    - Веб-браузер: [загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
-   - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+   - iPad: [загрузка неопубликованных надстроек Office на iPad](../testing/sideload-an-office-add-in-on-ipad.md)
+   - Mac: [загрузка неопубликованных надстроек Office на Mac](../testing/sideload-an-office-add-in-on-mac.md)
 
 1. Откройте область задач надстройки в Excel. На вкладке **Главная** нажмите кнопку **Показать область задач**.
 

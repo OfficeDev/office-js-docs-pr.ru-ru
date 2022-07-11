@@ -1,35 +1,35 @@
 ---
-title: Get and set categories
+title: Получение и задание категорий
 description: Управление категориями в почтовом ящике и элементе.
-ms.date: 01/14/2020
+ms.date: 07/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e6403ad0ac46cd713b9617c089cd4a3884789a
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: d31cb8da4cdaf4a88141a1eac927748b1399e0d9
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496889"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712827"
 ---
-# <a name="get-and-set-categories"></a>Get and set categories
+# <a name="get-and-set-categories"></a>Получение и задание категорий
 
-В Outlook пользователь может применять категории к сообщениям и встречам в качестве средства организации данных почтовых ящиков. Пользователь определяет список категорий с цветным кодом для своего почтового ящика и может применить одну или несколько из этих категорий к любому элементу сообщения или встречи. Каждая [категория](/javascript/api/outlook/office.categorydetails) в мастер-списке представлена именем и цветом [,](/javascript/api/outlook/office.mailboxenums.categorycolor) указанными пользователем. Вы можете использовать API Office JavaScript для управления списком категорий в почтовом ящике и категориями, примененными к элементу.
+В Outlook пользователь может применять категории к сообщениям и встречам в качестве средства организации данных почтового ящика. Пользователь определяет основной список цветных категорий для своего почтового ящика, а затем может применить одну или несколько из этих категорий к любому сообщению или элементу встречи. Каждая [категория в](/javascript/api/outlook/office.categorydetails) главном списке представлена именем и [цветом](/javascript/api/outlook/office.mailboxenums.categorycolor) , указанными пользователем. API JavaScript для Office можно использовать для управления главным списком категорий в почтовом ящике и категориями, примененными к элементу.
 
 > [!NOTE]
-> Поддержка этой функции была представлена в наборе требований 1.8. См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции реализована в наборе обязательных элементов 1.8. См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
-## <a name="manage-categories-in-the-master-list"></a>Управление категориями в списке master
+## <a name="manage-categories-in-the-master-list"></a>Управление категориями в главном списке
 
-Для применения к сообщению или встрече доступны только категории в списке магистра в почтовом ящике. API можно использовать для добавления, получения и удаления категорий магистра.
+К сообщению или встрече можно применить только категории в главном списке почтового ящика. С помощью API можно добавлять, получать и удалять главные категории.
 
 > [!IMPORTANT]
-> Чтобы надстройка управляет мастер-списком категорий, `Permissions` необходимо установить узел в манифесте `ReadWriteMailbox`.
+> Чтобы надстройка управляет главным списком категорий, `Permissions` необходимо задать для узла в манифесте значение `ReadWriteMailbox`.
 
-### <a name="add-master-categories"></a>Добавление категорий master
+### <a name="add-master-categories"></a>Добавление главных категорий
 
-В следующем примере показано, как добавить категорию с именем "Срочно!". в мастер-список, [позвонив addAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-addasync-member(1)) на [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
+В следующем примере показано, как добавить категорию с именем "Срочно!" в главный список путем вызова [addAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-addasync-member(1)) в [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
 
 ```js
-var masterCategoriesToAdd = [
+const masterCategoriesToAdd = [
     {
         "displayName": "Urgent!",
         "color": Office.MailboxEnums.CategoryColor.Preset0
@@ -45,16 +45,16 @@ Office.context.mailbox.masterCategories.addAsync(masterCategoriesToAdd, function
 });
 ```
 
-### <a name="get-master-categories"></a>Get master categories
+### <a name="get-master-categories"></a>Получение основных категорий
 
-В следующем примере показано, как получить список категорий, позвонив [в getAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-getasync-member(1)) на [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
+В следующем примере показано, как получить список категорий путем вызова [getAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-getasync-member(1)) в [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
 
 ```js
 Office.context.mailbox.masterCategories.getAsync(function (asyncResult) {
     if (asyncResult.status === Office.AsyncResultStatus.Failed) {
         console.log("Action failed with error: " + asyncResult.error.message);
     } else {
-        var masterCategories = asyncResult.value;
+        const masterCategories = asyncResult.value;
         console.log("Master categories:");
         masterCategories.forEach(function (item) {
             console.log("-- " + JSON.stringify(item));
@@ -63,12 +63,12 @@ Office.context.mailbox.masterCategories.getAsync(function (asyncResult) {
 });
 ```
 
-### <a name="remove-master-categories"></a>Удаление категорий master
+### <a name="remove-master-categories"></a>Удаление главных категорий
 
-В следующем примере показано, как удалить категорию с именем "Срочно!". из мастер-списка по [вызову removeAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-removeasync-member(1)) на [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
+В следующем примере показано, как удалить категорию с именем "Срочно!" из главного списка путем вызова [removeAsync](/javascript/api/outlook/office.mastercategories#outlook-office-mastercategories-removeasync-member(1)) в [mailbox.masterCategories](/javascript/api/outlook/office.mailbox#outlook-office-mailbox-mastercategories-member).
 
 ```js
-var masterCategoriesToRemove = ["Urgent!"];
+const masterCategoriesToRemove = ["Urgent!"];
 
 Office.context.mailbox.masterCategories.removeAsync(masterCategoriesToRemove, function (asyncResult) {
     if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
@@ -81,19 +81,19 @@ Office.context.mailbox.masterCategories.removeAsync(masterCategoriesToRemove, fu
 
 ## <a name="manage-categories-on-a-message-or-appointment"></a>Управление категориями в сообщении или встрече
 
-API можно использовать для добавления, получения и удаления категорий для сообщения или элемента встречи.
+С помощью API можно добавлять, получать и удалять категории для сообщения или элемента встречи.
 
 > [!IMPORTANT]
-> Для применения к сообщению или встрече доступны только категории в списке магистра в почтовом ящике. Дополнительные сведения см. в более ранней статье [Управление](#manage-categories-in-the-master-list) категориями в списке master.
+> К сообщению или встрече можно применить только категории в главном списке почтового ящика. Дополнительные сведения см. в предыдущем разделе "Управление категориями [" в](#manage-categories-in-the-master-list) главном списке.
 >
-> В Outlook в Интернете вы не можете использовать API для управления категориями в сообщении в режиме Чтения.
+> В Outlook в Интернете вы не можете использовать API для управления категориями сообщения в режиме чтения.
 
 ### <a name="add-categories-to-an-item"></a>Добавление категорий к элементу
 
-В следующем примере показано, как применять категорию с именем "Срочно!" к текущему элементу, [позвонив в addAsync](/javascript/api/outlook/office.categories#outlook-office-categories-addasync-member(1)).`item.categories`
+В следующем примере показано, как применить категорию с именем "Срочно!" для текущего элемента путем вызова [addAsync](/javascript/api/outlook/office.categories#outlook-office-categories-addasync-member(1)) для `item.categories`.
 
 ```js
-var categoriesToAdd = ["Urgent!"];
+const categoriesToAdd = ["Urgent!"];
 
 Office.context.mailbox.item.categories.addAsync(categoriesToAdd, function (asyncResult) {
     if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
@@ -104,16 +104,16 @@ Office.context.mailbox.item.categories.addAsync(categoriesToAdd, function (async
 });
 ```
 
-### <a name="get-an-items-categories"></a>Получить категории элемента
+### <a name="get-an-items-categories"></a>Получение категорий элемента
 
-В следующем примере показано, как получить категории, примененные к текущему элементу, позвонив [в getAsync](/javascript/api/outlook/office.categories#outlook-office-categories-getasync-member(1)).`item.categories`
+В следующем примере показано, как получить категории, примененные к текущему элементу, вызвав [метод getAsync](/javascript/api/outlook/office.categories#outlook-office-categories-getasync-member(1))`item.categories`.
 
 ```js
 Office.context.mailbox.item.categories.getAsync(function (asyncResult) {
     if (asyncResult.status === Office.AsyncResultStatus.Failed) {
         console.log("Action failed with error: " + asyncResult.error.message);
     } else {
-        var categories = asyncResult.value;
+        const categories = asyncResult.value;
         console.log("Categories:");
         categories.forEach(function (item) {
             console.log("-- " + JSON.stringify(item));
@@ -124,10 +124,10 @@ Office.context.mailbox.item.categories.getAsync(function (asyncResult) {
 
 ### <a name="remove-categories-from-an-item"></a>Удаление категорий из элемента
 
-В следующем примере показано, как удалить категорию с именем "Срочно!". из текущего элемента путем вызова [removeAsync](/javascript/api/outlook/office.categories#outlook-office-categories-removeasync-member(1)) на `item.categories`.
+В следующем примере показано, как удалить категорию с именем "Срочно!" из текущего элемента путем вызова [removeAsync](/javascript/api/outlook/office.categories#outlook-office-categories-removeasync-member(1)) для `item.categories`.
 
 ```js
-var categoriesToRemove = ["Urgent!"];
+const categoriesToRemove = ["Urgent!"];
 
 Office.context.mailbox.item.categories.removeAsync(categoriesToRemove, function (asyncResult) {
     if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
@@ -140,5 +140,5 @@ Office.context.mailbox.item.categories.removeAsync(categoriesToRemove, function 
 
 ## <a name="see-also"></a>См. также
 
-- [Outlook разрешений](understanding-outlook-add-in-permissions.md)
+- [Разрешения Outlook](understanding-outlook-add-in-permissions.md)
 - [Элемент Permissions в манифесте](/javascript/api/manifest/permissions)

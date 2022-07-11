@@ -1,23 +1,23 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
-ms.date: 07/06/2021
+ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 063a819ccb7f71351e0eec8cef1702d98c8466b0
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 7c02b878b6636e6736ada4a29d123dd8ff772393
+ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483383"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66712967"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
 Пространство имен [Office.context.mailbox.item](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
 
 > [!IMPORTANT]
-> **API Outlook REST обесценились**
+> **Интерфейсы REST API Outlook устарели**
 >
-> Конечные точки rest Outlook полностью списаются в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/).). Чтобы использовать Microsoft Graph, необходимо перенести [существующие надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки Graph и Outlook API](/outlook/rest/compare-graph) REST.
+> Конечные точки REST Outlook будут полностью списываются в ноябре 2022 г. (дополнительные сведения см. в объявлении за [ноябрь 2020 г.](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/)). Для использования Microsoft Graph необходимо перенести существующие [надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки REST API Microsoft Graph и Outlook](/outlook/rest/compare-graph).
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 
@@ -36,7 +36,7 @@ ms.locfileid: "64483383"
 ```js
 Office.context.mailbox.getCallbackTokenAsync({isRest: true}, function(result){
   if (result.status === "succeeded") {
-    var accessToken = result.value;
+    const accessToken = result.value;
 
     // Use the access token.
     getCurrentItem(accessToken);
@@ -81,7 +81,7 @@ function getItemRestId() {
 
 ```js
 // Example: https://outlook.office.com
-var restHost = Office.context.mailbox.restUrl;
+const restHost = Office.context.mailbox.restUrl;
 ```
 
 ## <a name="call-the-api"></a>Вызов API
@@ -89,17 +89,17 @@ var restHost = Office.context.mailbox.restUrl;
 Когда надстройка получит маркер доступа, идентификатор элемента и URL-адрес REST API, она может передать эти сведения внутренней службе, которая вызовет REST API, или вызвать его напрямую с помощью AJAX. В приведенном ниже примере вызывается REST API почты Outlook для получения текущего сообщения.
 
 > [!IMPORTANT]
-> Для локального Exchange развертывание клиентские запросы с помощью AJAX или аналогичных библиотек сбои, так как CORS не поддерживается в настройке сервера.
+> Для локальных развертываний Exchange клиентские запросы, использующие AJAX или аналогичные библиотеки, завершались сбоем, так как CORS не поддерживается в этой настройке сервера.
 
 ```js
 function getCurrentItem(accessToken) {
   // Get the item's REST ID.
-  var itemId = getItemRestId();
+  const itemId = getItemRestId();
 
   // Construct the REST URL to the current item.
   // Details for formatting the URL can be found at
   // https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations#get-messages.
-  var getMessageUrl = Office.context.mailbox.restUrl +
+  const getMessageUrl = Office.context.mailbox.restUrl +
     '/v2.0/me/messages/' + itemId;
 
   $.ajax({
@@ -108,7 +108,7 @@ function getCurrentItem(accessToken) {
     headers: { 'Authorization': 'Bearer ' + accessToken }
   }).done(function(item){
     // Message is passed in `item`.
-    var subject = item.Subject;
+    const subject = item.Subject;
     ...
   }).fail(function(error){
     // Handle error.
