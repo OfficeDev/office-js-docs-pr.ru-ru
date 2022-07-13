@@ -1,17 +1,17 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 05/26/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 2259d28bc87e6452e526786c0b32135e4bb27d45
-ms.sourcegitcommit: 35e7646c5ad0d728b1b158c24654423d999e0775
+ms.openlocfilehash: a251f13540989aa30c3e213e1572747e08c121c4
+ms.sourcegitcommit: 9fbb656afa1b056cf284bc5d9a094a1749d62c3e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65833908"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66765274"
 ---
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
@@ -19,17 +19,30 @@ ms.locfileid: "65833908"
 
 В этой статье рассказывается о том, как использовать [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) для работы с типами данных. Здесь представлены основные понятия, лежащие в основе разработки типов данных.
 
-## <a name="core-concepts"></a>Основные понятия
+## <a name="the-valuesasjson-property"></a>Свойство `valuesAsJson`.
 
-Используйте свойство [`Range.valuesAsJson`](/javascript/api/excel/excel.range#excel-excel-range-valuesasjson-member) для работы со значениями типов данных. Это свойство аналогично свойству [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member), но `Range.values` возвращает только четыре основных типа: значения строки, числа, логического типа или ошибки. Свойство `Range.valuesAsJson` возвращает расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+Свойство `valuesAsJson` является неотъемлемой частью создания типов данных в Excel. Это свойство является расширением свойств `values`, таких как [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member). Оба свойства `values` и `valuesAsJson` используются для доступа к значению в ячейке, но свойство `values` возвращает только один из четырех основных типов: строка, число, логическое значение или ошибка (в виде строки). Напротив, свойство `valuesAsJson` возвращает расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+
+Следующие объекты предлагают свойство `valuesAsJson`.
+
+- [NamedItemArrayValues](/javascript/api/excel/excel.nameditemarrayvalues)
+- [Range](/javascript/api/excel/excel.range)
+- [RangeView](/javascript/api/excel/excel.rangeview)
+- [TableColumn](/javascript/api/excel/excel.tablecolumn)
+- [TableRow](/javascript/api/excel/excel.tablerow)
+
+> [!NOTE]
+> Некоторые значения ячеек изменяются в зависимости от языкового стандарта пользователя. Свойство `valuesAsJsonLocal` предлагает поддержку локализации и доступно для всех тех же объектов, что и `valuesAsJson`.
+
+## <a name="cell-values"></a>Значения ячеек
 
 Свойство `valuesAsJson` возвращает псевдоним типа [CellValue](/javascript/api/excel/excel.cellvalue), который является [объединением](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) следующих типов данных.
 
 - [ArrayCellValue](/javascript/api/excel/excel.arraycellvalue)
 - [BooleanCellValue](/javascript/api/excel/excel.booleancellvalue)
 - [DoubleCellValue](/javascript/api/excel/excel.doublecellvalue)
-- [EntityCellValue](/javascript/api/excel/excel.entitycellvalue)
 - [EmptyCellValue](/javascript/api/excel/excel.emptycellvalue)
+- [EntityCellValue](/javascript/api/excel/excel.entitycellvalue)
 - [ErrorCellValue](/javascript/api/excel/excel.errorcellvalue)
 - [FormattedNumberCellValue](/javascript/api/excel/excel.formattednumbercellvalue)
 - [LinkedEntityCellValue](/javascript/api/excel/excel.linkedentitycellvalue)
@@ -38,13 +51,17 @@ ms.locfileid: "65833908"
 - [ValueTypeNotAvailableCellValue](/javascript/api/excel/excel.valuetypenotavailablecellvalue)
 - [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue)
 
-Объект [CellValueExtraProperties](/javascript/api/excel/excel.cellvalueextraproperties) является [пересечением](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) с остальными типами `*CellValue`. Это не тип данных. Свойства объекта `CellValueExtraProperties` используются со всеми типами данных для указания сведений, связанных с перезаписью значений ячеек.
+Псевдоним типа `CellValue` также возвращает объект [CellValueExtraProperties](/javascript/api/excel/excel.cellvalueextraproperties), который является [пересечением](https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types) с остальными `*CellValue` типами. Это не тип данных. Свойства объекта `CellValueExtraProperties` используются со всеми типами данных для указания сведений, связанных с перезаписью значений ячеек.
 
 ### <a name="json-schema"></a>Схема JSON
 
-Каждый тип данных использует схему метаданных JSON, разработанную для этого типа. Это определяет [CellValueType](/javascript/api/excel/excel.cellvaluetype) данных и дополнительные сведения о ячейке, например `basicValue`, `numberFormat` или `address`. Каждый тип `CellValueType` имеет свойства, доступные в соответствии с этим типом. Например, тип `webImage` включает свойства [altText](/javascript/api/excel/excel.webimagecellvalue#excel-excel-webimagecellvalue-alttext-member) и [attribution](/javascript/api/excel/excel.webimagecellvalue#excel-excel-webimagecellvalue-attribution-member). В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
+Каждый тип значения ячейки, возвращаемый `valuesAsJson`, использует схему метаданных JSON, разработанную для этого типа. Наряду с дополнительными свойствами, уникальными для каждого типа данных, все эти схемы метаданных JSON имеют общие свойства `type`, `basicType`, и `basicValue`
 
-Схема метаданных JSON для каждого типа данных также включает одно или несколько свойств только для чтения, которые используются в расчетах при обнаружении несовместимых сценариев, таких как версия Excel, которая не соответствует минимальному требованию к номеру сборки для функции типов данных. Свойство `basicType` является частью метаданных JSON каждого типа данных и всегда является свойством только для чтения. Свойство `basicType` используется в качестве резервного, если тип данных не поддерживается или имеет неправильный формат.
+Определяет `type` [cellValueType](/javascript/api/excel/excel.cellvaluetype) данных. `basicType` всегда доступно только для чтения и используется в качестве запасного варианта, когда тип данных не поддерживается или неправильно отформатирован. `basicValue` соответствует значению, которое будет возвращено свойством `values`. `basicValue` используется в качестве запасного варианта, когда расчеты сталкиваются с несовместимыми сценариями, такими как более старая версия Excel, не поддерживающая функцию типов данных. `basicValue`предназначен только для чтения для типов данных `ArrayCellValue`, `EntityCellValue`, `LinkedEntityCellValue`, и `WebImageCellValue`.
+
+В дополнение к трем полям, общим для всех типов данных, схема метаданных JSON для каждого `*CellValue` имеет свойства, доступные в соответствии с этим типом. Например, тип [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) включает свойства `altText` и `attribution`, а тип [EntityCellValue](/javascript/api/excel/excel.entitycellvalue) предлагает поля `properties` и `text`.
+
+В следующих разделах приводятся примеры кода JSON для типов форматированного числа, сущности и веб-изображения.
 
 ## <a name="formatted-number-values"></a>Форматированное число
 
