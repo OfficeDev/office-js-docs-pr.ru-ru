@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 06/10/2022
+ms.date: 07/13/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 69b8fbc36eba542ca6b665f3ac2e741c9257a920
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 1fb2acde8b79450741f244562467903ea6abf55c
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659705"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797654"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -103,7 +103,7 @@ ms.locfileid: "66659705"
 
     - **Какое клиентское приложение Office должно поддерживаться?** - `Outlook`
 
-    ![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yeoman-prompts-2.png)
+    ![Запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yeoman-prompts-2.png)
 
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -171,7 +171,7 @@ ms.locfileid: "66659705"
 
     Если настройка выполнена правильно, откроется область задач и отобразится страница приветствия надстройки.
 
-    ![Снимок экрана с кнопкой "Показать область задач" и областью задач Git the gist, добавленной после выполнения примера.](../images/button-and-pane.png)
+    ![Кнопка "Показать область задач" и область задач Git the gist, добавленная после выполнения примера.](../images/button-and-pane.png)
 
 ## <a name="define-buttons"></a>Определение кнопок
 
@@ -291,11 +291,11 @@ ms.locfileid: "66659705"
 
 - При запуске этой надстройки в Outlook 2016 или более поздней версии для Windows отобразятся две новые кнопки на ленте окна составления сообщений: **Insert gist** и **Insert default gist**.
 
-    ![Снимок экрана: меню переполнения элементов ленты в Outlook для Windows с выделенными кнопками надстройки.](../images/add-in-buttons-in-windows.png)
+    ![Меню переполнения элементов ленты в Outlook для Windows с выделенными кнопками надстройки.](../images/add-in-buttons-in-windows.png)
 
 - При запуске этой надстройки в Outlook в Интернете отобразится новая кнопка внизу окна составления сообщений. Нажмите эту кнопку, чтобы просмотреть варианты **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию).
 
-    ![Снимок экрана: форма создания сообщения в Outlook в Интернете с выделенной кнопкой надстройки и контекстным меню.](../images/add-in-buttons-in-owa.png)
+    ![Форма создания сообщения в Outlook в Интернете с выделенной кнопкой надстройки и всплывающим меню.](../images/add-in-buttons-in-owa.png)
 
 ## <a name="implement-a-first-run-experience"></a>Реализация интерфейса первого запуска
 
@@ -424,14 +424,14 @@ ul {
     jQuery(document).ready(function(){
       if (window.location.search) {
         // Check if warning should be displayed.
-        var warn = getParameterByName('warn');
+        const warn = getParameterByName('warn');
         if (warn) {
           $('.not-configured-warning').show();
         } else {
           // See if the config values were passed.
           // If so, pre-populate the values.
-          var user = getParameterByName('gitHubUserName');
-          var gistId = getParameterByName('defaultGistId');
+          const user = getParameterByName('gitHubUserName');
+          const gistId = getParameterByName('defaultGistId');
 
           $('#github-user').val(user);
           loadGists(user, function(success){
@@ -450,7 +450,7 @@ ul {
       // try to load gists.
       $('#github-user').on('change', function(){
         $('#gist-list').empty();
-        var ghUser = $('#github-user').val();
+        const ghUser = $('#github-user').val();
         if (ghUser.length > 0) {
           loadGists(ghUser);
         }
@@ -460,11 +460,11 @@ ul {
       // values back to the caller as a serialized
       // object.
       $('#settings-done').on('click', function() {
-        var settings = {};
+        const settings = {};
 
         settings.gitHubUserName = $('#github-user').val();
 
-        var selectedGist = $('.ms-ListItem.is-selected');
+        const selectedGist = $('.ms-ListItem.is-selected');
         if (selectedGist) {
           settings.defaultGistId = selectedGist.val();
 
@@ -508,7 +508,7 @@ ul {
       url = window.location.href;
     }
     name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
@@ -649,7 +649,7 @@ ul {
 
 ```js
 function getUserGists(user, callback) {
-  var requestUrl = 'https://api.github.com/users/' + user + '/gists';
+  const requestUrl = 'https://api.github.com/users/' + user + '/gists';
 
   $.ajax({
     url: requestUrl,
@@ -664,10 +664,10 @@ function getUserGists(user, callback) {
 function buildGistList(parent, gists, clickFunc) {
   gists.forEach(function(gist) {
 
-    var listItem = $('<div/>')
+    const listItem = $('<div/>')
       .appendTo(parent);
 
-    var radioItem = $('<input>')
+    const radioItem = $('<input>')
       .addClass('ms-ListItem')
       .addClass('is-selectable')
       .attr('type', 'radio')
@@ -676,19 +676,19 @@ function buildGistList(parent, gists, clickFunc) {
       .val(gist.id)
       .appendTo(listItem);
 
-    var desc = $('<span/>')
+    const descPrimary = $('<span/>')
       .addClass('ms-ListItem-primaryText')
       .text(gist.description)
       .appendTo(listItem);
 
-    var desc = $('<span/>')
+    const descSecondary = $('<span/>')
       .addClass('ms-ListItem-secondaryText')
       .text(' - ' + buildFileList(gist.files))
       .appendTo(listItem);
 
-    var updated = new Date(gist.updated_at);
+    const updated = new Date(gist.updated_at);
 
-    var desc = $('<span/>')
+    const descTertiary = $('<span/>')
       .addClass('ms-ListItem-tertiaryText')
       .text(' - Last updated ' + updated.toLocaleString())
       .appendTo(listItem);
@@ -699,9 +699,9 @@ function buildGistList(parent, gists, clickFunc) {
 
 function buildFileList(files) {
 
-  var fileList = '';
+  let fileList = '';
 
-  for (var file in files) {
+  for (let file in files) {
     if (files.hasOwnProperty(file)) {
       if (fileList.length > 0) {
         fileList = fileList + ', ';
@@ -768,8 +768,8 @@ npm run build
 Откройте файл **./src/commands/commands.js** и замените все содержимое приведенным ниже кодом. Обратите внимание, если функция **insertDefaultGist** определяет, что конфигурация надстройки не выполнена, добавляется параметр `?warn=1` к URL-адресу диалогового окна. Благодаря этому в диалоговом окне параметров отображается панель сообщений, определенная в файле **./src/settings/dialog.html**, которая сообщает пользователю причину появления диалогового окна.
 
 ```js
-var config;
-var btnEvent;
+let config;
+let btnEvent;
 
 // The initialize function must be run each time a new page is loaded.
 Office.initialize = function () {
@@ -783,7 +783,7 @@ function showError(error) {
   });
 }
 
-var settingsDialog;
+let settingsDialog;
 
 function insertDefaultGist(event) {
 
@@ -821,8 +821,8 @@ function insertDefaultGist(event) {
     btnEvent = event;
     // Not configured yet, display settings dialog with
     // warn=1 to display warning.
-    var url = new URI('dialog.html?warn=1').absoluteTo(window.location).toString();
-    var dialogOptions = { width: 20, height: 40, displayInIframe: true };
+    const url = new URI('dialog.html?warn=1').absoluteTo(window.location).toString();
+    const dialogOptions = { width: 20, height: 40, displayInIframe: true };
 
     Office.context.ui.displayDialogAsync(url, dialogOptions, function(result) {
       settingsDialog = result.value;
@@ -858,7 +858,7 @@ HTML-файл функции ссылается на файл под назва�
 
 ```js
 function getConfig() {
-  var config = {};
+  const config = {};
 
   config.gitHubUserName = Office.context.roamingSettings.get('gitHubUserName');
   config.defaultGistId = Office.context.roamingSettings.get('defaultGistId');
@@ -886,7 +886,7 @@ function setConfig(config, callback) {
 
 ```js
 function getGist(gistId, callback) {
-  var requestUrl = 'https://api.github.com/gists/' + gistId;
+  const requestUrl = 'https://api.github.com/gists/' + gistId;
 
   $.ajax({
     url: requestUrl,
@@ -901,9 +901,9 @@ function getGist(gistId, callback) {
 function buildBodyContent(gist, callback) {
   // Find the first non-truncated file in the gist
   // and use it.
-  for (var filename in gist.files) {
+  for (let filename in gist.files) {
     if (gist.files.hasOwnProperty(filename)) {
-      var file = gist.files[filename];
+      const file = gist.files[filename];
       if (!file.truncated) {
         // We have a winner.
         switch (file.language) {
@@ -913,13 +913,13 @@ function buildBodyContent(gist, callback) {
             break;
           case 'Markdown':
             // Convert Markdown to HTML.
-            var converter = new showdown.Converter();
-            var html = converter.makeHtml(file.content);
+            const converter = new showdown.Converter();
+            const html = converter.makeHtml(file.content);
             callback(html);
             break;
           default:
             // Insert contents as a <code> block.
-            var codeBlock = '<pre><code>';
+            let codeBlock = '<pre><code>';
             codeBlock = codeBlock + file.content;
             codeBlock = codeBlock + '</code></pre>';
             callback(codeBlock);
@@ -940,11 +940,11 @@ function buildBodyContent(gist, callback) {
 
 1. В окне создания сообщения нажмите кнопку **Insert default gist** (Вставить gist по умолчанию). Вы увидите диалоговое окно, в котором можно настроить надстройку, указав имя пользователя GitHub в диалоговом окне с соответствующим приглашением.
 
-    ![Снимок экрана: диалоговое окно с приглашением настроить надстройку.](../images/addin-prompt-configure.png)
+    ![Диалоговое окно с предложением настроить надстройку.](../images/addin-prompt-configure.png)
 
 1. В диалоговом окне параметров введите имя пользователя GitHub, а затем нажмите клавишу **TAB** или щелкните в другом месте диалогового окна, чтобы вызвать событие **change**, которое должно загрузить ваш список общедоступных элементов gist. Выберите элемент gist, который будет использоваться по умолчанию, и нажмите **Готово**.
 
-    ![Снимок экрана с диалоговым окном параметров надстройки.](../images/addin-settings.png)
+    ![Диалоговое окно параметров надстройки.](../images/addin-settings.png)
 
 1. Нажмите кнопку **Insert default gist** (Вставить gist по умолчанию) снова. На этот раз содержимое элемента gist должно быть вставлено в текст сообщения.
 
@@ -1198,8 +1198,8 @@ ul {
 (function(){
   'use strict';
 
-  var config;
-  var settingsDialog;
+  let config;
+  let settingsDialog;
 
   Office.initialize = function(reason){
 
@@ -1219,7 +1219,7 @@ ul {
       // When insert button is selected, build the content
       // and insert into the body.
       $('#insert-button').on('click', function(){
-        var gistId = $('.ms-ListItem.is-selected').val();
+        const gistId = $('.ms-ListItem.is-selected').val();
         getGist(gistId, function(gist, error) {
           if (gist) {
             buildBodyContent(gist, function (content, error) {
@@ -1243,14 +1243,14 @@ ul {
       // When the settings icon is selected, open the settings dialog.
       $('#settings-icon').on('click', function(){
         // Display settings dialog.
-        var url = new URI('dialog.html').absoluteTo(window.location).toString();
+        let url = new URI('dialog.html').absoluteTo(window.location).toString();
         if (config) {
           // If the add-in has already been configured, pass the existing values
           // to the dialog.
           url = url + '?gitHubUserName=' + config.gitHubUserName + '&defaultGistId=' + config.defaultGistId;
         }
 
-        var dialogOptions = { width: 20, height: 40, displayInIframe: true };
+        const dialogOptions = { width: 20, height: 40, displayInIframe: true };
 
         Office.context.ui.displayDialogAsync(url, dialogOptions, function(result) {
           settingsDialog = result.value;
@@ -1314,7 +1314,7 @@ ul {
 
 1. В области задач выберите элемент gist **Hello World Html** и нажмите кнопку **Insert** (Вставить) для вставки этого элемента gist в текст сообщения.
 
-![Снимок экрана: область задач надстройки и выделенное содержимое элемента gist, отображаемое в тексте сообщения.](../images/addin-taskpane.png)
+![Область задач надстройки и выделенное содержимое элемента gist, отображаемое в тексте сообщения.](../images/addin-taskpane.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -1328,4 +1328,4 @@ ul {
 - [Манифесты надстроек Outlook](../outlook/manifests.md)
 - [Рекомендации по разработке надстроек Outlook](../outlook/outlook-addin-design.md)
 - [Команды надстроек Outlook](../outlook/add-in-commands-for-outlook.md)
-- [Отладка надстройки Outlook без пользовательского интерфейса](../outlook/debug-ui-less.md)
+- [Отладка функций команд в надстройках Outlook](../outlook/debug-ui-less.md)

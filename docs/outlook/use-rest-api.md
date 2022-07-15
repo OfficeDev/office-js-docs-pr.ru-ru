@@ -3,12 +3,12 @@ title: Использование REST API Outlook из надстройки Out
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c02b878b6636e6736ada4a29d123dd8ff772393
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: c2717bf5d3cb440022ac31f815b7bf4c32d9eb4e
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712967"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797696"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
@@ -17,7 +17,14 @@ ms.locfileid: "66712967"
 > [!IMPORTANT]
 > **Интерфейсы REST API Outlook устарели**
 >
-> Конечные точки REST Outlook будут полностью списываются в ноябре 2022 г. (дополнительные сведения см. в объявлении за [ноябрь 2020 г.](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/)). Для использования Microsoft Graph необходимо перенести существующие [надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Кроме того, [сравните конечные точки REST API Microsoft Graph и Outlook](/outlook/rest/compare-graph).
+> Конечные точки REST Outlook будут полностью списываются 30 ноября 2022 г. (дополнительные сведения см. в объявлении за [ноябрь 2020 г.](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/)). Для использования Microsoft Graph необходимо перенести существующие [надстройки](/outlook/rest#outlook-rest-api-via-microsoft-graph). Инструкции см. в статье ["Сравнение конечных точек REST API Microsoft Graph и Outlook"](/outlook/rest/compare-graph).
+>
+> Чтобы помочь в миграции, активные надстройки, использующие службу REST до 30 ноября 2022 г., имеют право на освобождение от использования службы до окончания расширенной поддержки [Outlook 2019 14 октября 2025 г](/lifecycle/end-of-support/end-of-support-2025). Это исключение основано на идентификаторе манифеста надстройки и применяется к частным выпускам и надстройки, размещаемые в AppSource. Надстройки должны соответствовать следующим условиям, чтобы иметь право на исключение.
+>
+> - Идентификатор надстройки [должен](/javascript/api/manifest/id) быть допустимым и уникальным. Надстройки, размещенные в AppSource, автоматически назначаются GUID, а надстройки, выпущенные в закрытом режиме, должны быть вручную назначены в манифесте.
+> - Если ваша надстройка предназначена для нескольких клиентов и не размещена в AppSource, экземпляр надстройки, используемый каждым клиентом, должен использовать один и тот же идентификатор манифеста. Если надстройка использует другой идентификатор для каждого клиента, она не может быть исключена и должна быть перенесена в Microsoft Graph до ноября 2022 г.
+>
+> Чтобы убедиться в исключении надстройки, заполните форму проверки надстройки [REST API](https://aka.ms/RESTCheck) до ноября 2022 г. Дополнительные сведения см. в записи блога о звонках в сообществе надстроек Office за февраль [2022 г](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-february-9-2022/).
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 

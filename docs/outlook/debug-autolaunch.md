@@ -2,14 +2,14 @@
 title: Отладка надстройки Outlook на основе событий
 description: Узнайте, как выполнить отладку надстройки Outlook, которая реализует активацию на основе событий.
 ms.topic: article
-ms.date: 04/28/2022
+ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dbd74036cf56b5ff492315f928324a3aa1e7312
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 5d36a23b34132071077e3eb192e562288befb8a5
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659684"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797493"
 ---
 # <a name="debug-your-event-based-outlook-add-in"></a>Отладка надстройки Outlook на основе событий
 
@@ -25,13 +25,13 @@ ms.locfileid: "66659684"
 - [Присоединение Visual Studio Code](#attach-visual-studio-code)
 - [Debug](#debug)
 
-У вас есть несколько вариантов создания проекта надстройки. В зависимости от варианта, который вы используете, действия могут отличаться. В этом случае, если вы использовали генератор Yeoman для надстроек Office для создания проекта надстройки (например, с помощью пошагового руководства по активации на основе [событий), выполните](autolaunch.md) действия **yo office**, в противном случае выполните другие  действия. Visual Studio Code должна быть версия не ниже 1.56.1.
+Если вы использовали генератор Yeoman для надстроек Office для создания проекта надстройки (например, выполнив пошаговое руководство по активации на основе [событий),](autolaunch.md) следуйте параметру "Создать с генератором **Yeoman** " в этой статье. В противном случае выполните **другие** действия. Visual Studio Code должна быть версия не ниже 1.56.1.
 
 ## <a name="mark-your-add-in-for-debugging"></a>Пометка надстройки для отладки
 
 1. Задайте раздел реестра `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Wef\Developer\[Add-in ID]\UseDirectDebugger`. `[Add-in ID]` — это **\<Id\>** в манифесте надстройки.
 
-    **Yo office**: в окне командной строки перейдите к корню папки надстройки и выполните следующую команду.
+    **Создан с помощью генератора Yeoman**. В окне командной строки перейдите к корню папки надстройки и выполните следующую команду.
 
     ```command&nbsp;line
     npm start
@@ -50,7 +50,7 @@ ms.locfileid: "66659684"
 
 ## <a name="configure-visual-studio-code"></a>Настройка Visual Studio Code
 
-### <a name="yo-office"></a>yo office
+### <a name="created-with-yeoman-generator"></a>Создано с помощью генератора Yeoman
 
 1. Вернитесь в окно командной строки и откройте Visual Studio Code.
 
@@ -72,7 +72,7 @@ ms.locfileid: "66659684"
     }
     ```
 
-### <a name="other"></a>Прочее
+### <a name="other"></a>Other
 
 1. Создайте новую папку с **именем "Отладка** " (возможно, в **папке "Рабочий** стол").
 1. Откройте Visual Studio Code.

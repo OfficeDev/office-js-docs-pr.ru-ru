@@ -1,14 +1,14 @@
 ---
 title: Функция проверки при отправке для надстроек Outlook
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
-ms.date: 07/08/2022
+ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: cb67a813c876809440b29e029ff899cd34d7e365
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: fc0d81a2dedd80c1f4afa2f3fd9205ff6773f933
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712757"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797612"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -608,7 +608,7 @@ function subjectOnSendChange(subject, event) {
 
 ## <a name="debug-outlook-add-ins-that-use-on-send"></a>Отладка надстроек Outlook, использующих функцию проверки при отправке
 
-Инструкции по отладке надстройки Outlook при отправке см. в разделе "Отладка надстройки Outlook без пользовательского [интерфейса"](debug-ui-less.md).
+Инструкции по отладке надстройки при отправке см. в разделе "Команды функции отладки [" в надстройки Outlook](debug-ui-less.md).
 
 > [!TIP]
 > Если ошибка "Функция обратного вызова недоступна", когда пользователи запускают надстройку и обработчик событий надстройки определен динамически, необходимо создать функцию-заглушку в качестве обходного решения. [Дополнительные сведения см](#event-handlers-are-dynamically-defined). в разделе обработчики событий.

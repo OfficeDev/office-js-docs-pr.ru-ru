@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook для поставщика онлайн-собраний
 description: Описывается, как настроить надстройку Outlook для поставщика услуг для собраний по сети.
 ms.topic: article
-ms.date: 07/08/2022
+ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: cc3afc58af0db7725b8e66ddbd557cfd1e75e128
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: d4934e3e04e566cb6badf46cd7447b754b0c94b6
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713044"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797661"
 ---
 # <a name="create-an-outlook-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
@@ -231,7 +231,7 @@ ms.locfileid: "66713044"
         }
     );
 
-    // 2. How to define and register a UI-less function named `insertContosoMeeting` (referenced in the manifest)
+    // 2. How to define and register a function command named `insertContosoMeeting` (referenced in the manifest)
     //    to update the meeting body with the online meeting details.
     function insertContosoMeeting(event) {
         // Get HTML body from the client.
@@ -325,7 +325,7 @@ ms.locfileid: "66713044"
 - Применимо только к поставщикам услуг онлайн-собраний.
 - На экране создания собрания будут отображаться только надстройки, установленные администратором, заменив параметр Teams или Skype по умолчанию. Установленные пользователем надстройки не будут активироваться.
 - Значок надстройки должен быть в оттенках серого с использованием шестнадцатеричных `#919191` кодов или его эквивалента в [других форматах цвета](https://convertingcolors.com/hex-color-919191.html).
-- В режиме организатора встреч (создания) поддерживается только одна команда без пользовательского интерфейса.
+- В режиме организатора встреч (compose) поддерживается только одна команда функции.
 - Надстройка должна обновить сведения о собрании в форме встречи в течение минутного времени ожидания. Однако любое время, затраченное в диалоговом окне, которое надстройка открывает для проверки подлинности и т. д., исключается из периода времени ожидания.
 
 ## <a name="see-also"></a>См. также

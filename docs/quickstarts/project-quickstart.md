@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: Узнайте, как создать простую надстройку для области задач Project, используя API JS для Office.
-ms.date: 06/10/2022
+ms.date: 07/13/2022
 ms.prod: project
 ms.localizationpriority: high
-ms.openlocfilehash: 486752d53b49d305ed4cc52c07fd8043264f1e58
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: c2f0e31b5a4c958cd155dfeb6d1648f7a2697c69
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091043"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797479"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -31,7 +31,7 @@ ms.locfileid: "66091043"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Project`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-project.png)
+![Запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-project.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -44,49 +44,7 @@ ms.locfileid: "66091043"
 - Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
 - Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
 - Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
-- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и клиентским приложением Office.
-
-## <a name="update-the-code"></a>Обновление кода
-
-Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`. В этом коде используется API JavaScript для Office, чтобы настроить поле `Name` и поле `Notes` выбранной задачи.
-
-```js
-var taskGuid;
-
-// Get the GUID of the selected task
-Office.context.document.getSelectedTaskAsync(
-    function (result) {
-        if (result.status === Office.AsyncResultStatus.Succeeded) {
-            taskGuid = result.value;
-
-            // Set the specified fields for the selected task.
-            var targetFields = [Office.ProjectTaskFields.Name, Office.ProjectTaskFields.Notes];
-            var fieldValues = ['New task name', 'Notes for the task.'];
-
-            // Set the field value. If the call is successful, set the next field.
-            for (var i = 0; i < targetFields.length; i++) {
-                Office.context.document.setTaskFieldAsync(
-                    taskGuid,
-                    targetFields[i],
-                    fieldValues[i],
-                    function (result) {
-                        if (result.status === Office.AsyncResultStatus.Succeeded) {
-                            i++;
-                        }
-                        else {
-                            var err = result.error;
-                            console.log(err.name + ' ' + err.code + ' ' + err.message);
-                        }
-                    }
-                );
-            }
-        } else {
-            var err = result.error;
-            console.log(err.name + ' ' + err.code + ' ' + err.message);
-        }
-    }
-);
-```
+- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и клиентским приложением Office. В этом кратком руководстве код `Name` настраивает поле `Notes` и поле выбранной задачи проекта.
 
 ## <a name="try-it-out"></a>Проверка
 
@@ -114,7 +72,7 @@ Office.context.document.getSelectedTaskAsync(
 
 1. В нижней части области задач щелкните ссылку **Выполнить**, чтобы переименовать выбранную задачу и добавить к ней примечания.
 
-    ![Снимок экрана: приложение Project с загруженной надстройкой области задач.](../images/project-quickstart-addin-1.png)
+    ![Приложение Project с загруженной надстройкой области задач.](../images/project-quickstart-addin-1.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

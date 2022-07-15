@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 06/10/2022
+ms.date: 07/12/2022
 ms.prod: onenote
 ms.localizationpriority: high
-ms.openlocfilehash: 9b5f4dd941ed8cc107bee04bc67a368520439948
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
+ms.openlocfilehash: 294b315c3d5ebc80d908d0bd4f3d4ee36a32b908
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090854"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797633"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -29,7 +29,7 @@ ms.locfileid: "66090854"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `OneNote`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-onenote.png)
+![Запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-onenote.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -53,13 +53,13 @@ try {
     await OneNote.run(async (context) => {
 
         // Get the current page.
-        var page = context.application.getActivePage();
+        const page = context.application.getActivePage();
 
         // Queue a command to set the page title.
         page.title = "Hello World";
 
         // Queue a command to add an outline to the page.
-        var html = "<p><ol><li>Item #1</li><li>Item #2</li></ol></p>";
+        const html = "<p><ol><li>Item #1</li><li>Item #2</li></ol></p>";
         page.addOutline(40, 90, html);
 
         // Run the queued commands.
@@ -96,7 +96,7 @@ try {
 
     На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.
 
-    ![Скриншот диалогового окна "Надстройки Office" со вкладкой "Мои надстройки".](../images/onenote-office-add-ins-dialog.png)
+    ![Диалоговое окно "Надстройки Office" со вкладкой "Мои надстройки".](../images/onenote-office-add-ins-dialog.png)
 
 1. В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.
 
@@ -104,7 +104,7 @@ try {
 
 1. В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
-    ![Снимок экрана с надстройкой, созданной в этом пошаговом руководстве: выделенная кнопка ленты "Показать область задач" и область задач в OneNote.](../images/onenote-first-add-in-4.png)
+    ![Надстройка, созданная на основе этого пошагового руководства, в которой для открытия области задач в OneNote использовалась кнопка ленты "Показать область задач".](../images/onenote-first-add-in-4.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
