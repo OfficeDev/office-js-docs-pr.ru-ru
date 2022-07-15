@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 06/10/2022
+ms.date: 07/13/2022
 ms.prod: outlook
 ms.localizationpriority: high
-ms.openlocfilehash: 2752c81a95cb7f65172d775efa3160b4b7dec10b
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 33f5e0f08bbb1472dcefc764941c8b7d6b6d4dbc
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660153"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797514"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -85,7 +85,7 @@ ms.locfileid: "66660153"
 
     ```js
     // Get a reference to the current message
-    var item = Office.context.mailbox.item;
+    const item = Office.context.mailbox.item;
 
     // Write message property value to the task pane
     document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
@@ -160,7 +160,7 @@ ms.locfileid: "66660153"
 ### <a name="update-the-code"></a>Обновление кода
 
 1. Файл **MessageRead.html** содержит HTML-контент, который будет отображаться в области задач надстройки. Замените элемент **\<body\>** в **MessageRead.html** приведенной ниже частью кода и сохраните файл.
- 
+
     ```HTML
     <body class="ms-font-m ms-welcome">
         <div class="ms-Fabric content-main">
@@ -275,15 +275,15 @@ ms.locfileid: "66660153"
 
 1. В сообщении найдите многоточие, чтобы перейти в меню переполнения, содержащее кнопку надстройки.
 
-    ![Снимок экрана: окно сообщения в Outlook в Интернете, в котором выделено многоточие.](../images/quick-start-button-owa-1.png)
+    ![Окно сообщения в Outlook в Интернете, в котором выделено многоточие.](../images/quick-start-button-owa-1.png)
 
 1. Найдите кнопку надстройки в меню переполнения.
 
-    ![Снимок экрана с окном сообщения в Outlook в Интернете, где выделена кнопка надстройки.](../images/quick-start-button-owa-2.png)
+    ![Окно сообщения в Outlook в Интернете, где выделена кнопка надстройки.](../images/quick-start-button-owa-2.png)
 
 1. Нажмите кнопку, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана: область задач надстройки в Outlook в Интернете со свойствами сообщения.](../images/quick-start-task-pane-owa-1.png)
+    ![Область задач надстройки в Outlook в Интернете со свойствами сообщения.](../images/quick-start-task-pane-owa-1.png)
 
     > [!NOTE]
     > Если область задач не загружается, проверьте ее, открыв в браузере на том же компьютере.

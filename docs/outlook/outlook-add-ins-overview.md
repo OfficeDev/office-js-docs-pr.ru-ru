@@ -1,16 +1,16 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 06/08/2022
+ms.date: 07/11/2022
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: fcdc6dc87deff67138f18a2bc1b7bd58ea0fd85c
-ms.sourcegitcommit: 2eeb0423a793b3a6db8a665d9ae6bcb10e867be3
+ms.openlocfilehash: 6c0b5d9547bbc0661d6410391f894586cdaffab3
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66019628"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797507"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -34,7 +34,7 @@ ms.locfileid: "66019628"
 
     **Надстройка с кнопками на ленте**
 
-    ![Команда надстройки для фигуры без интерфейса.](../images/uiless-command-shape.png)
+    ![Команда функции надстройки.](../images/uiless-command-shape.png)
 
 - Надстройки могут активироваться по совпадениям с регулярными выражениями или обнаруженным сущностям в сообщениях и встречах. Дополнительные сведения см. в статье [Контекстно-зависимые надстройки Outlook](contextual-outlook-add-ins.md).
 

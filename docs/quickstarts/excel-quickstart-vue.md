@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 06/10/2022
+ms.date: 07/12/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 3024e759acd787a61992b84f31850ef7f0bfbe3b
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: d172e3b61fa4b8b66cc79b2cd364b3f2f0b37d96
+ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713058"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797500"
 ---
 # <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
@@ -61,7 +61,7 @@ vue create my-add-in
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-    ![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, где в качестве типа проекта установлен только манифест.](../images/yo-office-manifest-only-vue.png)
+    ![Интерфейс командной строки генератора Yeoman для надстроек Office, где в качестве типа проекта установлен только манифест.](../images/yo-office-manifest-only-vue.png)
 
 По завершении мастер создает папку **My Office Add-in**, содержащую файл **manifest.xml**. Вы воспользуетесь манифестом для загрузки вашей неопубликованной надстройки и для ее тестирования.
 
@@ -75,9 +75,9 @@ vue create my-add-in
 1. Включите протокол HTTPS для вашего приложения. В корневой папке проекта Vue создайте файл **vue.config.js** со следующим содержимым.
 
     ```js
-    var fs = require("fs");
-    var path = require("path");
-    var homedir = require('os').homedir()
+    const fs = require("fs");
+    const path = require("path");
+    const homedir = require('os').homedir()
   
     module.exports = {
       devServer: {
@@ -219,13 +219,13 @@ vue create my-add-in
 
 1. Откройте область задач надстройки в Excel. На вкладке **Главная** нажмите кнопку **Показать область задач**.
 
-   ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач".](../images/excel-quickstart-addin-2a.png)
+   ![Меню "Главная" в Excel с выделенной кнопкой "Показать область задач".](../images/excel-quickstart-addin-2a.png)
 
 1. Выберите любой диапазон ячеек на листе.
 
 1. Установите зеленый цвет для выбранного диапазона. В области задач надстройки нажмите кнопку **Задать цвет**.
 
-   ![Снимок экрана: Excel с открытой областью задач надстройки.](../images/excel-quickstart-addin-2c.png)
+   ![Открытая область задач надстройки в Excel.](../images/excel-quickstart-addin-2c.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
