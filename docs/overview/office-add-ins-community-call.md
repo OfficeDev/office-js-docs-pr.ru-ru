@@ -1,29 +1,22 @@
 ---
 title: Вызов сообщества по надстройки Microsoft Office
 description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
-ms.date: 07/11/2022
+ms.date: 07/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a953336dc277d387166dcedffb01f7775e52e9e8
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 7a96bc5d5b86164d5e7662708c357821792f9f1d
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713009"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889620"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
 Вызов сообщества надстроек Microsoft Office — это ежемесячный звонок, в котором вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании надстроек Office. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
 
-## <a name="agenda-for-july-13th-call"></a>Повестка дня для звонка 13 июля
+## <a name="agenda-for-august-10th-call"></a>Повестка дня для звонка 10 августа
 
-- Обновление взаимодействия с сообществом
-- Обновление API Word
-- Обновление Outlook
-  - Обновление конечной точки REST версии 2.0 для вывода из эксплуатации
-  - Поддержка общих папок на локальных серверах Exchange
-  - Выбор нескольких элементов ожидается в ближайшее время
-- Обновление API Outlook
-- Обновление примеров единого входа
+Повестка дня за август будет опубликована примерно за неделю до звонка.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
@@ -47,7 +40,7 @@ ms.locfileid: "66713009"
 - [10 марта 2021 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-march-10-2021/)
 - [Архивные вызовы сообщества надстроек Office — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Приглашение в календарь повторяющихся ежемесячных вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
 - [Запросы и вопросы по теме зова сообщества](https://aka.ms/officeaddinsform)

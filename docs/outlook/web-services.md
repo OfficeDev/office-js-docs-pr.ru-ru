@@ -3,12 +3,12 @@ title: Использование веб-служб Exchange (EWS) из надс
 description: Содержит пример, в котором показано, как надстройка Outlook может запрашивать сведения из веб-службы Exchange.
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6590967ef79e03cdbeee612199aba7a681b6dcdb
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: ab576f1c47bda85a0a33e527f483d384b264fbf2
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713065"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889634"
 ---
 # <a name="call-web-services-from-an-outlook-add-in"></a>Вызов веб-служб из надстройки Outlook
 
@@ -186,11 +186,11 @@ function callback(asyncResult)  {
 При использовании метода `makeEwsRequestAsync` проверка подлинности запроса выполняется с использованием учетных данных учетной записи электронной почты текущего пользователя. Этот `makeEwsRequestAsync` метод управляет учетными данными, чтобы вам не нужно было предоставлять учетные данные для проверки подлинности в запросе.
 
 > [!NOTE]
-> Администратор сервера должен использовать [командлет New-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/New-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) или [Командлет Set-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/Set-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) , чтобы задать для параметра _OAuthAuthentication_ значение **true** в каталоге EWS `makeEwsRequestAsync` сервера клиентского доступа, чтобы метод можно было выполнять запросы EWS.
+> Администратор сервера должен использовать [командлет New-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/New-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) или [Командлет Set-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/Set-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) , чтобы задать для параметра _OAuthAuthentication_ `true` значение в каталоге EWS сервера клиентского доступа, `makeEwsRequestAsync` чтобы разрешить методу выполнять запросы EWS.
 
 Для использования метода надстройка `ReadWriteMailbox` должна указать разрешение в манифесте надстройки `makeEwsRequestAsync` . Сведения об использовании разрешения см `ReadWriteMailbox` . в разделе " [Разрешение ReadWriteMailbox](understanding-outlook-add-in-permissions.md#readwritemailbox-permission) " в разделе "Общие сведения о разрешениях [надстроек Outlook"](understanding-outlook-add-in-permissions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md)
 - [Работа с ограничениями по принципу одинакового источника в надстройках Office](../develop/addressing-same-origin-policy-limitations.md)

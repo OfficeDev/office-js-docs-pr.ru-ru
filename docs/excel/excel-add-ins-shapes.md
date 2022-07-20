@@ -1,25 +1,25 @@
 ---
-title: Работа с фигурами с Excel API JavaScript
-description: Узнайте, Excel определяет фигуры как любой объект, который находится на уровне рисования Excel.
+title: Работа с фигурами с помощью API JavaScript для Excel
+description: Узнайте, как Excel определяет фигуры как любой объект, который находится на слое рисования Excel.
 ms.date: 02/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e268f32f7388a1992d46c53bbb8077d605e9fb7
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 507ae05b570e7eef4f3bf5560ca47c1bfbd40f9f
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745531"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889599"
 ---
-# <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с Excel API JavaScript
+# <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с помощью API JavaScript для Excel
 
-Excel определяет фигуры как любой объект, который находится на уровне рисования Excel. Это означает, что все, что находится за пределами ячейки, — это фигура. В этой статье описывается использование геометрических фигур, линий и изображений в сочетании с API [Shape](/javascript/api/excel/excel.shape) и [ShapeCollection](/javascript/api/excel/excel.shapecollection) . [Диаграммы](/javascript/api/excel/excel.chart) охватываются в своей статье [Work with charts using the Excel API JavaScript](excel-add-ins-charts.md).
+Excel определяет фигуры как любой объект, который находится на слое документа Excel. Это означает, что все, что находится за пределами ячейки, является фигурой. В этой статье описывается, как использовать геометрические фигуры, линии и изображения в сочетании с [API-интерфейсами Shape и ShapeCollection](/javascript/api/excel/excel.shapecollection).[](/javascript/api/excel/excel.shape) [Диаграммы](/javascript/api/excel/excel.chart) рассматриваются в собственной статье " [Работа с диаграммами с помощью API JavaScript для Excel"](excel-add-ins-charts.md).
 
-На следующем изображении показаны фигуры, которые образуют термометр.
-![Изображение термометра, выполненного в виде Excel формы.](../images/excel-shapes.png)
+На следующем рисунке показаны фигуры, которые образуют термометр.
+![Изображение термометра, выполненного в виде фигуры Excel.](../images/excel-shapes.png)
 
 ## <a name="create-shapes"></a>Создание фигур
 
-Фигуры создаются и хранятся в коллекции фигур таблицы (`Worksheet.shapes`). `ShapeCollection` имеет несколько `.add*` методов для этой цели. Все фигуры имеют имена и ИД, созданные для них при добавлении в коллекцию. Это и `name` `id` свойства, соответственно. `name` может быть установлено вашей надстройки для легкого получения с помощью `ShapeCollection.getItem(name)` метода.
+Фигуры создаются и хранятся в коллекции фигур листа ().`Worksheet.shapes` `ShapeCollection` имеет несколько `.add*` методов для этой цели. Все фигуры имеют имена и идентификаторы, созданные для них при добавлении в коллекцию. Это свойства `name` `id` и свойства соответственно. `name` можно задать надстройке для простого извлечения с помощью `ShapeCollection.getItem(name)` метода.
 
 Следующие типы фигур добавляются с помощью связанного метода.
 
@@ -33,9 +33,9 @@ Excel определяет фигуры как любой объект, кото
 
 ### <a name="geometric-shapes"></a>Геометрические фигуры
 
-Геометрическая фигура создается с `ShapeCollection.addGeometricShape`помощью . Этот метод принимает в качестве аргумента enum [GeometricShapeType](/javascript/api/excel/excel.geometricshapetype) .
+Геометрическая фигура создается с помощью `ShapeCollection.addGeometricShape`. Этот метод принимает [перечисление GeometrShapeType](/javascript/api/excel/excel.geometricshapetype) в качестве аргумента.
 
-В следующем примере кода создается прямоугольник размером 150x150 пикселей с именем **"Square"** , который находится на 100 пикселей с верхней и левой сторон таблицы.
+В следующем примере кода создается прямоугольник размером 150 x 150 пикселей с именем **Square** , который располагается в 100 пикселей от верхней и левой сторон листа.
 
 ```js
 // This sample creates a rectangle positioned 100 pixels from the top and left sides
@@ -56,9 +56,9 @@ await Excel.run(async (context) => {
 
 ### <a name="images"></a>изображения;
 
-Изображения JPEG, PNG и SVG можно вставить в таблицу в форме фигур. В `ShapeCollection.addImage` качестве аргумента метод принимает строку с кодом base64. Это либо образ JPEG или PNG в строковом виде. `ShapeCollection.addSvg` также принимает строку, хотя этот аргумент XML, который определяет графику.
+Изображения JPEG, PNG и SVG можно вставлять на лист в виде фигур. Метод `ShapeCollection.addImage` принимает строку в кодировке base64 в качестве аргумента. Это изображение JPEG или PNG в строковом формате. `ShapeCollection.addSvg` также принимает строку, хотя этот аргумент является XML, который определяет рисунок.
 
-В следующем примере кода показан файл изображения, загружаемый [файлом FileReader](https://developer.mozilla.org/docs/Web/API/FileReader) в качестве строки. Строка имеет метаданные "base64", удалены до создания фигуры.
+В следующем примере кода показан файл изображения, загружаемый [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader) в виде строки. Строка содержит метаданные base64, удаленные до создания фигуры.
 
 ```js
 // This sample creates an image as a Shape object in the worksheet.
@@ -82,7 +82,7 @@ reader.readAsDataURL(myFile.files[0]);
 
 ### <a name="lines"></a>Lines
 
-Строка создается с `ShapeCollection.addLine`помощью . Для этого метода необходимы левые и верхние поля точки начала и конца строки. Кроме того, для указания того, как соединителю строки между конечными точками, необходимо также вводить в себя enum [ConnectorType](/javascript/api/excel/excel.connectortype) . В следующем примере кода создается прямая линия на таблице.
+Строка создается с помощью `ShapeCollection.addLine`. Для этого метода требуются левые и верхние поля начальной и конечной точек строки. Он также принимает [перечисление ConnectorType](/javascript/api/excel/excel.connectortype) , чтобы указать, как линия перемыкается между конечными точками. В следующем примере кода создается прямая линия на листе.
 
 ```js
 // This sample creates a straight line from [200,50] to [300,150] on the worksheet.
@@ -94,9 +94,9 @@ await Excel.run(async (context) => {
 });
 ```
 
-Строки можно подключать к другим объектам Shape. Методы `connectBeginShape` и `connectEndShape` начало и окончание строки прикрепляются к фигурам в указанных точках подключения. Расположение этих точек зависит от формы, `Shape.connectionSiteCount` но его можно использовать для обеспечения того, чтобы надстройка не подключалась к точке, не связанной с этим. Строка отключена от любых присоединенных фигур с помощью этих `disconnectBeginShape` и методов `disconnectEndShape` .
+Линии могут быть соединены с другими объектами Shape. И `connectBeginShape` методы `connectEndShape` присоединяют начало и конец строки к фигурам в указанных точках соединения. Расположения этих точек зависят от фигуры, `Shape.connectionSiteCount` но их можно использовать для того, чтобы надстройка не подключается к точке, которая не является границей. Линия отсоединяется от всех присоединенных фигур с помощью методов `disconnectBeginShape` и методов `disconnectEndShape` .
 
-В следующем примере кода **строка "MyLine"** соединяется с двумя фигурами с именами **"LeftShape"** **и "RightShape"**.
+В следующем примере кода строка **MyLine** соединяется с двумя фигурами с именами **LeftShape** и **RightShape**.
 
 ```js
 // This sample connects a line between two shapes at connection points '0' and '3'.
@@ -109,18 +109,18 @@ await Excel.run(async (context) => {
 });
 ```
 
-## <a name="move-and-resize-shapes"></a>Перемещение и размер фигур
+## <a name="move-and-resize-shapes"></a>Перемещение и изменение размеров фигур
 
-Фигуры сидят на вершине таблицы. Их размещение определяется свойством и `left` свойством `top` . Они действуют как поля от соответствующих краев таблицы, а [0, 0] — верхний левый угол. Они могут быть установлены непосредственно или скорректированы с текущей позиции с помощью методов `incrementLeft` и методов `incrementTop` . Таким образом устанавливается также размер поворота фигуры из положения по умолчанию, `rotation` `incrementRotation` при этом свойство является абсолютным количеством и методом, корректющим существующее вращение.
+Фигуры располагаются над листом. Их размещение определяется свойством `left` и свойством `top` . Они действуют как поля от соответствующих краев листа, а [0, 0] — верхний левый угол. Их можно задать напрямую или скорректировать из текущей позиции с помощью методов `incrementLeft` и методов `incrementTop` . Величина поворота фигуры от позиции по умолчанию также устанавливается таким образом, `rotation` `incrementRotation` при этом свойством является абсолютная величина, а метод настраивает существующий поворот.
 
-Глубина фигуры по отношению к другим фигурам определяется свойством `zorderPosition` . Это устанавливается с помощью метода `setZOrder` , который принимает [ShapeZOrder](/javascript/api/excel/excel.shapezorder). `setZOrder` регулирует порядок текущей фигуры по отношению к другим фигурам.
+Глубина фигуры относительно других фигур определяется свойством `zorderPosition` . Этот параметр задается с помощью метода `setZOrder` , который принимает [ShapeZOrder](/javascript/api/excel/excel.shapezorder). `setZOrder` изменяет порядок текущей фигуры относительно других фигур.
 
-Надстройка имеет несколько вариантов изменения высоты и ширины фигур. Параметр или свойство `height` изменяет `width` указанное измерение без изменения другого измерения. Соответствующие `scaleHeight` размеры `scaleWidth` фигуры по отношению к текущему или исходному размеру (в зависимости от значения предоставленного [ShapeScaleType](/javascript/api/excel/excel.shapescaletype)) корректируются. [Необязательный параметр ShapeScaleFrom](/javascript/api/excel/excel.shapescalefrom) указывает, откуда масштабирует фигуру (верхний левый угол, средний или нижний правый угол). Если свойство `lockAspectRatio` **верно,** методы масштабирования поддерживают текущее отношение аспектов фигуры, а также корректируют другое измерение.
+Надстройка имеет несколько параметров для изменения высоты и ширины фигур. Установка либо свойства `height` изменяет `width` указанное измерение, не изменяя другое измерение. И `scaleHeight` измените `scaleWidth` соответствующие размеры фигуры относительно текущего или исходного размера (в зависимости от значения [предоставленного ShapeScaleType](/javascript/api/excel/excel.shapescaletype)). [Необязательный параметр ShapeScaleFrom](/javascript/api/excel/excel.shapescalefrom) указывает, откуда масштабируется фигура (верхний левый угол, средний или правый нижний угол). Если свойство `lockAspectRatio` имеет значение `true`, методы масштабирования поддерживают текущее соотношение аспектов фигуры путем корректировки другого измерения.
 
 > [!NOTE]
-> Прямые изменения свойств `height` и свойств `width` влияют только на это свойство, `lockAspectRatio` независимо от значения свойства.
+> Прямые изменения свойств и `height` свойств `width` влияют только на это свойство, независимо от `lockAspectRatio` его значения.
 
-В следующем примере кода показана фигура, масштабироваться в 1,25 раза и вращаться на 30 градусов.
+В следующем примере кода показана фигура, масштабируемая в 1,25 раза больше исходного размера и повернутая на 30 градусов.
 
 ```js
 // In this sample, the shape "Octagon" is rotated 30 degrees clockwise
@@ -142,9 +142,9 @@ await Excel.run(async (context) => {
 
 ## <a name="text-in-shapes"></a>Текст в фигурах
 
-Геометрические фигуры могут содержать текст. Формы имеют свойство `textFrame` типа [TextFrame](/javascript/api/excel/excel.textframe). Объект `TextFrame` управляет вариантами отображения текста (например, полями и переполнением текста). `TextFrame.textRange` — объект [TextRange](/javascript/api/excel/excel.textrange) с текстовым контентом и настройками шрифтов.
+Геометрические фигуры могут содержать текст. Фигуры имеют свойство `textFrame` типа [TextFrame](/javascript/api/excel/excel.textframe). Объект `TextFrame` управляет параметрами отображения текста (например, полями и переполнением текста). `TextFrame.textRange` — это [объект TextRange](/javascript/api/excel/excel.textrange) с текстовым содержимым и параметрами шрифта.
 
-В следующем примере кода создается геометрическая фигура с именем "Wave" с текстом "Shape Text". Он также регулирует форму и текстовые цвета, а также задает горизонтальное выравнивание текста в центре.
+В следующем примере кода создается геометрическая фигура с именем Wave с текстом "Текст фигуры". Он также настраивает цвета фигуры и текста, а также задает выравнивание текста по центру по горизонтали.
 
 ```js
 // This sample creates a light-blue wave shape and adds the purple text "Shape text" to the center.
@@ -167,9 +167,9 @@ await Excel.run(async (context) => {
 });
 ```
 
-Метод `addTextBox` создает тип `ShapeCollection` с белым `GeometricShape` `Rectangle` фоном и черным текстом. Это то же самое, что создается Excel на вкладке **Вставки**. `addTextBox` Для закладки текста строки требуется аргумент строки. `TextRange`
+Метод `addTextBox` создает тип `ShapeCollection` с `GeometricShape` `Rectangle` белым фоном и черным текстом. Это то же, что и при работе с кнопкой "Текстовое поле" Excel на **вкладке "Вставка**". `addTextBox` принимает строковый аргумент для задания текста .`TextRange`
 
-В следующем примере кода показано создание текстового окна с текстом "Hello!".
+В следующем примере кода показано создание текстового поля с текстом "Hello!".
 
 ```js
 // This sample creates a text box with the text "Hello!" and sizes it appropriately.
@@ -185,11 +185,11 @@ await Excel.run(async (context) => {
 });
 ```
 
-## <a name="shape-groups"></a>Группы формы
+## <a name="shape-groups"></a>Группы фигур
 
-Фигуры можно сгруппить вместе. Это позволяет пользователю рассматривать их как единую сущность для позиционирования, размеров и других связанных задач. [ShapeGroup](/javascript/api/excel/excel.shapegroup) — это тип`Shape`, поэтому ваша надстройка рассматривает группу как единую фигуру.
+Фигуры можно сгруппировать. Это позволяет пользователю рассматривать их как одну сущность для размещения, изменения размера и других связанных задач. [ShapeGroup](/javascript/api/excel/excel.shapegroup) — это тип`Shape`, поэтому ваша надстройка обрабатывает группу как единую фигуру.
 
-В следующем примере кода показаны три фигуры, сгруппироваться вместе. В последующем примере кода показано, что группа фигур перемещается в нужные 50 пикселей.
+В следующем примере кода показаны три фигуры, сгруппированные вместе. В следующем примере кода показано, что группа фигур перемещается вправо на 50 пикселей.
 
 ```js
 // This sample takes three previously-created shapes ("Square", "Pentagon", and "Octagon")
@@ -217,11 +217,11 @@ await Excel.run(async (context) => {
 ```
 
 > [!IMPORTANT]
-> Отдельные фигуры в группе ссылаются `ShapeGroup.shapes` через свойство, которое имеет тип [GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection). Они больше не доступны в коллекции фигуры таблицы после сгруппии. Например, если ваш таблица имеет три фигуры и все они сгруппировалися, `shapes.getCount` метод таблицы возвращает количество 1.
+> Отдельные фигуры в группе ссылаются через свойство `ShapeGroup.shapes` , которое имеет тип [GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection). Они больше не доступны через коллекцию фигур листа после группировки. Например, если лист содержит три фигуры и все они сгруппированы, `shapes.getCount` метод листа вернет число 1.
 
-## <a name="export-shapes-as-images"></a>Экспорт фигур в качестве изображений
+## <a name="export-shapes-as-images"></a>Экспорт фигур в виде изображений
 
-Любой `Shape` объект можно преобразовать в изображение. [Shape.getAsImage](/javascript/api/excel/excel.shape#excel-excel-shape-getasimage-member(1)) возвращает строку base64-encoded. Формат изображения указывается как переоформаемая [](/javascript/api/excel/excel.pictureformat) `getAsImage`в .
+Любой `Shape` объект можно преобразовать в изображение. [Shape.getAsImage](/javascript/api/excel/excel.shape#excel-excel-shape-getasimage-member(1)) возвращает строку в кодировке base64. Формат изображения указывается как перечисление [PictureFormat](/javascript/api/excel/excel.pictureformat) , передаваемое в `getAsImage`.
 
 ```js
 await Excel.run(async (context) => {
@@ -238,9 +238,9 @@ await Excel.run(async (context) => {
 
 ## <a name="delete-shapes"></a>Удаление фигур
 
-Фигуры удаляются из таблицы методом `Shape` объекта `delete` . Другие метаданные не нужны.
+Фигуры удаляются с листа с помощью `Shape` метода `delete` объекта. Другие метаданные не требуются.
 
-В следующем примере кода удаляются все фигуры **из MyWorksheet**.
+В следующем примере кода удаляются все фигуры из **MyWorksheet**.
 
 ```js
 // This deletes all the shapes from "MyWorksheet".

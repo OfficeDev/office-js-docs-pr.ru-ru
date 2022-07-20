@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки области задач словаря
 description: Узнайте, как создать надстройку области задач словаря.
-ms.date: 09/26/2019
+ms.date: 07/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 755b98ec2e3d5e032ca5adbf349b61a583a03ccd
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 7ab542e37236aa4df2404ec14553c51202bcf1a6
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660062"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889536"
 ---
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 
@@ -29,22 +29,19 @@ ms.locfileid: "66660062"
 
 ![Определите контекстное меню.](../images/dictionary-agave-02.jpg)
 
-
 *Рис. 3. Определения в областях проверки правописания*
 
 ![Определения на панели "Правописание" и "Грамматика".](../images/dictionary-agave-03.jpg)
-
 
 *Рис. 4. Определения в области "Тезаурус"*
 
 ![Определения в области тезауруса.](../images/dictionary-agave-04.jpg)
 
-
 *Рис. 5. Определения в режиме чтения*
 
 ![Определения в режиме чтения.](../images/dictionary-agave-05.jpg)
 
-Чтобы создать надстройку области задач, которая выполняет поиск в словаре, необходимо создать два основных компонента: 
+Чтобы создать надстройку области задач, которая выполняет поиск в словаре, необходимо создать два основных компонента:
 
 - веб-службу XML, которая ищет определения в словарной службе, а затем возвращает результаты в формате XML, которые могут быть отображены в надстройке словаря;
 - надстройку области задач, которая отправляет выбранное пользователем слово или фразу в словарную веб-службу, отображает определения и может вставить эти значения в документ.
@@ -329,7 +326,7 @@ public class WebService : System.Web.Services.WebService {
 
 **Замечания**
 
-Это универсальный код ресурса (URI) XML-веб-службы поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами. 
+Это универсальный код ресурса (URI) XML-веб-службы поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами.
 
 **Пример**
 
@@ -487,27 +484,27 @@ a:hover, a:active
 
 ### <a name="writing-the-javascript-implementation"></a>Реализация JavaScript
 
-В приведенном ниже примере показана реализация JavaScript в файле Dictionary.js, которая вызывается с HTML-страницы надстройки и предоставляет программную логику для надстройки Demo Dictionary. В этом сценарии используется вышеописанная XML-веб-служба. Если поместить сценарий в тот же каталог, что и пример веб-службы, он будет получать определения из этой службы. Его можно использовать с общедоступной XML-веб-службой, соответствующей схеме OfficeDefinitions. Для этого измените переменную `xmlServiceURL` в начале файла, а затем замените ключ API Bing для произношений на правильно зарегистрированный.
+В следующем примере показана реализация JavaScript в файле Dictionary.js, который вызывается из HTML-страницы надстройки для предоставления логики программирования для надстройки demo Dictionary. В этом сценарии повторно используется ранее описанная веб-служба XML. При помещении в тот же каталог, где находится пример веб-службы, сценарий получит определения из этой службы. Его можно использовать с общедоступной веб-службой XML `xmlServiceURL` , соответствующей требованиям OfficeDefinitions, изменив переменную в верхней части файла, а затем заменив ключ API Bing для произношений правильно зарегистрированным.
 
 Ниже приведены основные члены API JavaScript для Office (Office.js), вызываемые из этой реализации.
 
 - Событие [](/javascript/api/office) инициализации `Office` объекта, которое возникает при инициализации контекста надстройки и предоставляет доступ к экземпляру объекта [Document](/javascript/api/office/office.document), представляющего документ, с которым взаимодействует надстройка.
 - Метод [addHandlerAsync](/javascript/api/office/office.document#office-office-document-addhandlerasync-member(1)) `Document` объекта, `initialize` который вызывается в функции для добавления обработчика событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа для прослушивания изменений выбора пользователя.
 - Метод [getSelectedDataAsync](/javascript/api/office/office.document#office-office-document-getselecteddataasync-member(1)) `Document` объекта, `tryUpdatingSelectedWord()` `SelectionChanged` который вызывается в функции при вызове обработчика событий для получения выбранного пользователем слова или фразы, приведения его к обычному тексту и `selectedTextCallback` выполнения асинхронной функции обратного вызова.
-- При выполнении `selectTextCallback` асинхронной  `getSelectedDataAsync` функции обратного вызова, передаваемой в качестве аргумента обратного вызова метода, она получает значение выбранного текста при возврате обратного вызова. Он получает это значение из аргумента _selectedText_ обратного вызова (который имеет тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства [value](/javascript/api/office/office.asyncresult#office-office-asyncresult-status-member) возвращаемого `AsyncResult` объекта.
+- При выполнении `selectTextCallback` асинхронной  `getSelectedDataAsync` функции обратного вызова, передаваемой в качестве аргумента обратного вызова метода, она получает значение выбранного текста при возврате обратного вызова. Он получает это значение из аргумента *selectedText* обратного вызова (который имеет тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства [value](/javascript/api/office/office.asyncresult#office-office-asyncresult-status-member) возвращаемого `AsyncResult` объекта.
 - Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.
 - Остальной код в файле Dictionary.js служит для отображения списка определений и ссылок на произношения в пользовательском интерфейсе HTML надстройки.
 
 ```js
 // The document the dictionary add-in is interacting with.
-var _doc;
+let _doc;
 // The last looked-up word, which is also the currently displayed word.
-var lastLookup;
+let lastLookup;
 // For demo purposes only!! Get an AppID if you intend to use the Pronunciation service for your feature.
-var appID="3D8D4E1888B88B975484F0CA25CDD24AAC457ED8";
+const appID="3D8D4E1888B88B975484F0CA25CDD24AAC457ED8";
 
 // The base URL for the OfficeDefinitions-conforming XML web service to query for definitions.
-var xmlServiceUrl = "WebService.asmx/Define?Word=";
+const xmlServiceUrl = "WebService.asmx/Define?Word=";
 
 // Initialize the add-in.
 // The initialize function is required for all add-ins.

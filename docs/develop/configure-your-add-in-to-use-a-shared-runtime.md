@@ -1,15 +1,15 @@
 ---
-ms.date: 04/04/2022
 title: Настройка надстройки Office для использования общей среды выполнения JavaScript
-ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
+ms.date: 07/18/2022
+ms.prod: non-product-specific
 ms.localizationpriority: high
-ms.openlocfilehash: 3ca5358071d495c409d2a4ece98e600f367b8675
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 70906199f27a5b84a9dcd71b2f36dcd16ff79f73
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659845"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889480"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 
@@ -150,7 +150,7 @@ ms.locfileid: "66659845"
     ```javascript
     /*global document, Office*/
 
-    var _count = 0;
+    let _count = 0;
 
     Office.onReady(() => {
       document.getElementById("sideload-msg").style.display = "none";

@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Основные сведения о создании диалогового окна в надстройке Office.
-ms.date: 01/22/2022
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fbc9114d2cdedcaa8ad5be9c035e9e14430266c
-ms.sourcegitcommit: c62d087c27422db51f99ed7b14216c1acfda7fba
+ms.openlocfilehash: 363f58f94f7e0bfc6fe4c7b9a410114b8d027b52
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2022
-ms.locfileid: "66689392"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889487"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "66689392"
 
 На приведенном ниже изображении показан пример диалогового окна. 
 
-![Снимок экрана: диалоговое окно с тремя параметрами входа перед Word.](../images/auth-o-dialog-open.png)
+![Диалоговое окно с 3 вариантами входа, отображаемых перед Word.](../images/auth-o-dialog-open.png)
 
 Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно не является *модальное*— пользователь может продолжать взаимодействовать как с документом в приложении Office, так и со страницей в области задач, если таковой имеется.
 
@@ -47,6 +47,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 ```
 
 > [!NOTE]
+>
 > - В случае URL-адреса используется протокол HTTP **S**, Обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
 > - Домен диалогового окна совпадает с доменом главной страницы, которая может быть страницей в панели задач или [файлом функции](/javascript/api/manifest/functionfile) команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен быть в том же домене, что и страница ведущего приложения.
 
@@ -97,6 +98,7 @@ if (loginSuccess) {
 ```
 
 > [!IMPORTANT]
+>
 > - Эта `messageParent` функция является одним из *двух* API-интерфейсов Office JS, которые можно вызвать в диалоговом окне.
 > - Другой API JS, который можно вызвать в диалоговом окне, — это `Office.context.requirements.isSetSupported`. Дополнительные сведения см. в [разделе "Указание приложений Office и требований К API"](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается при Outlook 2016 однофакторной покупки (то есть версии MSI).
 
@@ -111,7 +113,7 @@ if (loginSuccess) {
 Чтобы главная страница получила сообщение, ее необходимо настроить. Для этого добавьте параметр обратного вызова в исходный вызов метода `displayDialogAsync`. Обратный вызов назначает обработчик событию `DialogMessageReceived`. Ниже приведен пример.
 
 ```js
-var dialog;
+let dialog;
 Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20},
     function (asyncResult) {
         dialog = asyncResult.value;
@@ -131,7 +133,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 
 ```js
 function processMessage(arg) {
-    var messageFromDialog = JSON.parse(arg.message);
+    const messageFromDialog = JSON.parse(arg.message);
     showUserName(messageFromDialog.name);
 }
 ```
@@ -176,14 +178,14 @@ function processMessage(arg) {
 
 ```js
 if (loginSuccess) {
-    var userProfile = getProfile();
-    var messageObject = {messageType: "signinSuccess", profile: userProfile};
-    var jsonMessage = JSON.stringify(messageObject);
+    const userProfile = getProfile();
+    const messageObject = {messageType: "signinSuccess", profile: userProfile};
+    const jsonMessage = JSON.stringify(messageObject);
     Office.context.ui.messageParent(jsonMessage);
 } else {
-    var errorDetails = getError();
-    var messageObject = {messageType: "signinFailure", error: errorDetails};
-    var jsonMessage = JSON.stringify(messageObject);
+    const errorDetails = getError();
+    const messageObject = {messageType: "signinFailure", error: errorDetails};
+    const jsonMessage = JSON.stringify(messageObject);
     Office.context.ui.messageParent(jsonMessage);
 }
 ```
@@ -198,7 +200,7 @@ if (loginSuccess) {
 
 ```js
 function processMessage(arg) {
-    var messageFromDialog = JSON.parse(arg.message);
+    const messageFromDialog = JSON.parse(arg.message);
     if (messageFromDialog.messageType === "signinSuccess") {
         dialog.close();
         showUserName(messageFromDialog.profile.name);
@@ -255,7 +257,7 @@ Office.context.ui.messageParent("Some message", { targetOrigin: "*" });
 При вызове API диалогового окна Office для открытия диалогового окна возвращается объект [Dialog](/javascript/api/office/office.dialog) . Его следует назначить переменной с большей областью действия, чем метод [displayDialogAsync](/javascript/api/office/office.ui#office-office-ui-displaydialogasync-member(1)) , так как на объект будут ссылаться другие методы. Ниже приведен пример.
 
 ```javascript
-var dialog;
+let dialog;
 Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html',
     function (asyncResult) {
         dialog = asyncResult.value;
@@ -277,7 +279,7 @@ function processMessage(arg) {
 
 ```javascript
 function sheetPropertiesChanged() {
-    var messageToDialog = JSON.stringify({
+    const messageToDialog = JSON.stringify({
                                name: "My Sheet",
                                position: 2
                            });
@@ -303,7 +305,7 @@ Office.onReady()
 
 ```javascript
 function onMessageFromParent(arg) {
-    var messageFromParent = JSON.parse(arg.message);
+    const messageFromParent = JSON.parse(arg.message);
     $('h1').text(messageFromParent.name);
 }
 ```
@@ -338,7 +340,7 @@ function onRegisterMessageComplete(asyncResult) {
 
 ### <a name="cross-domain-messaging-to-the-dialog-runtime"></a>Междоменной обмен сообщениями в среду выполнения диалоговых окон
 
-После этого диалоговое окно или родительская среда выполнения JavaScript могут перейти от домена надстройки. Если произойдет одно из этих действий, `messageChild` вызовы не будут завершаться ошибкой, если только в коде не указан домен среды выполнения диалогового окна. Для этого добавьте параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов метода `messageChild`. Этот объект имеет свойство `targetOrigin` , указывающее домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целевой объект — это тот же домен, что и родительская среда выполнения. 
+После этого диалоговое окно или родительская среда выполнения JavaScript могут перейти от домена надстройки. Если произойдет одно из этих действий, `messageChild` вызовы не будут завершаться ошибкой, если только в коде не указан домен среды выполнения диалогового окна. Для этого добавьте параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов метода `messageChild`. Этот объект имеет свойство `targetOrigin` , указывающее домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целевой объект — это тот же домен, что и родительская среда выполнения.
 
 > [!NOTE]
 > Для `messageChild` отправки междоменного сообщения требуется набор обязательных элементов [dialog Origin 1.1](/javascript/api/requirement-sets/common/dialog-origin-requirement-sets). Этот `DialogMessageOptions` параметр игнорируется в более старых версиях Office, которые не поддерживают набор обязательных элементов, поэтому поведение метода не влияет на его передачу.
@@ -387,8 +389,8 @@ function onMessageFromParent(arg) {
 
 ```js
 function closeButtonClick() {
-    var messageObject = {messageType: "dialogClosed"};
-    var jsonMessage = JSON.stringify(messageObject);
+    const messageObject = {messageType: "dialogClosed"};
+    const jsonMessage = JSON.stringify(messageObject);
     Office.context.ui.messageParent(jsonMessage);
 }
 ```
@@ -397,7 +399,7 @@ function closeButtonClick() {
 
 ```js
 function processMessage(arg) {
-    var messageFromDialog = JSON.parse(arg.message);
+    const messageFromDialog = JSON.parse(arg.message);
     if (messageFromDialog.messageType === "dialogClosed") {
        dialog.close();
     }

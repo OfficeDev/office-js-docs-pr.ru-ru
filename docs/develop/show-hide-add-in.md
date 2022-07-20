@@ -1,14 +1,14 @@
 ---
 title: Отображение и скрытие области задач надстройки Office
 description: Узнайте, как программно скрыть или отобразить пользовательский интерфейс надстройки во время непрерывной работы.
-ms.date: 07/08/2021
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 95f8c716bf1a0331fe47bc74e5aad49c17b65437
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 76243d9e593f06eec52fe558832a722317b88c69
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660132"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889228"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
@@ -55,7 +55,7 @@ function onCurrentQuarterDeactivated() {
 
 Рассмотрим следующий сценарий: область задач разработана с помощью вкладок. **Вкладка "** Главная" открывается при первом запуске надстройки. Предположим, что пользователь открывает вкладку **"** Параметры", `hide()` а затем код в области задач вызывается в ответ на определенное событие. Но позже код вызывается `showAsTaskpane()` в ответ на другое событие. Область задач снова появится, а вкладка "Параметры" по-прежнему будет выбрана.
 
-![Снимок экрана: область задач с четырьмя вкладками "Главная", "Параметры", "Избранное" и "Учетные записи".](../images/TaskpaneWithTabs.png)
+![Область задач с четырьмя вкладками с метками "Главная", "Параметры", "Избранное" и "Учетные записи".](../images/TaskpaneWithTabs.png)
 
 Кроме того, все прослушиватели событий, зарегистрированные в области задач, продолжают работать, даже если область задач скрыта.
 
@@ -80,7 +80,7 @@ Office.addin.onVisibilityModeChanged(function(args) {
 Функция возвращает другую функцию, которая *отменяет* регистрацию обработчика. Ниже приведен простой, но не надежный пример.
 
 ```javascript
-var removeVisibilityModeHandler =
+const removeVisibilityModeHandler =
     Office.addin.onVisibilityModeChanged(function(args) {
         if (args.visibilityMode = "Taskpane"); {
             // Code that runs whenever the task pane is made visible.
@@ -97,7 +97,7 @@ removeVisibilityModeHandler();
 ```javascript
 // await the promise from onVisibilityModeChanged and assign
 // the returned deregister handler to removeVisibilityModeHandler.
-var removeVisibilityModeHandler =
+const removeVisibilityModeHandler =
     await Office.addin.onVisibilityModeChanged(function(args) {
         if (args.visibilityMode = "Taskpane"); {
             // Code that runs whenever the task pane is made visible.

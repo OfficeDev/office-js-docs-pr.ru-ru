@@ -3,12 +3,12 @@ title: Просмотр и изменение повторения в надст
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: de6bf8722578729159078396bb2f14a52cb648a3
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: f0fbafcb761a74e5a28294c25b480f4cb35a92fa
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713114"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889361"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 
@@ -25,14 +25,14 @@ ms.locfileid: "66713114"
 
 |Тип повторения|Допустимые свойства повторения|Применение|
 |---|---|---|
-|`daily`|-&nbsp;[`interval`][ссылка интервала]|Встреча проводится через определенный *interval* дней. Пример: встреча проводится каждые **_2_** дня.|
+|`daily`|-&nbsp;[`interval`][interval link]|Встреча проводится через определенный *interval* дней. Пример: встреча проводится каждые **_2_** дня.|
 |`weekday`|Отсутствуют.|Встреча повторяется в определенный день недели.|
-|`monthly`|-&nbsp;[`interval`][ссылка интервала]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]|- Встреча проводится в *dayOfMonth* день через определенный *interval* месяцев. Пример: встреча проводится в **_5_** день каждые **_4_** месяца.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* через определенный *interval* месяцев. Пример: встреча проводится в **_третий_** **_четверг_** каждые **_2_** месяца.|
-|`weekly`|-&nbsp;[`interval`][ссылка интервала]<br/>-&nbsp;[`days`][days link]|Встреча проводится в *days* через определенный *interval* недель. Пример: встреча проводится во **_вторник_ и _четверг_** каждые **_2_** недели.|
-|`yearly`|-&nbsp;[`interval`][ссылка интервала]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]<br/>-&nbsp;[`month`][ссылка на месяц]|- Встреча проводится в *dayOfMonth* день *month* через определенный *interval* лет. Пример: встреча проводится **_7_** **_сентября_** каждые **_4_** года.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* *month* через определенный *interval* лет. Пример: встреча проводится в **_первый_** **_четверг_** **_сентября_** каждые **_2_** года.|
+|`monthly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]|- Встреча проводится в *dayOfMonth* день через определенный *interval* месяцев. Пример: встреча проводится в **_5_** день каждые **_4_** месяца.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* через определенный *interval* месяцев. Пример: встреча проводится в **_третий_** **_четверг_** каждые **_2_** месяца.|
+|`weekly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`days`][days link]|Встреча проводится в *days* через определенный *interval* недель. Пример: встреча проводится во **_вторник_ и _четверг_** каждые **_2_** недели.|
+|`yearly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]<br/>-&nbsp;[`month`][month link]|- Встреча проводится в *dayOfMonth* день *month* через определенный *interval* лет. Пример: встреча проводится **_7_** **_сентября_** каждые **_4_** года.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* *month* через определенный *interval* лет. Пример: встреча проводится в **_первый_** **_четверг_** **_сентября_** каждые **_2_** года.|
 
 > [!NOTE]
-> Можно также использовать свойство [`firstDayOfWeek`][firstDayOfWeek] с типом `weekly` повторения. С указанного дня начинается список дней, отображаемый в диалоговом окне повторения.
+> Вы также можете использовать свойство [`firstDayOfWeek`][firstDayOfWeek link] с типом повторения `weekly`. С указанного дня начинается список дней, отображаемый в диалоговом окне повторения.
 
 ## <a name="access-recurrence"></a>Доступ к повторению
 
@@ -51,7 +51,7 @@ ms.locfileid: "66713114"
 
 ## <a name="set-recurrence-as-the-organizer"></a>Изменение повторения в качестве организатора
 
-Помимо расписания повторения также нужно определить даты и время начала и окончания ряда встреч. Объект [`SeriesTime`][Ссылка SeriesTime] используется для управления этой информацией.
+Помимо расписания повторения также нужно определить даты и время начала и окончания ряда встреч. Для управления этими сведениями используется объект [`SeriesTime`][SeriesTime link].
 
 Организатор встречи может указать расписание повторения для ряда встреч только в режиме создания. В приведенном ниже примере установлено повторение для ряда встреч с 10:30 до 11:00 (Тихоокеанское время) каждый вторник и четверг со 2 ноября по 2 декабря 2019 г.
 
@@ -121,7 +121,7 @@ function callback(asyncResult){
 В приведенном ниже примере показаны результаты вызова `getAsync`, возвращающие повторение для ряда.
 
 > [!NOTE]
-> В этом примере `seriesTimeObject` — это заполнитель для JSON, представляющий свойство `recurrence.seriesTime`. Для получения свойств даты и времени повторения следует использовать методы [`SeriesTime`][SeriesTime].
+> В этом примере `seriesTimeObject` — это заполнитель для JSON, представляющий свойство `recurrence.seriesTime`. Чтобы просмотреть свойства даты и времени повторения, следует использовать методы [`SeriesTime`][SeriesTime link].
 
 ```json
 {
@@ -158,7 +158,7 @@ function outputRecurrence(item) {
 В приведенном ниже примере показано значение свойства `item.recurrence` для ряд встреч.
 
 > [!NOTE]
-> В этом примере `seriesTimeObject` — это заполнитель для JSON, представляющий свойство `recurrence.seriesTime`. Для получения свойств даты и времени повторения следует использовать методы [`SeriesTime`][SeriesTime].
+> В этом примере `seriesTimeObject` — это заполнитель для JSON, представляющий свойство `recurrence.seriesTime`. Чтобы просмотреть свойства даты и времени повторения, следует использовать методы [`SeriesTime`][SeriesTime link].
 
 ```json
 {
@@ -175,7 +175,7 @@ function outputRecurrence(item) {
 
 ### <a name="get-the-recurrence-details"></a>Просмотр сведений повторения
 
-После получения объекта повторение (из обратного вызова `getAsync` или из `item.recurrence`) можно просмотреть определенные свойства повторения. Например, даты и время начала и окончания ряда можно получить с помощью [methods][Ссылка SeriesTime] в свойстве `recurrence.seriesTime` .
+После получения объекта повторение (из обратного вызова `getAsync` или из `item.recurrence`) можно просмотреть определенные свойства повторения. Например, можно просмотреть даты и время начала и окончания ряда с помощью [методов][SeriesTime link] для свойства `recurrence.seriesTime`.
 
 ```js
 // Get series date and time info
@@ -201,3 +201,17 @@ const recurrenceType = recurrence.recurrenceType;
 - [Событие RecurrenceChanged](/javascript/api/office/office.eventtype)
 - [Объект Recurrence](/javascript/api/outlook/office.recurrence)
 - [Объект SeriesTime](/javascript/api/outlook/office.seriestime)
+
+[getAsync link]: /javascript/api/outlook/office.recurrence#getAsync_options__callback_
+[item.recurrence link]: /javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties
+[setAsync link]: /javascript/api/outlook/office.recurrence#setAsync_recurrencePattern__options__callback_
+
+[dayOfMonth link]: /javascript/api/outlook/office.recurrenceproperties#dayOfMonth
+[dayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#dayOfWeek
+[days link]: /javascript/api/outlook/office.recurrenceproperties#days
+[firstDayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#firstDayOfWeek
+[interval link]: /javascript/api/outlook/office.recurrenceproperties#interval
+[month link]: /javascript/api/outlook/office.recurrenceproperties#month
+[weekNumber link]: /javascript/api/outlook/office.recurrenceproperties#weekNumber
+
+[SeriesTime link]: /javascript/api/outlook/office.seriestime

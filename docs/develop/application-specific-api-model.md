@@ -1,24 +1,24 @@
 ---
 title: Использование модели API для определенных приложений
 description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
-ms.date: 02/11/2022
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a300791eced4504faa75973cb4184f6965e39f3
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 8035a334f3314382f48d6cd796f46188bea9b091
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64483820"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889340"
 ---
-# <a name="application-specific-api-model"></a>Модель API для конкретных приложений
+# <a name="application-specific-api-model"></a>Модель API для конкретного приложения
 
-В этой статье описывается использование модели API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
+В этой статье описывается, как использовать модель API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
 
 > [!NOTE]
 > Эта модель не поддерживается клиентами Office 2013. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets).
 
 > [!TIP]
-> В примерах на этой странице используются Excel API JavaScript, но эти понятия также применяются к API OneNote, PowerPoint, Visio и API JavaScript Word.
+> В примерах на этой странице используются API JavaScript для Excel, но эти понятия также применимы к API JavaScript для OneNote, PowerPoint, Visio и Word.
 
 ## <a name="asynchronous-nature-of-the-promise-based-apis"></a>Асинхронный характер API на основе обещаний
 
@@ -54,7 +54,7 @@ Excel.run(function (context) {
 Например, во фрагменте кода ниже показано, как объявить локальный объект JavaScript [Excel.Range](/javascript/api/excel/excel.range) (`selectedRange`) для ссылки на выделенный диапазон в книге Excel, а затем задать ряд свойств для этого объекта. Объект `selectedRange` представляет собой прокси-объект, поэтому свойства, заданные в этом объекте, и метод, вызываемый в этом объекте, не будут отображены в документе Excel, пока надстройка не вызовет метод `context.sync()`.
 
 ```js
-var selectedRange = context.workbook.getSelectedRange();
+const selectedRange = context.workbook.getSelectedRange();
 selectedRange.format.fill.color = "#4472C4";
 selectedRange.format.font.color = "white";
 selectedRange.format.autofitColumns();
@@ -71,7 +71,7 @@ worksheet.getRange("A1").numberFormat = "0.00%";
 worksheet.getRange("A1").values = [[1]];
 
 // GOOD: Create the range proxy object once and assign to a variable.
-var range = worksheet.getRange("A1")
+const range = worksheet.getRange("A1");
 range.format.fill.color = "red";
 range.numberFormat = "0.00%";
 range.values = [[1]];
@@ -96,7 +96,7 @@ worksheet.getRange("A1").set({
 
 ```js
 await Excel.run(async (context) => {
-    var selectedRange = context.workbook.getSelectedRange();
+    const selectedRange = context.workbook.getSelectedRange();
     selectedRange.load('address');
     await context.sync();
     console.log('The selected range is: ' + selectedRange.address);
@@ -117,9 +117,9 @@ await Excel.run(async (context) => {
 
 ```js
 await Excel.run(async (context) => {
-    var sheetName = 'Sheet1';
-    var rangeAddress = 'A1:B2';
-    var myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
+    const sheetName = 'Sheet1';
+    const rangeAddress = 'A1:B2';
+    const myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
 
     myRange.load('address');
     await context.sync();
@@ -155,7 +155,7 @@ someRange.load("format/font/name")
 Если вызвать метод `load()` для объекта (или коллекции), не указывая параметры, будут загружены все скалярные свойства объекта или объектов в коллекции. Загрузка ненужных данных замедлит вашу надстройку. Необходимо всегда явным образом указывать свойства для загрузки.
 
 > [!IMPORTANT]
-> Объем данных, возвращаемых оператором `load` без параметров, может превышать ограничения по размерам для службы. Чтобы сократить риски для старых надстроек, некоторые свойства не возвращаются методом `load` без их явного запроса. Следующие свойства исключаются из таких операций нагрузки.
+> Объем данных, возвращаемых оператором `load` без параметров, может превышать ограничения по размерам для службы. Чтобы сократить риски для старых надстроек, некоторые свойства не возвращаются методом `load` без их явного запроса. Следующие свойства исключаются из таких операций загрузки.
 >
 > * `Excel.Range.numberFormatCategories`
 
@@ -166,7 +166,7 @@ someRange.load("format/font/name")
 Следующий код получает общее количество таблиц в книге Excel и записывает его в консоль.
 
 ```js
-var tableCount = context.workbook.tables.getCount();
+const tableCount = context.workbook.tables.getCount();
 
 // This sync call implicitly loads tableCount.value.
 // Any other ClientResult values are loaded too.
@@ -184,8 +184,8 @@ console.log (tableCount.value);
 
 ```js
 await Excel.run(async (context) => {
-    var sheet = context.workbook.worksheets.getItem("Sample");
-    var range = sheet.getRange("B2:E2");
+    const sheet = context.workbook.worksheets.getItem("Sample");
+    const range = sheet.getRange("B2:E2");
     range.set({
         format: {
             fill: {
@@ -205,7 +205,7 @@ await Excel.run(async (context) => {
 
 ### <a name="some-properties-cannot-be-set-directly"></a>Некоторые свойства невозможно задать напрямую
 
-Некоторые свойства невозможно задать, хотя они и поддерживают запись. Эти свойства являются частью родительского свойства, которое должно быть задано как один объект. Это связано с тем, что родительское свойство использует вложенные свойства с определенными логическими связями. Эти родительские свойства должны быть заданы с помощью нотации литерала объекта, чтобы задать весь объект, а не отдельные вложенные свойства этого объекта.  Один из примеров доступен в разделе [PageLayout](/javascript/api/excel/excel.pagelayout). Свойство `zoom` должно быть установлено с помощью одного [объекта PageLayoutZoomOptions](/javascript/api/excel/excel.pagelayoutzoomoptions) , как показано здесь.
+Некоторые свойства невозможно задать, хотя они и поддерживают запись. Эти свойства являются частью родительского свойства, которое должно быть задано как один объект. Это связано с тем, что родительское свойство использует вложенные свойства с определенными логическими связями. Эти родительские свойства должны быть заданы с помощью нотации литерала объекта, чтобы задать весь объект, а не отдельные вложенные свойства этого объекта.  Один из примеров доступен в разделе [PageLayout](/javascript/api/excel/excel.pagelayout). Свойство `zoom` должно быть задано с помощью одного объекта [PageLayoutZoomOptions](/javascript/api/excel/excel.pagelayoutzoomoptions) , как показано ниже.
 
 ```js
 // PageLayout.zoom.scale must be set by assigning PageLayout.zoom to a PageLayoutZoomOptions object.
@@ -214,7 +214,7 @@ sheet.pageLayout.zoom = { scale: 200 };
 
 В предыдущем примере вы ***не*** сможете напрямую присвоить значение `zoom`: `sheet.pageLayout.zoom.scale = 200;`. Этот оператор выдает ошибку, так как `zoom` не загружен. Даже если `zoom` загружен, масштабный набор не будет работать. Все контекстные операции происходят в `zoom`, обновляя прокси-объект в надстройке и переписывая локально установленные значения.
 
-Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#excel-excel-range-format-member). Свойства объектов можно `format` установить с помощью объектной навигации, как показано здесь.
+Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#excel-excel-range-format-member). Свойства объекта можно `format` задать с помощью навигации по объекту, как показано ниже.
 
 ```js
 // This will set the font size on the range during the next `content.sync()`.
@@ -239,7 +239,7 @@ range.format.font.size = 10;
 
 ```js
 await Excel.run(async (context) => {
-    var dataSheet = context.workbook.worksheets.getItemOrNullObject("Data");
+    let dataSheet = context.workbook.worksheets.getItemOrNullObject("Data");
     
     await context.sync();
     
@@ -254,5 +254,5 @@ await Excel.run(async (context) => {
 
 ## <a name="see-also"></a>См. также
 
-* [Общая объектная модель API JavaScript](office-javascript-api-object-model.md)
-* [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)
+- [Общая объектная модель API JavaScript](office-javascript-api-object-model.md)
+- [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)

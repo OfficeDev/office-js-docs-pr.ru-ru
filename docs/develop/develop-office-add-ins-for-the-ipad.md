@@ -1,14 +1,14 @@
 ---
 title: Особые требования для надстроек на iPad
 description: Ознакомьтесь с некоторыми требованиями к созданию надстройки Office, которая работает на iPad.
-ms.date: 09/03/2020
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 17df8855a987bd44e657f6ddfdec9925a979449a
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: cc75cc75daec756efcb066f3e3a77f865672e501
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712995"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889305"
 ---
 # <a name="special-requirements-for-add-ins-on-the-ipad"></a>Особые требования для надстроек на iPad
 
@@ -31,8 +31,8 @@ ms.locfileid: "66712995"
 > [!NOTE]
 > Ваша надстройка может обслуживать альтернативный пользовательский интерфейс на основе устройства, на котором она работает. Чтобы определить, работает ли надстройка на iPad, можно использовать следующие API.
 >
-> - var isTouchEnabled = [Office.context.touchEnabled](/javascript/api/office/office.context#office-office-context-touchenabled-member)
-> - var allowCommerce = [Office.context.commerceAllowed](/javascript/api/office/office.context#office-office-context-commerceallowed-member)
+> - const isTouchEnabled = [Office.context.touchEnabled](/javascript/api/office/office.context#office-office-context-touchenabled-member)
+> - const allowCommerce = [Office.context.commerceAllowed](/javascript/api/office/office.context#office-office-context-commerceallowed-member)
 >
 > На iPad возвращает `touchEnabled` и `true` `commerceAllowed` возвращает `false`.
 >
@@ -42,10 +42,10 @@ ms.locfileid: "66712995"
 
 Примените следующие рекомендации по разработке надстроек, которые работают на iPad.
 
--  **Разработка и отладка надстройки в Windows или Mac и загрузка неопубликованного приложения на iPad.**
+- **Разработка и отладка надстройки в Windows или Mac и загрузка неопубликованного приложения на iPad.**
 
     Вы не можете разрабатывать надстройку непосредственно на iPad, но вы можете разрабатывать и отлаживать ее на компьютере с Windows или Mac и загрузить неопубликованную надстройку на iPad для тестирования. Так как надстройка, работая в Office на iOS или Mac, поддерживает те же API, что и надстройка, запущенная в Office в Windows, код надстройки должен выполняться так же на этих платформах. Дополнительные сведения см. в разделе "Тестирование и отладка надстроек [Office](../testing/test-debug-office-add-ins.md) и загрузка неопубликованных надстроек [Office на iPad для тестирования"](../testing/sideload-an-office-add-in-on-ipad.md).
 
--  **Укажите требования касательно API в манифесте надстройки или с помощью проверок в среде выполнения.**
+- **Укажите требования касательно API в манифесте надстройки или с помощью проверок в среде выполнения.**
 
     При указании требований API в манифесте надстройки Office определяет, поддерживает ли клиентское приложение Office этих членов API. Если элементы API доступны в приложении, надстройка будет доступна. Кроме того, можно выполнить проверку среды выполнения, чтобы определить, доступен ли метод в приложении, прежде чем использовать его в надстройке. Проверки среды выполнения гарантируют, что надстройка всегда доступна в приложении, и предоставляют дополнительные функциональные возможности, если методы доступны. Дополнительные сведения см [. в разделе "Указание приложений Office и требований К API"](specify-office-hosts-and-api-requirements.md).

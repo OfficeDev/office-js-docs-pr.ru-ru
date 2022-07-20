@@ -1,14 +1,14 @@
 ---
 title: Создание команд надстроек в манифесте для Excel, PowerPoint и Word
 description: Используйте VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, PowerPoint и Word. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
-ms.date: 07/05/2022
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e14abf670ba0fe205f728461e228623604ed465
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 44cd5818879af6788ef58050b5ca475b5f4d3dbd
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659663"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889511"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-powerpoint-and-word"></a>Создание команд надстроек в манифесте для Excel, PowerPoint и Word
 
@@ -18,7 +18,6 @@ ms.locfileid: "66659663"
 Используйте **[VersionOverrides](/javascript/api/manifest/versionoverrides)** в манифесте, чтобы определить команды надстроек для Excel, PowerPoint и Word. Команды надстроек позволяют легко настроить пользовательский интерфейс Office по умолчанию, добавив конкретные элементы интерфейса, выполняющие действия. Общие сведения о командах надстроек см. в командах надстроек [для Excel, PowerPoint и Word](../design/add-in-commands.md).
 
 В этой статье описывается изменение манифеста для определения команд надстройки и создание кода для [команд функции](../design/add-in-commands.md#types-of-add-in-commands). На следующей схеме показана иерархия элементов, используемых для задания команд надстройки. Эти элементы подробнее рассматриваются в этой статье.
-
 
 ![Общие сведения об элементах команд надстройки в манифесте. Верхний узел здесь — VersionOverrides с дочерними узлами и ресурсами. В разделе "Узлы" находятся host, а затем DesktopFormFactor. В разделе DesktopFormFactor находятся FunctionFile и ExtensionPoint. В разделе ExtensionPoint находятся customTab или OfficeTab и меню Office. На вкладке CustomTab или Office выберите "Группировать" и "Управление действием". В меню Office выберите пункт "Управление, а затем действие". В разделе Resources (дочерние объекты VersionOverrides) находятся изображения, URL-адреса, shortStrings и LongStrings.](../images/version-overrides.png)
 
@@ -75,7 +74,7 @@ ms.locfileid: "66659663"
 |Элемент|Описание|
 |:-----|:-----|
 |**\<Description\>** <br/> |Необязательный параметр. Описывает надстройку. Этот дочерний **\<Description\>** элемент переопределяет предыдущий **\<Description\>** элемент в родительской части манифеста. Атрибут **resid** для этого элемента **\<Description\>** имеет идентификатор  **\<String\>** элемента. Элемент **\<String\>** содержит текст для **\<Description\>**. <br/> |
-|**\<Requirements\>** <br/> |Необязательное. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот дочерний **\<Requirements\>** элемент переопределяет элемент **\<Requirements\>** в родительской части манифеста. Дополнительные сведения см [. в разделе "Указание приложений Office и требований К API"](../develop/specify-office-hosts-and-api-requirements.md).  <br/> |
+|**\<Requirements\>** <br/> |Необязательный элемент. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Этот дочерний **\<Requirements\>** элемент переопределяет элемент **\<Requirements\>** в родительской части манифеста. Дополнительные сведения см [. в разделе "Указание приложений Office и требований К API"](../develop/specify-office-hosts-and-api-requirements.md).  <br/> |
 |**\<Hosts\>** <br/> |Обязательный. Указывает коллекцию приложений Office. Дочерний **\<Hosts\>** элемент переопределяет элемент **\<Hosts\>** в родительской части манифеста. Необходимо включить атрибут **xsi:type**, для которого задано значение "Книга" или "Документ". <br/> |
 |**\<Resources\>** <br/> |Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста. Например, значение элемента **\<Description\>** ссылается на дочерний элемент в **\<Resources\>**. Элемент **\<Resources\>** описан в разделе " [Шаг 7. Добавление элемента Resources](#step-7-add-the-resources-element) " далее в этой статье. <br/> |
 
@@ -172,7 +171,7 @@ ms.locfileid: "66659663"
         // Implement your custom code here. The following code is a simple example.  
         Office.context.document.setSelectedDataAsync("Function command works. Button ID=" + event.source.id,
             function (asyncResult) {
-                var error = asyncResult.error;
+                const error = asyncResult.error;
                 if (asyncResult.status === Office.AsyncResultStatus.Failed) {
                     // Show error message.
                 }

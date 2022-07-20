@@ -1,14 +1,14 @@
 ---
 title: Создание настраиваемых контекстных вкладок в надстройки Office
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
-ms.date: 05/25/2022
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c95d435a033a0bda44808cef75f12bb8d9e196f7
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 2a079930bbb4523893f25604aefcff0a68f0316b
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659922"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889193"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемых контекстных вкладок в надстройки Office
 
@@ -92,7 +92,7 @@ ms.locfileid: "66659922"
       "type": "ExecuteFunction",
       "functionName": "writeData"
     }
-   ```
+    ```
 
 1. Добавьте следующий код в качестве единственный член массива `tabs` . Обратите внимание на эту разметку:
 
@@ -281,7 +281,7 @@ Office.onReady(async () => {
     await Office.ribbon.requestCreateControls(contextualTab);
 
     await Excel.run(context => {
-        var charts = context.workbook.worksheets
+        const charts = context.workbook.worksheets
             .getActiveWorksheet()
             .charts;
         charts.onActivated.add(showDataTab);
@@ -476,7 +476,7 @@ function myContextChanges() {
 
 ```javascript
 function GetContextualTabsJsonSupportedLocale () {
-    var displayLanguage = Office.context.displayLanguage;
+    const displayLanguage = Office.context.displayLanguage;
 
         switch (displayLanguage) {
             case 'en-US':
@@ -519,7 +519,7 @@ function GetContextualTabsJsonSupportedLocale () {
 Затем код вызывает функцию для получения `requestCreateControls`локализованного большого двоичного объекта, который передается, как показано в следующем примере.
 
 ```javascript
-var contextualTabJSON = GetContextualTabsJsonSupportedLocale();
+const contextualTabJSON = GetContextualTabsJsonSupportedLocale();
 ```
 
 ## <a name="best-practices-for-custom-contextual-tabs"></a>Рекомендации для настраиваемых контекстных вкладок

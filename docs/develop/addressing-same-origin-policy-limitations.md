@@ -1,14 +1,14 @@
 ---
 title: Обход правила ограничения домена в надстройках Office
-description: Узнайте, как уместить ограничения политики одного происхождения с помощью JSONP, CORS, IFRAMEs и других методов.
-ms.date: 10/17/2019
+description: Узнайте, как обеспечить соответствие ограничениям политики одного источника с помощью JSONP, CORS, IFRAME и других методов.
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fa152bf42b1d0f7ad16172324c7a9e75314e4f34
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: cd6d8eabfc7f3be145405eeb38ca6b202b0af6c4
+ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63743658"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66889347"
 ---
 # <a name="addressing-same-origin-policy-limitations-in-office-add-ins"></a>Обход правила ограничения домена в надстройках Office
 
@@ -28,7 +28,7 @@ ms.locfileid: "63743658"
 // Dynamically create an HTML SCRIPT element that obtains the details for the specified video.
 function loadVideoDetails(videoIndex) {
     // Dynamically create a new HTML SCRIPT element in the webpage.
-    var script = document.createElement("script");
+    const script = document.createElement("script");
     // Specify the URL to retrieve the indicated video from a feed of a current list of videos,
     // as the value of the src attribute of the SCRIPT element. 
     script.setAttribute("src", "https://gdata.youtube.com/feeds/api/videos/" + 
@@ -36,28 +36,20 @@ function loadVideoDetails(videoIndex) {
     // Insert the SCRIPT element at the end of the HEAD section.
     document.getElementsByTagName('head')[0].appendChild(script);
 }
-
 ```
-
 
 ## <a name="implement-server-side-code-using-a-token-based-authorization-scheme"></a>Реализация серверного кода с использованием схемы авторизации на основе маркеров
 
-Еще один способ обойти правило ограничения домена — предоставить серверный код, использующий потоки [OAuth 2.0](https://oauth.net/2/), чтобы обеспечить для одного домена авторизованный доступ к ресурсам, размещенным на другом. 
-
+Еще один способ обойти правило ограничения домена — предоставить серверный код, использующий потоки [OAuth 2.0](https://oauth.net/2/), чтобы обеспечить для одного домена авторизованный доступ к ресурсам, размещенным на другом.
 
 ## <a name="use-cross-origin-resource-sharing-cors"></a>Совместное использование ресурсов из разных источников (CORS)
 
-
 Пример использования функций предоставления общего доступа к ресурсам разного происхождения [XmlHttpRequest2](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) см. в разделе Cross Origin Resource Sharing (CORS) статьи [Новые возможности XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/).
-
 
 ## <a name="build-your-own-proxy-using-iframe-and-post-message-cross-window-messaging"></a>Создание собственного прокси с использованием IFRAME и POST MESSAGE (обмен сообщениями между окнами)
 
-
 Пример создания собственного прокси с использованием IFRAME и POST MESSAGE см. в статье [Обмен сообщениями между окнами](http://ejohn.org/blog/cross-window-messaging/).
-
 
 ## <a name="see-also"></a>См. также
 
 - [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)
-    
