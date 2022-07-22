@@ -3,12 +3,12 @@ title: Управление состоянием и параметрами на�
 description: Узнайте, как сохранить состояние и параметры надстройки Outlook.
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fc283588d2d5425fbf57b16b199dcd797f3893a
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 59349e4b23182bf53b5863430d3d847563188b08
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713086"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958813"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и параметрами надстройки Outlook
 
@@ -100,7 +100,7 @@ let _customProps;
 
 // The initialize function is required for all add-ins.
 Office.initialize = function () {
-    // Checks for the DOM to load using the jQuery ready function.
+    // Checks for the DOM to load using the jQuery ready method.
     $(document).ready(function () {
     // After the DOM is loaded, add-in-specific code can run.
     _mailbox = Office.context.mailbox;
@@ -154,7 +154,7 @@ function saveCallback(asyncResult) {
 1. При настройке настраиваемых свойств включите дополнительное свойство, указывающее, были ли добавлены пользовательские свойства во время чтения сообщения или в режиме чтения надстройки. Это поможет определить, было ли свойство создано во время создания или унаследовано от родительского объекта.
 1. Чтобы проверить, пересылает ли пользователь сообщение электронной почты или отвечает, можно использовать [item.getComposeTypeAsync](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview&preserve-view=true#outlook-office-messagecompose-getcomposetypeasync-member(1)) (доступно из набора обязательных элементов 1.10).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Persisting add-in state and settings](../develop/persisting-add-in-state-and-settings.md)
 - [Инициализация надстройки Office](../develop/initialize-add-in.md)

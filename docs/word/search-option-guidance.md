@@ -3,16 +3,16 @@ title: Поиск текста с помощью параметров поиск
 description: Узнайте, как использовать параметры поиска в надстройке Word.
 ms.date: 02/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 988349275dc350a342dfcb80e8e999c76de78e7d
-ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
+ms.openlocfilehash: 64ffd3b32329dae98f869abaabcb3218e57a4a34
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2022
-ms.locfileid: "66229710"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66959002"
 ---
 # <a name="use-search-options-in-your-word-add-in-to-find-text"></a>Поиск текста с помощью параметров поиска в надстройке Word
 
-Надстройки часто должны действовать на основе текста документа. Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](/javascript/api/word/word.body), [Paragraph](/javascript/api/word/word.paragraph), [Range](/javascript/api/word/word.range), [Table](/javascript/api/word/word.table), [TableRow](/javascript/api/word/word.tablerow), и базовый объект [ContentControl](/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
+Надстройки часто должны действовать на основе текста документа. Метод поиска предоставляется каждым элементом управления содержимым (включает [body](/javascript/api/word/word.body), [Paragraph](/javascript/api/word/word.paragraph), [Range](/javascript/api/word/word.range), [Table](/javascript/api/word/word.table), [TableRow](/javascript/api/word/word.tablerow) и базовый [объект ContentControl](/javascript/api/word/word.contentcontrol) ). Этот метод принимает строку (или выражение с подстановочным знаком), представляющую текст, который вы ищете, и объект [SearchOptions](/javascript/api/word/word.searchoptions) . Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
 
 ## <a name="search-options"></a>Параметры поиска
 

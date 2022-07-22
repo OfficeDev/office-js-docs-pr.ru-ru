@@ -3,12 +3,12 @@ title: Получение вложений в надстройке Outlook
 description: Надстройка может использовать API вложений для отправки информации о вложениях удаленной службе.
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 14329134513718ad4025c27abf7621a8ebf4b18f
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 637513a5ee94f4a3b9fa6b913f4c419dd5ec4d8e
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66713107"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958827"
 ---
 # <a name="get-attachments-of-an-outlook-item-from-the-server"></a>Получение вложений элемента Outlook с сервера
 
@@ -22,13 +22,13 @@ ms.locfileid: "66713107"
 
     Этот API может быть удобен, если EWS/REST недоступен (например, из-за конфигурации администратора сервера Exchange Server) или ваша надстройка хочет использовать содержимое Base64 непосредственно в HTML или JavaScript. Кроме того, `getAttachmentContentAsync` API доступен в сценариях создания, в которых вложение еще не синхронизировано с Exchange. Дополнительные сведения см. в статье "Управление вложениями элемента в форме создания" в [Outlook](add-and-remove-attachments-to-an-item-in-a-compose-form.md) .
 
-В этой статье рассматривается первый вариант. Чтобы отправить сведения о вложении в удаленную службу, используйте следующие свойства и функцию.
+В этой статье рассматривается первый вариант. Чтобы отправить сведения о вложении в удаленную службу, используйте следующие свойства и метод.
 
 - Свойство [Office.context.mailbox.ewsUrl](/javascript/api/outlook/office.entities): предоставляет URL-адрес веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик. Служба использует этот URL-адрес, чтобы вызвать метод [ExchangeService.GetAttachments](/exchange/client-developer/exchange-web-services/how-to-get-attachments-by-using-ews-in-exchange) или операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) для EWS.
 
 - Свойство [Office.context.mailbox.item.attachments](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties): получает массив объектов [AttachmentDetails](/javascript/api/outlook/office.attachmentdetails) (по одному для каждого вложения в элемент).
 
-- Функция [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods): асинхронно вызывает сервер Exchange Server с почтовым ящиком, чтобы получить маркер обратного вызова, который клиентский сервер отправит обратно на сервер Exchange Server для проверки подлинности запроса на получение вложения.
+- [Метод Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) &ndash; выполняет асинхронный вызов сервера Exchange, на котором размещен почтовый ящик, для получения маркера обратного вызова, который сервер отправляет обратно на сервер Exchange Server для проверки подлинности запроса на вложение.
 
 ## <a name="using-the-attachments-api"></a>Использование API вложений
 
@@ -49,7 +49,7 @@ ms.locfileid: "66713107"
 
 ## <a name="get-a-callback-token"></a>Получение маркера обратного вызова
 
-Объект [Office.context.mailbox](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox) предоставляет функцию `getCallbackTokenAsync` для получения маркера, с помощью которого удаленный сервер может пройти проверку подлинности на сервере Exchange Server. В приведенном ниже фрагменте кода показаны функция надстройки, отправляющая асинхронный запрос маркера обратного вызова, и функция обратного вызова, получающая ответ. Маркер обратного вызова хранится в объекте запроса к службе, определяемом в следующем разделе.
+Объект [Office.context.mailbox](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox) `getCallbackTokenAsync` предоставляет метод для получения маркера, который удаленный сервер может использовать для проверки подлинности на сервере Exchange Server. В приведенном ниже фрагменте кода показаны функция надстройки, отправляющая асинхронный запрос маркера обратного вызова, и функция обратного вызова, получающая ответ. Маркер обратного вызова хранится в объекте запроса к службе, определяемом в следующем разделе.
 
 ```js
 function getAttachmentToken() {

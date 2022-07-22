@@ -3,18 +3,18 @@ title: Отображение и скрытие области задач над
 description: Узнайте, как программно скрыть или отобразить пользовательский интерфейс надстройки во время непрерывной работы.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 76243d9e593f06eec52fe558832a722317b88c69
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: 001e77553bf6e1a0eda91c9459885ccd46de6f47
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889228"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958610"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
 [!include[Shared JavaScript runtime requirements](../includes/shared-runtime-requirements-note.md)]
 
-Вы можете отобразить область задач надстройки Office, вызвав функцию `Office.addin.showAsTaskpane()` .
+Вы можете отобразить область задач надстройки Office, вызвав метод `Office.addin.showAsTaskpane()` .
 
 ```javascript
 function onCurrentQuarter() {
@@ -28,7 +28,7 @@ function onCurrentQuarter() {
 
 В предыдущем коде предполагается, что существует лист Excel с именем **CurrentQuarterSales**. Надстройка будет делать область задач видимой при активации этого листа. Этот метод `onCurrentQuarter` является обработчиком события [Office.Worksheet.onActivated](/javascript/api/excel/excel.worksheet?view=excel-js-preview&preserve-view=true#excel-excel-worksheet-onactivated-member) , зарегистрированного для листа.
 
-Вы также можете скрыть область задач, вызвав функцию `Office.addin.hide()` .
+Вы также можете скрыть область задач, вызвав `Office.addin.hide()` метод.
 
 ```javascript
 function onCurrentQuarterDeactivated() {
@@ -43,7 +43,7 @@ function onCurrentQuarterDeactivated() {
 При вызове `Office.addin.showAsTaskpane()`Office отобразит в области задач файл, назначенный в качестве значения идентификатора ресурса (`resid`) области задач. Это `resid` значение можно назначить или изменить, открыв файлmanifest.xmlи **найдите** внутри **\<SourceLocation\>** `<Action xsi:type="ShowTaskpane">` элемента.
 ( [Дополнительные сведения см. в разделе "Настройка надстройки Office для использования](configure-your-add-in-to-use-a-shared-runtime.md) общей среды выполнения".)
 
-Так `Office.addin.showAsTaskpane()` как это асинхронный метод, код будет выполняться до завершения работы функции. Дождитесь завершения с помощью ключевого `await` `then()` слова или метода в зависимости от используемого синтаксиса JavaScript.
+Так `Office.addin.showAsTaskpane()` как это асинхронный метод, код будет выполняться до его завершения. Дождитесь завершения с помощью ключевого `await` `then()` слова или метода в зависимости от используемого синтаксиса JavaScript.
 
 ## <a name="configure-your-add-in-to-use-the-shared-runtime"></a>Настройка надстройки для использования общей среды выполнения
 

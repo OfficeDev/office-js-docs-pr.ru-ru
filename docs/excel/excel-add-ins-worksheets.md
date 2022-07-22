@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
-description: Примеры кода, в которых показано, как выполнять общие задачи с листами с помощью Excel API JavaScript.
+description: Примеры кода, в которых показано, как выполнять общие задачи с листами с помощью API JavaScript для Excel.
 ms.date: 04/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 932666d178da827b314339bfc05c12b5553bdaa7
-ms.sourcegitcommit: d7e5c243ad65f81d479b4fead283003fc494074e
+ms.openlocfilehash: b90970c3a168c3d82d0001c0e985583e3d23f8f0
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65076686"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958399"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -405,9 +405,9 @@ await Excel.run(async (context) => {
 ```
 
 > [!NOTE]
-> В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
+> В этом разделе описывается, как найти ячейки и диапазоны с помощью `Worksheet` методов объекта. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
 >
-> - Примеры, в которых `Range` показано, как получить диапазон на листе с помощью объекта, см. в статье "Получение диапазона с помощью Excel [JavaScript"](excel-add-ins-ranges-get.md).
+> - Примеры получения диапазона `Range` на листе с помощью объекта см. в статье "Получение диапазона с помощью [API JavaScript для Excel"](excel-add-ins-ranges-get.md).
 > - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
 > - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
@@ -497,12 +497,12 @@ await Excel.run(async (context) => {
 
 ### <a name="detect-changes-to-the-worksheet-protection-state"></a>Обнаружение изменений в состоянии защиты листа
 
-Состояние защиты листа можно изменить с помощью надстройки или Excel пользовательского интерфейса. Чтобы обнаружить изменения состояния защиты, [зарегистрируйте обработчик](excel-add-ins-events.md#register-an-event-handler) [`onProtectionChanged`](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onprotectionchanged-member) событий для события листа. Обработчики событий для `onProtectionChanged` события получают объект [`WorksheetProtectionChangedEventArgs`](/javascript/api/excel/excel.worksheetprotectionchangedeventargs) при срабатывании события.
+Состояние защиты листа можно изменить с помощью надстройки или пользовательского интерфейса Excel. Чтобы обнаружить изменения состояния защиты, [зарегистрируйте обработчик](excel-add-ins-events.md#register-an-event-handler) [`onProtectionChanged`](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-onprotectionchanged-member) событий для события листа. Обработчики событий для `onProtectionChanged` события получают объект [`WorksheetProtectionChangedEventArgs`](/javascript/api/excel/excel.worksheetprotectionchangedeventargs) при срабатывании события.
 
 В следующем примере кода показано `onProtectionChanged` `worksheetId``WorksheetProtectionChangedEventArgs` `isProtected``source`, как зарегистрировать обработчик событий и использовать объект для извлечения свойств события.
 
 ```js
-// This method registers an event handler for the onProtectionChanged event of a worksheet.
+// This function registers an event handler for the onProtectionChanged event of a worksheet.
 async function run() {
     await Excel.run(async (context) => {
         // Retrieve the worksheet named "Sample".
@@ -514,7 +514,7 @@ async function run() {
     });
 }
 
-// This method is an event handler that returns the protection state of a worksheet 
+// This function is an event handler that returns the protection state of a worksheet 
 // and information about the changed worksheet.
 async function checkProtection(event) {
     await Excel.run(async (context) => {

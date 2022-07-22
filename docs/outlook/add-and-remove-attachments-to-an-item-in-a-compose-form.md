@@ -3,12 +3,12 @@ title: Добавление и удаление вложений в надстр
 description: Используйте различные API вложений для управления файлами или элементами Outlook, прикрепленными к элементу, который создает пользователь.
 ms.date: 07/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6600fc5926cdecd95e4d232223f11dd9a7b1fc41
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: b82a9edb0a3ed43386b63d12f1a87b21b2ab634b
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712834"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958343"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме создания в Outlook
 
@@ -24,9 +24,9 @@ API JavaScript для Office предоставляет несколько API, 
 
 Это асинхронные методы, то есть выполнение может выполняться без ожидания завершения действия. В зависимости от исходного расположения и размера добавляемого вложения выполнение асинхронного вызова может занять некоторое время.
 
-Если какие-то задачи зависят от завершения действия, их следует выполнять в методе обратного вызова. Этот метод обратного вызова является необязательным и вызывается после завершения отправки вложения. Метод обратного вызова принимает объект [AsyncResult](/javascript/api/office/office.asyncresult) как выходной параметр, который содержит состояние, ошибку и возвращаемое значение при добавлении вложения. Если для обратного вызова требуются дополнительные параметры, их можно указать в необязательном параметре `options.asyncContext`. Параметр `options.asyncContext` может относиться к любому типу, поддерживаемому методом обратного вызова.
+Если существуют задачи, которые зависят от выполняемого действия, эти задачи следует выполнять в функции обратного вызова. Эта функция обратного вызова является необязательной и вызывается после завершения отправки вложения. Функция обратного вызова принимает объект [AsyncResult](/javascript/api/office/office.asyncresult) в качестве выходного параметра, который предоставляет любое состояние, ошибку и возвращаемое значение при добавлении вложения. Если для обратного вызова требуются дополнительные параметры, их можно указать в необязательном параметре `options.asyncContext`. `options.asyncContext` может иметь любой тип, ожидаемый функцией обратного вызова.
 
-Например, можно определить как `options.asyncContext` объект JSON, содержащий одну или несколько пар "ключ-значение". Дополнительные примеры передачи необязательных параметров в асинхронные методы можно найти на платформе надстроек Office в асинхронном программировании в надстройки [Office](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-to-asynchronous-methods). В следующем примере показано, как использовать параметр `asyncContext` для передачи 2 аргументов в метод обратного вызова.
+Например, можно определить как `options.asyncContext` объект JSON, содержащий одну или несколько пар "ключ-значение". Дополнительные примеры передачи необязательных параметров в асинхронные методы можно найти на платформе надстроек Office в асинхронном программировании в надстройки [Office](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-to-asynchronous-methods). В следующем примере показано, как использовать параметр `asyncContext` для передачи 2 аргументов функции обратного вызова.
 
 ```js
 const options = { asyncContext: { var1: 1, var2: 2}};
@@ -34,7 +34,7 @@ const options = { asyncContext: { var1: 1, var2: 2}};
 Office.context.mailbox.item.addFileAttachmentAsync('https://contoso.com/rtm/icon.png', 'icon.png', options, callback);
 ```
 
-Успешность обратного вызова асинхронного метода можно проверить с помощью свойств `status` и `error` объекта `AsyncResult`. Если операция вложения завершается успешно, вы можете использовать свойство `AsyncResult.value`, чтобы получить идентификатор вложения. Это целое число, которое можно использовать в дальнейшем, чтобы удалить вложение.
+Вы можете проверить успешность или `status` `error` ошибку асинхронного вызова метода в функции обратного вызова, используя свойства объекта `AsyncResult` . Если присоединение завершается успешно, можно `AsyncResult.value` использовать свойство для получения идентификатора вложения. Это целое число, которое можно использовать в дальнейшем, чтобы удалить вложение.
 
 > [!NOTE]
 > Идентификатор вложения действителен только в пределах одного сеанса и не гарантируется сопоставление одного и того же вложения между сеансами. Примеры завершения сеанса включают, когда пользователь закрывает надстройку или начинает составление во встроенной форме, а затем выводит встроенную форму, чтобы продолжить в отдельном окне.
@@ -43,19 +43,19 @@ Office.context.mailbox.item.addFileAttachmentAsync('https://contoso.com/rtm/icon
 
 Вы можете вложить файл `addFileAttachmentAsync` в сообщение или встречу в форме создания с помощью метода и указать универсальный код ресурса (URI) файла. Этот метод также можно использовать `addFileAttachmentFromBase64Async` , но в качестве входных данных указать строку base64. Если файл защищен, можно добавить соответствующее удостоверение или токен проверки подлинности как параметр строки запроса URI. Exchange вызовет URI, чтобы получить вложение, а веб-службе, которая защищает файл, потребуется использовать токен для проверки подлинности.
 
-Следующий пример JavaScript — это надстройка создания, которая прикрепляет файл picture.png с веб-сервера к создаваемому сообщению или встрече. Метод обратного вызова принимает `asyncResult` в качестве параметра, проверяет состояние результата и получает его идентификатор, если метод выполнен успешно.
+Следующий пример JavaScript — это надстройка создания, которая прикрепляет файл picture.png с веб-сервера к создаваемому сообщению или встрече. Функция обратного вызова принимает `asyncResult` в качестве параметра, проверяет состояние результата и получает идентификатор вложения, если метод выполнен успешно.
 
 ```js
 Office.initialize = function () {
-    // Checks for the DOM to load using the jQuery ready function.
+    // Checks for the DOM to load using the jQuery ready method.
     $(document).ready(function () {
         // After the DOM is loaded, app-specific code can run.
         // Add the specified file attachment to the item
         // being composed.
         // When the attachment finishes uploading, the
-        // callback method is invoked and gets the attachment ID.
+        // callback function is invoked and gets the attachment ID.
         // You can optionally pass any object that you would
-        // access in the callback method as an argument to
+        // access in the callback function as an argument to
         // the asyncContext parameter.
         Office.context.mailbox.item.addFileAttachmentAsync(
             `https://webserver/picture.png`,
@@ -90,11 +90,11 @@ function write(message){
 // ID is the EWS ID of the item to be attached.
 function addItemAttachment(itemId) {
     // When the attachment finishes uploading, the
-    // callback method is invoked. Here, the callback
-    // method uses only asyncResult as a parameter,
+    // callback function is invoked. Here, the callback
+    // function uses only asyncResult as a parameter,
     // and if the attaching succeeds, gets the attachment ID.
     // You can optionally pass any other object you wish to
-    // access in the callback method as an argument to
+    // access in the callback function as an argument to
     // the asyncContext parameter.
     Office.context.mailbox.item.addItemAttachmentAsync(
         itemId,
@@ -125,7 +125,7 @@ API для получения вложений в режиме создания 
 
 Чтобы получить содержимое вложения, можно использовать метод [getAttachmentContentAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#methods) . Поддерживаемые форматы перечислены в [перечислении AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat) .
 
-Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью объекта выходного `AsyncResult` параметра. Вы также можете передать любые дополнительные параметры в метод обратного вызова с помощью необязательного параметра `asyncContext` .
+Необходимо предоставить функцию обратного вызова для проверки состояния и любой ошибки с помощью объекта выходного `AsyncResult` параметра. Вы также можете передать любые дополнительные параметры функции обратного вызова с помощью необязательного параметра `asyncContext` .
 
 В следующем примере Кода JavaScript показано, как получить вложения и настроить различные обработки для каждого поддерживаемого формата вложений.
 
@@ -170,18 +170,18 @@ function handleAttachmentsCallback(result) {
 > [!IMPORTANT]
 > Если вы используете набор обязательных элементов 1.7 или более ранней версии, следует удалять только вложения, добавленные той же надстройке в том же сеансе.
 
-Аналогично методу `addFileAttachmentAsync`, `addItemAttachmentAsync`и `getAttachmentsAsync` методам, `removeAttachmentAsync` является асинхронным методом. Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью объекта выходного `AsyncResult` параметра. Вы также можете передать любые дополнительные параметры в метод обратного вызова с помощью необязательного параметра `asyncContext` .
+Аналогично методу `addFileAttachmentAsync`, `addItemAttachmentAsync`и `getAttachmentsAsync` методам, `removeAttachmentAsync` является асинхронным методом. Необходимо предоставить функцию обратного вызова для проверки состояния и любой ошибки с помощью объекта выходного `AsyncResult` параметра. Вы также можете передать любые дополнительные параметры функции обратного вызова с помощью необязательного параметра `asyncContext` .
 
 Приведенная ниже функция JavaScript `removeAttachment`продолжает расширять приведенные выше примеры и удаляет указанное вложение из создаваемого сообщения электронной почты или встречи. В качестве аргумента функция принимает идентификатор вложения, которое требуется удалить. Идентификатор вложения можно получить после `addFileAttachmentAsync``addFileAttachmentFromBase64Async``addItemAttachmentAsync` успешного вызова метода или метода и использовать его в последующем вызове `removeAttachmentAsync` метода. Вы также можете вызвать `getAttachmentsAsync` (представленный в наборе обязательных элементов 1.8), чтобы получить вложения и их идентификаторы для этого сеанса надстройки.
 
 ```js
 // Removes the specified attachment from the composed item.
 function removeAttachment(attachmentId) {
-    // When the attachment is removed, the callback method is invoked.
-    // Here, the callback method uses an asyncResult parameter and
+    // When the attachment is removed, the callback function is invoked.
+    // Here, the callback function uses an asyncResult parameter and
     // gets the ID of the removed attachment if the removal succeeds.
     // You can optionally pass any object you wish to access in the
-    // callback method as an argument to the asyncContext parameter.
+    // callback function as an argument to the asyncContext parameter.
     Office.context.mailbox.item.removeAttachmentAsync(
         attachmentId,
         { asyncContext: null },

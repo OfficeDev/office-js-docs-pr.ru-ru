@@ -4,12 +4,12 @@ description: Узнайте, как обмениваться данными и �
 ms.date: 06/15/2022
 ms.prod: excel
 ms.localizationpriority: high
-ms.openlocfilehash: 0afb6bcd46873dd968c242e57ac1a6f8d7f41627
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: b61ac6305586e5de2f53a0950fd6a52a0503eafd
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659929"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958730"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane"></a>Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач
 
@@ -20,7 +20,7 @@ ms.locfileid: "66659929"
 Используйте [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), чтобы создать проект надстройки Excel.
 
 - Чтобы создать надстройку Excel с пользовательскими функциями, выполните указанную ниже команду.
-    
+
     ```command&nbsp;line
     yo office --projectType excel-functions --name 'Excel shared runtime add-in' --host excel --js true
     ```
@@ -58,13 +58,13 @@ ms.locfileid: "66659929"
     ```
 
 1. Найдите раздел **\<VersionOverrides\>** и добавьте следующий раздел **\<Runtimes\>**. Время существования должно иметь значение **long**, чтобы код надстройки мог выполняться даже после закрытия области задач. Значение `resid` — **Taskpane.Url**, указывающее расположение файла **taskpane.html** в разделе `<bt:Urls>` в нижней части **manifest.xml**.
-    
+
     ```xml
     <Runtimes>
       <Runtime resid="Taskpane.Url" lifetime="long" />
     </Runtimes>
     ```
-    
+
     > [!IMPORTANT]
     > Раздел **\<Runtimes\>** должен быть введен после элемента `<Host xsi:type="...">` точно в таком же порядке, как показано в следующем XML-коде.
 
@@ -78,20 +78,20 @@ ms.locfileid: "66659929"
         ...
         </Host>
     ```
-    
+
     > [!NOTE]
     > Если в манифесте вашей надстройки есть элемент `Runtimes`, необходимый для общей среды выполнения, и при этом выполнены условия для использования Microsoft Edge с WebView2 (на основе Chromium), то будет использоваться этот элемент управления WebView2. Если эти условия не выполнены, используется Internet Explorer 11 (в версии для Windows или Microsoft 365). Дополнительные сведения см. в статьях "[Элемент Runtimes](/javascript/api/manifest/runtimes)" и "[Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md)".
 
 1. Найдите элемент **\<Page\>**. Затем измените расположение источника с **Functions.Page.Url** на **Taskpane.Url**.
 
-   ```xml
-   <AllFormFactors>
-   ...
-   <Page>
-     <SourceLocation resid="Taskpane.Url"/>
-   </Page>
-   ...
-   ```
+    ```xml
+    <AllFormFactors>
+    ...
+    <Page>
+      <SourceLocation resid="Taskpane.Url"/>
+    </Page>
+    ...
+    ```
 
 1. Найдите тег `<FunctionFile ...>` и измените `resid` с **Commands.Url** на **Taskpane.Url**.
 
@@ -111,7 +111,7 @@ ms.locfileid: "66659929"
 1. Откройте файл **webpack.config.js**.
 1. Перейдите в раздел `plugins:`.
 1. Удалите следующий подключаемый модуль `functions.html`, если он существует.
-    
+
     ```javascript
     new HtmlWebpackPlugin({
         filename: "functions.html",
@@ -131,7 +131,7 @@ ms.locfileid: "66659929"
     ```
 
 1. Если вы удалили подключаемый модуль `functions` или `commands`, добавьте их в качестве `chunks`. В коде JavaScript ниже показана обновленная запись, если вы удалили оба подключаемых модуля: `functions` и `commands`.
-    
+
     ```javascript
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
@@ -139,18 +139,18 @@ ms.locfileid: "66659929"
         chunks: ["polyfill", "taskpane", "commands", "functions"]
       })
     ```
-    
+
 1. Сохраните изменения и выполните повторную сборку проекта.
 
-   ```command&nbsp;line
-   npm run build
-   ```
-    
+    ```command&nbsp;line
+    npm run build
+    ```
+
     > [!NOTE]
     > Вы также можете удалить файлы **functions.html** и **commands.html**. **Taskpane.html** загружает код **functions.js** и **commands.js** в общую среду выполнения JavaScript с помощью созданных вами обновлений webpack.
-    
+
 1. Сохраните изменения и запустите проект. Убедитесь, что он загружается и выполняется без ошибок.
-    
+
    ```command&nbsp;line
    npm run start
    ```
@@ -162,99 +162,99 @@ ms.locfileid: "66659929"
 ### <a name="create-custom-functions-to-get-or-store-shared-state"></a>Создание пользовательских функций для получения или сохранения общего состояния
 
 1. В Visual Studio Code откройте файл **src/functions/functions.js**.
-2. В строке 1 в самом верху вставьте следующий код. При этом будет инициализирована глобальная переменная **sharedState**.
+1. В строке 1 в самом верху вставьте следующий код. При этом будет инициализирована глобальная переменная **sharedState**.
 
-   ```js
-   window.sharedState = "empty";
-   ```
+    ```js
+    window.sharedState = "empty";
+    ```
 
-3. Добавьте следующий код, чтобы создать пользовательскую функцию, которая сохранит значения переменной **sharedState**.
+1. Добавьте следующий код, чтобы создать пользовательскую функцию, которая сохранит значения переменной **sharedState**.
 
-   ```js
-   /**
-    * Saves a string value to shared state with the task pane
-    * @customfunction STOREVALUE
-    * @param {string} value String to write to shared state with task pane.
-    * @return {string} A success value
-    */
-   function storeValue(sharedValue) {
-     window.sharedState = sharedValue;
-     return "value stored";
-   }
-   ```
+    ```js
+    /**
+     * Saves a string value to shared state with the task pane
+     * @customfunction STOREVALUE
+     * @param {string} value String to write to shared state with task pane.
+     * @return {string} A success value
+     */
+    function storeValue(sharedValue) {
+      window.sharedState = sharedValue;
+      return "value stored";
+    }
+    ```
 
-4. Добавьте следующий код, чтобы создать пользовательскую функцию, которая получит текущее значение переменной **sharedState**.
+1. Добавьте следующий код, чтобы создать пользовательскую функцию, которая получит текущее значение переменной **sharedState**.
 
-   ```js
-   /**
-    * Gets a string value from shared state with the task pane
-    * @customfunction GETVALUE
-    * @returns {string} String value of the shared state with task pane.
-    */
-   function getValue() {
-     return window.sharedState;
-   }
-   ```
+    ```js
+    /**
+     * Gets a string value from shared state with the task pane
+     * @customfunction GETVALUE
+     * @returns {string} String value of the shared state with task pane.
+     */
+    function getValue() {
+      return window.sharedState;
+    }
+    ```
 
-5. Сохраните файл.
+1. Сохраните файл.
 
 ### <a name="create-task-pane-controls-to-work-with-global-data"></a>Создание элементов управления области задач для работы с глобальными данными
 
 1. Откройте файл **src/taskpane/taskpane.html**.
-2. Добавьте следующий элемент сценария непосредственно перед закрывающим элементом `</head>`.
+1. Добавьте следующий элемент сценария непосредственно перед закрывающим элементом `</head>`.
 
-   ```html
-   <script src="../functions/functions.js"></script>
-   ```
+    ```HTML
+    <script src="../functions/functions.js"></script>
+    ```
 
-3. После закрытия элемента `</main>` добавьте следующий HTML-код. С помощью HTML будут созданы два текстовых поля и кнопки для получения и хранения глобальных данных.
+1. После закрытия элемента `</main>` добавьте следующий HTML-код. С помощью HTML будут созданы два текстовых поля и кнопки для получения и хранения глобальных данных.
 
-   ```html
-   <ol>
-     <li>
-       Enter a value to send to the custom function and select
-       <strong>Store</strong>.
-     </li>
-     <li>
-       Enter <strong>=CONTOSO.GETVALUE()</strong> into a cell to retrieve it.
-     </li>
-     <li>
-       To send data to the task pane, in a cell, enter
-       <strong>=CONTOSO.STOREVALUE("new value")</strong>
-     </li>
-     <li>Select <strong>Get</strong> to display the value in the task pane.</li>
-   </ol>
+    ```HTML
+    <ol>
+      <li>
+        Enter a value to send to the custom function and select
+        <strong>Store</strong>.
+      </li>
+      <li>
+        Enter <strong>=CONTOSO.GETVALUE()</strong> into a cell to retrieve it.
+      </li>
+      <li>
+        To send data to the task pane, in a cell, enter
+        <strong>=CONTOSO.STOREVALUE("new value")</strong>
+      </li>
+      <li>Select <strong>Get</strong> to display the value in the task pane.</li>
+    </ol>
 
-   <p>Store new value to shared state</p>
-   <div>
-     <input type="text" id="storeBox" />
-     <button onclick="storeSharedValue()">Store</button>
-   </div>
+    <p>Store new value to shared state</p>
+    <div>
+      <input type="text" id="storeBox" />
+      <button onclick="storeSharedValue()">Store</button>
+    </div>
 
-   <p>Get shared state value</p>
-   <div>
-     <input type="text" id="getBox" />
-     <button onclick="getSharedValue()">Get</button>
-   </div>
-   ```
+    <p>Get shared state value</p>
+    <div>
+      <input type="text" id="getBox" />
+      <button onclick="getSharedValue()">Get</button>
+    </div>
+    ```
 
-4. Перед закрывающим элементом `</body>` добавьте приведенный ниже сценарий. Этот код обрабатывает события нажатия кнопки, когда пользователь хочет сохранить или получить глобальные данные.
+1. Перед закрывающим элементом `</body>` добавьте приведенный ниже сценарий. Этот код обрабатывает события нажатия кнопки, когда пользователь хочет сохранить или получить глобальные данные.
 
-   ```js
-   <script>
-   function storeSharedValue() {
-     let sharedValue = document.getElementById('storeBox').value;
-     window.sharedState = sharedValue;
-   }
+    ```HTML
+    <script>
+      function storeSharedValue() {
+        let sharedValue = document.getElementById('storeBox').value;
+        window.sharedState = sharedValue;
+      }
 
-   function getSharedValue() {
-     document.getElementById('getBox').value = window.sharedState;
-   }
+      function getSharedValue() {
+        document.getElementById('getBox').value = window.sharedState;
+      }
    </script>
    ```
 
-5. Сохраните файл.
-6. Построение проекта
+1. Сохраните файл.
+1. Выполните построение проекта.
 
    ```command line
    npm run build
@@ -264,9 +264,9 @@ ms.locfileid: "66659929"
 
 - Запустите проект, выполнив приведенную ниже команду.
 
-  ```command line
-  npm run start
-  ```
+    ```command line
+    npm run start
+    ```
 
 После запуска Excel можно использовать кнопки области задач для хранения или получения общих данных. Введите `=CONTOSO.GETVALUE()` в ячейку, чтобы пользовательская функция получила те же общие данные. Можно также использовать `=CONTOSO.STOREVALUE("new value")` для изменения значения общих данных.
 

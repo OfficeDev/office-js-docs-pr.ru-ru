@@ -1,16 +1,16 @@
 ---
-ms.date: 06/15/2022
+title: Аутентификация для пользовательских функций без общей среды выполнения
 description: Проверка подлинности пользователей с помощью пользовательских функций, которые не используют общую среду выполнения.
-title: Проверка подлинности для пользовательских функций без общей среды выполнения
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f4493f9cf68236a9d9d83ebd3299c9ce3371560
-ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
+ms.openlocfilehash: 7ff7b1dca67e9e25f14ef07bd1c088608f254427
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2022
-ms.locfileid: "66229682"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958427"
 ---
-# <a name="authentication-for-custom-functions-without-a-shared-runtime"></a>Проверка подлинности для пользовательских функций без общей среды выполнения
+# <a name="authentication-for-custom-functions-without-a-shared-runtime"></a>Аутентификация для пользовательских функций без общей среды выполнения
 
 В некоторых сценариях пользовательская функция, которая не использует общую среду выполнения, потребуется выполнить проверку подлинности пользователя, чтобы получить доступ к защищенным ресурсам. Пользовательские функции, которые не используют общую среду выполнения, выполняются в среде выполнения только для JavaScript. По этой причине, если надстройка имеет область задач, необходимо передавать данные между средой выполнения, доступной только для JavaScript, и средой выполнения, поддерживающей HTML, используемой областью задач. Это можно сделать с помощью [объекта OfficeRuntime.storage](/javascript/api/office-runtime/officeruntime.storage) и специального API диалогового окна.
 
@@ -31,7 +31,7 @@ ms.locfileid: "66229682"
 Если маркер не существует, `OfficeRuntime.dialog` следует использовать API, чтобы попросить пользователя выполнить вход. После того как пользователь введет свои учетные данные, полученный маркер доступа можно сохранить как элемент в `OfficeRuntime.storage`.
 
 > [!NOTE]
-> Среда выполнения только для JavaScript использует объект диалога, который немного отличается от объекта диалогового окна в среде выполнения ядра браузера, используемой в области задач. Они оба называются Dialog API, но используют [OfficeRuntime.displayWebDialog](/javascript/api/office-runtime#office-runtime-officeruntime-displaywebdialog-function(1)) для проверки подлинности пользователей в среде выполнения только javaScript *,* [а не Office.ui.displayDialogAsync](/javascript/api/office/office.ui#office-office-ui-displaydialogasync-member(1)).
+> Среда выполнения только для JavaScript использует объект диалога, который немного отличается от объекта диалогового окна в среде выполнения ядра браузера, используемой в области задач. Оба они называются Dialog API, но используют [OfficeRuntime.displayWebDialog](/javascript/api/office-runtime#office-runtime-officeruntime-displaywebdialog-function(1)) для проверки подлинности пользователей в среде выполнения только на JavaScript *, а* не [в Office.ui.displayDialogAsync](/javascript/api/office/office.ui#office-office-ui-displaydialogasync-member(1)).
 
 На следующей схеме показан этот основной процесс. Пунктирная линия указывает, что пользовательские функции и область задач надстройки являются частью надстройки в целом, хотя они используют отдельные среды выполнения.
 
@@ -73,8 +73,8 @@ function storeValue(key, value) {
  * @customfunction GETTOKEN
  */
 function receiveTokenFromCustomFunction() {
-  var key = "token";
-  var tokenSendStatus = document.getElementById('tokenSendStatus');
+  const key = "token";
+  const tokenSendStatus = document.getElementById('tokenSendStatus');
   OfficeRuntime.storage.getItem(key).then(function (result) {
      tokenSendStatus.value = "Success: Item with key '" + key + "' read from storage.";
      document.getElementById('tokenTextBox2').value = result;
@@ -108,7 +108,7 @@ function getTokenViaDialog(url) {
       // Can only have one dialog box open at once. Wait for previous dialog box's token.
       let timeout = 5;
       let count = 0;
-      var intervalId = setInterval(function () {
+      const intervalId = setInterval(function () {
         count++;
         if(_cachedToken) {
           resolve(_cachedToken);
@@ -145,7 +145,7 @@ function getTokenViaDialog(url) {
 
 Узнайте, как [выполнять отладку пользовательских функций](custom-functions-debugging.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
-* [Среда выполнения только для JavaScript для пользовательских функций](custom-functions-runtime.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+- [Среда выполнения только для JavaScript для пользовательских функций](custom-functions-runtime.md)
+- [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

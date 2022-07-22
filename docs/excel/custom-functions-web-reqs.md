@@ -3,16 +3,16 @@ ms.date: 05/02/2022
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных в книгу с помощью пользовательских функций в Excel.
 title: Получение и обработка данных с помощью пользовательских функций
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f8f5f97bfeb690873091ff7c59555e1683c05f
-ms.sourcegitcommit: 5773c76912cdb6f0c07a932ccf07fc97939f6aa1
+ms.openlocfilehash: fbe319e79d4cded5fe4b37ce5a654e633996f22a
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65244851"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958547"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
-Одним из способов расширения возможностей Excel функций является получение данных из расположений, отличных от книги, таких как Интернет или сервер (через [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API)). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
+Одним из способов расширения возможностей Excel с помощью пользовательских функций является получение данных из расположений, отличных от книги, таких как Интернет или сервер (через [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API)). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "65244851"
 
 Если пользовательская функция извлекает данные из внешнего источника, например, сайта, она должна:
 
-1. Возвращает [код JavaScript `Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) для Excel.
+1. Возврат [JavaScript `Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) в Excel.
 2. Разрешите значение `Promise` с окончательным значением с помощью функции обратного вызова.
 
 ### <a name="fetch-example"></a>Пример получения данных
@@ -147,7 +147,7 @@ Excel отменяет выполнение функции в следующих
 
 ### <a name="use-an-invocation-parameter"></a>Использование параметра вызова
 
-Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр `invocation` предоставляет контекст ячейки (например, ее адрес и содержимое) и позволяет использовать `setResult` и методы `onCanceled` . Эти методы определяют, что делает функция во время ее потоковой передачи (`setResult`) или отмены (`onCanceled`).
+Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр `invocation` предоставляет контекст ячейки (например, ее адрес и содержимое) `setResult` `onCanceled` и позволяет использовать метод и событие, чтобы определить, что делает функция при потоковой передаче (`setResult`) или отмене (`onCanceled`).
 
 Если вы используете TypeScript, обработчик вызова должен иметь тип или [`CustomFunctions.StreamingInvocation`](/javascript/api/custom-functions-runtime/customfunctions.streaminginvocation) [`CancelableInvocation`](/javascript/api/custom-functions-runtime/customfunctions.cancelableinvocation).
 

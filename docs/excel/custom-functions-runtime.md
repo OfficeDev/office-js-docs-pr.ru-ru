@@ -1,14 +1,14 @@
 ---
 ms.date: 06/15/2022
-description: Сведения Excel пользовательских функций, которые не используют общую среду выполнения и определенную среду выполнения JavaScript.
+description: Общие сведения о пользовательских функциях Excel, которые не используют общую среду выполнения и конкретную среду выполнения JavaScript.
 title: Среда выполнения только для JavaScript для пользовательских функций
 ms.localizationpriority: medium
-ms.openlocfilehash: 614e96937c769307b58e66943caa499f1f12d92c
-ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
+ms.openlocfilehash: 0d3298e95ab39f976c3fbfd5c0cc4ecdd1369721
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2022
-ms.locfileid: "66229668"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958413"
 ---
 # <a name="javascript-only-runtime-for-custom-functions"></a>Среда выполнения только для JavaScript для пользовательских функций
 
@@ -51,7 +51,7 @@ ms.locfileid: "66229668"
 
 ### <a name="officeruntimestorage-example"></a>Пример OfficeRuntime.storage
 
-В следующем примере кода функция `OfficeRuntime.storage.setItem` вызывается для задания ключа и значения `storage`в .
+В следующем примере кода вызывается `OfficeRuntime.storage.setItem` метод для задания ключа и значения `storage`в .
 
 ```js
 function StoreValue(key, value) {
@@ -68,8 +68,8 @@ function StoreValue(key, value) {
 
 Узнайте, как [выполнять отладку пользовательских функций](custom-functions-debugging.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
-* [Проверка подлинности для пользовательских функций без общей среды выполнения](custom-functions-authentication.md)
-* [Создание пользовательских функций в Excel](custom-functions-overview.md)
-* [Руководство по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md)
+- [Аутентификация для пользовательских функций без общей среды выполнения](custom-functions-authentication.md)
+- [Создание пользовательских функций в Excel](custom-functions-overview.md)
+- [Руководство по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md)

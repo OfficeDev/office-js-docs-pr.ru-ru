@@ -3,12 +3,12 @@ title: Общая объектная модель API JavaScript
 description: Сведения об общей объектной модели API JavaScript для Office.
 ms.date: 07/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ab311c548ec0ff8448f10f3ce64e3cd33ad32b12
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 1b856866c903a61a04bcbb232790649147fdb7fc
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712989"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958624"
 ---
 # <a name="common-javascript-api-object-model"></a>Общая объектная модель API JavaScript
 
@@ -46,7 +46,7 @@ API JavaScript для Office предоставляют доступ к базо
 
 Все эти формы доступа к данным начинаются с экземпляра абстрактного `Document` объекта.
 
-Вы можете получить доступ к экземпляру `Document` [](/javascript/api/office/office.context#office-office-context-document-member) `Context` объекта при инициализации надстройки области задач или контента с помощью свойства документа объекта. Объект `Document` определяет общие функции доступа к данным, совместно используемые в документах Word и Excel, `CustomXmlParts` а также предоставляет доступ к объекту для документов Word.
+Вы можете получить доступ к экземпляру `Document` [](/javascript/api/office/office.context#office-office-context-document-member) `Context` объекта при инициализации надстройки области задач или контента с помощью свойства документа объекта. Объект `Document` определяет общие методы доступа к данным, совместно используемые в документах Word и Excel, `CustomXmlParts` а также предоставляет доступ к объекту для документов Word.
 
 Этот `Document` объект поддерживает четыре способа доступа разработчиков к содержимому документа.
 
@@ -103,7 +103,7 @@ API JavaScript для Office предоставляют доступ к базо
 
 Установка привязки также позволяет подписываться на данные и выбирать изменения событий, относящиеся к конкретной области документа или электронной таблицы. Это означает, что надстройка уведомляется только об изменениях, происходящих внутри данной конкретной области, в отличие от изменений, затрагивающих в целом весь документ или электронную таблицу.
 
-Объект [Bindings](/javascript/api/office/office.bindings) предоставляет метод [getAllAsync](/javascript/api/office/office.bindings#office-office-bindings-getallasync-member(1)), который обеспечивает доступ к набору всех привязок, установленных в этом документе или листе. Доступ к отдельной привязке можно получить по ее идентификатору с помощью методов [Bindings.getBindingByIdAsync](/javascript/api/office/office.bindings#office-office-bindings-getbyidasync-member(1)) или [Office.select](/javascript/api/office). `Bindings` Вы можете установить новые привязки, а также удалить существующие с помощью одного из следующих методов объекта: [addFromSelectionAsync](/javascript/api/office/office.bindings#office-office-bindings-addfromselectionasync-member(1)), [addFromPromptAsync](/javascript/api/office/office.bindings#office-office-bindings-addfrompromptasync-member(1)), [addFromNamedItemAsync](/javascript/api/office/office.bindings#office-office-bindings-addfromnameditemasync-member(1)) или [releaseByIdAsync](/javascript/api/office/office.bindings#office-office-bindings-releasebyidasync-member(1)).
+Объект [Bindings](/javascript/api/office/office.bindings) предоставляет метод [getAllAsync](/javascript/api/office/office.bindings#office-office-bindings-getallasync-member(1)), который обеспечивает доступ к набору всех привязок, установленных в этом документе или листе. Доступ к отдельной привязке можно получить по ее идентификатору с помощью метода [Bindings.getBindingByIdAsync](/javascript/api/office/office.bindings#office-office-bindings-getbyidasync-member(1)) или [функции Office.select](/javascript/api/office) . `Bindings` Вы можете установить новые привязки, а также удалить существующие с помощью одного из следующих методов объекта: [addFromSelectionAsync](/javascript/api/office/office.bindings#office-office-bindings-addfromselectionasync-member(1)), [addFromPromptAsync](/javascript/api/office/office.bindings#office-office-bindings-addfrompromptasync-member(1)), [addFromNamedItemAsync](/javascript/api/office/office.bindings#office-office-bindings-addfromnameditemasync-member(1)) или [releaseByIdAsync](/javascript/api/office/office.bindings#office-office-bindings-releasebyidasync-member(1)).
 
 Существует три разных типа привязок, которые указываются с параметром _bindingType_ при создании привязки с помощью `addFromSelectionAsync``addFromPromptAsync` метода или метода`addFromNamedItemAsync`.
 

@@ -3,12 +3,12 @@ title: Создание настраиваемых контекстных вкл
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a079930bbb4523893f25604aefcff0a68f0316b
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: 23f6c64d1b3f0e95b8dcae6bc36563566acb8b3f
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889193"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958538"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемых контекстных вкладок в надстройки Office
 
@@ -253,7 +253,7 @@ ms.locfileid: "66889193"
 
 ## <a name="register-the-contextual-tab-with-office-with-requestcreatecontrols"></a>Регистрация контекстной вкладки в Office с помощью requestCreateControls
 
-Контекстная вкладка регистрируется в Office путем вызова метода [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#office-office-ribbon-requestcreatecontrols-member(1)) . Обычно это делается либо в функции, назначенной `Office.initialize` методу, либо с помощью метода `Office.onReady` . Дополнительные сведения об этих методах и инициализации надстройки см. в разделе ["Инициализация надстройки Office"](../develop/initialize-add-in.md). Однако метод можно вызвать в любое время после инициализации.
+Контекстная вкладка регистрируется в Office путем вызова метода [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#office-office-ribbon-requestcreatecontrols-member(1)) . Обычно это делается либо в назначенной `Office.initialize` функции, либо с помощью функции `Office.onReady` . Дополнительные сведения об этих функциях и инициализации надстройки см. в разделе ["Инициализация надстройки Office"](../develop/initialize-add-in.md). Однако метод можно вызвать в любое время после инициализации.
 
 > [!IMPORTANT]
 > Метод `requestCreateControls` может вызываться только один раз в заданный сеанс надстройки. При повторном вызове возникает ошибка.
@@ -272,7 +272,7 @@ Office.onReady(async () => {
 
 Как правило, настраиваемая контекстная вкладка должна отображаться, когда инициированное пользователем событие изменяет контекст надстройки. Рассмотрим сценарий, в котором вкладка должна быть видна только при активации диаграммы (на листе excel по умолчанию).
 
-Начните с назначения обработчиков. Обычно это делается `Office.onReady` в методе, как в следующем примере, который назначает обработчики (созданные на следующем шаге) `onDeactivated` `onActivated` всем диаграммам на листе и событиям.
+Начните с назначения обработчиков. Обычно это делается `Office.onReady` в функции, как показано в следующем примере, которая назначает обработчики (созданные на следующем шаге) `onActivated` `onDeactivated` всем диаграммам на листе и событиям.
 
 ```javascript
 Office.onReady(async () => {

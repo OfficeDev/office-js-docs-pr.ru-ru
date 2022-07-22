@@ -1,14 +1,14 @@
 ---
 title: Чтение и запись данных в текущую выделенную область документа или электронной таблицы
-description: Узнайте, как читать и записывать данные в активное выделение в документе Word или Excel электронной таблице.
+description: Узнайте, как читать и записывать данные в активное выделение в документе Word или электронной таблице Excel.
 ms.date: 01/31/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 360701bc43a7fc63f8447ff9a068256d187e2a70
-ms.sourcegitcommit: 5bf28c447c5b60e2cc7e7a2155db66cd9fe2ab6b
+ms.openlocfilehash: 220f768352aa3cf8a077f2e37ec812878cbeffba
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187317"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958463"
 ---
 # <a name="read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet"></a>Считывание и запись данных в активное выделение документа или таблицы
 
@@ -41,9 +41,9 @@ function write(message){
 > [!TIP]
 > **В каких случаях следует использовать для доступа к данным матрицы, а в каких — coercionType?** Если при добавлении строк и столбцов необходимо динамически увеличивать выбранные табличные данные и работать с заголовками таблиц, следует использовать табличный тип данных (указав параметр _coercionType_ `getSelectedDataAsync` `"table"` `Office.CoercionType.Table`метода как или). Добавление строк и столбцов в структуре данных поддерживается как табличными, так и матричными данными, но присоединение строк и столбцов поддерживается только табличными данными. Если вы не планируете добавлять строки и столбцы и данные не требуют функциональных возможностей заголовков, следует использовать тип данных матрицы (указав параметр  _coercionType_ `getSelectedDataAsync` `"matrix"` `Office.CoercionType.Matrix`метода как или), который обеспечивает более простую модель взаимодействия с данными.
 
-Анонимная функция, которая передается в функцию в качестве второго _параметра,_ обратного вызова, выполняется после `getSelectedDataAsync` завершения операции. При вызове функции передается один параметр _asyncResult_, который содержит результат и сведения о состоянии вызова. Если вызов завершается сбоем, свойство [ошибки](/javascript/api/office/office.asyncresult#office-office-asyncresult-error-member) `AsyncResult` объекта предоставляет доступ к [объекту Error](/javascript/api/office/office.error) . Вы можете проверить значение свойств [Error.name](/javascript/api/office/office.error#office-office-error-name-member) и [Error.message](/javascript/api/office/office.error#office-office-error-message-member), чтобы определить, почему операция завершилась с ошибкой. В противном случае будет отображен выделенный в документе текст.
+Анонимная функция, которая передается в метод в качестве второго параметра _,_ обратного вызова, выполняется после `getSelectedDataAsync` завершения операции. При вызове функции передается один параметр _asyncResult_, который содержит результат и сведения о состоянии вызова. Если вызов завершается сбоем, свойство [ошибки](/javascript/api/office/office.asyncresult#office-office-asyncresult-error-member) `AsyncResult` объекта предоставляет доступ к [объекту Error](/javascript/api/office/office.error) . Вы можете проверить значение свойств [Error.name](/javascript/api/office/office.error#office-office-error-name-member) и [Error.message](/javascript/api/office/office.error#office-office-error-message-member), чтобы определить, почему операция завершилась с ошибкой. В противном случае будет отображен выделенный в документе текст.
 
-Свойство [AsyncResult.status](/javascript/api/office/office.asyncresult#office-office-asyncresult-error-member) используется в выражении **if** для проверки того, успешно ли выполнен вызов. [Office. AsyncResultStatus](/javascript/api/office/office.asyncresult#office-office-asyncresult-status-member) — это перечисление доступных значений `AsyncResult.status` свойств. `Office.AsyncResultStatus.Failed` вычисляет строку "failed" (и, опять же, можно указать в качестве этой строки литерала).
+Свойство [AsyncResult.status](/javascript/api/office/office.asyncresult#office-office-asyncresult-error-member) используется в выражении **if** для проверки того, успешно ли выполнен вызов. [Office.AsyncResultStatus](/javascript/api/office/office.asyncresult#office-office-asyncresult-status-member) — это перечисление доступных `AsyncResult.status` значений свойств. `Office.AsyncResultStatus.Failed` вычисляет строку "failed" (и, опять же, можно указать в качестве этой строки литерала).
 
 ## <a name="write-data-to-the-selection"></a>Запись данных в выделение
 
@@ -62,7 +62,7 @@ function write(message){
 }
 ```
 
-Передача в параметре _data_ других типов объектов может привести к разным результатам. Результат зависит от того, что в настоящее время выбрано в документе, какое Office клиентское приложение размещает надстройку, и можно ли привести переданные данные к текущему выбору.
+Передача в параметре _data_ других типов объектов может привести к разным результатам. Результат зависит от того, что в настоящее время выбрано в документе, какое клиентское приложение Office размещает вашу надстройку, и можно ли привести переданные данные к текущему выбору.
 
 Анонимная функция, которая передается в метод [setSelectedDataAsync](/javascript/api/office/office.document#office-office-document-setselecteddataasync-member(1)) в качестве параметра _callback_, выполняется после завершения асинхронного вызова. При записи `setSelectedDataAsync` данных в выборку с помощью метода параметр _asyncResult_ обратного вызова предоставляет доступ только к статусу вызова и к объекту [Error](/javascript/api/office/office.error) в случае сбоя вызова.
 
@@ -88,9 +88,9 @@ function write(message){
 }
 ```
 
-Первый параметр _, eventType_, указывает имя события, на которое необходимо подписаться. Передача строки `"documentSelectionChanged"` для этого параметра эквивалентна `Office.EventType.DocumentSelectionChanged` передаче типа события Office[. Перечисление EventType](/javascript/api/office/office.eventtype).
+Первый параметр _, eventType_, указывает имя события, на которое необходимо подписаться. Передача строки `"documentSelectionChanged"` для этого параметра `Office.EventType.DocumentSelectionChanged` эквивалентна передаче типа события перечисления [Office.EventType](/javascript/api/office/office.eventtype) .
 
-Функция  `myHandler()` , которая передается в функцию в качестве второго параметра _,_ обработчика, является обработчиком событий, который выполняется при изменении выделения в документе. При вызове этой функции передается единственный параметр _eventArgs_, который после завершения асинхронной операции будет содержать ссылку на объект [DocumentSelectionChangedEventArgs](/javascript/api/office/office.documentselectionchangedeventargs). Вы можете использовать свойство [DocumentSelectionChangedEventArgs.document](/javascript/api/office/office.documentselectionchangedeventargs#office-office-documentselectionchangedeventargs-document-member) для доступа к документу, создавшему событие.
+Функция  `myHandler()` , которая передается в метод в качестве второго параметра _,_ обработчика, является обработчиком событий, который выполняется при изменении выделения в документе. При вызове этой функции передается единственный параметр _eventArgs_, который после завершения асинхронной операции будет содержать ссылку на объект [DocumentSelectionChangedEventArgs](/javascript/api/office/office.documentselectionchangedeventargs). Вы можете использовать свойство [DocumentSelectionChangedEventArgs.document](/javascript/api/office/office.documentselectionchangedeventargs#office-office-documentselectionchangedeventargs-document-member) для доступа к документу, создавшему событие.
 
 > [!NOTE]
 > Вы можете добавить несколько обработчиков `addHandlerAsync` событий для данного события, вызвав метод еще раз и передав дополнительную функцию обработчика событий для _параметра обработчика_ . Это будет работать правильно, поскольку имя каждой функции обработчика событий уникально.

@@ -3,12 +3,12 @@ title: Вставка данных в текст в надстройке Outlook
 description: Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.
 ms.date: 07/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a60401156603e85975d0efad7cb721d6d27666c1
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 7319a3bb41d857fcae32ea118a3f3e60197bf751
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712743"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958329"
 ---
 # <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>Вставка данных в текст при создании встречи или сообщения в Outlook
 
@@ -33,9 +33,9 @@ ms.locfileid: "66712743"
 
 В этом разделе представлен пример кода, который использует **getTypeAsync** для проверки типа текста создаваемого элемента, а затем вызывает метод **setSelectedDataAsync** для вставки данных в текущем положении курсора.
 
-Вы можете передать метод обратного вызова и необязательные входные параметры в **getTypeAsync**. Тогда состояние и результаты будут возвращены в параметре вывода _asyncResult_. Если метод выполнен успешно, вы получите тип текста элемента в свойстве [AsyncResult.value](/javascript/api/office/office.asyncresult#office-office-asyncresult-value-member), значение которого — "text" или "html".
+Вы можете передать функцию обратного вызова и необязательные входные параметры **в getTypeAsync**, а также получить любое состояние и результаты в выходном параметре  _asyncResult_ . Если метод выполнен успешно, вы можете получить тип текста элемента в свойстве [AsyncResult.value](/javascript/api/office/office.asyncresult#office-office-asyncresult-value-member) , которое является текстом или html.
 
-Необходимо передать строку данных как входной параметр метода **setSelectedDataAsync**. В зависимости от типа текста элемента можно указать эту строку в виде текста или HTML соответственно. Как было сказано ранее, при необходимости тип вставляемых данных можно указать в параметре _coercionType_. Кроме того, вы можете предоставить метод обратного вызова и его параметры в качестве дополнительных входных параметров.
+Для задания **setSelectedDataAsync** необходимо передать строку данных в качестве входного параметра. В зависимости от типа текста элемента можно указать эту строку в виде текста или HTML соответственно. Как было сказано ранее, при необходимости тип вставляемых данных можно указать в параметре  _coercionType_. Кроме того, можно указать функцию обратного вызова и любой из ее параметров в качестве необязательных входных параметров.
 
 Если пользователь не разместил курсор в тексте элемента, **setSelectedDataAsync** вставляет данные в начало текста. Если пользователь выбрал текст в элементе, **setSelectedDataAsync** заменяет выбранный текст указанными вами данными. Обратите внимание, что вызов **setSelectedDataAsync** может завершиться ошибкой, если пользователь одновременно меняет позицию курсора при создании элемента. Максимальное число символов, которые можно вставить за один раз — 1 000 000.
 
@@ -53,7 +53,7 @@ let item;
 
 Office.initialize = function () {
     item = Office.context.mailbox.item;
-    // Checks for the DOM to load using the jQuery ready function.
+    // Checks for the DOM to load using the jQuery ready method.
     $(document).ready(function () {
         // After the DOM is loaded, app-specific code can run.
         // Set data in the body of the composed item.
@@ -127,7 +127,7 @@ function write(message){
 
 - Если вы добавляете htmL-данные в текст сообщения, сначала проверьте тип текста сообщения, чтобы избежать добавления HTML-данных в сообщение в текстовом формате.
 
-- Предоставьте следующие входные параметры для метода **prependAsync**: строка данных в текстовом формате или формате HTML и, при необходимости, формат вставляемых данных, метод обратного вызова и его параметры.
+- Предоставьте следующие входные параметры для **prependAsync**: строку данных в текстовом или HTML-формате, а также при необходимости формат вставляемых данных, функцию обратного вызова и любой из ее параметров.
 
 - Максимальное число символов, которые можно вставить в начало за один раз — 1 000 000.
 
@@ -138,7 +138,7 @@ let item;
 
 Office.initialize = function () {
     item = Office.context.mailbox.item;
-    // Checks for the DOM to load using the jQuery ready function.
+    // Checks for the DOM to load using the jQuery ready method.
     $(document).ready(function () {
         // After the DOM is loaded, app-specific code can run.
         // Insert data in the top of the body of the composed 

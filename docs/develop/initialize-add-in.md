@@ -3,12 +3,12 @@ title: Инициализация надстройки Office
 description: Узнайте, как инициализировать надстройку Office.
 ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 52e75770dc4852ac3905256b6ea4230552df48ca
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: a809a353a54fbb7bd10f0d1d5920d8a6881d2a6f
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797598"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958673"
 ---
 # <a name="initialize-your-office-add-in"></a>Инициализация надстройки Office
 
@@ -38,9 +38,9 @@ ms.locfileid: "66797598"
 
 ## <a name="initialize-with-officeonready"></a>Инициализация с использованием Office.onReady()
 
-`Office.onReady()` — это асинхронный метод, который возвращает объект [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) во время проверки загрузки Office.js библиотеки. При загрузке библиотеки обещание разрешается как объект, указывающий клиентское приложение Office `Office.HostType` со значением перечисления (`Excel`, `Word`и т. д.) `Office.PlatformType` и платформу со значением перечисления (`PC`, `Mac`, и `OfficeOnline`т. д.). Объект Promise сопоставляется незамедлительно, если библиотека уже загружена, когда вызывается `Office.onReady()`.
+`Office.onReady()` — это асинхронная функция, которая возвращает объект [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) во время проверки загрузки Office.js библиотеки. При загрузке библиотеки обещание разрешается как объект, указывающий клиентское приложение Office `Office.HostType` со значением перечисления (`Excel`, `Word`и т. д.) `Office.PlatformType` и платформу со значением перечисления (`PC`, `Mac`, и `OfficeOnline`т. д.). Объект Promise сопоставляется незамедлительно, если библиотека уже загружена, когда вызывается `Office.onReady()`.
 
-Один из способов вызова `Office.onReady()` состоит в передаче ему метода обратного вызова. Ниже приведен пример.
+Один из способов вызова — `Office.onReady()` передать функцию обратного вызова. Ниже приведен пример.
 
 ```js
 Office.onReady(function(info) {
@@ -77,7 +77,7 @@ Office.onReady()
 })();
 ```
 
-При использовании дополнительных платформ JavaScript, включающих собственный обработчик событий инициализации или тесты, они, *как правило*, должны размещаться внутри ответа для `Office.onReady()`. Например, ссылка на [JQuery](https://jquery.com) функция `$(document).ready()` должна выглядеть следующим образом:
+При использовании дополнительных платформ JavaScript, включающих собственный обработчик событий инициализации или тесты, они, *как правило*, должны размещаться внутри ответа для `Office.onReady()`. Например, на [метод JQuery](https://jquery.com) `$(document).ready()` будет ссылаться следующее:
 
 ```js
 Office.onReady(function() {
@@ -104,7 +104,7 @@ Office.initialize = function () {
 };
 ```
 
-Если вы используете дополнительные платформы JavaScript, которые содержат собственный обработчик инициализации или  тесты, `Office.initialize` они обычно должны размещаться в событии (исключения, описанные в разделе "Инициализация с **помощью Office.onReady()** ранее применяются и в этом случае"). Например, ссылка на [JQuery](https://jquery.com) функция `$(document).ready()` должна выглядеть следующим образом:
+Если вы используете дополнительные платформы JavaScript, которые содержат собственный обработчик инициализации или  тесты, `Office.initialize` они обычно должны размещаться в событии (исключения, описанные в разделе "Инициализация с **помощью Office.onReady()** ранее применяются и в этом случае"). Например, на [метод JQuery](https://jquery.com) `$(document).ready()` будет ссылаться следующее:
 
 ```js
 Office.initialize = function () {
@@ -139,7 +139,7 @@ Office.initialize = function (reason) {
 > [!NOTE]
 > Даже если отсутствует логика запуска, следует вызвать `Office.onReady()` или назначить пустую функцию для `Office.initialize`, когда ваша надстройка загружает JavaScript. Некоторые сочетания приложений и платформ Office не загружают область задач, пока не произойдет одно из этих действий. Эти два способа показаны в приведенных ниже примерах.
 >
->```js    
+>```js
 >Office.onReady();
 >```
 >
@@ -150,9 +150,9 @@ Office.initialize = function (reason) {
 
 ## <a name="debug-initialization"></a>Отладочная инициализация
 
-Сведения об отладке методов `Office.initialize` и методах `Office.onReady()` см. в разделе " [Отладка методов инициализации и onReady"](../testing/debug-initialize-onready.md).
+Сведения об отладке `Office.initialize` функций и функций `Office.onReady()` см. в разделе "Отладка функций инициализации и [onReady"](../testing/debug-initialize-onready.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md)

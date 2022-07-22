@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Основные сведения о создании диалогового окна в надстройке Office.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 363f58f94f7e0bfc6fe4c7b9a410114b8d027b52
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: 61b9da4d3d6f3182cb97402c7173bce250a52061
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889487"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958484"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -193,7 +193,7 @@ if (loginSuccess) {
 > [!NOTE]
 >
 > - Переменная `loginSuccess` будет инициализирована после считывания отклика HTTP от поставщика удостоверений.
-> - Реализация функций `getProfile` и `getError` не показана. Они получают данные из параметра запроса или ответа HTTP.
+> - Реализация функций и `getProfile` функций `getError` не отображается. Они получают данные из параметра запроса или ответа HTTP.
 > - В зависимости от того, удалось ли выполнить вход, отправляются анонимные объекты различных типов. Оба содержат свойство `messageType`, но один содержит свойство `profile`, а другой — свойство `error`.
 
 Код обработчика на главной странице использует значение свойства `messageType` для разветвления, как показано в приведенном ниже примере. Обратите внимание на то, что здесь используется та же функция `showUserName`, что и в примере выше, а функция `showNotification` отображает сообщение об ошибке в элементе пользовательского интерфейса на главной странице.
@@ -290,7 +290,7 @@ function sheetPropertiesChanged() {
 
 ### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка DialogParentMessageReceived в диалоговом окне
 
-В JavaScript `DialogParentMessageReceived` диалогового окна зарегистрируйте обработчик события с помощью метода [UI.addHandlerAsync](/javascript/api/office/office.ui#office-office-ui-addhandlerasync-member(1)) . Обычно это делается в методах [Office.onReady или Office.initialize](initialize-add-in.md), как показано ниже. (Ниже приведен более надежный пример.)
+В JavaScript `DialogParentMessageReceived` диалогового окна зарегистрируйте обработчик события с помощью метода [UI.addHandlerAsync](/javascript/api/office/office.ui#office-office-ui-addhandlerasync-member(1)) . Обычно это делается в [функции Office.onReady или Office.initialize](initialize-add-in.md), как показано ниже. (Более надежный пример приведен далее в этой статье.)
 
 ```javascript
 Office.onReady()
@@ -370,7 +370,7 @@ function onMessageFromParent(arg) {
 }
 ```
 
-Например, код может использовать методы [Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство может быть проверено для этого списка в обработчике.
+Например, код может использовать функцию [Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство может быть проверено для этого списка в обработчике.
 
 > [!TIP]
 > Этот `DialogMessageOptions` параметр был добавлен в метод `messageChild` в качестве обязательного параметра в середине 2021 года. Старые надстройки, которые отправляют междомовое сообщение с методом, больше не работают, пока не будут обновлены для использования нового параметра. Пока надстройка не будет обновлена, только в *Office для Windows* пользователи и системные администраторы могут разрешить этим надстройкам продолжать работу, указав доверенные домены с параметром реестра: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Для этого создайте файл `.reg` с расширением, сохраните его на компьютере с Windows, а затем дважды щелкните его, чтобы запустить. Ниже приведен пример содержимого такого файла.

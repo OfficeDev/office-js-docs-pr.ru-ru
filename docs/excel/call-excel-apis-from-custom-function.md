@@ -1,30 +1,30 @@
 ---
-title: Вызов Excel API JavaScript из настраиваемой функции
-description: Узнайте, какие Excel API JavaScript можно вызвать из настраиваемой функции.
-ms.date: 08/30/2021
+title: Вызов API JavaScript для Excel из пользовательской функции
+description: Узнайте, какие API JavaScript для Excel можно вызывать из пользовательской функции.
+ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b60f3fbdeb317169800c688b77982580dfbf8c4
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 04edd5104e0def7631352bc315a0c451ae067d98
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744393"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958420"
 ---
-# <a name="call-excel-javascript-apis-from-a-custom-function"></a>Вызов Excel API JavaScript из настраиваемой функции
+# <a name="call-excel-javascript-apis-from-a-custom-function"></a>Вызов API JavaScript для Excel из пользовательской функции
 
-Позвоните Excel API JavaScript из пользовательских функций, чтобы получить данные о диапазоне и получить дополнительный контекст для ваших вычислений. Вызов Excel API JavaScript с помощью настраиваемой функции может быть полезен, если:
+Вызовите API JavaScript для Excel из пользовательских функций, чтобы получить данные диапазона и получить дополнительный контекст для вычислений. Вызов API JavaScript для Excel с помощью пользовательской функции может быть полезен, если:
 
-- Настраиваемая функция должна получать сведения из Excel до вычисления. Эти сведения могут включать свойства документов, форматы диапазона, пользовательские XML-части, имя книги или другую Excel сведения.
-- Настраиваемая функция будет устанавливать формат номера ячейки для возвращаемого значения после вычисления.
+- Перед вычислением пользовательская функция должна получить сведения из Excel. Эти сведения могут включать свойства документа, форматы диапазонов, пользовательские XML-части, имя книги или другие сведения, относящиеся к Excel.
+- Пользовательская функция задает числовую формат ячейки для возвращаемых значений после вычисления.
 
 > [!IMPORTANT]
-> Чтобы вызвать Excel API JavaScript из настраиваемой функции, необходимо использовать общее время запуска JavaScript. Дополнительные сведения см. в статье [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+> Чтобы вызвать API JavaScript для Excel из пользовательской функции, необходимо использовать общую среду выполнения JavaScript. Дополнительные сведения см. в статье [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="code-sample"></a>Пример кода
 
-Чтобы вызвать Excel API JavaScript из настраиваемой функции, сначала требуется контекст. Используйте [Excel. Запрос объектаContext](/javascript/api/excel/excel.requestcontext) для получения контекста. Затем используйте контекст для вызова API, необходимых в книге.
+Чтобы вызвать API JavaScript для Excel из пользовательской функции, сначала требуется контекст. Используйте объект [Excel.RequestContext](/javascript/api/excel/excel.requestcontext) для получения контекста. Затем используйте контекст для вызова API, необходимых в книге.
 
-В следующем примере кода показано, `Excel.RequestContext` как использовать для получения значения из ячейки в книге. В этом примере `address` параметр передается в метод Excel API JavaScript [Worksheet.getRange](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getrange-member(1)) и должен быть введен в качестве строки. Например, настраиваемая функция, вступив в пользовательский Excel пользовательского `=CONTOSO.GETRANGEVALUE("A1")`интерфейса, должна следовать шаблону , `"A1"` где находится адрес ячейки, из которой можно получить значение.
+В следующем примере кода показано `Excel.RequestContext` , как получить значение из ячейки книги. В этом примере `address` параметр передается в метод Excel JavaScript API [Worksheet.getRange](/javascript/api/excel/excel.worksheet#excel-excel-worksheet-getrange-member(1)) и должен быть введен в виде строки. Например, пользовательская функция, введенная в пользовательский интерфейс Excel `=CONTOSO.GETRANGEVALUE("A1")`, должна соответствовать шаблону, `"A1"` где находится адрес ячейки, из которой извлекается значение.
 
 ```JavaScript
 /**
@@ -34,10 +34,10 @@ ms.locfileid: "63744393"
  **/
 async function getRangeValue(address) {
  // Retrieve the context object. 
- var context = new Excel.RequestContext();
+ const context = new Excel.RequestContext();
  
  // Use the context object to access the cell at the input address. 
- var range = context.workbook.worksheets.getActiveWorksheet().getRange(address);
+ const range = context.workbook.worksheets.getActiveWorksheet().getRange(address);
  range.load("values");
  await context.sync();
  
@@ -46,26 +46,26 @@ async function getRangeValue(address) {
 }
 ```
 
-## <a name="limitations-of-calling-excel-javascript-apis-through-a-custom-function"></a>Ограничения вызовов Excel API JavaScript с помощью настраиваемой функции
+## <a name="limitations-of-calling-excel-javascript-apis-through-a-custom-function"></a>Ограничения вызова API JavaScript для Excel с помощью пользовательской функции
 
-Не вызывайте Excel API JavaScript из настраиваемой функции, которая меняет среду Excel. Это означает, что пользовательские функции не должны выполнять следующие функции:
+Не вызывайте API JavaScript для Excel из пользовательской функции, которая изменяет среду Excel. Это означает, что пользовательские функции не должны выполнять следующие действия:
 
-- Вставка, удаление или форматирование ячеек в таблицу.
+- Вставка, удаление или форматирование ячеек в электронной таблице.
 - Измените значение другой ячейки.
 - Перемещение, переименование, удаление или добавление листов в книгу.
-- Измените все параметры среды, такие как режим вычисления или представления экрана.
-- Добавление имен в книгу.
-- Установите свойства или выполните большинство методов.
+- Измените любой из параметров среды, например режим вычисления или просмотр экрана.
+- Добавьте имена в книгу.
+- Задайте свойства или выполните большинство методов.
 
-Изменение Excel может привести к низкой производительности, выходу времени и бесконечным циклам. Настраиваемые вычисления функций не должны запускаться во время Excel перерасчета, так как это приведет к непредсказуемым результатам.
+Изменение Excel может привести к снижению производительности, простоям и бесконечным циклам. Вычисления пользовательских функций не должны выполняться во время пересчета Excel, так как это приведет к непредсказуемым результатам.
 
-Вместо этого внести изменения Excel из контекста кнопки ленты или области задач.
+Вместо этого внесите изменения в Excel из контекста кнопки ленты или области задач.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
-- [Обмениваться данными и событиями между Excel пользовательскими функциями и учебником по области задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)
+- [Руководство по совместному доступу к данным и событиям между пользовательскими функциями Excel и областью задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)
 - [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

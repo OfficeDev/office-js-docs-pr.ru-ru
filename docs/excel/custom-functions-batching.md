@@ -3,14 +3,14 @@ ms.date: 07/08/2021
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 ms.localizationpriority: medium
-ms.openlocfilehash: c22a2d52ca0b144eb8ccb8acf88225cca75f0980
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 71af149154ea39dc71b682502c54bb3a03282652
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744388"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958603"
 ---
-# <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные пользовательские вызовы функции для удаленной службы
+# <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные вызовы пользовательских функций для удаленной службы
 
 Если пользовательские функции обращаются к удаленной службе, можно использовать шаблон пакетирования для сокращения количества сетевых вызовов удаленной службы. Для уменьшения объема сетевых операций можно объединить все вызовы в один вызов веб-службы. Это идеальное решение при пересчете электронной таблицы.
 
@@ -20,9 +20,9 @@ ms.locfileid: "63744388"
 
 ## <a name="view-the-completed-sample"></a>Посмотреть готовый пример
 
-Чтобы просмотреть завершенный пример, следуйте этой статье и вклейте примеры кода в собственный проект. Например, чтобы создать новый проект настраиваемой функции для TypeScript, используйте генератор [Yeoman для Office](../develop/yeoman-generator-overview.md) надстройки, а затем добавьте весь код из этой статьи в проект. Запустите код и попробуйте его.
+Чтобы просмотреть завершенный пример, следуйте инструкциям в этой статье и вставьте примеры кода в собственный проект. Например, чтобы создать проект пользовательской функции для TypeScript, используйте генератор [Yeoman](../develop/yeoman-generator-overview.md) для надстроек Office, а затем добавьте в проект весь код из этой статьи. Запустите код и попробуйте его.
 
-Кроме того, скачайте или просмотреть полный пример проекта в [шаблоне пакетов пользовательских функций](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Excel-custom-functions/Batching/src/functions/functions.js).
+Кроме того, скачайте или просмотрите полный пример проекта в шаблоне [пакетной обработки пользовательских функций](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Excel-custom-functions/Batching/src/functions/functions.js).
 
 ## <a name="create-the-batching-pattern-in-this-article"></a>Создание шаблона пакетирования в этой статье
 
@@ -32,7 +32,7 @@ ms.locfileid: "63744388"
 2. Функция, которая делает удаленный запрос, когда пакет готов.
 3. Код сервера для отклика на пакетный запрос, вычисления результатов всех операций и возвращения значений.
 
-В следующих разделах вы узнаете, как создать код по одному примеру. Добавьте каждый пример кода в файл **functions.ts**. Рекомендуется создать совершенно новый проект пользовательских функций с помощью [генератора Yeoman для Office надстройки](../develop/yeoman-generator-overview.md). Чтобы создать новый проект, см. в Excel [пользовательские](../quickstarts/excel-custom-functions-quickstart.md) функции и используйте TypeScript вместо JavaScript.
+В следующих разделах вы узнаете, как создать код по одному примеру за раз. Добавьте каждый пример кода в файл **functions.ts**. Рекомендуется создать новый проект пользовательских функций с помощью генератора [Yeoman](../develop/yeoman-generator-overview.md) для генератора надстроек Office. Сведения о создании проекта см. в статье ["Начало разработки](../quickstarts/excel-custom-functions-quickstart.md) пользовательских функций Excel" и использование TypeScript вместо JavaScript.
 
 ## <a name="batch-each-call-to-your-custom-function"></a>Включение в пакет каждого вызова пользовательской функции
 
@@ -206,7 +206,7 @@ function pause(ms: number) {
 
 ### <a name="modify-_fetchfromremoteservice-for-your-live-remote-service"></a>Переделка `_fetchFromRemoteService` для действующей удаленной службы
 
-Чтобы изменить функцию `_fetchFromRemoteService` , которая будет работать в вашей удаленной службе в прямом эфире, внести следующие изменения.
+Чтобы изменить функцию `_fetchFromRemoteService` для запуска в динамической удаленной службе, внесите следующие изменения.
 
 - В зависимости от платформы используемого сервера (Node.js или другая) сопоставьте сетевой вызов клиента с этой функцией.
 - Удалите функцию `pause`, которая имитирует задержку в сети.
@@ -221,6 +221,6 @@ function pause(ms: number) {
 
 ## <a name="see-also"></a>Дополнительные ресурсы
 
-* [Пересчитываемые значения в функциях](custom-functions-volatile.md)
-* [Создание пользовательских функций в Excel](custom-functions-overview.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+- [Пересчитываемые значения в функциях](custom-functions-volatile.md)
+- [Создание пользовательских функций в Excel](custom-functions-overview.md)
+- [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

@@ -3,12 +3,12 @@ title: Объектная модель JavaScript для Word в надстро�
 description: Узнайте о ключевых компонентах объектной модели JavaScript, определенной в Word.
 ms.date: 3/17/2022
 ms.localizationpriority: high
-ms.openlocfilehash: d3c2a43e2febbf31fe132dfb5c220bffcc7a1fef
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: 07055ee2c8b16315b5c4efea5f62a85331e48445
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746102"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958960"
 ---
 # <a name="word-javascript-object-model-in-office-add-ins"></a>Объектная модель JavaScript для Word в надстройках Office
 
@@ -44,8 +44,8 @@ ms.locfileid: "63746102"
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)
-- [Создание первой надстройки Word](../quickstarts/word-quickstart.md)
-- [Руководство по надстройкам Word](../tutorials/word-tutorial.md)
-- [Справочник по API JavaScript для Word](/javascript/api/word)
-- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
+* [Обзор API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)
+* [Создание первой надстройки Word](../quickstarts/word-quickstart.md)
+* [Руководство по надстройкам Word](../tutorials/word-tutorial.md)
+* [Справочник по API JavaScript для Word](/javascript/api/word)
+* [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
