@@ -3,12 +3,12 @@ title: Отладка надстроек Office
 description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки.
 ms.date: 07/11/2022
 ms.localizationpriority: high
-ms.openlocfilehash: e8f4270a133e068333703796c10b091bae31ed0a
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: 18738896789e6b3e00734d0f7d4af0ce5cdd7458
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797486"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958764"
 ---
 # <a name="overview-of-debugging-office-add-ins"></a>Обзор отладки надстроек Office
 
@@ -36,7 +36,7 @@ ms.locfileid: "66797486"
 
 В некоторых особых случаях процесс отладки отличается от обычного для заданного сочетания платформы, приложения Office и среды разработки. Если вы выполняете отладку любого из этих особых случаев, воспользуйтесь ссылками в этом разделе, чтобы найти соответствующие рекомендации. В противном случае перейдите к разделу [Общие рекомендации](#general-guidance).
 
-- **Отладка методов `Office.initialize` или `Office.onReady`**: [отладка методов инициализации и onReady](debug-initialize-onready.md).
+- **Отладка функции `Office.initialize` или `Office.onReady`**: [отладка функций инициализации и onReady](debug-initialize-onready.md).
 - **Отладка пользовательской функции Excel в среде выполнения _без общего доступа_**: [отладка пользовательских функций в среде выполнения без общего доступа](../excel/custom-functions-debugging.md).
 - **Отладка [команды функции](../design/add-in-commands.md#types-of-add-in-commands) в среде выполнения _без общего доступа_**: 
     - Надстройки Outlook на компьютере разработчика Windows: [отладка команд функций в надстройках Outlook](../outlook/debug-ui-less.md) 

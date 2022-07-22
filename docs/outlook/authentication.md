@@ -3,12 +3,12 @@ title: Варианты проверки подлинности в надстр�
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
 ms.date: 09/03/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 708b02cabdfafad599171839b29195d49009f37c
-ms.sourcegitcommit: fcb8d5985ca42537808c6e4ebb3bc2427eabe4d4
+ms.openlocfilehash: 17ab09a1f0cdbf7668fa80080e587dd3d800f2c6
+ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65650586"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66958364"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 

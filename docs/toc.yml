@@ -313,7 +313,7 @@ items:
             href: testing/runtime-logging.md
           - name: Отладка команды функции с помощью среды выполнения без общего доступа
             href: testing/debug-function-command.md
-          - name: Отладка методов инициализации и onReady
+          - name: Отладка функций инициализации и onReady
             href: testing/debug-initialize-onready.md
           - name: Ошибки
             items:
