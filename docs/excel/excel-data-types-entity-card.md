@@ -1,16 +1,16 @@
 ---
 title: Карточка значения сущности типов данных API JavaScript для Excel
 description: Узнайте, как использовать карточки значений сущностей с типами данных в надстройке Excel.
-ms.date: 07/14/2022
+ms.date: 07/28/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eb6251467b73af5e592d4cf013e899207944192
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: 3e7f9446c884c7ab24df8d08a221a21fa8ed8156
+ms.sourcegitcommit: 143ab022c9ff6ba65bf20b34b5b3a5836d36744c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889168"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67177656"
 ---
 # <a name="use-cards-with-entity-value-data-types-preview"></a>Использование карточек с типами данных значения сущности (предварительная версия)
 
@@ -76,6 +76,31 @@ const entity: Excel.EntityCellValue = {
 На следующем снимке экрана показана карточка значения сущности, которая использует предыдущий фрагмент кода. На снимке **экрана показаны сведения** об  идентификаторе **продукта, имени** **продукта,** изображении **, количестве** на единицу и ценах за единицу из предыдущего фрагмента кода.
 
 :::image type="content" source="../images/excel-data-types-entity-card-properties.png" alt-text="Снимок экрана: тип данных значения сущности с окном макета карточки. На карточке отображаются имя продукта, идентификатор продукта, количество на единицу и сведения о ценах за единицу.":::
+
+### <a name="property-metadata"></a>Метаданные свойства
+
+Свойства сущности имеют необязательное `propertyMetadata` поле, которое использует объект [`CellValuePropertyMetadata`](/javascript/api/excel/excel.cellvaluepropertymetadata) и предлагает свойства `attribution`и `excludeFrom``sublabel`. В следующем фрагменте кода показано, как добавить свойство `sublabel` `"Unit Price"` из предыдущего фрагмента кода. В этом случае вложенная метка определяет тип валюты.
+
+> [!NOTE]
+> Поле `propertyMetadata` доступно только для типов данных, вложенных в свойства сущности.
+
+```TypeScript
+// This code snippet is an excerpt from the `properties` field of the 
+// preceding `EntityCellValue` snippet. "Unit Price" is a property of 
+// an entity value.
+        "Unit Price": {
+            type: Excel.CellValueType.formattedNumber,
+            basicValue: product.unitPrice,
+            numberFormat: "$* #,##0.00",
+            propertyMetadata: {
+              sublabel: "USD"
+            }
+        },
+```
+
+На следующем снимке экрана показана карточка значения сущности, которая использует предыдущий фрагмент кода, `sublabel` отображая метаданные свойства в долларах **США** рядом со свойством **"Цена** за единицу".
+
+:::image type="content" source="../images/excel-data-types-entity-card-property-metadata.png" alt-text="Снимок экрана: вложенная метка USD рядом с ценой за единицу.":::
 
 ## <a name="card-layout"></a>Макет карточки
 
