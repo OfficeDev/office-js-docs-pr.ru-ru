@@ -1,14 +1,14 @@
 ---
 title: Вызов сообщества по надстройки Microsoft Office
 description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
-ms.date: 07/13/2022
+ms.date: 08/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a96bc5d5b86164d5e7662708c357821792f9f1d
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: ad3d2c1113295c2e441a31317fc3c5ac9886b5e9
+ms.sourcegitcommit: 76b8c79cba707c771ae25df57df14b6445f9b8fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889620"
+ms.lasthandoff: 08/07/2022
+ms.locfileid: "67274157"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
@@ -16,7 +16,8 @@ ms.locfileid: "66889620"
 
 ## <a name="agenda-for-august-10th-call"></a>Повестка дня для звонка 10 августа
 
-Повестка дня за август будет опубликована примерно за неделю до звонка.
+- Демонстрация библиотек OOXML.
+- Интеграция веб-сайта с надстройки Excel.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
@@ -40,7 +41,7 @@ ms.locfileid: "66889620"
 - [10 марта 2021 г.](https://pnp.github.io/blog/office-add-ins-community-call/office-add-ins-community-call-march-10-2021/)
 - [Архивные вызовы сообщества надстроек Office — 10 июня 2020 г. — 10 февраля 2021 г.](https://cdn.graph.office.net/prod/office/Office-Add-ins-Community-Call-Archive.pdf)
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Приглашение в календарь повторяющихся ежемесячных вызовов сообщества](https://aka.ms/officeaddinscommunitycall)
 - [Запросы и вопросы по теме зова сообщества](https://aka.ms/officeaddinsform)

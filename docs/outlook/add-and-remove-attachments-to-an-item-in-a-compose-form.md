@@ -1,14 +1,14 @@
 ---
 title: Добавление и удаление вложений в надстройке Outlook
 description: Используйте различные API вложений для управления файлами или элементами Outlook, прикрепленными к элементу, который создает пользователь.
-ms.date: 08/01/2022
+ms.date: 08/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 23a1ce1a64d308f0ea51152726bf4d99d7a6300b
-ms.sourcegitcommit: 143ab022c9ff6ba65bf20b34b5b3a5836d36744c
+ms.openlocfilehash: af3b44814fd11c5e2006dbb921130c15c7535385
+ms.sourcegitcommit: 76b8c79cba707c771ae25df57df14b6445f9b8fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67177688"
+ms.lasthandoff: 08/07/2022
+ms.locfileid: "67274171"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме создания в Outlook
 
@@ -79,17 +79,17 @@ function write(message){
 }
 ```
 
-Чтобы добавить встроенное изображение base64 в текст создаваемого сообщения, `Office.context.mailbox.item.body.getAsync` необходимо сначала получить текущий текст сообщения с помощью метода перед вставкой изображения с помощью `addFileAttachmentFromBase64Async` метода. В противном случае изображение не будет отображаться в сообщении после вставки. Инструкции см. в следующем примере JavaScript, который добавляет встроенный образ base64 в начало текста сообщения.
+Чтобы добавить встроенное изображение base64 в текст создаваемого сообщения или встречи, `Office.context.mailbox.item.body.getAsync` `addFileAttachmentFromBase64Async` необходимо сначала получить текущий текст элемента с помощью метода перед вставкой изображения с помощью метода. В противном случае изображение не будет отображаться в теле после вставки. Инструкции см. в следующем примере JavaScript, который добавляет встроенный образ base64 в начало текста элемента.
 
 ```js
 const mailItem = Office.context.mailbox.item;
 const base64String =
   "iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN0S+bUAAAAMdFJOUwAQIDBAUI+fr7/P7yEupu8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVGhD7dfLdoMwDEVR6Cspzf9/b20QYOthS5Zn0Z2kVdY6O2WULrFYLBaLxd5ur4mDZD14b8ogWS/dtxV+dmx9ysA2QUj9TQRWv5D7HyKwuIW9n0vc8tkpHP0W4BOg3wQ8wtlvA+PC1e8Ao8Ld7wFjQtHvAiNC2e8DdqHqKwCrUPc1gE1AfRVgEXBfB+gF0lcCWoH2tYBOYPpqQCNwfT3QF9i+AegJfN8CtAWhbwJagtS3AbIg9o2AJMh9M5C+SVGBvx6zAfmT0r+Bv8JMwP4kyFPir+cswF5KL3WLv14zAFBCLf56Tw9cparFX4upgaJUtPhrOS1QlY5W+vWTXrGgBFB/b72ev3/0igUdQPppP/nfowfKUUEFcP207y/yxKmgAYQ+PywoAFOfCH3A2MdCFzD3kdADBvq10AGG+pXQBgb7pdAEhvuF0AIc/VtoAK7+JciAs38KIuDugyAC/v4hiMCE/i7IwLRBsh68N2WQjMVisVgs9i5bln8LGScNcCrONQAAAABJRU5ErkJggg==";
 
-// Get the current body of the message.
+// Get the current body of the message or appointment.
 mailItem.body.getAsync(Office.CoercionType.Html, (bodyResult) => {
   if (bodyResult.status === Office.AsyncResultStatus.Succeeded) {
-    // Insert the base64 image to the beginning of the message body.
+    // Insert the base64 image to the beginning of the body.
     const options = { isInline: true, asyncContext: bodyResult.value };
     mailItem.addFileAttachmentFromBase64Async(base64String, "sample.png", options, (attachResult) => {
       if (attachResult.status === Office.AsyncResultStatus.Succeeded) {
@@ -97,7 +97,7 @@ mailItem.body.getAsync(Office.CoercionType.Html, (bodyResult) => {
         body = body.replace("<p class=MsoNormal>", `<p class=MsoNormal><img src="cid:sample.png">`);
         mailItem.body.setAsync(body, { coercionType: Office.CoercionType.Html }, (setResult) => {
           if (setResult.status === Office.AsyncResultStatus.Succeeded) {
-            console.log("Inline base64 image added to message.");
+            console.log("Inline base64 image added to the body.");
           } else {
             console.log(setResult.error.message);
           }
