@@ -3,12 +3,12 @@ title: Отладка функций инициализации и onReady
 description: Узнайте, как выполнять отладку функций Office.initialize и Office.onReady.
 ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d26c0f2686477f74fbe65550b7d35cc69e7be71
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 4dca551d8a016e7aad16cfdc02590f0a51455852
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958848"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423253"
 ---
 # <a name="debug-the-initialize-and-onready-functions"></a>Отладка функций инициализации и onReady
 
@@ -26,3 +26,7 @@ ms.locfileid: "66958848"
 
 > [!TIP]
 > Дополнительные сведения см. в разделе ["Отладка надстроек" Office в Интернете](debug-add-ins-in-office-online.md).
+
+## <a name="see-also"></a>См. также
+
+- [Среды выполнения в надстройки Office](runtimes.md)

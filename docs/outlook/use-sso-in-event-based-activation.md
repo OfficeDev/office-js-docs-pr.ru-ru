@@ -1,26 +1,26 @@
 ---
-title: Включение единого входа (SSO) в Outlook надстройки, использующие активацию на основе событий
+title: Включение единого входа (SSO) в надстройки Outlook, использующих активацию на основе событий
 description: Узнайте, как включить единый вход при работе в надстройке активации на основе событий.
 ms.date: 06/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 477ecb8c0ab84ab472763f83e342258998749861
-ms.sourcegitcommit: d8fbe472b35c758753e5d2e4b905a5973e4f7b52
+ms.openlocfilehash: 10fd973c0476878443d7238e8805aa4db9f62953
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2022
-ms.locfileid: "66229731"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423120"
 ---
-# <a name="enable-single-sign-on-sso-in-outlook-add-ins-that-use-event-based-activation"></a>Включение единого входа (SSO) в Outlook надстройки, использующие активацию на основе событий
+# <a name="enable-single-sign-on-sso-in-outlook-add-ins-that-use-event-based-activation"></a>Включение единого входа (SSO) в надстройки Outlook, использующих активацию на основе событий
 
-Если надстройка Outlook использует активацию на основе событий, события выполняются в отдельной среде выполнения JavaScript. После выполнения действий по проверке подлинности пользователя с помощью маркера единого входа в надстройке [Outlook](authenticate-a-user-with-an-sso-token.md) выполните дополнительные действия, описанные в этой статье, чтобы включить единый вход для кода обработки событий. После включения единого входа можно вызвать [API getAccessToken(),](/javascript/api/office-runtime/officeruntime.auth) чтобы получить маркер доступа с удостоверением пользователя.
+Если надстройка Outlook использует активацию на основе событий, события выполняются в [отдельной среде выполнения](../testing/runtimes.md). Выполнив действия по проверке подлинности пользователя с помощью маркера единого входа в надстройке [Outlook](authenticate-a-user-with-an-sso-token.md), выполните дополнительные действия, описанные в этой статье, чтобы включить единый вход для кода обработки событий. После включения единого входа можно вызвать [API getAccessToken(),](/javascript/api/office-runtime/officeruntime.auth) чтобы получить маркер доступа с удостоверением пользователя.
 
 > [!IMPORTANT]
-> Хотя `OfficeRuntime.auth.getAccessToken` и `Office.auth.getAccessToken` выполните те же функции получения маркера доступа, `OfficeRuntime.auth.getAccessToken` мы рекомендуем вызывать надстройку на основе событий. Этот API поддерживается во всех Outlook клиентских версий, поддерживающих активацию на основе событий и единый вход. С другой стороны, `Office.auth.getAccessToken` поддерживается только в Outlook Windows начиная с версии 2111 (сборка 14701.20000).
+> Хотя `OfficeRuntime.auth.getAccessToken` и `Office.auth.getAccessToken` выполните те же функции получения маркера доступа, `OfficeRuntime.auth.getAccessToken` мы рекомендуем вызывать надстройку на основе событий. Этот API поддерживается во всех версиях клиентов Outlook, поддерживающих активацию на основе событий и единый вход. С другой стороны, `Office.auth.getAccessToken` в Outlook для Windows поддерживается только начиная с версии 2111 (сборка 14701.20000).
 
-Для Outlook Windows в манифесте надстройки Outlook вы определяете один файл JavaScript для загрузки для активации на основе событий. Также необходимо указать, Office, что этот файл может поддерживать единый вход. Для этого создайте список всех надстроек и их файлов JavaScript, чтобы предоставить Office через известный универсальный код ресурса (URI).
+Для Outlook в Windows в манифесте надстройки Outlook определяется один файл JavaScript для загрузки для активации на основе событий. Кроме того, необходимо указать в Office, что этот файл может поддерживать единый вход. Для этого создайте список всех надстроек и их файлов JavaScript для предоставления Office через известный универсальный код ресурса (URI).
 
 > [!NOTE]
-> Действия, описанные в этой статье, применяются только при запуске Outlook надстройки на Windows. Это связано с тем Outlook что Windows использует файл JavaScript, а Outlook в Интернете HTML-файл, который может ссылаться на тот же файл JavaScript.
+> Действия, описанные в этой статье, применяются только при запуске надстройки Outlook в Windows. Это связано с тем, что Outlook для Windows использует файл JavaScript, а Outlook в Интернете HTML-файл, который может ссылаться на тот же файл JavaScript.
 
 ## <a name="list-allowed-add-ins-with-a-well-known-uri"></a>Список разрешенных надстроек с известным универсальным кодом ресурса (URI)
 
@@ -44,5 +44,5 @@ ms.locfileid: "66229731"
 
 ## <a name="see-also"></a>См. также
 
-- [Проверка подлинности пользователя с помощью маркера единого входа в Outlook надстройке](authenticate-a-user-with-an-sso-token.md)
+- [Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook](authenticate-a-user-with-an-sso-token.md)
 - [Настройка надстройки Outlook для активации на основе событий](autolaunch.md)

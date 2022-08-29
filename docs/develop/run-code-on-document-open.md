@@ -3,16 +3,16 @@ title: Запуск кода в надстройке Office при открыт�
 description: Узнайте, как выполнять код в надстройке Office, когда открывается документ.
 ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a1c3277a349dc4054da5f089c62331296590021
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: ef580151a5b3289c801f3e872988cbb3474bd8e0
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958441"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422920"
 ---
 # <a name="run-code-in-your-office-add-in-when-the-document-opens"></a>Запуск кода в надстройке Office при открытии документа
 
-[!include[Shared JavaScript runtime requirements](../includes/shared-runtime-requirements-note.md)]
+[!include[Shared runtime requirements](../includes/shared-runtime-requirements-note.md)]
 
 Вы можете настроить надстройку Office для загрузки и выполнения кода сразу после открытия документа. Это полезно, если необходимо зарегистрировать обработчики событий, предварительно загрузить данные для области задач, синхронизировать пользовательский интерфейс или выполнить другие задачи, прежде чем надстройка будет видна.
 
@@ -104,6 +104,7 @@ let behavior = await Office.addin.getStartupBehavior();
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка надстройки Office для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md)
+- [Настройка надстройки Office для использования общей среды выполнения](configure-your-add-in-to-use-a-shared-runtime.md)
 - [Руководство по совместному доступу к данным и событиям между пользовательскими функциями Excel и областью задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)
 - [Работа с событиями при помощи API JavaScript для Excel](../excel/excel-add-ins-events.md)
+- [Среды выполнения в надстройки Office](../testing/runtimes.md)

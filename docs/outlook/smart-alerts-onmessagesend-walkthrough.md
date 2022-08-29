@@ -2,14 +2,14 @@
 title: Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 description: Узнайте, как обрабатывать события при отправке в надстройке Outlook с помощью активации на основе событий.
 ms.topic: article
-ms.date: 06/09/2022
+ms.date: 08/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 00afc7614da18ed90808bd64b72ae0e3e1aab852
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
+ms.openlocfilehash: 5e5c94cc13898ec64dcdedc0afdd627bfeb2323c
+ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660251"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67320653"
 ---
 # <a name="use-smart-alerts-and-the-onmessagesend-and-onappointmentsend-events-in-your-outlook-add-in-preview"></a>Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
 
@@ -18,7 +18,7 @@ ms.locfileid: "66660251"
 В следующем пошаговом руководстве используется `OnMessageSend` событие. К концу этого пошагового руководства у вас будет надстройка, которая запускается каждый раз, когда отправляется сообщение, и проверяет, не забыл ли пользователь добавить документ или рисунок, упомянутые в сообщении электронной почты.
 
 > [!IMPORTANT]
-> События `OnMessageSend` и события `OnAppointmentSend` доступны только в предварительной версии с подпиской Microsoft 365 в Outlook для Windows. Дополнительные сведения см. в разделе ["Предварительный просмотр"](autolaunch.md#how-to-preview). События предварительной версии не должны использоваться в рабочих надстройки.
+> События `OnMessageSend` и события `OnAppointmentSend` доступны только в предварительной версии с подпиской Microsoft 365 в Outlook для Windows и в Интернете. Дополнительные сведения см. в разделе ["Предварительный просмотр"](autolaunch.md#how-to-preview). События предварительной версии не должны использоваться в рабочих надстройки.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -26,7 +26,7 @@ ms.locfileid: "66660251"
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [краткое руководство по Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator), в котором создается проект надстройки с помощью генератора Yeoman для надстроек Office.
+Выполните [краткое руководство по Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator), в котором создается проект надстройки с помощью генератора [Yeoman для надстроек Office](../develop/yeoman-generator-overview.md).
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
@@ -40,7 +40,7 @@ ms.locfileid: "66660251"
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
-      <bt:Sets DefaultMinVersion="1.3">
+      <bt:Sets DefaultMinVersion="1.11">
         <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
@@ -51,7 +51,7 @@ ms.locfileid: "66660251"
           <!-- HTML file including reference to or inline JavaScript event handlers.
                This is used by Outlook on the web and on the new Mac UI. -->
           <Runtime resid="WebViewRuntime.Url">
-            <!-- JavaScript file containing event handlers. This is used by Outlook Desktop. -->
+            <!-- JavaScript file containing event handlers. This is used by Outlook on Windows. -->
             <Override type="javascript" resid="JSRuntime.Url"/>
           </Runtime>
         </Runtimes>
@@ -118,7 +118,7 @@ ms.locfileid: "66660251"
         <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html" />
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
         <bt:Url id="WebViewRuntime.Url" DefaultValue="https://localhost:3000/commands.html" />
-        <!-- Entry needed for Outlook Desktop. -->
+        <!-- Entry needed for Outlook on Windows. -->
         <bt:Url id="JSRuntime.Url" DefaultValue="https://localhost:3000/launchevent.js" />
       </bt:Urls>
       <bt:ShortStrings>
@@ -224,6 +224,16 @@ ms.locfileid: "66660251"
     // 1st parameter: FunctionName of LaunchEvent in the manifest; 2nd parameter: Its implementation in this .js file.
     Office.actions.associate("onMessageSendHandler", onMessageSendHandler);
     ```
+
+## <a name="update-the-commands-html-file"></a>Обновление HTML-файла команд
+
+1. В **папке ./src/commands** **откройтеcommands.html.**
+
+1. Непосредственно перед **закрывающего головного** тега (`</head>`) добавьте запись скрипта для кода JavaScript, обрабатывающего события.
+
+   ```js
+   <script type="text/javascript" src="../launchevent/launchevent.js"></script> 
+   ```
 
 1. Сохраните изменения.
 

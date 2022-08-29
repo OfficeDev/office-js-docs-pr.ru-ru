@@ -3,21 +3,21 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e5deab39ba1d28c4689a622ac9234509dcdba5c
-ms.sourcegitcommit: 76b8c79cba707c771ae25df57df14b6445f9b8fa
+ms.openlocfilehash: c40ff7ccc8a3b88e6e9f7dcd4e107fdb13f99109
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2022
-ms.locfileid: "67274164"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422952"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
-Надстройки Office — это веб-приложения, которые отображаются с помощью iFrame при работе в Office в Интернете. В Office для настольных и мобильных клиентов надстройки Office используют встроенный элемент управления браузером (также называемый веб-представлением). Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и обработчик предоставляются браузером, установленным на компьютере пользователя.
+Надстройки Office — это веб-приложения, которые отображаются с помощью iFrame при запуске в Office в Интернете. В Office для настольных и мобильных клиентов надстройки Office используют встроенный элемент управления браузером (также называемый веб-представлением). Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и обработчик предоставляются браузером, установленным на компьютере пользователя.
 
 Используемый браузер зависит от указанных ниже факторов.
 
 - Операционная система компьютера.
-- Работает ли надстройка в Office в Интернете, Microsoft 365 или бессрочно (также называется "без подписки" или "одновечная покупка") Office 2013 или более поздней версии.
+- Работает ли надстройка в Office в Интернете, Microsoft 365 или бессрочной (также называемой "без подписки" или "одновечная покупка") Office 2013 или более поздней версии.
 - В бессрочной версии Office независимо от того, работает ли надстройка в варианте "потребитель" или "коммерческий" (также называемый "корпоративным" или "LTSC").
 
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "67274164"
 >
 > Некоторые сочетания платформ и версий Office, включая коммерческие бессрочные версии office 2019, по-прежнему используют элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
 >
-> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера.
+> - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете в качестве браузера.
 > - AppSource по-прежнему тестирует сочетания версий платформы *и классических* версий Office, использующих Internet Explorer, однако предупреждение выдано только в том случае, если надстройка не поддерживает Internet Explorer. AppSource не отклоняет надстройку.
 > - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
 >
@@ -42,7 +42,7 @@ ms.locfileid: "67274164"
 
 |ОС|Версия Office|Браузер|
 |:-----|:-----|:-----|
-|любой|Office в Интернете|Браузер, в котором открыт Office.<br>(Обратите внимание, что Office в Интернете не будет открываться в Internet Explorer.<br>Попытка сделать это открывает Office в Интернете в Edge.) |
+|любой|Office в Интернете|Браузер, в котором открыт Office.<br>(Обратите внимание, Office в Интернете не будет открываться в Internet Explorer.<br>Попытка сделать это откроется Office в Интернете Edge.) |
 |Mac|любой|Safari с WKWebView|
 |iOS|любой|Safari с WKWebView|
 |Android|любой|Chrome|
@@ -81,7 +81,7 @@ ms.locfileid: "67274164"
 |ОС|Версия Office|Edge WebView2 (Chromium на основе) установлен?|Браузер|
 |:-----|:-----|:-----|:-----|
 |Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
-|Windows 8.1<br>Windows 10 ver.&nbsp;<&nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
+|Windows 8.1,<br>Windows 10 ver.&nbsp;<&nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;<&nbsp; 16.0.11629<sup>2</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.11629&nbsp;_И_&nbsp;<&nbsp;16.0.13530.20424 <sup>2</sup>| Всё равно|Microsoft Edge<sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Окно 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.20424<sup>2</sup>| Нет |Microsoft Edge<sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
@@ -142,3 +142,4 @@ Internet Explorer 11 не поддерживает версии JavaScript, бо
 ## <a name="see-also"></a>См. также
 
 - [Требования для запуска надстроек Office](requirements-for-running-office-add-ins.md)
+- [Среды выполнения в надстройки Office](../testing/runtimes.md)

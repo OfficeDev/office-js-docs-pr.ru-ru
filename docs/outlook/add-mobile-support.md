@@ -1,18 +1,18 @@
 ---
 title: Добавление поддержки мобильных устройств в надстройку Outlook
-description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
-ms.date: 07/16/2021
+description: Узнайте, как добавить поддержку Outlook Mobile, в том числе обновить манифест надстройки и при необходимости изменить код для мобильных сценариев.
+ms.date: 04/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e99c862d4cd63590a86c757bf2b720c096826a9
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
+ms.openlocfilehash: 50f1613e83d9b23178714cfb3da8110a4c561b05
+ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496973"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67318881"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
-Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к той же функциональности (с некоторыми ограничениями[), что](#code-considerations) у них уже есть в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
+Использование команд надстроек в Outlook Mobile позволяет пользователям получать доступ к тем же функциям (с некоторыми ограничениями[), которые](#code-considerations) у них уже есть в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 
 ## <a name="updating-the-manifest"></a>Обновление манифеста
 
@@ -72,7 +72,7 @@ ms.locfileid: "64496973"
 
 Метод [Office.context.mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) не поддерживается в Outlook Mobile. По мере возможности надстройки должны отдавать предпочтение данным из API Office.js. Если надстройкам требуются сведения, которые не предоставляет API Office.js, то для доступа к почтовому ящику пользователя следует использовать [интерфейсы REST API Outlook](/outlook/rest/).
 
-Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods), которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties), которое можно использовать для поиска конечной точки API REST для пользователя.
+В наборе обязательных элементов почтового ящика 1.5 представлена новая версия [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) , которая может запрашивать маркер доступа, совместимый с REST API, и новое свойство [Office.context.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties) , которое можно использовать для поиска конечной точки REST API для пользователя.
 
 ### <a name="pinch-zoom"></a>Масштабирование жестами
 
@@ -84,11 +84,14 @@ ms.locfileid: "64496973"
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 
-В настоящее время надстройки в Outlook Mobile поддерживают активацию только при чтении сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний в Интернете можно активировать в режиме Организатор встречи. Дополнительные данные об этом исключении (включая доступные API) см. в Outlook мобильной надстройки для поставщика [онлайн-собраний](online-meeting.md#available-apis).
+В настоящее время надстройки в Outlook Mobile поддерживают активацию только при чтении сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако существует два исключения:
+
+1. Встроенные надстройки поставщика собраний по сети можно активировать в режиме организатора встреч. Дополнительные сведения об этом исключении (включая доступные API) см. в статье "Создание мобильной надстройки [Outlook для поставщика онлайн-собраний"](online-meeting.md#available-apis).
+1. Надстройки, которые регистрируются примечаниями к встречам и другими сведениями об управлении отношениями с клиентами (CRM) или службах создания заметок, можно активировать в режиме участника встречи. Дополнительные сведения об этом исключении (включая доступные API) см. в заметках о встрече журнала для внешнего приложения в [мобильных](mobile-log-appointments.md#available-apis) надстройки Outlook.
 
 ### <a name="unsupported-apis"></a>Неподдерживаемые интерфейсы API
 
-API, введенные в наборе требований 1.6 или более поздней, не поддерживаются Outlook Mobile. Следующие API из предыдущих наборов требований также не поддерживаются.
+API, представленные в наборе обязательных элементов 1.6 или более поздней версии, не поддерживаются Outlook Mobile. Следующие API из предыдущих наборов обязательных элементов также не поддерживаются.
 
 - [Office.context.officeTheme](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context#officetheme-officetheme)
 - [Office.context.mailbox.ewsUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties)

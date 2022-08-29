@@ -5,12 +5,12 @@ ms.date: 08/04/2021
 ms.topic: overview
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 3eb87c0f2a40dd7650582bb564710aefe43ede0f
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
-ms.translationtype: HT
+ms.openlocfilehash: 12740615215913b0201426f929dbcb803c866648
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660272"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422763"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -36,7 +36,7 @@ function sphereVolume(radius) {
 ```
 
 > [!TIP]
-> Если надстройка пользовательской функции использует область задач или кнопку ленты (помимо выполнения кода пользовательской функции), вам потребуется настроить общую среду выполнения JavaScript. Дополнительные сведения см. в статье [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+> Если надстройка настраиваемой функции будет использовать область задач или кнопку ленты, помимо выполнения пользовательского кода функции, необходимо настроить общую [среду выполнения](../testing/runtimes.md#shared-runtime). Дополнительные сведения см. в статье ["Настройка надстройки Office для использования общей среды выполнения"](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
@@ -76,7 +76,7 @@ function add(first, second){
 - Использует уникальные для манифеста пользовательских функций элементы **\<ExtensionPoint\>** и **\<Resources\>**. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
 - Указывает, какую среду выполнения использовать для вашей пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если нет особой потребности в использовании другой среды, поскольку общая позволяет делиться данными между функциями и областью задач.
 
-Если для создания файлов используется [генератор Yeoman для надстроек Office](../develop/yeoman-generator-overview.md), рекомендуется настроить манифест для использования общей среды выполнения, так как это не является значением по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+Если вы используете генератор [Yeoman](../develop/yeoman-generator-overview.md) для надстроек Office для создания файлов, рекомендуем настроить манифест для использования общей среды выполнения, так как это не используется по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в разделе "Настройка надстройки [Excel для использования общей среды выполнения"](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
 Полный рабочий манифест из примера надстройки можно просмотреть в [одном из репозиториев Github для примеров надстроек Office](https://github.com/OfficeDev/Office-Add-in-samples/blob/main/Samples/excel-shared-runtime-global-state/manifest.xml).
 
@@ -96,8 +96,9 @@ Excel для Интернета и Windows, подключенный к подп
 
 ## <a name="see-also"></a>См. также
 
-* [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
-* [Наборы обязательных элементов пользовательских функций](/javascript/api/requirement-sets/excel/custom-functions-requirement-sets)
-* [Правила именования пользовательских функций](custom-functions-naming.md)
-* [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
-* [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
+- [Наборы обязательных элементов пользовательских функций](/javascript/api/requirement-sets/excel/custom-functions-requirement-sets)
+- [Правила именования пользовательских функций](custom-functions-naming.md)
+- [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
+- [Настройка надстройки Office для использования общей среды выполнения](../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+- [Среды выполнения в надстройки Office](../testing/runtimes.md)

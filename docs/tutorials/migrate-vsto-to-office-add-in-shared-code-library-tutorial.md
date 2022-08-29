@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 ms.localizationpriority: high
-ms.openlocfilehash: 2a115e31352cff6a256cb993b33839eb544d77b4
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
-ms.translationtype: HT
+ms.openlocfilehash: c3d73336975b7b544b3eabbf0b83a25df0b2962d
+ms.sourcegitcommit: 41b95d8bfd3ad525908ff165bd6c9318e1f0f792
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66959058"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67364672"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -63,10 +63,6 @@ ms.locfileid: "66959058"
 1. Скачайте решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/VSTO-shared-code-migration) в рабочую папку на своем компьютере.
 1. Запустите Visual Studio 2019 и откройте решение **/start/Cell-Analyzer.sln**.
 1. В меню **Отладка** выберите команду **Начать отладку**.
-1. В **обозревателе решений** щелкните правой кнопкой мыши проект **Cell-Analyzer** и выберите пункт **Свойства**.
-1. В свойствах выберите категорию **Подписывание**.
-1. Установите флажок **Подписать манифесты ClickOnce** и нажмите кнопку **Создать тестовый сертификат**.
-1. В диалоговом окне **Создание тестового сертификата** введите и подтвердите пароль. Затем нажмите кнопку **ОК**.
 
 Надстройка является настраиваемой областью задач для Excel. Вы можете выделить любую ячейку с текстом и нажать кнопку **Показать Юникод**. В разделе **Результат** надстройка отобразит список всех символов в тексте вместе с соответствующим номером Юникода.
 

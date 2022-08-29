@@ -3,12 +3,12 @@ title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
 ms.date: 07/05/2022
 ms.localizationpriority: high
-ms.openlocfilehash: a85c3e5cf4bf1a22ac3e6fe440514e19d80b2448
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
-ms.translationtype: HT
+ms.openlocfilehash: 30a548e9d831952e372d044257f520130882848c
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659677"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423064"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -36,8 +36,8 @@ ms.locfileid: "66659677"
 - **Команды области задач**: кнопка или элемент меню открывает панель задач надстроек. Этот тип команды надстройки добавляется с разметкой в манифесте. "Код программной части" команды предоставляется Office.
 - **Команды функций**: кнопка или элемент меню запускает любой произвольный JavaScript. Код почти всегда вызывает API в библиотеке JavaScript для Office, но это не обязательно. Этот тип надстройки обычно не отображает пользовательский интерфейс, кроме самой кнопки или элемента меню. Обратите внимание на следующие сведения о командах функций:
 
-   - Запущенная функция может вызвать метод [displayDialogAsync](/javascript/api/office/office.ui?view=common-js&preserve-view=true#office-office-ui-displaydialogasync-member(1)) для отображения диалогового окна, что является хорошим способом отобразить ошибку, показать прогресс или запросить ввод от пользователя. Если надстройка настроена на использование общей среды выполнения, функция также может вызвать метод [showAsTaskpane](/javascript/api/office/office.addin#office-office-addin-showastaskpane-member(1)).
-   - Среда выполнения JavaScript, в которой выполняется команда функции, является полноценной средой выполнения на основе браузера. Она может отображать HTML и обращаться к Интернету для отправки или получения данных.
+   - Запущенная функция может вызвать метод [displayDialogAsync](/javascript/api/office/office.ui?view=common-js&preserve-view=true#office-office-ui-displaydialogasync-member(1)) для отображения диалогового окна, что является хорошим способом отобразить ошибку, показать прогресс или запросить ввод от пользователя. Если надстройка настроена на использование общей среды [выполнения, функция](../testing/runtimes.md#shared-runtime) также может вызвать [метод showAsTaskpane](/javascript/api/office/office.addin#office-office-addin-showastaskpane-member(1)) .
+   - Среда выполнения, в которой выполняется команда функции, является полной средой выполнения [на основе браузера](../testing/runtimes.md#browser-runtime). Она может отображать HTML и обращаться к Интернету для отправки или получения данных.
 
 ## <a name="command-capabilities"></a>Возможности команд
 

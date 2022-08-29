@@ -3,12 +3,12 @@ title: Создание настраиваемых контекстных вкл
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 23f6c64d1b3f0e95b8dcae6bc36563566acb8b3f
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 09cd7ad6e9c8f4e8370df430a5b79a70d7bf0dd0
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958538"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423057"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемых контекстных вкладок в надстройки Office
 
@@ -55,7 +55,7 @@ ms.locfileid: "66958538"
 
 ## <a name="configure-the-add-in-to-use-a-shared-runtime"></a>Настройка надстройки для использования общей среды выполнения
 
-Чтобы добавить настраиваемые контекстные вкладки, надстройка будет использовать общую среду выполнения. Дополнительные сведения см. в разделе ["Настройка надстройки для использования общей среды выполнения"](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+Чтобы добавить настраиваемые контекстные вкладки, надстройка будет использовать [общую среду выполнения](../testing/runtimes.md#shared-runtime). Дополнительные сведения см. в разделе ["Настройка надстройки для использования общей среды выполнения"](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="define-the-groups-and-controls-that-appear-on-the-tab"></a>Определение групп и элементов управления, отображаемых на вкладке
 
@@ -419,7 +419,7 @@ function myContextChanges() {
 
 > [!IMPORTANT]
 >
-> - Если для `sourceLocation` действия указано значение a, область задач не *использует* общую среду выполнения. Он выполняется в новой среде выполнения JavaScript.
+> - Если для `sourceLocation` действия указано значение a, область задач не *использует* общую среду выполнения. Он выполняется в новой отдельной среде выполнения.
 > - Не более одной области задач могут использовать общую среду выполнения, `ShowTaskpane` поэтому не более одного действия типа могут опустить `sourceLocation` это свойство.
 
 ```json

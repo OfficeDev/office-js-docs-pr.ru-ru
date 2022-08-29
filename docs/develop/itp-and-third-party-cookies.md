@@ -3,16 +3,16 @@ title: Разработка надстройки Office для работы с I
 description: Как работать с ITP и надстройки Office при использовании сторонних файлов cookie
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e2a949045fdb5bff87480d1077e692f5e8b9af6
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: b01051fa39441fddb2453b0bd95a0629ebf3ef65
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889271"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423092"
 ---
 # <a name="develop-your-office-add-in-to-work-with-itp-when-using-third-party-cookies"></a>Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 
-Если надстройке Office требуются сторонние файлы cookie, эти файлы cookie блокируются, если среда выполнения браузера, загрузив надстройку, использует intelligent Tracking Prevention (ITP). Вы можете использовать сторонние файлы cookie для проверки подлинности пользователей или в других сценариях, таких как хранение параметров.
+Если надстройке Office требуются сторонние файлы cookie, эти файлы cookie блокируются, если среда выполнения[](../testing/runtimes.md), загрузив надстройку, использует интеллектуальную предотвращение отслеживания (ITP). Вы можете использовать сторонние файлы cookie для проверки подлинности пользователей или в других сценариях, таких как хранение параметров.
 
 Если надстройка Office и веб-сайт должны полагаться на сторонние файлы cookie, выполните следующие действия для работы с ITP.
 
@@ -58,7 +58,7 @@ if (document.hasStorageAccess) {
 
 В браузере Safari конечные  >  пользователи могут установить флажок  "Запретить межсайтовое отслеживание" в разделе "Конфиденциальность предпочтений", чтобы отключить ITP. Однако itP нельзя отключить для внедренного элемента управления WKWebView.
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Обработка ITP в Safari и других браузерах, где сторонние файлы cookie заблокированы](/azure/active-directory/develop/reference-third-party-cookies-spas)
 - [Предотвращение отслеживания в WebKit](https://webkit.org/tracking-prevention/)

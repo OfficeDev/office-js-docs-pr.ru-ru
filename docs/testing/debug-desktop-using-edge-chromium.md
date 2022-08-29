@@ -3,12 +3,12 @@ title: Отладка настроек в Windows с использование�
 description: Узнайте, как отлаживать надстройки Office, использующие Microsoft Edge WebView2 (на базе Chromium), в VS Code.
 ms.date: 02/18/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 10c65ef26e59433e1215daa4b7a49b17413e102d
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
-ms.translationtype: HT
+ms.openlocfilehash: 58c676ada092ff31737da4b257bbd6e5e158c0dc
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66959079"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423302"
 ---
 # <a name="debug-add-ins-on-windows-using-visual-studio-code-and-microsoft-edge-webview2-chromium-based"></a>Отладка настроек в Windows с использованием Visual Studio Code и Microsoft Edge WebView2 (на основе Chromium)
 
@@ -145,3 +145,4 @@ ms.locfileid: "66959079"
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
 - [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
 - [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)
+- [Среды выполнения в надстройки Office](runtimes.md)

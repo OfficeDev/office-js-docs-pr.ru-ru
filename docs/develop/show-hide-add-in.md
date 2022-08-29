@@ -1,18 +1,18 @@
 ---
 title: Отображение и скрытие области задач надстройки Office
 description: Узнайте, как программно скрыть или отобразить пользовательский интерфейс надстройки во время непрерывной работы.
-ms.date: 07/18/2022
+ms.date: 08/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 001e77553bf6e1a0eda91c9459885ccd46de6f47
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 8122282414fcc9472fc300acd07da354d5a282f0
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958610"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422889"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
-[!include[Shared JavaScript runtime requirements](../includes/shared-runtime-requirements-note.md)]
+[!include[Shared runtime requirements](../includes/shared-runtime-requirements-note.md)]
 
 Вы можете отобразить область задач надстройки Office, вызвав метод `Office.addin.showAsTaskpane()` .
 
@@ -47,7 +47,7 @@ function onCurrentQuarterDeactivated() {
 
 ## <a name="configure-your-add-in-to-use-the-shared-runtime"></a>Настройка надстройки для использования общей среды выполнения
 
-Для использования этих `showAsTaskpane()` методов `hide()` надстройка должна использовать общую среду выполнения. Дополнительные сведения см. в разделе ["Настройка надстройки Office для использования общей среды выполнения"](configure-your-add-in-to-use-a-shared-runtime.md).
+Для использования этих `showAsTaskpane()` методов `hide()` надстройка должна использовать [общую среду выполнения](../testing/runtimes.md#shared-runtime). Дополнительные сведения см. в разделе ["Настройка надстройки Office для использования общей среды выполнения"](configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="preservation-of-state-and-event-listeners"></a>Сохранение состояния и прослушивателей событий
 
@@ -69,7 +69,7 @@ function onCurrentQuarterDeactivated() {
 
 ```javascript
 Office.addin.onVisibilityModeChanged(function(args) {
-    if (args.visibilityMode = "Taskpane"); {
+    if (args.visibilityMode == "Taskpane") {
         // Code that runs whenever the task pane is made visible.
         // For example, an Excel.run() that loads the names of
         // all worksheets and passes them to the task pane UI.
@@ -82,7 +82,7 @@ Office.addin.onVisibilityModeChanged(function(args) {
 ```javascript
 const removeVisibilityModeHandler =
     Office.addin.onVisibilityModeChanged(function(args) {
-        if (args.visibilityMode = "Taskpane"); {
+        if (args.visibilityMode == "Taskpane") {
             // Code that runs whenever the task pane is made visible.
         }
     });
@@ -99,7 +99,7 @@ removeVisibilityModeHandler();
 // the returned deregister handler to removeVisibilityModeHandler.
 const removeVisibilityModeHandler =
     await Office.addin.onVisibilityModeChanged(function(args) {
-        if (args.visibilityMode = "Taskpane"); {
+        if (args.visibilityMode == "Taskpane") {
             // Code that runs whenever the task pane is made visible.
         }
     });
@@ -115,5 +115,5 @@ await removeVisibilityModeHandler();
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка надстройки Office для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md)
+- [Настройка надстройки Office для использования общей среды выполнения](configure-your-add-in-to-use-a-shared-runtime.md)
 - [Запуск кода в надстройке Office при открытии документа](run-code-on-document-open.md)

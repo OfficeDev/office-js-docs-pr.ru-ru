@@ -3,12 +3,12 @@ title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
 ms.date: 06/10/2022
 localization_priority: high
-ms.openlocfilehash: 9accbb7e0e5297af3dd4481b5f239af2710d601f
-ms.sourcegitcommit: 4f19f645c6c1e85b16014a342e5058989fe9a3d2
-ms.translationtype: HT
+ms.openlocfilehash: 16a1f92992c397772559468c27033aa58f6b6a6d
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091029"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423267"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
@@ -79,7 +79,7 @@ ms.locfileid: "66091029"
 | [Надстройка Office с единым входом на ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе ASP.NET. |
 | [Надстройка Office с единым входом на Node.js](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе Node.js.|
 
-## <a name="shared-javascript-runtime"></a>Общая среда выполнения JavaScript
+## <a name="shared-runtime"></a>Общее время выполнения
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|

@@ -3,12 +3,12 @@ ms.date: 06/09/2022
 description: Устранение распространенных проблем с пользовательскими функциями Excel.
 title: Устранение проблем в пользовательских функциях
 ms.localizationpriority: medium
-ms.openlocfilehash: 89d90b6ee94efac0230933313d2c16b5054dda61
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: a8d6121631c4d913402742f93598d3340956171c
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958561"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423141"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -20,7 +20,7 @@ ms.locfileid: "66958561"
 
 ## <a name="debugging-custom-functions"></a>Отладка пользовательских функций
 
-Сведения об отладке надстроек пользовательских функций, использующих общую среду выполнения, см. в разделе "Настройка надстройки Office для использования общей среды выполнения [JavaScript: отладка"](../develop/configure-your-add-in-to-use-a-shared-runtime.md#debug).
+Сведения об отладке надстроек пользовательских функций [, использующих](../testing/runtimes.md#shared-runtime) общую среду выполнения, см. в разделе "Настройка надстройки Office для использования общей среды выполнения [: отладка"](../develop/configure-your-add-in-to-use-a-shared-runtime.md#debug).
 
 Сведения об отладке надстроек пользовательских функций, которые не используют общую среду выполнения, см. в разделе "Отладка [пользовательских функций"](custom-functions-debugging.md).
 

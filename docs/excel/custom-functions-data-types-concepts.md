@@ -5,12 +5,12 @@ ms.date: 12/27/2021
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 393777730a6f4889d7d053382fd885de3714a4d9
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
-ms.translationtype: HT
+ms.openlocfilehash: 361be486ee45cae87b5cd66e2099dc939418a491
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744357"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422875"
 ---
 # <a name="use-data-types-with-custom-functions-in-excel-preview"></a>Используйте типы данных в пользовательских функциях Excel (предварительная версия)
 
@@ -99,4 +99,4 @@ function getEntityAttribute(value, attribute) {
 
 * [Обзор типов данных в надстройках Excel](excel-data-types-overview.md)
 * [Основные понятия, связанные с типами данных Excel](excel-data-types-concepts.md)
-* [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+* [Настройка надстройки Office для использования общей среды выполнения](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

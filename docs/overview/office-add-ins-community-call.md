@@ -1,23 +1,22 @@
 ---
 title: Вызов сообщества по надстройки Microsoft Office
 description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
-ms.date: 08/04/2022
+ms.date: 08/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ad3d2c1113295c2e441a31317fc3c5ac9886b5e9
-ms.sourcegitcommit: 76b8c79cba707c771ae25df57df14b6445f9b8fa
+ms.openlocfilehash: 4e69bf49c188d0ff9920f00bd33a38f78fc78556
+ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2022
-ms.locfileid: "67274157"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67318874"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
 Вызов сообщества надстроек Microsoft Office — это ежемесячный звонок, в котором вы можете узнать больше о новых функциях, методиках разработки и дополнительных сведениях о создании надстроек Office. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по тихоокеанскому времени. Вы можете скачать приглашение календаря по адресу https://aka.ms/officeaddinscommunitycall.
 
-## <a name="agenda-for-august-10th-call"></a>Повестка дня для звонка 10 августа
+## <a name="agenda-for-september-14th-call"></a>Повестка дня для звонка 14 сентября
 
-- Демонстрация библиотек OOXML.
-- Интеграция веб-сайта с надстройки Excel.
+Повестка дня для сентябрьского звонка будет опубликована примерно за неделю до звонка.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 

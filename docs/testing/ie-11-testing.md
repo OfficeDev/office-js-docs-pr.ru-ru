@@ -1,27 +1,27 @@
 ---
 title: Тестирование Internet Explorer 11
-description: Протестируйте Office надстройки в Internet Explorer 11.
+description: Протестируйте надстройку Office в Internet Explorer 11.
 ms.date: 05/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b8d027d4d583d42aa4efbe29e080afcd17297a74
-ms.sourcegitcommit: fd04b41f513dbe9e623c212c1cbd877ae2285da0
+ms.openlocfilehash: 9ab904a3b086990cb9b10e2f266ddacafb4cba94
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65313220"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423330"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Тестирование надстройки Office в Internet Explorer 11
 
 > [!IMPORTANT]
-> **Internet Explorer по-прежнему используется в Office надстройки**
+> **Internet Explorer по-прежнему используется в надстройки Office**
 >
-> В некоторых сочетаниях платформ и версий Office, включая версии с однофакторной покупкой до Office 2019, по-прежнему используется элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в [браузерах](../concepts/browsers-used-by-office-web-add-ins.md), используемых надстройки Office. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
+> В некоторых сочетаниях платформ и версий Office, включая версии Office 2019 с однофакторной покупкой, по-прежнему используется элемент управления WebView, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в браузерах, используемых надстройки [Office](../concepts/browsers-used-by-office-web-add-ins.md). Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
 >
 > - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете в качестве браузера.
-> - AppSource по-прежнему проверяет комбинации платформы и классических версий Office, использующих Internet Explorer, однако выдано предупреждение только в том случае, если надстройка не поддерживает Internet Explorer; AppSource не отклоняет надстройку. 
+> - AppSource по-прежнему тестирует сочетания версий платформы *и классических* версий Office, использующих Internet Explorer, однако предупреждение выдано только в том случае, если надстройка не поддерживает Internet Explorer. AppSource не отклоняет надстройку.
 > - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
 
-Если вы планируете поддерживать более старые версии Windows и Office, надстройка должна работать в элементе управления встраиваемым браузером, основанным на Internet Explorer 11 (IE11). С помощью командной строки можно переключиться с более современных сред выполнения, используемых надстройки, на среду выполнения Internet Explorer 11 для этого тестирования. Сведения о том, какие версии Windows и Office веб-представления Internet Explorer 11, см. в разделе "Браузеры", используемые Office [надстройки](../concepts/browsers-used-by-office-web-add-ins.md).
+Если вы планируете поддерживать более старые версии Windows и Office, надстройка должна работать в элементе управления встраиваемого браузера, основанном на Internet Explorer 11 (IE11). С помощью командной строки можно переключиться с более современных сред выполнения, используемых надстройки, на среду выполнения Internet Explorer 11 для этого тестирования. Сведения о том, в каких версиях Windows и Office используется элемент управления [веб-представлением](../concepts/browsers-used-by-office-web-add-ins.md) Internet Explorer 11, см. в разделе "Браузеры" надстроек Office.
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если вы хотите использовать синтаксис и функции ECMAScript 2015 или более поздней версии, у вас есть два варианта:
@@ -45,7 +45,7 @@ ms.locfileid: "65313220"
 
 Существует два способа переключения веб-представления Internet Explorer. Вы можете выполнить простую команду в командной строке или установить версию Office, использующую Internet Explorer по умолчанию. Мы рекомендуем использовать первый метод. Но второй вариант следует использовать в следующих сценариях.
 
-- Ваш проект был разработан с Visual Studio IIS. Он не node.js основе.
+- Ваш проект был разработан с помощью Visual Studio и IIS. Он не node.js основе.
 - Вы хотите быть абсолютно надежными в тестировании.
 - Если по какой-либо причине средство командной строки не работает.
 
@@ -59,7 +59,8 @@ ms.locfileid: "65313220"
 
 ## <a name="see-also"></a>См. также
 
-* [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
-* [Загрузка неопубликованных надстроек Office для тестирования](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-* [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
-* [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)
+- [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)
+- [Загрузка неопубликованных надстроек Office для тестирования](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+- [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
+- [Подключение отладчика из области задач](attach-debugger-from-task-pane.md)
+- [Среды выполнения в надстройки Office](runtimes.md)

@@ -3,12 +3,12 @@ title: Использование модели API для определенны
 description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8035a334f3314382f48d6cd796f46188bea9b091
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: 4fc0733806b2b29de37f77ffa2864163cb544f12
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889340"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67422945"
 ---
 # <a name="application-specific-api-model"></a>Модель API для конкретного приложения
 
@@ -45,7 +45,7 @@ Excel.run(function (context) {
 
 ## <a name="request-context"></a>Контекст запроса
 
-Приложение Office и ваша надстройка работают в двух разных процессах. Так как они используют разные среды выполнения, надстройкам требуется объект `RequestContext`, чтобы можно было подключать надстройку к объектам в Office, например к листам, диапазонам, абзацам и таблицам. Этот объект `RequestContext` предоставляется в качестве аргумента при вызове `*.run`.
+Приложение Office и ваша надстройка выполняются в разных процессах. Так как они используют разные среды выполнения, надстройкам требуется объект `RequestContext`, чтобы можно было подключать надстройку к объектам в Office, например к листам, диапазонам, абзацам и таблицам. Этот объект `RequestContext` предоставляется в качестве аргумента при вызове `*.run`.
 
 ## <a name="proxy-objects"></a>Прокси-объекты
 

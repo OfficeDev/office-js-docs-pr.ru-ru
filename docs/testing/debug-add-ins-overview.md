@@ -3,12 +3,12 @@ title: Отладка надстроек Office
 description: Ознакомьтесь с руководством по отладке надстроек Office для среды разработки.
 ms.date: 07/11/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 18738896789e6b3e00734d0f7d4af0ce5cdd7458
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
-ms.translationtype: HT
+ms.openlocfilehash: f23e55b2d3ceb84e32365ffbbcb9efafedfebcfc
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958764"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423274"
 ---
 # <a name="overview-of-debugging-office-add-ins"></a>Обзор отладки надстроек Office
 
@@ -63,7 +63,7 @@ ms.locfileid: "66958764"
     - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
     - [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md)
 
-Сведения об используемой среде выполнения браузера см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
+Сведения о том, какая среда выполнения используется, см. в статье "Браузеры, используемые надстройки [Office](../concepts/browsers-used-by-office-web-add-ins.md) и среды выполнения в надстройки [Office"](runtimes.md).
 
 > [!TIP]
 > [!INCLUDE[Identify the webview through the add-in UI](../includes/identify-webview-in-ui.md)]
@@ -86,3 +86,7 @@ ms.locfileid: "66958764"
 ## <a name="debug-add-ins-in-staging-or-production"></a>Отладка надстроек в промежуточной или рабочей среде
 
 Чтобы отладить надстройку, которая уже находится в промежуточной или рабочей среде, подключите отладчик из пользовательского интерфейса надстройки. Инструкции см. в статье [Подключение отладчика из области задач](attach-debugger-from-task-pane.md).
+
+## <a name="see-also"></a>См. также
+
+- [Среды выполнения в надстройки Office](runtimes.md)

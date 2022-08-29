@@ -3,12 +3,12 @@ title: Вызов API JavaScript для Excel из пользовательск�
 description: Узнайте, какие API JavaScript для Excel можно вызывать из пользовательской функции.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 04edd5104e0def7631352bc315a0c451ae067d98
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: aa22cb007bb4803863c17e0f72876cc58c15b992
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958420"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423190"
 ---
 # <a name="call-excel-javascript-apis-from-a-custom-function"></a>Вызов API JavaScript для Excel из пользовательской функции
 
@@ -18,7 +18,7 @@ ms.locfileid: "66958420"
 - Пользовательская функция задает числовую формат ячейки для возвращаемых значений после вычисления.
 
 > [!IMPORTANT]
-> Чтобы вызвать API JavaScript для Excel из пользовательской функции, необходимо использовать общую среду выполнения JavaScript. Дополнительные сведения см. в статье [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
+> Чтобы вызвать API JavaScript для Excel из пользовательской функции, необходимо использовать общую [среду выполнения](../testing/runtimes.md#shared-runtime). [Дополнительные сведения см](../develop/configure-your-add-in-to-use-a-shared-runtime.md). в статье "Настройка надстройки Office для использования общей среды выполнения".
 
 ## <a name="code-sample"></a>Пример кода
 
@@ -65,7 +65,7 @@ async function getRangeValue(address) {
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Руководство по совместному доступу к данным и событиям между пользовательскими функциями Excel и областью задач](../tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md)
-- [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+- [Настройка надстройки Office для использования общей среды выполнения](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

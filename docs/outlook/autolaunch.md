@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 07/11/2022
+ms.date: 08/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e31b5b305f4128e40ea3274c125e07fcaaa12aa5
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: 2b0991c64bd4075f88a2965f3feacf1f27dc2bad
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797619"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423232"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -18,7 +18,9 @@ ms.locfileid: "66797619"
 К концу этого пошагового руководства у вас будет надстройка, которая запускается каждый раз, когда создается новый элемент и задает тему.
 
 > [!NOTE]
-> Поддержка этой функции реализована в [наборе обязательных элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10). См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была реализована в наборе обязательных [элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь поддерживаются в наборе обязательных элементов [1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11). См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+>
+> Активация на основе событий не поддерживается в Outlook для iOS или Android.
 
 ## <a name="supported-events"></a>Поддерживаемые события
 
@@ -38,8 +40,10 @@ ms.locfileid: "66797619"
 |`OnAppointmentTimeChanged`|При изменении даты и времени при создании встречи.<br><br>Объект данных для конкретного события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 |`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторе при создании встречи. При изменении даты и времени `OnAppointmentTimeChanged` событие также будет срабатывать.<br><br>Объект данных для конкретного события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 |`OnInfoBarDismissClicked`|При закрытии уведомления при создании сообщения или элемента встречи. Уведомление будет получать только надстройка, которая добавила уведомление.<br><br>Объект данных для конкретного события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnMessageSend`|При отправке элемента сообщения. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup>|
-|`OnAppointmentSend`|При отправке элемента встречи. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup>|
+|`OnMessageSend`|При отправке элемента сообщения. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentSend`|При отправке элемента встречи. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnMessageCompose`|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentOrganizer`|При создании новой встречи или изменении существующей.|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 
 > [!NOTE]
 > <sup>Для</sup> работы надстроек на основе событий в Outlook для Windows требуется как минимум Windows 10 версии 1903 (сборка 18362) или Windows Server 2019 версии 1903.
@@ -54,9 +58,9 @@ ms.locfileid: "66797619"
   - [Настройте целевой выпуск в клиенте Microsoft 365.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)
   - Ссылка на **бета-версию** библиотеки в CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`.
 - Для Outlook в новом пользовательском интерфейсе Mac:
-  - Минимальная требуемая сборка — 16.54 (21101001). Присоединитесь [к программе Office За кулисами и](https://insider.office.com/join/Mac) выберите **бета-канал** для доступа к бета-сборкам Office.
+  - Минимальная требуемая сборка — 16.54 (21101001). Присоединяйтесь [к программе предварительной](https://insider.office.com/join/Mac) оценки Office и выберите **бета-канал** для доступа к бета-сборкам Office.
 - Для Outlook в Windows:
-  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединитесь [к программе Office За кулисами и](https://insider.office.com/join/windows) выберите **бета-канал** для доступа к бета-сборкам Office.
+  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединяйтесь [к программе предварительной](https://insider.office.com/join/windows) оценки Office и выберите **бета-канал** для доступа к бета-сборкам Office.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
@@ -76,7 +80,7 @@ ms.locfileid: "66797619"
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
-      <bt:Sets DefaultMinVersion="1.3">
+      <bt:Sets DefaultMinVersion="1.10">
         <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
@@ -87,7 +91,7 @@ ms.locfileid: "66797619"
           <!-- HTML file including reference to or inline JavaScript event handlers.
                This is used by Outlook on the web and Outlook on the new Mac UI. -->
           <Runtime resid="WebViewRuntime.Url">
-            <!-- JavaScript file containing event handlers. This is used by Outlook Desktop. -->
+            <!-- JavaScript file containing event handlers. This is used by Outlook on Windows. -->
             <Override type="javascript" resid="JSRuntime.Url"/>
           </Runtime>
         </Runtimes>
@@ -172,7 +176,7 @@ ms.locfileid: "66797619"
         <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html" />
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
         <bt:Url id="WebViewRuntime.Url" DefaultValue="https://localhost:3000/commands.html" />
-        <!-- Entry needed for Outlook Desktop. -->
+        <!-- Entry needed for Outlook on Windows. -->
         <bt:Url id="JSRuntime.Url" DefaultValue="https://localhost:3000/launchevent.js" />
       </bt:Urls>
       <bt:ShortStrings>
@@ -189,10 +193,12 @@ ms.locfileid: "66797619"
 </VersionOverrides>
 ```
 
-В Outlook для Windows используется файл JavaScript, а в Outlook в Интернете и в новом пользовательском интерфейсе Mac — HTML-файл, который может ссылаться на тот же файл JavaScript. Необходимо предоставить ссылки `Resources` на оба этих файла в узле манифеста, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода `Runtime` в элементе, `Override` а затем в его дочернем элементе укажите расположение файла JavaScript, встроенного или на который ссылаются HTML.
+В Outlook для Windows используется файл JavaScript, а в Outlook в Интернете и в новом пользовательском интерфейсе Mac — HTML-файл, который может ссылаться на тот же файл JavaScript. Необходимо предоставить ссылки `Resources` на оба этих файла в узле манифеста, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода **\<Runtime\>** в элементе, `Override` а затем в его дочернем элементе укажите расположение файла JavaScript, встроенного или на который ссылаются HTML.
 
 > [!TIP]
-> Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).
+> 
+> - Дополнительные сведения о средах выполнения в надстройке см. в разделе ["Среды выполнения" надстроек Office](../testing/runtimes.md).
+> - Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).
 
 ## <a name="implement-event-handling"></a>Реализация обработки событий
 
@@ -321,8 +327,6 @@ ms.locfileid: "66797619"
 
 ![Страница "Интегрированные приложения" на Центр администрирования Microsoft 365, включая действие "Отправить пользовательские приложения".](../images/outlook-deploy-event-based-add-ins.png)
 
-AppSource и магазин Office в приложении: возможность развертывания надстроек на основе событий или обновления существующих надстроек для добавления функции активации на основе событий должна появиться в ближайшее время.
-
 > [!IMPORTANT]
 > Надстройки на основе событий ограничены только развертываниями, управляемыми администратором. Пока пользователи не могут получать надстройки на основе событий из AppSource или магазина Office в приложении. Дополнительные сведения см. в описании [appSource для надстройки Outlook](autolaunch-store-options.md) на основе событий.
 
@@ -356,13 +360,21 @@ AppSource и магазин Office в приложении: возможност
 
 ### <a name="requesting-external-data"></a>Запрос внешних данных
 
-Внешние данные можно запрашивать с помощью API, например [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) , или [С помощью XmlHttpRequest (XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который выполняет HTTP-запросы для взаимодействия с серверами.
+Внешние данные можно запрашивать с помощью API, например [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) , или [С помощью XMLHttpRequest (XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который выполняет HTTP-запросы для взаимодействия с серверами.
 
-Имейте в виду, что при создании XmlHttpRequests необходимо использовать дополнительные меры безопасности[](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), для которых требуется та же политика источника и [простая CORS](https://www.w3.org/TR/cors/).
+Имейте в виду, что при использовании объектов XMLHttpRequest необходимо использовать дополнительные меры безопасности[](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), для которых требуется политика одинакового источника и простая [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общий доступ к ресурсам независимо от источника).
 
-Простая реализация CORS не может использовать файлы cookie и поддерживает только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать заголовок `Content-Type` в простом CORS при условии, что тип контента — `application/x-www-form-urlencoded`или `multipart/form-data``text/plain`.
+[Простая реализация CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS#simple_requests):
 
-Полная поддержка CORS ожидается в ближайшее время.
+- Не может использовать файлы cookie.
+- Поддерживаются только простые методы, такие `GET`как , и `HEAD``POST`.
+- Принимает простые заголовки с именами полей `Accept`или `Accept-Language``Content-Language`.
+- Может использовать , `Content-Type`при условии, что тип контента — `application/x-www-form-urlencoded`, `text/plain`или `multipart/form-data`.
+- Не удается зарегистрировать прослушиватели событий для объекта, возвращаемого .`XMLHttpRequest.upload`
+- Не может использовать объекты `ReadableStream` в запросах.
+
+> [!NOTE]
+> Полная поддержка CORS доступна в Outlook в Интернете, Mac и Windows (начиная с версии 2201, сборка 16.0.14813.10000).
 
 ## <a name="see-also"></a>См. также
 

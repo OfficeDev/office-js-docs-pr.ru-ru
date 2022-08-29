@@ -1,19 +1,19 @@
 ---
-title: Отладка команды функции с не общей средой выполнения
+title: Отладка команды функции с помощью среды выполнения без общего доступа
 description: Узнайте, как выполнять отладку команд функции.
 ms.date: 07/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 943d7ed8ccfedd961eac3fe941c8ef357964ed37
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: d2be148c05f88837610b8563c2e61618d1c37775
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797713"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423204"
 ---
-# <a name="debug-a-function-command-with-a-non-shared-runtime"></a>Отладка команды функции с не общей средой выполнения
+# <a name="debug-a-function-command-with-a-non-shared-runtime"></a>Отладка команды функции с помощью среды выполнения без общего доступа
 
 > [!IMPORTANT]
-> Если ваша надстройка настроена на использование общей среды [выполнения,](../develop/configure-your-add-in-to-use-a-shared-runtime.md) отладка кода за командой функции выполняется так же, как и код за областью задач. См. раздел "Отладка надстроек [Office](debug-add-ins-overview.md)" и обратите внимание, что команда функции в надстройке с  общей средой выполнения не является особым случаем, как описано в этой статье. 
+> Если ваша надстройка настроена на использование общей среды [выполнения,](../develop/configure-your-add-in-to-use-a-shared-runtime.md) отладка кода за командой функции выполняется так же, как и код за областью задач. См. раздел "Отладка надстроек [Office](debug-add-ins-overview.md)" и обратите внимание, что команда функции в надстройке с  общей средой выполнения не является особым случаем, как описано в этой статье.[](runtimes.md#shared-runtime) 
 
 > [!NOTE]
 > В этой статье предполагается, что вы знакомы с [командами функций](../design/add-in-commands.md#types-of-add-in-commands).
@@ -31,3 +31,7 @@ ms.locfileid: "66797713"
 ## <a name="debug-function-commands-in-outlook-add-ins-on-windows"></a>Команды функций отладки в надстройки Outlook в Windows
 
 Если компьютером разработки является Windows, можно выполнить отладку команды функции на рабочем столе Outlook. См [. команды функций отладки в надстройки Outlook](../outlook/debug-ui-less.md).
+
+## <a name="see-also"></a>См. также
+
+- [Среды выполнения в надстройки Office](runtimes.md)

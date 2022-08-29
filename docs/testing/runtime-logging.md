@@ -3,22 +3,22 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: f6fd5e2c184f9daceab999e371e0abab9146d5fb
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
+ms.openlocfilehash: cf917915ae875f9a3ea27c85e21c87f847eb4542
+ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63745863"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67423309"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
 Вы можете использовать ведение журнала в среде выполнения для отладки манифеста надстройки, а также некоторых ошибок установки. Эта функция может помочь вам определять и устранять проблемы с манифестом, которые не обнаруживаются при проверке схемы XSD, например несоответствие идентификаторов ресурсов. Ведение журнала в среде выполнения особенно полезно для отладки надстроек, которые добавляют команды и пользовательские функции Excel.
 
 > [!NOTE]
-> Функция ведения журнала в настоящее время доступна для Office 2016 или более поздней версии на рабочем столе.
+> Функция ведения журнала среды выполнения в настоящее время доступна для Office 2016 или более поздней версии на настольном компьютере.
 
 > [!IMPORTANT]
-> Ведение журнала в среде выполнения снижает производительность. Включайте его, только когда нужно исправить ошибки в манифесте надстройки.
+> Ведение журнала в среде выполнения сказывается на производительности. Включайте его, только если требуется устранить неполадки, связанные с манифестом надстройки.
 
 ## <a name="use-runtime-logging-from-the-command-line"></a>Использование журнала в среде выполнения с помощью командной строки
 
@@ -71,7 +71,7 @@ ms.locfileid: "63745863"
 
 Ниже показано, как должен выглядеть реестр. Чтобы отключить функцию, удалите из реестра раздел `RuntimeLogging`.
 
-![Снимок экрана редактора реестра с ключом реестра RuntimeLogging.](../images/runtime-logging-registry.png)
+![Снимок экрана: редактор реестра с разделом реестра RuntimeLogging.](../images/runtime-logging-registry.png)
 
 ## <a name="runtime-logging-on-mac"></a>Ведение журнала в среде выполнения на компьютере Mac
 
@@ -85,14 +85,14 @@ ms.locfileid: "63745863"
 
     `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
 
-    Установите `<bundle id>` одно из следующих значений, чтобы включить ведение журнала времени для соответствующего приложения.
+    Задайте `<bundle id>` одно из следующих значений, чтобы включить ведение журнала среды выполнения для соответствующего приложения.
 
     - `com.microsoft.Word`
     - `com.microsoft.Excel`
     - `com.microsoft.Powerpoint`
     - `com.microsoft.Outlook`
 
-В следующем примере включается ведение журнала для Word, а затем открывается файл журнала.
+В следующем примере включается ведение журнала среды выполнения для Word, а затем открывается файл журнала.
 
 ```command&nbsp;line
 defaults write com.microsoft.Word CEFRuntimeLoggingFile -string "runtime_logs.txt"
@@ -108,7 +108,7 @@ open ~/library/Containers/com.microsoft.Word/Data/runtime_logs.txt
 defaults delete <bundle id> CEFRuntimeLoggingFile
 ```
 
-В следующем примере отключается ведение журнала для Word.
+В следующем примере будет отключено ведение журнала среды выполнения для Word.
 
 ```command&nbsp;line
 defaults delete com.microsoft.Word CEFRuntimeLoggingFile
@@ -146,3 +146,4 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
 - [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md) 
+- [Среды выполнения в надстройки Office](runtimes.md)
