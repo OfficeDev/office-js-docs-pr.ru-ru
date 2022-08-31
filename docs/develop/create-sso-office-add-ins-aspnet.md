@@ -3,12 +3,12 @@ title: Создание надстройки Office, в которой испо�
 description: Пошаговое руководство по созданию (или преобразованию) надстройки Office с серверной ASP.NET для использования единого входа (SSO).
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 403730f953a4f53d853a0ecd3b12cd477f7e7176
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: e3ec0982aef53e729a20f58c6be3ddb4d9389849
+ms.sourcegitcommit: eef2064d7966db91f8401372dd255a32d76168c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958834"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67464813"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 
@@ -351,7 +351,7 @@ ms.locfileid: "66958834"
     }
     ```
 
-1. Замените `TODO 6` приведенным ниже кодом.
+1. Замените `TODO 6` следующим кодом:
 
     ```javascript
     if (exceptionMessage) {
@@ -373,7 +373,7 @@ ms.locfileid: "66958834"
     }
     ```
 
-1. Замените `TODO 8` приведенным ниже кодом.
+1. Замените `TODO 8` следующим кодом:
 
     ```javascript
     else {

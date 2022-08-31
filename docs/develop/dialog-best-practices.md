@@ -3,12 +3,12 @@ title: Рекомендации и правила Office dialog API
 description: Содержит правила и рекомендации для API диалогов Office, такие как рекомендации для одностраничного приложения (SPA).
 ms.date: 05/19/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: bdb92ba89faa63a5ca869be869f0a03cce91dba2
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: ca50e637d4b6557f508c682d2c3219f4f7dedca7
+ms.sourcegitcommit: eef2064d7966db91f8401372dd255a32d76168c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958680"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67464841"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -29,7 +29,7 @@ ms.locfileid: "66958680"
   - `Office.context.requirements.isSetSupported` (Дополнительные сведения см. в [разделе "Указание приложений Office и требований К API"](specify-office-hosts-and-api-requirements.md).)
 - Функция [messageParent](/javascript/api/office/office.ui#office-office-ui-messageparent-member(1)) обычно должна вызываться со страницы в том же домене, что и сама надстройка, но это необязательно. Дополнительные сведения см. в разделе [Междоменные сообщения в основной среде выполнения](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime).
 
-## <a name="best-practices"></a>Рекомендации
+## <a name="best-practices"></a>Лучшие методики
 
 ### <a name="avoid-overusing-dialog-boxes"></a>Избегайте чрезмерного использования диалоговых окон
 
@@ -41,7 +41,7 @@ ms.locfileid: "66958680"
 
 ### <a name="handle-pop-up-blockers-with-office-on-the-web"></a>Обработка блокирования всплывающих элементов с помощью Office в Интернете
 
-Попытка отобразить диалоговое окно при использовании Office в Интернете может привести к блоку всплывающих окон браузера. В этом случае Office в Интернете откроет запрос, аналогичный приведенному ниже.
+Попытка отобразить диалоговое окно при использовании Office в Интернете может привести к блоку всплывающих окон браузера. В этом случае Office в Интернете откроет запрос, аналогичный следующему:
 
 ![Снимок экрана: запрос с кратким описанием и кнопками "Разрешить и игнорировать", которые надстройка может создать, чтобы избежать блокирования всплывающих элементов в браузере](../images/dialog-prompt-before-open.png)
 
