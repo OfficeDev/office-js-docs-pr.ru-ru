@@ -337,6 +337,8 @@ items:
             href: develop/usability-testing.md
           - name: Проверка манифеста надстройки
             href: testing/troubleshoot-manifest.md
+          - name: Среды выполнения в надстройки Office
+            href: testing/runtimes.md
       - name: Публикация
         items:
           - name: Публикация надстроек Office
@@ -638,6 +640,8 @@ items:
             href: outlook/outlook-mobile-addins.md
           - name: Создание надстройки для собраний по сети
             href: outlook/online-meeting.md
+          - name: Запись заметок о встрече на мобильных устройствах
+            href: outlook/mobile-log-appointments.md
           - name: 'Надстройки, поддерживающие проверку сообщений при отправке'
             href: outlook/outlook-on-send-addins.md
           - name: Добавление при отправке
