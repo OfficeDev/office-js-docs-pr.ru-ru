@@ -1,17 +1,17 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 07/11/2022
+ms.date: 09/01/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 4efb3f29ee3791b78c45db01ca53f8c48c17b752
-ms.sourcegitcommit: eef2064d7966db91f8401372dd255a32d76168c2
+ms.openlocfilehash: a5f742e47d698b215a999b966c424819e182ea49
+ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67464778"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616023"
 ---
 # <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
 
@@ -21,10 +21,11 @@ ms.locfileid: "67464778"
 
 ## <a name="the-valuesasjson-property"></a>Свойство `valuesAsJson`.
 
-Свойство `valuesAsJson` является неотъемлемой частью создания типов данных в Excel. Это свойство является расширением свойств `values`, таких как [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member). Оба свойства `values` и `valuesAsJson` используются для доступа к значению в ячейке, но свойство `values` возвращает только один из четырех основных типов: строка, число, логическое значение или ошибка (в виде строки). Напротив, свойство `valuesAsJson` возвращает расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
+Свойство `valuesAsJson` (или единственное для `valueAsJson` [NamedItem](/javascript/api/excel/excel.nameditem)) является неотъемлемой частью создания типов данных в Excel. Это свойство является расширением свойств `values`, таких как [Range.values](/javascript/api/excel/excel.range#excel-excel-range-values-member). Оба свойства `values` и `valuesAsJson` используются для доступа к значению в ячейке, но свойство `values` возвращает только один из четырех основных типов: строка, число, логическое значение или ошибка (в виде строки). Напротив, свойство `valuesAsJson` возвращает расширенную информацию об этих четырех основных типах, а также такие типы данных, как форматированное число, сущность и веб-изображение.
 
 Следующие объекты предлагают свойство `valuesAsJson`.
 
+- [NamedItem](/javascript/api/excel/excel.nameditem) (как `valueAsJson`)
 - [NamedItemArrayValues](/javascript/api/excel/excel.nameditemarrayvalues)
 - [Range](/javascript/api/excel/excel.range)
 - [RangeView](/javascript/api/excel/excel.rangeview)

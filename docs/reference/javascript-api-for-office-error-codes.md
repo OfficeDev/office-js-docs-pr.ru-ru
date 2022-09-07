@@ -1,14 +1,14 @@
 ---
 title: Коды ошибок общего API для Office
 description: В этой статье описаны сообщения об ошибках, которые могут возникнуть при использовании общего API Office.
-ms.date: 02/08/2022
+ms.date: 09/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a6161c658bad35be8f7ca5193a1b03889f186d12
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 024d4ef9a2f83305a42cc1844e90f7b40ffbb86a
+ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66959065"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67615995"
 ---
 # <a name="office-common-api-error-codes"></a>Коды ошибок общего API для Office
 
@@ -93,6 +93,7 @@ ms.locfileid: "66959065"
 |12006|||Диалоговое окно закрыто. Скорее всего, пользователь нажал кнопку **X**. Появляется в диалоговом окне и запускает событие `DialogEventReceived` на странице ведущего приложения.|
 |12007|||Диалоговое окно уже открыто из этого главного окна. Для окна ведущего приложения (например, области задач) невозможно открыть сразу несколько диалоговых окон. Появляется при вызове `displayDialogAsync`.|
 |12009|||Пользователь проигнорировал диалоговое окно. Эта ошибка может возникнуть в веб-версиях Office, где пользователи могут не разрешить надстройке открыть диалоговое окно. Появляется при вызове `displayDialogAsync`.|
+|12011|||Браузер пользователя настраивается таким образом, чтобы блокировать всплывающие окна. Эта ошибка может возникнуть в Office в Интернете, если браузер safari настроен на блокировку всплывающих окон или браузер является устаревшим браузером Edge, а домен надстройки находится в другой зоне безопасности от домена, который диалоговое окно пытается открыть. Появляется при вызове `displayDialogAsync`.|
 |13nnn|||См [. сведения о причинах и обработке ошибок в getAccessToken](../develop/troubleshoot-sso-in-office-add-ins.md#causes-and-handling-of-errors-from-getaccesstoken).|
 
 ## <a name="binding-creation-error-conditions"></a>Условия ошибок создания привязки

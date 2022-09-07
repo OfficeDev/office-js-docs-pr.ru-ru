@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок и событий в диалоговом окне "Office"
 description: Узнайте, как перехватывать и обрабатывать ошибки при открытии и использовании диалогового окна Office.
-ms.date: 07/18/2022
+ms.date: 09/01/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e8eefe4ee868a3cdc52ee8d425271435404bc04
-ms.sourcegitcommit: df7964b6509ee6a807d754fbe895d160bc52c2d3
+ms.openlocfilehash: d3bdae7d4dddcd92a54a46fec0d5854a1a18a0bc
+ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66889459"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616037"
 ---
 # <a name="handle-errors-and-events-in-the-office-dialog-box"></a>Обработка ошибок и событий в диалоговом окне Office
 
@@ -34,6 +34,7 @@ ms.locfileid: "66889459"
 |12005|URL-адрес, передаваемый в метод `displayDialogAsync`, использует протокол HTTP. Необходим протокол HTTPS. (В некоторых версиях Office текст сообщения об ошибке, возвращаемый с кодом 12005, совпадает с текстом 12004.)|
 |<span id="12007">12007</span><!-- The span is needed because office-js-helpers has an error message that links to this table row. -->|Диалоговое окно уже открыто из этого главного окна. Для главного окна, например области задач, невозможно открыть сразу несколько диалоговых окон.|
 |12009|Пользователь проигнорировал диалоговое окно. Эта ошибка может возникнуть в Office в Интернете, когда пользователи могут не разрешать надстройке отображать диалоговое окно. Дополнительные сведения см. в [разделе "Обработка блокаторов](dialog-best-practices.md#handle-pop-up-blockers-with-office-on-the-web) всплывающих элементов с помощью Office в Интернете".|
+|12011| Надстройка работает в Office в Интернете и конфигурация браузера пользователя блокирует всплывающие окна. Чаще всего это происходит, когда браузер является устаревшей версией Edge, а домен надстройки находится в зоне безопасности, которая отличается от домена, который диалоговое окно пытается открыть. Другой сценарий, который вызывает эту ошибку, — браузер Safari и настроенный для блокировки всех всплывающих элементов. Рассмотрите возможность ответа на эту ошибку с запросом на изменение конфигурации браузера или использование другого браузера.|
 
 При `displayDialogAsync` вызове объект [AsyncResult](/javascript/api/office/office.asyncresult) передается в функцию обратного вызова. При успешном вызове открывается диалоговое окно, `value` `AsyncResult` а свойством объекта является [объект Dialog](/javascript/api/office/office.dialog) . Пример этого см. в разделе ["Отправка сведений из диалогового окна на страницу узла"](dialog-api-in-office-add-ins.md#send-information-from-the-dialog-box-to-the-host-page). При сбое `displayDialogAsync` вызова диалоговое окно не создается, `Office.AsyncResultStatus.Failed``status` `AsyncResult` свойство объекта устанавливается в значение и `error` свойство объекта заполняется. Всегда следует предоставлять обратный вызов, который проверяет `status` ошибку и отвечает на нее. Пример сообщения об ошибке независимо от номера кода см. в следующем коде. (Функция `showNotification` , не определенная в этой статье, отображает или регистрирует ошибку. Пример реализации этой функции в надстройке см. в примере [API диалогового окна надстройки Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).)
 
@@ -92,6 +93,6 @@ function processDialogEvent(arg) {
 }
 ```
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 Надстройку с такой обработкой ошибок см. в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).

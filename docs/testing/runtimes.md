@@ -1,14 +1,14 @@
 ---
 title: Среды выполнения в надстройки Office
 description: Сведения о средах выполнения, используемых надстройки Office.
-ms.date: 08/10/2022
+ms.date: 08/29/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3507667aced648a9ca528eea9009b08d473bceb2
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 8d28f6db028d2f4c7036db51ccc5dbcc2144bdf3
+ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423323"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616044"
 ---
 # <a name="runtimes-in-office-add-ins"></a>Среды выполнения в надстройки Office
 
@@ -18,8 +18,8 @@ ms.locfileid: "67423323"
 
 Надстройки Office могут использовать два типа сред выполнения:
 
-- **Среда выполнения только для JavaScript**: подсистема JavaScript, дополненная поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), [Полной CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)совместное использование ресурсов независимо от источника) и [локального хранилища](https://developer.mozilla.org/docs/Web/API/Window/localStorage). 
-- **Среда выполнения браузера**: включает все функции среды выполнения, доступной только для JavaScript, и [](https://developer.mozilla.org/docs/Glossary/Rendering_engine) добавляет обработчик отрисовки, который отображает HTML.
+- Среда выполнения только для **JavaScript**: подсистема JavaScript, дополненная поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), полной [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)совместное использование ресурсов независимо от источника) и клиентского хранилища данных. (Он не поддерживает [локальное хранилище или](https://developer.mozilla.org/docs/Web/API/Window/localStorage) файлы cookie.) 
+- **Среда выполнения браузера**: включает все функции среды выполнения только для JavaScript и добавляет поддержку локального [хранилища, модуля](https://developer.mozilla.org/docs/Web/API/Window/localStorage) подготовки отчетов, который отображает HTML и файлы cookie. [](https://developer.mozilla.org/docs/Glossary/Rendering_engine)
 
 Дополнительные сведения об этих типах см. далее в этой статье в среде выполнения [только для JavaScript](#javascript-only-runtime) и [в среде выполнения Браузера](#browser-runtime).
 
@@ -118,7 +118,7 @@ ms.locfileid: "67423323"
 
 ## <a name="javascript-only-runtime"></a>Среда выполнения только для JavaScript
 
-Среда выполнения только для JavaScript, используемая в надстройки Office, представляет собой изменение среды открытый код, изначально созданной для [React Native.](https://reactnative.dev/) Он содержит подсистему JavaScript, дополненную поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), [полной CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общего доступа к ресурсам независимо от источника) и [локального хранилища](https://developer.mozilla.org/docs/Web/API/Window/localStorage). У него нет обработчика отрисовки и он не поддерживает файлы cookie.
+Среда выполнения только для JavaScript, используемая в надстройки Office, представляет собой изменение среды открытый код, изначально созданной для [React Native.](https://reactnative.dev/) Он содержит подсистему JavaScript, дополненную поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), [Full CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общий доступ к ресурсам независимо от источника) и [OfficeRuntime.storage](/javascript/api/office-runtime/officeruntime.storage). У него нет обработчика отрисовки и он не поддерживает файлы cookie или [локальное хранилище](https://developer.mozilla.org/docs/Web/API/Window/localStorage).
 
 Этот тип среды выполнения используется в задачах На основе событий Outlook только в Office для Windows и в пользовательских функциях  Excel, за исключением случаев, когда пользовательские функции совместно [работают со средой выполнения](#shared-runtime). 
 
