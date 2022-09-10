@@ -1,14 +1,14 @@
 ---
 title: Вызов сообщества по надстройки Microsoft Office
 description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
-ms.date: 09/01/2022
+ms.date: 09/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d7b33a4d1ce69641b6750f15963f4e4695574512
-ms.sourcegitcommit: 2ea81c2bf181c185de9c1508ab8e618f3e396708
+ms.openlocfilehash: 7726bbb6d25fa658183f2207834592ef6fedf8e3
+ms.sourcegitcommit: d10e5dd1ad95678bbe232acba7d3f12796f806cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67633745"
+ms.lasthandoff: 09/10/2022
+ms.locfileid: "67642665"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
@@ -16,7 +16,9 @@ ms.locfileid: "67633745"
 
 ## <a name="agenda-for-september-14th-call"></a>Повестка дня для звонка 14 сентября
 
-Повестка дня для сентябрьского звонка будет опубликована примерно за неделю до звонка.
+- Обновление расширяемости Word.
+- Демонстрация использования Blazor в надстройке Outlook.
+- Обновление взаимодействия с сообществом.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
