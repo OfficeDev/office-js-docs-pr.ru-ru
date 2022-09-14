@@ -93,6 +93,9 @@ items:
               - name: Автоматическое открытие области задач с документом
                 href: develop/automatically-open-a-task-pane-with-a-document.md
                 displayName: manifest
+              - name: Автоматическое открытие области задач при установке надстройки
+                href: develop/automatically-open-on-installation.md
+                displayName: manifest
               - name: Настройка надстройки для использования общей среды выполнения
                 href: develop/configure-your-add-in-to-use-a-shared-runtime.md
               - name: Выполнение кода при открытии документа
@@ -626,7 +629,7 @@ items:
             href: /javascript/api/requirement-sets/outlook/outlook-api-requirement-sets
             displayName: Outlook
           - name: Справочник по API — последний выпуск
-            href: reference/outlook-api-reference-1-11.md
+            href: reference/outlook-api-reference-latest.md
             displayName: Outlook
           - name: Рекомендации по разработке надстроек Outlook
             href: outlook/outlook-addin-design.md

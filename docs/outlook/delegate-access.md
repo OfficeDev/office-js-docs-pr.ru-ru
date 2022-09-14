@@ -1,14 +1,14 @@
 ---
 title: Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 description: Описывается настройка поддержки надстроек для общих папок (например, делегировать доступ) и общим почтовым ящикам.
-ms.date: 07/11/2022
+ms.date: 09/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a01c81dcc1bcae4fa92e2d659c1aa40af4cdac5
-ms.sourcegitcommit: 9fbb656afa1b056cf284bc5d9a094a1749d62c3e
+ms.openlocfilehash: bae8a0f8cd63eed5feea7460e57ecfc212a06d61
+ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66765281"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67674668"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 
@@ -18,15 +18,15 @@ ms.locfileid: "66765281"
 
 В следующей таблице показаны поддерживаемые сочетания клиента и сервера для этой функции, включая минимальное необходимое накопительное обновление, если это применимо. Исключенные сочетания не поддерживаются.
 
-| Клиент | Exchange Online | Локальная среда Exchange 2019<br>(накопительное обновление 1 или более поздней версии) | Локальная версия Exchange 2016<br>(накопительный пакет обновления 6 или более поздней версии) | Локальная версия Exchange 2013 |
+| Client | Exchange Online | Локальная среда Exchange 2019<br>(накопительное обновление 1 или более поздней версии) | Локальная версия Exchange 2016<br>(накопительный пакет обновления 6 или более поздней версии) | Локальная версия Exchange 2013 |
 |---|:---:|:---:|:---:|:---:|
-|Windows:<br>версия 1910 (сборка 12130.20272) или более поздняя|Да|В предварительной версии\*|В предварительной версии\*|В предварительной версии\*|
+|Windows:<br>версия 1910 (сборка 12130.20272) или более поздняя|Да|Да\*|Да\*|Да\*|
 |Mac:<br>сборка 16.47 или более поздняя|Да|Да|Да|Да|
 |Веб-браузер:<br>Современный пользовательский интерфейс Outlook|Да|Неприменимо|Неприменимо|Неприменимо|
 |Веб-браузер:<br>классический пользовательский интерфейс Outlook|Неприменимо|Нет|Нет|Нет|
 
 > [!NOTE]
-> \* Поддержка этой функции в локальной среде Exchange сейчас доступна в предварительной версии начиная с версии 2205 (сборка 15228.10000).
+> \* Поддержка этой функции в локальной среде Exchange доступна начиная с версии 2206 (сборка 15330.20000) для Current Channel и версии 2207 (сборка 15427.20000) для канала Monthly Enterprise Channel.
 
 > [!IMPORTANT]
 > Поддержка этой функции была представлена в наборе обязательных [элементов 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8) (дополнительные сведения см. на клиентах [и платформах](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)). Однако обратите внимание, что матрица поддержки функции является надмножеством наборов обязательных элементов.
@@ -43,7 +43,7 @@ ms.locfileid: "66765281"
 
 #### <a name="shared-mailboxes-preview"></a>Общие почтовые ящики (предварительная версия)
 
-Администраторы exchange Server могут создавать общие почтовые ящики и управлять ими для доступа к наборам пользователей. [Exchange Online](/exchange/collaboration-exo/shared-mailboxes) и [локальные среды Exchange (в предварительной версии)](/exchange/collaboration/shared-mailboxes/create-shared-mailboxes) поддерживаются.
+Администраторы exchange Server могут создавать общие почтовые ящики и управлять ими для доступа к наборам пользователей. [Exchange Online](/exchange/collaboration-exo/shared-mailboxes) [и локальные среды Exchange](/exchange/collaboration/shared-mailboxes/create-shared-mailboxes) поддерживаются.
 
 Функция Exchange Server, известная как "автосопоставка", включена по умолчанию. Это означает, [](/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide&preserve-view=true#add-the-shared-mailbox-to-outlook) что впоследствии общий почтовый ящик должен автоматически отображаться в приложении Outlook пользователя после закрытия и повторного открытия Outlook. Однако если администратор отключил автоматическое сопоставление, пользователь должен выполнить действия, описанные в разделе "Добавление общего почтового ящика в Outlook" статьи "Открытие и использование общего почтового ящика в [Outlook"](https://support.microsoft.com/office/d94a8e9e-21f1-4240-808b-de9c9c088afd).
 

@@ -2,18 +2,18 @@
 title: Отладка надстройки Outlook на основе событий
 description: Узнайте, как выполнить отладку надстройки Outlook, которая реализует активацию на основе событий.
 ms.topic: article
-ms.date: 07/11/2022
+ms.date: 09/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d36a23b34132071077e3eb192e562288befb8a5
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: 9b6a1d9a013b7c8e22632bdd04fb74e06c804a01
+ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797493"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67674700"
 ---
 # <a name="debug-your-event-based-outlook-add-in"></a>Отладка надстройки Outlook на основе событий
 
-В этой статье приводятся рекомендации по отладке при реализации активации на основе [событий в](autolaunch.md) надстройке. Функция активации на основе событий была представлена в наборе обязательных [элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10) , а дополнительные события теперь доступны в предварительной версии. Дополнительные сведения см. в разделе " [Поддерживаемые события"](autolaunch.md#supported-events).
+В этой статье приводятся рекомендации по отладке при реализации активации на основе [событий в](autolaunch.md) надстройке. Функция активации на основе событий была представлена в наборе обязательных элементов [1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь доступны в последующих наборах обязательных элементов. Дополнительные сведения см. в разделе ["Поддерживаемые события"](autolaunch.md#supported-events).
 
 > [!IMPORTANT]
 > Эта возможность отладки поддерживается только в Outlook для Windows с подпиской на Microsoft 365.
@@ -43,10 +43,10 @@ ms.locfileid: "66797493"
 
     [!include[Developer registry key](../includes/developer-registry-key.md)]
 
-1. Запустите рабочий стол Outlook (или перезапустите Outlook, если он уже открыт).
-1. Создайте новое сообщение или встречу. Должно появиться следующее диалоговое окно. Пока *не* взаимодействуйте с диалогом.
+1. Запустите Outlook или перезапустите его, если он уже открыт.
+1. Создайте новое сообщение или встречу. Должно появиться диалоговое окно обработчика событий отладки. Пока *не* взаимодействуйте с диалогом.
 
-    ![Снимок экрана: диалоговое окно обработчика на основе событий отладки.](../images/outlook-win-autolaunch-debug-dialog.png)
+    ![Диалоговое окно обработчика событий отладки в Windows.](../images/outlook-win-autolaunch-debug-dialog.png)
 
 ## <a name="configure-visual-studio-code"></a>Настройка Visual Studio Code
 
@@ -72,18 +72,18 @@ ms.locfileid: "66797493"
     }
     ```
 
-### <a name="other"></a>Other
+### <a name="other"></a>Другое
 
 1. Создайте новую папку с **именем "Отладка** " (возможно, в **папке "Рабочий** стол").
 1. Откройте Visual Studio Code.
 1. Перейдите **в папку "** > **Открыть файл"**, перейдите к только что созданной папке, а затем выберите **"Выбрать папку"**.
-1. На панели действий выберите элемент **"Отладка** " (CTRL+SHIFT+D).
+1. На панели действий выберите "Выполнить **и отладка** " (CTRL+SHIFT+D).
 
-    ![Снимок экрана: значок отладки на панели действий.](../images/vs-code-debug.png)
+    ![Значок запуска и отладки на панели действий.](../images/vs-code-debug.png)
 
 1. Выберите **ссылку на файл launch.json** .
 
-    ![Снимок экрана: ссылка на создание файла launch.json в Visual Studio Code.](../images/vs-code-create-launch.json.png)
+    ![Ссылка, расположенная в параметре запуска и отладки для создания файла launch.json в Visual Studio Code.](../images/vs-code-create-launch.json.png)
 
 1. В **раскрывающемся списке** "Выбор среды" выберите **"Edge: Launch** to create a launch.json file".
 1. Добавьте следующий фрагмент в список конфигураций. Сохраните изменения.
@@ -113,9 +113,9 @@ ms.locfileid: "66797493"
     `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\{[Outlook profile GUID]}\[encoding]\Javascript\[Add-in ID]_[Add-in Version]_[locale]\bundle.js`
 
 1. Поместите точки останова в bundle.js, где нужно остановить отладчик.
-1. В **раскрывающемся списке DEBUG** выберите **имя "Прямая** отладка", а затем нажмите кнопку **"Выполнить"**.
+1. В **раскрывающемся списке DEBUG** **выберите прямую** отладку, а затем щелкните значок **"Начать отладку** ".
 
-    ![Снимок экрана: выбор прямой отладки из параметров конфигурации в раскрывающемся Visual Studio Code отладки.](../images/outlook-win-autolaunch-debug-vsc.png)
+    ![Параметр прямой отладки, выбранный из параметров конфигурации в раскрывающемся Visual Studio Code отладки.](../images/outlook-win-autolaunch-debug-vsc.png)
 
 ## <a name="debug"></a>Отладка
 

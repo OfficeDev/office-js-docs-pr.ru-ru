@@ -3,12 +3,12 @@ title: Отладка надстроек в Office в Интернете
 description: Сведения о том, как тестировать и отлаживать надстройки в Office в Интернете.
 ms.date: 03/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3071509a22f0c563b1202bd29da996f3dbaaf9cc
-ms.sourcegitcommit: eef2064d7966db91f8401372dd255a32d76168c2
+ms.openlocfilehash: b365be937058f818a97dd7a73176a56f76b36098
+ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67464827"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67674628"
 ---
 # <a name="debug-add-ins-in-office-on-the-web"></a>Отладка надстроек в Office в Интернете
 
@@ -23,7 +23,7 @@ ms.locfileid: "67464827"
 
 Для отладки надстройки с помощью Office в Интернете выполните указанные ниже действия.
 
-1. Запустите проект на localhost и перезагрузите его в документ в Office в Интернете. Подробные инструкции по загрузке неопубликованных приложений см. в статье "Загрузка неопубликованных надстроек [Office в Интернете"](sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web-manually).
+1. Запустите проект на localhost и перезагрузите его в документ в Office в Интернете. Подробные инструкции по загрузке неопубликованных приложений см. в статье "Загрузка неопубликованных надстроек Office вручную [в Интернете"](sideload-office-add-ins-for-testing.md#manually-sideload-an-add-in-to-office-on-the-web).
 
 2. Откройте средства разработчика браузера. Обычно это делается с помощью клавиши F12. Откройте средство отладчика и используйте его для задания точек останова и просмотра переменных. Подробные сведения об использовании средства браузера см. в одном из следующих разделов:
 

@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Надстройки, использующие функцию смарт-оповещений, могут быть опубликованы в AppSource только в том случае, если свойству [SendMode](/javascript/api/manifest/launchevent#available-sendmode-options) `SoftBlock` [](../outlook/smart-alerts-onmessagesend-walkthrough.md) `PromptUser` манифеста задано значение или параметр. Если для свойства SendMode надстройки задано значение **SendMode**`Block`, его может развернуть только администратор организации, так как проверка AppSource завершится ошибкой.

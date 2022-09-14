@@ -1,28 +1,28 @@
 ---
-title: Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
+title: Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook
 description: Узнайте, как обрабатывать события при отправке в надстройке Outlook с помощью активации на основе событий.
 ms.topic: article
-ms.date: 08/10/2022
+ms.date: 09/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e5c94cc13898ec64dcdedc0afdd627bfeb2323c
-ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
+ms.openlocfilehash: cabe56d247a009886939f1738b5f135724c40f1d
+ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67320653"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67674640"
 ---
-# <a name="use-smart-alerts-and-the-onmessagesend-and-onappointmentsend-events-in-your-outlook-add-in-preview"></a>Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook (предварительная версия)
+# <a name="use-smart-alerts-and-the-onmessagesend-and-onappointmentsend-events-in-your-outlook-add-in"></a>Использование интеллектуальных оповещений и событий OnMessageSend и OnAppointmentSend в надстройке Outlook
 
 События `OnMessageSend` и `OnAppointmentSend` события используют преимущества интеллектуальных оповещений, что позволяет выполнять логику после того, как пользователь нажмет кнопку **"** Отправить" в сообщении или встрече Outlook. Обработчик событий позволяет предоставить пользователям возможность улучшить свои сообщения электронной почты и приглашения на собрания перед отправкой.
 
 В следующем пошаговом руководстве используется `OnMessageSend` событие. К концу этого пошагового руководства у вас будет надстройка, которая запускается каждый раз, когда отправляется сообщение, и проверяет, не забыл ли пользователь добавить документ или рисунок, упомянутые в сообщении электронной почты.
 
-> [!IMPORTANT]
-> События `OnMessageSend` и события `OnAppointmentSend` доступны только в предварительной версии с подпиской Microsoft 365 в Outlook для Windows и в Интернете. Дополнительные сведения см. в разделе ["Предварительный просмотр"](autolaunch.md#how-to-preview). События предварительной версии не должны использоваться в рабочих надстройки.
+> [!NOTE]
+> Эти `OnMessageSend` события `OnAppointmentSend` появились в [наборе обязательных элементов 1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12). См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets), поддерживающие этот набор обязательных требований.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Это `OnMessageSend` событие доступно с помощью функции активации на основе событий. Чтобы понять, как настроить надстройку для использования этой функции, использовать другие доступные события, настроить предварительный просмотр для этого события, отладку надстройки и т. д., см. статью "Настройка надстройки [Outlook](autolaunch.md) для активации на основе событий".
+Это `OnMessageSend` событие доступно с помощью функции активации на основе событий. Сведения о том, как настроить надстройку для использования этой функции, использовать другие доступные события, отладку надстройки и т. д., см. в разделе "Настройка надстройки [Outlook](autolaunch.md) для активации на основе событий".
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
@@ -40,7 +40,7 @@ ms.locfileid: "67320653"
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
-      <bt:Sets DefaultMinVersion="1.11">
+      <bt:Sets DefaultMinVersion="1.12">
         <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
@@ -137,7 +137,7 @@ ms.locfileid: "67320653"
 
 > [!TIP]
 >
-> - **Параметры SendMode**, доступные вместе с событиями `OnMessageSend` `OnAppointmentSend`, см. в разделе "[Доступные параметры SendMode"](/javascript/api/manifest/launchevent#available-sendmode-options-preview).
+> - **Параметры SendMode**, доступные вместе с событиями `OnMessageSend` `OnAppointmentSend`, см. в разделе ["Доступные параметры SendMode"](/javascript/api/manifest/launchevent#available-sendmode-options).
 > - Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).
 
 ## <a name="implement-event-handling"></a>Реализация обработки событий
@@ -278,9 +278,16 @@ ms.locfileid: "67320653"
 
 1. Добавьте вложение и отправьте сообщение еще раз. На этот раз оповещений не должно быть.
 
+## <a name="deploy-to-users"></a>Развертывание для пользователей
+
+Как и другие надстройки на основе событий, надстройки, использующие функцию интеллектуальных оповещений, должны быть развернуты администратором организации. Инструкции по развертыванию надстройки с помощью Центр администрирования Microsoft 365 см. в разделе "Развертывание для пользователей" статьи "Настройка надстройки Outlook для активации на основе [событий"](autolaunch.md#deploy-to-users).
+
+> [!IMPORTANT]
+> Надстройки, использующие функцию смарт-оповещений, могут быть опубликованы в AppSource только в том случае, если свойству [SendMode](/javascript/api/manifest/launchevent#available-sendmode-options) `SoftBlock` `PromptUser` манифеста задано значение или параметр. Если для свойства SendMode надстройки задано значение **SendMode**`Block`, его может развернуть только администратор организации, так как проверка AppSource завершится ошибкой. Дополнительные сведения о публикации надстройки на основе событий в AppSource см. в описании [appSource](autolaunch-store-options.md) для надстройки Outlook на основе событий.
+
 ## <a name="smart-alerts-feature-behavior-and-scenarios"></a>Поведение и сценарии функции смарт-оповещений
 
-Описания параметров **SendMode** и рекомендации по их использованию подробно описаны в параметрах [Available SendMode](/javascript/api/manifest/launchevent). Ниже описано поведение функции для определенных сценариев.
+Описания параметров **SendMode** и рекомендации по их использованию подробно описаны в параметрах [Available SendMode](/javascript/api/manifest/launchevent#available-sendmode-options). Ниже описано поведение функции для определенных сценариев.
 
 ### <a name="add-in-is-unavailable"></a>Надстройка недоступна
 
@@ -328,7 +335,7 @@ ms.locfileid: "67320653"
 
 - Строка заголовка диалогового окна. Здесь всегда отображается имя вашей надстройки.
 - Формат сообщения. Например, нельзя изменить размер и цвет шрифта текста или вставить маркированный список.
-- Параметры диалогового окна. Например, параметры **"Отправить в любом случае** " и **"** Не отправлять" являются фиксированными и зависят от выбранного параметра [SendMode](/javascript/api/manifest/launchevent) .
+- Параметры диалогового окна. Например, параметры **"Отправить в любом случае** " и **"** Не отправлять" являются фиксированными и зависят от выбранного параметра [SendMode](/javascript/api/manifest/launchevent#available-sendmode-options) .
 - Диалоговые окна обработки активации на основе событий и сведений о ходе выполнения. Например, текст и параметры, отображаемые в диалоговых окнах времени ожидания и длительных операций, изменить нельзя.
 
 ## <a name="see-also"></a>См. также

@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 08/16/2022
+ms.date: 09/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b0991c64bd4075f88a2965f3feacf1f27dc2bad
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 11f3f96125aaf83a80586dbe70f4902e73ed7d17
+ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423232"
+ms.lasthandoff: 09/14/2022
+ms.locfileid: "67674758"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -18,16 +18,13 @@ ms.locfileid: "67423232"
 К концу этого пошагового руководства у вас будет надстройка, которая запускается каждый раз, когда создается новый элемент и задает тему.
 
 > [!NOTE]
-> Поддержка этой функции была реализована в наборе обязательных [элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь поддерживаются в наборе обязательных элементов [1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11). См [клиенты и платформы](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была реализована в наборе обязательных [элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь доступны в последующих наборах обязательных элементов. Дополнительные сведения о минимальном наборе обязательных элементов события, а также о клиентах и платформах, которые его поддерживают, см. в разделе "Поддерживаемые события и наборы обязательных элементов, поддерживаемые серверами [Exchange и клиентами Outlook"](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients).[](#supported-events)
 >
 > Активация на основе событий не поддерживается в Outlook для iOS или Android.
 
 ## <a name="supported-events"></a>Поддерживаемые события
 
 В следующей таблице перечислены доступные в настоящее время события и поддерживаемые клиенты для каждого события. При возникновении события `event` обработчик получает объект, который может содержать сведения, относящиеся к типу события. **Столбец Description** содержит ссылку на связанный объект, если это применимо.
-
-> [!IMPORTANT]
-> События, по-прежнему доступные в предварительной версии, могут быть доступны только в подписке Microsoft 365 и в ограниченном наборе поддерживаемых клиентов, как указано в следующей таблице. Дополнительные сведения о конфигурации клиента см. в разделе ["Предварительный просмотр](#how-to-preview) " этой статьи. События предварительной версии не должны использоваться в рабочих надстройки.
 
 |Событие|Описание|Минимальный набор требований и поддерживаемые клиенты|
 |---|---|---|
@@ -40,31 +37,17 @@ ms.locfileid: "67423232"
 |`OnAppointmentTimeChanged`|При изменении даты и времени при создании встречи.<br><br>Объект данных для конкретного события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 |`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторе при создании встречи. При изменении даты и времени `OnAppointmentTimeChanged` событие также будет срабатывать.<br><br>Объект данных для конкретного события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 |`OnInfoBarDismissClicked`|При закрытии уведомления при создании сообщения или элемента встречи. Уведомление будет получать только надстройка, которая добавила уведомление.<br><br>Объект данных для конкретного события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnMessageSend`|При отправке элемента сообщения. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentSend`|При отправке элемента встречи. Дополнительные сведения см. в пошаговом руководстве по [интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnMessageCompose`|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentOrganizer`|При создании новой встречи или изменении существующей.|[Предварительный просмотр](/javascript/api/requirement-sets/outlook/preview-requirement-set/outlook-requirement-set-preview)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnMessageSend`|При отправке элемента сообщения. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentSend`|При отправке элемента встречи. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnMessageCompose`|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentOrganizer`|При создании новой встречи или изменении существующей.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 
 > [!NOTE]
 > <sup>Для</sup> работы надстроек на основе событий в Outlook для Windows требуется как минимум Windows 10 версии 1903 (сборка 18362) или Windows Server 2019 версии 1903.
 
-### <a name="how-to-preview"></a>Предварительный просмотр
-
-Мы предлагаем вам опробовать события в предварительной версии! Сообщите нам о ваших сценариях и о том, как мы можем улучшить их, предоставив нам отзывы через GitHub (см. раздел **"** Отзывы" в конце этой страницы).
-
-Чтобы просмотреть эти события, где это доступно:
-
-- Для Outlook в Интернете:
-  - [Настройте целевой выпуск в клиенте Microsoft 365.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)
-  - Ссылка на **бета-версию** библиотеки в CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и имеет тип [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview`.
-- Для Outlook в новом пользовательском интерфейсе Mac:
-  - Минимальная требуемая сборка — 16.54 (21101001). Присоединяйтесь [к программе предварительной](https://insider.office.com/join/Mac) оценки Office и выберите **бета-канал** для доступа к бета-сборкам Office.
-- Для Outlook в Windows:
-  - Минимальная требуемая сборка — 16.0.14511.10000. Присоединяйтесь [к программе предварительной](https://insider.office.com/join/windows) оценки Office и выберите **бета-канал** для доступа к бета-сборкам Office.
-
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора Yeoman для надстроек Office.
+Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора [Yeoman для надстроек Office](../develop/yeoman-generator-overview.md).
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
@@ -140,10 +123,10 @@ ms.locfileid: "67423232"
           <!-- Enable launching the add-in on the included events. -->
           <ExtensionPoint xsi:type="LaunchEvent">
             <LaunchEvents>
-              <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
-              <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
+              <LaunchEvent Type="OnNewMessageCompose" FunctionName="onNewMessageComposeHandler"/>
+              <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onNewAppointmentComposeHandler"/>
               
-              <!-- Other available events (currently released) -->
+              <!-- Other available events -->
               <!--
               <LaunchEvent Type="OnMessageAttachmentsChanged" FunctionName="onMessageAttachmentsChangedHandler" />
               <LaunchEvent Type="OnAppointmentAttachmentsChanged" FunctionName="onAppointmentAttachmentsChangedHandler" />
@@ -152,12 +135,10 @@ ms.locfileid: "67423232"
               <LaunchEvent Type="OnAppointmentTimeChanged" FunctionName="onAppointmentTimeChangedHandler" />
               <LaunchEvent Type="OnAppointmentRecurrenceChanged" FunctionName="onAppointmentRecurrenceChangedHandler" />
               <LaunchEvent Type="OnInfoBarDismissClicked" FunctionName="onInfobarDismissClickedHandler" />
-              -->
-
-              <!-- Other available events (currently in preview) -->
-              <!--
               <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSendHandler" SendMode="PromptUser" />
               <LaunchEvent Type="OnAppointmentSend" FunctionName="onAppointmentSendHandler" SendMode="PromptUser" />
+              <LaunchEvent Type="OnMessageCompose" FunctionName="onMessageComposeHandler" />
+              <LaunchEvent Type="OnAppointmentOrganizer" FunctionName="onAppointmentOrganizerHandler" />
               -->
             </LaunchEvents>
             <!-- Identifies the runtime to be used (also referenced by the Runtime element). -->
@@ -218,10 +199,10 @@ ms.locfileid: "67423232"
     * See LICENSE in the project root for license information.
     */
 
-    function onMessageComposeHandler(event) {
+    function onNewMessageComposeHandler(event) {
       setSubject(event);
     }
-    function onAppointmentComposeHandler(event) {
+    function onNewAppointmentComposeHandler(event) {
       setSubject(event);
     }
     function setSubject(event) {
@@ -242,8 +223,8 @@ ms.locfileid: "67423232"
     }
 
     // 1st parameter: FunctionName of LaunchEvent in the manifest; 2nd parameter: Its implementation in this .js file.
-    Office.actions.associate("onMessageComposeHandler", onMessageComposeHandler);
-    Office.actions.associate("onAppointmentComposeHandler", onAppointmentComposeHandler);
+    Office.actions.associate("onNewMessageComposeHandler", onNewMessageComposeHandler);
+    Office.actions.associate("onNewAppointmentComposeHandler", onNewAppointmentComposeHandler);
     ```
 
 1. Сохраните изменения.
@@ -255,7 +236,7 @@ ms.locfileid: "67423232"
 
 1. В **папке ./src/commands** **откройтеcommands.html.**
 
-1. Непосредственно перед **закрывающего головного** тега (`<\head>`) добавьте запись скрипта, чтобы включить код JavaScript для обработки событий.
+1. Непосредственно перед **закрывающего головного** тега (`</head>`) добавьте запись скрипта, чтобы включить код JavaScript для обработки событий.
 
     ```html
     <script type="text/javascript" src="../launchevent/launchevent.js"></script>
@@ -289,6 +270,7 @@ ms.locfileid: "67423232"
     ```command&nbsp;line
     npm run build
     ```
+
     ```command&nbsp;line
     npm start
     ```
@@ -325,10 +307,12 @@ ms.locfileid: "67423232"
 
 Вы можете развернуть надстройки на основе событий, передав манифест через Центр администрирования Microsoft 365. На портале администрирования разверните раздел **"Параметры** " в области навигации и выберите **"Интегрированные приложения"**. На странице **"Интегрированные приложения** " выберите действие **"Отправить пользовательские приложения** ".
 
-![Страница "Интегрированные приложения" на Центр администрирования Microsoft 365, включая действие "Отправить пользовательские приложения".](../images/outlook-deploy-event-based-add-ins.png)
+![Страница "Интегрированные приложения" на Центр администрирования Microsoft 365 с выделенным действием "Отправить пользовательские приложения".](../images/outlook-deploy-event-based-add-ins.png)
 
 > [!IMPORTANT]
-> Надстройки на основе событий ограничены только развертываниями, управляемыми администратором. Пока пользователи не могут получать надстройки на основе событий из AppSource или магазина Office в приложении. Дополнительные сведения см. в описании [appSource для надстройки Outlook](autolaunch-store-options.md) на основе событий.
+> Надстройки на основе событий ограничены только развертываниями, управляемыми администратором. Пользователи не могут активировать надстройки на основе событий из AppSource или магазина Office в приложении. Дополнительные сведения см. в [описании параметров appSource для надстройки Outlook](autolaunch-store-options.md) на основе событий.
+
+[!INCLUDE [outlook-smart-alerts-deployment](../includes/outlook-smart-alerts-deployment.md)]
 
 ## <a name="event-based-activation-behavior-and-limitations"></a>Поведение и ограничения активации на основе событий
 
