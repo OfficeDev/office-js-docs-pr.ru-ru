@@ -1,14 +1,14 @@
 ---
 title: Примеры кода надстроек Office
 description: Список примеров кода надстроек Office, которые помогают научиться создавать собственные надстройки.
-ms.date: 06/10/2022
+ms.date: 09/16/2022
 localization_priority: high
-ms.openlocfilehash: 16a1f92992c397772559468c27033aa58f6b6a6d
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 25a2312d26578c25c0ed2a3098df0d43008f9ac4
+ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423267"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67857566"
 ---
 # <a name="office-add-in-code-samples"></a>Примеры кода надстроек Office
 
@@ -23,21 +23,19 @@ ms.locfileid: "67423267"
 - [Надстройка PowerPoint "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/powerpoint-hello-world)
 - [Надстройка Word "Hello world"](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
 
-<br>
-
----
-
----
-
 ## <a name="blazor-webassembly"></a>Blazor WebAssembly
 
+Если вы работаете надстройки VSTO, в следующих примерах показано, как создавать веб-надстройки Office с помощью .NET Blazor WebAssembly. Большую часть кода можно хранить в C# и Visual Studio.
+
 - [Создание надстройки Blazor WebAssembly для Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/blazor-add-in/excel-blazor-add-in)
+- [Создание надстройки Blazor WebAssembly Outlook](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/blazor-add-in/outlook-blazor-add-in)
 - [Создание надстройки Blazor WebAssembly для Word](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/blazor-add-in/word-blazor-add-in)
 
 ## <a name="excel"></a>Excel
 
 | Имя                | Описание         |
 |:--------------------|:--------------------|
+| [Обозреватель типов данных](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer) (предварительная версия) | Создает надстройку Excel, которая позволяет создавать и изучать типы данных в книгах. Типы данных позволяют разработчикам надстроек упорядочивать сложные структуры данных как объекты, такие как форматированные числовое значение, веб-изображения и значения сущностей. |
 | [Открытие в Teams](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-open-in-teams) | Создайте новую электронную таблицу Excel в Microsoft Teams, содержащую определенные вами данные.|
 | [Вставка внешнего файла Excel и его заполнение данными JSON](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-insert-file)  | Вставьте существующий шаблон из внешнего файла Excel в открытую книгу Excel. Затем заполните шаблон данными веб-службы JSON. |
 | [Создание настраиваемых контекстных вкладок на ленте](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-contextual-tabs) | Создайте настраиваемую контекстную вкладку на ленте в пользовательском интерфейсе Office. В примере создается таблица: если пользователь перемещает фокус внутри нее, отображается настраиваемая вкладка. Если пользователь перемещается за ее пределы, настраиваемая вкладка будет скрыта. |
@@ -62,12 +60,6 @@ ms.locfileid: "67423267"
 | [Получение, редактирование и настройка OOXML-содержимого в документе Word с помощью надстройки Word](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/word-add-in-get-set-edit-openxml) | В этом примере показано, как получать, редактировать и настраивать OOXML-содержимое в документе Word. Пример надстройки предоставляет электронный блокнот для получения собственного контента в формате Office Open XML, а также тестирования собственных фрагментов Office Open XML.|
 | [Загрузка и запись содержимого в формате Open XML в надстройке Word](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/word-add-in-load-and-write-open-xml)  | В этом примере надстройки показано, как добавлять форматированное содержимое различных типов в документ Word с помощью метода setSelectedDataAsync с типом приведения ooxml. С помощью этой надстройки также можно показывать разметку Office Open XML для каждого типа контента в примере прямо на странице. |
 
-<br>
-
----
-
----
-
 ## <a name="authentication-authorization-and-single-sign-on-sso"></a>Проверка подлинности, авторизация и единый вход
 
 | Имя                | Описание         |
@@ -78,6 +70,12 @@ ms.locfileid: "67423267"
 | [Проверка подлинности надстройки Outlook для Microsoft Graph](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) | Создайте надстройку Outlook, которая подключается к Microsoft Graph, и получите доступ к книгам, хранящимся в OneDrive для бизнеса, чтобы создать новое сообщение электронной почты. |
 | [Надстройка Office с единым входом на ASP.NET](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-ASPNET-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе ASP.NET. |
 | [Надстройка Office с единым входом на Node.js](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/auth/Office-Add-in-NodeJS-SSO) | Используйте API `getAccessToken` в Office.js, чтобы предоставить надстройке доступ к данным Microsoft Graph. Этот пример создан на основе Node.js.|
+
+## <a name="office"></a>Office
+
+| Имя                | Описание         |
+|:--------------------|:--------------------|
+| [Сохранение пользовательских параметров в надстройке Office](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/office-add-in-save-custom-settings) | Сохранение пользовательских параметров в надстройке Office. Надстройка хранит данные в виде пар "ключ-значение", используя API JavaScript для контейнера свойств Office, файлы cookie браузера, веб-хранилище (localStorage и sessionStorage) или храня данные в скрытом хранилище в документе. |
 
 ## <a name="shared-runtime"></a>Общее время выполнения
 

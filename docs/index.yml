@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Документация по надстройкам Office
-summary: Используйте платформу Office надстроек для создания решений, расширяющих Office приложения и взаимодействующих с содержимым в Office документах и Outlook почтовых сообщениях и элементах календаря. С Office надстройки можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут выполняться в Office в Интернете, Windows, Mac и мобильных устройствах.
+summary: Используйте платформу надстроек Office для создания решений, расширяющих приложения Office и взаимодействующих с содержимым в документах Office, а также в почтовых сообщениях и элементах календаря Outlook. С помощью надстроек Office вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут выполняться в Office в Интернете, Windows, Mac и мобильных устройствах.
 brand: office
 metadata:
   title: Документация по надстройкам Office
@@ -11,12 +11,12 @@ metadata:
   author: o365devx
   ms.author: o365devx
   ms.date: 02/10/2022
-  ms.openlocfilehash: 07d8e2c8c9dc1dff799c2a1be6ba65e1b4fffc28
-  ms.sourcegitcommit: e63d8e32b25a9987f4a39b92a342a82b37a3404c
+  ms.openlocfilehash: 8074f9c01d456532f60d3d3365dbde16e3819e30
+  ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/17/2022
-  ms.locfileid: "65432199"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67857531"
 highlightedContent:
   items:
   - itemType: overview
@@ -26,22 +26,22 @@ highlightedContent:
     title: Настройка надстройки Excel за 5 минут
     url: quickstarts/excel-quickstart-jquery.md
   - itemType: learn
-    title: Microsoft Learn. Общие сведения Office настройки клиентов с помощью надстроек
-    url: /learn/modules/intro-office-add-ins
+    title: Microsoft Learn. Введение в настройку клиента Office с помощью надстроек
+    url: /training/modules/intro-office-add-ins
   - itemType: learn
-    title: 'Microsoft Learn: расширение Office клиентов с помощью Office надстроек'
-    url: /learn/paths/m365-office-add-in-associate
+    title: 'Microsoft Learn: расширение клиентов Office с помощью надстроек Office'
+    url: /training/paths/m365-office-add-in-associate
   - itemType: sample
-    title: Примеры для Office надстроек
+    title: Примеры для надстроек Office
     url: overview/office-add-in-code-samples.md
   - itemType: how-to-guide
-    title: Office руководства по надстройки для начинающих
+    title: Руководство по надстройки Office для начинающих
     url: overview/learning-path-beginner.md
   - itemType: reference
     title: Справочная документация по API JavaScript для Office
     url: /javascript/api/overview
   - itemType: whats-new
-    title: Microsoft 365 для разработчиков
+    title: Блог для разработчиков Microsoft 365
     url: https://developer.microsoft.com/office/blogs/technology/office-add-ins
 conceptualContent:
   title: Путь разработки
@@ -65,10 +65,10 @@ conceptualContent:
     links:
     - url: tutorials/excel-tutorial.md
       itemType: tutorial
-      text: Разработка полной Excel надстройки
+      text: Разработка полной надстройки Excel
     - url: tutorials/outlook-tutorial.md
       itemType: tutorial
-      text: Знакомство с Outlook надстройки
+      text: Руководство по надстройке Outlook
     - url: overview/patterns-and-practices-overview.md
       itemType: sample
       text: Использование общих шаблонов и методик
@@ -98,10 +98,10 @@ conceptualContent:
     links:
     - url: /office/dev/store
       itemType: overview
-      text: Проверка Office надстройки
+      text: Проверка надстройки Office
     - url: /office/dev/store/add-in-submission-guide
       itemType: how-to-guide
-      text: Просмотрите руководство Microsoft 365 App Store отправки
+      text: Ознакомьтесь с руководством по отправке App Store Microsoft 365
   - title: Взаимодействие
     links:
     - url: https://developer.microsoft.com/microsoft-365/dev-program

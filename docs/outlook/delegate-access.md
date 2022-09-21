@@ -3,12 +3,12 @@ title: Включение общих папок и сценариев общих
 description: Описывается настройка поддержки надстроек для общих папок (например, делегировать доступ) и общим почтовым ящикам.
 ms.date: 09/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: bae8a0f8cd63eed5feea7460e57ecfc212a06d61
-ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
+ms.openlocfilehash: 1c6884c18e4cb9916fcec20e6b732b0d20918e2f
+ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "67674668"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67857559"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 
@@ -214,7 +214,7 @@ if (item.getSharedPropertiesAsync) {
   // Perform operation for shared item.
 } else {
   // In general, this is not a shared item, so construct the REST URL using info from the Call REST APIs article:
-  // https://docs.microsoft.com/office/dev/add-ins/outlook/use-rest-api
+  // https://learn.microsoft.com/office/dev/add-ins/outlook/use-rest-api
 
   // Perform operation for non-shared item.
 }

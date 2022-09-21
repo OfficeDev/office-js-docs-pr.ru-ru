@@ -4,12 +4,12 @@ description: Рекомендуемый путь для опытных разр�
 ms.date: 10/14/2020
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 4cafa1221a24c7537d84fb662761e7ec66a0125d
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: HT
+ms.openlocfilehash: 676fe794e2d4d813993432fb94c723b9b917789b
+ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153909"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67857524"
 ---
 # <a name="vsto-add-in-developers-guide"></a>Руководство для разработчиков надстроек VSTO
 
@@ -50,7 +50,7 @@ ms.locfileid: "59153909"
 
 ## <a name="step-4-understand-the-javascript-library"></a>Шаг 4. Знакомство с библиотекой JavaScript
 
-Получите общее представление о библиотеке JavaScript для Office с помощью этого учебника от Microsoft Learn: [Знакомство с API JavaScript для Office](/learn/modules/intro-office-add-ins/3-apis).
+Ознакомьтесь с этим руководством, чтобы получить общие сведения о библиотеке JavaScript для Office из руководства по Microsoft Learn: общие сведения об [интерфейсах API JavaScript для Office](/training/modules/intro-office-add-ins/3-apis).
 
 Затем изучите API JavaScript для Office с помощью [инструмента Script Lab](explore-with-script-lab.md) — песочницы для запуска и изучения API-интерфейсов.
 

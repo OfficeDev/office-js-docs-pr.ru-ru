@@ -4,12 +4,12 @@ description: Рекомендуемый для начинающих путь, в
 ms.date: 02/12/2021
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: beafa972129133955ddebef9ebaaeae6dda101b6
-ms.sourcegitcommit: 1306faba8694dea203373972b6ff2e852429a119
-ms.translationtype: HT
+ms.openlocfilehash: 097be9f7aa1563dc513da9cb27eeb7daa344aa41
+ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59153910"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67857544"
 ---
 # <a name="beginners-guide"></a>Руководство для начинающих
 
@@ -45,7 +45,7 @@ ms.locfileid: "59153910"
 
 ## <a name="step-4-understand-the-javascript-library"></a>Шаг 4. Знакомство с библиотекой JavaScript
 
-Во-первых, вы можете получить общее представление о библиотеке JavaScript Office с этим учебным пособием от Microsoft Learn: [Понимание API-интерфейсов Office JavaScript](/learn/modules/understand-office-javascript-apis/index).
+Сначала получите обную картину библиотеки JavaScript для Office с помощью этого учебника из обучения Microsoft Learn: общие сведения об [интерфейсах API JavaScript для Office](/training/modules/understand-office-javascript-apis/index).
 
 Затем изучите API-интерфейсы Office JavaScript с помощью нашего [инструмента Script Lab](explore-with-script-lab.md) - песочницы для запуска и изучения API-интерфейсов.
 
