@@ -1,14 +1,14 @@
 ---
 title: Использование модели API для определенных приложений
 description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
-ms.date: 07/18/2022
+ms.date: 09/23/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fc0733806b2b29de37f77ffa2864163cb544f12
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: d7cb6f1f47c853d5c6e389c2c81ec2d36d21eb43
+ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67422945"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68092891"
 ---
 # <a name="application-specific-api-model"></a>Модель API для конкретного приложения
 
@@ -26,9 +26,9 @@ ms.locfileid: "67422945"
 
 ## <a name="run-function"></a>Функция *.run
 
-`Excel.run`, `Word.run` и `OneNote.run` исполняют функцию, определяющую действия, выполняемые в Excel, Word и OneNote. `*.run` автоматически создает контекст запроса, который можно использовать для взаимодействия с объектами Office. Когда `*.run` завершает работу, обещание разрешается, и все объекты, которые были выделены в среде выполнения, будут автоматически разблокированы.
+`Excel.run`, `OneNote.run`и `PowerPoint.run`выполните `Word.run` функцию, которая определяет действия, выполняемые с Excel, Word и OneNote. `*.run` автоматически создает контекст запроса, который можно использовать для взаимодействия с объектами Office. Когда `*.run` завершает работу, обещание разрешается, и все объекты, которые были выделены в среде выполнения, будут автоматически разблокированы.
 
-В следующем примере показано, как использовать шаблон `Excel.run`. Такой же шаблон используется в Word и OneNote.
+В следующем примере показано, как использовать шаблон `Excel.run`. Тот же шаблон также используется в OneNote, PowerPoint и Word.
 
 ```js
 Excel.run(function (context) {
@@ -134,7 +134,7 @@ await Excel.run(async (context) => {
 > [!NOTE]
 > Если вы вызываете методы или задаете свойства только в прокси-объекте, вам не нужно вызывать метод `load()`. Метод `load()` требуется только тогда, когда вам необходимо считать свойства в прокси-объекте.
 
-Аналогично запросам для задания свойств или вызова методов в прокси-объектах, запросы на загрузку свойств в прокси-объектах добавляются в очередь команд, ожидающих выполнения, в контексте запроса, который будет запущен, когда вы в следующий раз вызовете метод `sync()`. В очередь можно поставить сколько угодно вызовов `load()` в контексте запроса.
+Just like requests to set properties or invoke methods on proxy objects, requests to load properties on proxy objects get added to the queue of pending commands on the request context, which will run the next time you call the `sync()` method. You can queue up as many `load()` calls on the request context as necessary.
 
 #### <a name="scalar-and-navigation-properties"></a>Скалярные и навигационные свойства
 
@@ -180,7 +180,7 @@ console.log (tableCount.value);
 
 Установка свойств объекта с вложенными свойствами навигации может быть трудоемкой задачей. Вместо того чтобы задавать отдельные свойства с помощью путей навигации, как описано выше, вы можете использовать метод `object.set()`, доступный для объектов в API JavaScript на основе обещаний. С помощью этого метода можно задать сразу несколько свойств объекта, передавая другой объект того же типа Office.js или объект JavaScript со свойствами, сходными по структуре со свойствами объекта, для которого вызывается метод.
 
-В приведенном ниже примере кода показано, как задать несколько свойств формата диапазона, вызвав метод `set()` и передав в него объект JavaScript, имена и типы свойств которого повторяют структуру свойств объекта `Range`. В этом примере предполагается, что данные находятся в диапазоне **B2:E2**.
+The following code sample sets several format properties of a range by calling the `set()` method and passing in a JavaScript object with property names and types that mirror the structure of properties in the `Range` object. This example assumes that there is data in range **B2:E2**.
 
 ```js
 await Excel.run(async (context) => {

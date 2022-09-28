@@ -1,16 +1,16 @@
 ---
 title: Изучение API JavaScript для Office с помощью Script Lab
 description: Используйте Script Lab для изучения API JS Office и использования функциональности работы с прототипами.
-ms.date: 01/14/2022
+ms.date: 09/27/2022
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 568628f60b36a3c6bcb7dd3ab3856e86d96956b7
-ms.sourcegitcommit: 968d637defe816449a797aefd930872229214898
-ms.translationtype: HT
+ms.openlocfilehash: 327810e43d87894f2850f93bd07000f1cdae98f3
+ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63744636"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68092989"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
@@ -57,20 +57,20 @@ Script Lab — это инструмент для всех, кто хочет н
 
 Script Lab поддерживается для Excel, Word и  PowerPoint в следующих клиентах.
 
-- Подписка на Microsoft 365 Office
+- Office для Windows\*
 - Office 2016 или более поздней версии для Mac
 - Office в Интернете
 
 Приложение Script Lab для Outlook доступно в следующих клиентах.
 
-- Подписка на Microsoft 365 Office
+- Outlook для Windows\*
 - Outlook 2016 или более поздней версии для Mac
 - Outlook в Интернете при использовании браузеров Chrome, Microsoft EDGE или Safari
 
-Подробнее см. в соответствующей [записи блога](https://developer.microsoft.com/outlook/blogs/script-lab-now-supports-outlook/).
+Подробнее см. в соответствующей [записи блога](https://devblogs.microsoft.com/microsoft365dev/script-lab-now-supports-outlook/).
 
 > [!IMPORTANT]
-> Script Lab больше не работает в сочетаниях платформ и версий Office, где для размещения надстроек используется Internet Explorer. К ним относятся единовременно приобретенные версии Office до Office 2019. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
+> \*Script Lab больше не работает с сочетаниями платформы и версии Office, которые используют Internet Explorer для размещения надстроек. К ним относятся бессрочные версии Office до Office 2019. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

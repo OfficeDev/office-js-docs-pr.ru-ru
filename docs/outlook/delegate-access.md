@@ -3,12 +3,12 @@ title: Включение общих папок и сценариев общих
 description: Описывается настройка поддержки надстроек для общих папок (например, делегировать доступ) и общим почтовым ящикам.
 ms.date: 09/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c6884c18e4cb9916fcec20e6b732b0d20918e2f
-ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
+ms.openlocfilehash: 70efecda863e26f085b6f93cf26091fe0b9a9ea6
+ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67857559"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68092926"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 
@@ -20,13 +20,13 @@ ms.locfileid: "67857559"
 
 | Client | Exchange Online | Локальная среда Exchange 2019<br>(накопительное обновление 1 или более поздней версии) | Локальная версия Exchange 2016<br>(накопительный пакет обновления 6 или более поздней версии) | Локальная версия Exchange 2013 |
 |---|:---:|:---:|:---:|:---:|
-|Windows:<br>версия 1910 (сборка 12130.20272) или более поздняя|Да|Да\*|Да\*|Да\*|
+|Windows:<br>Версия 1910 (сборка 12130.20272) или более поздняя|Да|Да\*|Да\*|Да\*|
 |Mac:<br>сборка 16.47 или более поздняя|Да|Да|Да|Да|
 |Веб-браузер:<br>Современный пользовательский интерфейс Outlook|Да|Неприменимо|Неприменимо|Неприменимо|
-|Веб-браузер:<br>классический пользовательский интерфейс Outlook|Неприменимо|Нет|Нет|Нет|
+|Веб-браузер:<br>классический пользовательский интерфейс Outlook|Неприменимо|НЕТ|Нет|Нет|
 
 > [!NOTE]
-> \* Поддержка этой функции в локальной среде Exchange доступна начиная с версии 2206 (сборка 15330.20000) для Current Channel и версии 2207 (сборка 15427.20000) для канала Monthly Enterprise Channel.
+> \* Поддержка этой функции в локальной среде Exchange доступна начиная с версии 2206 (сборка 15330.20000) для Канала Current Channel и версии 2207 (сборка 15427.20000) для канала Monthly Enterprise.
 
 > [!IMPORTANT]
 > Поддержка этой функции была представлена в наборе обязательных [элементов 1.8](/javascript/api/requirement-sets/outlook/requirement-set-1.8/outlook-requirement-set-1.8) (дополнительные сведения см. на клиентах [и платформах](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients)). Однако обратите внимание, что матрица поддержки функции является надмножеством наборов обязательных элементов.

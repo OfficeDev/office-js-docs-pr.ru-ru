@@ -1,6 +1,6 @@
 # <a name="office-add-ins-documentation"></a>Документация по надстройкам Office
 
-Добро пожаловать в репозиторий документации по надстройки Office. В этом репозитории можно найти исходные файлы документации для основных понятий API JavaScript для Office, краткие руководства, руководства и руководства. Для оптимальной работы рекомендуется просмотреть это содержимое [на Документация Майкрософт](https://learn.microsoft.com/office/dev/add-ins) сайте.
+Добро пожаловать в репозиторий документации по надстройки Office. В этом репозитории можно найти исходные файлы документации для основных понятий API JavaScript для Office, краткие руководства, руководства и руководства. Для оптимальной работы рекомендуется просмотреть документацию по надстройки [Office](https://learn.microsoft.com/office/dev/add-ins) в Microsoft Learn.
 
 > **Примечание**. Исходные файлы справочной документации по API JavaScript для Office можно найти в репозитории [office-js-docs-reference](https://github.com/OfficeDev/office-js-docs-reference) .
 
@@ -19,7 +19,7 @@
 - Действия по воспроизведению проблемы.
 - Выходные данные консоли и сообщения об ошибках.
 
-Мы также рекомендуем создать вилку проекта, внести исправление и отправить запрос на включение своих изменений. Подробные сведения см. в разделе [Внесите свой вклад в документацию](Contributing.md).
+We also encourage you to fork, make the fix, and do a pull request of your proposed changes. For details, see [Contribute to this documentation](Contributing.md).
 
 Если проблема не связана с документацией по надстройке Office, опубликуйте ее на одном из следующих каналов.
 
@@ -39,7 +39,7 @@
 
 ## <a name="copyright"></a>Авторское право
 
-© Корпорация Майкрософт (Microsoft Corporation), 2016 г. Все права защищены.
+Copyright (c) 2016 Microsoft Corporation. All rights reserved.
 
 
-Этот проект соответствует [правилам поведения Майкрософт, касающимся обращения с открытым кодом](https://opensource.microsoft.com/codeofconduct/). Дополнительную информацию см. в разделе [часто задаваемых вопросов по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/). Если у вас возникли вопросы или замечания, напишите нам по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
