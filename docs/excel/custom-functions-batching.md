@@ -1,14 +1,14 @@
 ---
-ms.date: 07/08/2021
+ms.date: 09/09/2022
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 ms.localizationpriority: medium
-ms.openlocfilehash: 71af149154ea39dc71b682502c54bb3a03282652
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: f779351789350bbc591b1b5d7a975ff9f70cda26
+ms.sourcegitcommit: cff5d3450f0c02814c1436f94cd1fc1537094051
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958603"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68234923"
 ---
 # <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные вызовы пользовательских функций для удаленной службы
 
@@ -28,11 +28,11 @@ ms.locfileid: "66958603"
 
 Для реализации пакетирования пользовательских функций необходимо создать три основных раздела кода.
 
-1. Push-операция для включения новой операции в пакет вызовов каждый раз, когда Excel вызывает пользовательскую функцию.
-2. Функция, которая делает удаленный запрос, когда пакет готов.
-3. Код сервера для отклика на пакетный запрос, вычисления результатов всех операций и возвращения значений.
+1. Операция [отправки](#add-the-_pushoperation-function) для добавления новой операции в пакет вызовов каждый раз, когда Excel вызывает пользовательскую функцию.
+2. Функция [, которая выполняет удаленный запрос,](#make-the-remote-request) когда пакет готов.
+3. [Код сервера для ответа на пакетный запрос](#process-the-batch-call-on-the-remote-service), вычисления всех результатов операции и возврата значений.
 
-В следующих разделах вы узнаете, как создать код по одному примеру за раз. Добавьте каждый пример кода в файл **functions.ts**. Рекомендуется создать новый проект пользовательских функций с помощью генератора [Yeoman](../develop/yeoman-generator-overview.md) для генератора надстроек Office. Сведения о создании проекта см. в статье ["Начало разработки](../quickstarts/excel-custom-functions-quickstart.md) пользовательских функций Excel" и использование TypeScript вместо JavaScript.
+В следующих разделах вы узнаете, как создать код по одному примеру за раз. Рекомендуется создать новый проект пользовательских функций с помощью генератора [Yeoman](../develop/yeoman-generator-overview.md) для генератора надстроек Office. Сведения о создании проекта см. в статье ["Начало разработки пользовательских функций Excel"](../quickstarts/excel-custom-functions-quickstart.md). Вы можете использовать TypeScript или JavaScript.
 
 ## <a name="batch-each-call-to-your-custom-function"></a>Включение в пакет каждого вызова пользовательской функции
 
@@ -40,53 +40,51 @@ ms.locfileid: "66958603"
 
 В следующем примере пользовательская функция выполняет деление, обращаясь для этой операции к удаленной службе. Она вызывает `_pushOperation` для включения операции вместе с другими операциями в пакет для удаленной службы. Операция здесь называется **div2**. Можно использовать для операций любую схему именования, если только в удаленной службе используется такая же схема (дополнительно об удаленной службе см. далее). Кроме того передаются аргументы, необходимые удаленной службе для выполнения операции.
 
-### <a name="add-the-div2-custom-function-to-functionsts"></a>Добавление пользовательской функции div2 в functions.ts
+### <a name="add-the-div2-custom-function"></a>Добавление пользовательской функции div2
 
-```typescript
+Добавьте следующий код в файл **functions.js** **functions.ts** (в зависимости от того, использовали ли вы JavaScript или TypeScript).
+
+```javascript
 /**
- * @CustomFunction
  * Divides two numbers using batching
+ * @CustomFunction
  * @param dividend The number being divided
  * @param divisor The number the dividend is divided by
  * @returns The result of dividing the two numbers
  */
-function div2(dividend: number, divisor: number) {
-  return _pushOperation(
-    "div2",
-    [dividend, divisor]
-  );
+function div2(dividend, divisor) {
+  return _pushOperation("div2", [dividend, divisor]);
 }
 ```
 
-После этого следует определить пакетный массив, в котором будут храниться все операции, предназначенные для передачи в одном сетевом вызове. В приведенном ниже коде показано, как определить интерфейс, описывающий каждый элемент пакета в массиве. Интерфейс определяет операцию, которая представляет собой строку-имя запускаемой операции. Например, если у вас две пользовательские функции с именами `multiply` и `divide`, их можно использовать как имена операции в элементах пакета. `args` будет содержать аргументы, переданные в пользовательскую функцию из Excel. И, наконец, в `resolve` или `reject` будет храниться обещание с информацией, возвращаемой удаленной службой.
+### <a name="add-global-variables-for-tracking-batch-requests"></a>Добавление глобальных переменных для отслеживания пакетных запросов
 
-```typescript
-interface IBatchEntry {
-  operation: string;
-  args: any[];
-  resolve: (data: any) => void;
-  reject: (error: Error) => void;
-}
-```
+Затем добавьте две глобальные переменные **в файлfunctions.js** **functions.ts** . `_isBatchedRequestScheduled` важно позже для синхронизации пакетных вызовов к удаленной службе.
 
-Далее мы создадим пакетный массив, использующий предыдущий интерфейс. Чтобы знать, является ли пакет плановым или нет, создадим переменную `_isBatchedRequestSchedule`. Она понадобится позже для планирования пакетных вызовов удаленной службы.
-
-```typescript
-const _batch: IBatchEntry[] = [];
+```javascript
+let _batch = [];
 let _isBatchedRequestScheduled = false;
 ```
 
-Наконец, когда Excel вызывает пользовательскую функцию, необходимо отправить операцию в пакетный массив. В следующем коде показано, как добавить новую операцию из пользовательской функции. Здесь создается новый элемент пакета, новое обещание для выполнения или отклонения операции, и элемент вставляется в пакетный массив.
+### <a name="add-the-_pushoperation-function"></a>Добавление функции `_pushOperation`
+
+Когда Excel вызывает пользовательскую функцию, необходимо отправить операцию в пакетный массив. В следующем **_pushOperation** кода функции показано, как добавить новую операцию из пользовательской функции. Здесь создается новый элемент пакета, новое обещание для выполнения или отклонения операции, и элемент вставляется в пакетный массив.
 
 В данном коде также проверяется, является ли пакет плановым. В этом примере выполнение пакете планируется каждые 100 мс. При необходимости этот интервал можно изменить. Чем значение выше, тем больше размер пакета, отправляемого в удаленную службу, и тем дольше пользователь должен ждать результатов. При низком значении в удаленную службу отправляется больше пакетов, но зато время ожидания снижается.
 
-### <a name="add-the-_pushoperation-function-to-functionsts"></a>Добавление функции `_pushOperation` в functions.ts
+Функция создает объект **invocationEntry** , содержащий строковое имя выполняемой операции. Например, если у вас две пользовательские функции с именами `multiply` и `divide`, их можно использовать как имена операции в элементах пакета. `args` содержит аргументы, которые были переданы в пользовательскую функцию из Excel. И, наконец, `resolve` или методы `reject` сохраняют обещание, содержащее сведения, возвращаемые удаленной службой.
 
-```typescript
-function _pushOperation(op: string, args: any[]) {
+Добавьте следующий код в файл **functions.js** **functions.ts** .
+
+```javascript
+// This function encloses your custom functions as individual entries,
+// which have some additional properties so you can keep track of whether or not
+// a request has been resolved or rejected.
+function _pushOperation(op, args) {
   // Create an entry for your custom function.
-  const invocationEntry: IBatchEntry = {
-    operation: op, // e.g. sum
+  console.log("pushOperation");
+  const invocationEntry = {
+    operation: op, // e.g., sum
     args: args,
     resolve: undefined,
     reject: undefined,
@@ -103,8 +101,9 @@ function _pushOperation(op: string, args: any[]) {
   _batch.push(invocationEntry);
 
   // If a remote request hasn't been scheduled yet,
-  // schedule it after a certain timeout, e.g. 100 ms.
+  // schedule it after a certain timeout, e.g., 100 ms.
   if (!_isBatchedRequestScheduled) {
+    console.log("schedule remote request");
     _isBatchedRequestScheduled = true;
     setTimeout(_makeRemoteRequest, 100);
   }
@@ -118,13 +117,19 @@ function _pushOperation(op: string, args: any[]) {
 
 Цель функции `_makeRemoteRequest` – передать пакет операций в удаленную службу, а затем возвратить результаты в каждую пользовательскую функцию. Сначала она создает копию пакетного массива. Это позволит сразу же начинать включение параллельных вызовов пользовательской функции из Excel в новый массив. Затем копия преобразуется в более простой массив, который не содержит информацию обещания. Не имеет смысла передавать обещания в удаленную службу, так как они не будут работать. Метод `_makeRemoteRequest` будет отклонять или выполнять каждое обещание в зависимости от того, что возвратит удаленная служба.
 
-### <a name="add-the-following-_makeremoterequest-method-to-functionsts"></a>Добавление следующего метода `_makeRemoteRequest` в functions.ts
+Добавьте следующий код в файл **functions.js** **functions.ts** .
 
-```typescript
+```javascript
+// This is a private helper function, used only within your custom function add-in.
+// You wouldn't call _makeRemoteRequest in Excel, for example.
+// This function makes a request for remote processing of the whole batch,
+// and matches the response batch to the request batch.
 function _makeRemoteRequest() {
   // Copy the shared batch and allow the building of a new batch while you are waiting for a response.
   // Note the use of "splice" rather than "slice", which will modify the original _batch array
   // to empty it out.
+  try{
+  console.log("makeRemoteRequest");
   const batchCopy = _batch.splice(0, _batch.length);
   _isBatchedRequestScheduled = false;
 
@@ -132,21 +137,31 @@ function _makeRemoteRequest() {
   const requestBatch = batchCopy.map((item) => {
     return { operation: item.operation, args: item.args };
   });
-
+  console.log("makeRemoteRequest2");
   // Make the remote request.
   _fetchFromRemoteService(requestBatch)
     .then((responseBatch) => {
+      console.log("responseBatch in fetchFromRemoteService");
       // Match each value from the response batch to its corresponding invocation entry from the request batch,
       // and resolve the invocation promise with its corresponding response value.
       responseBatch.forEach((response, index) => {
         if (response.error) {
           batchCopy[index].reject(new Error(response.error));
+          console.log("rejecting promise");
         } else {
+          console.log("fulfilling promise");
           console.log(response);
+
           batchCopy[index].resolve(response.result);
         }
       });
     });
+    console.log("makeRemoteRequest3");
+  } catch (error) {
+    console.log("error name:" + error.name);
+    console.log("error message:" + error.message);
+    console.log(error);
+  }
 }
 ```
 
@@ -159,18 +174,23 @@ function _makeRemoteRequest() {
 
 ## <a name="process-the-batch-call-on-the-remote-service"></a>Обработка пакетного вызова в удаленной службе
 
-Последний шаг – это выполнение пакетного вызова в удаленной службе. В следующем примере кода показана функция `_fetchFromRemoteService`. Эта функция распаковывает каждую операцию, выполняет указанную операцию и возвращает результат. Для учебных целей в данной статье применяется функция `_fetchFromRemoteService`, которая запускается в вашей веб-надстройке и имитирует удаленную службу. Этот код можно добавить в файл **functions.ts**, чтобы изучать и запускать его, не создавая настоящую удаленную службу.
+Последний шаг – это выполнение пакетного вызова в удаленной службе. В следующем примере кода показана функция `_fetchFromRemoteService`. Эта функция распаковывает каждую операцию, выполняет указанную операцию и возвращает результат. Для учебных целей в данной статье применяется функция `_fetchFromRemoteService`, которая запускается в вашей веб-надстройке и имитирует удаленную службу. Этот код можно добавить в файл **functions.js** **functions.ts** , чтобы можно было изучить и запустить весь код, приведенный в этой статье, без необходимости настройки фактической удаленной службы.
 
-### <a name="add-the-following-_fetchfromremoteservice-function-to-functionsts"></a>Добавление следующей функции `_fetchFromRemoteService` в functions.ts
+Добавьте следующий код в файл **functions.js** **functions.ts** .
 
-```typescript
-async function _fetchFromRemoteService(
-  requestBatch: Array<{ operation: string, args: any[] }>
-): Promise<IServerResponse[]> {
-  // Simulate a slow network request to the server;
+```javascript
+// This function simulates the work of a remote service. Because each service
+// differs, you will need to modify this function appropriately to work with the service you are using. 
+// This function takes a batch of argument sets and returns a promise that may contain a batch of values.
+// NOTE: When implementing this function on a server, also apply an appropriate authentication mechanism
+//       to ensure only the correct callers can access it.
+async function _fetchFromRemoteService(requestBatch) {
+  // Simulate a slow network request to the server.
+  console.log("_fetchFromRemoteService");
   await pause(1000);
-
-  return requestBatch.map((request): IServerResponse => {
+  console.log("postpause");
+  return requestBatch.map((request) => {
+    console.log("requestBatch server side");
     const { operation, args } = request;
 
     try {
@@ -181,10 +201,10 @@ async function _fetchFromRemoteService(
         };
       } else if (operation === "mul2") {
         // Multiply the arguments for the given entry.
-        const myresult = args[0] * args[1];
-        console.log(myresult);
+        const myResult = args[0] * args[1];
+        console.log(myResult);
         return {
-          result: myresult
+          result: myResult
         };
       } else {
         return {
@@ -199,7 +219,8 @@ async function _fetchFromRemoteService(
   });
 }
 
-function pause(ms: number) {
+function pause(ms) {
+  console.log("pause");
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 ```

@@ -25,6 +25,8 @@ items:
             href: quickstarts/project-quickstart.md
           - name: Надстройка Word
             href: quickstarts/word-quickstart.md
+          - name: Единый вход (SSO)
+            href: quickstarts/sso-quickstart.md
       - name: Изучение API JS для Office с помощью Script Lab
         href: overview/explore-with-script-lab.md
         displayName: 'Excel, Word, PowerPoint'
@@ -134,6 +136,8 @@ items:
                 items:
                   - name: Включение единого входа в надстройке Office
                     href: develop/sso-in-office-add-ins.md
+                  - name: Краткое руководство
+                    href: quickstarts/sso-quickstart.md
                   - name: Регистрация на платформе удостоверений Майкрософт для разработчиков
                     href: develop/register-sso-add-in-aad-v2.md
                   - name: Предоставление согласия администратора
@@ -889,6 +893,9 @@ items:
         displayName: Excel
       - name: Копирование фрагмента кода Script Lab в Yo Office
         href: overview/create-an-office-add-in-from-script-lab.md
+      - name: Пакетная обработка пользовательских функций в удаленных вызовов
+        href: excel/custom-functions-batching.md
+        displayName: 'Excel, Custom Functions'
   - name: Ресурсы
     items:
       - name: Глоссарий
