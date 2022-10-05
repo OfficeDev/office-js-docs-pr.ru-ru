@@ -55,6 +55,8 @@ items:
           - name: 'Браузеры, используемые надстройками Office'
             href: concepts/browsers-used-by-office-web-add-ins.md
             displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
+          - name: Среды выполнения в надстройки Office
+            href: testing/runtimes.md
           - name: Поддержка Internet Explorer 11
             href: develop/support-ie-11.md
             displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
@@ -344,8 +346,6 @@ items:
             href: develop/usability-testing.md
           - name: Проверка манифеста надстройки
             href: testing/troubleshoot-manifest.md
-          - name: Среды выполнения в надстройки Office
-            href: testing/runtimes.md
       - name: Публикация
         items:
           - name: Публикация надстроек Office
