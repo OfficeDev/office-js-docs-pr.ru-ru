@@ -1,14 +1,14 @@
 ---
 title: Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 description: Описывается настройка поддержки надстроек для общих папок (например, делегировать доступ) и общим почтовым ящикам.
-ms.date: 09/12/2022
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 70efecda863e26f085b6f93cf26091fe0b9a9ea6
-ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
+ms.openlocfilehash: 707be0fb71931b80314750b435dca18d23247a23
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68092926"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467169"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включение общих папок и сценариев общих почтовых ящиков в надстройке Outlook
 
@@ -113,11 +113,18 @@ ms.locfileid: "68092926"
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы включить общие папки и сценарии общих почтовых ящиков в надстройке, необходимо задать элемент [SupportsSharedFolders](/javascript/api/manifest/supportssharedfolders) `true` в манифесте в родительском элементе `DesktopFormFactor`. В настоящее время другие форм-факторы не поддерживаются.
+Чтобы включить в надстройке общие папки и сценарии общих почтовых ящиков, необходимо включить необходимые разрешения в манифесте.
 
-Чтобы поддерживать вызовы REST от делегата, задайте для узла [разрешений](/javascript/api/manifest/permissions) в манифесте значение `ReadWriteMailbox`.
+Во-первых, для поддержки вызовов REST от делегата надстройка должна запросить разрешение на чтение **и запись почтового ящика** . Разметка зависит от типа манифеста.
 
-В следующем примере показан элемент `SupportsSharedFolders` , задав `true` значение в разделе манифеста.
+- **XML-манифест**: задайте **\<Permissions\>** для элемента **значение ReadWriteMailbox**.
+- **Манифест Teams (** предварительная версия): задайте для свойства name объекта в массиве authorization.permissions.resourceSpecific значение Mailbox.ReadWrite.User.
+
+Во-вторую, включите поддержку общих папок. Разметка зависит от типа манифеста.
+
+# <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
+
+[Задайте элемент SupportsSharedFolders](/javascript/api/manifest/supportssharedfolders) `true` в манифесте в родительском элементе`DesktopFormFactor`. В настоящее время другие форм-факторы не поддерживаются.
 
 ```XML
 ...
@@ -143,6 +150,26 @@ ms.locfileid: "68092926"
 </VersionOverrides>
 ...
 ```
+
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+Добавьте дополнительный объект в массив authorization.permissions.resourceSpecific и задайте для его свойства name значение Mailbox.SharedFolder.
+
+```json
+"authorization": {
+  "permissions": {
+    "resourceSpecific": [
+      ...
+      {
+        "name": "Mailbox.SharedFolder",
+        "type": "Delegated"
+      },
+    ]
+  }
+},
+```
+
+---
 
 ## <a name="perform-an-operation-as-delegate-or-shared-mailbox-user"></a>Выполнение операции в качестве пользователя делегата или общего почтового ящика
 
@@ -244,7 +271,12 @@ if (item.getSharedPropertiesAsync) {
 
 ### <a name="rest-and-ews"></a>REST и EWS
 
-Ваша надстройка может использовать REST `ReadWriteMailbox` , и необходимо задать разрешение надстройки, чтобы разрешить доступ REST к почтовому ящику владельца или к общему почтовому ящику, если это применимо. EWS не поддерживается.
+Надстройка может использовать REST. Чтобы разрешить rest доступ к почтовому ящику владельца или общему почтовому ящику, надстройка должна запросить разрешение на чтение  и запись почтового ящика в манифесте. Разметка зависит от типа манифеста.
+
+- **XML-манифест**: задайте **\<Permissions\>** для элемента **значение ReadWriteMailbox**.
+- **Манифест Teams (** предварительная версия): задайте для свойства name объекта в массиве authorization.permissions.resourceSpecific значение Mailbox.ReadWrite.User.
+
+EWS не поддерживается.
 
 ### <a name="user-or-shared-mailbox-hidden-from-an-address-list"></a>Пользователь или общий почтовый ящик, скрытый из списка адресов
 

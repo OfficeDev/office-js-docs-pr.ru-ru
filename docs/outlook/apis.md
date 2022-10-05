@@ -1,14 +1,14 @@
 ---
 title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
-ms.date: 07/26/2022
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: bd0bcdd3dfac6def9443b09d9797bfd0667c3b3d
-ms.sourcegitcommit: 15714ef1118083032e640413ede69a162c43daed
+ms.openlocfilehash: 69043646add5e32502efb0d2a5b1259667e564d9
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67037817"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467078"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
@@ -24,7 +24,7 @@ ms.locfileid: "67037817"
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
 ```
 
-При добавлении новых API-интерфейсов не будет меняться URL-адрес Office.js. Мы укажем другую версию в URL-адресе, только если изменится поведение API.
+As we add new APIs, the URL to Office.js will stay the same. We will change the version in the URL only if we break an existing API behavior.
 
 > [!IMPORTANT]
 > При разработке надстройки для любого клиентского приложения Office используйте ссылку на API `<head>` JavaScript для Office из раздела страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов body.
@@ -33,9 +33,9 @@ ms.locfileid: "67037817"
 
 Все API Outlook относятся к [набору обязательных элементов почтового ящика](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets). Существуют разные версии набора обязательных элементов `Mailbox`. Каждый новый набор API, который мы выпускаем, относится к более высокой версии набора. Не все клиенты Outlook поддерживают самый новый набор API при их выпуске, но если для клиента Outlook объявлена поддержка определенного набора обязательных элементов, то он поддерживает все API из этого набора.
 
-Чтобы указать, в каких клиентах Outlook появляется надстройка, задайте минимальную версию набора требований в манифесте. Например, если указать набор требований версии 1.3, надстройка не будет отображаться в клиентах Outlook, не поддерживающих версию 1.3.
+To control which Outlook clients the add-in appears in, specify a minimum requirement set version in the manifest. For example, if you specify requirement set version 1.3, the add-in will not show up in any Outlook client that doesn't support a minimum version of 1.3.
 
-Указание набора требований не означает, что надстройке будут доступны API-интерфейсы только из этой версии. Если в надстройке указан набор требований версии 1.1, но она выполняется в клиенте Outlook, поддерживающем версию 1.3, то надстройка может использовать API-интерфейсы версии 1.3. От набора требований зависит только то, в каких клиентах Outlook отображается надстройка.
+Specifying a requirement set doesn't limit your add-in to the APIs in that version. If the add-in specifies requirement set v1.1 but is running in an Outlook client that supports v1.3, the add-in can still use v1.3 APIs. The requirement set only controls which Outlook clients the add-in appears in.
 
 Чтобы проверить доступность API-интерфейсов из набора требований, версия которого выше указанной в манифесте, вы можете использовать стандартный код JavaScript:
 
@@ -57,26 +57,9 @@ if (item.somePropertyOrFunction) {
 
 ## <a name="permissions"></a>Разрешения
 
-Для использования необходимых API-интерфейсов надстройке нужны соответствующие разрешения. Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в манифесте. Разметка зависит от типа манифеста.
+Для использования необходимых API-интерфейсов надстройке нужны соответствующие разрешения. Как правило, следует указывать минимальные разрешения, необходимые надстройке.
 
-- **XML-манифест**: используйте **\<Permissions\>** элемент.
-- **Манифест Teams (предварительная версия)**: используйте свойство authorization.permissions.resourceSpecific. 
-
-Существует четыре уровня разрешений. Дополнительные сведения см. в [разделе "Общие сведения о разрешениях надстроек Outlook"](understanding-outlook-add-in-permissions.md).
-
-<br/>
-
-|Уровень разрешений</br>Имя XML-манифеста|Уровень разрешений.</br>Имя манифеста Teams|Описание|
-|:-----|:-----|:-----|
-| **Ограниченный доступ** | **MailboxItem.Restricted.User** | Позволяет использовать сущности, но не регулярные выражения. |
-| **ReadItem** | **MailboxItem.Read.User** | Помимо возможностей уровня **Ограниченный доступ**, поддерживаются:<ul><li>регулярные выражения;</li><li>доступ на чтение API надстроек Outlook;</li><li>получение свойств элемента и маркера обратного вызова.</li></ul> |
-| **ReadWriteItem** | **MailboxItem.ReadWrite.User** | Помимо того, что разрешено в **ReadItem**, он позволяет:<ul><li>полный доступ ко всем элементам API Outlook, кроме метода `makeEwsRequestAsync`;</li><li>задание свойств элемента.</li></ul> |
-| **ReadWriteMailbox** | **Mailbox.ReadWrite.User** | Помимо того, что разрешено **в ReadWriteItem**, он позволяет:<ul><li>создание, чтение и запись элементов и папок;</li><li>отправка папок;</li><li>вызов метода [makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods).</li></ul> |
-
-> [!NOTE]
-> Для надстроек, использующих функцию добавления при отправке, требуется дополнительное разрешение. С помощью XML-манифеста вы указываете разрешение в [элементе ExtendedPermissions](/javascript/api/manifest/extendedpermissions) . Дополнительные сведения см [. в разделе "Реализация добавления при отправке" в надстройке Outlook](append-on-send.md). В манифесте Teams (предварительная версия) это разрешение указывается с именем **Mailbox.AppendOnSend.User** в дополнительном объекте в массиве authorization.permissions.resourceSpecific.
-
-Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах безопасности см. в [разделе "Конфиденциальность и безопасность для надстроек Office"](../concepts/privacy-and-security.md).
+Существует четыре уровня разрешений. **ограниченный**, **чтение,** **чтение и запись**, а **также почтовый ящик для чтения и записи**. Дополнительные сведения. Дополнительные сведения см. в [разделе "Общие сведения о разрешениях надстроек Outlook"](understanding-outlook-add-in-permissions.md).
 
 ## <a name="mailbox-object"></a>Объект Mailbox
 
@@ -86,4 +69,5 @@ if (item.somePropertyOrFunction) {
 
 - [Манифесты надстроек Outlook](manifests.md)
 - [Общие сведения о наборах требований API Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets)
+- [Общие сведения о разрешениях надстроек Outlook](understanding-outlook-add-in-permissions.md).
 - [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)

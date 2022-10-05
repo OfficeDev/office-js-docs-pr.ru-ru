@@ -3,19 +3,19 @@ title: Манифесты надстройки Outlook
 description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
 ms.date: 05/27/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 330e40c4377edf832d91196ba4599ea351629296
-ms.sourcegitcommit: 4ba5f750358c139c93eb2170ff2c97322dfb50df
-ms.translationtype: HT
+ms.openlocfilehash: c09c483519e4d5cd0dce7dda840130698820b6ee
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66660286"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68466980"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 
-Надстройка Outlook состоит из двух компонентов: XML-манифеста надстройки и веб-страницы с поддержкой библиотеки JavaScript для надстроек Office (office.js). В манифесте описывается интеграция надстройки с клиентами Outlook. Ниже приведен пример.
+An Outlook add-in consists of two components: the XML add-in manifest and a web page supported by the JavaScript library for Office Add-ins (office.js). The manifest describes how the add-in integrates across Outlook clients. The following is an example.
 
  > [!NOTE]
- > Все значения URL-адресов в следующем примере начинаются со строки "https://appdemo.contoso.com". Это значение — заполнитель. В фактическом допустимом манифесте эти значения будут содержать действительные URL-адреса с префиксом HTTPS.
+ > All URL values in the following sample begin with "https://appdemo.contoso.com". This value is a placeholder. In an actual valid manifest, these values would contain valid https web URLs.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -227,7 +227,7 @@ ms.locfileid: "66660286"
 
 ## <a name="schema-versions"></a>Версии схемы
 
-Не все клиенты Outlook поддерживают новейшие функции, а у некоторых пользователей Outlook установлена более ранняя версия Outlook. С помощью версий схемы разработчики могут создавать надстройки с обратной совместимостью, которые используют новые функции, если они доступны, но работают и в более ранних версиях.
+Not all Outlook clients support the latest features, and some Outlook users will have an older version of Outlook. Having schema versions lets developers build add-ins that are backwards compatible, using the newest features where they are available but still functioning on older versions.
 
 Примером этого является элемент **\<VersionOverrides\>** в манифесте. Все элементы, определенные в **\<VersionOverrides\>**, заменяют соответствующий элемент в другой части манифеста. Это означает, что по мере возможности Outlook будет использовать содержимое раздела **\<VersionOverrides\>** для установки параметров надстройки. Тем не менее, если версия Outlook не поддерживает определенную версию **\<VersionOverrides\>**, Outlook пропустит ее и будет использовать остальные сведения из манифеста. 
 
@@ -238,15 +238,15 @@ ms.locfileid: "66660286"
 
 |Версия|Описание|
 |:-----|:-----|
-|v1.0|Поддерживает версию 1.0 API JavaScript для Office. Для надстроек Outlook поддерживается форма чтения. |
+|v1.0|Supports version 1.0 of the Office JavaScript API. For Outlook add-ins, this supports read form. |
 |1.1|Поддерживает версию 1.1 API JavaScript для Office и **\<VersionOverrides\>**. Для надстроек Outlook поддерживается форма создания.|
 |**\<VersionOverrides\>** 1.0|Поддерживает более поздние версии API JavaScript для Office. Поддерживаются команды надстроек.|
-|**\<VersionOverrides\>** 1.1|Поддерживает более поздние версии API JavaScript для Office. Поддерживает команды надстроек и добавляет поддержку новых функций, таких как [закрепляемые области задач](pinnable-taskpane.md) и мобильные надстройки.|
+|**\<VersionOverrides\>** 1.1|Supports later versions of the Office JavaScript API. This supports add-in commands and adds support for newer features, such as [pinnable task panes](pinnable-taskpane.md) and mobile add-ins.|
 
 В этой статье рассматриваются требования для манифеста версии 1.1. Даже если в манифесте вашей надстройки используется элемент **\<VersionOverrides\>**, все равно важно включить элементы манифеста версии 1.1, чтобы надстройка работала со старыми клиентами, которые не поддерживают **\<VersionOverrides\>**.
 
 > [!NOTE]
-> Outlook использует схему для проверки манифестов. Поэтому элементы манифеста должны располагаться в определенном порядке. Если порядок не соблюден, при загрузке неопубликованной надстройки могут возникать ошибки. Вы можете скачать [определение схемы XML (XSD)](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8), которое позволит создать манифест с правильным расположением элементов.
+> Outlook uses a schema to validate manifests. The schema requires that elements in the manifest appear in a specific order. If you include elements out of the required order, you may get errors when sideloading your add-in. You can download the [XML Schema Definition (XSD)](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8) to help create your manifest with elements in the required order.
 
 ## <a name="root-element"></a>Корневой элемент
 
@@ -266,11 +266,11 @@ ms.locfileid: "66660286"
 </OfficeApp>
 ```
 
-## <a name="version"></a>Version
+## <a name="version"></a>Версия
 
-Это версия конкретной надстройки. Когда разработчик обновляет какой-либо элемент манифеста, версию также необходимо увеличить. Таким образом, при установке нового манифеста заменяется имеющийся, а пользователю становятся доступны новые функции. Если эта надстройка была отправлена в магазин, манифест потребуется заново отправить и проверить. Спустя несколько часов (после утверждения обновленного манифеста) пользователи надстройки автоматически получат его.
+This is the version of the specific add-in. If a developer updates something in the manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this add-in was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this add-in will get the new updated manifest automatically in a few hours, after it is approved.
 
-При изменении разрешений, запрашиваемых надстройкой, пользователям предлагается выполнить обновление и повторно согласиться на предоставление надстройке разрешений. Если администратор установил эту надстройку для всей организации, он должен будет дать свое согласие первым. До этого пользователям будут доступны только старые функции.
+If the add-in's requested permissions change, users will be prompted to upgrade and re-consent to the add-in. If the admin installed this add-in for the entire organization, the admin will have to re-consent first. Users will continue to see old functionality in the meantime.
 
 ## <a name="versionoverrides"></a>VersionOverrides
 
@@ -379,7 +379,7 @@ ms.locfileid: "66660286"
 |Клиент Outlook|Домен определен<br>в AppDomains?|Поведение браузера|
 |---|---|---|
 |Все клиенты|Да|Ссылка откроется в области задач надстройки.|
-|Outlook 2016 для Windows (единовременная покупка)<br>Outlook 2013 для Windows|Нет|Ссылка откроется в Internet Explorer 11.|
+|— Outlook 2016 Windows (бессрочное использование с корпоративным лицензированием)<br>— Outlook 2013 в Windows (бессрочно)|Нет|Ссылка откроется в Internet Explorer 11.|
 |Другие клиенты|Нет|Ссылка откроется в браузере пользователя, используемом по умолчанию.|
 
 Дополнительные сведения см. в разделе [Укажите домены, которые необходимо открыть в окне надстройки](../develop/add-in-manifests.md?tabs=tabid-1#specify-domains-you-want-to-open-in-the-add-in-window).
@@ -422,13 +422,13 @@ ms.locfileid: "66660286"
 
 ## <a name="next-steps-add-in-commands"></a>Дальнейшие действия: команды надстроек
 
-После определения основного манифеста определите команды для вашей надстройки. Команды надстроек представляют собой кнопки на ленте, с помощью которых пользователи могут легко и интуитивно активировать ваши надстройки. Дополнительные сведения см. в статье [Команды надстроек Outlook](add-in-commands-for-outlook.md).
+After defining a basic manifest, define add-in commands for your add-in. Add-in commands present a button in the ribbon so users can activate your add-in in a simple, intuitive way. For more information, see [Add-in commands for Outlook](add-in-commands-for-outlook.md).
 
 Пример надстройки, в которой определены команды надстройки: [command-demo](https://github.com/OfficeDev/outlook-add-in-command-demo).
 
 ## <a name="next-steps-add-mobile-support"></a>Дальнейшие действия: Добавление поддержки мобильных устройств
 
-При необходимости в надстройку можно добавить поддержку мобильной версии Outlook. Мобильная версия Outlook поддерживает команды надстроек примерно так же, как и Outlook для Windows и Mac. Дополнительные сведения см. в статье [Добавление поддержки команд надстроек для Outlook Mobile](add-mobile-support.md).
+Add-ins can optionally add support for Outlook mobile. Outlook mobile supports add-in commands in a similar fashion to Outlook on Windows and Mac. For more information, see [Add support for add-in commands for Outlook Mobile](add-mobile-support.md).
 
 ## <a name="see-also"></a>См. также
 

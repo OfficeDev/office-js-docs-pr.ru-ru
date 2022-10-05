@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок разработки в надстройках Office
 description: Узнайте, как устранять ошибки разработки в надстройки Office.
-ms.date: 07/28/2022
+ms.date: 09/30/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dc0c2b7614a4d1ea43219ccfd440fd019811d79
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 9271322bd37fece80decb527891a2f2faadce654
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423197"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467184"
 ---
 # <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки в надстройках Office
 
@@ -91,7 +91,10 @@ myChart.id = "5";
 1. Откройте проект в Visual Studio.
 1. В **Обозреватель решений** откройте manifest.xml файла. Манифест обычно находится в первом проекте в вашем решении.
 1. Выберите **окно "** > **Свойства представления"** (F4).
-1. В **окне свойств нажмите** кнопку с многоточием (...), чтобы открыть редактор **XML-схем** . Здесь можно найти точное расположение папки всех файлов схемы, которые использует проект.
+1. Задайте выбор курсора в manifest.xml, чтобы в **окне** свойств отображались свойства **XML-документа** .
+1. В **окне "** Свойства" выберите свойство **"** Схемы", а затем нажмите кнопку с многоточием (...), чтобы открыть редактор **XML-схем** . Здесь можно найти точное расположение папки всех файлов схемы, которые использует проект.
+
+:::image type="content" source="../images/visual-studio-xml-document-properties.png" alt-text="окно свойств свойства XML-документа.":::
 
 ### <a name="update-the-xsd-files"></a>Обновление XSD-файлов
 

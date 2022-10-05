@@ -3,12 +3,12 @@ title: Тестирование надстроек Office
 description: Узнайте, как протестировать надстройку Office.
 ms.date: 07/28/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 0cb3241bf88edf10f165587ddac24d1261b30162
-ms.sourcegitcommit: 143ab022c9ff6ba65bf20b34b5b3a5836d36744c
-ms.translationtype: HT
+ms.openlocfilehash: 56052182eafae59d42044ce4be40e086e51e8103
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67177681"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467246"
 ---
 # <a name="test-office-add-ins"></a>Тестирование надстроек Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "67177681"
 
 ## <a name="test-cross-platform-and-for-multiple-versions-of-office"></a>Тестирование кроссплатформенных выпусков и выпусков для нескольких версий Office
 
-Надстройки Office запускаются на основных платформах, поэтому требуется протестировать надстройку на всех платформах, где ваши пользователи могут запускать Office. К ним обычно относятся Office в Интернете, Office для Windows (как подписка, так и единовременная покупка), Office для Mac, Office для iOS и (для надстроек Outlook) Office для Android. Однако могут возникать ситуации, когда вы точно знаете, что никто из ваших пользователей не будет работать на некоторых платформах. Например, если вы создаете надстройку для компании, которая требует, чтобы пользователи работали на компьютерах с Windows и подпиской на Office, вам не нужно выполнять тестирование в Office для Mac или единовременно приобретенных экземплярах для Windows.
+Надстройки Office запускаются на основных платформах, поэтому требуется протестировать надстройку на всех платформах, где ваши пользователи могут запускать Office. Обычно это относится Office в Интернете, Office для Windows (бессрочная и подписка На Microsoft 365), Office для Mac, Office на iOS и (для надстроек Outlook) Office на Android. Однако могут возникать ситуации, когда вы точно знаете, что никто из ваших пользователей не будет работать на некоторых платформах. Например, если вы создаете надстройку для компании, которой требуется, чтобы ее пользователи могли работать с компьютерами Windows и подпиской на Office, вам не нужно тестировать Office на Mac или бессрочное использование Office в Windows.
 
 > [!NOTE]
 > На компьютерах с Windows браузер, используемый надстройкой, определяется версией Windows и Office. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
@@ -28,7 +28,7 @@ ms.locfileid: "67177681"
 
 ## <a name="sideload-an-office-add-in-for-testing"></a>Загрузка неопубликованной надстройки Office для тестирования
 
-Вы можете установить надстройку Office для тестирования, не размещая ее в каталоге надстроек. Процедура отличается для разных платформ, а в некоторых случаях и для разных продуктов. Следующие статьи посвящены загрузке неопубликованных надстроек Office на определенной платформе или в определенном продукте.
+You can use sideloading to install an Office Add-in for testing without having to first put it in an add-in catalog. The procedure for sideloading an add-in varies by platform, and in some cases, by product as well. The following articles each describe how to sideload Office Add-ins on a specific platform or within a specific product.
 
 - [Загрузка неопубликованных надстроек Office в Windows](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 

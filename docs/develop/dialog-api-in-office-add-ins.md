@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Основные сведения о создании диалогового окна в надстройке Office.
 ms.date: 07/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f4bdbcbcf725e04d0fd44886b6bf5520fe9ebd0
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 947b08575d100c639a440c1ca25d45199b4507ad
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423106"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68466959"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -62,9 +62,9 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20});
 ```
 
-Пример надстройки, в которой используется этот метод, см. [здесь](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example). Дополнительные примеры см. в `displayDialogAsync`[разделе "Примеры"](#samples).
+Подобная надстройка приведена в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example). Дополнительные примеры см. в `displayDialogAsync`[разделе "Примеры"](#samples).
 
-Установите оба значения равными 100 %, чтобы надстройка открывалась во весь экран. (На самом деле, максимальное значение составляет 99,5 %, возможность перемещать окно и изменять его размер сохраняется.)
+Set both values to 100% to get what is effectively a full screen experience. (The effective maximum is 99.5%, and the window is still moveable and resizable.)
 
 > [!NOTE]
 > В окне узла можно открыть только одно диалоговое окно. Попытка открыть другое диалоговое окно вызывает ошибку. Например, если пользователь открывает диалоговое окно из области задач, он не может открыть второе диалоговое окно с другой страницы в области задач. Однако при открытии диалогового окна из команды надстройки при каждом выборе команды открывается новый (но невидимый) [HTML-файл](../design/add-in-commands.md). При этом создается новое (невидимое) окно узла, поэтому каждое такое окно может запускать собственное диалоговое окно. Дополнительные сведения см. в [разделе "Ошибки из displayDialogAsync"](dialog-handle-errors-events.md#errors-from-displaydialogasync).
@@ -100,7 +100,7 @@ if (loginSuccess) {
 > [!IMPORTANT]
 >
 > - Эта `messageParent` функция является одним из *двух* API-интерфейсов Office JS, которые можно вызвать в диалоговом окне.
-> - Другой API JS, который можно вызвать в диалоговом окне, — это `Office.context.requirements.isSetSupported`. Дополнительные сведения см. в [разделе "Указание приложений Office и требований К API"](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается при Outlook 2016 однофакторной покупки (то есть версии MSI).
+> - Другой API JS, который можно вызвать в диалоговом окне, — это `Office.context.requirements.isSetSupported`. Дополнительные сведения см. в [разделе "Указание приложений Office и требований К API"](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в бессрочной лицензии на Outlook 2016 (то есть версии MSI).
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
 
@@ -126,7 +126,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 >
 > - Office передает объект [AsyncResult](/javascript/api/office/office.asyncresult) в функцию обратного вызова. Он представляет результат попытки открыть диалоговое окно. Он не представляет результат событий в диалоговом окне. Подробнее об этом различии см. в [Обработка ошибок и событий](dialog-handle-errors-events.md). 
 > - Для свойства `value` объекта `asyncResult` задан объект [Dialog](/javascript/api/office/office.dialog), который существует на главной странице, а не в контексте выполнения диалогового окна.
-> - `processMessage` — это функция, которая обрабатывает событие. Вы можете присвоить ей любое имя.
+> - The `processMessage` is the function that handles the event. You can give it any name you want.
 > - Переменная `dialog` объявляется в более широком контексте, чем обратный вызов, так как на нее также ссылается `processMessage`.
 
 Ниже приведен простой пример обработчика для события `DialogMessageReceived`.
@@ -159,7 +159,7 @@ function processMessage(arg) {
 
 Пример надстройки, в которой используются эти методы, см. в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
 
-Если надстройка должна открыть другую страницу области задач после получения сообщения, можно использовать метод `window.location.replace` (или `window.location.href`) в последней строке обработчика. Ниже приведен пример.
+If the add-in needs to open a different page of the task pane after receiving the message, you can use the `window.location.replace` method (or `window.location.href`) as the last line of the handler. The following is an example.
 
 ```js
 function processMessage(arg) {
@@ -194,9 +194,9 @@ if (loginSuccess) {
 >
 > - Переменная `loginSuccess` будет инициализирована после считывания отклика HTTP от поставщика удостоверений.
 > - Реализация функций и `getProfile` функций `getError` не отображается. Они получают данные из параметра запроса или ответа HTTP.
-> - В зависимости от того, удалось ли выполнить вход, отправляются анонимные объекты различных типов. Оба содержат свойство `messageType`, но один содержит свойство `profile`, а другой — свойство `error`.
+> - Anonymous objects of different types are sent depending on whether the sign in was successful. Both have a `messageType` property, but one has a `profile` property and the other has an `error` property.
 
-Код обработчика на главной странице использует значение свойства `messageType` для разветвления, как показано в приведенном ниже примере. Обратите внимание на то, что здесь используется та же функция `showUserName`, что и в примере выше, а функция `showNotification` отображает сообщение об ошибке в элементе пользовательского интерфейса на главной странице.
+The handler code in the host page uses the value of the `messageType` property to branch as shown in the following example. Note that the `showUserName` function is the same as in the previous example and `showNotification` function displays the error in the host page's UI.
 
 ```js
 function processMessage(arg) {
@@ -385,7 +385,7 @@ function onMessageFromParent(arg) {
 
 ## <a name="close-the-dialog-box"></a>Закрытие диалогового окна
 
-Вы можете добавить в диалоговое окно кнопку, которая будет его закрывать. Для этого обработчик событий кнопки должен использовать функцию `messageParent`, чтобы сообщить главной странице, что кнопка нажата. Ниже приведен пример.
+You can implement a button in the dialog box that will close it. To do this, the click event handler for the button should use `messageParent` to tell the host page that the button has been clicked. The following is an example.
 
 ```js
 function closeButtonClick() {

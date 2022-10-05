@@ -1,18 +1,20 @@
 ---
 title: Использование правил активации на основе регулярных выражений для отображения надстройки
 description: Узнайте, как использовать правила активации на основе регулярных выражений для контекстных надстроек Outlook.
-ms.date: 08/19/2022
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 74eb466201ec576599abb7d9efbcbc44ed0b5ae0
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: ed2fbbfcf7bf55e04f4ec6f225e29fb43ec99639
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423316"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467092"
 ---
 # <a name="use-regular-expression-activation-rules-to-show-an-outlook-add-in"></a>Использование правил активации на основе регулярных выражений для отображения надстройки Outlook
 
 Вы можете указать правила на основе регулярных выражений для активации [контекстной надстройки](contextual-outlook-add-ins.md) при обнаружении соответствия в определенных полях сообщения. Контекстные надстройки активируются только в режиме чтения. Outlook не активирует контекстные надстройки, когда пользователь создает элемент. Существуют и другие сценарии, в которых Outlook не активирует надстройки, например элементы с цифровой подписью. Дополнительные сведения см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
+
+[!include[JSON manifest does not support contextual add-ins](../includes/json-manifest-outlook-contextual-not-supported.md)]
 
 Вы можете указать регулярное выражение в составе правила [ItemHasRegularExpressionMatch](/javascript/api/manifest/rule#itemhasregularexpressionmatch-rule) или [ItemHasKnownEntity](/javascript/api/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста надстройки. Правила указываются в точке расширения [DetectedEntity](/javascript/api/manifest/extensionpoint#detectedentity).
 
@@ -144,7 +146,7 @@ Outlook оценивает регулярные выражения на осно
 const videos = Office.context.mailbox.item.getRegExMatches().videoURL;
 ```
 
-Несколько совпадений хранятся в этом объекте в виде элементов массива. Следующий пример кода показывает, как выполнять итерацию по совпадениям для регулярного выражения `reg1`, чтобы создать строку для отображения в виде HTML-кода.
+Multiple matches are stored as array elements in that object. The following code example shows how to iterate over the matches for a regular expression named  `reg1` to build a string to display as HTML.
 
 ```js
 function initDialer()

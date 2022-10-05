@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 08/04/2022
+ms.date: 09/29/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c40ff7ccc8a3b88e6e9f7dcd4e107fdb13f99109
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: bd4f20c969acf07423e15269b361469ea17eee39
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67422952"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68466945"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -17,8 +17,8 @@ ms.locfileid: "67422952"
 Используемый браузер зависит от указанных ниже факторов.
 
 - Операционная система компьютера.
-- Работает ли надстройка в Office в Интернете, Microsoft 365 или бессрочной (также называемой "без подписки" или "одновечная покупка") Office 2013 или более поздней версии.
-- В бессрочной версии Office независимо от того, работает ли надстройка в варианте "потребитель" или "коммерческий" (также называемый "корпоративным" или "LTSC").
+- Работает ли надстройка в Office в Интернете, в Office, загруженном из подписки Microsoft 365, или в бессрочной версии Office 2013 или более поздней версии.
+- В бессрочной версии Office в Windows, независимо от того, работает ли надстройка в варианте "розничная версия" или "с корпоративным лицензированием".
 
 > [!NOTE]
 > В этой статье предполагается, что надстройка работает в документе,  который не защищен с помощью [Windows Information Protection (WIP).](/windows/uwp/enterprise/wip-hub) Для документов, защищенных WIP, существуют некоторые исключения из сведений, указанных в этой статье. Дополнительные сведения см. в документах [, защищенных WIP](#wip-protected-documents).
@@ -26,10 +26,10 @@ ms.locfileid: "67422952"
 > [!IMPORTANT]
 > **Internet Explorer по-прежнему используется в надстройки Office**
 >
-> Некоторые сочетания платформ и версий Office, включая коммерческие бессрочные версии office 2019, по-прежнему используют элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
+> Некоторые сочетания платформ и версий Office, включая бессрочные версии Office 2019 с корпоративным лицензированием, по-прежнему используют элемент управления webview, который поставляется с Internet Explorer 11 для размещения надстроек, как описано в этой статье. Рекомендуется (но не обязательно) продолжать поддерживать эти сочетания, по крайней мере минимально, предоставляя пользователям надстройки корректное сообщение об ошибке при запуске надстройки в веб-представлении Internet Explorer. Учитывайте следующие дополнительные моменты:
 >
 > - Office в Интернете больше не открывается в Internet Explorer. Следовательно, [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) больше не тестирует надстройки в Office в Интернете в качестве браузера.
-> - AppSource по-прежнему тестирует сочетания версий платформы *и классических* версий Office, использующих Internet Explorer, однако предупреждение выдано только в том случае, если надстройка не поддерживает Internet Explorer. AppSource не отклоняет надстройку.
+> - AppSource по-прежнему проверяет сочетания версий платформы *и классических* версий Office, использующих Internet Explorer. Однако он выдан только в том случае, если надстройка не поддерживает Internet Explorer. AppSource не отклоняет надстройку.
 > - Средство [Script Lab больше](../overview/explore-with-script-lab.md) не поддерживает Internet Explorer.
 >
 > Дополнительные сведения о поддержке Internet Explorer и настройке корректного сообщения об ошибке в надстройке см. в разделе ["Поддержка Internet Explorer 11"](../develop/support-ie-11.md).
@@ -49,24 +49,23 @@ ms.locfileid: "67422952"
 
 ## <a name="perpetual-versions-of-office-on-windows"></a>Бессрочные версии Office в Windows
 
-Для бессрочной версии Office в Windows используемый браузер определяется версией Office, является ли лицензия клиентской или коммерческой, а также установлен ли edge WebView2 (Chromium на основе). Версия Windows не имеет значения, но обратите внимание, что веб-надстройки Office не поддерживаются в версиях, предшествующих Windows 7, и Office 2021 не поддерживается в версиях, предшествующих Windows 10.
+Для бессрочной версии Office в Windows используемый браузер определяется версией Office, лицензией является розничная или корпоративная лицензия, а также установлен ли edge WebView2 (Chromium-based). Версия Windows не имеет значения, но обратите внимание, что веб-надстройки Office не поддерживаются в версиях, предшествующих Windows 7, и Office 2021 не поддерживается в версиях, предшествующих Windows 10.
 
-Чтобы определить, является ли Office 2016 или Office 2019 потребителем или коммерческим, используйте формат версии Office и номер сборки. (Для Office 2013 и Office 2021 не имеет значения различие между коммерческим и потребительским клиентами.)
+Чтобы определить, является ли Office 2016 или Office 2019 розничным или корпоративным, используйте формат версии Office и номера сборки. (Для Office 2013 и Office 2021 не имеет значения различие между корпоративными лицензиями и розничной торговлей.)
 
-- **Потребитель**: для Office 2016 и 2019 `YYMM (xxxxx.xxxxxx)`формат заканчивается двумя блоками из пяти цифр, `2206 (Build 15330.20264`например .
-- **Коммерческий:** 
+- **Розничная** версия: для Office 2016 и 2019 `YYMM (xxxxx.xxxxxx)`формат заканчивается двумя блоками из пяти цифр, `2206 (Build 15330.20264`например .
+- **С корпоративным лицензированием**:
+  - Для Office 2016 `16.0.xxxx.xxxxx`формат заканчивается двумя блоками *из четырех* цифр, например `16.0.5197.1000`.
+  - Для Office 2019 `1808 (xxxxx.xxxxxx)`формат заканчивается двумя блоками *из пяти* цифр, `1808 (Build 10388.20027)`например . Обратите внимание, что год и месяц всегда .`1808`
 
-    - Для Office 2016 `16.0.xxxx.xxxxx`формат заканчивается двумя блоками *из четырех* цифр, например `16.0.5197.1000`.
-    - Для Office 2019 `1808 (xxxxx.xxxxxx)`формат заканчивается двумя блоками *из пяти* цифр, `1808 (Build 10388.20027)`например . Обратите внимание, что год и месяц всегда .`1808`
-
-|Версия Office|Потребительские и коммерческие|Edge WebView2 (Chromium на основе) установлен?|Браузер|
-|:-----|:-----|:-----|:-----|:-----|
-|Office 2013 | Всё равно |Всё равно|Internet Explorer 11|
-|Office 2016| Коммерческий сектор |Всё равно|Internet Explorer 11|
-|Office 2019| Коммерческий сектор |Всё равно|Internet Explorer 11|
-|Office 2016 – Office 2019| Клиент |Нет |Microsoft Edge<sup>1, 2 с</sup> исходным WebView (EdgeHTML)</br>Если edge не установлен, используется Internet Explorer 11.|
-|Office 2016 – Office 2019|  Клиент |Да<sup>3</sup>|Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе)|
-|Office 2021| Всё равно |Да<sup>3</sup> |Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе)|
+| Версия Office | Розничная и корпоративная лицензии | Edge WebView2 (Chromium на основе) установлен? | Браузер |
+|:-----|:-----|:-----|:-----|
+| Office 2013 | Всё равно | Всё равно | Internet Explorer 11 |
+| Office 2016 | Корпоративные лицензии | Всё равно | Internet Explorer 11 |
+| Office 2019 | Корпоративные лицензии | Всё равно | Internet Explorer 11 |
+| Office 2016 – Office 2019 | Розничная торговля | Нет | Microsoft Edge<sup>1, 2 с</sup> исходным WebView (EdgeHTML)</br>Если edge не установлен, используется Internet Explorer 11. |
+| Office 2016 – Office 2019 | Розничная торговля | Да<sup>3</sup> | Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе) |
+| Office 2021 | Всё равно | Да<sup>3</sup> | Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе) |
 
 <sup>1</sup> При использовании Microsoft Edge экранный диктор Windows (иногда называемый средством чтения с экрана) `<title>` считывает тег на странице, которая открывается в области задач. В Internet Explorer 11 экранный диктор считывает строку заголовка области задач, **\<DisplayName\>** которая поступает из значения в манифесте надстройки.
 
@@ -74,7 +73,7 @@ ms.locfileid: "67422952"
 
 <sup>3</sup> В версиях Windows, предшествующих Windows 11, необходимо установить элемент управления WebView2, чтобы Office его можно было внедрить. Он устанавливается с бессрочной Office 2021 или более поздней версии, но не устанавливается автоматически с Microsoft Edge. Если у вас есть более раннюю версию бессрочной версии Office, воспользуйтесь инструкциями по установке элемента управления в [Microsoft Edge WebView2 или внедрении веб-содержимого... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
 
-## <a name="microsoft-365-subscription-on-windows"></a>Подписка На Microsoft 365 в Windows
+## <a name="microsoft-365-subscription-office-on-windows"></a>Подписка Microsoft 365 на Office в Windows
 
 Для подписки Office в Windows используемый браузер определяется операционной системой, версией Office и установкой Edge WebView2 (Chromium на основе).
 
@@ -85,7 +84,7 @@ ms.locfileid: "67422952"
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;<&nbsp; 16.0.11629<sup>2</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Windows 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.11629&nbsp;_И_&nbsp;<&nbsp;16.0.13530.20424 <sup>2</sup>| Всё равно|Microsoft Edge<sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
 |Windows 10 ver.&nbsp;>=&nbsp; 1903,<br>Окно 11 | Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.20424<sup>2</sup>| Нет |Microsoft Edge<sup>1, 3 с</sup> исходным WebView (EdgeHTML)|
-|Windows 8.1<br>Windows 10,<br>Windows 11| Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.20424<sup>2</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе) |
+|Windows 8.1<br>Windows 10,<br>Windows 11| Microsoft 365 ver.&nbsp;>=&nbsp; 16.0.13530.20424<sup>2</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>1</sup> с WebView2 (Chromium на основе) |
 
 <sup>1</sup> При использовании Microsoft Edge экранный диктор Windows (иногда называемый средством чтения с экрана) `<title>` считывает тег на странице, которая открывается в области задач. В Internet Explorer 11 экранный диктор считывает строку заголовка области задач, **\<DisplayName\>** которая поступает из значения в манифесте надстройки.
 
@@ -130,7 +129,7 @@ Internet Explorer 11 не поддерживает версии JavaScript, бо
 
 ## <a name="wip-protected-documents"></a>Документы, защищенные WIP
 
-Надстройки, работающие в документе, защищенном [WIP](/windows/uwp/enterprise/wip-hub), никогда не используют **Microsoft Edge с WebView2 (Chromium на основе).** В разделах " Бессрочные версии [Office для Windows](#perpetual-versions-of-office-on-windows) и подписки [Microsoft 365 на Windows](#microsoft-365-subscription-on-windows)" выше в этой статье замените Microsoft Edge исходным **WebView (EdgeHTML)** для **Microsoft Edge на WebView2 (на основе Chromium),** где бы ни отображались последние.
+Надстройки, работающие в документе, защищенном [WIP](/windows/uwp/enterprise/wip-hub), никогда не используют **Microsoft Edge с WebView2 (Chromium на основе).** В разделах "Бессрочные версии [Office для Windows](#perpetual-versions-of-office-on-windows)" и [Microsoft 365 Subscription Office в Windows](#microsoft-365-subscription-office-on-windows), приведенных ранее в этой статье, замените Microsoft Edge исходным **WebView (EdgeHTML)** для **Microsoft Edge на WebView2 (на** Chromium основе), где бы ни отображались последние.
 
 Чтобы определить, защищен ли документ WIP, выполните следующие действия.
 

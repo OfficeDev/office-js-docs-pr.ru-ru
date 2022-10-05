@@ -1,34 +1,34 @@
 ---
 title: Использование веб-служб Exchange (EWS) из надстройки Outlook
 description: Содержит пример, в котором показано, как надстройка Outlook может запрашивать сведения из веб-службы Exchange.
-ms.date: 07/08/2022
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: a6e8c28469859ca5ff8a4413fae8feee73c1d5e3
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 94fff26fc7f9c16e2e385d6c44c128e4b03f968e
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958946"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467015"
 ---
 # <a name="call-web-services-from-an-outlook-add-in"></a>Вызов веб-служб из надстройки Outlook
 
-Ваша надстройка может использовать веб-службы Exchange (EWS) на компьютере с Exchange Server 2013; веб-службу, доступную на сервере, предоставляющем исходное расположение для пользовательского интерфейса надстройки; или веб-службу, доступную через Интернет. В этой статье приведен пример того, как надстройка Outlook может запрашивать данные из EWS.
+Your add-in can use Exchange Web Services (EWS) from a computer that is running Exchange Server 2013, a web service that is available on the server that provides the source location for the add-in's UI, or a web service that is available on the Internet. This article provides an example that shows how an Outlook add-in can request information from EWS.
 
-Способы вызова веб-службы различаются в зависимости от расположения службы. В таблице 1 приведены различные способы вызова веб-службы в зависимости от расположения.
+The way that you call a web service varies based on where the web service is located. Table 1 lists the different ways that you can call a web service based on location.
 
 **Таблица 1. Способы вызова веб-служб из надстройки Outlook**
 
 |**Расположение веб-службы**|**Способ вызова веб-службы**|
 |:-----|:-----|
-|Сервер Exchange, на котором размещен почтовый ящик клиента|Используйте метод [makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) для вызова операций EWS, поддерживаемых надстройками. Сервер Exchange Server, на котором размещен почтовый ящик, также предоставляет доступ к EWS.|
-|Веб-сервер, предоставляющий исходное расположение для пользовательского интерфейса надстроек.|Вызывайте веб-службу с помощью стандартных методик JavaScript. Код JavaScript в пределах пользовательского интерфейса работает в контексте веб-сервера, предоставляющего пользовательский интерфейс. Поэтому он сможет вызывать веб-службы на этом сервере, не создавая ошибки межсайтового скрипта.|
-|Все другие расположения|Создайте прокси для веб-службы на веб-сервере, предоставляющем исходное расположение для пользовательского интерфейса. Если не указать прокси, надстройка не запустится из-за ошибок межсайтовых сценариев. Один из способов указать такой прокси — это использовать JSON/P. Дополнительные сведения см. в статье [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md).|
+|Сервер Exchange, на котором размещен почтовый ящик клиента|Use the [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) method to call EWS operations that add-ins support. The Exchange server that hosts the mailbox also exposes EWS.|
+|Веб-сервер, предоставляющий исходное расположение для пользовательского интерфейса надстроек.|Call the web service by using standard JavaScript techniques. The JavaScript code in the UI frame runs in the context of the web server that provides the UI. Therefore, it can call web services on that server without causing a cross-site scripting error.|
+|Все другие расположения|Create a proxy for the web service on the web server that provides the source location for the UI. If you do not provide a proxy, cross-site scripting errors will prevent your add-in from running. One way to provide a proxy is by using JSON/P. For more information, see [Privacy and security for Office Add-ins](../concepts/privacy-and-security.md).|
 
 ## <a name="using-the-makeewsrequestasync-method-to-access-ews-operations"></a>Получение доступа к операциям веб-служб Exchange с помощью метода makeEwsRequestAsync
 
 С помощью метода [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) вы можете отправить запрос EWS на сервер Exchange Server, на котором размещается почтовый ящик пользователя.
 
-Веб-службы Exchange поддерживают различные операции на сервере Exchange. Например, операции копирования, поиска, обновления или отправки на уровне элемента, а также операции создания, получения или обновления на уровне папки. Чтобы выполнить операцию веб-служб Exchange, создайте для нее SOAP-запрос в формате XML. После завершения операции будет возвращен SOAP-ответ в формате XML с необходимыми данными. SOAP-запросы к веб-службам Exchange и их SOAP-ответы соответствуют схеме, определенной в файле Messages.xsd. Как и другие файлы схемы веб-служб Exchange, файл Message.xsd расположен в виртуальном каталоге IIS, в котором размещены веб-службы Exchange.
+EWS supports different operations on an Exchange server; for example, item-level operations to copy, find, update, or send an item, and folder-level operations to create, get, or update a folder. To perform an EWS operation, create an XML SOAP request for that operation. When the operation finishes, you get an XML SOAP response that contains data that is relevant to the operation. EWS SOAP requests and responses follow the schema defined in the Messages.xsd file. Like other EWS schema files, the Message.xsd file is located in the IIS virtual directory that hosts EWS.
 
 Чтобы использовать этот `makeEwsRequestAsync` метод для инициации операции EWS, укажите следующее:
 
@@ -154,7 +154,7 @@ function callback(asyncResult)  {
 
 1. Используйте результаты операции EWS в соответствии с вашими потребностями.
 
-В следующей таблице указаны операции EWS, которые надстройки поддерживают. Чтобы просмотреть примеры SOAP-запросов и SOAP-ответов, выберите ссылку для каждой операции. Дополнительные сведения об операциях EWS см. в статье [Операции EWS в Exchange](/exchange/client-developer/web-service-reference/ews-operations-in-exchange).
+The following table lists the EWS operations that add-ins support. To see examples of SOAP requests and responses, choose the link for each operation. For more information about EWS operations, see [EWS operations in Exchange](/exchange/client-developer/web-service-reference/ews-operations-in-exchange).
 
 **Таблица 2. Поддерживаемые операции EWS**
 
@@ -188,9 +188,14 @@ function callback(asyncResult)  {
 > [!NOTE]
 > Администратор сервера должен использовать [командлет New-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/New-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) или [Командлет Set-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/Set-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) , чтобы задать для параметра _OAuthAuthentication_ `true` значение в каталоге EWS сервера клиентского доступа, `makeEwsRequestAsync` чтобы разрешить методу выполнять запросы EWS.
 
-Для использования метода надстройка `ReadWriteMailbox` должна указать разрешение в манифесте надстройки `makeEwsRequestAsync` . Сведения об использовании разрешения см `ReadWriteMailbox` . в разделе " [Разрешение ReadWriteMailbox](understanding-outlook-add-in-permissions.md#readwritemailbox-permission) " в разделе "Общие сведения о разрешениях [надстроек Outlook"](understanding-outlook-add-in-permissions.md).
+Чтобы использовать этот `makeEwsRequestAsync` метод, надстройка должна запросить разрешение на чтение **и** запись почтового ящика в манифесте. Разметка зависит от типа манифеста.
 
-## <a name="see-also"></a>Дополнительные ресурсы
+- **XML-манифест**: задайте **\<Permissions\>** для элемента **значение ReadWriteMailbox**.
+- **Манифест Teams (** предварительная версия): задайте для свойства name объекта в массиве authorization.permissions.resourceSpecific значение Mailbox.ReadWrite.User.
+
+Сведения об использовании разрешения на чтение и **запись** почтового ящика см. в разделе разрешений на чтение [и запись почтового ящика](understanding-outlook-add-in-permissions.md#readwrite-mailbox-permission).
+
+## <a name="see-also"></a>См. также
 
 - [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md)
 - [Работа с ограничениями по принципу одинакового источника в надстройках Office](../develop/addressing-same-origin-policy-limitations.md)

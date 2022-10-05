@@ -1,32 +1,29 @@
 ---
 title: Среды выполнения в надстройки Office
 description: Сведения о средах выполнения, используемых надстройки Office.
-ms.date: 08/29/2022
+ms.date: 09/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d28f6db028d2f4c7036db51ccc5dbcc2144bdf3
-ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
+ms.openlocfilehash: c20845e6df6adfa2fa382f10e8c7f5de786aeab8
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616044"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467232"
 ---
 # <a name="runtimes-in-office-add-ins"></a>Среды выполнения в надстройки Office
 
-Надстройки Office выполняются в средах выполнения, внедренных в Office. В качестве интерпретируемого языка JavaScript должен выполняться в ядре JavaScript. В качестве однопотокного синхронного языка JavaScript не имеет встроенных возможностей для параллельного выполнения; но современные подсистемы JavaScript могут запрашивать параллельные операции (включая сетевое взаимодействие) из операционной системы узла и получать данные из ОПЕРАЦИОННОЙ СИСТЕМЫ в ответ. Этот тип обработчика делает JavaScript *эффективно* асинхронным. В этой статье подсистемы такой сортировки *называются средами выполнения*. [Node.js](https://nodejs.org) и современные браузеры являются примерами таких сред выполнения. 
+Надстройки Office выполняются в средах выполнения, внедренных в Office. В качестве интерпретируемого языка JavaScript должен выполняться в среде выполнения JavaScript. [Node.js](https://nodejs.org) и современные браузеры являются примерами таких сред выполнения. 
 
 ## <a name="types-of-runtimes"></a>Типы сред выполнения
 
 Надстройки Office могут использовать два типа сред выполнения:
 
-- Среда выполнения только для **JavaScript**: подсистема JavaScript, дополненная поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), полной [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)совместное использование ресурсов независимо от источника) и клиентского хранилища данных. (Он не поддерживает [локальное хранилище или](https://developer.mozilla.org/docs/Web/API/Window/localStorage) файлы cookie.) 
-- **Среда выполнения браузера**: включает все функции среды выполнения только для JavaScript и добавляет поддержку локального [хранилища, модуля](https://developer.mozilla.org/docs/Web/API/Window/localStorage) подготовки отчетов, который отображает HTML и файлы cookie. [](https://developer.mozilla.org/docs/Glossary/Rendering_engine)
+- Среда выполнения только для **JavaScript**: подсистема JavaScript, дополненная поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), полной [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)совместное использование ресурсов независимо от источника) и клиентского хранилища данных. Он не поддерживает [локальное хранилище или](https://developer.mozilla.org/docs/Web/API/Window/localStorage) файлы cookie.
+- **Среда выполнения браузера**: включает все функции среды выполнения только для JavaScript и добавляет поддержку локального [хранилища,](https://developer.mozilla.org/docs/Web/API/Window/localStorage) обработчика отрисовки, который отображает HTML и файлы cookie.[](https://developer.mozilla.org/docs/Glossary/Rendering_engine)
 
 Дополнительные сведения об этих типах см. далее в этой статье в среде выполнения [только для JavaScript](#javascript-only-runtime) и [в среде выполнения Браузера](#browser-runtime).
 
 В следующей таблице показано, какие возможные функции надстройки используют каждый тип среды выполнения. 
-
-> [!NOTE]
-> Выбор типа используемой среды выполнения — это сведения о реализации, которые корпорация Майкрософт может изменить в любое время. Библиотека JavaScript для Office не предполагает, что для конкретной функции всегда будет использоваться один и тот же тип среды выполнения, и архитектура надстройки не должна предполагать это.
 
 | Тип среды выполнения | Функция надстройки |
 |:-----|:-----|
@@ -118,7 +115,7 @@ ms.locfileid: "67616044"
 
 ## <a name="javascript-only-runtime"></a>Среда выполнения только для JavaScript
 
-Среда выполнения только для JavaScript, используемая в надстройки Office, представляет собой изменение среды открытый код, изначально созданной для [React Native.](https://reactnative.dev/) Он содержит подсистему JavaScript, дополненную поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), [Full CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общий доступ к ресурсам независимо от источника) и [OfficeRuntime.storage](/javascript/api/office-runtime/officeruntime.storage). У него нет обработчика отрисовки и он не поддерживает файлы cookie или [локальное хранилище](https://developer.mozilla.org/docs/Web/API/Window/localStorage).
+Среда выполнения только для JavaScript, используемая в надстройки Office, представляет собой изменение среды открытый код, изначально созданной для [React Native.](https://reactnative.dev/) Он содержит подсистему JavaScript, дополненную поддержкой [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), [Full CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общий доступ к ресурсам независимо от источника) и [OfficeRuntime.storage](/javascript/api/office-runtime/officeruntime.storage). У него нет обработчика отрисовки и он не поддерживает файлы cookie или [локальное хранилище](https://developer.mozilla.org/docs/Web/API/Window/localStorage). 
 
 Этот тип среды выполнения используется в задачах На основе событий Outlook только в Office для Windows и в пользовательских функциях  Excel, за исключением случаев, когда пользовательские функции совместно [работают со средой выполнения](#shared-runtime). 
 
@@ -135,7 +132,7 @@ ms.locfileid: "67616044"
 
 Надстройки Office используют другую среду выполнения браузера в зависимости от платформы, на которой работает Office (Веб, Mac или Windows), а также от версии и сборки Windows и Office. Например, если пользователь выполняет Office в Интернете в браузере FireFox, используется среда выполнения Firefox. Если пользователь работает под управлением Office на Mac, используется среда выполнения Safari. Если пользователь работает с Office в Windows, то среда выполнения предоставляется в Edge или Internet Explorer в зависимости от версии Windows и Office. Подробные сведения можно найти в [браузерах, используемых надстройки Office](../concepts/browsers-used-by-office-web-add-ins.md).
 
-Все эти среды выполнения включают обработчик отрисовки HTML и обеспечивают поддержку [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), полной [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общего доступа к ресурсам независимо от источника[](https://developer.mozilla.org/docs/Web/API/Window/localStorage)) и локального хранилища и файлов cookie. 
+Все эти среды выполнения включают обработчик отрисовки HTML и обеспечивают поддержку [WebSocket](https://developer.mozilla.org/docs/Web/API/WebSockets_API), полной [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общего доступа к ресурсам независимо от источника[](https://developer.mozilla.org/docs/Web/API/Window/localStorage)) и локального хранилища и файлов cookie.
 
 Жизненный цикл среды выполнения браузера зависит от реализуемой функции и от того, предоставляется ли к ней общий доступ.
 

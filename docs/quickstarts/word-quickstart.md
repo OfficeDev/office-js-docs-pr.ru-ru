@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/10/2022
 ms.prod: word
 ms.localizationpriority: high
-ms.openlocfilehash: cf16287aa7bc52b9a716ca07db3b86a9ec5ff22c
-ms.sourcegitcommit: d1541634997c26f8ea22057b1d39074b01757c27
-ms.translationtype: HT
+ms.openlocfilehash: b0d60a9b86847a968efa82eaf556af107f21f390
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66789117"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467267"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -21,7 +21,7 @@ ms.locfileid: "66789117"
 
 # <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
-### <a name="prerequisites"></a>Необходимые условия
+### <a name="prerequisites"></a>Необходимые компоненты
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "66789117"
 
 ### <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку области задач Word! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь [руководством по надстройкам Word](../tutorials/word-tutorial.md).
+Congratulations, you've successfully created a Word task pane add-in! Next, learn more about the capabilities of a Word add-in and build a more complex add-in by following along with the [Word add-in tutorial](../tutorials/word-tutorial.md).
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/visualstudio)
 
@@ -100,7 +100,7 @@ ms.locfileid: "66789117"
 
 3. Присвойте проекту имя и нажмите кнопку **Создать**.
 
-4. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
+4. Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.
 
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
@@ -108,7 +108,7 @@ ms.locfileid: "66789117"
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
+1. **Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.
 
     ```html
     <body>
@@ -134,7 +134,7 @@ ms.locfileid: "66789117"
     </body>
     ```
 
-2. Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+2. Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.
 
     [!include[Information about the use of ES6 JavaScript](../includes/modern-js-note.md)]
 
@@ -234,7 +234,7 @@ ms.locfileid: "66789117"
     })();
     ```
 
-3. Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+3. Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.
 
     ```css
     #content-header {
@@ -265,13 +265,13 @@ ms.locfileid: "66789117"
 
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
+1. Open the XML manifest file in the add-in project. This file defines the add-in's settings and capabilities.
 
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+2. The `ProviderName` element has a placeholder value. Replace it with your name.
 
-3. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.
+3. The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.
 
-4. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
+4. The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Word**.
 
 5. Сохраните файл.
 
@@ -287,9 +287,9 @@ ms.locfileid: "66789117"
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу **F5** или **Отладка** > **Начать отладку**, чтобы запустить Word с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. Using Visual Studio, test the newly created Word add-in by pressing **F5** or choosing **Debug** > **Start Debugging** to launch Word with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.
 
-2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете единовременно приобретенную версию Office, а не версию Microsoft 365, пользовательские кнопки не поддерживаются. Сразу откроется область задач.)
+2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете бессрочную версию Office с корпоративным лицензированием, а не версию Microsoft 365 или розничную бессрочную версию, пользовательские кнопки не поддерживаются. Сразу откроется область задач.)
 
     ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач".](../images/word-quickstart-addin-0.png)
 

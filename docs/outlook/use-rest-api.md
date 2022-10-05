@@ -1,18 +1,18 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
-ms.date: 09/02/2022
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b460dbd150ec4806c562cf0fb2bc6e920beaa4c5
-ms.sourcegitcommit: 54a7dc07e5f31dd5111e4efee3e85b4643c4bef5
+ms.openlocfilehash: 9f62b2514f05341531a826c29e18c593a590fca0
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67857552"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467218"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
-Пространство имен [Office.context.mailbox.item](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
+The [Office.context.mailbox.item](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item) namespace provides access to many of the common fields of messages and appointments. However, in some scenarios an add-in may need to access data that is not exposed by the namespace. For example, the add-in may rely on custom properties set by an outside app, or it needs to search the user's mailbox for messages from the same sender. In these scenarios, the [Outlook REST APIs](/outlook/rest) is the recommended method to retrieve the information.
 
 > [!IMPORTANT]
 > **Интерфейсы REST API Outlook устарели**
@@ -25,15 +25,16 @@ ms.locfileid: "67857552"
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 
-Интерфейсам REST API для Outlook необходим маркер носителя в заголовке `Authorization`. Как правило, приложения используют потоки OAuth2 для получения маркера. Однако надстройка может получить маркер без реализации OAuth2, используя новый метод [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods), который появился в наборе требований 1.5 для почтовых ящиков.
+The Outlook REST APIs require a bearer token in the `Authorization` header. Typically apps use OAuth2 flows to retrieve a token. However, add-ins can retrieve a token without implementing OAuth2 by using the new [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) method introduced in the Mailbox requirement set 1.5.
 
 Задав для параметра `isRest` значение `true`, вы можете запросить маркер, совместимый с интерфейсами REST API.
 
 ### <a name="add-in-permissions-and-token-scope"></a>Разрешения надстроек и область маркера
 
-Важно учитывать уровень доступа через интерфейсы REST API, который потребуется надстройке. В большинстве случаев маркер, возвращенный методом `getCallbackTokenAsync`, предоставляет доступ только для чтения и только для текущего элемента. Это верно, даже если в манифесте надстройки указан уровень разрешений `ReadWriteItem`.
+Важно учитывать уровень доступа через интерфейсы REST API, который потребуется надстройке. В большинстве случаев маркер, возвращенный методом `getCallbackTokenAsync`, предоставляет доступ только для чтения и только для текущего элемента. Это верно, даже если надстройка указывает уровень разрешений на чтение [и](understanding-outlook-add-in-permissions.md#readwrite-item-permission) запись элемента в манифесте.
 
-Если надстройке требуется доступ на запись к текущему элементу или другим элементам в почтовом ящике пользователя, в манифесте надстройки необходимо указать уровень разрешений `ReadWriteMailbox`. В этом случае возвращаемый маркер предоставляет доступ на чтение и запись к сообщениям, событиям и контактам пользователя.
+Если надстройке потребуется доступ на запись к текущему элементу или другим элементам в почтовом ящике пользователя, надстройка должна указать разрешение на чтение и запись почтового [ящика](understanding-outlook-add-in-permissions.md#readwrite-mailbox-permission).
+в манифесте. В этом случае возвращаемый маркер предоставляет доступ на чтение и запись к сообщениям, событиям и контактам пользователя.
 
 ### <a name="example"></a>Пример
 
@@ -79,7 +80,7 @@ function getItemRestId() {
 
 ## <a name="get-the-rest-api-url"></a>Использование URL-адреса REST API
 
-Последнее значение, необходимое надстройке для вызова REST API, — это имя узла, используемое для отправки запросов API. Оно содержится в свойстве [Office.context.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties).
+The final piece of information your add-in needs to call the REST API is the hostname it should use to send API requests. This information is in the [Office.context.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties) property.
 
 ### <a name="example"></a>Пример
 

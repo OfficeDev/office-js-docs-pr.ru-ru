@@ -1,14 +1,14 @@
 ---
 title: Просмотр и изменение данных элемента в форме создания элементов Outlook
 description: Просматривайте и устанавливайте различные свойства элемента в надстройке Outlook при сценарии создания, такие как сведения о получателях, тема, текст, а также место и время встречи.
-ms.date: 12/10/2019
+ms.date: 10/03/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ddc6cd0011060bc49d1fd5cd8e6c9ceebb2a8c08
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 2ae4b6a30d08199207faf89079c57fbff46d6a0e
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958981"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467240"
 ---
 # <a name="get-and-set-item-data-in-a-compose-form-in-outlook"></a>Просмотр и изменение данных элемента в форме создания элементов Outlook
 
@@ -18,11 +18,11 @@ ms.locfileid: "66958981"
 
 В формах создания можно получить доступ к большинству свойств, предоставляемых таким типом элемента в форме чтения (например, участники, получатели, тема и текст), а несколько дополнительных свойств доступны только в форме создания (текст, СК).
 
-Методы получения и задания большинства этих свойств асинхронные, так как надстройка Outlook и пользователь могут изменять одно свойство в пользовательском интерфейсе одновременно. В таблице 1 перечислены свойства уровня элемента и соответствующие асинхронные методы, позволяющие их получить и задать в форме создания. Исключение составляют свойства [item.itemType](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [item.conversationId](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), потому что пользователи не могут их менять. Их можно получить программно в форме создания так же, как и в форме чтения, напрямую из родительского объекта.
+For most of these properties, because it's possible that an Outlook add-in and the user can be modifying the same property in the user interface at the same time, the methods to get and set them are asynchronous. Table 1 lists the item-level properties and corresponding asynchronous methods to get and set them in a compose form. The  [item.itemType](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) and [item.conversationId](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) properties are exceptions because users cannot modify them. You can programmatically get them the same way in a compose form as in a read form, directly from the parent object.
 
-Кроме доступа к свойствам элементов в API JavaScript для Office, доступ к свойствам на уровне элементов можно получить с помощью веб-служб Exchange (EWS). Имея разрешение **ReadWriteMailbox**, вы можете получать и задавать дополнительные свойства элементов в почтовом ящике пользователя, используя метод [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) для доступа к операциям EWS [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) и [UpdateItem](/exchange/client-developer/web-service-reference/updateitem-operation).
+Кроме доступа к свойствам элементов в API JavaScript для Office, доступ к свойствам на уровне элементов можно получить с помощью веб-служб Exchange (EWS). С разрешением на чтение и запись почтового ящика можно использовать метод [mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) для доступа к операциям EWS, [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) и [UpdateItem](/exchange/client-developer/web-service-reference/updateitem-operation), чтобы получить и задать дополнительные свойства элемента или элементов в почтовом ящике пользователя.
 
-Метод `makeEwsRequestAsync` доступен как в формах создания, так и для чтения. Дополнительные сведения о разрешении **ReadWriteMailbox** и доступе к EWS с помощью платформы надстроек Office см. в статьях [Общие сведения о разрешениях для надстроек Outlook](understanding-outlook-add-in-permissions.md) и [Вызов веб-служб из надстройки Outlook](web-services.md).
+Метод `makeEwsRequestAsync` доступен как в формах создания, так и для чтения. Дополнительные сведения о разрешении на чтение и запись почтового ящика и доступе к веб-службам EWS через платформу надстроек Office см. в статье "Общие сведения о разрешениях надстроек [Outlook](understanding-outlook-add-in-permissions.md) и вызове веб-служб из надстройки [Outlook"](web-services.md).
 
 **Таблица 1. Асинхронные методы для просмотра или изменения свойств элемента в форме создания**
 

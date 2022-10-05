@@ -1,25 +1,25 @@
 ---
 title: Разработка надстроек Outlook для форм создания
 description: Узнайте о сценариях и возможностях надстроек Outlook для форм создания.
-ms.date: 02/09/2021
+ms.date: 10/03/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 4dd39bd73cbc1c37783c13adb9b4f9f98925b9cf
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
-ms.translationtype: HT
+ms.openlocfilehash: ef81b21eaa0bc63a5bf38757cb188e8850ade443
+ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484003"
+ms.lasthandoff: 10/05/2022
+ms.locfileid: "68467253"
 ---
 # <a name="create-outlook-add-ins-for-compose-forms"></a>Разработка надстроек Outlook для форм создания
 
-Начиная со схемы манифестов 1.1 для надстроек Office и файла Office.js 1.1, вы можете разрабатывать надстройки создания — надстройки Outlook, которые активируются в формах создания. В отличие от надстроек чтения (надстроек Outlook, которые активируются в режиме чтения, когда пользователь просматривает сообщение или сведения о встрече), надстройки создания доступны в следующих сценариях.
+Вы можете создавать надстройки compose, которые являются надстройки Outlook, активированные в формах создания. В отличие от надстроек чтения (надстройки Outlook, которые активируются в режиме чтения, когда пользователь просматривает сообщение или встречу), надстройки создания доступны в следующих сценариях пользователя.
 
 - Создание сообщения, приглашения на собрание или встречи в отдельной форме.
 
 - Просмотр или редактирование существующих встречи или собрания, организованных пользователем.
 
    > [!NOTE]
-   > Если пользователь применяет выпуски Outlook 2013 RTM и Exchange 2013 RTM и просматривает собрание, организованное пользователем, он может найти доступные надстройки чтения. Начиная с выпуска Office 2013 с пакетом обновления 1 (SP1) только надстройки создания могут активироваться и быть доступными.
+   > If the user is on the RTM release of Outlook 2013 and Exchange 2013 and is viewing a meeting item organized by the user, the user can find read add-ins available. Starting in the Office 2013 SP1 release, there's a change such that in the same scenario, only compose add-ins can activate and be available.
 
 - Создание ответа на сообщение (встроенного или в отдельной форме).
 
@@ -29,7 +29,7 @@ ms.locfileid: "64484003"
 
 - Пересылка или ответ на приглашение на собрание или элемент собрания.
 
-В каждом из этих сценариев отображаются все определенные кнопки команд надстройки. В старых надстройках, в которых не реализованы команды, пользователи могут выбрать элемент **Надстройки Office** на ленте, чтобы открыть область выбора надстроек, а затем выбрать и запустить надстройку создания. На рисунке ниже показаны команды надстройки в форме создания.
+In each of these compose scenarios, any add-in command buttons defined by the add-in are shown. For older add-ins that do not implement add-in commands, users can choose **Office Add-ins** in the ribbon to open the add-in selection pane, and then choose and start a compose add-in. The following figure shows add-in commands in a compose form.
 
 ![Форма создания элемента Outlook с командами надстройки](../images/compose-form-commands.png)
 
