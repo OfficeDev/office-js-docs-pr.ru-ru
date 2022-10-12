@@ -1,18 +1,18 @@
 ---
 title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
-ms.date: 07/11/2022
+ms.date: 10/11/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 80f1e1f4386b41012b2aa777c16225d3f0fd8432
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: d029fd4acc1a32c912c73d6e5f468b9c217b9262
+ms.sourcegitcommit: 787fbe4d4a5462ff6679ad7fd00748bf07391610
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423246"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68546461"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 
-Команды надстроек Outlook позволяют вызывать определенные действия надстроек с ленты путем добавления кнопок или раскрывающихся меню. Благодаря этому пользователи могут легко получать доступ к надстройкам простым и интуитивно понятным способом. Так как команды надстроек предлагают удобные расширенные функции, с их помощью вы можете создавать более интересные решения.
+Outlook add-in commands provide ways to initiate specific add-in actions from the ribbon by adding buttons or drop-down menus. This lets users access add-ins in a simple, intuitive, and unobtrusive way. Because they offer increased functionality in a seamless manner, you can use add-in commands to create more engaging solutions.
 
 > [!NOTE]
 > Команды надстроек доступны только в Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook для iOS, Outlook для Android, Outlook в Интернете для Exchange 2016 или более поздней версии, Outlook в Интернете для Microsoft 365 и Outlook.com.
@@ -24,17 +24,31 @@ ms.locfileid: "67423246"
 >
 > Для поддержки команд надстроек в Exchange 2016 требуется [накопительный пакет обновления 5](https://support.microsoft.com/topic/d67d7693-96a4-fb6e-b60b-e64984e267bd).
 
-Команды надстроек доступны в тех надстройках, где не используются [правила ItemHasAttachment, ItemHasKnownEntity и ItemHasRegularExpressionMatch](activation-rules.md), для ограничения типов элементов, активирующих надстройки. В [контекстных надстройках](contextual-outlook-add-ins.md) могут отображаться разные команды в зависимости от того, какой элемент выбран (сообщение или встреча), и они могут работать в режимах просмотра и создания. [Рекомендуем](../concepts/add-in-development-best-practices.md) использовать команды надстроек по мере возможности.
+> [!TIP]
+> Если надстройка использует XML-манифест, команды надстроек доступны только для надстроек, которые не используют [правила ItemHasAttachment, ItemHasKnownEntity или ItemHasRegularExpressionMatch](activation-rules.md) , чтобы ограничить типы элементов, в которых они активируются. Однако [контекстные](contextual-outlook-add-ins.md) надстройки могут представлять различные команды в зависимости от того, является ли текущий выбранный элемент сообщением или встречей, и могут отображаться в сценариях чтения или создания. [Рекомендуем](../concepts/add-in-development-best-practices.md) использовать команды надстроек по мере возможности.
 
-## <a name="create-the-add-in-command"></a>Создание команды надстройки
+## <a name="create-the-ui-for-the-add-in-command"></a>Создание пользовательского интерфейса для команды надстройки
 
-Команды надстроек объявляются в манифесте в элементе [VersionOverrides](/javascript/api/manifest/versionoverrides). Этот элемент является дополнением к схеме манифестов версии 1.1, которая обеспечивает обратную совместимость. В клиенте, который не поддерживает узел **\<VersionOverrides\>**, имеющиеся надстройки продолжат работать так же, как и без команд надстроек.
+Команды надстройки объявляются в манифесте надстройки. Разметка зависит от типа манифеста.
+
+# <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
+
+Команды надстройки объявляются в [элементе VersionOverrides](/javascript/api/manifest/versionoverrides). Этот элемент является дополнением к схеме XML-манифеста версии 1.1, которая обеспечивает обратную совместимость. В клиенте, который не поддерживает узел **\<VersionOverrides\>**, имеющиеся надстройки продолжат работать так же, как и без команд надстроек.
 
 В записях манифеста **\<VersionOverrides\>** указывается множество свойств надстройки, например приложение, типы элементов управления, добавляемых на ленту, текст, значки и соответствующие функции.
 
-Если надстройка должна показывать индикаторы хода выполнения или сообщения об ошибках, она должна делать это через [API уведомления](/javascript/api/outlook/office.notificationmessages). Обработка уведомлений также должна быть определена в отдельном HTML-файле, указанном в узле `FunctionFile` манифеста.
+When an add-in needs to provide status updates, such as progress indicators or error messages, it must do so through the [notification APIs](/javascript/api/outlook/office.notificationmessages). The processing for the notifications must also be defined in a separate HTML file that is specified in the `FunctionFile` node of the manifest.
 
-Разработчикам следует определить значки всех требуемых размеров, чтобы команды надстройки плавно изменялись при изменении размера ленты. Количество пикселей, составляющее требуемый размер значков: 80 x 80, 32 x 32 и 16 x 16 для компьютера, а также 48 x 48, 32 x 32 и 25 x 25 для мобильного устройства.
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+Команды надстроек объявляются со свойствами extensions.runtimes и extensions.ribbons. Эти свойства задают для надстройки множество вещей, таких как приложение, типы элементов управления, добавляемого на ленту, текст, значки и все связанные функции.
+
+Если надстройка должна предоставлять сведения о состоянии, например индикаторы хода выполнения или сообщения об ошибках, это необходимо сделать с помощью [API-интерфейсов уведомлений](/javascript/api/outlook/office.notificationmessages). Обработка уведомлений также должна быть определена в отдельном HTML-файле, указанном в свойстве runtimes.code.page манифеста.
+
+---
+### <a name="icons"></a>Значки
+
+Developers should define icons for all required sizes so that the add-in commands will adjust smoothly along with the ribbon. The required icon sizes are 80 x 80 pixels, 32 x 32 pixels, and 16 x 16 pixels for desktop, and 48 x 48 pixels, 32 x 32 pixels, and 25 x 25 pixels for mobile.
 
 ## <a name="how-do-add-in-commands-appear"></a>Отображение команд надстройки
 
@@ -46,7 +60,7 @@ ms.locfileid: "67423246"
 
 ![Кнопки команд надстройки на ленте и в меню переполнения.](../images/commands-collapsed.png)
 
-При добавлении команды в надстройку имя надстройки удаляется с панели приложения. На ленте остается только кнопка надстройки.
+When an add-in command is added to an add-in, the add-in name is removed from the app bar. Only the add-in command button on the ribbon remains.
 
 ### <a name="modern-outlook-on-the-web"></a>Современная версия Outlook в Интернете
 
@@ -68,7 +82,7 @@ ms.locfileid: "67423246"
 
 ### <a name="run-a-function-command"></a>Выполнение команды функции
 
-Командные кнопки, выполняющие функцию JavaScript, используются для тех случаев, когда пользователю не требуется выбирать дополнительные параметры действия. Это могут быть такие действия, как отслеживание, напоминание или печать. Их также можно использовать для получения более подробных сведений от службы.
+Use an add-in command button that executes a JavaScript function for scenarios where the user doesn't need to make any additional selections to initiate the action. This can be for actions such as track, remind me, or print, or scenarios when the user wants more in-depth information from a service.
 
 В расширениях модуля кнопка команды надстройки может выполнять функции JavaScript, взаимодействующие с содержимым в основном пользовательском интерфейсе.
 
@@ -76,17 +90,17 @@ ms.locfileid: "67423246"
 
 ### <a name="launch-a-task-pane"></a>Запуск области задач
 
-Командные кнопки надстроек, запускающие область задач, используются в тех случаях, когда пользователю нужно работать с надстройкой длительное время. Например, надстройке может потребоваться изменить параметры или заполнить множество полей.
+Use an add-in command button to launch a task pane for scenarios where a user needs to interact with an add-in for a longer period of time. For example, the add-in requires changes to settings or the completion of many fields.
 
-По умолчанию ширина вертикальной области задач составляет 320 точек. Размер области задач можно изменить как в проводнике Outlook, так и в инспекторе. Изменить размеры области можно будет точно так же, как и размеры панели списка дел и представления списка.
+The default width of the vertical task pane is 320 px. The vertical task pane can be resized in both the Outlook Explorer and inspector. The pane can be resized in the same way the to-do pane and list view resize.
 
 ![Кнопка, открывающая область задач, на ленте Outlook.](../images/commands-task-pane-button-1.png)
 
 <br/>
 
-На этом снимке экрана показан пример вертикальной области задач. В левом верхнем углу области указано имя команды надстройки. Пользователи могут нажать кнопку **X** в правом верхнем углу области, чтобы закрыть надстройку после завершения работы с ней. По умолчанию эта область не сохраняется в сообщениях. Надстройки могут [поддерживать закрепление](pinnable-taskpane.md) в области задач и получать события при выборе нового сообщения. Все элементы пользовательского интерфейса в области задач, кроме имени надстройки и кнопки "Закрыть", предоставляются надстройкой.
+This screenshot shows an example of a vertical task pane. The pane opens with the name of the add-in command in the top left corner. Users can use the **X** button in the upper-right corner of the pane to close the add-in when they are finished using it. By default, this pane will not persist across messages. Add-ins can [support pinning](pinnable-taskpane.md) for the task pane and receive events when a new message is selected. All UI elements rendered in the task pane, aside from the add-in name and the close button, are provided by the add-in.
 
-Если пользователь выбирает другую команду надстройки, которая открывает область задач, то область задач заменяется выбранной командой. Когда пользователь нажимает командную кнопку, которая выполняет функцию, или раскрывающееся меню при открытой области задач, действие будет выполнено, а область задач останется открытой.
+If a user chooses another add-in command that opens a task pane, the task pane is replaced with the recently used command. If a user chooses an add-in command button that executes a function, or drop-down menu while the task pane is open, the action will be completed and the task pane will remain open.
 
 ### <a name="drop-down-menu"></a>Раскрывающееся меню
 
@@ -108,11 +122,11 @@ ms.locfileid: "67423246"
 
 ### <a name="creating-or-viewing-an-appointment-or-meeting-as-the-organizer"></a>Создание или просмотр встречи или собрания организатором
 
-Когда организатор создает или просматривает встречу или собрание, команды надстройки, добавленные на вкладку по умолчанию, отображаются на вкладках **Собрание**, **Экземпляр собрания**, **Ряд собраний** или **Встреча** во всплывающих формах. Тем не менее, если пользователь выберет элемент календаря, но не откроет всплывающее окно, группа надстройки не будет отображаться на ленте.
+When creating or viewing an appointment or meeting as the organizer, add-in commands added to the default tab appear on the **Meeting**, **Meeting Occurrence**, **Meeting Series**, or **Appointment** tabs on pop-out forms. However, if the user selects an item in the calendar but doesn't open the pop-out, the add-in's ribbon group won't be visible in the ribbon.
 
 ### <a name="viewing-a-meeting-as-an-attendee"></a>Просмотр собрания участником
 
-Когда участник просматривает собрание, команды надстройки, добавленные на вкладку по умолчанию, отображаются на вкладках **Собрание**, **Экземпляр собрания** или **Ряд собраний** всплывающих форм. Тем не менее, если пользователь выберет элемент календаря, не открывая всплывающее окно, группа надстройки не будет отображаться на ленте.
+When viewing a meeting as an attendee, add-in commands added to the default tab appear on the **Meeting**, **Meeting Occurrence**, or **Meeting Series** tabs on pop-out forms. However, if a user selects an item in the calendar but doesn't open the pop-out, the add-in's ribbon group won't be visible in the ribbon
 
 ### <a name="using-a-module-extension"></a>Использование расширения модуля
 
