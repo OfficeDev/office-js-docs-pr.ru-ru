@@ -1,20 +1,20 @@
 ---
 title: Просмотр и изменение получателей в надстройке Outlook
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
-ms.date: 07/08/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: bcc4a76ef89e3bfaf7e884ad2fa4e1595782c62f
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: de47d2ee238ffe55ab0b5ee460096717557e4dba
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958322"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541270"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
-API JavaScript для Office предоставляет асинхронные методы ([Recipients.getAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-getasync-member(1)), [Recipients.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1)) или [Recipients.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))) для получения, задания или добавления получателей в форме создания встречи или сообщения. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "Создание надстроек [Outlook](compose-scenario.md) для форм создания".
+API JavaScript для Office предоставляет асинхронные методы ([Recipients.getAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-getasync-member(1)), [Recipients.setAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-setasync-member(1)) или [Recipients.addAsync](/javascript/api/outlook/office.recipients#outlook-office-recipients-addasync-member(1))) для получения, задания или добавления получателей в форме создания встречи или сообщения. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "Создание надстроек [Outlook](compose-scenario.md) для форм создания". Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
-Некоторые свойства, представляющие получателей в сообщении или встрече, доступны для чтения в формах создания и чтения. Это свойства [optionalAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [requiredAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) для встреч, а также свойства [cc](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [to](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) для сообщений.
+Some of the properties that represent recipients in an appointment or message are available for read access in a compose form and in a read form. These properties include  [optionalAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) and [requiredAttendees](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) for appointments, and [cc](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties), and  [to](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) for messages.
 
 В форме чтения доступ к свойству можно получить напрямую из родительского объекта, например:
 
@@ -34,7 +34,7 @@ item.cc.getAsync
 
 ## <a name="get-recipients"></a>Извлечение получателей
 
-В этом разделе показан пример кода, извлекающий получателей создаваемой встречи или сообщения, и показывающий адреса электронной почты получателей. В примере предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения, как показано ниже.
+This section shows a code sample that gets the recipients of the appointment or message that is being composed, and displays the email addresses of the recipients. The code sample assumes a rule in the add-in manifest that activates the add-in in a compose form for an appointment or message, as shown below.
 
 ```XML
 <Rule xsi:type="RuleCollection" Mode="Or">
@@ -307,8 +307,8 @@ function addAttendees() {
 - [Просмотр и изменение данных элемента в форме создания элементов Outlook](get-and-set-item-data-in-a-compose-form.md)
 - [Просмотр и изменение данных элемента Outlook в формах просмотра и создания](item-data.md)
 - [Создание надстроек Outlook для форм создания](compose-scenario.md)
-- [Асинхронное программирование надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)
-- [Просмотр или изменение темы при создании встречи или сообщения в Outlook](get-or-set-the-subject.md)
+- [Асинхронное программирование в случае надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)
+- [Считывание и запись темы при создании встречи или сообщения в Outlook](get-or-set-the-subject.md)
 - [Вставка данных в текст при создании встречи или сообщения в Outlook](insert-data-in-the-body.md)
 - [Просмотр или изменение расположения при создании встречи в Outlook](get-or-set-the-location-of-an-appointment.md)
 - [Просмотр или изменение времени при создании встречи в Outlook](get-or-set-the-time-of-an-appointment.md)
