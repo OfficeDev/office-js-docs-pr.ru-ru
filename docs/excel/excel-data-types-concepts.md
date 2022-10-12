@@ -1,21 +1,19 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 09/01/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: a5f742e47d698b215a999b966c424819e182ea49
-ms.sourcegitcommit: 889d23061a9413deebf9092d675655f13704c727
+ms.openlocfilehash: b46639bdf44155f9e3de50526ce7eac48c278b12
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616023"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541152"
 ---
-# <a name="excel-data-types-core-concepts-preview"></a>Основные понятия, связанные с типами данных Excel (предварительная версия)
-
-[!include[Data types preview availability note](../includes/excel-data-types-preview.md)]
+# <a name="excel-data-types-core-concepts"></a>Основные понятия, связанные с типами данных Excel
 
 В этой статье рассказывается о том, как использовать [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) для работы с типами данных. Здесь представлены основные понятия, лежащие в основе разработки типов данных.
 
@@ -116,7 +114,7 @@ const myEntity: Excel.EntityCellValue = {
 
 ## <a name="web-image-values"></a>Веб-изображение
 
-Объект [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) создает возможность хранения изображения как части [сущности](#entity-values) или как независимого значения в диапазоне. Этот объект позволяет использовать множество свойств, включая `address`, `altText` и `relatedImagesAddress`.
+The [WebImageCellValue](/javascript/api/excel/excel.webimagecellvalue) object creates the ability to store an image as part of an [entity](#entity-values) or as an independent value in a range. This object offers many properties, including `address`, `altText`, and `relatedImagesAddress`.
 
 Свойства `basicType` и `basicValue` определяют, как вычисления читают этот тип данных веб-изображения, если минимальные требования к совместимости для использования функции типов данных не выполнены. В этом сценарии этот тип данных веб-изображения отображается как ошибка **#VALUE!** в пользовательском интерфейсе Excel.
 

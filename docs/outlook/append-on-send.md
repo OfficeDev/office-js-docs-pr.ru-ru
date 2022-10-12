@@ -2,14 +2,14 @@
 title: Реализация добавления при отправке в надстройке Outlook
 description: Узнайте, как реализовать функцию добавления при отправке в надстройке Outlook.
 ms.topic: article
-ms.date: 07/07/2022
+ms.date: 10/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 762d8d14bb09d50c836b9a097534d1d23c493e66
-ms.sourcegitcommit: d8ea4b761f44d3227b7f2c73e52f0d2233bf22e2
+ms.openlocfilehash: 18d3e8300a53d08cf484f14cd4fd05adf6382fe3
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66712974"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541145"
 ---
 # <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация добавления при отправке в надстройке Outlook
 
@@ -22,7 +22,14 @@ ms.locfileid: "66712974"
 
 Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора Yeoman для надстроек Office.
 
+> [!NOTE]
+> Если вы хотите использовать манифест Teams для надстроек [Office (](../develop/json-manifest-overview.md)предварительная версия), выполните альтернативное краткое руководство в Outlook с помощью манифеста [Teams (](../quickstarts/outlook-quickstart-json-manifest.md)предварительная версия), но пропустите все разделы после раздела **"** Попробовать".
+
 ## <a name="configure-the-manifest"></a>Настройка манифеста
+
+Чтобы настроить манифест, откройте вкладку для типа манифеста, который вы используете.
+
+# <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
 
 Чтобы включить функцию добавления при отправке в надстройке, `AppendOnSend` необходимо включить разрешение в коллекцию [ExtendedPermissions](/javascript/api/manifest/extendedpermissions).
 
@@ -38,7 +45,7 @@ ms.locfileid: "66712974"
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
       <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
         <Requirements>
-          <bt:Sets DefaultMinVersion="1.3">
+          <bt:Sets DefaultMinVersion="1.9">
             <bt:Set Name="Mailbox" />
           </bt:Sets>
         </Requirements>
@@ -118,6 +125,58 @@ ms.locfileid: "66712974"
       </VersionOverrides>
     </VersionOverrides>
     ```
+
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+1. Откройте файл manifest.json.
+
+1. Добавьте следующий объект в массив extensions.runtimes. Обратите внимание на указанные ниже аспекты этого кода.
+
+   - Для параметра minVersion набора обязательных элементов почтового ящика задано значение 1.9, поэтому надстройку нельзя установить на платформах и в версиях Office, где эта функция не поддерживается. 
+   - Для "id" среды выполнения задается описательное имя "function_command_runtime".
+   - Свойству code.page "code.page" задается URL-адрес HTML-файла без пользовательского интерфейса, который будет загружать команду функции.
+   - Для свойства lifetime задано значение "short". Это означает, что среда выполнения запускается при нажатии кнопки команды функции и завершает работу после завершения работы функции. (В некоторых редких случаях среда выполнения завершает работу до завершения работы обработчика. См [. раздел "Среды выполнения" в надстройки Office](../testing/runtimes.md).)
+   - Существует действие для запуска функции с именем appendDisclaimerOnSend. Вы создадите эту функцию на следующем шаге.
+
+    ```json
+    {
+        "requirements": {
+            "capabilities": [
+                {
+                    "name": "Mailbox",
+                    "minVersion": "1.9"
+                }
+            ],
+            "formFactors": [
+                "desktop"
+            ]
+        },
+        "id": "function_command_runtime",
+        "type": "general",
+        "code": {
+            "page": "https://localhost:3000/commands.html"
+        },
+        "lifetime": "short",
+        "actions": [
+            {
+                "id": "appendDisclaimerOnSend",
+                "type": "executeFunction",
+                "displayName": "appendDisclaimerOnSend"
+            }
+        ]
+    }
+    ```
+
+1. В массиве authorization.permissions.resourceSpecific добавьте следующий объект. Убедитесь, что он отделен от других объектов в массиве запятой.
+
+    ```json
+    {
+      "name": "Mailbox.AppendOnSend.User",
+      "type": "Delegated"
+    }
+    ```
+
+---
 
 > [!TIP]
 > Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).

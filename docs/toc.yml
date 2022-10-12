@@ -643,6 +643,11 @@ items:
             href: outlook/contextual-outlook-add-ins.md
           - name: Надстройки с расширением модуля
             href: outlook/extension-module-outlook-add-ins.md
+          - name: Элемент с множественным выделением
+            href: outlook/item-multi-select.md
+            displayName: preview
+          - name: Закрепляемая область задач
+            href: outlook/pinnable-taskpane.md
           - name: Надстройки для Outlook Mobile
             href: outlook/outlook-mobile-addins.md
           - name: Создание надстройки для собраний по сети
@@ -666,8 +671,6 @@ items:
               - name: Параметры AppSource
                 href: outlook/autolaunch-store-options.md
                 displayName: event-based activation
-          - name: Закрепляемая область задач
-            href: outlook/pinnable-taskpane.md
           - name: Общие папки и общие почтовые ящики
             href: outlook/delegate-access.md
             displayName: delegate access

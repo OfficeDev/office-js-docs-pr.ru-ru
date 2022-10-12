@@ -1,20 +1,20 @@
 ---
 title: Просмотр или изменение темы в надстройке Outlook
 description: Узнайте, как просмотреть и изменить тему сообщения или встречи в надстройке Outlook.
-ms.date: 07/08/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: cf221b03753fd76966eb5c6270da68e94abfe0f9
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 79e38a310bf62eae55ef020c2f6c978ace824255
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66959072"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541131"
 ---
 # <a name="get-or-set-the-subject-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр или изменение темы при создании встречи или сообщения в Outlook
 
-API JavaScript для Office предоставляет асинхронные методы ([subject.getAsync](/javascript/api/outlook/office.subject#outlook-office-subject-getasync-member(1)) и [subject.setAsync](/javascript/api/outlook/office.subject#outlook-office-subject-setasync-member(1))) для получения и задания темы встречи или сообщения, которые создает пользователь. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом, чтобы Outlook активирует надстройку в формах создания.
+API JavaScript для Office предоставляет асинхронные методы ([subject.getAsync](/javascript/api/outlook/office.subject#outlook-office-subject-getasync-member(1)) и [subject.setAsync](/javascript/api/outlook/office.subject#outlook-office-subject-setasync-member(1))) для получения и задания темы встречи или сообщения, которые создает пользователь. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что XML-манифест надстройки настроен соответствующим образом, чтобы Outlook активирует надстройку в [формах создания](compose-scenario.md). Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
-Свойство **subject** доступно для чтения в формах создания и формах чтения встреч и сообщений. В форме чтения доступ к свойству можно получить напрямую из родительского объекта, например:
+The **subject** property is available for read access in both compose and read forms of appointments and messages. In a read form, you can access the property directly from the parent object, as in:
 
 ```js
 item.subject
@@ -32,7 +32,7 @@ item.subject.getAsync
 
 ## <a name="get-the-subject"></a>Получение темы
 
-В этом разделе показан пример кода, получающий и отображающий тему создаваемой встречи или сообщения. В примере предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения, как показано ниже.
+В этом разделе показан пример кода, получающий и отображающий тему создаваемой встречи или сообщения. В этом примере предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения, как показано ниже. Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
 ```XML
 <Rule xsi:type="RuleCollection" Mode="Or">
@@ -78,7 +78,7 @@ function write(message){
 
 ## <a name="set-the-subject"></a>Установка темы
 
-В этом разделе показан пример кода, задающий тему создаваемой встречи или сообщения. Как и в предыдущем примере, предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения.
+В этом разделе показан пример кода, задающий тему создаваемой встречи или сообщения. Как и в предыдущем примере, предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи или сообщения. Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
 Чтобы использовать **item.subject.setAsync**, укажите строку до 255 символов в параметре данных. При необходимости можно указать функцию обратного вызова и любые аргументы для функции обратного вызова в  _параметре asyncContext_ . Следует проверить состояние, результат и наличие ошибок в выходном параметре  _asyncResult_ метода обратного вызова. Если асинхронный вызов выполнен успешно, **setAsync** вставляет указанную строку темы как обычный текст, перезаписывая существующую тему этого элемента.
 
@@ -130,7 +130,7 @@ function write(message){
 - [Просмотр и изменение данных элемента Outlook в формах просмотра и создания](item-data.md)
 - [Создание надстроек Outlook для форм создания](compose-scenario.md)
 - [Асинхронное программирование надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)
-- [Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook](get-set-or-add-recipients.md)  
-- [Вставка данных в текст при создании встречи или сообщения в Outlook](insert-data-in-the-body.md)
+- [Чтение, запись и добавление получателей при создании встречи или сообщения в Outlook](get-set-or-add-recipients.md)  
+- [Вставка данных в основной текст при создании встречи или сообщения в Outlook](insert-data-in-the-body.md)
 - [Просмотр или изменение расположения при создании встречи в Outlook](get-or-set-the-location-of-an-appointment.md)
 - [Просмотр или изменение времени при создании встречи в Outlook](get-or-set-the-time-of-an-appointment.md)

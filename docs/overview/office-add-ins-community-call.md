@@ -1,14 +1,14 @@
 ---
 title: Вызов сообщества по надстройки Microsoft Office
 description: Ежемесячное сообщество по надстройки Microsoft Office вызывает повестку дня, расписание и ресурсы.
-ms.date: 09/21/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a7c9831e715583051ba3eaf6c289aab53195dc
-ms.sourcegitcommit: 09bb0b5edd6af03c9822e1742095c7df94735120
+ms.openlocfilehash: e3e352061db190146116f89bf104ae450e680070
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990422"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541117"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Вызов сообщества по надстройки Microsoft Office
 
@@ -16,12 +16,13 @@ ms.locfileid: "67990422"
 
 ## <a name="agenda-for-october-12th-call"></a>Повестка дня для звонка 12 октября
 
-Повестка дня октябрьского звонка будет опубликована примерно за неделю до звонка.
+- Обновите шаблон Visual Studio для надстроек Office.
 
 ## <a name="previous-calls"></a>Предыдущие вызовы
 
 Пропустили предыдущий звонок сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы узнать больше о обсуждении.
 
+- [14 сентября 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-09-14/)
 - [10 августа 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-08-10/)
 - [13 июля 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-07-13/)
 - [8 июня 2022 г.](https://pnp.github.io/blog/office-add-ins-community-call/2022-06-08/)

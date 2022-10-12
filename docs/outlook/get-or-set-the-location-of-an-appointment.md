@@ -1,14 +1,14 @@
 ---
 title: Просмотр или изменение места встречи в надстройке
 description: Узнайте, как просмотреть и изменить место проведения встречи в надстройке Outlook.
-ms.date: 07/08/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 045de4e01be1feb70237937d43ca111d3bea6316
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: bf03e0e470bb5aea811c09bb7b88cc5a915a7a13
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958988"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541241"
 ---
 # <a name="get-or-set-the-location-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение расположения при создании встречи в Outlook
 
@@ -28,7 +28,7 @@ API JavaScript для Office предоставляет свойства и ме
 | [item.enhancedLocation.addAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-addasync-member(1)) | Организатор или создание |
 | [item.enhancedLocation.removeAsync](/javascript/api/outlook/office.enhancedlocation#outlook-office-enhancedlocation-removeasync-member(1)) | Организатор или создание |
 
-Чтобы использовать методы, доступные только для создания надстроек, настройте манифест надстройки для активации надстройки в режиме организатора или создания. Дополнительные сведения см. в статье "Создание [надстроек Outlook для создания форм](compose-scenario.md) ".
+Чтобы использовать методы, доступные только для создания надстроек, настройте XML-манифест надстройки для активации надстройки в режиме организатора или создания. Дополнительные сведения см. в статье "Создание [надстроек Outlook для создания форм](compose-scenario.md) ". Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
 ## <a name="use-the-enhancedlocation-api"></a>`enhancedLocation` Использование API
 
@@ -199,7 +199,7 @@ function write(message){
 }
 ```
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Создание первой надстройки Outlook](../quickstarts/outlook-quickstart.md)
-- [Асинхронное программирование в случае надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)
+- [Асинхронное программирование надстроек Office](../develop/asynchronous-programming-in-office-add-ins.md)

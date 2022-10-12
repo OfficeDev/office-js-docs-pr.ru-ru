@@ -1,20 +1,20 @@
 ---
 title: Реализация закрепляемой области задач в надстройке Outlook.
 description: Фигура пользовательского интерфейса области задач для команд надстройки открывает вертикальную область задач справа от открытого сообщения или приглашения на собрание, предоставляя интерфейс для дополнительных действий.
-ms.date: 07/07/2020
+ms.date: 10/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c295094a9568487b043fdfb0b5f07620c50ea76
-ms.sourcegitcommit: 9bb790f6264f7206396b32a677a9133ab4854d4e
+ms.openlocfilehash: 834d43a6046ddaa63a7c8899cfd5b07d0ea80ef6
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797465"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541124"
 ---
 # <a name="implement-a-pinnable-task-pane-in-outlook"></a>Реализация закрепляемой области задач в Outlook
 
-Фигура пользовательского интерфейса [области задач](add-in-commands-for-outlook.md#launch-a-task-pane) для команд надстройки открывает вертикальную область задач справа от открытого сообщения или приглашения на собрание, предоставляя интерфейс для дополнительных действий (заполнение нескольких полей и т. д.). Эта область задач может отображаться в области чтения при просмотре списка сообщений для быстрой обработки сообщения.
+The [task pane](add-in-commands-for-outlook.md#launch-a-task-pane) UX shape for add-in commands opens a vertical task pane to the right of an open message or meeting request, allowing the add-in to provide UI for more detailed interactions (filling in multiple fields, etc.). This task pane can be shown in the Reading Pane when viewing a list of messages, allowing for quick processing of a message.
 
-Но по умолчанию, если пользователь выбирает новое сообщение, область задач надстройки для сообщения в области чтения автоматически закрывается. Если надстройка используется часто, пользователь может закрепить эту область, чтобы не активировать ее повторно для каждого сообщения. Для этого необходимо добавить в надстройку закрепляемые области задач.
+However, by default, if a user has an add-in task pane open for a message in the Reading Pane, and then selects a new message, the task pane is automatically closed. For a heavily-used add-in, the user may prefer to keep that pane open, eliminating the need to reactivate the add-in on each message. With pinnable task panes, your add-in can give the user that option.
 
 > [!NOTE]
 > Хотя функция закрепленных областей задач была представлена в наборе обязательных элементов [1.5](/javascript/api/requirement-sets/outlook/requirement-set-1.5/outlook-requirement-set-1.5), в настоящее время она доступна только подписчикам Microsoft 365 с помощью следующих средств:
@@ -29,14 +29,16 @@ ms.locfileid: "66797465"
 > - Встречи и собрания
 > - Outlook.com
 
+> [!TIP]
+> Если вы планируете опубликовать [](../publish/publish.md) надстройку Outlook в [AppSource](https://appsource.microsoft.com) и она настроена для закрепленной области задач, для проверки [AppSource](/legal/marketplace/certification-policies) содержимое надстройки не должно быть статическим и должно четко отображать данные, связанные с сообщением, которое открыто или выбрано в почтовом ящике.
+
 ## <a name="support-task-pane-pinning"></a>Поддержка закрепления области задач
 
-Для начала нужно добавить поддержку закрепления в [манифест](manifests.md) надстройки. Для этого добавьте элемент [SupportsPinning](/javascript/api/manifest/action#supportspinning) в элемент `Action`, который описывает кнопку области задач.
+Для начала нужно добавить поддержку закрепления в манифест надстройки. Разметка зависит от типа манифеста.
 
-Элемент `SupportsPinning` определяется в схеме VersionOverrides 1.1, поэтому элемент [VersionOverrides](/javascript/api/manifest/versionoverrides) необходимо включить как для версии 1.0, так и для версии 1.1.
+# <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
 
-> [!NOTE]
-> Если вы планируете [публиковать](../publish/publish.md) надстройку Outlook в [AppSource](https://appsource.microsoft.com) и используете элемент **SupportsPinning** для прохождения [проверки AppSource](/legal/marketplace/certification-policies), контент надстройки не должен быть статическим. Необходимо, чтобы он четко отображал данные, которые относятся к сообщению, открытому или выбранному в почтовом ящике.
+Добавьте элемент [SupportsPinning](/javascript/api/manifest/action#supportspinning) в элемент **\<Action\>** , описывающий кнопку области задач. Ниже приведен пример.
 
 ```xml
 <!-- Task pane button -->
@@ -58,6 +60,26 @@ ms.locfileid: "66797465"
 </Control>
 ```
 
+Элемент **\<SupportsPinning\>** определен в схеме VersionOverrides версии 1.1, поэтому необходимо включить элемент [VersionOverrides](/javascript/api/manifest/versionoverrides) как для версий 1.0, так и для версии 1.1.
+
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+Добавьте свойство "pinnable" в объект в массиве actions, `true`который определяет кнопку или пункт меню, открывающее область задач. Ниже приведен пример.
+
+```json
+"actions": [
+    {
+        "id": "OpenTaskPane",
+        "type": "openPage",
+        "view": "TaskPaneView",
+        "displayName": "OpenTaskPane",
+        "pinnable": true
+    }
+]
+```
+
+---
+
 Полный пример: элемент управления `msgReadOpenPaneButton` в [примере манифеста command-demo](https://github.com/OfficeDev/outlook-add-in-command-demo/blob/master/command-demo-manifest.xml).
 
 ## <a name="handling-ui-updates-based-on-currently-selected-message"></a>Обновление пользовательского интерфейса на основе выбранного сообщения
@@ -66,7 +88,7 @@ ms.locfileid: "66797465"
 
 ### <a name="implement-the-event-handler"></a>Реализация обработчика событий
 
-Обработчик событий должен принимать один параметр, а именно — объектный литерал. Для свойства `type` этого объекта будет установлено значение `Office.EventType.ItemChanged`. При вызове события объект `Office.context.mailbox.item` уже обновлен с учетом выбранного элемента.
+The event handler should accept a single parameter, which is an object literal. The `type` property of this object will be set to `Office.EventType.ItemChanged`. When the event is called, the `Office.context.mailbox.item` object is already updated to reflect the currently selected item.
 
 ```js
 function itemChanged(eventArgs) {
@@ -89,7 +111,7 @@ function itemChanged(eventArgs) {
 
 ### <a name="register-the-event-handler"></a>Регистрация обработчика событий
 
-Используйте метод [Office.context.mailbox.addHandlerAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods), чтобы зарегистрировать обработчик событий для события `Office.EventType.ItemChanged`. Это следует сделать в функции `Office.initialize` для области задач.
+Use the [Office.context.mailbox.addHandlerAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) method to register your event handler for the `Office.EventType.ItemChanged` event. This should be done in the `Office.initialize` function for your task pane.
 
 ```js
 Office.initialize = function (reason) {

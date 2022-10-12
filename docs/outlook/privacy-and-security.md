@@ -1,14 +1,14 @@
 ---
 title: Конфиденциальность, разрешения и безопасность для надстроек Outlook
 description: Узнайте, как управлять конфиденциальностью, разрешениями и безопасностью в надстройке Outlook.
-ms.date: 08/09/2022
+ms.date: 10/07/2022
 ms.localizationpriority: high
-ms.openlocfilehash: a19284c6a8371deadcb3986978eabaf605189df6
-ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
+ms.openlocfilehash: 560c9bbdfcde849b66d86e9c000d78f094b3e561
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68092877"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541256"
 ---
 # <a name="privacy-permissions-and-security-for-outlook-add-ins"></a>Конфиденциальность, разрешения и безопасность для надстроек Outlook
 
@@ -28,16 +28,9 @@ ms.locfileid: "68092877"
 
 Because customers' perception of add-in security can affect add-in adoption, Outlook add-in security relies on a tiered permissions model. An Outlook add-in would disclose the level of permissions it needs, identifying the possible access and actions that the add-in can make on the customer's mailbox data.
 
-Схема манифеста версии 1.1 включает четыре уровня разрешений.
+Существует четыре уровня разрешений.
 
-**Таблица 1. Уровни разрешений для надстройки**
-
-|**Уровень разрешений**|**Значение в манифесте надстройки Outlook**|
-|:-----|:-----|
-|Ограниченный доступ|Restricted|
-|Чтение элемента|ReadItem|
-|Чтение и запись элемента|ReadWriteItem|
-|Чтение и запись почтового ящика|ReadWriteMailbox|
+[!include[Table of Outlook permissions](../includes/outlook-permission-levels-table.md)]
 
 Четыре уровня разрешений являются накопительными: разрешение **на чтение и запись в почтовом ящике** включает в себя разрешения **на чтение и запись элемента**, **на чтение элемента** и **на ограниченный доступ**; разрешение **на чтение и запись элемента** включает в себя разрешения **на чтение элемента** и **на ограниченный доступ**; разрешение **на чтение элемента** включает в себя разрешение **на ограниченный доступ**.
 
@@ -116,18 +109,34 @@ Because customers' perception of add-in security can affect add-in adoption, Out
 
 - Разработчики запрашивают подходящий уровень разрешений для надстройки Outlook с учетом способа ее активации, а также необходимости чтения или записи определенных свойств элемента или создания и отправки элемента.
 
-- Разработчики запрашивают разрешение с помощью элемента [Permissions](/javascript/api/manifest/permissions) в манифесте надстройки Outlook, назначая значение **Restricted**, **ReadItem**, **ReadWriteItem** или **ReadWriteMailbox**.
+- Как отмечалось выше, разработчики запрашивают разрешение в манифесте.
 
-  > [!NOTE]
-  > Помните, что разрешение **ReadWriteItem** доступно начиная со схемы манифеста версии 1.1.
-
-  В приведенном ниже примере запрашивается разрешение на **чтение элемента**.
+  В следующем примере запрашивает разрешение **на чтение элемента** в XML-манифесте.
 
   ```XML
-    <Permissions>ReadItem</Permissions>
+  <Permissions>ReadItem</Permissions>
   ```
 
+  В следующем примере запрашивается разрешение **на чтение элемента** в манифесте Teams (предварительная версия).
+
+```json
+"authorization": {
+  "permissions": {
+    "resourceSpecific": [
+      ...
+      {
+        "name": "MailboxItem.Read.User",
+        "type": "Delegated"
+      },
+    ]
+  }
+},
+```
+
 - Разработчики могут запросить  ограниченное разрешение, если надстройка Outlook активируется для определенного типа элемента Outlook (встречи или сообщения) или для определенных извлеченных сущностей (номер телефона, адрес, URL-адрес), присутствующих в теме или тексте элемента. Например, указанное ниже правило активирует надстройку Outlook, если хотя бы одна из трех сущностей (телефонный номер, почтовый адрес или URL-адрес) найдена в теме или основном тексте текущего сообщения.
+
+> [!NOTE]
+> Правила активации, как показано в этом примере, не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия)](../develop/json-manifest-overview.md).
 
   ```XML
     <Permissions>Restricted</Permissions>

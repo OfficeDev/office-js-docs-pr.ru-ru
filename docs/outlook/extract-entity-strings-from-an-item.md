@@ -1,18 +1,21 @@
 ---
 title: Извлечение строк сущностей из элемента Outlook
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
-ms.date: 07/07/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ca5540873be2969e15cea1a5773bb9fba850d9a1
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: 512999272c720f5b87480c49d60c649bc6a886ad
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958995"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541277"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
-В этой статье рассказано, как создать надстройку Outlook **для отображения сущностей**, которая извлекает экземпляры строк поддерживаемых известных сущностей в теме и основном тексте выбранного элемента Outlook. Этим элементом может быть встреча, электронное сообщение, приглашение на собрание, ответ на такое приглашение или отказ от него.
+This article describes how to create a **Display entities** Outlook add-in that extracts string instances of supported well-known entities in the subject and body of the selected Outlook item. This item can be an appointment, email message, or meeting request, response, or cancellation.
+
+> [!NOTE]
+> Функция надстроек Outlook, описанная в этой статье, использует правила активации, которые не поддерживаются в надстройки, использующие манифест Teams для надстроек [Office (предварительная версия).](../develop/json-manifest-overview.md)
 
 Поддерживаемые сущности:
 
@@ -22,19 +25,19 @@ ms.locfileid: "66958995"
 
 - **Email address**. SMTP-адрес электронной почты.
 
-- **Meeting suggestion**. Приглашение на собрание, например ссылка на мероприятие. Обратите внимание на то, что извлечение приглашений поддерживается только для сообщений, но не для встреч.
+- **Meeting suggestion**: A meeting suggestion, such as a reference to an event. Note that only messages but not appointments support extracting meeting suggestions.
 
 - **Phone number**. Телефонный номер Северной Америки.
 
 - **Task suggestion**. Предложение задачи, которое обычно выражается фразой с действиями.
 
-- **URL**.
+- **URL-адрес**
 
-Большинство из этих сущностей зависят от распознавания естественного языка, которое основывается на обработке компьютером больших объемов данных. Это распознавание недетерминированное и иногда зависит от контекста в элементе Outlook.
+Most of these entities rely on natural language recognition, which is based on machine learning of large amounts of data. This recognition is nondeterministic and sometimes depends on the context in the Outlook item.
 
-Outlook активирует надстройку для работы с сущностями каждый раз, когда пользователь выбирает встречу, электронное письмо, приглашение на собрание, ответ на приглашение на собрание или отказ от приглашения на собрание для просмотра. Во время инициализации в примере надстройки для работы с сущностями выполняется считывание всех экземпляров поддерживаемых сущностей из текущего элемента.
+Outlook activates the entities add-in whenever the user selects an appointment, email message, or meeting request, response, or cancellation for viewing. During initialization, the sample entities add-in reads all instances of the supported entities from the current item.
 
-Надстройка предоставляет кнопки, с помощью которых пользователь может выбрать тип сущности. Когда пользователь выбирает какую-либо сущность, надстройка отображает экземпляры выбранной сущности в области надстройки. В последующих разделах имеются манифест в формате XML, HTML- и JavaScript-файлы надстроек сущностей, а также выделен код, поддерживающий извлечение соответствующих сущностей.
+The add-in provides buttons for the user to choose a type of entity. When the user selects an entity, the add-in displays instances of the selected entity in the add-in pane. The following sections list the XML manifest, and HTML and JavaScript files of the entities add-in, and highlight the code that supports the respective entity extraction.
 
 ## <a name="xml-manifest"></a>XML-манифест
 
@@ -50,7 +53,7 @@ Outlook активирует надстройку для работы с сущ�
 
 Эти правила определяют, что Outlook должен активировать надстройку, если в области чтения или инспекторе просмотра выбрана встреча или сообщение (включая письмо или приглашение на собрание, ответ на приглашение или отмену собрания).
 
-Ниже приведен манифест надстройки для работы с сущностями. В нем используется схема версии 1.1 для манифестов надстроек Office.
+The following is the manifest of the entities add-in. It uses version 1.1 of the schema for Office Add-ins manifests.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -96,7 +99,7 @@ xsi:type="MailApp">
 
 ## <a name="html-implementation"></a>Реализация HTML
 
-HTML-файл надстройки для работы с сущностями определяет кнопки, позволяющие пользователю выбрать каждый тип сущности, и одну кнопку для очистки отображаемых экземпляров сущности. В нем есть JavaScript-файл, default_entities.js, который описан в следующем разделе [Реализация JavaScript](#javascript-implementation). JavaScript-файл содержит обработчики событий для каждой кнопки.
+The HTML file of the entities add-in specifies buttons for the user to select each type of entity, and another button to clear displayed instances of an entity. It includes a JavaScript file, default_entities.js, which is described in the next section under [JavaScript implementation](#javascript-implementation). The JavaScript file includes the event handlers for each of the buttons.
 
 Обратите внимание, что все надстройки Outlook должны включать файл office.js. Следующий HTML-файл содержит версию 1.1 office.js сети доставки содержимого (CDN).
 
@@ -141,7 +144,7 @@ HTML-файл надстройки для работы с сущностями �
 
 ## <a name="style-sheet"></a>Таблица стилей
 
-В надстройке для работы с сущностями используется дополнительный файл таблицы стилей default_entities.css, который определяет макет выходных данных. Ниже приведен листинг CSS-файла.
+The entities add-in uses an optional CSS file, default_entities.css, to specify the layout of the output. The following is a listing of the CSS file.
 
 ```CSS
 {
@@ -251,17 +254,17 @@ function myGetAddresses()
 
 - Название компании, связанное с контактом, из свойства [Contact.businessName](/javascript/api/outlook/office.contact#outlook-office-contact-businessname-member).
 
-- Массив номеров телефонов, связанных с контактом, из свойства [Contact.phoneNumbers](/javascript/api/outlook/office.contact#outlook-office-contact-phonenumbers-member). Каждый номер телефона представлен объектом [PhoneNumber](/javascript/api/outlook/office.phonenumber).
+- The array of telephone numbers associated with the contact from the [Contact.phoneNumbers](/javascript/api/outlook/office.contact#outlook-office-contact-phonenumbers-member) property. Each telephone number is represented by a [PhoneNumber](/javascript/api/outlook/office.phonenumber) object.
 
 - Строка, представляющая телефонный номер из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#outlook-office-phonenumber-phonestring-member) для каждого элемента **PhoneNumber** в массиве телефонных номеров.
 
-- Массив URL-адресов, связанных с контактом, из свойства [Contact.urls](/javascript/api/outlook/office.contact#outlook-office-contact-urls-member). Каждый URL-адрес представлен в виде строки в элементе массива.
+- The array of URLs associated with the contact from the [Contact.urls](/javascript/api/outlook/office.contact#outlook-office-contact-urls-member) property. Each URL is represented as a string in an array member.
 
-- Массив адресов эл. почты, связанных с контактом, из свойства [Contact.emailAddresses](/javascript/api/outlook/office.contact#outlook-office-contact-emailaddresses-member). Каждый адрес эл. почты представлен в виде строки в элементе массива.
+- The array of email addresses associated with the contact from the [Contact.emailAddresses](/javascript/api/outlook/office.contact#outlook-office-contact-emailaddresses-member) property. Each email address is represented as a string in an array member.
 
-- Массив почтовых адресов, связанных с контактом, из свойства [Contact.addresses](/javascript/api/outlook/office.contact#outlook-office-contact-addresses-member). Каждый почтовый адрес представлен в виде строки в элементе массива.
+- The array of postal addresses associated with the contact from the [Contact.addresses](/javascript/api/outlook/office.contact#outlook-office-contact-addresses-member) property. Each postal address is represented as a string in an array member.
 
-Чтобы отобразить данные каждого контакта, обработчик событий `myGetContacts` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
+`myGetContacts` forms a local HTML string in `htmlText` to display the data for each contact. The following is the related JavaScript code.
 
 ```js
 // Gets instances of the Contact entity on the item.
@@ -325,9 +328,9 @@ function myGetContacts()
 }
 ```
 
-## <a name="extracting-email-addresses"></a>Извлечение электронных адресов
+## <a name="extracting-email-addresses"></a>Извлечение адресов электронной почты
 
-Когда пользователь нажимает кнопку **Get Email Addresses** (Получить электронные адреса), обработчик события `myGetEmailAddresses` получает массив SMTP-адресов электронной почты из свойства [emailAddresses](/javascript/api/outlook/office.entities#outlook-office-entities-emailaddresses-member) объекта `_MyEntities` (если был извлечен хотя бы один адрес). Каждый извлеченный электронный адрес сохраняется в массиве в виде строки. Для отображения списка извлеченных электронных адресов обработчик событий `myGetEmailAddresses` формирует локальную HTML-строку в `htmlText`. Ниже приведен соответствующий код JavaScript.
+When the user clicks the **Get Email Addresses** button, the `myGetEmailAddresses` event handler obtains an array of SMTP email addresses from the [emailAddresses](/javascript/api/outlook/office.entities#outlook-office-entities-emailaddresses-member) property of the `_MyEntities` object, if any was extracted. Each extracted email address is stored as a string in the array. `myGetEmailAddresses` forms a local HTML string in `htmlText` to display the list of extracted email addresses. The following is the related JavaScript code.
 
 ```js
 // Gets instances of the EmailAddress entity on the item.
@@ -356,7 +359,7 @@ function myGetEmailAddresses() {
 
 - Приглашение на собрание из свойства [MeetingSuggestion.meetingString](/javascript/api/outlook/office.meetingsuggestion#outlook-office-meetingsuggestion-meetingstring-member).
 
-- Массив участников собрания из свойства [MeetingSuggestion.attendees](/javascript/api/outlook/office.meetingsuggestion#outlook-office-meetingsuggestion-attendees-member). Каждый участник представлен объектом [EmailUser](/javascript/api/outlook/office.emailuser).
+- The array of meeting attendees from the [MeetingSuggestion.attendees](/javascript/api/outlook/office.meetingsuggestion#outlook-office-meetingsuggestion-attendees-member) property. Each attendee is represented by an [EmailUser](/javascript/api/outlook/office.emailuser) object.
 
 - Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#outlook-office-emailuser-displayname-member) для каждого участника.
 
@@ -370,7 +373,7 @@ function myGetEmailAddresses() {
 
 - Предлагаемое время окончания собрания из свойства [MeetingSuggestion.end](/javascript/api/outlook/office.meetingsuggestion#outlook-office-meetingsuggestion-end-member).
 
-Чтобы отобразить данные каждого приглашения на собрание, обработчик событий `myGetMeetingSuggestions` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
+`myGetMeetingSuggestions` forms a local HTML string in `htmlText` to display the data for each of the meeting suggestions. The following is the related JavaScript code.
 
 ```js
 // Gets instances of the MeetingSuggestion entity on the 
@@ -426,15 +429,15 @@ function myGetMeetingSuggestions() {
 
 ## <a name="extracting-phone-numbers"></a>Извлечение телефонных номеров
 
-Когда пользователь нажимает кнопку **Get Phone Numbers** (Получить телефонные номера), обработчик событий `myGetPhoneNumbers` получает массив телефонных номеров из свойства [phoneNumbers](/javascript/api/outlook/office.entities#outlook-office-entities-phonenumbers-member) объекта `_MyEntities` (если был извлечен хотя бы один номер). Каждый извлеченный номер сохраняется в качестве объекта [PhoneNumber](/javascript/api/outlook/office.phonenumber) в массиве. Обработчик событий `myGetPhoneNumbers` получает дополнительные данные о каждом телефонном номере.
+When the user clicks the **Get Phone Numbers** button, the `myGetPhoneNumbers` event handler obtains an array of phone numbers from the [phoneNumbers](/javascript/api/outlook/office.entities#outlook-office-entities-phonenumbers-member) property of the `_MyEntities` object, if any was extracted. Each extracted phone number is stored as a [PhoneNumber](/javascript/api/outlook/office.phonenumber) object in the array. `myGetPhoneNumbers` obtains further data about each phone number:
 
-- Строка, представляющая тип номера телефона (например, домашний номер) из свойства [PhoneNumber.type](/javascript/api/outlook/office.phonenumber#outlook-office-phonenumber-type-member).
+- Тип номера телефона (например, домашний номер) из свойства [PhoneNumber.type](/javascript/api/outlook/office.phonenumber#outlook-office-phonenumber-type-member).
 
 - Номер телефона из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#outlook-office-phonenumber-phonestring-member).
 
 - Исходный номер телефона из свойства [PhoneNumber.originalPhoneString](/javascript/api/outlook/office.phonenumber#outlook-office-phonenumber-originalphonestring-member).
 
-Чтобы отобразить данные каждого номера телефона, обработчик событий `myGetPhoneNumbers` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
+`myGetPhoneNumbers` forms a local HTML string in `htmlText` to display the data for each of the phone numbers. The following is the related JavaScript code.
 
 ```js
 // Gets instances of the phone number entity on the item.
@@ -470,17 +473,17 @@ function myGetPhoneNumbers()
 
 ## <a name="extracting-task-suggestions"></a>Извлечение предложений задач
 
-Когда пользователь нажимает кнопку **Get Task Suggestions** (Получить предложения задач), обработчик событий `myGetTaskSuggestions` получает массив предложений задач из свойства [taskSuggestions](/javascript/api/outlook/office.entities#outlook-office-entities-tasksuggestions-member) объекта `_MyEntities` (если было извлечено хотя бы одно предложение). Каждое извлеченное предложение сохраняется в качестве объекта [TaskSuggestion](/javascript/api/outlook/office.tasksuggestion) в массиве. Обработчик событий `myGetTaskSuggestions` получает дополнительные данные о каждом предложении задачи.
+When the user clicks the **Get Task Suggestions** button, the `myGetTaskSuggestions` event handler obtains an array of task suggestions from the [taskSuggestions](/javascript/api/outlook/office.entities#outlook-office-entities-tasksuggestions-member) property of the `_MyEntities` object, if any was extracted. Each extracted task suggestion is stored as a [TaskSuggestion](/javascript/api/outlook/office.tasksuggestion) object in the array. `myGetTaskSuggestions` obtains further data about each task suggestion:
 
-- Строка, изначально определенная как предложение задачи из свойства [TaskSuggestion.taskString](/javascript/api/outlook/office.tasksuggestion#outlook-office-tasksuggestion-taskstring-member).
+- Исходное предложение задачи из свойства [TaskSuggestion.taskString](/javascript/api/outlook/office.tasksuggestion#outlook-office-tasksuggestion-taskstring-member).
 
-- Массив уполномоченных из свойства [TaskSuggestion.assignees](/javascript/api/outlook/office.tasksuggestion#outlook-office-tasksuggestion-assignees-member). Каждый уполномоченный представлен объектом [EmailUser](/javascript/api/outlook/office.emailuser).
+- The array of task assignees from the [TaskSuggestion.assignees](/javascript/api/outlook/office.tasksuggestion#outlook-office-tasksuggestion-assignees-member) property. Each assignee is represented by an [EmailUser](/javascript/api/outlook/office.emailuser) object.
 
 - Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#outlook-office-emailuser-displayname-member) для каждого уполномоченного.
 
 - SMTP-адрес из свойства [EmailUser.emailAddress](/javascript/api/outlook/office.emailuser#outlook-office-emailuser-emailaddress-member) для каждого уполномоченного.
 
-Чтобы отобразить данные каждого предложения задачи, обработчик событий `myGetTaskSuggestions` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
+`myGetTaskSuggestions` forms a local HTML string in `htmlText` to display the data for each task suggestion. The following is the related JavaScript code.
 
 ```js
 // Gets instances of the task suggestion entity on the item.
@@ -528,7 +531,7 @@ function myGetTaskSuggestions()
 
 ## <a name="extracting-urls"></a>Извлечение URL-адресов
 
-Когда пользователь нажимает кнопку **Get URLs** (Получить URL-адреса), обработчик событий `myGetUrls` получает массив URL-адресов из свойства [urls](/javascript/api/outlook/office.entities#outlook-office-entities-urls-member) объекта `_MyEntities` (если был извлечен хотя бы один URL-адрес). Каждый извлеченный адрес сохраняется в массиве в виде строки. Для отображения списка извлеченных URL-адресов обработчик событий `myGetUrls` формирует локальную HTML-строку в `htmlText`.
+When the user clicks the **Get URLs** button, the `myGetUrls` event handler obtains an array of URLs from the [urls](/javascript/api/outlook/office.entities#outlook-office-entities-urls-member) property of the `_MyEntities` object, if any was extracted. Each extracted URL is stored as a string in the array. `myGetUrls` forms a local HTML string in `htmlText` to display the list of extracted URLs.
 
 ```js
 // Gets instances of the URL entity on the item.
@@ -549,7 +552,7 @@ function myGetUrls()
 
 ## <a name="clearing-displayed-entity-strings"></a>Очистка отображаемых строк сущностей
 
-В заключение, надстройка для работы с сущностями указывает обработчик событий `myClearEntitiesBox`, который очищает отображаемые строки. Ниже приведен соответствующий код.
+Lastly, the entities add-in specifies a  `myClearEntitiesBox` event handler which clears any displayed strings. The following is the related code.
 
 ```js
 // Clears the div with id="entities_box".

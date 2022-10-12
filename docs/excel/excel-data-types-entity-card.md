@@ -1,20 +1,18 @@
 ---
 title: Карточка значения сущности типов данных API JavaScript для Excel
 description: Узнайте, как использовать карточки значений сущностей с типами данных в надстройке Excel.
-ms.date: 07/28/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e7f9446c884c7ab24df8d08a221a21fa8ed8156
-ms.sourcegitcommit: 143ab022c9ff6ba65bf20b34b5b3a5836d36744c
+ms.openlocfilehash: eb2b3e88953bee54c1efa54a419db2518a1d2518
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67177656"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68540986"
 ---
-# <a name="use-cards-with-entity-value-data-types-preview"></a>Использование карточек с типами данных значения сущности (предварительная версия)
-
-[!include[Data types preview availability note](../includes/excel-data-types-preview.md)]
+# <a name="use-cards-with-entity-value-data-types"></a>Использование карточек с типами данных значений сущностей
 
 В этой статье описывается, как использовать [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) для создания модальных окон карточек в пользовательском интерфейсе Excel с типами данных значения сущности. Эти карточки могут отображать дополнительные сведения, содержащиеся в значении сущности, за пределами того, что уже отображается в ячейке, например связанные изображения, сведения о категории продукта и атрибуты данных.
 

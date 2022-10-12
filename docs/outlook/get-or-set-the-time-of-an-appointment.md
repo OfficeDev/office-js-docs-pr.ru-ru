@@ -1,20 +1,20 @@
 ---
 title: Просмотр или изменение времени встречи в надстройке Outlook
 description: Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.
-ms.date: 07/08/2022
+ms.date: 10/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6109932c9a741a65b97095a1cb97dcdfc2306e1c
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
+ms.openlocfilehash: c7aa40fda15c613aca869af8b277d4deb6fbf833
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958336"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68541235"
 ---
 # <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение времени при создании встречи в Outlook
 
-API JavaScript для Office предоставляет асинхронные методы ([Time.getAsync](/javascript/api/outlook/office.time#outlook-office-time-getasync-member(1)) и [Time.setAsync](/javascript/api/outlook/office.time#outlook-office-time-setasync-member(1))) для получения и задания времени начала или окончания встречи, которую создает пользователь. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что манифест надстройки настроен соответствующим образом для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "Создание надстроек [Outlook](compose-scenario.md) для форм создания".
+API JavaScript для Office предоставляет асинхронные методы ([Time.getAsync](/javascript/api/outlook/office.time#outlook-office-time-getasync-member(1)) и [Time.setAsync](/javascript/api/outlook/office.time#outlook-office-time-setasync-member(1))) для получения и задания времени начала или окончания встречи, которую создает пользователь. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что вы правильно настроили [XML-манифест](compose-scenario.md) надстройки для Outlook, чтобы активировать надстройку в формах создания, как описано в разделе "Создание надстроек Outlook для форм создания". Правила активации не поддерживаются в надстройки, использующие манифест [Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md)
 
-Свойства [start](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) и [end](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) доступны для встреч в формах создания и чтения. в форме чтения доступ к свойствам можно получить напрямую из родительского объекта, как в следующем примере:
+The [start](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) and [end](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox.item#properties) properties are available for appointments in both compose and read forms. In a read form, you can access the properties directly from the parent object, as in:
 
 ```js
 item.start
@@ -42,7 +42,7 @@ item.end.getAsync
 
 ## <a name="get-the-start-or-end-time"></a>Получение времени начала или окончания
 
-В этом разделе показан пример кода, который получает время начала встречи, создаваемой пользователем, и отображает его. Вы можете использовать тот же код, заменив свойство **start** на **end**, чтобы получить время окончания. В этом примере предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи, как показано ниже.
+This section shows a code sample that gets the start time of the appointment that the user is composing and displays the time. You can use the same code and replace the **start** property by the **end** property to get the end time. This code sample assumes a rule in the add-in manifest that activates the add-in in a compose form for an appointment, as shown below.
 
 ```XML
 <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit"/>
@@ -87,7 +87,7 @@ function write(message){
 
 ## <a name="set-the-start-or-end-time"></a>Установка времени начала или окончания
 
-В этом разделе показан пример кода, получающий время начало встречи, создаваемой пользователем. Можно использовать тот же код, заменив свойство **start** на **end**, чтобы получить время начала. Обратите внимание, что если у формы создания уже есть время начала, последующая установка времени начала приведет к изменению времени окончания, чтобы сохранить предыдущую длительность встречи. Если у формы создания уже есть время окончания, последующая установка времени окончания приведет к изменению длительности и времени окончания. Если встреча создана как событие на весь день, установки времени начала приведет к смещению времени окончания на 24 часа и отмены выбора параметра события на весь день в форме создания.
+This section shows a code sample that sets the start time of the appointment or message that the user is composing. You can use the same code and replace the **start** property by the **end** property to set the end time. Note that if the appointment compose form already has an existing start time, setting the start time subsequently will adjust the end time to maintain any previous duration for the appointment. If the appointment compose form already has an existing end time, setting the end time subsequently will adjust both the duration and end time. If the appointment has been set as an all-day event, setting the start time will adjust the end time to 24 hours later, and uncheck the UI for the all-day event in the compose form.
 
 Как и в предыдущем примере, здесь предполагается, что в манифесте задано правило, которое активирует надстройку в форме создания встречи.
 
@@ -140,4 +140,4 @@ function write(message){
 - [Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook](get-set-or-add-recipients.md)  
 - [Просмотр или изменение темы при создании встречи или сообщения в Outlook](get-or-set-the-subject.md)
 - [Вставка данных в текст при создании встречи или сообщения в Outlook](insert-data-in-the-body.md)
-- [Просмотр или изменение расположения при создании встречи в Outlook](get-or-set-the-location-of-an-appointment.md)
+- [Считывание и запись расположения при создании встречи в Outlook](get-or-set-the-location-of-an-appointment.md)

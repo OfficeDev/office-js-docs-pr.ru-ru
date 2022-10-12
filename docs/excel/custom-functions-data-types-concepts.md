@@ -1,20 +1,18 @@
 ---
 title: Пользовательские функции и типы данных
 description: Используйте типы данных Excel с пользовательскими функциями и надстройками Office.
-ms.date: 12/27/2021
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 361be486ee45cae87b5cd66e2099dc939418a491
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 5dbe42af2edcfc9860ce27dc5c8dbe2ad88b9ecf
+ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67422875"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68540993"
 ---
-# <a name="use-data-types-with-custom-functions-in-excel-preview"></a>Используйте типы данных в пользовательских функциях Excel (предварительная версия)
-
-[!include[Custom functions and data types availability note](../includes/excel-custom-functions-data-types-note.md)]
+# <a name="use-data-types-with-custom-functions-in-excel"></a>Использование типов данных с пользовательскими функциями в Excel
 
 Типы данных расширяют программный интерфейс API JavaScript для Excel для поддержки новых типов данных в дополнение к исходным четырем типам значений ячеек (строка, число, логическое значение и ошибка). Типы данных включают поддержку веб-изображений, форматированных чисел, сущностей и массивов сущностей.
 
@@ -37,7 +35,7 @@ ms.locfileid: "67422875"
 
 Проекты пользовательских функций включают файл метаданных JSON. Этот файл метаданных JSON отличается от схемы JSON, используемой API-интерфейсами типов данных. Чтобы использовать интеграцию типов данных с пользовательскими функциями, файл метаданных JSON пользовательских функций должен обновляться вручную, чтобы включить свойство `allowCustomDataForDataTypeAny`. Присвойте этому свойству значение `true`.
 
-Полное описание процесса создания JSON вручную см. в разделе [Создание JSON вручную для пользовательских функций](custom-functions-json.md). Дополнительные сведения об этом свойстве см. в разделе [allowCustomDataForDataTypeAny](custom-functions-json.md#allowcustomdatafordatatypeany-preview).
+For a full description of the manual JSON creation process, see [Manually create JSON metadata for custom functions](custom-functions-json.md). See [allowCustomDataForDataTypeAny](custom-functions-json.md#allowcustomdatafordatatypeany) for additional details about this property.
 
 ### <a name="script-lab-option"></a>Возможность Script Lab
 
