@@ -421,17 +421,17 @@ items:
             href: excel/excel-add-ins-comments.md
             displayName: Excel
           - name: Типы данных
-            displayName: preview
+            displayName: Excel
             items:
               - name: Обзор
                 href: excel/excel-data-types-overview.md
-                displayName: 'Excel, preview'
+                displayName: Excel
               - name: Концепции
                 href: excel/excel-data-types-concepts.md
-                displayName: 'Excel, preview'
+                displayName: Excel
               - name: Карточки значений сущности
                 href: excel/excel-data-types-entity-card.md
-                displayName: 'Excel, preview'
+                displayName: Excel
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md
             displayName: Excel
@@ -548,7 +548,7 @@ items:
             displayName: 'Excel, Custom Functions'
           - name: Типы данных
             href: excel/custom-functions-data-types-concepts.md
-            displayName: 'Excel, Custom Functions, preview'
+            displayName: 'Excel, Custom Functions'
           - name: Вызов API JavaScript для Excel
             href: excel/call-excel-apis-from-custom-function.md
             displayName: 'Excel, Custom Functions'

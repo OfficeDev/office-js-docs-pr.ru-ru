@@ -1,14 +1,14 @@
 ---
 title: Подробные сведения о маркере удостоверения Exchange в надстройке Outlook
 description: Узнайте, из чего состоит маркер удостоверения пользователя Exchange, созданный в надстройке Outlook.
-ms.date: 10/31/2019
+ms.date: 10/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 843bd76b66f784b1e380bdde5e33adf05755e268
-ms.sourcegitcommit: b66ba72aee8ccb2916cd6012e66316df2130f640
+ms.openlocfilehash: 7d586203395521deb14e18a3ae52b01459224b75
+ms.sourcegitcommit: 787fbe4d4a5462ff6679ad7fd00748bf07391610
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64484056"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68546433"
 ---
 # <a name="inside-the-exchange-identity-token"></a>Подробные сведения о маркере удостоверения Exchange
 
@@ -42,7 +42,7 @@ ms.locfileid: "64484056"
 
 ## <a name="identity-token-payload"></a>Полезные данные маркера удостоверения
 
-Полезные данные содержат утверждения проверки подлинности, которые идентифицируют учетную запись электронной почты, а также сервер Exchange, который отправляет маркер. В следующем примере показано, как выглядит раздел полезных данных.
+The payload contains the authentication claims that identify the email account and identify the Exchange server that sent the token. The following example shows what the payload section looks like.
 
 ```JSON
 { 
@@ -66,10 +66,10 @@ ms.locfileid: "64484056"
 
 | Утверждение | Описание |
 |:-----|:-----|
-| `aud` | URL-адрес надстройки, запросившей маркер. Маркер действителен, только если он отправлен из надстройки, работающей в браузере клиента. Если надстройка использует схему манифестов надстроек Office версии 1.1, то этот URL-адрес указан в первом элементе `SourceLocation` под типом формы `ItemRead` или `ItemEdit` (в зависимости от того, какой из них указан первым в элементе [FormSettings](/javascript/api/manifest/formsettings) манифеста надстройки). |
+| `aud` | URL-адрес надстройки, запросившей маркер. Маркер действителен, только если он отправлен из надстройки, работающей в браузере клиента. URL-адрес надстройки указывается в манифесте. Разметка зависит от типа манифеста.</br></br>**XML-манифест:** Если надстройка использует схему манифестов надстроек Office версии 1.1, этот URL-адрес является URL-адресом **\<SourceLocation\>** , указанным в первом элементе, `ItemRead` `ItemEdit`в типе формы или (в зависимости от того, что происходит первым как часть элемента [FormSettings](/javascript/api/manifest/formsettings) в манифесте надстройки).</br></br>**Манифест Teams (предварительная версия):** URL-адрес указывается в свойстве extensions.audienceClaimUrl. |
 | `iss` | Уникальный идентификатор сервера Exchange, выпустившего маркер. Все маркеры, выпущенные сервером Exchange, будут иметь одинаковый идентификатор. |
-| `nbf` | Дата и время начала срока действия маркера. Значением является количество секунд с 1 января 1970 г. |
-| `exp` | Дата и время окончания срока действия маркера. Значением является количество секунд с 1 января 1970 г. |
+| `nbf` | The date and time that the token is valid starting from. The value is the number of seconds since January 1, 1970. |
+| `exp` | The date and time that the token is valid until. The value is the number of seconds since January 1, 1970. |
 | `appctxsender` | Уникальный идентификатор для сервера Exchange Server, который отправляет контекст приложения. |
 | `isbrowserhostedapp` | Указывает, размещается ли надстройка в браузере. |
 | `appctx` | Контекст приложения для маркера. |
@@ -84,7 +84,7 @@ ms.locfileid: "64484056"
 
 ## <a name="identity-token-signature"></a>Подпись маркера удостоверения
 
-Подпись создается путем хэширования разделов заголовка и полезных данных с использованием алгоритма, указанного в заголовке, а также самозаверяющего сертификата X509, размещенного на сервере в месте, указанном в полезных данных. Веб-служба может проверить эту подпись, чтобы убедиться в происхождении маркера удостоверения именно на том сервере, который должен был отправить такой маркер.
+The signature is created by hashing the header and payload sections with the algorithm specified in the header and using the self-signed X509 certificate located on the server at the location specified in the payload. Your web service can validate this signature to help make sure that the identity token comes from the server that you expect to send it.
 
 ## <a name="see-also"></a>См. также
 
