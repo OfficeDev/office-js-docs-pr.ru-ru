@@ -1,14 +1,14 @@
 ---
 title: Тестирование Internet Explorer 11
 description: Протестируйте надстройку Office в Internet Explorer 11.
-ms.date: 05/01/2022
+ms.date: 10/12/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ab904a3b086990cb9b10e2f266ddacafb4cba94
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: 887d71e8e054a39c474ef300aeeb588933499ed8
+ms.sourcegitcommit: 5544cf174d145e356e33866e2480bde999514ada
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423330"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68574166"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Тестирование надстройки Office в Internet Explorer 11
 
@@ -47,6 +47,8 @@ ms.locfileid: "67423330"
 
 - Ваш проект был разработан с помощью Visual Studio и IIS. Он не node.js основе.
 - Вы хотите быть абсолютно надежными в тестировании.
+- Вы не можете использовать бета-канал для Microsoft 365 на компьютере разработки.
+- Разработка выполняется на компьютере Mac. 
 - Если по какой-либо причине средство командной строки не работает.
 
 ### <a name="switch-via-the-command-line"></a>Переключение с помощью командной строки
