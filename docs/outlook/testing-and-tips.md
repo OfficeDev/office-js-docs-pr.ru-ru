@@ -1,14 +1,14 @@
 ---
 title: Развертывание и установка надстроек Outlook для тестирования
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
-ms.date: 07/08/2021
+ms.date: 10/18/2022
 ms.localizationpriority: high
-ms.openlocfilehash: b627dbf4b32daee4327cb139db58a56c4a704580
-ms.sourcegitcommit: 287a58de82a09deeef794c2aa4f32280efbbe54a
-ms.translationtype: HT
+ms.openlocfilehash: 1b6d29fa85b855adbf75a33345850582d2eecc02
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64496882"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607522"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 
@@ -24,11 +24,11 @@ ms.locfileid: "64496882"
 
 ## <a name="create-a-manifest-file-for-the-add-in"></a>Создание файла манифеста для надстройки
 
-Каждая надстройка описана манифестом XML — документом, который предоставляет серверу сведения о надстройке, сообщает пользователю описательную информацию о ней и идентифицирует расположение HTML-файла интерфейса надстройки. Вы можете хранить манифест в локальной папке или на сервере. Его расположение должно быть доступным для сервера Exchange Server проверяемого почтового ящика. Дополнительные сведения о том, как создать файл манифеста, см. в статье [Манифесты надстроек Outlook](manifests.md).
+Каждая надстройка описывается манифестом, документом, который предоставляет серверу сведения о надстройке, предоставляет описательные сведения о надстройке для пользователя и определяет расположение HTML-файла пользовательского интерфейса надстройки. Вы можете хранить манифест в локальной папке или на сервере. Его расположение должно быть доступным для сервера Exchange Server проверяемого почтового ящика. Сведения о создании файла манифеста см. в разделе [Манифесты надстроек Outlook](manifests.md).
 
 ## <a name="deploy-an-add-in-to-a-web-server"></a>Развертывание надстройки на веб-сервере
 
-Для создания надстройки можно использовать HTML и JavaScript. Конечные исходные файлы хранятся на веб-сервере, к которому может обращаться сервер Exchange Server, на котором размещена надстройка. После развертывания исходных файлов надстройки вы можете обновить ее пользовательский интерфейс и поведение, обновив файлы HTML или JavaScript на веб-сервере.
+You can use HTML and JavaScript to create the add-in. The resulting source files are stored on a web server that can be accessed by the Exchange server that hosts the add-in. After initially deploying the source files for the add-in, you can update the add-in UI and behavior by replacing the HTML files or JavaScript files stored on the web server with a new version of the HTML file.
 
 ## <a name="install-the-add-in"></a>Установка надстройки
 
@@ -36,9 +36,9 @@ ms.locfileid: "64496882"
 
 ### <a name="sideload-the-add-in"></a>Загрузка неопубликованной надстройки
 
-Вы можете установить надстройку, если ваш почтовый ящик находится в Exchange Online, Exchange 2013 или более поздней версии. Для загрузки неопубликованных надстроек требуется по крайней мере роль **My Custom Apps** для сервера Exchange Server. Чтобы проверить надстройку или иметь возможность устанавливать надстройки, указывая URL-адрес или имя файла манифеста, попросите своего администратора Exchange предоставить вам необходимые разрешения.
+You can install an add-in if your mailbox is on Exchange Online, Exchange 2013 or a later release. Sideloading add-ins requires at minimum the **My Custom Apps** role for your Exchange Server. In order to test your add-in, or install add-ins in general by specifying a URL or file name for the add-in manifest, you should request your Exchange administrator to provide the necessary permissions.
 
-Администратор Exchange может выполнить следующий командлет PowerShell, чтобы назначить необходимые разрешения одному пользователю. В этом примере `wendyri` — псевдоним электронной почты пользователя.
+The Exchange administrator can run the following PowerShell cmdlet to assign a single user the necessary permissions. In this example, `wendyri` is the user's email alias.
 
 ```powershell
 New-ManagementRoleAssignment -Role "My Custom Apps" -User "wendyri"
@@ -74,9 +74,9 @@ New-App -URL:"http://<fully-qualified URL">
 
 Выбор версии клиента Outlook для тестирования зависит от ваших требований к разработке.
 
-- Если вы разрабатываете надстройку для частного использования или только для членов организации, важно протестировать версии Outlook, используемые в компании. Обратите внимание на то, что некоторые пользователи могут использовать Outlook в Интернете, поэтому также важно протестировать версии стандартного браузера компании.
+- If you're developing an add-in for private use, or only for members of your organization, then it is important to test the versions of Outlook that your company uses. Keep in mind that some users may use Outlook on the web, so testing your company's standard browser versions is also important.
 
-- Если вы разрабатываете надстройку для размещения в [AppSource](https://appsource.microsoft.com), необходимо протестировать версии, указанные в [политиках сертификации коммерческой платформы Marketplace 1120.3](/legal/marketplace/certification-policies#11203-functionality), в том числе:
+- If you're developing an add-in to list in [AppSource](https://appsource.microsoft.com), you must test the required versions as specified in the [Commercial marketplace certification policies 1120.3](/legal/marketplace/certification-policies#11203-functionality). This includes:
   - Последнюю и предпоследнюю версии Outlook для Windows.
   - Последнюю версию Outlook для Mac.
   - Последнюю версию Outlook для iOS и Android (если надстройка [поддерживает мобильный формат](add-mobile-support.md)).
@@ -91,7 +91,7 @@ New-App -URL:"http://<fully-qualified URL">
 
 Чтобы устранить эту проблему, рекомендуем проверить надстройку в Outlook в Интернете, подключенном к собственной приватной локальной среде Exchange. Дополнительные сведения см. в руководстве о том, как [создать тестовую среду Exchange 2016 или Exchange 2019](/Exchange/plan-and-deploy/plan-and-deploy?view=exchserver-2019&preserve-view=true#establish-an-exchange-2016-or-exchange-2019-test-environment), и о том, как управлять [Outlook в Интернете в Exchange Server](/exchange/clients/outlook-on-the-web/outlook-on-the-web?view=exchserver-2019&preserve-view=true).
 
-Вы также можете выбрать вариант с оплатой и использовать службу, размещающую локальные серверы Exchange Server и управляющую ими. Некоторые варианты:
+Вы также можете выбрать вариант с оплатой и использовать службу, размещающую локальные серверы Exchange Server и управляющую ими. Несколько вариантов:
 
 - [Rackspace](https://www.rackspace.com/email-hosting/exchange-server)
 - [Hostway](https://hostway.com/microsoft-exchange/)

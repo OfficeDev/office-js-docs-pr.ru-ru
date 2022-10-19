@@ -1,14 +1,14 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 09/03/2021
+ms.date: 10/17/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 17ab09a1f0cdbf7668fa80080e587dd3d800f2c6
-ms.sourcegitcommit: b6a3815a1ad17f3522ca35247a3fd5d7105e174e
-ms.translationtype: HT
+ms.openlocfilehash: d8ae8971c4095e5314885514226cd8f52728fb07
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66958364"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607529"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -19,7 +19,8 @@ ms.locfileid: "66958364"
 Маркеры доступа для единого входа упрощают проверку подлинности надстройки и получение маркеров доступа для вызова [API Microsoft Graph](/graph/overview). Эта возможность повышает удобство работы, так как пользователю не требуется вводить свои учетные данные.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](/javascript/api/requirement-sets/common/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Инструкции см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> The Single Sign-on API is currently supported for Word, Excel, Outlook, and PowerPoint. For more information about where the Single Sign-on API is currently supported, see [IdentityAPI requirement sets](/javascript/api/requirement-sets/common/identity-api-requirement-sets).
+> If you are working with an Outlook add-in, be sure to enable Modern Authentication for the Microsoft 365 tenancy. For information about how to do this, see [Exchange Online: How to enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Рекомендуем использовать маркеры единого входа в таких случаях:
 
@@ -29,6 +30,9 @@ ms.locfileid: "66958364"
   - сторонней службе, которой управляете вы.
 
 Метод проверки подлинности для единого входа использует [поток "от имени" OAuth2, предоставленный службой Azure Active Directory](/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of). Для этого необходимо, чтобы надстройка была зарегистрирована на [портале регистрации приложений](https://apps.dev.microsoft.com/), а в ее манифесте были указаны необходимые области Microsoft Graph.
+
+> [!NOTE]
+> Если надстройка использует манифест Teams для надстроек [Office (](../develop/json-manifest-overview.md)предварительная версия), существует конфигурация манифеста, но области Microsoft Graph не указаны. Надстройки с поддержкой единого входа, использующие манифест Teams, могут быть загружены неопубликованно, но в данный момент не могут быть развернуты другим способом.
 
 Так надстройка может получить маркер доступа, действующий во внутреннем API сервера. Надстройка использует этот маркер в качестве токена носителя в заголовке `Authorization`, чтобы выполнять проверку подлинности обратного вызова API. После этого сервер сможет следующее:
 
@@ -61,7 +65,7 @@ ms.locfileid: "66958364"
 
 ## <a name="callback-tokens"></a>Маркеры обратного вызова
 
-Маркеры обратного вызова предоставляют доступ к почтовому ящику пользователя на внутреннем сервере при использовании [веб-служб Exchange (EWS)](/exchange/client-developer/exchange-web-services/explore-the-ews-managed-api-ews-and-web-services-in-exchange) или [REST API для Outlook](/previous-versions/office/office-365-api/api/version-2.0/use-outlook-rest-api). Рекомендуем использовать маркеры обратного вызова в таких случаях:
+Callback tokens provide access to the user's mailbox from your server back-end, either using [Exchange Web Services (EWS)](/exchange/client-developer/exchange-web-services/explore-the-ews-managed-api-ews-and-web-services-in-exchange), or the [Outlook REST API](/previous-versions/office/office-365-api/api/version-2.0/use-outlook-rest-api). Consider using callback tokens if your add-in:
 
 - надстройке требуется доступ к почтовому ящику пользователя на внутреннем сервере.
 

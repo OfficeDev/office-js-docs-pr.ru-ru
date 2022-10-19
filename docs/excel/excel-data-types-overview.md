@@ -1,17 +1,17 @@
 ---
 title: Обзор типов данных в надстройках Excel
 description: Типы данных в API JavaScript для Excel позволяют разработчикам надстроек Office работать с форматированными числами, веб-изображениями, сущностями, массивами внутри сущностей и расширенными ошибками в качестве типов данных.
-ms.date: 10/10/2022
+ms.date: 10/14/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: 2d19eacc23d64f472f32363fc93155b6e023ba04
-ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
+ms.openlocfilehash: 92f541d3b1296de5545bfb0016448f49043abcba
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68540979"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607438"
 ---
 # <a name="overview-of-data-types-in-excel-add-ins"></a>Обзор типов данных в надстройках Excel
 
@@ -23,6 +23,9 @@ ms.locfileid: "68540979"
 
 Чтобы узнать, как использовать API типов данных, начните со статьи основных понятий [типов данных Excel](excel-data-types-concepts.md) .
 
+> [!NOTE]
+> Чтобы сразу начать экспериментировать с типами данных, установите [Script Lab в Excel](../overview/explore-with-script-lab.md) и ознакомьтесь с разделом "Типы данных" в нашей **библиотеке примеров**. Вы также можете изучить Script Lab в нашем репозитории [OfficeDev/office-js-snippets](https://github.com/OfficeDev/office-js-snippets/tree/prod/samples/excel/20-data-types).
+
 ## <a name="data-types-and-custom-functions"></a>Типы данных и пользовательские функции
 
 Типы данных делают пользовательские функции полезнее. Пользовательские функции принимают различные типы данных на вход и используют их на выходе; кроме того, в них применяется та же схема JSON для типов данных, что и в API JavaScript для Excel. На этой схеме JSON типов данных основаны все расчеты и вычисления пользовательских функций. Чтобы узнать больше об интеграции типов данных с пользовательскими функциями, см. [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md).
@@ -31,5 +34,6 @@ ms.locfileid: "68540979"
 
 - [Ключевые понятия типов данных в Excel](excel-data-types-concepts.md)
 - [Использование карточек с типами данных значений сущностей](excel-data-types-entity-card.md)
-- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
 - [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md)
+- [Создание и изучение типов данных в Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

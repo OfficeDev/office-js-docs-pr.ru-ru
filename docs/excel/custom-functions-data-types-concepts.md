@@ -1,20 +1,20 @@
 ---
 title: Пользовательские функции и типы данных
 description: Используйте типы данных Excel с пользовательскими функциями и надстройками Office.
-ms.date: 10/10/2022
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
-ms.localizationpriority: high
-ms.openlocfilehash: 5dbe42af2edcfc9860ce27dc5c8dbe2ad88b9ecf
-ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
+ms.localizationpriority: medium
+ms.openlocfilehash: 6ea2287dbf83a5acc45f64c6f5071e504e66bbce
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68540993"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607431"
 ---
 # <a name="use-data-types-with-custom-functions-in-excel"></a>Использование типов данных с пользовательскими функциями в Excel
 
-Типы данных расширяют программный интерфейс API JavaScript для Excel для поддержки новых типов данных в дополнение к исходным четырем типам значений ячеек (строка, число, логическое значение и ошибка). Типы данных включают поддержку веб-изображений, форматированных чисел, сущностей и массивов сущностей.
+Типы данных расширяют программный интерфейс API JavaScript для Excel для поддержки новых типов данных в дополнение к исходным четырем типам значений ячеек (строка, число, логическое значение и ошибка). Типы данных включают поддержку веб-изображений, отформатированных числов, сущностей и массивов в сущностях.
 
 За счет этих типов данных расширяются возможности пользовательских функций, поскольку такие функции принимают типы данных в качестве значений как входных, так и выходных данных. Типы данных можно создавать с помощью пользовательских функций или использовать существующие типы данных в качестве аргументов функций при вычислениях. После установки схемы JSON типа данных она поддерживается во всех вычислениях.
 
@@ -29,23 +29,9 @@ ms.locfileid: "68540993"
 
 ## <a name="enable-data-types-for-custom-functions"></a>Включение типов данных для пользовательских функций
 
-Чтобы использовать эту возможность, необходимо вручную обновить метаданные JSON. Для временного тестирования вы можете настроить параметры Script Lab вместо обновления метаданных JSON вручную. В следующих разделах эти действия описаны более подробно.
-
-### <a name="manually-update-json-metadata"></a>Обновление метаданных JSON вручную
-
 Проекты пользовательских функций включают файл метаданных JSON. Этот файл метаданных JSON отличается от схемы JSON, используемой API-интерфейсами типов данных. Чтобы использовать интеграцию типов данных с пользовательскими функциями, файл метаданных JSON пользовательских функций должен обновляться вручную, чтобы включить свойство `allowCustomDataForDataTypeAny`. Присвойте этому свойству значение `true`.
 
-For a full description of the manual JSON creation process, see [Manually create JSON metadata for custom functions](custom-functions-json.md). See [allowCustomDataForDataTypeAny](custom-functions-json.md#allowcustomdatafordatatypeany) for additional details about this property.
-
-### <a name="script-lab-option"></a>Возможность Script Lab
-
-Интеграция пользовательских функций с типами данных доступна для тестирования с помощью Script Lab в дополнение к обновлению метаданных JSON вручную, описанному в предыдущем разделе. Дополнительные сведения о Script Lab см. в статье [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md). Чтобы протестировать эту функцию с помощью Script Lab, обновите параметры с использованием следующих действий.
-
-1. Откройте область задач **Код** в Script Lab.
-1. В правом нижнем углу нажмите кнопку **Параметры**.
-1. Перейдите на вкладку **Параметры пользователя** и введите `allowCustomDataForDataTypeAny: true`.
-
-![Снимок экрана: действия по включению типов данных для пользовательских функций в Script Lab.](../images/custom-functions-script-lab-data-type.png)
+Полное описание процесса создания метаданных JSON вручную см. в статье о создании метаданных [JSON вручную для пользовательских функций](custom-functions-json.md). Дополнительные сведения об этом свойстве см. в разделе [allowCustomDataForDataTypeAny](custom-functions-json.md#allowcustomdatafordatatypeany).
 
 ## <a name="output-a-formatted-number-value"></a>Вывод форматированного числового значения
 
@@ -92,6 +78,10 @@ function getEntityAttribute(value, attribute) {
     }
 }
 ```
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+Чтобы поэкспериментировать с пользовательскими функциями и типами данных, установите [Script Lab в Excel](../overview/explore-with-script-lab.md) и попробуйте использовать типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/16-custom-functions/data-types-custom-functions.yaml) фрагмент пользовательских функций в нашей **библиотеке примеров**.
 
 ## <a name="see-also"></a>См. также
 

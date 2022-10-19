@@ -1,16 +1,16 @@
 ---
 title: Карточка значения сущности типов данных API JavaScript для Excel
 description: Узнайте, как использовать карточки значений сущностей с типами данных в надстройке Excel.
-ms.date: 10/10/2022
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2b3e88953bee54c1efa54a419db2518a1d2518
-ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
+ms.openlocfilehash: 1cb6c49e0e8cb07afb4b7c78a360be6c2391437a
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68540986"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607571"
 ---
 # <a name="use-cards-with-entity-value-data-types"></a>Использование карточек с типами данных значений сущностей
 
@@ -32,7 +32,7 @@ ms.locfileid: "68540986"
 В следующем фрагменте кода показан JSON для значения сущности с несколькими типами данных, вложенными в .`properties`
 
 > [!NOTE]
-> Чтобы узнать, как использовать этот JSON в полный пример кода, посетите репозиторий [OfficeDev/office-js-snippets](https://github.com/OfficeDev/office-js-snippets/blob/main/samples/excel/85-preview-apis/data-types-entity-values.yaml) .
+> Чтобы поэкспериментировать с этим фрагментом кода JSON в [](../overview/explore-with-script-lab.md) полной выборке, откройте Script Lab Excel и выберите "Типы данных[:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-entity-values.yaml) создание карточек сущностей из данных  в таблице в нашей библиотеке примеров".
 
 ```TypeScript
 const entity: Excel.EntityCellValue = {
@@ -114,7 +114,7 @@ const entity: Excel.EntityCellValue = {
 В каждом разделе карточки можно указать такие элементы `layout`, как , `title`и `properties`. Ключ `layout` использует объект [`CardLayoutListSection`](/javascript/api/excel/excel.cardlayoutlistsection) и принимает значение `"List"`. Ключ `properties` принимает массив строк. Обратите внимание, что `properties` значения, `"Product ID"`например, имеют соответствующие типы данных в предыдущем разделе статьи [о свойствах](#card-properties) карточки. Разделы также можно сворачивать и определять логическими значениями как свернутые или не свернутые при открытии карточки сущности в пользовательском интерфейсе Excel.
 
 > [!NOTE]
-> Чтобы узнать, как использовать этот JSON в полный пример кода, посетите репозиторий [OfficeDev/office-js-snippets](https://github.com/OfficeDev/office-js-snippets/blob/main/samples/excel/85-preview-apis/data-types-entity-values.yaml) .
+> Чтобы поэкспериментировать с этим фрагментом кода JSON в [](../overview/explore-with-script-lab.md) полной выборке, откройте Script Lab Excel и выберите "Типы данных[:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-entity-values.yaml) создание карточек сущностей из данных  в таблице в нашей библиотеке примеров".
 
 ```TypeScript
 const entity: Excel.EntityCellValue = {
@@ -169,7 +169,7 @@ const entity: Excel.EntityCellValue = {
 В следующем фрагменте кода JSON `provider` показано значение сущности, которое использует свойство для указания атрибута поставщика данных для сущности.
 
 > [!NOTE]
-> Чтобы узнать, как использовать этот JSON в полный пример кода, посетите репозиторий [OfficeDev/office-js-snippets](https://github.com/OfficeDev/office-js-snippets/blob/main/samples/excel/85-preview-apis/data-types-entity-attribution.yaml) .
+> Чтобы поэкспериментировать с этим фрагментом кода JSON в [](../overview/explore-with-script-lab.md) полностьюм примере, откройте Script Lab Excel и выберите "Типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-entity-attribution.yaml) свойства атрибуции значений сущности" в нашей библиотеке **примеров**.
 
 ```TypeScript
 const entity: Excel.EntityCellValue = {
@@ -193,8 +193,13 @@ const entity: Excel.EntityCellValue = {
 
 :::image type="content" source="../images/excel-data-types-entity-card-attribution.png" alt-text="Снимок экрана: тип данных значения сущности с окном макета карточки. На карточке в левом нижнем углу отображается атрибут поставщика данных.":::
 
+## <a name="next-steps"></a>Дальнейшие действия
+
+Попробуйте создать [и изучить типы данных в примере Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer) в репозитории [OfficeDev/Office-Add-in-samples](https://github.com/OfficeDev/Office-Add-in-samples) . В этом примере показано, как создать и загрузить неопубликованную надстройку, которая создает и изменяет типы данных в книге.
+
 ## <a name="see-also"></a>См. также
 
 - [Обзор типов данных в надстройках Excel](excel-data-types-overview.md)
 - [Основные понятия, связанные с типами данных Excel](excel-data-types-concepts.md)
+- [Создание и изучение типов данных в Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

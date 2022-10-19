@@ -1,18 +1,18 @@
 ---
 title: Надстройки Outlook для Outlook Mobile
 description: Мобильные надстройки Outlook поддерживаются во всех бизнес-учетных записях Microsoft 365 и Outlook.com учетных записях.
-ms.date: 04/15/2022
+ms.date: 10/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: dfa314ad91646e2ed4de47cae1bcbb8cfb1f121a
-ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
+ms.openlocfilehash: ca09ba550d8d2ed6e9003e85a8d042f413a6ab52
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67318804"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607564"
 ---
 # <a name="add-ins-for-outlook-mobile"></a>Надстройки для Outlook Mobile
 
-В Outlook Mobile теперь работают надстройки, использующие те же API, что и в других конечных точках Outlook. Если вы уже создали надстройку для Outlook, вам будет легко запустить ее в Outlook Mobile.
+Add-ins now work on Outlook Mobile, using the same APIs available for other Outlook endpoints. If you've built an add-in for Outlook already, it's easy to get it working on Outlook Mobile.
 
 Мобильные надстройки Outlook поддерживаются во всех бизнес-учетных записях Microsoft 365 и Outlook.com учетных записях. Однако в настоящее время поддержка для учетных записей Gmail недоступна.
 
@@ -28,15 +28,17 @@ ms.locfileid: "67318804"
 
 ## <a name="whats-different-on-mobile"></a>Чем отличаются надстройки для мобильных устройств?
 
-- Небольшой размер и скорость взаимодействия усложняют разработку для мобильных устройств. Чтобы пользователи получали только качественные приложения, мы устанавливаем строгие требования, которым должна соответствовать надстройка с заявленной поддержкой мобильных устройств для утверждения в AppSource.
+- The small size and quick interactions make designing for mobile a challenge. To ensure quality experiences for our customers, we are setting strict validation criteria that must be met by an add-in declaring mobile support, in order to be approved in AppSource.
   - В надстройке **ДОЛЖНЫ** соблюдаться [рекомендации по пользовательскому интерфейсу](outlook-addin-design.md).
   - Сценарий для использования надстройки **ДОЛЖЕН** [быть уместным на мобильных устройствах](#what-makes-a-good-scenario-for-mobile-add-ins).
+
+[!INCLUDE [Teams manifest not supported on mobile devices](../includes/no-mobile-with-json-note.md)]
 
 - Как правило, в настоящее время поддерживается только режим чтения сообщений. Это означает `MobileMessageReadCommandSurface` , что [в мобильном разделе манифеста следует объявить только ExtensionPoint](/javascript/api/manifest/extensionpoint#mobilemessagereadcommandsurface) . Однако существует несколько исключений:
   1. Режим организатора встреч поддерживается для интегрированных надстроек поставщика собраний по сети, которые объявляют точку расширения [MobileOnlineMeetingCommandSurface](/javascript/api/manifest/extensionpoint#mobileonlinemeetingcommandsurface). Дополнительные [сведения об этом](online-meeting.md) сценарии см. в статье о создании мобильной надстройки Outlook для поставщика собраний по сети.
   1. Режим участника встречи поддерживается для интегрированных надстроек, созданных поставщиками приложений для создания заметок и управления отношениями с клиентами (CRM). Такие надстройки должны объявлять точку расширения [MobileLogEventAppointmentAttendee](/javascript/api/manifest/extensionpoint#mobilelogeventappointmentattendee). Дополнительные [сведения об этом сценарии](mobile-log-appointments.md) см. в заметках о встрече журнала для внешнего приложения в мобильных надстройки Outlook.
 
-- API [makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) не поддерживается на мобильных устройствах, так как мобильное приложение использует интерфейсы REST API для связи с сервером. Если внутреннему серверу приложения требуется подключиться к серверу Exchange, вы можете совершать вызовы REST API с помощью маркера обратного вызова. Дополнительные сведения см. в статье [Использование интерфейсов REST API Outlook из надстройки Outlook](use-rest-api.md).
+- The [makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) API is not supported on mobile since the mobile app uses REST APIs to communicate with the server. If your app backend needs to connect to the Exchange server, you can use the callback token to make REST API calls. For details, see [Use the Outlook REST APIs from an Outlook add-in](use-rest-api.md).
 
 - Отправляя надстройку в магазин с элементом [MobileFormFactor](/javascript/api/manifest/mobileformfactor) в манифесте, необходимо принять условия приложения для разработчиков надстроек на iOS, а также указать свой идентификатор разработчика Apple для проверки.
 
@@ -44,13 +46,13 @@ ms.locfileid: "67318804"
 
 ## <a name="what-makes-a-good-scenario-for-mobile-add-ins"></a>Для каких сценариев хорошо подходят мобильные надстройки?
 
-Помните, что средняя продолжительность сеанса Outlook на телефоне значительно ниже, чем на компьютере. Это означает, что надстройка должна работать быстро, позволяя пользователю зайти, выйти и вернуться к работе с электронной почтой.
+Remember that the average Outlook session length on a phone is much shorter than on a PC. That means your add-in must be fast, and the scenario must allow the user to get in, get out, and get on with their email workflow.
 
 Ниже приведены примеры сценариев, для которых подходит Outlook Mobile.
 
-- Надстройка передает ценные сведения в Outlook, помогая пользователям сортировать свою почту и отвечать надлежащим образом. Пример: надстройка CRM, позволяющая пользователю просматривать сведения о клиентах и делиться соответствующей информацией.
+- The add-in brings valuable information into Outlook, helping users triage their email and respond appropriately. Example: a CRM add-in that lets the user see customer information and share appropriate information.
 
-- Надстройка повышает ценность содержимого электронной почты пользователя, сохраняя сведения в системе отслеживания, совместной работы или другой подобной системе. Пример: надстройка, позволяющая пользователям преобразовывать электронные сообщения в элементы задач для отслеживания проектов или заявки в службу поддержки.
+- The add-in adds value to the user's email content by saving the information to a tracking, collaboration, or similar system. Example: an add-in that lets users turn emails into task items for project tracking, or help tickets for a support team.
 
 **Пример действий пользователя для создания карточки Trello из электронного сообщения на iOS**
 
@@ -66,7 +68,7 @@ ms.locfileid: "67318804"
 
 Чтобы протестировать надстройку в Outlook Mobile, [](sideload-outlook-add-ins-for-testing.md) сначала перезагрузите неопубликованную надстройку в учетную запись Microsoft 365 или Outlook.com в Интернете, Windows или Mac. Убедитесь, что манифест правильно отформатирован для хранения `MobileFormFactor` или не будет загружаться в клиент Outlook на мобильных устройствах.
 
-Подготовив надстройку к работе, протестируйте ее на экранах различных размеров, в том числе на телефонах и планшетах. Убедитесь, что она соответствует требованиям к специальным возможностям: контрастности, размеру шрифта, а также возможности работы со средствами чтения с экрана, такими как VoiceOver в iOS и TalkBack в Android.
+After your add-in is working, make sure to test it on different screen sizes, including phones and tablets. You should make sure it meets accessibility guidelines for contrast, font size, and color, as well as being usable with a screen reader such as VoiceOver on iOS or TalkBack on Android.
 
 Устранение неполадок на мобильных устройствах может оказаться сложной проблемой, так как у вас нет средств, к которые вы уже использовались. Однако одним из вариантов устранения неполадок в iOS является использование Fiddler (ознакомьтесь с этим руководством по его использованию на [устройстве iOS](https://www.telerik.com/blogs/using-fiddler-with-apple-ios-devices)).
 

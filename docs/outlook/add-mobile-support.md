@@ -1,14 +1,14 @@
 ---
 title: Добавление поддержки мобильных устройств в надстройку Outlook
 description: Узнайте, как добавить поддержку Outlook Mobile, в том числе обновить манифест надстройки и при необходимости изменить код для мобильных сценариев.
-ms.date: 04/15/2022
+ms.date: 10/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 50f1613e83d9b23178714cfb3da8110a4c561b05
-ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
+ms.openlocfilehash: c84b4aeb04cd2c8b3c2f0a7afa9fd1631c22afc5
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67318881"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607548"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
@@ -16,9 +16,11 @@ ms.locfileid: "67318881"
 
 ## <a name="updating-the-manifest"></a>Обновление манифеста
 
-Чтобы включить команды надстроек в Outlook Mobile, необходимо сначала определить их в манифесте надстройки. В схеме [VersionOverrides](/javascript/api/manifest/versionoverrides) версии 1.1 определен новый форм-фактор для мобильных устройств — [MobileFormFactor](/javascript/api/manifest/mobileformfactor).
+[!INCLUDE [Teams manifest not supported on mobile devices](../includes/no-mobile-with-json-note.md)]
 
-Этот элемент содержит все данные для загрузки надстройки в мобильных клиентах. Это позволяет определять совершенно другие элементы пользовательского интерфейса и файлы JavaScript для мобильной версии.
+The first step to enabling add-in commands in Outlook Mobile is to define them in the add-in manifest. The [VersionOverrides](/javascript/api/manifest/versionoverrides) v1.1 schema defines a new form factor for mobile, [MobileFormFactor](/javascript/api/manifest/mobileformfactor).
+
+This element contains all of the information for loading the add-in in mobile clients. This enables you to define completely different UI elements and JavaScript files for the mobile experience.
 
 В следующем примере показана одна кнопка области задач в элементе `MobileFormFactor` .
 
@@ -59,10 +61,10 @@ ms.locfileid: "67318881"
 Она во многом подобна элементам, которые отображаются в элементе [DesktopFormFactor](/javascript/api/manifest/desktopformfactor), но имеет некоторые существенные отличия.
 
 - Элемент [OfficeTab](/javascript/api/manifest/officetab) не используется.
-- У элемента [ExtensionPoint](/javascript/api/manifest/extensionpoint) должен быть только один дочерний элемент. Если надстройка добавляет только одну кнопку, это должен быть дочерний элемент [Control](/javascript/api/manifest/control). Если же надстройка добавляет несколько кнопок, это должен быть дочерний элемент [Group](/javascript/api/manifest/group), содержащий несколько элементов `Control`.
+- The [ExtensionPoint](/javascript/api/manifest/extensionpoint) element must have only one child element. If the add-in only adds one button, the child element should be a [Control](/javascript/api/manifest/control) element. If the add-in adds more than one button, the child element should be a [Group](/javascript/api/manifest/group) element that contains multiple `Control` elements.
 - Для элемента `Menu` нет аналога типа `Control`.
 - Элемент [Supertip](/javascript/api/manifest/supertip) не используется.
-- Требуются значки других размеров. Мобильные надстройки должны поддерживать как минимум значки размерами 25x25, 32x32 и 48x48 пикселей.
+- The required icon sizes are different. Mobile add-ins minimally must support 25x25, 32x32 and 48x48 pixel icons.
 
 ## <a name="code-considerations"></a>Особенности кода
 
@@ -70,17 +72,17 @@ ms.locfileid: "67318881"
 
 ### <a name="use-rest-instead-of-exchange-web-services"></a>Использование REST вместо веб-служб Exchange
 
-Метод [Office.context.mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) не поддерживается в Outlook Mobile. По мере возможности надстройки должны отдавать предпочтение данным из API Office.js. Если надстройкам требуются сведения, которые не предоставляет API Office.js, то для доступа к почтовому ящику пользователя следует использовать [интерфейсы REST API Outlook](/outlook/rest/).
+The [Office.context.mailbox.makeEwsRequestAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) method is not supported in Outlook Mobile. Add-ins should prefer to get information from the Office.js API when possible. If add-ins require information not exposed by the Office.js API, then they should use the [Outlook REST APIs](/outlook/rest/) to access the user's mailbox.
 
 В наборе обязательных элементов почтового ящика 1.5 представлена новая версия [Office.context.mailbox.getCallbackTokenAsync](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#methods) , которая может запрашивать маркер доступа, совместимый с REST API, и новое свойство [Office.context.mailbox.restUrl](/javascript/api/requirement-sets/outlook/preview-requirement-set/office.context.mailbox#properties) , которое можно использовать для поиска конечной точки REST API для пользователя.
 
 ### <a name="pinch-zoom"></a>Масштабирование жестами
 
-По умолчанию пользователи могут приближать области задач с помощью жеста масштабирования. Если в вашем случае это неуместно, отключите масштабирование жестами в коде HTML.
+By default users can use the "pinch zoom" gesture to zoom in on task panes. If this does not make sense for your scenario, be sure to disable pinch zoom in your HTML.
 
 ### <a name="close-task-panes"></a>Закрытие области задач
 
-В Outlook Mobile области задач занимают весь экран, поэтому для возврата к сообщению их необходимо закрывать. Рекомендуем использовать метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui#office-office-ui-closecontainer-member(1)), чтобы закрыть область задач по завершении сценария.
+In Outlook Mobile, task panes take up the entire screen and by default require the user to close them to return to the message. Consider using the [Office.context.ui.closeContainer](/javascript/api/office/office.ui#office-office-ui-closecontainer-member(1)) method to close the task pane when your scenario is complete.
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 

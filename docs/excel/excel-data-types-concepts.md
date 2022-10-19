@@ -1,17 +1,17 @@
 ---
 title: Основные понятия, связанные с типами данных API JavaScript для Excel
 description: Информация об основных понятиях для использования типов данных Excel в надстройках Office.
-ms.date: 10/10/2022
+ms.date: 10/14/2022
 ms.topic: conceptual
 ms.prod: excel
 ms.custom: scenarios:getting-started
 ms.localizationpriority: high
-ms.openlocfilehash: b46639bdf44155f9e3de50526ce7eac48c278b12
-ms.sourcegitcommit: a2df9538b3deb32ae3060ecb09da15f5a3d6cb8d
+ms.openlocfilehash: 65a69838500733f8be08a15a99baa167a946b82a
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68541152"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607452"
 ---
 # <a name="excel-data-types-core-concepts"></a>Основные понятия, связанные с типами данных Excel
 
@@ -79,6 +79,8 @@ const myDate: Excel.FormattedNumberCellValue = {
 };
 ```
 
+Начните экспериментировать с отформатированными числами, открыв Script Lab и [проверив](../overview/explore-with-script-lab.md) типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-formatted-number.yaml) фрагмент форматированных чисел в нашей **библиотеке примеров**.
+
 ## <a name="entity-values"></a>Сущность
 
 Значение сущности — это контейнер для типов данных, аналогичный объекту в объектно-ориентированном программировании. Сущности также поддерживают массивы в качестве свойств значения сущности. Объект [EntityCellValue](/javascript/api/excel/excel.entitycellvalue) позволяет надстройкам определять такие свойства, как `type`, `text` и `properties`. Свойство `properties` позволяет значению сущности определять и содержать дополнительные типы данных.
@@ -108,6 +110,8 @@ const myEntity: Excel.EntityCellValue = {
 
 Значения сущностей также предлагают свойство `layouts`, которое создает карточку для сущности. Карточка отображается в виде модального окна в пользовательском интерфейсе Excel и может демонстрировать дополнительные сведения, содержащиеся в значении сущности, помимо того, что отображается в ячейке. Дополнительные сведения см. в статье [Использование карточек с типами данных значений сущностей](excel-data-types-entity-card.md).
 
+Чтобы изучить типы данных сущностей, сначала [](../overview/explore-with-script-lab.md) перейдите к Script Lab Excel и откройте типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-entity-values.yaml) создание карт сущностей на основе данных в фрагменте таблицы в нашей библиотеке **примеров**. Типы [данных: значения сущностей](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-references.yaml) со ссылками и типами данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-entity-attribution.yaml) фрагменты свойств атрибутивности значений сущностей предоставляют более подробный обзор функций сущностей.
+
 ### <a name="linked-entities"></a>Связанные объекты
 
 Значения связанных сущностей или объекты [LinkedEntityCellValue](/javascript/api/excel/excel.linkedentitycellvalue) являются типом значения сущности. Эти объекты интегрируют данные, предоставленные внешней службой, и могут отображать эти данные в виде [карты сущности](excel-data-types-entity-card.md), как обычные значения сущности. [Типы данных Stocks и Geography](https://support.microsoft.com/office/excel-data-types-stocks-and-geography-61a33056-9935-484f-8ac8-f1a89e210877), доступные через пользовательский интерфейс Excel, являются значениями связанных сущностей.
@@ -129,6 +133,8 @@ const myImage: Excel.WebImageCellValue = {
     basicValue: "#VALUE!" // A read-only property. Used as a fallback in incompatible scenarios.
 };
 ```
+
+Попробуйте использовать типы данных веб-изображений, [открыв](../overview/explore-with-script-lab.md) Script Lab и выбрав "Типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-web-image.yaml) фрагмент веб-изображений" в нашей **библиотеке примеров**.
 
 ## <a name="improved-error-support"></a>Улучшенная поддержка ошибок
 
@@ -153,9 +159,18 @@ API типов данных представляют существующие о
 
 Каждый из объектов ошибок может получить доступ к перечисление через свойство `errorSubType`, и в этом перечислении содержатся дополнительные данные об ошибке. Например, объект ошибки `BlockedErrorCellValue` может получить доступ к перечислению [BlockedErrorCellValueSubType](/javascript/api/excel/excel.blockederrorcellvaluesubtype). В перечислении `BlockedErrorCellValueSubType` содержатся дополнительные данные о том, что вызвало данную ошибку.
 
+Дополнительные сведения об объектах ошибок типов данных см. в разделе "Типы данных [:](https://github.com/OfficeDev/office-js-snippets/blob/prod/samples/excel/20-data-types/data-types-error-values.yaml) задание значений ошибок" [](../overview/explore-with-script-lab.md) в нашей Script Lab **samples**.
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+Узнайте, как типы данных сущностей расширяют возможности надстроек Excel за пределами двумерной сетки [](excel-data-types-entity-card.md) с помощью статьи "Использование карточек с типами данных значений сущностей".
+
+Используйте пример создания и изучения типов данных в [Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer) в репозитории [OfficeDev/Office-Add-in-samples](https://github.com/OfficeDev/Office-Add-in-samples) для более глубокого эксперимента с типами данных путем создания и загрузки неопубликоваемой надстройки, которая создает и изменяет типы данных в книге.
+
 ## <a name="see-also"></a>См. также
 
 - [Обзор типов данных в надстройках Excel](excel-data-types-overview.md)
 - [Использование карточек с типами данных значений сущностей](excel-data-types-entity-card.md)
-- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Создание и изучение типов данных в Excel](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/excel-data-types-explorer)
 - [Пользовательские функции и типы данных](custom-functions-data-types-concepts.md)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

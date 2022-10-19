@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook для поставщика онлайн-собраний
 description: Описывается, как настроить надстройку Outlook для поставщика услуг для собраний по сети.
 ms.topic: article
-ms.date: 08/11/2022
+ms.date: 10/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e1775d8cf8cc45887dfb1058603c103583d5e5dc
-ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
+ms.openlocfilehash: f422107d69dd3cdcc9a01feaee0b97dcd7e5e1f3
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67320660"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607578"
 ---
 # <a name="create-an-outlook-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
@@ -24,9 +24,22 @@ ms.locfileid: "67320660"
 
 Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора Yeoman для надстроек Office.
 
+> [!NOTE]
+> Если вы хотите использовать манифест Teams для надстроек [Office (](../develop/json-manifest-overview.md)предварительная версия), выполните альтернативное краткое руководство в Outlook с помощью манифеста [Teams (](../quickstarts/outlook-quickstart-json-manifest.md)предварительная версия), но пропустите все разделы после раздела **"** Попробовать".
+
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы разрешить пользователям создавать собрания по сети с помощью надстройки, **\<VersionOverrides\>** необходимо настроить узел в манифесте. Если вы создаете надстройку, которая будет поддерживаться только в Outlook в Интернете, Windows и Mac, выберите вкладку **Windows, Mac, веб-вкладку** для справки. Однако если ваша надстройка также будет поддерживаться в Outlook для Android и iOS, перейдите на **вкладку "Мобильные** устройства".
+Чтобы разрешить пользователям создавать собрания по сети с помощью надстройки, необходимо настроить манифест. Разметка зависит от двух переменных:
+
+- Тип целевой платформы; мобильные или не мобильные устройства;
+- Тип манифеста; XML-манифест [или манифест Teams для надстроек Office (предварительная версия)](../develop/json-manifest-overview.md).
+
+Если надстройка использует XML-манифест, а надстройка будет поддерживаться только в Outlook в Интернете, Windows и Mac, выберите вкладку **Windows, Mac,** веб-вкладку для справки. Однако если ваша надстройка также будет поддерживаться в Outlook для Android и iOS, перейдите на **вкладку "Мобильные** устройства".
+
+Если надстройка использует манифест Teams (предварительная версия), выберите вкладку **манифеста Teams (предварительная версия для разработчиков** ).
+
+> [!NOTE]
+> Манифест Teams (предварительная версия) в настоящее время поддерживается только в Outlook для Windows. Мы работаем над тем, чтобы обеспечить поддержку других платформ, включая мобильные платформы.
 
 # <a name="windows-mac-web"></a>[Windows, Mac, Web](#tab/non-mobile)
 
@@ -194,6 +207,137 @@ ms.locfileid: "67320660"
   </VersionOverrides>
 </VersionOverrides>
 ```
+
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+1. Откройте файл **manifest.json** .
+
+1. Найдите *первый* объект в массиве authorization.permissions.resourceSpecific и задайте для его свойства name значение MailboxItem.ReadWrite.User. Когда все будет готово, оно должно выглядеть следующим образом.
+
+    ```json
+    {
+        "name": "MailboxItem.ReadWrite.User",
+        "type": "Delegated"
+    }
+    ```
+
+1. В массиве validDomains измените URL-адрес на "https://contoso.com", который является URL-адресом вымышленного поставщика онлайн-собраний. Когда все будет готово, массив должен выглядеть следующим образом.
+
+    ```json
+    "validDomains": [
+        "https://contoso.com"
+    ],
+    ```
+
+1. Добавьте следующий объект в массив extensions.runtimes. Обратите внимание на указанные ниже аспекты этого кода.
+
+   - Для параметра minVersion набора обязательных элементов почтового ящика задано значение 1.3, поэтому среда выполнения не будет запускаться на платформах и в версиях Office, где эта функция не поддерживается.
+   - Идентификатор среды выполнения имеет описательное имя "online_meeting_runtime".
+   - Свойству code.page "code.page" задается URL-адрес HTML-файла без пользовательского интерфейса, который будет загружать команду функции.
+   - Свойство lifetime имеет значение "short". Это означает, что среда выполнения запускается при нажатии кнопки команды функции и завершает работу после завершения работы функции. (В некоторых редких случаях среда выполнения завершает работу до завершения работы обработчика. См [. раздел "Среды выполнения" в надстройки Office](../testing/runtimes.md).)
+   - Существует действие для запуска функции insertContosoMeeting. Вы создадите эту функцию на следующем шаге.
+
+    ```json
+    {
+        "requirements": {
+            "capabilities": [
+                {
+                    "name": "Mailbox",
+                    "minVersion": "1.3"
+                }
+            ],
+            "formFactors": [
+                "desktop"
+            ]
+        },
+        "id": "online_meeting_runtime",
+        "type": "general",
+        "code": {
+            "page": "https://contoso.com/commands.html"
+        },
+        "lifetime": "short",
+        "actions": [
+            {
+                "id": "insertContosoMeeting",
+                "type": "executeFunction",
+                "displayName": "insertContosoMeeting"
+            }
+        ]
+    }
+    ```
+
+1. Замените массив extensions.ribbons следующим кодом. Обратите внимание на следующие особенности этой разметки.
+
+   - Для параметра minVersion набора обязательных элементов почтового ящика задано значение 1.3, поэтому настройки ленты не будут отображаться на платформах и в версиях Office, где эта функция не поддерживается.
+   - Массив contexts указывает, что лента доступна только в окне организатора сведений о собрании.
+   - На вкладке ленты по умолчанию (в окне организатора сведений о собрании) будет настроена пользовательская группа элементов управления с меткой **"Собрание Contoso"**.
+   - У группы будет кнопка " **Добавить собрание Contoso"**.
+   - Для параметра actionId кнопки задано значение insertContosoMeeting, которое соответствует идентификатору действия, созданного на предыдущем шаге.
+
+    ```json
+    "ribbons": [
+      {
+        "requirements": {
+            "capabilities": [
+                {
+                    "name": "Mailbox",
+                    "minVersion": "1.3"
+                }
+            ],
+            "scopes": [
+                "mail"
+            ],
+            "formFactors": [
+                "desktop"
+            ]
+        },
+        "contexts": [
+            "meetingDetailsOrganizer"
+        ],
+        "tabs": [
+            {
+                "builtInTabId": "TabDefault",
+                "groups": [
+                    {
+                        "id": "apptComposeGroup",
+                        "label": "Contoso meeting",
+                        "controls": [
+                            {
+                                "id": "insertMeetingButton",
+                                "type": "button",
+                                "label": "Add a Contoso meeting",
+                                "icons": [
+                                    {
+                                        "size": 16,
+                                        "file": "icon-16.png"
+                                    },
+                                    {
+                                        "size": 32,
+                                        "file": "icon-32.png"
+                                    },
+                                    {
+                                        "size": 64,
+                                        "file": "icon-64_02.png"
+                                    },
+                                    {
+                                        "size": 80,
+                                        "file": "icon-80.png"
+                                    }
+                                ],
+                                "supertip": {
+                                    "title": "Add a Contoso meeting",
+                                    "description": "Add a Contoso meeting to this appointment."
+                                },
+                                "actionId": "insertContosoMeeting",
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+      }
+    ]
+    ```
 
 ---
 

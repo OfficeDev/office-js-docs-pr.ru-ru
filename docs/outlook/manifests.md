@@ -1,18 +1,22 @@
 ---
 title: Манифесты надстройки Outlook
-description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
-ms.date: 05/27/2020
+description: Общие сведения о двух типах манифестов, доступных для надстроек Outlook.
+ms.date: 10/18/2022
 ms.localizationpriority: high
-ms.openlocfilehash: c09c483519e4d5cd0dce7dda840130698820b6ee
-ms.sourcegitcommit: 005783ddd43cf6582233be1be6e3463d7ab9b0e5
+ms.openlocfilehash: a22b5180fee6b4f9f0663eff54b57510016202a2
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2022
-ms.locfileid: "68466980"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607557"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 
-An Outlook add-in consists of two components: the XML add-in manifest and a web page supported by the JavaScript library for Office Add-ins (office.js). The manifest describes how the add-in integrates across Outlook clients. The following is an example.
+Надстройка Outlook состоит из двух компонентов: манифеста надстройки и веб-приложения, поддерживаемого библиотекой JavaScript для надстроек Office (office.js). В манифесте описывается, как надстройка интегрируется с клиентами Outlook.
+
+Существует два возможных формата манифеста: XML и JSON. Вы можете узнать о манифесте JSON в [манифесте Teams для надстроек Office (предварительная версия)](../develop/json-manifest-overview.md). Эта статья посвящена XML-манифесту.
+
+Ниже приведен пример XML-манифеста.
 
  > [!NOTE]
  > All URL values in the following sample begin with "https://appdemo.contoso.com". This value is a placeholder. In an actual valid manifest, these values would contain valid https web URLs.
@@ -418,7 +422,6 @@ If the add-in's requested permissions change, users will be prompted to upgrade 
 - Наличие вложения
 
 Подробные сведения и примеры правил активации см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
-
 
 ## <a name="next-steps-add-in-commands"></a>Дальнейшие действия: команды надстроек
 

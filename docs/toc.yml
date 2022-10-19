@@ -364,6 +364,8 @@ items:
             href: /legal/marketplace/certification-policies
           - name: Публикация надстроек в каталоге приложений SharePoint
             href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
+          - name: Руководство по развертыванию в облаках для государственных организаций
+            href: publish/government-cloud-guidance.md
           - name: Обслуживание надстройки Office
             href: publish/maintain-breaking-changes.md
   - name: Excel

@@ -2,14 +2,14 @@
 title: Запись заметок о встрече во внешнее приложение в мобильных надстройки Outlook
 description: Узнайте, как настроить надстройку Outlook Mobile для записи заметок о встречах и других сведений во внешнее приложение.
 ms.topic: article
-ms.date: 08/11/2022
+ms.date: 10/17/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 310585d821f12bfd400b7b1eaf780ab756bf5a3f
-ms.sourcegitcommit: 57258dd38507f791bbb39cbb01d6bbd5a9d226b9
+ms.openlocfilehash: a980b68c603154c42112f525ec6285b740ce38a5
+ms.sourcegitcommit: eca6c16d0bb74bed2d35a21723dd98c6b41ef507
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67320690"
+ms.lasthandoff: 10/18/2022
+ms.locfileid: "68607585"
 ---
 # <a name="log-appointment-notes-to-an-external-application-in-outlook-mobile-add-ins"></a>Запись заметок о встрече во внешнее приложение в мобильных надстройки Outlook
 
@@ -35,6 +35,8 @@ ms.locfileid: "67320690"
 ### <a name="configure-the-manifest"></a>Настройка манифеста
 
 Чтобы пользователи могли занося заметки о встрече в надстройку, необходимо настроить точку расширения [MobileLogEventAppointmentAttendee](/javascript/api/manifest/extensionpoint#mobilelogeventappointmentattendee) в манифесте в родительском элементе `MobileFormFactor`. Другие форм-факторы не поддерживаются.
+
+[!INCLUDE [Teams manifest not supported on mobile devices](../includes/no-mobile-with-json-note.md)]
 
 1. В редакторе кода откройте проект быстрого запуска.
 
@@ -284,6 +286,8 @@ function logCRMEvent(appointmentEvent) {
 ### <a name="configure-the-manifest"></a>Настройка манифеста
 
 Чтобы пользователи могли занося заметки о встрече в надстройку, необходимо настроить точку расширения [MobileLogEventAppointmentAttendee](/javascript/api/manifest/extensionpoint#mobilelogeventappointmentattendee) в манифесте в родительском элементе `MobileFormFactor`. Другие форм-факторы не поддерживаются.
+
+[!INCLUDE [Teams manifest not supported on mobile devices](../includes/no-mobile-with-json-note.md)]
 
 1. В редакторе кода откройте проект быстрого запуска.
 
