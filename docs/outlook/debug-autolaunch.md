@@ -2,14 +2,14 @@
 title: Отладка надстройки Outlook на основе событий
 description: Узнайте, как выполнить отладку надстройки Outlook, которая реализует активацию на основе событий.
 ms.topic: article
-ms.date: 09/09/2022
+ms.date: 10/11/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b6a1d9a013b7c8e22632bdd04fb74e06c804a01
-ms.sourcegitcommit: a32f5613d2bb44a8c812d7d407f106422a530f7a
+ms.openlocfilehash: e8065c454bbe1587a6e5b7189a4522c229e9aed1
+ms.sourcegitcommit: d402c37fc3388bd38761fedf203a7d10fce4e899
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "67674700"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68664674"
 ---
 # <a name="debug-your-event-based-outlook-add-in"></a>Отладка надстройки Outlook на основе событий
 
@@ -29,7 +29,10 @@ ms.locfileid: "67674700"
 
 ## <a name="mark-your-add-in-for-debugging"></a>Пометка надстройки для отладки
 
-1. Задайте раздел реестра `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Wef\Developer\[Add-in ID]\UseDirectDebugger`. `[Add-in ID]` — это **\<Id\>** в манифесте надстройки.
+1. Задайте раздел реестра `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Wef\Developer\[Add-in ID]\UseDirectDebugger`. Замените `[Add-in ID]` идентификатор надстройки из манифеста.
+
+    - **XML-манифест**: используйте значение дочернего **\<Id\>** элемента корневого **\<OfficeApp\>** элемента.
+    - **Манифест Teams (предварительная версия)**: используйте значение свойства id корневого анонимного `{ ... }` объекта.
 
     **Создан с помощью генератора Yeoman**. В окне командной строки перейдите к корню папки надстройки и выполните следующую команду.
 
