@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 09/21/2022
+ms.date: 10/13/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e38f7e9c9d9f06ec7f427b12c04b30d6abf0112
-ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
+ms.openlocfilehash: ce2821ed5d226ff2c6a2b3c718d5711689523ac6
+ms.sourcegitcommit: d402c37fc3388bd38761fedf203a7d10fce4e899
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68093010"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68664681"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -26,21 +26,21 @@ ms.locfileid: "68093010"
 
 В следующей таблице перечислены доступные в настоящее время события и поддерживаемые клиенты для каждого события. При возникновении события `event` обработчик получает объект, который может содержать сведения, относящиеся к типу события. **Столбец Description** содержит ссылку на связанный объект, если это применимо.
 
-|Событие|Описание|Минимальный набор требований и поддерживаемые клиенты|
-|---|---|---|
-|`OnNewMessageCompose`|При создании нового сообщения (включает ответ, ответ всем и пересылка), но не при редактировании, например черновика.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
-|`OnNewAppointmentOrganizer`|При создании новой встречи, но не при редактировании существующей.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
-|`OnMessageAttachmentsChanged`|При добавлении или удалении вложений при создании сообщения.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentAttachmentsChanged`|При добавлении или удалении вложений при создании встречи.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnMessageRecipientsChanged`|При добавлении или удалении получателей при создании сообщения.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentAttendeesChanged`|При добавлении или удалении участников при создании встречи.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentTimeChanged`|При изменении даты и времени при создании встречи.<br><br>Объект данных для конкретного события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторе при создании встречи. При изменении даты и времени `OnAppointmentTimeChanged` событие также будет срабатывать.<br><br>Объект данных для конкретного события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnInfoBarDismissClicked`|При закрытии уведомления при создании сообщения или элемента встречи. Уведомление будет получать только надстройка, которая добавила уведомление.<br><br>Объект данных для конкретного события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnMessageSend`|При отправке элемента сообщения. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentSend`|При отправке элемента встречи. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnMessageCompose`|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentOrganizer`|При создании новой встречи или изменении существующей.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|Каноническое имя события</br>и имя манифеста XML|Имя манифеста Teams|Описание|Минимальный набор требований и поддерживаемые клиенты|
+|---|---|---|---|
+|`OnNewMessageCompose`| newMessageComposeCreated |При создании нового сообщения (включает ответ, ответ всем и пересылка), но не при редактировании, например черновика.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
+|`OnNewAppointmentOrganizer`|newAppointmentOrganizerCreated|При создании новой встречи, но не при редактировании существующей.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
+|`OnMessageAttachmentsChanged`|messageAttachmentsChanged|При добавлении или удалении вложений при создании сообщения.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentAttachmentsChanged`|appointmentAttachmentsChanged|При добавлении или удалении вложений при создании встречи.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnMessageRecipientsChanged`|messageRecipientsChanged|При добавлении или удалении получателей при создании сообщения.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentAttendeesChanged`|appointmentAttendeesChanged|При добавлении или удалении участников при создании встречи.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentTimeChanged`|appointmentTimeChanged|При изменении даты и времени при создании встречи.<br><br>Объект данных для конкретного события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentRecurrenceChanged`|appointmentRecurrenceChanged|При добавлении, изменении или удалении сведений о повторе при создании встречи. При изменении даты и времени `OnAppointmentTimeChanged` событие также будет срабатывать.<br><br>Объект данных для конкретного события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnInfoBarDismissClicked`|infoBarDismissClicked|При закрытии уведомления при создании сообщения или элемента встречи. Уведомление будет получать только надстройка, которая добавила уведомление.<br><br>Объект данных для конкретного события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnMessageSend`|messageSending|При отправке элемента сообщения. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentSend`|appointmentSending|При отправке элемента встречи. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnMessageCompose`|messageComposeOpened|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnAppointmentOrganizer`|appointmentOrganizerOpened|При создании новой встречи или изменении существующей.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
 
 > [!NOTE]
 > <sup>Для</sup> работы надстроек на основе событий в Outlook для Windows требуется как минимум Windows 10 версии 1903 (сборка 18362) или Windows Server 2019 версии 1903.
@@ -49,7 +49,14 @@ ms.locfileid: "68093010"
 
 Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора [Yeoman для надстроек Office](../develop/yeoman-generator-overview.md).
 
+> [!NOTE]
+> Если вы хотите использовать манифест Teams для надстроек [Office (](../develop/json-manifest-overview.md)предварительная версия), выполните альтернативное краткое руководство в Outlook с помощью манифеста [Teams (](../quickstarts/outlook-quickstart-json-manifest.md)предварительная версия), но пропустите все разделы после раздела **"** Попробовать".
+
 ## <a name="configure-the-manifest"></a>Настройка манифеста
+
+Чтобы настроить манифест, выберите вкладку для типа манифеста, который вы используете.
+
+# <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
 
 Чтобы включить активацию надстройки на основе событий, необходимо настроить элемент [Runtimes](/javascript/api/manifest/runtimes) и точку расширения [LaunchEvent](/javascript/api/manifest/extensionpoint#launchevent) `VersionOverridesV1_1` в узле манифеста. Пока это `DesktopFormFactor` единственный поддерживаемый форм-фактор.
 
@@ -176,6 +183,91 @@ ms.locfileid: "68093010"
 
 В Outlook для Windows используется файл JavaScript, а в Outlook в Интернете и в новом пользовательском интерфейсе Mac — HTML-файл, который может ссылаться на тот же файл JavaScript. Необходимо предоставить ссылки `Resources` на оба этих файла в узле манифеста, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода **\<Runtime\>** в элементе, `Override` а затем в его дочернем элементе укажите расположение файла JavaScript, встроенного или на который ссылаются HTML.
 
+# <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+1. Откройте файл **manifest.json** .
+
+1. Добавьте следующий объект в массив extensions.runtimes. Обратите внимание на указанные ниже особенности этой разметки.
+
+   - Для параметра minVersion набора обязательных элементов почтового ящика задано значение "1.10 `OnNewMessageCompose` `OnNewAppointmentCompose` ", так как в таблице выше в этой статье указано, что это самая раннюю версию набора обязательных элементов, поддерживающих события и события.
+   - Идентификатор среды выполнения имеет описательное имя "autorun_runtime".
+   - Свойство code имеет дочернее свойство page, для которого задано значение HTML-файла, и дочернее свойство script, задающее файл JavaScript. Вы создадите или измените эти файлы на следующих шагах. Office использует одно из этих значений в зависимости от платформы.
+       - Office в Windows выполняет обработчики событий в среде выполнения, доступной только для JavaScript, которая загружает файл JavaScript напрямую.
+       - Office на Mac и в Интернете выполняют обработчики в среде выполнения браузера, которая загружает HTML-файл. Этот файл, в свою очередь `<script>` , содержит тег, который загружает файл JavaScript.
+     Дополнительные сведения см. в [разделе "Среды выполнения" надстроек Office](../testing/runtimes.md).
+   - Свойство lifetime имеет значение "short". Это означает, что среда выполнения запускается при активации одного из событий и завершает работу после завершения работы обработчика. (В некоторых редких случаях среда выполнения завершает работу до завершения работы обработчика. См [. раздел "Среды выполнения" в надстройки Office](../testing/runtimes.md).)
+   - Существует два типа действий, которые могут выполняться в среде выполнения. На следующем шаге вы создадите функции, соответствующие этим действиям.
+
+    ```json
+     {
+        "requirements": {
+            "capabilities": [
+                {
+                    "name": "Mailbox",
+                    "minVersion": "1.10"
+                }
+            ]
+        },
+        "id": "autorun_runtime",
+        "type": "general",
+        "code": {
+            "page": "https://localhost:3000/commands.html",
+            "script": "https://localhost:3000/launchevent.js"
+        },
+        "lifetime": "short",
+        "actions": [
+            {
+                "id": "onNewMessageComposeHandler",
+                "type": "executeFunction",
+                "displayName": "onNewMessageComposeHandler"
+            },
+            {
+                "id": "onNewAppointmentComposeHandler",
+                "type": "executeFunction",
+                "displayName": "onNewAppointmentComposeHandler"
+            }
+        ]
+    }
+    ```
+
+1. Добавьте следующий массив autoRunEvents в качестве свойства объекта в массив "extensions".
+
+    ```json
+    "autoRunEvents": [
+    
+    ]
+    ```
+
+1. Добавьте следующий объект в массив autoRunEvents. Свойство events сопоставляет обработчики с событиями, как описано в таблице выше в этой статье. Имена обработчиков должны совпадать с именами, используемыми в свойствах id объектов в массиве actions на предыдущем шаге.
+
+    ```json
+      {
+          "requirements": {
+              "capabilities": [
+                  {
+                      "name": "Mailbox",
+                      "minVersion": "1.10"
+                  }
+              ],
+              "scopes": [
+                  "mail"
+              ]
+          },
+          "events": [
+              {
+                  "type": "newMessageComposeCreated",
+                  "actionId": "onNewMessageComposeHandler"
+              },
+              {
+                  "type": "newAppointmentOrganizerCreated",
+                  "actionId": "onNewAppointmentComposeHandler"
+              }
+          ]
+      }
+    ```
+
+---
+
 > [!TIP]
 >
 > - Дополнительные сведения о средах выполнения в надстройке см. в разделе ["Среды выполнения" надстроек Office](../testing/runtimes.md).
@@ -294,7 +386,7 @@ ms.locfileid: "68093010"
 
 При внесении изменений в обработку событий запуска в надстройке следует учитывать следующее:
 
-- Если вы обновили манифест, [удалите надстройку](sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in), а затем снова перезагрузите ее. Если вы используете Outlook в Windows, закройте и снова откройте его.
+- Если вы обновили манифест, [удалите надстройку](sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in), а затем снова перезагрузите ее. Если вы используете Outlook в Windows, закройте и снова откройте Outlook.
 - Если вы внесли изменения в файлы, отличные от манифеста, закройте и снова откройте Outlook в Windows или обновите вкладку браузера, на Outlook в Интернете.
 
 При реализации собственных функций может потребоваться отладка кода. Инструкции по отладке активации надстройки на основе событий см. в разделе "Отладка надстройки Outlook на основе [событий"](debug-autolaunch.md).
