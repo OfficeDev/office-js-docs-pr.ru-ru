@@ -2,69 +2,69 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 10/13/2022
+ms.date: 10/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: ce2821ed5d226ff2c6a2b3c718d5711689523ac6
-ms.sourcegitcommit: d402c37fc3388bd38761fedf203a7d10fce4e899
+ms.openlocfilehash: b5ae744350389ed222284808a67a9b7c30211136
+ms.sourcegitcommit: 693e9a9b24bb81288d41508cb89c02b7285c4b08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68664681"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68767177"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
-Без функции активации на основе событий пользователь должен явным образом запустить надстройку для выполнения своих задач. Эта функция позволяет надстройке выполнять задачи на основе определенных событий, особенно для операций, применяемых к каждому элементу. Вы также можете выполнить интеграцию с областью задач и командами функций.
+Без функции активации на основе событий пользователь должен явно запустить надстройку для выполнения своих задач. Эта функция позволяет надстройке выполнять задачи на основе определенных событий, особенно для операций, которые применяются к каждому элементу. Также можно интегрировать с командами области задач и функций.
 
-К концу этого пошагового руководства у вас будет надстройка, которая запускается каждый раз, когда создается новый элемент и задает тему.
+К концу этого пошагового руководства у вас будет надстройка, которая запускается при каждом создании нового элемента и задает тему.
 
 > [!NOTE]
-> Поддержка этой функции была реализована в наборе обязательных [элементов 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь доступны в последующих наборах обязательных элементов. Дополнительные сведения о минимальном наборе обязательных элементов события, а также о клиентах и платформах, которые его поддерживают, см. в разделе "Поддерживаемые события и наборы обязательных элементов, поддерживаемые серверами [Exchange и клиентами Outlook"](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients).[](#supported-events)
+> Поддержка этой функции появилась в [наборе требований 1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10), а дополнительные события теперь доступны в последующих наборах требований. Дополнительные сведения о минимальном наборе требований события, а также о клиентах и платформах, которые его поддерживают, см. в [разделах Поддерживаемые события](#supported-events) и [Наборы требований, поддерживаемые серверами Exchange и клиентами Outlook](/javascript/api/requirement-sets/outlook/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients).
 >
 > Активация на основе событий не поддерживается в Outlook для iOS или Android.
 
+> [!IMPORTANT]
+> Активация на основе событий пока не поддерживается для [манифеста Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md) Мы работаем над предоставлением этой поддержки в ближайшее время.
+
 ## <a name="supported-events"></a>Поддерживаемые события
 
-В следующей таблице перечислены доступные в настоящее время события и поддерживаемые клиенты для каждого события. При возникновении события `event` обработчик получает объект, который может содержать сведения, относящиеся к типу события. **Столбец Description** содержит ссылку на связанный объект, если это применимо.
+В следующей таблице перечислены доступные в настоящее время события и поддерживаемые клиенты для каждого события. При возникновении события обработчик получает `event` объект, который может содержать сведения, относящиеся к типу события. Столбец **Описание** содержит ссылку на связанный объект, если применимо.
 
 |Каноническое имя события</br>и имя манифеста XML|Имя манифеста Teams|Описание|Минимальный набор требований и поддерживаемые клиенты|
 |---|---|---|---|
-|`OnNewMessageCompose`| newMessageComposeCreated |При создании нового сообщения (включает ответ, ответ всем и пересылка), но не при редактировании, например черновика.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
+|`OnNewMessageCompose`| newMessageComposeCreated |При создании нового сообщения (включая ответ, ответить всем и пересылать), но не при редактировании, например, черновика.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
 |`OnNewAppointmentOrganizer`|newAppointmentOrganizerCreated|При создании новой встречи, но не при редактировании существующей.|[1.10](/javascript/api/requirement-sets/outlook/requirement-set-1.10/outlook-requirement-set-1.10)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac |
-|`OnMessageAttachmentsChanged`|messageAttachmentsChanged|При добавлении или удалении вложений при создании сообщения.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentAttachmentsChanged`|appointmentAttachmentsChanged|При добавлении или удалении вложений при создании встречи.<br><br>Объект данных для конкретного события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnMessageRecipientsChanged`|messageRecipientsChanged|При добавлении или удалении получателей при создании сообщения.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentAttendeesChanged`|appointmentAttendeesChanged|При добавлении или удалении участников при создании встречи.<br><br>Объект данных для конкретного события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentTimeChanged`|appointmentTimeChanged|При изменении даты и времени при создании встречи.<br><br>Объект данных для конкретного события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnAppointmentRecurrenceChanged`|appointmentRecurrenceChanged|При добавлении, изменении или удалении сведений о повторе при создании встречи. При изменении даты и времени `OnAppointmentTimeChanged` событие также будет срабатывать.<br><br>Объект данных для конкретного события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnInfoBarDismissClicked`|infoBarDismissClicked|При закрытии уведомления при создании сообщения или элемента встречи. Уведомление будет получать только надстройка, которая добавила уведомление.<br><br>Объект данных для конкретного события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
-|`OnMessageSend`|messageSending|При отправке элемента сообщения. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentSend`|appointmentSending|При отправке элемента встречи. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnMessageCompose`|messageComposeOpened|При создании нового сообщения (включает ответ, ответ всем и пересылка) или редактировании черновика.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
-|`OnAppointmentOrganizer`|appointmentOrganizerOpened|При создании новой встречи или изменении существующей.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер|
+|`OnMessageAttachmentsChanged`|messageAttachmentsChanged|При добавлении или удалении вложений при создании сообщения.<br><br>Объект данных, зависящий от события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentAttachmentsChanged`|appointmentAttachmentsChanged|При добавлении или удалении вложений при составлении встречи.<br><br>Объект данных, зависящий от события: [AttachmentsChangedEventArgs](/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnMessageRecipientsChanged`|messageRecipientsChanged|При добавлении или удалении получателей при создании сообщения.<br><br>Объект данных, зависящий от события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentAttendeesChanged`|appointmentAttendeesChanged|При добавлении или удалении участников во время создания встречи.<br><br>Объект данных, зависящий от события: [RecipientsChangedEventArgs](/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentTimeChanged`|appointmentTimeChanged|При изменении даты и времени при составлении встречи.<br><br>Объект данных, зависящий от события: [AppointmentTimeChangedEventArgs](/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentRecurrenceChanged`|appointmentRecurrenceChanged|При добавлении, изменении или удалении сведений о повторении при составлении встречи. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет запущено.<br><br>Объект данных, зависящий от события: [RecurrenceChangedEventArgs](/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnInfoBarDismissClicked`|infoBarDismissClicked|При отклонении уведомления при создании сообщения или элемента встречи. Будет уведомлена только надстройка, которая добавила уведомление.<br><br>Объект данных, зависящий от события: [InfobarClickedEventArgs](/javascript/api/outlook/office.infobarclickedeventargs?view=outlook-js-1.11&preserve-view=true)|[1.11](/javascript/api/requirement-sets/outlook/requirement-set-1.11/outlook-requirement-set-1.11)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnMessageSend`|messageSending|При отправке элемента сообщения. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentSend`|appointmentSending|При отправке элемента встречи. Дополнительные сведения см. в [пошаговом руководстве по интеллектуальным оповещениям](smart-alerts-onmessagesend-walkthrough.md).|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnMessageCompose`|messageComposeOpened|При создании нового сообщения (включая ответить, ответить всем и пересылать) или редактировании черновика.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
+|`OnAppointmentOrganizer`|appointmentOrganizerOpened|При создании новой встречи или редактировании существующей.|[1.12](/javascript/api/requirement-sets/outlook/requirement-set-1.12/outlook-requirement-set-1.12)<br><br>— Windows<sup>1</sup><br>— Веб-браузер<br>— Новый пользовательский интерфейс Mac|
 
 > [!NOTE]
-> <sup>Для</sup> работы надстроек на основе событий в Outlook для Windows требуется как минимум Windows 10 версии 1903 (сборка 18362) или Windows Server 2019 версии 1903.
+> <sup>1</sup> Для работы надстроек на основе событий в Outlook в Windows требуется как минимум Windows 10 версии 1903 (сборка 18362) или Windows Server 2019 версии 1903.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [краткое руководство outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , которое создает проект надстройки с помощью генератора [Yeoman для надстроек Office](../develop/yeoman-generator-overview.md).
-
-> [!NOTE]
-> Если вы хотите использовать манифест Teams для надстроек [Office (](../develop/json-manifest-overview.md)предварительная версия), выполните альтернативное краткое руководство в Outlook с помощью манифеста [Teams (](../quickstarts/outlook-quickstart-json-manifest.md)предварительная версия), но пропустите все разделы после раздела **"** Попробовать".
+Завершите [краткое руководство По созданию](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) проекта надстройки с [помощью генератора Yeoman для надстроек Office](../develop/yeoman-generator-overview.md).
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы настроить манифест, выберите вкладку для типа манифеста, который вы используете.
+Чтобы настроить манифест, выберите вкладку для используемого типа манифеста.
 
 # <a name="xml-manifest"></a>[XML-манифест](#tab/xmlmanifest)
 
-Чтобы включить активацию надстройки на основе событий, необходимо настроить элемент [Runtimes](/javascript/api/manifest/runtimes) и точку расширения [LaunchEvent](/javascript/api/manifest/extensionpoint#launchevent) `VersionOverridesV1_1` в узле манифеста. Пока это `DesktopFormFactor` единственный поддерживаемый форм-фактор.
+Чтобы включить активацию надстройки на основе событий, необходимо настроить элемент [Runtimes](/javascript/api/manifest/runtimes) и точку `VersionOverridesV1_1` расширения [LaunchEvent](/javascript/api/manifest/extensionpoint#launchevent) в узле манифеста. На данный момент `DesktopFormFactor` является единственным поддерживаемым форм-фактором.
 
 1. В редакторе кода откройте проект быстрого запуска.
 
-1. Откройте файл **manifest.xml** , расположенный в корневом каталоге проекта.
+1. Откройте **файлmanifest.xml** , расположенный в корне проекта.
 
-1. Выберите весь узел **\<VersionOverrides\>** (включая открытый и закрывающий теги) и замените его следующим XML-кодом, а затем сохраните изменения.
+1. Выберите весь **\<VersionOverrides\>** узел (включая открытые и закрытые теги) и замените его следующим XML-кодом, а затем сохраните изменения.
 
 ```XML
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -181,22 +181,25 @@ ms.locfileid: "68664681"
 </VersionOverrides>
 ```
 
-В Outlook для Windows используется файл JavaScript, а в Outlook в Интернете и в новом пользовательском интерфейсе Mac — HTML-файл, который может ссылаться на тот же файл JavaScript. Необходимо предоставить ссылки `Resources` на оба этих файла в узле манифеста, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода **\<Runtime\>** в элементе, `Override` а затем в его дочернем элементе укажите расположение файла JavaScript, встроенного или на который ссылаются HTML.
+Outlook в Windows использует файл JavaScript, а Outlook в Интернете и в новом пользовательском интерфейсе Mac — HTML-файл, который может ссылаться на тот же файл JavaScript. Необходимо предоставить ссылки на оба этих файла в `Resources` узле манифеста, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода в элементе **\<Runtime\>** , а затем в его `Override` дочернем элементе укажите расположение файла JavaScript, встроенного или на который ссылается HTML-код.
 
 # <a name="teams-manifest-developer-preview"></a>[Манифест Teams (предварительная версия для разработчиков)](#tab/jsonmanifest)
+
+> [!IMPORTANT]
+> Активация на основе событий пока не поддерживается для [манифеста Teams для надстроек Office (предварительная версия).](../develop/json-manifest-overview.md) Эта вкладка предназначена для использования в будущем.
 
 1. Откройте файл **manifest.json** .
 
 1. Добавьте следующий объект в массив extensions.runtimes. Обратите внимание на указанные ниже особенности этой разметки.
 
-   - Для параметра minVersion набора обязательных элементов почтового ящика задано значение "1.10 `OnNewMessageCompose` `OnNewAppointmentCompose` ", так как в таблице выше в этой статье указано, что это самая раннюю версию набора обязательных элементов, поддерживающих события и события.
-   - Идентификатор среды выполнения имеет описательное имя "autorun_runtime".
-   - Свойство code имеет дочернее свойство page, для которого задано значение HTML-файла, и дочернее свойство script, задающее файл JavaScript. Вы создадите или измените эти файлы на следующих шагах. Office использует одно из этих значений в зависимости от платформы.
+   - Параметр minVersion набора обязательных элементов почтового ящика имеет значение "1.10", так как в таблице, приведенной выше в этой статье, указано, что это самая низкая версия набора требований, поддерживающая `OnNewMessageCompose` события и `OnNewAppointmentCompose` .
+   - Для идентификатора среды выполнения задается описательное имя "autorun_runtime".
+   - Свойство "code" имеет дочернее свойство page, для которого задано значение HTML-файла, и дочернее свойство script, для которого задается файл JavaScript. Вы создадите или измените эти файлы на последующих шагах. Office использует одно из этих значений в зависимости от платформы.
        - Office в Windows выполняет обработчики событий в среде выполнения, доступной только для JavaScript, которая загружает файл JavaScript напрямую.
-       - Office на Mac и в Интернете выполняют обработчики в среде выполнения браузера, которая загружает HTML-файл. Этот файл, в свою очередь `<script>` , содержит тег, который загружает файл JavaScript.
-     Дополнительные сведения см. в [разделе "Среды выполнения" надстроек Office](../testing/runtimes.md).
-   - Свойство lifetime имеет значение "short". Это означает, что среда выполнения запускается при активации одного из событий и завершает работу после завершения работы обработчика. (В некоторых редких случаях среда выполнения завершает работу до завершения работы обработчика. См [. раздел "Среды выполнения" в надстройки Office](../testing/runtimes.md).)
-   - Существует два типа действий, которые могут выполняться в среде выполнения. На следующем шаге вы создадите функции, соответствующие этим действиям.
+       - Office на Mac и в Интернете выполняют обработчики в среде выполнения браузера, которая загружает HTML-файл. Этот файл, в свою очередь, содержит `<script>` тег, который загружает файл JavaScript.
+     Дополнительные сведения см. [в разделе Среды выполнения в надстройках Office](../testing/runtimes.md).
+   - Свойство "время существования" имеет значение "short", что означает, что среда выполнения запускается при активации одного из событий и завершает работу по завершении обработчика. (В некоторых редких случаях среда выполнения завершает работу до завершения обработчика. См [. раздел Среды выполнения в надстройках Office](../testing/runtimes.md).)
+   - Существует два типа "действий", которые могут выполняться в среде выполнения. Вы создадите функции, соответствующие этим действиям, на следующем шаге.
 
     ```json
      {
@@ -230,7 +233,7 @@ ms.locfileid: "68664681"
     }
     ```
 
-1. Добавьте следующий массив autoRunEvents в качестве свойства объекта в массив "extensions".
+1. Добавьте следующий массив autoRunEvents в качестве свойства объекта в массиве extensions.
 
     ```json
     "autoRunEvents": [
@@ -238,7 +241,7 @@ ms.locfileid: "68664681"
     ]
     ```
 
-1. Добавьте следующий объект в массив autoRunEvents. Свойство events сопоставляет обработчики с событиями, как описано в таблице выше в этой статье. Имена обработчиков должны совпадать с именами, используемыми в свойствах id объектов в массиве actions на предыдущем шаге.
+1. Добавьте следующий объект в массив autoRunEvents. Свойство events сопоставляет обработчики с событиями, как описано в таблице ранее в этой статье. Имена обработчиков должны совпадать с именами, используемыми в свойствах id объектов в массиве actions на предыдущем шаге.
 
     ```json
       {
@@ -270,20 +273,20 @@ ms.locfileid: "68664681"
 
 > [!TIP]
 >
-> - Дополнительные сведения о средах выполнения в надстройке см. в разделе ["Среды выполнения" надстроек Office](../testing/runtimes.md).
-> - Дополнительные сведения о манифестах для надстроек Outlook см. в манифестах [надстроек Outlook](manifests.md).
+> - Сведения о средах выполнения в надстройках см. в статье [Среды выполнения в надстройках Office](../testing/runtimes.md).
+> - Дополнительные сведения о манифестах надстроек Outlook см. [в статье Манифесты надстроек Outlook](manifests.md).
 
 ## <a name="implement-event-handling"></a>Реализация обработки событий
 
 Необходимо реализовать обработку выбранных событий.
 
-В этом сценарии вы добавите обработку для создания новых элементов.
+В этом сценарии вы добавите обработку создания новых элементов.
 
-1. В том же проекте быстрого запуска создайте папку с именем **launchevent** в **каталоге ./src** .
+1. В том же проекте быстрого запуска создайте папку **launchevent** в каталоге **./src** .
 
-1. В **папке ./src/launchevent** создайте файл с именем **launchevent.js**.
+1. В папке **./src/launchevent** создайте файл **с именемlaunchevent.js**.
 
-1. Откройте файл **./src/launchevent/launchevent.js** редакторе кода и добавьте следующий код JavaScript.
+1. Откройте файл **./src/launchevent/launchevent.js** в редакторе кода и добавьте следующий код JavaScript.
 
     ```js
     /*
@@ -322,13 +325,13 @@ ms.locfileid: "68664681"
 1. Сохраните изменения.
 
 > [!IMPORTANT]
-> Windows: в настоящее время импорт не поддерживается в файле JavaScript, где реализована обработка активации на основе событий.
+> Windows. В настоящее время импорт не поддерживается в файле JavaScript, в котором реализуется обработка активации на основе событий.
 
 ## <a name="update-the-commands-html-file"></a>Обновление HTML-файла команд
 
-1. В **папке ./src/commands** **откройтеcommands.html.**
+1. В папке **./src/commands** откройте **commands.html**.
 
-1. Непосредственно перед **закрывающего головного** тега (`</head>`) добавьте запись скрипта, чтобы включить код JavaScript для обработки событий.
+1. Непосредственно перед закрывающим **тегом head** (`</head>`) добавьте запись скрипта, чтобы включить код JavaScript для обработки событий.
 
     ```html
     <script type="text/javascript" src="../launchevent/launchevent.js"></script>
@@ -338,9 +341,9 @@ ms.locfileid: "68664681"
 
 ## <a name="update-webpack-config-settings"></a>Обновление настроек конфигурации webpack
 
-1. Откройте **webpack.config.jsфайл** , найденный в корневом каталоге проекта, и выполните следующие действия.
+1. Откройте **файлwebpack.config.js** , который находится в корневом каталоге проекта, и выполните следующие действия.
 
-1. Найдите `plugins` массив в объекте `config` и добавьте этот новый объект в начале массива.
+1. `plugins` Найдите массив в объекте `config` и добавьте этот новый объект в начале массива.
 
     ```js
     new CopyWebpackPlugin({
@@ -357,7 +360,7 @@ ms.locfileid: "68664681"
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Выполните следующие команды в корневом каталоге проекта. При запуске `npm start`запустится локальный веб-сервер (если он еще не запущен), а надстройка будет загружена неопубликованным приложением.
+1. Выполните следующие команды в корневом каталоге проекта. При запуске `npm start`запустится локальный веб-сервер (если он еще не запущен), и надстройка будет загружена неопубликованно.
 
     ```command&nbsp;line
     npm run build
@@ -368,61 +371,61 @@ ms.locfileid: "68664681"
     ```
 
     > [!NOTE]
-    > Если ваша надстройка не была загружена неопубликованным автоматически, следуйте инструкциям в статье "Загрузка неопубликованных надстроек [Outlook](../outlook/sideload-outlook-add-ins-for-testing.md#sideload-manually) " для тестирования, чтобы вручную загрузить неопубликованную надстройку в Outlook.
+    > Если надстройка не была автоматически загружена неопубликованным приложением, следуйте инструкциям в разделе [Загрузка неопубликованных надстроек Outlook для тестирования,](../outlook/sideload-outlook-add-ins-for-testing.md#sideload-manually) чтобы вручную загрузить надстройку неопубликованного приложения в Outlook.
 
 1. Создайте новое сообщение в веб-версии Outlook.
 
-    ![Окно сообщения в Outlook в Интернете с темой, задаемой при составлении.](../images/outlook-web-autolaunch-1.png)
+    ![Окно сообщения в Outlook в Интернете с темой, заданной в compose.](../images/outlook-web-autolaunch-1.png)
 
 1. В Outlook в новом пользовательском интерфейсе Mac создайте новое сообщение.
 
-    ![Окно сообщения в Outlook в новом пользовательском интерфейсе Mac с темой, задаемой при составлении.](../images/outlook-mac-autolaunch.png)
+    ![Окно сообщения в Outlook в новом пользовательском интерфейсе Mac с темой, заданной в compose.](../images/outlook-mac-autolaunch.png)
 
-1. В Outlook для Windows создайте новое сообщение.
+1. В Outlook в Windows создайте новое сообщение.
 
-    ![Окно сообщения в Outlook для Windows с темой, задаемой при составлении.](../images/outlook-win-autolaunch.png)
+    ![Окно сообщения в Outlook в Windows с заданной темой при создании.](../images/outlook-win-autolaunch.png)
 
 ## <a name="debug"></a>Отладка
 
 При внесении изменений в обработку событий запуска в надстройке следует учитывать следующее:
 
-- Если вы обновили манифест, [удалите надстройку](sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in), а затем снова перезагрузите ее. Если вы используете Outlook в Windows, закройте и снова откройте Outlook.
-- Если вы внесли изменения в файлы, отличные от манифеста, закройте и снова откройте Outlook в Windows или обновите вкладку браузера, на Outlook в Интернете.
+- Если вы обновили манифест, [удалите надстройку](sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in), а затем снова загрузите ее неопубликованное приложение. Если вы используете Outlook в Windows, закройте и снова откройте Outlook.
+- Если вы внесли изменения в файлы, отличные от манифеста, закройте и снова откройте Outlook в Windows или обновите вкладку браузера с Outlook в Интернете.
 
-При реализации собственных функций может потребоваться отладка кода. Инструкции по отладке активации надстройки на основе событий см. в разделе "Отладка надстройки Outlook на основе [событий"](debug-autolaunch.md).
+При реализации собственных функциональных возможностей может потребоваться выполнить отладку кода. Инструкции по отладке активации надстройки на основе событий см. [в разделе Отладка надстройки Outlook на основе событий](debug-autolaunch.md).
 
-Ведение журнала среды выполнения также доступно для этой функции в Windows. Дополнительные сведения см. в разделе ["Отладка надстройки с помощью ведения журнала среды выполнения"](../testing/runtime-logging.md#runtime-logging-on-windows).
+Ведение журнала среды выполнения также доступно для этой функции в Windows. Дополнительные сведения см [. в статье Отладка надстройки с помощью ведения журнала среды выполнения](../testing/runtime-logging.md#runtime-logging-on-windows).
 
 [!INCLUDE [Loopback exemption note](../includes/outlook-loopback-exemption.md)]
 
 ## <a name="deploy-to-users"></a>Развертывание для пользователей
 
-Вы можете развернуть надстройки на основе событий, передав манифест через Центр администрирования Microsoft 365. На портале администрирования разверните раздел **"Параметры** " в области навигации и выберите **"Интегрированные приложения"**. На странице **"Интегрированные приложения** " выберите действие **"Отправить пользовательские приложения** ".
+Надстройки на основе событий можно развернуть, отправив манифест через Центр администрирования Microsoft 365. На портале администрирования разверните раздел **Параметры** в области навигации и выберите **Интегрированные приложения**. На странице **Интегрированные приложения** выберите действие **Отправить пользовательские приложения** .
 
-![Страница "Интегрированные приложения" на Центр администрирования Microsoft 365 с выделенным действием "Отправить пользовательские приложения".](../images/outlook-deploy-event-based-add-ins.png)
+![Страница Интегрированные приложения на Центр администрирования Microsoft 365 с выделенным действием Отправить пользовательские приложения.](../images/outlook-deploy-event-based-add-ins.png)
 
 > [!IMPORTANT]
-> Надстройки на основе событий ограничены только развертываниями, управляемыми администратором. Пользователи не могут активировать надстройки на основе событий из AppSource или магазина Office в приложении. Дополнительные сведения см. в [описании параметров appSource для надстройки Outlook](autolaunch-store-options.md) на основе событий.
+> Надстройки на основе событий ограничены только развертываниями, управляемыми администратором. Пользователи не могут активировать надстройки на основе событий из AppSource или магазина Office в приложении. Дополнительные сведения см. [в статье Параметры описания AppSource для надстройки Outlook на основе событий](autolaunch-store-options.md).
 
 [!INCLUDE [outlook-smart-alerts-deployment](../includes/outlook-smart-alerts-deployment.md)]
 
 ## <a name="event-based-activation-behavior-and-limitations"></a>Поведение и ограничения активации на основе событий
 
-Обработчики событий запуска надстройки должны быть короткими, упрощенными и неинициативными. После активации время ожидания надстройки будет истекает примерно в течение 300 секунд — максимального времени, допустимого для запуска надстроек на основе событий. Чтобы указать, что надстройка завершила обработку события запуска, связанный обработчик событий должен вызвать `event.completed` метод. (Обратите внимание, что код, включенный `event.completed` после выполнения инструкции, не гарантируется.) При каждом запуске события, срабатывающего с помощью дескрипторов надстройки, надстройка повторно активируется и запускает связанный обработчик событий, а время ожидания сбрасывается. Надстройка заканчивается по истечении времени ожидания, или пользователь закрывает окно создания или отправляет элемент.
+Ожидается, что обработчики событий запуска надстроек будут короткими, упрощенными и максимально неактивными. После активации время ожидания надстройки будет истекать в течение примерно 300 секунд, максимально допустимого времени для запуска надстроек на основе событий. Чтобы сообщить о том, что надстройка завершила обработку события запуска, связанный обработчик событий должен вызвать `event.completed` метод . (Обратите внимание, что код, включенный после инструкции `event.completed` , не гарантируется для выполнения.) При каждом срабатывании события, которое обрабатывает надстройка, надстройка активируется повторно и запускает связанный обработчик событий, а время ожидания сбрасывается. Надстройка заканчивается после того, как истекает время ожидания, или пользователь закрывает окно создания или отправляет элемент.
 
-Если у пользователя есть несколько надстроек, которые подписаны на одно и то же событие, платформа Outlook запускает надстройки в определенном порядке. В настоящее время можно активно запускать только пять надстроек на основе событий.
+Если у пользователя есть несколько надстроек, которые подписаны на одно событие, платформа Outlook запускает надстройки в не определенном порядке. В настоящее время активно может выполняться только пять надстроек на основе событий.
 
-Во всех поддерживаемых клиентах Outlook пользователь должен оставаться в текущем почтовом элементе, где была активирована надстройка, чтобы завершить выполнение. Переход от текущего элемента (например, переход к другому окну создания или вкладке) завершает операцию надстройки. Надстройка также прекращает работу, когда пользователь отправляет сообщение или встречу, которые он создает.
+Во всех поддерживаемых клиентах Outlook пользователь должен оставаться в текущем почтовом элементе, где была активирована надстройка, чтобы завершить выполнение. Переход от текущего элемента (например, переключение на другое окно создания или вкладку) завершает операцию надстройки. Надстройка также прекращает работу, когда пользователь отправляет сообщение или встречу, которую он создает.
 
-Импорт не поддерживается в файле JavaScript, где реализована обработка активации на основе событий в клиенте Windows.
+Импорт не поддерживается в файле JavaScript, в котором реализуется обработка активации на основе событий в клиенте Windows.
 
-Некоторые Office.js API, которые изменяют или изменяют пользовательский интерфейс, не допускаются из надстроек на основе событий. Ниже приведены заблокированные API.
+Некоторые api Office.js, которые изменяют или изменяют пользовательский интерфейс, не допускаются из надстроек на основе событий. Ниже приведены заблокированные API.
 
 - В разделе `Office.context.auth`:
   - `getAccessToken`
   - `getAccessTokenAsync`
     > [!NOTE]
-    > [OfficeRuntime.auth](/javascript/api/office-runtime/officeruntime.auth) поддерживается во всех версиях Outlook, поддерживающих активацию на основе событий и единый вход (SSO), в то время как [Office.auth](/javascript/api/office/office.auth) поддерживается только в некоторых сборках Outlook. Дополнительные сведения см. в разделе "Включение единого входа" в надстройки Outlook, использующих активацию [на основе событий](use-sso-in-event-based-activation.md).
+    > [OfficeRuntime.auth](/javascript/api/office-runtime/officeruntime.auth) поддерживается во всех версиях Outlook, поддерживающих активацию на основе событий и единый вход, а [Office.auth](/javascript/api/office/office.auth) поддерживается только в некоторых сборках Outlook. Дополнительные сведения см. [в статье Включение единого входа в надстройках Outlook, использующих активацию на основе событий](use-sso-in-event-based-activation.md).
 - В разделе `Office.context.mailbox`:
   - `displayAppointmentForm`
   - `displayMessageForm`
@@ -436,18 +439,18 @@ ms.locfileid: "68664681"
 
 ### <a name="requesting-external-data"></a>Запрос внешних данных
 
-Внешние данные можно запрашивать с помощью API, например [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) , или [С помощью XMLHttpRequest (XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который выполняет HTTP-запросы для взаимодействия с серверами.
+Внешние данные можно запрашивать с помощью API [, например Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) , или с помощью [XMLHttpRequest (XHR) —](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
-Имейте в виду, что при использовании объектов XMLHttpRequest необходимо использовать дополнительные меры безопасности[](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy), для которых требуется политика одинакового источника и простая [CORS (](https://developer.mozilla.org/docs/Web/HTTP/CORS)общий доступ к ресурсам независимо от источника).
+Имейте в виду, что при использовании объектов XMLHttpRequest необходимо использовать дополнительные меры безопасности, требуя [одну и ту же политику источника](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy) и [простой CORS (общий доступ к ресурсам между источниками).](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 
 [Простая реализация CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS#simple_requests):
 
-- Не может использовать файлы cookie.
-- Поддерживаются только простые методы, такие `GET`как , и `HEAD``POST`.
-- Принимает простые заголовки с именами полей `Accept`или `Accept-Language``Content-Language`.
-- Может использовать , `Content-Type`при условии, что тип контента — `application/x-www-form-urlencoded`, `text/plain`или `multipart/form-data`.
-- Не удается зарегистрировать прослушиватели событий для объекта, возвращаемого .`XMLHttpRequest.upload`
-- Не может использовать объекты `ReadableStream` в запросах.
+- Не удается использовать файлы cookie.
+- Поддерживает только простые методы, такие как `GET`, `HEAD`и `POST`.
+- Принимает простые заголовки с именами `Accept`полей , `Accept-Language`или `Content-Language`.
+- Можно использовать `Content-Type`, при условии, что тип контента : `application/x-www-form-urlencoded`, `text/plain`или `multipart/form-data`.
+- Не удается зарегистрировать прослушиватели событий в объекте, возвращаемом `XMLHttpRequest.upload`.
+- Не удается использовать `ReadableStream` объекты в запросах.
 
 > [!NOTE]
 > Полная поддержка CORS доступна в Outlook в Интернете, Mac и Windows (начиная с версии 2201, сборка 16.0.14813.10000).
@@ -459,7 +462,7 @@ ms.locfileid: "68664681"
 - [Параметры описания AppSource для надстройки Outlook на основе событий](autolaunch-store-options.md)
 - [Пошаговое руководство по интеллектуальным оповещениям и OnMessageSend](smart-alerts-onmessagesend-walkthrough.md)
 - Примеры кода надстроек Office:
-  - [Использование активации на основе событий Outlook для шифрования вложений, обработки приглашений на собрание и реагирования на изменения даты и времени встречи](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-encrypt-attachments)
+  - [Использование активации на основе событий Outlook для шифрования вложений, обработки участников приглашения на собрание и реагирования на изменения даты и времени встречи](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-encrypt-attachments)
   - [Использование активации Outlook на основе событий для задания подписи](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-set-signature)
   - [Использование активации Outlook на основе событий для пометки внешних получателей](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-tag-external)
   - [Использование интеллектуальных оповещений Outlook](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-check-item-categories)
