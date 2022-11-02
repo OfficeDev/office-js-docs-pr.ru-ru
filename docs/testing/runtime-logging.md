@@ -3,19 +3,19 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 11/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: cf917915ae875f9a3ea27c85e21c87f847eb4542
-ms.sourcegitcommit: 0be4cd0680d638cf96c12263a71af59ff9f51f5a
+ms.openlocfilehash: b89212b859274d4ac52ecb92be4ac995d3a8790b
+ms.sourcegitcommit: 3abcf7046446e7b02679c79d9054843088312200
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67423309"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68810045"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
 Вы можете использовать ведение журнала в среде выполнения для отладки манифеста надстройки, а также некоторых ошибок установки. Эта функция может помочь вам определять и устранять проблемы с манифестом, которые не обнаруживаются при проверке схемы XSD, например несоответствие идентификаторов ресурсов. Ведение журнала в среде выполнения особенно полезно для отладки надстроек, которые добавляют команды и пользовательские функции Excel.
 
 > [!NOTE]
-> Функция ведения журнала среды выполнения в настоящее время доступна для Office 2016 или более поздней версии на настольном компьютере.
+> Функция ведения журнала среды выполнения в настоящее время доступна для Office 2016 или более поздней версии на рабочем столе.
 
 > [!IMPORTANT]
 > Ведение журнала в среде выполнения сказывается на производительности. Включайте его, только если требуется устранить неполадки, связанные с манифестом надстройки.
@@ -75,7 +75,7 @@ ms.locfileid: "67423309"
 
 ## <a name="runtime-logging-on-mac"></a>Ведение журнала в среде выполнения на компьютере Mac
 
-1. Убедитесь, что у вас установлена классическая сборка Office 2016 **16.27** (19071500) или более поздней версии.
+1. Убедитесь, что вы используете office 2016 классической сборки **16.27.19071500** или более поздней версии.
 
 2. Откройте приложение **Терминал** и настройте параметры ведения журнала в среде выполнения с помощью команды `defaults`:
 
@@ -85,7 +85,7 @@ ms.locfileid: "67423309"
 
     `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
 
-    Задайте `<bundle id>` одно из следующих значений, чтобы включить ведение журнала среды выполнения для соответствующего приложения.
+    Задайте `<bundle id>` одно из следующих значений, чтобы включить ведение журнала в среде выполнения для соответствующего приложения.
 
     - `com.microsoft.Word`
     - `com.microsoft.Excel`
@@ -108,7 +108,7 @@ open ~/library/Containers/com.microsoft.Word/Data/runtime_logs.txt
 defaults delete <bundle id> CEFRuntimeLoggingFile
 ```
 
-В следующем примере будет отключено ведение журнала среды выполнения для Word.
+В следующем примере отключается ведение журнала среды выполнения для Word.
 
 ```command&nbsp;line
 defaults delete com.microsoft.Word CEFRuntimeLoggingFile
@@ -125,17 +125,17 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 
 2. Если ничего не происходит и надстройка не отображается в диалоговом окне надстроек, откройте файл журнала.
 
-3. Выполните в этом файле поиск по идентификатору надстройки, определенному в манифесте. В файле журнала этот идентификатор отмечен как `SolutionId`.
+3. Search the log file for your add-in ID, which you define in your manifest. In the log file, this ID is labeled `SolutionId`.
 
 ## <a name="known-issues-with-runtime-logging"></a>Известные проблемы с ведением журнала в среде выполнения
 
-В файле журнала могут встречаться непонятные или неправильно классифицированные сообщения. Например:
+You might see messages in the log file that are confusing or that are classified incorrectly. For example:
 
 - сообщение `Medium Current host not in add-in's host list` с дополнением `Unexpected Parsed manifest targeting different host` неправильно классифицируется как ошибка.
 
 - Если появится сообщение `Unexpected Add-in is missing required manifest fields    DisplayName`, не содержащее SolutionId, то ошибка, скорее всего, не связана с надстройкой, отладка которой выполняется.
 
-- Все сообщения `Monitorable` являются ожидаемыми ошибками с точки зрения системы. Иногда они указывают на проблему с манифестом, например опечатку в элементе, которая была пропущена, но не привела к сбою.
+- Any `Monitorable` messages are expected errors from a system point of view. Sometimes they indicate an issue with your manifest, such as a misspelled element that was skipped but didn't cause the manifest to fail.
 
 ## <a name="see-also"></a>См. также
 
@@ -146,4 +146,4 @@ defaults delete com.microsoft.Word CEFRuntimeLoggingFile
 - [Отладка надстроек с помощью средств разработчика для Internet Explorer](debug-add-ins-using-f12-tools-ie.md)
 - [Отладка надстроек с помощью средств разработчика для устаревшей версии Microsoft Edge](debug-add-ins-using-devtools-edge-legacy.md)
 - [Отладка надстроек с помощью средств разработчика в Microsoft Edge (на основе Chromium)](debug-add-ins-using-devtools-edge-chromium.md) 
-- [Среды выполнения в надстройки Office](runtimes.md)
+- [Среды выполнения в надстройках Office](runtimes.md)

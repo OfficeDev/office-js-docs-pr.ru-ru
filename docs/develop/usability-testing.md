@@ -1,20 +1,20 @@
 ---
 title: Тестирование удобства использования надстроек Office
-description: Узнайте, как протестировать дизайн надстройки для реальных пользователей.
+description: Узнайте, как протестировать структуру надстройки с реальными пользователями.
 ms.date: 07/08/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b884ae8232360b8778b832b8ded90f3d3a857911
-ms.sourcegitcommit: fb3b1c6055e664d015703623661d624251ceb6b7
+ms.openlocfilehash: 49a2af983615779160886961e8269e4588d0fc9e
+ms.sourcegitcommit: 3abcf7046446e7b02679c79d9054843088312200
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66136330"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68810283"
 ---
 # <a name="usability-testing-for-office-add-ins"></a>Тестирование удобства использования надстроек Office
 
-Для создания качественной надстройки необходимо учитывать поведение пользователей. Так как предубеждения разработчиков влияют на принятие проектных решений, важно тестировать надстройки с настоящими пользователями, чтобы гарантировать хорошую работу надстройки в реальных ситуациях.
+A great add-in design takes user behaviors into account. Because your own preconceptions influence your design decisions, it’s important to test designs with real users to make sure that your add-ins work well for your customers.
 
-Тесты удобства использования можно выполнять различными способами. Для многих разработчиков надстроек удаленные и неизмененные исследования удобства использования являются наиболее эффективным и экономичным временем. Это упрощает несколько популярных служб тестирования. Ниже приведены некоторые примеры.
+Тесты удобства использования можно выполнять разными способами. Для многих разработчиков надстроек удаленные и немодерированные исследования удобства использования являются наиболее экономичными и временными. Несколько популярных служб тестирования упрощают эту задачу; Ниже приведены некоторые примеры.
 
 - [UserTesting.com](https://www.UserTesting.com)
 - [Optimalworkshop.com](https://www.Optimalworkshop.com)
@@ -22,10 +22,10 @@ ms.locfileid: "66136330"
 
 Эти службы тестирования помогают упростить создание плана тестирования, а также избавляют от необходимости искать участников и наблюдать за тестированием.
 
-Пяти участников достаточно, чтобы обнаружить большую часть проблем при использовании надстройки. В течение цикла разработки регулярно проводите небольшие испытания, чтобы убедиться, что в вашем продукте учитываются потребности пользователей.
+You need only five participants to uncover most usability issues in your design. Incorporate small tests regularly throughout your development cycle to ensure that your product is user-centered.
 
 > [!NOTE]
-> Рекомендуем тестировать удобство использования надстроек на нескольких платформах. Для [публикации надстройки в AppSource](/office/dev/store/submit-to-appsource-via-partner-center) она должна работать на всех [платформах, поддерживающих определенные вами методы](/javascript/api/requirement-sets).
+> We recommend that you test the usability of your add-in across multiple platforms. To [publish your add-in to AppSource](/office/dev/store/submit-to-appsource-via-partner-center), it must work on all [platforms that support the methods that you define](/javascript/api/requirement-sets).
 
 ## <a name="1-sign-up-for-a-testing-service"></a>1. Регистрация в службе тестирования
 
@@ -33,9 +33,9 @@ ms.locfileid: "66136330"
 
 ## <a name="2-develop-your-research-questions"></a>2. Определите предметы исследования
 
-Предметы исследования определяют цели и план тестирования. Они помогут вам выбрать участников и назначить им задачи. Предметы исследования должны быть как можно более конкретными. Вы также можете поставить общие вопросы.
+Research questions define the objectives of your research and guide your test plan. Your questions will help you identify participants to recruit and the tasks they will perform. Make your research questions as specific as you can. You can also seek to answer broader questions.
 
-Ниже приведены некоторые примеры вопросов по исследованиям.
+Ниже приведены некоторые примеры исследовательских вопросов.
 
 **Конкретные**
 
@@ -48,7 +48,7 @@ ms.locfileid: "66136330"
 - Понимают ли пользователи значения значков на панели команд, прежде чем нажимать их?
 - Легко ли пользователям найти меню настроек?
 
-Очень важно собрать данные обо всем процессе работы пользователя — от обнаружения надстройки до ее установки и использования. Рассмотрите вопросы исследования, которые адресуют следующие аспекты пользовательского интерфейса надстройки.
+Очень важно собрать данные обо всем процессе работы пользователя — от обнаружения надстройки до ее установки и использования. Рассмотрите исследовательские вопросы, касающиеся следующих аспектов пользовательского интерфейса надстройки.
 
 - поиск надстройки в AppSource;
 - установка надстройки;
@@ -62,43 +62,43 @@ ms.locfileid: "66136330"
 
 ## <a name="3-identify-participants-to-target"></a>3. Определите участников тестирования
 
-Удаленные службы тестирования позволяют контролировать множество характеристик участников тестирования. Задумайтесь, для каких пользователей предназначено исследование. На ранних этапах сбора данных рекомендуем набрать широкую аудиторию участников, чтобы выявить наиболее очевидные проблемы при использовании. Позже вам могут потребоваться конкретные целевые группы, например опытные пользователи Office, определенные профессии или возрастные категории.
+Remote testing services can give you control over many characteristics of your test participants. Think carefully about what kinds of users you want to target. In your early stages of data collection, it might be better to recruit a wide variety of participants to identify more obvious usability issues. Later, you might choose to target groups like advanced Office users, particular occupations, or specific age ranges.
 
 ## <a name="4-create-the-participant-screener"></a>4. Создайте анкету для отбора участников
 
-Критерии отбора — это набор вопросов и требований, которые вы представляете потенциальным участникам тестирования. Помните, что участники в таких службах, как UserTesting.com, материально заинтересованы участвовать в вашем тестировании. Если вы хотите исключить участие определенных пользователей, рекомендуем задать несколько каверзных вопросов. 
+The screener is the set of questions and requirements you will present to prospective test participants to screen them for your test. Keep in mind that participants for services like UserTesting.com have a financial interest in qualifying for your test. It's a good idea to include trick questions in your screener if you want to  exclude certain users from the test. 
 
 Например, если вы хотите найти участников, знакомых с сайтом GitHub, добавьте в список вариантов ответа вымышленные названия, чтобы отфильтровать пользователей, предоставляющих ложные сведения.
 
 **С каким из перечисленных ниже репозиториев кода вы знакомы?**  
- А. SourceShelf  [*Отклонить*]  
- Б. CodeContainer  [*Отклонить*]  
- В. GitHub  [*Необходимо выбрать*]  
- Г. BitBucket  [*Можно выбрать*]  
- Д. CloudForge  [*Можно выбрать*]  
+ a. SourceShelf  [*Reject*]  
+ b. CodeContainer  [*Reject*]  
+ c. GitHub  [*Must select*]  
+ d. BitBucket  [*May select*]  
+ e. CloudForge  [*May select*]  
 
 Если вы планируете тестировать готовую сборку надстройки, представленные ниже вопросы помогут вам отобрать пользователей, которые смогут это сделать.
 
 **Для этого теста вам потребуется последняя версия Microsoft PowerPoint. У вас есть последняя версия PowerPoint?**  
- a. Да [*Должен выбрать*]  
- b. Нет [*Отклонение*]  
- c. Не знаю [*Отклонение*]  
+ a. Yes [*Must select*]  
+ b. No [*Reject*]  
+ c. I don’t know [*Reject*]  
 
 **Для этого теста вам потребуется установить бесплатную надстройку для PowerPoint и создать бесплатную учетную запись для ее использования. Вы готовы установить надстройку и создать бесплатную учетную запись?**  
- a. Да [*Должен выбрать*]  
- b. Нет [*Отклонение*]  
+ a. Yes [*Must select*]  
+ b. No [*Reject*]  
 
 Дополнительные сведения см. в статье [Рекомендации по составлению вопросов для отбора](https://help.usertesting.com/hc/articles/115003370731-Screener-question-best-practices).
 
 ## <a name="5-create-tasks-and-questions-for-participants"></a>5. Составьте список задач и вопросов для участников
 
-Постарайтесь расставить приоритеты тестирования, чтобы ограничить количество задач и вопросов для каждого участника. Некоторые службы платят участникам только за определенное время, поэтому выполнение ваших заданий не должно занимать слишком много времени.
+Try to prioritize what you want tested so that you can limit the number of tasks and questions for the participant. Some services pay participants only for a set amount of time, so you want to make sure not to go over.
 
-По возможности старайтесь наблюдать за действиями участников, а не спрашивать о них. Если вам нужно задавать вопросы о работе пользователей, спросите, что участники делали в таких ситуациях раньше, а не об их предположениях. Как правило, это дает более надежные результаты.
+Try to observe participant behaviors instead of asking about them, whenever possible. If you need to ask about behaviors, ask about what participants have done in the past, rather than what they would expect to do in a situation. This tends to give more reliable results.
 
-Самая сложная задача при тестировании без наблюдения — убедиться, что участники понимают ваши задания и контекст работы. Указания должны быть *понятными и краткими*. В неоднозначных указаниях кто-то обязательно запутается.
+The main challenge in unmoderated testing is making sure your participants understand your tasks and scenarios. Your directions should be *clear and concise*. Inevitably, if there is potential for confusion, someone will be confused.
 
-Не полагайтесь на то, что у пользователя будет открыт именно тот экран, который необходим на этом этапе тестирования. Рекомендуем сообщать участникам, какой экран должен быть открыт в начале следующей задачи.
+Don't assume that your user will be on the screen they’re supposed to be on at any given point during the test. Consider telling them what screen they need to be on to start the next task.
 
 Дополнительные сведения см. в статье [Составление хороших задач](https://help.usertesting.com/hc/articles/115003371651-Writing-great-tasks).
 
@@ -106,36 +106,36 @@ ms.locfileid: "66136330"
 
 Вы можете тестировать либо готовую версию надстройки, либо ее прототип. Помните, что если вы хотите протестировать готовую версию надстройки, вам потребуется отобрать участников, у которых есть последняя версия Office и которые готовы установить надстройку и зарегистрировать учетную запись (если у вас нет для них готовых учетных данных для входа). Затем необходимо убедиться, что они успешно установили надстройку.
 
-В среднем обучение пользователей установке надстройки занимает около 5 минут. Ниже представлен пример понятных, кратких указаний по установке. Откорректируйте их в соответствии с особенностями вашего тестирования.
+On average, it takes about 5 minutes to walk users through how to install an add-in. The following is an example of clear, concise installation steps. Adjust the steps based on the specifics of your test.
 
-**Установите (вставьте здесь имя надстройки) для PowerPoint, следуя приведенным ниже инструкциям.**
+**Установите надстройку (вставьте здесь имя надстройки) для PowerPoint, следуя приведенным ниже инструкциям.**
 
 1. Откройте Microsoft PowerPoint.
 1. Выберите элемент **Пустая презентация**.
-1. Нажмите **Вставка > Мои надстройки**.
+1. Перейдите к **разделу Вставка** > **надстроек**.
 1. Во всплывающем окне выберите **Магазин**.
 1. Введите <название надстройки> в поле поиска.
 1. Выберите <название надстройки>.
 1. Изучите страницу Магазина, чтобы ознакомиться с надстройкой.
 1. Нажмите **Добавить**, чтобы установить надстройку.
 
-Вы можете тестировать прототип на любом уровне взаимодействия и визуальной четкости. Для создания более сложных связей и повышенной интерактивности можно использовать такие средства создания прототипов, как [InVision](https://www.invisionapp.com). Если требуется протестировать статические экраны, вы можете разместить изображения в Интернете и отправить участникам соответствующий URL-адрес либо предоставить им ссылку на презентацию PowerPoint в Интернете. 
+You can test a prototype at any level of interaction and visual fidelity. For more complex linking and interactivity, consider a prototyping tool like [InVision](https://www.invisionapp.com). If you just want to test static screens, you can host images online and send participants the corresponding URL, or give them a link to an online PowerPoint presentation. 
 
 ## <a name="7-run-a-pilot-test"></a>7. Проведите пилотный тест
 
-Создание прототипа и составление списка задач или вопросов могут быть непростыми задачами. Пользователи могут запутаться в заданиях или не разобраться в прототипе. Следует провести пилотный тест с 1–3 пользователями, чтобы выявить неизбежные проблемы с форматом тестирования. Это поможет гарантировать, что ваши вопросы ясны, прототип настроен правильно и вы собираете именно те данные, которые вам нужны.
+It can be tricky to get the prototype and your task/question list right. Users might be confused by tasks, or might get lost in your prototype. You should run a pilot test with 1-3 users to work out the inevitable issues with the test format. This will help to ensure that your questions are clear, that the prototype is set up correctly, and that you’re capturing the type of data you’re looking for.
 
 ## <a name="8-run-the-test"></a>8. Проведите тестирование
 
-Заказав тест, вы будете получать по электронной почте уведомления, когда участники проходят его. Как правило, если у вас нет специфических требований к участникам, тесты завершаются в течение нескольких часов.
+After you order your test, you will get email notifications when participants complete it. Unless you’ve targeted a specific group of participants, the tests are usually completed within a few hours.
 
 ## <a name="9-analyze-results"></a>9. Проанализируйте результаты
 
-На этом этапе вам необходимо сделать выводы из собранных данных. Просматривая видео тестирования, делайте заметки о проблемах и успехах пользователя. Старайтесь не делать поспешных выводов. Просмотрите все результаты.
+This is the part where you try to make sense of the data you’ve collected. While watching the test videos, record notes about problems and successes the user has. Avoid trying to interpret the meaning of the data until you have viewed all the results.
 
-Проблема, возникшая у одного участника, еще не означает, что необходимо что-то менять. Если же одна и та же проблема возникнет у нескольких участников, значит, она возникнет и у других пользователей в широкой аудитории.
+A single participant having a usability issue is not enough to warrant making a change to the design. Two or more participants encountering the same issue suggests that other users in the general population will also encounter that issue.
 
-В целом, будьте осторожны с выводами при анализе данных. Не совершайте ошибку, стараясь подогнать результаты под определенную интерпретацию. Объективно оцените, что полученные данные доказывают или опровергают, а для каких выводов их просто недостаточно. Избегайте предвзятости — поведение пользователей часто противоречит ожиданиям разработчика.
+In general, be careful about how you use your data to draw conclusions. Don’t fall into the trap of trying to make the data fit a certain narrative; be honest about what the data actually proves, disproves, or simply fails to provide any insight about. Keep an open mind; user behavior frequently defies designer’s expectations.
 
 ## <a name="see-also"></a>См. также
 

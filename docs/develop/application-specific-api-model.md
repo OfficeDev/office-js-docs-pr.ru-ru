@@ -3,22 +3,22 @@ title: Использование модели API для определенны
 description: Сведения о модели API на основе обещаний для надстроек Excel, OneNote и Word.
 ms.date: 09/23/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d7cb6f1f47c853d5c6e389c2c81ec2d36d21eb43
-ms.sourcegitcommit: 05be1086deb2527c6c6ff3eafcef9d7ed90922ec
+ms.openlocfilehash: d24b435318e1f462cd05ba25dbdd7f9a6018715f
+ms.sourcegitcommit: 3abcf7046446e7b02679c79d9054843088312200
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68092891"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68810178"
 ---
 # <a name="application-specific-api-model"></a>Модель API для конкретного приложения
 
-В этой статье описывается, как использовать модель API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
+В этой статье описывается использование модели API для создания надстроек в Excel, Word, PowerPoint и OneNote. Здесь представлены основные понятия, лежащие в основе использования API на основе обещаний.
 
 > [!NOTE]
-> Эта модель не поддерживается клиентами Office 2013. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets).
+> Эта модель не поддерживается ни клиентами Office 2013, ни Outlook. Используйте [общую модель API](office-javascript-api-object-model.md) для работы с этими версиями Office. Полные сведения о доступности платформ см. в статье [Доступность клиентских приложений и платформ Office для надстроек Office](/javascript/api/requirement-sets).
 
 > [!TIP]
-> В примерах на этой странице используются API JavaScript для Excel, но эти понятия также применимы к API JavaScript для OneNote, PowerPoint, Visio и Word.
+> В примерах на этой странице используются API JavaScript для Excel, но эти понятия также применяются к API JavaScript Для OneNote, PowerPoint, Visio и Word.
 
 ## <a name="asynchronous-nature-of-the-promise-based-apis"></a>Асинхронный характер API на основе обещаний
 
@@ -26,7 +26,7 @@ ms.locfileid: "68092891"
 
 ## <a name="run-function"></a>Функция *.run
 
-`Excel.run`, `OneNote.run`и `PowerPoint.run`выполните `Word.run` функцию, которая определяет действия, выполняемые с Excel, Word и OneNote. `*.run` автоматически создает контекст запроса, который можно использовать для взаимодействия с объектами Office. Когда `*.run` завершает работу, обещание разрешается, и все объекты, которые были выделены в среде выполнения, будут автоматически разблокированы.
+`Excel.run`, `OneNote.run`, `PowerPoint.run`и `Word.run` выполняют функцию, которая указывает действия, выполняемые в Excel, Word и OneNote. `*.run` автоматически создает контекст запроса, который можно использовать для взаимодействия с объектами Office. Когда `*.run` завершает работу, обещание разрешается, и все объекты, которые были выделены в среде выполнения, будут автоматически разблокированы.
 
 В следующем примере показано, как использовать шаблон `Excel.run`. Тот же шаблон также используется в OneNote, PowerPoint и Word.
 
@@ -45,7 +45,7 @@ Excel.run(function (context) {
 
 ## <a name="request-context"></a>Контекст запроса
 
-Приложение Office и ваша надстройка выполняются в разных процессах. Так как они используют разные среды выполнения, надстройкам требуется объект `RequestContext`, чтобы можно было подключать надстройку к объектам в Office, например к листам, диапазонам, абзацам и таблицам. Этот объект `RequestContext` предоставляется в качестве аргумента при вызове `*.run`.
+Приложение Office и надстройка выполняются в разных процессах. Так как они используют разные среды выполнения, надстройкам требуется объект `RequestContext`, чтобы можно было подключать надстройку к объектам в Office, например к листам, диапазонам, абзацам и таблицам. Этот объект `RequestContext` предоставляется в качестве аргумента при вызове `*.run`.
 
 ## <a name="proxy-objects"></a>Прокси-объекты
 
@@ -214,7 +214,7 @@ sheet.pageLayout.zoom = { scale: 200 };
 
 В предыдущем примере вы ***не*** сможете напрямую присвоить значение `zoom`: `sheet.pageLayout.zoom.scale = 200;`. Этот оператор выдает ошибку, так как `zoom` не загружен. Даже если `zoom` загружен, масштабный набор не будет работать. Все контекстные операции происходят в `zoom`, обновляя прокси-объект в надстройке и переписывая локально установленные значения.
 
-Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#excel-excel-range-format-member). Свойства объекта можно `format` задать с помощью навигации по объекту, как показано ниже.
+Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties), например [Range.format](/javascript/api/excel/excel.range#excel-excel-range-format-member). Свойства можно задать с помощью навигации `format` по объектам, как показано здесь.
 
 ```js
 // This will set the font size on the range during the next `content.sync()`.
